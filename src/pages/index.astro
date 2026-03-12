@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RfqWizard from '../components/RfqWizard.astro';
+
+const conveyorTypes = [
+  { name: 'Roller', slug: 'roller-conveyors', desc: 'Gravity, powered & MDR', icon: '⊚' },
+  { name: 'Accumulation', slug: 'accumulation-conveyors', desc: 'Zero-pressure buffering', icon: '⫸' },
+  { name: 'Belt', slug: 'flat-belt-conveyors', desc: 'Flat, cleated & modular', icon: '▬' },
+  { name: 'Transfer', slug: 'transfer-conveyors', desc: 'Right-angle & multi-dir', icon: '⊞' },
+  { name: 'Spiral', slug: 'spiral-conveyors', desc: 'Vertical elevation change', icon: '⟳' },
+  { name: 'Chain', slug: 'chain-conveyors', desc: 'Drag, slat & overhead', icon: '⛓' },
+  { name: 'Sortation', slug: 'diverting-merging', desc: 'Diverting & merging', icon: '⑂' },
+  { name: 'Pallet', slug: '../industries/packaging-line-conveyors/pallet', desc: 'Heavy-duty handling', icon: '⬚' },
+  { name: 'Screw', slug: 'screw-conveyors', desc: 'Bulk auger conveying', icon: '⏚' },
+  { name: 'Tabletop', slug: 'tabletop-conveyors', desc: 'Bottles, cans & cartons', icon: '⊟' },
+  { name: 'Vibratory', slug: 'vibratory-conveyors', desc: 'Feeders & hoppers', icon: '∿' },
+  { name: 'View All 30+ Types', slug: '', desc: 'Complete guide', icon: '→' },
+];
+
+const industries = [
+  { name: 'Food & Beverage', slug: 'food-conveyors', desc: 'Sanitary, USDA, washdown-rated systems', tags: ['USDA', '3-A', 'IP69K'], color: 'bg-green/10 text-green' },
+  { name: 'Packaging Lines', slug: 'packaging-line-conveyors', desc: 'Primary, secondary & tertiary packaging integration', tags: ['Case', 'Pallet', 'Wrap'], color: 'bg-blue/10 text-blue' },
+  { name: 'Pharmaceutical', slug: 'pharmaceutical-conveyors', desc: 'Cleanroom & GMP-compliant conveyor systems', tags: ['GMP', 'ISO 5-8', 'HEPA'], color: 'bg-teal/10 text-teal' },
+  { name: 'Automotive', slug: 'automotive-conveyors', desc: 'Assembly, paint line & lineside delivery', tags: ['Assembly', 'Paint', 'AGV'], color: 'bg-amber/10 text-amber' },
+];
+
+const functions = [
+  { name: 'Accumulate', slug: 'storage-conveyors', desc: 'Buffer & store product between processes' },
+  { name: 'Collate & Lane', slug: 'collating-laning', desc: 'Distribute product across multiple lanes' },
+  { name: 'Load Trays', slug: 'tray-loading', desc: 'Automatic tray loading & unloading' },
+  { name: 'Index', slug: 'indexing-conveyors', desc: 'Precision stop-and-go positioning' },
+  { name: 'Reject', slug: 'reject-systems', desc: 'Remove failed QC product from the line' },
+  { name: 'Turn & Orient', slug: 'product-handling', desc: 'Rotate, flip or invert product' },
+];
+---
+
+<BaseLayout
+  title="Packaging Conveyor Systems | Get Matched With 3+ Qualified Suppliers"
+  description="Find the right packaging conveyor system. Get matched with at least 3 qualified suppliers who compete for your business. Free, no obligation."
+  canonical="https://packagingconveyor.com/"
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <!-- Decorative conveyor rollers -->
+    <div class="absolute bottom-0 left-0 right-0 h-12 opacity-20">
+      <div class="flex items-center h-full gap-[18px] px-4">
+        {Array.from({length: 80}).map(() => (
+          <div class="w-3 h-3 rounded-full bg-white/30 flex-shrink-0"></div>
+        ))}
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Left: Message -->
+        <div class="animate-fade-in-up">
+          <div class="section-label text-accent/80 mb-6">
+            Packaging Conveyor Resource
+          </div>
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-6">
+            Find the Right<br />
+            <span class="text-accent">Conveyor</span><br />
+            For Your Line
+          </h1>
+          <p class="text-lg text-white/60 max-w-lg mb-8 leading-relaxed">
+            Tell us what you need. We'll match you with <strong class="text-white/90">at least 3 qualified conveyor suppliers</strong> who compete for your business. Free, no obligation.
+          </p>
+          <div class="flex flex-wrap gap-6 text-sm text-white/40 font-mono">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green"></span>
+              30+ conveyor types
+            </span>
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green"></span>
+              3+ quotes per request
+            </span>
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green"></span>
+              100% free to buyers
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: RFQ Wizard -->
+        <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+          <RfqWizard variant="hero" id="hero-wizard" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TRUST BAR ═══ -->
+  <section class="bg-ink conveyor-strip relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="font-display text-2xl font-bold text-white tracking-wider">98</div>
+          <div class="text-xs text-white/40 font-mono uppercase tracking-wider">Pages of Guides</div>
+        </div>
+        <div>
+          <div class="font-display text-2xl font-bold text-white tracking-wider">30+</div>
+          <div class="text-xs text-white/40 font-mono uppercase tracking-wider">Conveyor Types</div>
+        </div>
+        <div>
+          <div class="font-display text-2xl font-bold text-accent tracking-wider">3+</div>
+          <div class="text-xs text-white/40 font-mono uppercase tracking-wider">Quotes Per Request</div>
+        </div>
+        <div>
+          <div class="font-display text-2xl font-bold text-white tracking-wider">$0</div>
+          <div class="text-xs text-white/40 font-mono uppercase tracking-wider">Cost to Buyers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="section-label justify-center mb-4">How it works</div>
+        <h2 class="text-4xl sm:text-5xl font-800 text-ink tracking-wide">
+          From RFQ to Quotes<br />in <span class="text-accent">3 Simple Steps</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 stagger">
+        <div class="relative">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 bg-accent/10 flex items-center justify-center">
+              <span class="font-display text-2xl font-bold text-accent">01</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Tell Us What You Need</h3>
+              <p class="text-ink-muted text-sm leading-relaxed">
+                Answer a few quick questions about your conveyor type, industry, product specs, and timeline. Takes about 60 seconds.
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:block absolute top-7 left-[calc(100%_-_1rem)] w-8 border-t-2 border-dashed border-border"></div>
+        </div>
+
+        <div class="relative">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 bg-accent/10 flex items-center justify-center">
+              <span class="font-display text-2xl font-bold text-accent">02</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">We Match You</h3>
+              <p class="text-ink-muted text-sm leading-relaxed">
+                We review your requirements and match you with at least 3 qualified conveyor manufacturers or integrators who specialize in your application.
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:block absolute top-7 left-[calc(100%_-_1rem)] w-8 border-t-2 border-dashed border-border"></div>
+        </div>
+
+        <div>
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 bg-accent/10 flex items-center justify-center">
+              <span class="font-display text-2xl font-bold text-accent">03</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Compare & Choose</h3>
+              <p class="text-ink-muted text-sm leading-relaxed">
+                Receive competitive quotes from suppliers who are actively competing for your business. You pick the best fit. No pressure, no obligation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONVEYOR TYPES GRID ═══ -->
+  <section class="py-20 bg-surface-dim bg-dots">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+        <div>
+          <div class="section-label mb-4">Conveyor Types</div>
+          <h2 class="text-4xl sm:text-5xl font-800 text-ink tracking-wide">
+            Browse by <span class="text-accent">Type</span>
+          </h2>
+        </div>
+        <a href="/conveyor-types/" class="text-sm font-semibold text-accent hover:text-accent-hover transition-colors flex items-center gap-1">
+          View all 30+ types
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 stagger">
+        {conveyorTypes.map((type) => (
+          <a
+            href={type.slug ? `/conveyor-types/${type.slug}/` : '/conveyor-types/'}
+            class:list={[
+              "card group flex flex-col",
+              !type.slug && "bg-accent/5 border-accent/20 hover:bg-accent/10"
+            ]}
+          >
+            <div class="text-2xl mb-2 opacity-60 group-hover:opacity-100 transition-opacity">{type.icon}</div>
+            <div class="font-display text-base font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{type.name}</div>
+            <div class="text-xs text-ink-muted mt-1">{type.desc}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INDUSTRIES ═══ -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="section-label justify-center mb-4">Industries</div>
+        <h2 class="text-4xl sm:text-5xl font-800 text-ink tracking-wide">
+          Solutions for <span class="text-accent">Your Industry</span>
+        </h2>
+        <p class="mt-4 text-ink-muted max-w-2xl mx-auto">
+          Every industry has unique conveyor requirements. We match you with suppliers who specialize in your specific application and compliance needs.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 stagger">
+        {industries.map((ind) => (
+          <a href={`/industries/${ind.slug}/`} class="card group p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{ind.name}</h3>
+              <svg class="w-5 h-5 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+            <p class="text-sm text-ink-muted mb-4 leading-relaxed">{ind.desc}</p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              {ind.tags.map(tag => (
+                <span class:list={["text-xs font-semibold px-2 py-0.5", ind.color]}>{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FUNCTIONS ═══ -->
+  <section class="py-20 bg-ink-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="section-label justify-center text-accent/70 mb-4">Conveyor Functions</div>
+        <h2 class="text-4xl sm:text-5xl font-800 text-white tracking-wide">
+          What Do You Need Your<br />Conveyor to <span class="text-accent">Do?</span>
+        </h2>
+        <p class="mt-4 text-white/50 max-w-2xl mx-auto">
+          Think by problem, not by equipment. Tell us the function and we'll recommend the right conveyor type.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 stagger">
+        {functions.map((fn) => (
+          <a href={`/conveyor-functions/${fn.slug}/`} class="group p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent transition-colors mb-1">{fn.name}</h3>
+            <p class="text-sm text-white/45 leading-relaxed">{fn.desc}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/conveyor-functions/" class="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
+          View all conveyor functions
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SECTION ═══ -->
+  <section id="get-matched" class="py-20 bg-surface-dim bg-dots">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <div class="section-label justify-center mb-4">Ready to get started?</div>
+        <h2 class="text-4xl sm:text-5xl font-800 text-ink tracking-wide">
+          Get Matched With<br /><span class="text-accent">3+ Qualified Suppliers</span>
+        </h2>
+        <p class="mt-4 text-ink-muted max-w-xl mx-auto">
+          Tell us what you need. We'll connect you with at least 3 qualified conveyor manufacturers who'll compete for your business. Free for buyers, always.
+        </p>
+      </div>
+      <RfqWizard variant="inline" id="cta-wizard" />
+    </div>
+  </section>
+
+  <!-- ═══ RESOURCES TEASER ═══ -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label mb-4">Resources</div>
+      <h2 class="text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Buyer <span class="text-accent">Resources</span>
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-4 stagger">
+        <a href="/resources/conveyor-manufacturers/" class="card group p-6">
+          <div class="w-10 h-10 bg-blue/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Manufacturer Directory</h3>
+          <p class="text-sm text-ink-muted">Find conveyor manufacturers and suppliers filtered by type, industry, and location.</p>
+        </a>
+
+        <a href="/resources/conveyor-cost-guide/" class="card group p-6">
+          <div class="w-10 h-10 bg-green/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Cost & Pricing Guide</h3>
+          <p class="text-sm text-ink-muted">Conveyor pricing ranges by type, budgeting tips, and how to compare quotes effectively.</p>
+        </a>
+
+        <a href="/resources/conveyor-design-guide/" class="card group p-6">
+          <div class="w-10 h-10 bg-amber/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Design Guide</h3>
+          <p class="text-sm text-ink-muted">Engineering reference: speed calculations, throughput sizing, and layout planning tools.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

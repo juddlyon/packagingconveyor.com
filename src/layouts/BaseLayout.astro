@@ -1,0 +1,161 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description = 'Find the right packaging conveyor system. Get matched with 3 qualified suppliers who compete for your business. Free, no obligation.', canonical } = Astro.props;
+const siteUrl = 'https://packagingconveyor.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {canonical && <link rel="canonical" href={canonical} />}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical || siteUrl} />
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 bg-accent flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="18" r="3" />
+              <circle cx="12" cy="18" r="3" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+              <path d="M4 14h16" />
+            </svg>
+          </div>
+          <div class="font-display text-lg font-bold tracking-wider uppercase leading-none">
+            <span class="text-ink">Packaging</span><span class="text-accent">Conveyor</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="/conveyor-types/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Conveyor Types</a>
+          <a href="/industries/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Industries</a>
+          <a href="/conveyor-functions/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Functions</a>
+          <a href="/resources/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Resources</a>
+          <a href="#get-matched" class="ml-3 px-5 py-2 bg-accent text-white font-display font-bold text-sm tracking-wider uppercase hover:bg-accent-hover transition-colors">
+            Get 3 Quotes
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-ink-muted hover:text-ink" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-surface">
+      <div class="px-4 py-3 space-y-1">
+        <a href="/conveyor-types/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Conveyor Types</a>
+        <a href="/industries/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Industries</a>
+        <a href="/conveyor-functions/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Functions</a>
+        <a href="/resources/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Resources</a>
+        <a href="#get-matched" class="block mt-2 px-5 py-2.5 bg-accent text-white font-display font-bold text-sm tracking-wider uppercase text-center">Get 3 Quotes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="bg-ink text-white/70">
+    <!-- Industrial stripe -->
+    <div class="stripe-accent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="font-display text-xl font-bold tracking-wider uppercase text-white mb-4">
+            Packaging<span class="text-accent">Conveyor</span>
+          </div>
+          <p class="text-sm leading-relaxed">
+            The packaging industry's conveyor resource. Get matched with qualified suppliers who compete for your business.
+          </p>
+        </div>
+
+        <!-- Conveyor Types -->
+        <div>
+          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Conveyor Types</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/conveyor-types/roller-conveyors/" class="hover:text-white transition-colors">Roller Conveyors</a></li>
+            <li><a href="/conveyor-types/accumulation-conveyors/" class="hover:text-white transition-colors">Accumulation</a></li>
+            <li><a href="/conveyor-types/transfer-conveyors/" class="hover:text-white transition-colors">Transfer</a></li>
+            <li><a href="/conveyor-types/mdr-conveyors/" class="hover:text-white transition-colors">MDR / Motor Driven</a></li>
+            <li><a href="/conveyor-types/" class="text-accent hover:text-accent-hover transition-colors">View All Types &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Industries -->
+        <div>
+          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Industries</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/industries/food-conveyors/" class="hover:text-white transition-colors">Food & Beverage</a></li>
+            <li><a href="/industries/packaging-line-conveyors/" class="hover:text-white transition-colors">Packaging Lines</a></li>
+            <li><a href="/industries/pharmaceutical-conveyors/" class="hover:text-white transition-colors">Pharmaceutical</a></li>
+            <li><a href="/industries/automotive-conveyors/" class="hover:text-white transition-colors">Automotive</a></li>
+            <li><a href="/industries/" class="text-accent hover:text-accent-hover transition-colors">All Industries &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Resources</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/resources/conveyor-manufacturers/" class="hover:text-white transition-colors">Manufacturer Directory</a></li>
+            <li><a href="/resources/conveyor-cost-guide/" class="hover:text-white transition-colors">Cost & Pricing Guide</a></li>
+            <li><a href="/resources/conveyor-design-guide/" class="hover:text-white transition-colors">Design Guide</a></li>
+            <li><a href="/resources/conveyor-maintenance/" class="hover:text-white transition-colors">Maintenance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+        <p>&copy; {new Date().getFullYear()} PackagingConveyor.com. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy/" class="hover:text-white/70 transition-colors">Privacy</a>
+          <a href="/terms/" class="hover:text-white/70 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

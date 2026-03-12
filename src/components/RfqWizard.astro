@@ -1,0 +1,573 @@
+---
+/**
+ * Multi-step RFQ Wizard — the revenue engine.
+ * Netlify Forms powered with honeypot spam protection.
+ * 5 steps: Type → Application → Specs → Timeline → Contact
+ */
+interface Props {
+  id?: string;
+  variant?: 'hero' | 'inline' | 'full';
+}
+
+const { id = 'rfq-wizard', variant = 'hero' } = Astro.props;
+const isHero = variant === 'hero';
+---
+
+<div id={id} class:list={[
+  "rfq-wizard",
+  isHero ? "bg-ink-light border border-white/10" : "bg-surface border border-border",
+  "overflow-hidden"
+]}>
+  <!-- Progress Bar -->
+  <div class="flex h-1">
+    {[1,2,3,4,5].map((step) => (
+      <div
+        class:list={["wizard-progress-segment flex-1", isHero ? "bg-white/10" : "bg-surface-alt"]}
+        data-step={step}
+      >
+        <div class="h-full w-0 bg-accent transition-all duration-500" data-progress-fill></div>
+      </div>
+    ))}
+  </div>
+
+  <div class={isHero ? "p-6 sm:p-8" : "p-6"}>
+    <!-- Step indicator -->
+    <div class="flex items-center justify-between mb-6">
+      <p class:list={[
+        "font-mono text-xs tracking-widest uppercase",
+        isHero ? "text-white/40" : "text-ink-muted"
+      ]}>
+        Step <span data-current-step>1</span> of 5
+      </p>
+      <button
+        type="button"
+        data-wizard-back
+        class:list={[
+          "hidden font-mono text-xs tracking-widest uppercase cursor-pointer hover:text-accent transition-colors",
+          isHero ? "text-white/40" : "text-ink-muted"
+        ]}
+      >
+        &larr; Back
+      </button>
+    </div>
+
+    <!-- Netlify Form (hidden, submits all data) -->
+    <form
+      name="rfq"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thank-you/"
+      class="hidden"
+      id={`${id}-form`}
+    >
+      <input type="hidden" name="form-name" value="rfq" />
+      <!-- Honeypot -->
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+      <!-- All fields submitted via JS -->
+      <input type="hidden" name="conveyor-type" />
+      <input type="hidden" name="industry" />
+      <input type="hidden" name="product-description" />
+      <input type="hidden" name="weight-range" />
+      <input type="hidden" name="speed-requirement" />
+      <input type="hidden" name="environment" />
+      <input type="hidden" name="timeline" />
+      <input type="hidden" name="budget-range" />
+      <input type="hidden" name="name" />
+      <input type="hidden" name="email" />
+      <input type="hidden" name="phone" />
+      <input type="hidden" name="company" />
+      <input type="hidden" name="notes" />
+      <!-- Timing honeypot: forms submitted < 3s are bots -->
+      <input type="hidden" name="_form_loaded" />
+    </form>
+
+    <!-- STEP 1: What type of conveyor? -->
+    <div class="wizard-step active" data-wizard-step="1">
+      <h3 class:list={[
+        "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+        isHero ? "text-white" : "text-ink"
+      ]}>
+        What type of conveyor do you need?
+      </h3>
+      <p class:list={["text-sm mb-5", isHero ? "text-white/50" : "text-ink-muted"]}>
+        Select the closest match. Not sure? Pick "Help me decide."
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" data-option-group="conveyor-type">
+        <button type="button" class="wizard-option" data-value="Belt Conveyor">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Belt Conveyor</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Roller Conveyor">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Roller Conveyor</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Accumulation">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Accumulation</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="MDR / Motor Driven Roller">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>MDR / Motor Driven Roller</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Pallet Conveyor">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Pallet Conveyor</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Spiral / Vertical">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Spiral / Vertical</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Sortation / Diverting">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Sortation / Diverting</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Other / Help me decide">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Other / Help Me Decide</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Your industry -->
+    <div class="wizard-step" data-wizard-step="2">
+      <h3 class:list={[
+        "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+        isHero ? "text-white" : "text-ink"
+      ]}>
+        What industry are you in?
+      </h3>
+      <p class:list={["text-sm mb-5", isHero ? "text-white/50" : "text-ink-muted"]}>
+        This helps us match you with specialists.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" data-option-group="industry">
+        <button type="button" class="wizard-option" data-value="Food & Beverage">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Food & Beverage</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Packaging / End of Line">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Packaging / End of Line</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Pharmaceutical / Medical">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Pharmaceutical / Medical</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Warehouse / Distribution">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Warehouse / Distribution</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Automotive / Manufacturing">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Automotive / Manufacturing</span>
+        </button>
+        <button type="button" class="wizard-option" data-value="Other">
+          <span class="check"></span>
+          <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Other</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Specs -->
+    <div class="wizard-step" data-wizard-step="3">
+      <h3 class:list={[
+        "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+        isHero ? "text-white" : "text-ink"
+      ]}>
+        Tell us about your application
+      </h3>
+      <p class:list={["text-sm mb-5", isHero ? "text-white/50" : "text-ink-muted"]}>
+        The more detail, the better your quotes will be.
+      </p>
+      <div class="space-y-4">
+        <div>
+          <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+            What are you conveying?
+          </label>
+          <input
+            type="text"
+            data-field="product-description"
+            placeholder="e.g., Corrugated cases, 30 lbs each"
+            class:list={[
+              "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+              isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+            ]}
+          />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Product weight
+            </label>
+            <select
+              data-field="weight-range"
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white" : "bg-surface border-border text-ink"
+              ]}
+            >
+              <option value="">Select...</option>
+              <option value="Under 5 lbs">Under 5 lbs</option>
+              <option value="5-25 lbs">5 – 25 lbs</option>
+              <option value="25-100 lbs">25 – 100 lbs</option>
+              <option value="100-500 lbs">100 – 500 lbs</option>
+              <option value="500+ lbs">500+ lbs (pallets)</option>
+            </select>
+          </div>
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Environment
+            </label>
+            <select
+              data-field="environment"
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white" : "bg-surface border-border text-ink"
+              ]}
+            >
+              <option value="">Select...</option>
+              <option value="Dry / Indoor">Dry / Indoor</option>
+              <option value="Washdown / Sanitary">Washdown / Sanitary</option>
+              <option value="Cold / Freezer">Cold / Freezer</option>
+              <option value="Cleanroom">Cleanroom</option>
+              <option value="Outdoor / Harsh">Outdoor / Harsh</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+            Speed / throughput needs
+          </label>
+          <input
+            type="text"
+            data-field="speed-requirement"
+            placeholder="e.g., 60 cases/min, 100 FPM"
+            class:list={[
+              "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+              isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+            ]}
+          />
+        </div>
+        <button type="button" data-wizard-next class="w-full py-3 bg-accent text-white font-display font-bold text-sm tracking-widest uppercase hover:bg-accent-hover transition-colors cursor-pointer mt-2">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Timeline & Budget -->
+    <div class="wizard-step" data-wizard-step="4">
+      <h3 class:list={[
+        "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+        isHero ? "text-white" : "text-ink"
+      ]}>
+        Timeline & Budget
+      </h3>
+      <p class:list={["text-sm mb-5", isHero ? "text-white/50" : "text-ink-muted"]}>
+        Helps suppliers prioritize and give realistic quotes.
+      </p>
+      <div class="space-y-4">
+        <div>
+          <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-2", isHero ? "text-white/60" : "text-ink-muted"]}>
+            When do you need this?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" data-option-group="timeline">
+            <button type="button" class="wizard-option" data-value="ASAP / Urgent">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>ASAP / Urgent</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="1-3 months">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>1 – 3 months</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="3-6 months">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>3 – 6 months</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="Just researching">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Just researching</span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-2", isHero ? "text-white/60" : "text-ink-muted"]}>
+            Budget range
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" data-option-group="budget-range">
+            <button type="button" class="wizard-option" data-value="Under $25K">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>Under $25K</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="$25K - $100K">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>$25K – $100K</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="$100K - $500K">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>$100K – $500K</span>
+            </button>
+            <button type="button" class="wizard-option" data-value="$500K+">
+              <span class="check"></span>
+              <span class:list={["text-sm font-semibold", isHero ? "text-white" : "text-ink"]}>$500K+</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5: Contact Info -->
+    <div class="wizard-step" data-wizard-step="5">
+      <h3 class:list={[
+        "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+        isHero ? "text-white" : "text-ink"
+      ]}>
+        Where should we send your quotes?
+      </h3>
+      <p class:list={["text-sm mb-5", isHero ? "text-white/50" : "text-ink-muted"]}>
+        We'll match you with 3 qualified suppliers within 1 business day.
+      </p>
+      <div class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Full name *
+            </label>
+            <input
+              type="text"
+              data-field="name"
+              required
+              placeholder="John Smith"
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+              ]}
+            />
+          </div>
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Company
+            </label>
+            <input
+              type="text"
+              data-field="company"
+              placeholder="Acme Packaging Inc."
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+              ]}
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Email *
+            </label>
+            <input
+              type="email"
+              data-field="email"
+              required
+              placeholder="john@acmepackaging.com"
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+              ]}
+            />
+          </div>
+          <div>
+            <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+              Phone
+            </label>
+            <input
+              type="tel"
+              data-field="phone"
+              placeholder="(555) 123-4567"
+              class:list={[
+                "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+                isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+              ]}
+            />
+          </div>
+        </div>
+        <div>
+          <label class:list={["block text-xs font-semibold uppercase tracking-wider mb-1.5", isHero ? "text-white/60" : "text-ink-muted"]}>
+            Anything else we should know?
+          </label>
+          <textarea
+            data-field="notes"
+            rows="3"
+            placeholder="Special requirements, existing equipment, layout constraints..."
+            class:list={[
+              "w-full px-4 py-3 text-sm border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none",
+              isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+            ]}
+          ></textarea>
+        </div>
+        <button
+          type="button"
+          data-wizard-submit
+          class="w-full py-3.5 bg-accent text-white font-display font-bold tracking-widest uppercase hover:bg-accent-hover transition-all cursor-pointer flex items-center justify-center gap-2 text-base"
+        >
+          <span>Get My 3 Quotes</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </button>
+        <p class:list={["text-xs text-center", isHero ? "text-white/30" : "text-ink-muted"]}>
+          Free &middot; No obligation &middot; Takes 60 seconds
+        </p>
+      </div>
+    </div>
+
+    <!-- Success State -->
+    <div class="wizard-step" data-wizard-step="success">
+      <div class="text-center py-6">
+        <div class="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <h3 class:list={[
+          "font-display text-2xl font-bold tracking-wide uppercase mb-2",
+          isHero ? "text-white" : "text-ink"
+        ]}>
+          You're Matched!
+        </h3>
+        <p class:list={["text-sm max-w-sm mx-auto", isHero ? "text-white/60" : "text-ink-muted"]}>
+          We're connecting you with 3 qualified conveyor suppliers. Expect to hear from them within 1 business day.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ id }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wizard = document.getElementById(id);
+    if (!wizard) return;
+
+    const formEl = document.getElementById(`${id}-form`);
+    let currentStep = 1;
+    const data = {};
+    const loadTime = Date.now();
+
+    // Record form load time for timing honeypot
+    if (formEl) {
+      const loadInput = formEl.querySelector('[name="_form_loaded"]');
+      if (loadInput) loadInput.value = loadTime.toString();
+    }
+
+    function showStep(step) {
+      wizard.querySelectorAll('.wizard-step').forEach(el => el.classList.remove('active'));
+      const target = wizard.querySelector(`[data-wizard-step="${step}"]`);
+      if (target) target.classList.add('active');
+
+      // Update step counter
+      const counter = wizard.querySelector('[data-current-step]');
+      if (counter && typeof step === 'number') counter.textContent = step.toString();
+
+      // Update progress bar
+      wizard.querySelectorAll('[data-progress-fill]').forEach((fill, i) => {
+        const stepNum = i + 1;
+        if (typeof step === 'number') {
+          fill.style.width = stepNum <= step ? '100%' : '0%';
+        } else {
+          fill.style.width = '100%';
+        }
+      });
+
+      // Show/hide back button
+      const backBtn = wizard.querySelector('[data-wizard-back]');
+      if (backBtn) {
+        backBtn.classList.toggle('hidden', step === 1 || step === 'success');
+      }
+
+      currentStep = step;
+    }
+
+    // Option selection (auto-advances on steps 1, 2, 4)
+    wizard.querySelectorAll('[data-option-group]').forEach(group => {
+      const fieldName = group.dataset.optionGroup;
+      group.querySelectorAll('.wizard-option').forEach(option => {
+        option.addEventListener('click', () => {
+          // Deselect siblings
+          group.querySelectorAll('.wizard-option').forEach(o => o.classList.remove('selected'));
+          option.classList.add('selected');
+          data[fieldName] = option.dataset.value;
+
+          // Auto-advance after a brief delay for visual feedback
+          setTimeout(() => {
+            if (currentStep < 5) showStep(currentStep + 1);
+          }, 250);
+        });
+      });
+    });
+
+    // Manual next buttons (for step 3 with free-text fields)
+    wizard.querySelectorAll('[data-wizard-next]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Collect text/select fields from current step
+        const stepEl = wizard.querySelector(`[data-wizard-step="${currentStep}"]`);
+        if (stepEl) {
+          stepEl.querySelectorAll('[data-field]').forEach(field => {
+            data[field.dataset.field] = field.value;
+          });
+        }
+        if (currentStep < 5) showStep(currentStep + 1);
+      });
+    });
+
+    // Back button
+    wizard.querySelector('[data-wizard-back]')?.addEventListener('click', () => {
+      if (typeof currentStep === 'number' && currentStep > 1) {
+        showStep(currentStep - 1);
+      }
+    });
+
+    // Submit
+    wizard.querySelector('[data-wizard-submit]')?.addEventListener('click', () => {
+      // Collect step 5 fields
+      const stepEl = wizard.querySelector('[data-wizard-step="5"]');
+      if (stepEl) {
+        stepEl.querySelectorAll('[data-field]').forEach(field => {
+          data[field.dataset.field] = field.value;
+        });
+      }
+
+      // Validate required fields
+      if (!data.name || !data.email) {
+        // Highlight missing fields
+        if (!data.name) {
+          const nameField = stepEl?.querySelector('[data-field="name"]');
+          nameField?.classList.add('!border-red');
+          nameField?.focus();
+        }
+        if (!data.email) {
+          stepEl?.querySelector('[data-field="email"]')?.classList.add('!border-red');
+        }
+        return;
+      }
+
+      // Timing honeypot: reject submissions under 3 seconds
+      const elapsed = Date.now() - loadTime;
+      if (elapsed < 3000) return;
+
+      // Populate the hidden Netlify form
+      if (formEl) {
+        Object.entries(data).forEach(([key, value]) => {
+          const input = formEl.querySelector(`[name="${key}"]`);
+          if (input) input.value = value || '';
+        });
+
+        // Submit via fetch to stay on page and show success
+        const formData = new FormData(formEl);
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => {
+          showStep('success');
+        }).catch(() => {
+          // Fallback: traditional form submit
+          formEl.submit();
+        });
+      }
+    });
+  });
+</script>
