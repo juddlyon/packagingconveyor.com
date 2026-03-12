@@ -1,0 +1,568 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Food-Grade Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes a conveyor food-grade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A food-grade conveyor uses materials and construction methods that meet FDA, USDA, 3-A SSI, or BISSC sanitary standards. This includes 304 or 316 stainless steel frames with smooth welds, FDA-compliant belt materials (polyurethane, silicone, or stainless steel mesh), sealed bearings, and tool-free disassembly for cleaning. The conveyor must also carry an appropriate IP rating (IP65 minimum, IP69K for high-pressure washdown) and eliminate harborage points where bacteria can grow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 304 and 316 stainless steel for food conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "304 stainless steel is the standard grade for most food conveyor applications. It resists corrosion from water, mild cleaning chemicals, and most food products. 316 stainless steel adds molybdenum for superior resistance to chloride corrosion, making it necessary for salt-heavy environments, acidic foods (citrus, tomato, vinegar), and facilities using chlorine-based sanitizers. 316 costs approximately 20-30% more than 304. Most food plants use 304 unless the product or cleaning chemistry demands 316."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What IP rating do I need for a food conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IP65 protects against low-pressure water jets and is adequate for splash zones and light cleaning. IP66 handles high-pressure water jets from any direction and suits most food processing environments. IP69K withstands high-pressure, high-temperature washdown (176°F / 80°C at 1450 PSI) and is required for meat, poultry, dairy, and any facility using CIP or foam-and-rinse sanitation protocols. Choose IP69K for any zone where USDA or 3-A compliance is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a food-grade conveyor cost compared to a standard conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Food-grade conveyors typically cost 2-4 times more than equivalent standard conveyors. The premium comes from stainless steel construction (vs. painted carbon steel), FDA-compliant belt materials, sealed washdown-rated bearings, smooth weld finishes, and IP-rated motors and drives. A standard 10-foot powered belt conveyor in painted carbon steel falls in the $$ range. The equivalent unit in 304 stainless steel with washdown motors and an FDA belt falls in the $$$-$$$$ range. 316 stainless adds another 20-30% on top of that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which manufacturers make food-grade conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Major food-grade conveyor manufacturers include Dorner (precision sanitary belt conveyors and the AquaGard and AquaPruf series), Nercon (custom sanitary conveyors for food packaging), mk North America (modular stainless conveyors), Arrowhead Systems (palletizing and depalletizing systems for food), and Key Technology (vibratory and inspection conveyors for food processing). Many system integrators also build custom food-grade conveyor lines using components from these manufacturers."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Food-Grade Conveyor Systems: Sanitary, Washdown & USDA",
+  "description": "Complete guide to food-grade conveyor systems covering sanitary standards (USDA, 3-A, BISSC), stainless steel material selection (304 vs 316), belt materials, IP ratings, and manufacturer comparisons.",
+  "url": "https://packagingconveyor.com/industries/food-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Food-Grade Conveyor Systems: Sanitary, Washdown & USDA | PackagingConveyor.com"
+  description="Complete guide to food-grade conveyor systems. Covers sanitary standards (USDA, 3-A, BISSC), stainless steel selection (304 vs 316), belt materials, IP ratings (IP65-IP69K), and top manufacturers like Dorner, Nercon, and mk North America."
+  canonical="https://packagingconveyor.com/industries/food-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface-dim border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/industries/" class="hover:text-accent transition-colors">Industries</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Food-Grade Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero / AIO -->
+  <section class="py-24 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Food & Beverage</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-6">
+        Food-Grade Conveyor Systems: Sanitary, Washdown & USDA
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
+        <p>
+          Food-grade conveyors use stainless steel frames, FDA-compliant contact surfaces, and washdown-rated components to meet USDA, 3-A SSI, and BISSC sanitary design standards. These conveyors transport raw ingredients, work-in-process items, and finished food products through processing and packaging lines while preventing contamination and enabling thorough cleaning.
+        </p>
+        <p>
+          Food conveyor systems cost 2-4 times more than standard industrial conveyors because every component -- frame, belt, bearings, motors, fasteners -- must resist corrosion from cleaning chemicals and eliminate bacterial harborage points.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanitary Standards -->
+  <article>
+  <section class="py-24 bg-surface" aria-labelledby="standards-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Standards</div>
+      <h2 id="standards-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        USDA, 3-A SSI & BISSC: What Each Standard Requires
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Three organizations define sanitary design standards that apply to food conveyor equipment. Each standard focuses on different aspects of food safety, and your facility's regulatory requirements determine which ones apply. Many food plants require compliance with multiple standards simultaneously.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">USDA Acceptance</h3>
+        <p>
+          The USDA Dairy Grading Branch and Meat & Poultry Inspection programs evaluate equipment for use in federally inspected food plants. USDA-accepted conveyors must use food-contact materials that resist corrosion, have smooth and cleanable surfaces with no pits or crevices, and allow full disassembly for inspection and cleaning. USDA acceptance applies primarily to meat, poultry, dairy, and egg processing facilities.
+        </p>
+        <p>
+          Dorner's AquaPruf series and Nercon's sanitary conveyor platforms carry USDA acceptance for direct food contact applications. These conveyors feature fully welded stainless steel frames, open-frame designs for easy cleaning underneath, and tool-free belt removal.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">3-A Sanitary Standards (3-A SSI)</h3>
+        <p>
+          3-A Sanitary Standards Inc. publishes design criteria for equipment used in dairy, food, and beverage processing. 3-A standards specify surface finish requirements (typically 32 Ra or better for product contact surfaces), minimum radii for internal corners (no sharp angles that trap product), material requirements (300-series stainless steel), and self-draining design so no liquid pools during cleaning.
+        </p>
+        <p>
+          3-A compliance matters most in dairy processing, liquid food handling, and any application where the conveyor contacts pumpable food products. The standard requires that all product-contact surfaces be accessible for CIP (Clean-in-Place) or manual cleaning without tools. <!-- VERIFY: Current 3-A surface finish Ra requirement for conveyor surfaces -->
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">BISSC (Baking Industry Sanitation Standards Committee)</h3>
+        <p>
+          BISSC standards apply specifically to equipment used in bakery and baking operations. These standards address flour dust accumulation, high-temperature zones near ovens, and the unique cleaning challenges of dough-contact surfaces. BISSC-compliant conveyors feature sealed frames that prevent flour ingress, smooth surfaces that resist dough adhesion, and construction that withstands the thermal cycling common in bakery environments.
+        </p>
+        <p>
+          mk North America builds modular conveyor platforms that meet BISSC requirements for bakery applications. Their stainless steel profile systems allow configuration of custom conveyor layouts within bakery lines while maintaining sanitary design principles.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Selection -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="materials-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Material Selection</div>
+      <h2 id="materials-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        304 vs. 316 Stainless Steel: Choosing the Right Grade
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Stainless steel grade selection drives a significant portion of food conveyor cost. The two primary grades -- 304 and 316 -- serve different applications based on your product chemistry and cleaning protocols. Choosing the wrong grade leads to premature corrosion, pitting, and eventual contamination risk.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">304 Stainless Steel (18/8)</h3>
+        <p>
+          304 stainless steel contains 18% chromium and 8% nickel. It resists corrosion from water, steam, mild acids, and most food products. 304 is the standard grade for food conveyors in dry food processing, bakery, snack food, confectionery, and general food packaging applications. It handles standard alkaline and quaternary ammonium sanitizers without degradation.
+        </p>
+        <p>
+          <strong class="text-ink">Choose 304 when:</strong> your product is dry or low-acid, your cleaning chemistry uses standard quaternary or alkaline sanitizers, and your environment does not involve salt brines or chlorinated cleaners.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">316 Stainless Steel (18/10/2-3 Mo)</h3>
+        <p>
+          316 stainless steel adds 2-3% molybdenum to the 304 composition. Molybdenum provides significantly better resistance to chloride-induced pitting and crevice corrosion. This matters in food environments with salt exposure, acidic products, or chlorine-based cleaning chemicals.
+        </p>
+        <p>
+          <strong class="text-ink">Choose 316 when:</strong> you process meat, poultry, seafood, dairy, citrus, tomato products, pickled foods, or any product with significant salt or acid content. Also choose 316 if your sanitation program uses chlorinated cleaners (bleach-based sanitizers) or if the conveyor operates in a high-humidity coastal environment. 316 costs roughly 20-30% more than 304 per pound of material. <!-- VERIFY: Current 316 vs 304 price premium percentage -->
+        </p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[600px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Factor</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">304 SS</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">316 SS</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Chloride resistance</td>
+              <td class="py-4 pr-4">Moderate</td>
+              <td class="py-4">Excellent</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Acid resistance</td>
+              <td class="py-4 pr-4">Good (mild acids)</td>
+              <td class="py-4">Excellent (strong acids)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Pitting resistance</td>
+              <td class="py-4 pr-4">Moderate (PREN ~19)</td>
+              <td class="py-4">High (PREN ~25)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Relative cost</td>
+              <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-4 font-mono text-sm">$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Best for</td>
+              <td class="py-4 pr-4">Bakery, snack, dry goods, confectionery</td>
+              <td class="py-4">Meat, dairy, seafood, citrus, pickled foods</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Cleaning chemistry</td>
+              <td class="py-4 pr-4">Alkaline, quat sanitizers</td>
+              <td class="py-4">Chlorinated, acidic, and alkaline cleaners</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">PREN = Pitting Resistance Equivalent Number. Higher values indicate better pitting corrosion resistance.</p>
+    </div>
+  </section>
+
+  <!-- Belt Materials -->
+  <section class="py-24 bg-surface" aria-labelledby="belts-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Materials</div>
+      <h2 id="belts-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        Food-Contact Belt Materials
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          The belt is the primary food-contact surface on most food conveyors. FDA 21 CFR 177 governs which materials can legally contact food in the United States. EU Regulation 1935/2004 sets equivalent standards for European markets. Belt material selection depends on your product type, processing temperature, cleaning method, and required belt surface (smooth, textured, perforated, or cleated).
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Thermoplastic Polyurethane (TPU)</h3>
+        <p>
+          TPU belts are the most common food-grade belt material. They resist oils, fats, and most cleaning chemicals. TPU provides good abrasion resistance and handles temperature ranges from -22 F to 176 F (-30 C to 80 C). Dorner and Nercon use FDA-compliant TPU belting as their standard food-grade belt option. TPU belts work well for bakery products, snack foods, confectionery, fruits, and vegetables.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Silicone</h3>
+        <p>
+          Silicone belts handle high temperatures up to 500 F (260 C) and provide excellent release properties for sticky or dough-based products. They cost more than TPU and wear faster under heavy abrasion. Silicone belts are the standard choice for bakery lines carrying raw dough, sticky candy, and products exiting ovens or cooling tunnels.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Modular Plastic (Acetal / Polypropylene)</h3>
+        <p>
+          Modular plastic belts use interlocking links made from acetal (POM) or polypropylene. These belts allow full disassembly for cleaning -- individual links snap out without tools. They handle temperatures up to 250 F (121 C) and resist most food acids and cleaning chemicals. Modular plastic belts excel in meat, poultry, and seafood processing where thorough daily sanitation is critical. Intralox and Rexnord are the dominant modular belt manufacturers. <!-- VERIFY: Intralox and Rexnord still top modular belt suppliers -->
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Stainless Steel Wire Mesh</h3>
+        <p>
+          Wire mesh belts use woven or welded 304/316 stainless steel wire. They handle extreme temperatures (up to 1800 F / 982 C for certain alloys), provide full drainage, and allow airflow for cooling or drying applications. Wire mesh belts are standard in baking ovens, frying systems, cooling tunnels, and spiral freezers. Cambridge Engineered Solutions and Wire Belt Company of America manufacture food-grade wire mesh belting. <!-- VERIFY: Cambridge and Wire Belt still primary wire mesh suppliers -->
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IP Ratings -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="ip-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Environmental Protection</div>
+      <h2 id="ip-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        IP Ratings for Food Conveyor Components
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          IP (Ingress Protection) ratings define how well motors, drives, sensors, and electrical enclosures resist water and dust penetration. Food plant environments range from dry packaging rooms (IP54 sufficient) to full high-pressure washdown zones (IP69K required). Specifying the wrong IP rating leads to motor failures, electrical shorts, and unplanned downtime.
+        </p>
+        <p>
+          Every motor, gearbox, photo-eye, and control enclosure on the conveyor needs an IP rating appropriate for its zone. The conveyor frame itself is not IP-rated -- IP ratings apply to electrical and mechanical components.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">IP Rating</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Protection Level</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Food Application</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink font-mono">IP54</td>
+              <td class="py-4 pr-4">Dust-protected, splash-proof</td>
+              <td class="py-4 pr-4">Dry packaging areas, secondary packaging</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink font-mono">IP65</td>
+              <td class="py-4 pr-4">Dust-tight, low-pressure water jets</td>
+              <td class="py-4 pr-4">Light cleaning, splash zones</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink font-mono">IP66</td>
+              <td class="py-4 pr-4">Dust-tight, high-pressure water jets</td>
+              <td class="py-4 pr-4">Standard food processing washdown</td>
+              <td class="py-4 font-mono text-sm">$$$</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink font-mono">IP69K</td>
+              <td class="py-4 pr-4">High-pressure hot water (176 F / 80 C, 1450 PSI)</td>
+              <td class="py-4 pr-4">Meat, poultry, dairy, CIP environments</td>
+              <td class="py-4 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">
+        IP69K is the highest washdown rating and is required for USDA-inspected meat and poultry plants. Learn more about washdown conveyors in our <a href="/industries/food-conveyors/sanitary/" class="text-accent font-semibold hover:text-accent-hover">sanitary conveyor guide</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Conveyor Types for Food -->
+  <section class="py-24 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Types</div>
+      <h2 id="types-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        Common Conveyor Types in Food Processing
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Food plants use multiple conveyor types across different zones. Raw material handling, processing, packaging, and palletizing each require different conveyor configurations. The table below maps common food plant zones to the conveyor types and specifications most often used in each.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Zone</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Conveyor Type</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">IP Rating</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Raw receiving</td>
+              <td class="py-4 pr-4"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Roller conveyor</a>, belt</td>
+              <td class="py-4 pr-4">304/316 SS</td>
+              <td class="py-4 font-mono text-sm">IP66-IP69K</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Processing</td>
+              <td class="py-4 pr-4">Modular belt, wire mesh</td>
+              <td class="py-4 pr-4">316 SS / Acetal</td>
+              <td class="py-4 font-mono text-sm">IP69K</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Inspection / QC</td>
+              <td class="py-4 pr-4">Belt conveyor, vibratory</td>
+              <td class="py-4 pr-4">304/316 SS</td>
+              <td class="py-4 font-mono text-sm">IP66-IP69K</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Primary packaging</td>
+              <td class="py-4 pr-4">Belt, <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover">indexing conveyor</a></td>
+              <td class="py-4 pr-4">304 SS</td>
+              <td class="py-4 font-mono text-sm">IP65-IP66</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Secondary packaging</td>
+              <td class="py-4 pr-4"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">Accumulation</a>, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a></td>
+              <td class="py-4 pr-4">304 SS / Painted steel</td>
+              <td class="py-4 font-mono text-sm">IP54-IP65</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Palletizing</td>
+              <td class="py-4 pr-4"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet conveyor</a>, <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover">CDLR</a></td>
+              <td class="py-4 pr-4">Painted steel / 304 SS</td>
+              <td class="py-4 font-mono text-sm">IP54-IP65</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Manufacturers -->
+  <section class="py-24 bg-ink-light" aria-labelledby="mfg-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Manufacturers</div>
+      <h2 id="mfg-heading" class="font-display text-4xl font-800 text-white tracking-wide mb-8">
+        Key Food Conveyor Manufacturers
+      </h2>
+      <div class="text-lg text-white/60 leading-relaxed space-y-6">
+        <div>
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-2">Dorner</h3>
+          <p>Dorner manufactures the AquaGard and AquaPruf conveyor series specifically for food processing and packaging. The AquaPruf line features USDA-accepted frames, IP69K washdown ratings, tip-up tails for belt cleaning access, and optional FDA-compliant blue polyurethane belting for visual foreign-body detection. Dorner conveyors are available in belt widths from 3.75 inches to 24 inches. <!-- VERIFY: Current Dorner AquaPruf max belt width --></p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-2">Nercon</h3>
+          <p>Nercon builds custom sanitary conveyor systems for food packaging lines. Their platforms include sanitary belt conveyors, laning and collating systems, <a href="/conveyor-functions/tray-loading/" class="text-accent-bright hover:text-white font-semibold">tray loading conveyors</a>, and accumulation tables. Nercon specializes in integrating conveyors with case packers, cartoners, and multipack systems in food plants.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-2">mk North America</h3>
+          <p>mk North America produces modular aluminum and stainless steel conveyor platforms using extruded profile frames. Their food-grade conveyors use 304 and 316 stainless steel profiles with sanitary design features. mk conveyors are modular, allowing field configuration and reconfiguration as line layouts change.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-2">Arrowhead Systems</h3>
+          <p>Arrowhead Systems designs palletizing, depalletizing, and pallet conveyor systems for food and beverage plants. Their systems handle full-case and empty-container palletizing with speeds matching high-output food production lines. Arrowhead integrates <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent-bright hover:text-white font-semibold">pallet conveyors</a> with stretch wrappers and warehouse staging areas.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-2">Key Technology</h3>
+          <p>Key Technology manufactures vibratory conveyors, optical sorters, and digital inspection systems for food processing. Their Iso-Flo vibratory conveyors distribute, dewater, and inspect raw food products. Key Technology systems appear frequently in frozen food, potato, nut, and produce processing lines. <!-- VERIFY: Current Key Technology product line still includes Iso-Flo --></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Factors -->
+  <section class="py-24 bg-surface" aria-labelledby="cost-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Cost Factors</div>
+      <h2 id="cost-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        What Drives Food Conveyor Costs
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Food-grade conveyors carry a significant cost premium over standard industrial conveyors. Every component must meet food safety requirements, which eliminates lower-cost material options available in non-food applications. The following factors have the largest impact on food conveyor pricing.
+        </p>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Frame material:</strong> 304 stainless steel costs roughly 2-3x more than painted carbon steel. 316 adds another 20-30% above 304.</li>
+          <li><strong class="text-ink">Belt material:</strong> FDA-compliant TPU and modular plastic belts cost 2-5x more than standard PVC or rubber belting.</li>
+          <li><strong class="text-ink">Motors and drives:</strong> IP69K washdown-rated stainless steel motors cost 3-5x more than standard TEFC motors. Stainless steel gearboxes add further cost.</li>
+          <li><strong class="text-ink">Bearings:</strong> Sealed, food-grade bearings with FDA-compliant lubricant cost more and require more frequent replacement than standard bearings.</li>
+          <li><strong class="text-ink">Fasteners:</strong> All-stainless hardware with no exposed threads or recesses adds material and labor cost.</li>
+          <li><strong class="text-ink">Design complexity:</strong> Open-frame designs, tip-up tails, tool-free belt removal, and self-draining surfaces add engineering and fabrication cost.</li>
+        </ul>
+        <p>
+          Our <a href="/resources/conveyor-cost-guide/" class="text-accent font-semibold hover:text-accent-hover">conveyor cost guide</a> provides detailed pricing factor breakdowns across all conveyor types, including food-grade configurations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-pages -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="subpages-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Deep Dives</div>
+      <h2 id="subpages-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-10">
+        Food Conveyor <span class="text-accent">Guides</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <a href="/industries/food-conveyors/sanitary/" class="card group p-7 flex flex-col">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Sanitary & Washdown Conveyors</h3>
+          <p class="text-base text-ink-muted leading-relaxed">IP65 through IP69K washdown ratings, CIP/COP cleaning protocols, USDA and 3-A acceptance requirements, and sanitary design principles for food contact conveyor systems.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">IP69K</span>
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">CIP</span>
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Washdown</span>
+          </div>
+        </a>
+        <a href="/conveyor-functions/reject-systems/" class="card group p-7 flex flex-col">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Reject & Divert Systems</h3>
+          <p class="text-base text-ink-muted leading-relaxed">Automated reject conveyors remove failed QC product, foreign body detections, and off-spec items from the main food processing line.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Metal Detect</span>
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">X-Ray</span>
+            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">QC</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What makes a conveyor food-grade?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A food-grade conveyor uses materials and construction methods that meet FDA, USDA, 3-A SSI, or BISSC sanitary design standards. Key requirements include 304 or 316 stainless steel frames with smooth welds, FDA-compliant belt materials, sealed bearings, and tool-free disassembly for cleaning. The conveyor must carry an appropriate IP rating and eliminate harborage points where bacteria can grow.</p>
+            <p>Read our <a href="/industries/food-conveyors/sanitary/" class="text-accent font-semibold hover:text-accent-hover">sanitary conveyor guide</a> for detailed design criteria.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between 304 and 316 stainless steel for food conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><strong class="text-ink">304 stainless steel</strong> is the standard grade for most food conveyor applications. It handles water, mild cleaning chemicals, and most food products.</p>
+            <p><strong class="text-ink">316 stainless steel</strong> adds molybdenum for superior chloride and acid resistance. Choose 316 for meat, poultry, seafood, dairy, citrus, and any facility using chlorine-based sanitizers. 316 costs roughly 20-30% more than 304.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What IP rating do I need for a food conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>IP65 handles light cleaning and splash zones. IP66 suits standard food processing washdown. <strong class="text-ink">IP69K</strong> withstands high-pressure, high-temperature washdown (176 F / 80 C at 1450 PSI) and is required for meat, poultry, dairy, and CIP environments.</p>
+            <p>Choose IP69K for any zone requiring USDA or 3-A compliance.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much more do food-grade conveyors cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Food-grade conveyors typically cost 2-4 times more than equivalent standard industrial conveyors. The premium covers stainless steel construction, FDA-compliant belts, sealed bearings, washdown-rated motors, and sanitary design features like tip-up tails and open frames.</p>
+            <p>See our <a href="/resources/conveyor-cost-guide/" class="text-accent font-semibold hover:text-accent-hover">conveyor cost guide</a> for detailed pricing factors.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Which manufacturers make food-grade conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Major food-grade conveyor manufacturers include Dorner (AquaGard and AquaPruf sanitary belt conveyors), Nercon (custom sanitary conveyors for food packaging), mk North America (modular stainless conveyors), Arrowhead Systems (palletizing systems for food), and Key Technology (vibratory and inspection conveyors for food processing).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-surface-dim" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-ink tracking-wide mb-8">
+        Related Resources
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/industries/food-conveyors/sanitary/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Sanitary Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Washdown ratings and sanitary design</div>
+        </a>
+        <a href="/industries/packaging-line-conveyors/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Packaging Line Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Complete packaging line integration</div>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Roller Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Gravity and powered roller systems</div>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Cost Guide</div>
+          <div class="text-sm text-ink-muted mt-1">Pricing factors and budget planning</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

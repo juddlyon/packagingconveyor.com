@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Indexing Conveyors", "item": "https://packagingconveyor.com/conveyor-functions/indexing-conveyors/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Indexing Conveyors for Precision Positioning",
+  "description": "Complete guide to indexing conveyors — servo-driven indexing, mechanical indexing, timing screws, and motion profiles for pick-and-place, filling, assembly, and labeling stations.",
+  "url": "https://packagingconveyor.com/conveyor-functions/indexing-conveyors/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an indexing conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An indexing conveyor moves product in precise, repeatable start-stop cycles rather than continuous motion. Each cycle advances product a fixed distance (the index length) and holds it stationary at a dwell position for a downstream operation — filling, labeling, pick-and-place, assembly, or inspection. Positioning accuracy ranges from ±2mm on mechanical systems to ±0.1mm on servo-driven systems." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between servo indexing and mechanical indexing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Servo indexing uses programmable servo motors with electronic motion profiles. Operators change index length, speed, dwell time, and acceleration through the HMI. Mechanical indexing uses cams, Geneva drives, or ratchet mechanisms that produce a fixed motion profile. Servo costs more but offers recipe-based changeover; mechanical costs less and provides reliable, maintenance-simple operation for single-format lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "What positioning accuracy can an indexing conveyor achieve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Positioning accuracy depends on the drive technology. Servo-driven indexing conveyors achieve ±0.1mm to ±0.5mm repeatability. Mechanical cam-driven systems achieve ±0.5mm to ±1.0mm. Timing-screw indexers with servo drives achieve ±0.25mm. Belt-driven indexers with pneumatic stops achieve ±1.0mm to ±2.0mm. The required accuracy depends on the downstream operation — labeling needs ±1mm, robotic pick-and-place needs ±0.5mm, and precision assembly needs ±0.1mm." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use indexing conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Indexing conveyors serve food and beverage (filling, capping, labeling), pharmaceutical (blister packing, vial filling, cartoning), cosmetics (tube filling, compact assembly), automotive (parts assembly, testing stations), and electronics (PCB handling, component placement). Any operation requiring a product to stop at a precise location for a timed process uses indexing conveyors." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Indexing Conveyors for Precision Positioning | PackagingConveyor.com"
+  description="Complete guide to indexing conveyors — servo-driven, mechanical, and timing screw indexing for filling, labeling, pick-and-place, assembly, and inspection stations."
+  canonical="https://packagingconveyor.com/conveyor-functions/indexing-conveyors/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Indexing Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Indexing Conveyors for <span class="text-accent-bright">Precision Positioning</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          An indexing conveyor moves product in precise, repeatable start-stop cycles — advancing a fixed distance (the index length) and holding product stationary at a dwell position for filling, labeling, pick-and-place, assembly, or inspection. Positioning accuracy ranges from &plusmn;2mm on simple pneumatic-stop systems to &plusmn;0.1mm on servo-driven belt or pallet-transfer indexers. Dorner, Shuttleworth, and mk North America manufacture indexing conveyors for packaging, pharmaceutical, and assembly applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ HOW INDEXING WORKS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="how-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Fundamentals</div>
+        <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          How Indexing <span class="text-accent">Works</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Continuous conveyors move product at a constant speed. Indexing conveyors move product in a cycle: <strong class="text-ink">advance</strong>, <strong class="text-ink">decelerate</strong>, <strong class="text-ink">dwell</strong>, <strong class="text-ink">accelerate</strong>, and <strong class="text-ink">repeat</strong>. The dwell period gives downstream equipment — a filler nozzle, a labeler head, a pick-and-place arm, or an inspection camera — time to operate on a stationary target.
+          </p>
+          <p>
+            The indexing cycle has four critical parameters:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Index length (pitch):</strong> The distance the conveyor advances per cycle. This equals the spacing between product stations. Common index lengths range from 50mm (small bottles) to 1,200mm (pallet indexers).</li>
+            <li><strong class="text-ink">Index time:</strong> How long the conveyor takes to advance one index length. Shorter index times mean higher throughput. Typical range: 0.2 to 2.0 seconds.</li>
+            <li><strong class="text-ink">Dwell time:</strong> How long product stays stationary at the station. Determined by the downstream operation — a label application takes 0.1–0.3 seconds; a multi-head filler takes 1.0–3.0 seconds.</li>
+            <li><strong class="text-ink">Cycle time:</strong> Index time + dwell time = one complete cycle. Throughput (products per minute) = 60 / cycle time in seconds.</li>
+          </ul>
+          <p>
+            The motion profile — how the conveyor accelerates, cruises, and decelerates — directly affects product stability. Aggressive acceleration topples tall bottles. Abrupt deceleration shifts loose product in trays. Servo-driven indexers let engineers tune the motion profile (trapezoidal, S-curve, or custom) to match the product's stability characteristics. Mechanical indexers use fixed cam profiles that balance speed and smoothness for a given application.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INDEXING TECHNOLOGIES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="tech-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Technologies</div>
+        <h2 id="tech-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Indexing <span class="text-accent">Technologies</span>
+        </h2>
+
+        <div class="space-y-12">
+          <!-- Servo Belt Indexing -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Servo-Driven Belt Indexing</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Servo-driven belt indexing is the most versatile and widely used indexing technology for packaging lines. A servo motor drives the conveyor belt through a precision gearbox. The servo controller executes programmable motion profiles — trapezoidal, S-curve, sinusoidal, or custom — with index length, speed, and dwell time all adjustable through the HMI. Dorner's 2200 Series Precision Move and mk North America's VersaMove indexing conveyors are examples of servo belt indexers used in packaging.
+              </p>
+              <p>
+                Servo belt indexers achieve &plusmn;0.1mm to &plusmn;0.5mm repeatability depending on belt type, drive ratio, and load. Timing belts (polyurethane with steel or Kevlar cords) provide the highest precision because they eliminate belt slip. Flat PVC or polyurethane belts offer lower friction for product sliding onto and off the belt but sacrifice positioning accuracy to &plusmn;0.5–1.0mm due to belt elasticity.
+              </p>
+              <p>
+                Changeover on servo belt indexers requires no mechanical adjustment. Operators load a new recipe — index length, speed, dwell, and motion profile — from the HMI. This makes servo belt indexing the default choice for lines running multiple SKUs with different package sizes. Dorner's SmartPace software automates recipe management and links indexing parameters to upstream and downstream machine speeds.
+              </p>
+              <!-- VERIFY: Dorner SmartPace software name and feature set -->
+            </div>
+          </div>
+
+          <!-- Timing Screw Indexing -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Timing Screw (Starwheel) Indexing</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Timing screws (also called feed screws or worm drives) use a helical screw rotating alongside the conveyor to capture product and space it at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on a continuous flat belt or <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyor</a> while the screw controls spacing. This technology is dominant in bottle and container lines where round products need consistent pitch before labeling, filling, or capping.
+              </p>
+              <p>
+                Servo-driven timing screws adjust pitch by changing the screw speed relative to the belt speed. Fixed-pitch timing screws require a physical screw change for different container diameters. Changeover time for fixed screws ranges from 15 to 45 minutes. Servo screws change over in 1–2 minutes through recipe selection. Manufacturers including Hartness (part of ITW), Morrison Container Handling Solutions, and Aagard supply timing screws for packaging lines.
+              </p>
+              <!-- VERIFY: Morrison Container Handling Solutions product line current branding -->
+            </div>
+          </div>
+
+          <!-- Mechanical Indexing -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Mechanical Cam & Geneva Drive Indexing</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Mechanical indexing uses physical cams or Geneva drives to convert continuous motor rotation into intermittent motion. A Geneva drive produces a fixed dwell-to-index ratio — typically 2:1 or 3:1 — with smooth acceleration and deceleration built into the cam geometry. The motion profile is fixed and repeatable without electronic control, making these systems extremely reliable for dedicated, single-format lines.
+              </p>
+              <p>
+                Cam-driven indexers use barrel cams, globoidal cams, or cylindrical cams to produce custom motion profiles. The cam grind determines the acceleration curve, dwell period, and maximum speed. Changing the motion profile requires machining a new cam — a process that takes weeks and costs significantly more than a servo recipe change. However, the simplicity of a mechanical indexer (no servo drives, no controllers, no software) appeals to plants with limited controls expertise.
+              </p>
+              <p>
+                Mechanical indexers excel in high-speed pharmaceutical blister packing, cartoning, and tube filling where the motion profile never changes. Companies like Destaco (Camco division) and Ferguson Machine manufacture precision mechanical indexers with decades of installed base in pharmaceutical and cosmetics packaging.
+              </p>
+              <!-- VERIFY: Destaco Camco division current branding and product names -->
+            </div>
+          </div>
+
+          <!-- Pallet Transfer Indexing -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Pallet Transfer (Workpiece Carrier) Indexing</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Pallet transfer systems carry product on machined pallets (workpiece carriers) that ride on a conveyor loop. The pallet provides a stable, repeatable reference surface — locating pins, nests, or fixtures on the pallet hold the product in a known position. The conveyor indexes the pallet to each workstation, and the pallet's precision fixturing delivers &plusmn;0.05mm repeatability at each station.
+              </p>
+              <p>
+                mk North America's VersaMove, Bosch Rexroth's TS 2plus, and Dorner's FlexMove pallet systems are widely used in pharmaceutical, medical device, and electronics assembly. These systems combine belt or chain conveyor transport with precision locating at each station using pop-up pins, clamps, or servo-positioned stops. The pallet circulates in a loop — loading at station one, indexing through process stations, unloading at the final station, and returning empty to the start.
+              </p>
+              <p>
+                Pallet transfer indexing suits operations where the same conveyor must handle multiple product variants. Different pallet fixtures accommodate different product shapes. Changeover involves swapping pallets rather than adjusting the conveyor. This approach is common in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line integration</a> for kitting, assembly, and multi-step filling operations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pneumatic Stop Indexing -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Pneumatic Stop Indexing</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                The simplest form of indexing uses a continuously running conveyor with pneumatic pop-up stops. The conveyor runs at constant speed. A pneumatic cylinder raises a stop blade into the product path, holding the product at the station. When the downstream operation completes, the stop retracts and the product advances to the next station.
+              </p>
+              <p>
+                Pneumatic stop indexing achieves &plusmn;1.0–2.0mm positioning accuracy — limited by product momentum, belt slip under the stopped product, and cylinder response time. This approach costs significantly less than servo indexing and works well for operations that tolerate moderate positional variation. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> with zone stops use this same principle to create multi-zone indexing behavior. Shuttleworth's slip-torque conveyors are designed for this mode — the belt slips under stopped product without building pressure or scuffing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Indexing Technology <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Technology</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Accuracy</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Max Speed</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Changeover</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Servo Belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.1–0.5 mm</td>
+                <td class="py-4 pr-4 font-mono text-sm">120+ CPM</td>
+                <td class="py-4 pr-4">Recipe (1–2 min)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Multi-SKU packaging</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Timing Screw</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.25 mm</td>
+                <td class="py-4 pr-4 font-mono text-sm">600+ BPM</td>
+                <td class="py-4 pr-4">Screw swap (15–45 min) or recipe</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$–$$$</td>
+                <td class="py-4">Bottle/container lines</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Mechanical Cam</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.5–1.0 mm</td>
+                <td class="py-4 pr-4 font-mono text-sm">200+ CPM</td>
+                <td class="py-4 pr-4">Cam swap (hours)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Dedicated single-format</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Pallet Transfer</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.05–0.1 mm</td>
+                <td class="py-4 pr-4 font-mono text-sm">30–60 CPM</td>
+                <td class="py-4 pr-4">Pallet swap (5–20 min)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">Assembly, pharma, medical</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Pneumatic Stop</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;1.0–2.0 mm</td>
+                <td class="py-4 pr-4 font-mono text-sm">60–80 CPM</td>
+                <td class="py-4 pr-4">Stop position (5–15 min)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">Low-cost, moderate accuracy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">CPM = cycles per minute. BPM = bottles per minute. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See full cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- ═══ MOTION PROFILES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="motion-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Motion Engineering</div>
+        <h2 id="motion-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Motion Profiles <span class="text-accent">Explained</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The motion profile defines how the indexing conveyor accelerates, cruises, and decelerates during each index cycle. Three profiles cover most packaging applications:
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Trapezoidal Profile</h3>
+          <p>
+            The trapezoidal profile accelerates at a constant rate, cruises at maximum speed, and decelerates at a constant rate. The velocity-time graph forms a trapezoid. This profile produces the shortest possible index time for a given maximum speed and acceleration. The trade-off is jerk — abrupt transitions between acceleration, cruise, and deceleration phases create mechanical shock. Trapezoidal profiles suit rigid, heavy products (cases, cartons, pallets) that resist tipping.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">S-Curve Profile</h3>
+          <p>
+            The S-curve profile ramps acceleration gradually, eliminating the abrupt jerk of trapezoidal motion. The velocity-time graph shows smooth transitions at the start and end of acceleration and deceleration phases. S-curve profiles take 10–15% longer than trapezoidal profiles for the same index distance but produce significantly less product disturbance. This profile is standard for bottles, containers, and any tall or top-heavy product that tends to topple under sudden acceleration.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Modified Sine (Cycloidal) Profile</h3>
+          <p>
+            The modified sine profile produces the smoothest possible motion — zero jerk at all points in the cycle. The acceleration curve follows a sine wave. This profile takes the longest time for a given index distance but provides the gentlest handling. Modified sine profiles suit fragile products (glass bottles, decorated cakes, filled cups) and precision operations where vibration at the dwell position must be minimized.
+          </p>
+          <p>
+            Servo controllers from Allen-Bradley (Rockwell), Siemens, Beckhoff, and B&R offer all three profiles as standard selections. Custom cam profiles can combine elements — aggressive acceleration with gentle deceleration, for example — to optimize throughput for specific product characteristics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Where Indexing Conveyors <span class="text-accent">Work</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Filling Stations</h3>
+          <p>
+            Liquid and granular filling machines require containers to stop precisely under fill nozzles. Servo indexing conveyors position bottles, jars, or pouches under multi-head fillers with &plusmn;0.5mm accuracy. The dwell time matches the fill cycle — 0.5 to 3.0 seconds depending on product viscosity and fill volume. Overflow fillers, piston fillers, and net-weight fillers all rely on indexing conveyors for container positioning. The indexing conveyor feeds from a <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning or singulating conveyor</a> that delivers containers in single file at the correct pitch.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Labeling Stations</h3>
+          <p>
+            Pressure-sensitive labelers apply labels to products moving at a controlled speed or stopped at a fixed position. Wrap-around labeling requires the product to rotate at a consistent speed while the label applies — a continuous-motion indexer or timing screw provides this. Front-and-back labeling requires the product to stop momentarily while two label heads apply simultaneously. Servo belt indexers handle both modes with recipe changes. Dorner's Precision Move conveyors serve labeling applications across <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a>, beverage, and pharmaceutical lines.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Pick-and-Place & Robotic Loading</h3>
+          <p>
+            <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">Tray loading</a> systems use indexing conveyors to position trays under pick-and-place heads. The tray indexes one pitch (one tray width), the pick-and-place loads product, then the tray indexes again. Servo indexing provides recipe-based tray pitch changes for different tray sizes. For robotic systems using vision tracking, the conveyor runs continuously rather than indexing — but the upstream product infeed often uses an indexing conveyor to meter product spacing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Assembly & Kitting</h3>
+          <p>
+            Pallet transfer indexing conveyors carry components through multi-station assembly cells. Each station adds a component, inspects, or tests. Medical device assembly, consumer electronics assembly, and automotive component kitting all use pallet indexers. mk North America's VersaMove system and Bosch Rexroth's TS 2plus are standard platforms for these applications. The pallet's precision fixturing ensures repeatable positioning at each station without re-referencing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Inspection & Quality Control</h3>
+          <p>
+            Vision inspection systems require product to pause under cameras for image capture. Servo indexing conveyors dwell product at the camera station for 50–200ms — long enough for camera exposure and image processing. <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">Reject systems</a> downstream remove product that fails inspection. The indexing conveyor synchronizes with the vision system's trigger signal and the reject actuator's response time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION CRITERIA ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting an <span class="text-accent">Indexing Conveyor</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Indexing conveyor selection requires matching five parameters to the downstream operation:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li>
+              <strong class="text-ink">Required positioning accuracy.</strong> Labeling (&plusmn;1mm) tolerates pneumatic stops. Robotic pick-and-place (&plusmn;0.5mm) needs servo belt indexing. Precision assembly (&plusmn;0.1mm) demands pallet transfer systems.
+            </li>
+            <li>
+              <strong class="text-ink">Throughput requirement (CPM).</strong> Calculate cycle time = index time + dwell time. Ensure the indexing conveyor's maximum index speed supports the required cycle rate with 15% headroom.
+            </li>
+            <li>
+              <strong class="text-ink">Product characteristics.</strong> Tall bottles need S-curve or modified sine profiles. Heavy cases tolerate trapezoidal. Fragile products demand soft acceleration and deceleration. Round containers may need timing screws instead of belt indexers.
+            </li>
+            <li>
+              <strong class="text-ink">SKU count and changeover frequency.</strong> Single-format lines suit mechanical indexers (lowest cost, highest reliability). Multi-SKU lines need servo with recipe management. High-mix, low-volume lines need pallet transfer with swappable fixtures.
+            </li>
+            <li>
+              <strong class="text-ink">Environment.</strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary washdown</a> environments require stainless steel frames, IP69K drives, and food-grade belting. Cleanroom environments require low-particulate designs with enclosed drives. Standard industrial environments accept painted steel with standard IP54 enclosures.
+            </li>
+          </ol>
+          <p>
+            Discuss these parameters with manufacturers early in the project. Dorner, mk North America, and Shuttleworth all offer application engineering support to size indexing conveyors for specific packaging line requirements. For budgeting, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INTEGRATION WITH AUTOMATED SYSTEMS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Controls Integration</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          PLC & Controls <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Indexing conveyors integrate with the line PLC through either a dedicated motion controller or a servo drive with built-in motion capability. The PLC sends a "start index" command, and the servo controller executes the stored motion profile. A "motion complete" signal returns to the PLC when the conveyor reaches the dwell position, triggering the downstream operation.
+          </p>
+          <p>
+            Modern servo drives from Allen-Bradley (Kinetix series), Siemens (Sinamics), and Beckhoff (AX series) support EtherNet/IP, PROFINET, and EtherCAT networks for real-time coordination between the indexer and other line equipment. This synchronization is critical when the indexing conveyor must coordinate with a filler, labeler, or robot that also has servo-driven axes.
+          </p>
+          <p>
+            For a broader view of controls architecture, sensor integration, and Industry 4.0 connectivity for conveyor systems, see the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED FUNCTIONS ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/tray-loading/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Tray Loading</h3>
+            <p class="text-base text-white/60">Indexing conveyors feed tray loading stations</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Singulate product before indexing</p>
+          </a>
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Remove defects after indexed inspection</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an indexing conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An indexing conveyor advances product a fixed distance and holds it stationary for a downstream operation. Each start-stop cycle positions product at a precise dwell point for filling, labeling, pick-and-place, inspection, or assembly. Positioning accuracy ranges from &plusmn;2mm (pneumatic stops) to &plusmn;0.1mm (servo-driven belt or pallet transfer).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Servo indexing vs. mechanical indexing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Servo indexing uses programmable servo motors — change index length, speed, dwell, and motion profile through the HMI. Mechanical indexing uses cams or Geneva drives with fixed motion profiles. Servo costs more but enables recipe-based changeover for multi-SKU lines. Mechanical provides reliable, maintenance-simple operation for dedicated single-format applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What accuracy can indexing conveyors achieve?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Servo belt: &plusmn;0.1–0.5mm. Timing screw: &plusmn;0.25mm. Mechanical cam: &plusmn;0.5–1.0mm. Pallet transfer: &plusmn;0.05–0.1mm. Pneumatic stops: &plusmn;1.0–2.0mm. Choose the technology based on your downstream operation's positioning tolerance.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use indexing conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Food and beverage (filling, capping, labeling), pharmaceutical (blister packing, vial filling), cosmetics (tube filling, compact assembly), automotive (parts assembly), and electronics (PCB handling). Any operation requiring precise product positioning for a timed process uses indexing conveyors.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,410 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const industries = [
+  {
+    name: 'Food & Beverage',
+    slug: 'food-conveyors',
+    desc: 'Sanitary, USDA-accepted, and washdown-rated conveyor systems for food processing and packaging. Covers 304/316 stainless steel, IP69K ratings, 3-A standards, and belt material selection.',
+    tags: ['USDA', '3-A', 'IP69K', 'Washdown'],
+    built: true,
+  },
+  {
+    name: 'Packaging Lines',
+    slug: 'packaging-line-conveyors',
+    desc: 'Primary, secondary, and tertiary packaging line conveyor integration. Case erecting, tray loading, palletizing, and stretch wrap infeed layouts with accumulation and merge zones.',
+    tags: ['Case', 'Pallet', 'Wrap', 'Accumulation'],
+    built: true,
+  },
+  {
+    name: 'Pharmaceutical',
+    slug: 'pharmaceutical-conveyors',
+    desc: 'Cleanroom-compatible and GMP-compliant conveyor systems for pharma manufacturing. ISO Class 5-8 environments, particle-free belt designs, and validated controls.',
+    tags: ['GMP', 'ISO 5-8', 'Cleanroom'],
+    built: false,
+  },
+  {
+    name: 'Warehouse & Distribution',
+    slug: 'warehouse-conveyors',
+    desc: 'High-throughput sortation, accumulation, and transport conveyors for distribution centers. E-commerce fulfillment, pick-to-ship, and cross-dock conveyor layouts.',
+    tags: ['Sortation', 'Pick/Pack', 'E-Commerce'],
+    built: false,
+  },
+  {
+    name: 'Assembly Line',
+    slug: 'assembly-line-conveyors',
+    desc: 'Pallet-transfer, indexing, and workstation conveyors for manual and automated assembly operations. Precision positioning with servo-driven indexing and ESD-safe options.',
+    tags: ['Indexing', 'Pallet Transfer', 'ESD'],
+    built: false,
+  },
+  {
+    name: 'Automotive',
+    slug: 'automotive-conveyors',
+    desc: 'Paint line, body-in-white, trim, and final assembly conveyor systems. Overhead power-and-free, inverted monorail, skid conveyors, and AGV integration.',
+    tags: ['Paint Line', 'Assembly', 'AGV', 'Skid'],
+    built: false,
+  },
+  {
+    name: 'Mining & Aggregate',
+    slug: 'mining-conveyors',
+    desc: 'Heavy-duty overland belt conveyors, troughed idler systems, and impact-resistant transfer points for bulk material handling in mining and aggregate operations.',
+    tags: ['Bulk', 'Overland', 'Troughed', 'Heavy-Duty'],
+    built: false,
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What industries use packaging conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Packaging conveyors serve food and beverage, pharmaceutical, warehouse and distribution, automotive, assembly manufacturing, and mining industries. Each industry has unique requirements for materials, sanitation, speed, and compliance certifications. Food-grade conveyors require USDA acceptance and washdown ratings. Pharmaceutical conveyors need GMP compliance and cleanroom compatibility. Warehouse conveyors prioritize high throughput and sortation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do conveyor requirements differ between industries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Industry requirements differ across material construction, sanitation standards, speed ranges, load capacity, and regulatory compliance. Food conveyors use 304 or 316 stainless steel with IP69K washdown ratings. Pharmaceutical conveyors need particle-free designs in ISO 5-8 cleanrooms. Warehouse conveyors handle high-volume sortation at 300+ FPM. Automotive conveyors carry heavy assemblies through paint and welding environments. Mining conveyors move bulk material over long distances with heavy-duty troughed belt designs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor types work across multiple industries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt conveyors, roller conveyors, and MDR (Motor Driven Roller) conveyors appear across nearly every industry. Belt conveyors handle lightweight and irregular products in food, pharma, and packaging lines. Roller conveyors transport cases, cartons, and totes in warehouses, packaging lines, and manufacturing. MDR conveyors provide zero-pressure accumulation in any industry that needs gentle product handling and zone-based control."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Systems by Industry: Food, Packaging, Pharma & More",
+  "description": "Industry-specific conveyor guides covering food-grade, packaging line, pharmaceutical, warehouse, automotive, assembly, and mining conveyor systems.",
+  "url": "https://packagingconveyor.com/industries/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Conveyor Systems by Industry: Food, Packaging, Pharma & More | PackagingConveyor.com"
+  description="Industry-specific conveyor guides for food & beverage, packaging lines, pharmaceutical, warehouse, automotive, assembly, and mining applications. Sanitation standards, material specs, and selection criteria."
+  canonical="https://packagingconveyor.com/industries/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface-dim border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Industries</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-24 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Industry Guides</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-6">
+        Conveyor Systems by Industry: Food, Packaging, Pharma & More
+      </h1>
+      <p class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        Every industry imposes unique demands on conveyor systems -- sanitation standards, load capacities, speed requirements, material compatibility, and regulatory compliance. These guides break down conveyor selection criteria by industry so you can match equipment to your specific application.
+      </p>
+    </div>
+  </section>
+
+  <!-- AIO Definition -->
+  <section class="py-16 bg-surface" aria-labelledby="overview-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="overview-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        Why Industry Matters for Conveyor Selection
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          A conveyor that works perfectly in a warehouse distribution center will fail in a food plant. Material construction, surface finish, cleaning protocols, environmental ratings, and regulatory certifications vary dramatically between industries. A stainless steel washdown conveyor rated IP69K costs significantly more than a painted carbon steel unit designed for dry warehouse use -- but a food plant has no alternative.
+        </p>
+        <p>
+          These industry guides help you identify which <a href="/conveyor-types/" class="text-accent font-semibold hover:text-accent-hover">conveyor types</a> match your application, which specifications matter most, and which manufacturers specialize in your vertical. Each guide covers material selection, sanitation and compliance requirements, speed and throughput considerations, and cost factors specific to that industry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Grid -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="grid-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">All Industries</div>
+      <h2 id="grid-heading" class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide mb-12">
+        Choose Your <span class="text-accent">Industry</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
+        {industries.map((ind) => (
+          <a href={`/industries/${ind.slug}/`} class="card group p-7 flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{ind.name}</h3>
+              <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+            <p class="text-base text-ink-muted mb-5 leading-relaxed">{ind.desc}</p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              {ind.tags.map(tag => (
+                <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Industry Comparison Table -->
+  <section class="py-24 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Quick Reference</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Industry Conveyor <span class="text-accent">Requirements</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Industry</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Frame Material</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Standard</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Speed</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover">Food & Beverage</a></td>
+              <td class="py-4 pr-4">304/316 Stainless Steel</td>
+              <td class="py-4 pr-4">USDA, 3-A, BISSC</td>
+              <td class="py-4 pr-4 font-mono text-sm">20-200 FPM</td>
+              <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover">Packaging Lines</a></td>
+              <td class="py-4 pr-4">Carbon Steel / Stainless</td>
+              <td class="py-4 pr-4">NFPA 79, UL 508A</td>
+              <td class="py-4 pr-4 font-mono text-sm">30-300 FPM</td>
+              <td class="py-4 font-mono text-sm">$$-$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover">Pharmaceutical</a></td>
+              <td class="py-4 pr-4">316/316L Stainless Steel</td>
+              <td class="py-4 pr-4">cGMP, FDA 21 CFR</td>
+              <td class="py-4 pr-4 font-mono text-sm">10-120 FPM</td>
+              <td class="py-4 font-mono text-sm">$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover">Warehouse & Distribution</a></td>
+              <td class="py-4 pr-4">Painted Carbon Steel</td>
+              <td class="py-4 pr-4">CEMA, OSHA</td>
+              <td class="py-4 pr-4 font-mono text-sm">100-600 FPM</td>
+              <td class="py-4 font-mono text-sm">$$-$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover">Assembly Line</a></td>
+              <td class="py-4 pr-4">Aluminum / Carbon Steel</td>
+              <td class="py-4 pr-4">ISO 9001, ESD</td>
+              <td class="py-4 pr-4 font-mono text-sm">5-60 FPM</td>
+              <td class="py-4 font-mono text-sm">$$-$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover">Automotive</a></td>
+              <td class="py-4 pr-4">Heavy Steel / Specialized</td>
+              <td class="py-4 pr-4">IATF 16949</td>
+              <td class="py-4 pr-4 font-mono text-sm">10-100 FPM</td>
+              <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/mining-conveyors/" class="text-accent hover:text-accent-hover">Mining & Aggregate</a></td>
+              <td class="py-4 pr-4">Heavy Structural Steel</td>
+              <td class="py-4 pr-4">MSHA, CEMA</td>
+              <td class="py-4 pr-4 font-mono text-sm">200-1000 FPM</td>
+              <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Relative cost: $ = lowest, $$$$ = highest. Actual pricing varies by length, configuration, and manufacturer. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See our conveyor cost guide</a> for detailed pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Common Conveyor Types Across Industries -->
+  <section class="py-24 bg-ink-light" aria-labelledby="common-types-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Cross-Industry</div>
+      <h2 id="common-types-heading" class="font-display text-5xl sm:text-6xl font-800 text-white tracking-wide mb-6">
+        Conveyor Types That Span <span class="text-accent-bright">Every Industry</span>
+      </h2>
+      <p class="text-lg text-white/60 max-w-3xl mb-12">
+        Some conveyor types appear in nearly every industry, adapted with different materials and ratings for each application. These are the workhorses of material handling.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Roller Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Gravity and powered roller conveyors transport cases, cartons, and totes across food, packaging, warehouse, and manufacturing applications.</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">MDR Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Motor Driven Roller conveyors provide zero-pressure accumulation and zone control for gentle product handling in every industry.</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Accumulation Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Buffer conveyors absorb line stops and balance throughput between upstream and downstream processes across all packaging operations.</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Transfer Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Right-angle transfers, pop-up transfers, and turntables route products between conveyor lines in packaging, warehouse, and manufacturing layouts.</p>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">CDLR Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Chain Driven Live Roller conveyors handle heavy loads like pallets and drums in packaging, warehouse, and manufacturing environments.</p>
+        </a>
+        <a href="/conveyor-types/live-roller-conveyors/" class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Live Roller Conveyors</h3>
+          <p class="text-base text-white/60 leading-relaxed">Belt-driven live roller conveyors provide continuous powered transport for cases, totes, and cartons in packaging and distribution systems.</p>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/conveyor-types/" class="inline-flex items-center gap-2 text-base font-semibold text-accent-bright hover:text-white transition-colors">
+          Browse all 30+ conveyor types
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-24 bg-surface" aria-labelledby="criteria-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Criteria</div>
+      <h2 id="criteria-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        How to Choose a Conveyor by Industry
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Every conveyor specification starts with the same core questions, but the answers -- and the weight you assign each factor -- shift by industry. A food plant manager prioritizes sanitation and regulatory compliance above throughput. A warehouse operations manager prioritizes speed and sort accuracy above material construction.
+        </p>
+        <p>
+          <strong class="text-ink">Start with these five factors:</strong>
+        </p>
+        <ol class="list-decimal list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Product characteristics:</strong> Weight, dimensions, fragility, temperature, and surface type determine belt/roller material and conveyor width.</li>
+          <li><strong class="text-ink">Environment:</strong> Wet washdown, dry ambient, cleanroom, high-temperature, or outdoor exposure dictates frame material and IP rating.</li>
+          <li><strong class="text-ink">Regulatory requirements:</strong> USDA acceptance, FDA compliance, cGMP, MSHA, or OSHA standards constrain your material and design options.</li>
+          <li><strong class="text-ink">Throughput and speed:</strong> Products per minute, line speed in FPM, and accumulation requirements determine conveyor type and drive configuration.</li>
+          <li><strong class="text-ink">Integration:</strong> Upstream and downstream equipment connections, controls architecture, and facility layout define conveyor length, elevation, and transfer points.</li>
+        </ol>
+        <p>
+          Our <a href="/resources/conveyor-cost-guide/" class="text-accent font-semibold hover:text-accent-hover">conveyor cost guide</a> breaks down how each of these factors affects pricing. The <a href="/resources/automated-conveyor-systems/" class="text-accent font-semibold hover:text-accent-hover">automated conveyor systems guide</a> covers controls and integration in detail.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use packaging conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Packaging conveyors serve food and beverage processing, pharmaceutical manufacturing, warehouse and distribution centers, automotive assembly, general manufacturing, and mining operations. Each industry requires different frame materials, sanitation ratings, speed ranges, and compliance certifications.</p>
+            <p><a href="/industries/food-conveyors/" class="text-accent font-semibold hover:text-accent-hover">Food-grade conveyors</a> require USDA acceptance, washdown ratings, and stainless steel construction. <a href="/industries/packaging-line-conveyors/" class="text-accent font-semibold hover:text-accent-hover">Packaging line conveyors</a> integrate with case packers, palletizers, and stretch wrappers. Pharmaceutical conveyors need cleanroom compatibility and GMP-validated controls.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do conveyor requirements differ between industries?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>The primary differences fall into five categories: material construction, environmental rating, regulatory compliance, speed/throughput, and load capacity.</p>
+            <ul class="list-disc list-inside space-y-1 ml-2">
+              <li><strong class="text-ink">Food & Beverage:</strong> 304 or 316 stainless steel frames, FDA-compliant belts, IP65-IP69K washdown ratings, USDA/3-A acceptance</li>
+              <li><strong class="text-ink">Pharmaceutical:</strong> 316L stainless steel, particle-free designs, ISO Class 5-8 cleanroom compatible, cGMP validation</li>
+              <li><strong class="text-ink">Warehouse:</strong> Painted carbon steel, high-speed sortation (300-600 FPM), heavy case loads, PLC/WMS integration</li>
+              <li><strong class="text-ink">Automotive:</strong> Heavy structural steel, paint-line compatible coatings, high load capacity, overhead and inverted configurations</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyor types work across multiple industries?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-types/roller-conveyors/" class="text-accent font-semibold hover:text-accent-hover">Roller conveyors</a>, belt conveyors, and <a href="/conveyor-types/mdr-conveyors/" class="text-accent font-semibold hover:text-accent-hover">MDR conveyors</a> appear across nearly every industry. Manufacturers build these types in different material grades and configurations for each application.</p>
+            <p>For example, a roller conveyor for a warehouse uses galvanized steel rollers in a painted carbon steel frame. The same roller conveyor design for a food plant uses 304 stainless steel rollers in a fully welded stainless frame with sealed bearings and no exposed fasteners. Both use the same mechanical principles -- the materials and finish standards differ.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-surface" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-ink tracking-wide mb-8">
+        Related Resources
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">All Conveyor Types</div>
+          <div class="text-sm text-ink-muted mt-1">30+ types with specs and selection guides</div>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Conveyor Cost Guide</div>
+          <div class="text-sm text-ink-muted mt-1">Pricing factors and budget planning</div>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Automated Systems</div>
+          <div class="text-sm text-ink-muted mt-1">Controls, integration, and automation</div>
+        </a>
+        <a href="/about/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">About This Resource</div>
+          <div class="text-sm text-ink-muted mt-1">Independent, vendor-neutral guides</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const resources = [
+  { name: 'Automated Conveyor Systems', slug: 'automated-conveyor-systems', desc: 'PLC integration, sensors, VFDs, Industry 4.0/IIoT, and warehouse vs. packaging line automation', status: 'live', icon: '⚙' },
+  { name: 'Cost & Pricing Guide', slug: 'conveyor-cost-guide', desc: 'Cost factors by conveyor type, materials, controls, environment, and installation', status: 'live', icon: '$' },
+  { name: 'Design & Sizing Guide', slug: 'conveyor-design-guide', desc: 'Speed calculations, throughput formulas, layout planning, and conveyor sizing reference', status: 'coming', icon: '📐' },
+  { name: 'Manufacturer Directory', slug: 'conveyor-manufacturers', desc: 'Conveyor manufacturers and integrators filtered by type, industry, and capability', status: 'coming', icon: '🏭' },
+  { name: 'Maintenance Guide', slug: 'conveyor-maintenance', desc: 'Preventive maintenance schedules, belt tracking, roller replacement, and lubrication guides', status: 'coming', icon: '🔧' },
+  { name: 'Conveyor Safety', slug: 'conveyor-safety', desc: 'OSHA requirements, guarding standards, E-stop placement, and lockout/tagout procedures', status: 'coming', icon: '⚠' },
+  { name: 'Belt Selection Guide', slug: 'conveyor-belt-selection', desc: 'Belt material comparison — PVC, polyurethane, silicone, modular plastic, wire mesh', status: 'coming', icon: '▬' },
+  { name: 'Conveyor Glossary', slug: 'conveyor-glossary', desc: 'Definitions for 200+ conveyor terms, abbreviations, and industry jargon', status: 'coming', icon: '📖' },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What resources are available for specifying conveyor systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "PackagingConveyor.com provides free technical resources including a conveyor cost and pricing guide, automated conveyor systems overview, design and sizing calculations, manufacturer directory, maintenance guides, safety references, belt selection guides, and a conveyor glossary. All resources are written for packaging engineers and plant managers." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I estimate conveyor system costs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor costs depend on type (roller, belt, MDR, spiral), length, width, material (carbon steel, stainless, aluminum), motor/drive type, controls complexity, environment (standard, washdown, cleanroom), and installation requirements. Our cost guide breaks down each factor with relative cost comparisons. Contact manufacturers directly for project-specific quotes." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Resources: Guides, Tools & Technical References | PackagingConveyor.com"
+  description="Free conveyor engineering resources — cost guides, automation overviews, design calculators, manufacturer directories, maintenance schedules, and belt selection guides."
+  canonical="https://packagingconveyor.com/resources/"
+  schema={[breadcrumbSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Resources</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resources</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor Resources: Guides, Tools & <span class="text-accent-bright">Technical References</span>
+        </h1>
+        <p class="text-xl text-white/60 max-w-2xl leading-relaxed">
+          Engineering references for specifying, budgeting, and maintaining packaging conveyor systems. Every guide is free, technical, and written for packaging engineers — not marketing departments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESOURCE CARDS ═══ -->
+  <section class="py-24 bg-surface" aria-labelledby="resources-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">All Resources</div>
+      <h2 id="resources-heading" class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase mb-12">
+        Technical <span class="text-accent">Guides</span>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
+        {resources.map((r) => (
+          <a href={`/resources/${r.slug}/`} class="card group p-7 flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <div class="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">{r.icon}</div>
+              {r.status === 'live' ? (
+                <span class="text-xs font-mono font-semibold text-green bg-green/10 px-2 py-1 flex-shrink-0">Available</span>
+              ) : (
+                <span class="text-xs font-mono font-semibold text-ink-muted bg-surface-dim px-2 py-1 flex-shrink-0">Coming Soon</span>
+              )}
+            </div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">{r.name}</h3>
+            <p class="text-base text-ink-muted leading-relaxed mb-4">{r.desc}</p>
+            <div class="mt-auto flex items-center gap-1 text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+              {r.status === 'live' ? 'Read the guide' : 'Preview'}
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUICK ACCESS ═══ -->
+  <section class="py-24 bg-surface-dim" aria-labelledby="quick-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Popular Starting Points</div>
+      <h2 id="quick-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+        Most Visited <span class="text-accent">Resources</span>
+      </h2>
+      <div class="space-y-4">
+        <a href="/resources/conveyor-cost-guide/" class="card group p-7 flex items-center justify-between">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-1">Cost & Pricing Guide</h3>
+            <p class="text-base text-ink-muted">Understand what drives conveyor pricing — type, materials, controls, environment, and installation</p>
+          </div>
+          <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="card group p-7 flex items-center justify-between">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-1">Automated Conveyor Systems</h3>
+            <p class="text-base text-ink-muted">PLC integration, sensor types, VFDs, IIoT, and automation architecture for packaging lines</p>
+          </div>
+          <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+        <a href="/conveyor-types/" class="card group p-7 flex items-center justify-between">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-1">All Conveyor Types</h3>
+            <p class="text-base text-ink-muted">30+ conveyor types with specs, comparisons, and selection criteria</p>
+          </div>
+          <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+        <a href="/conveyor-functions/" class="card group p-7 flex items-center justify-between">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-1">Conveyor Functions</h3>
+            <p class="text-base text-ink-muted">Accumulate, index, reject, lane, load trays — start with what your conveyor needs to do</p>
+          </div>
+          <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPLORE MORE ═══ -->
+  <section class="py-24 bg-ink-light" aria-labelledby="explore-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Explore</div>
+      <h2 id="explore-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+        Other Ways to <span class="text-accent-bright">Browse</span>
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <a href="/conveyor-types/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">By Conveyor Type</h3>
+          <p class="text-base text-white/60 leading-relaxed">30+ types — roller, belt, MDR, spiral, tabletop, chain, and more.</p>
+        </a>
+        <a href="/industries/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">By Industry</h3>
+          <p class="text-base text-white/60 leading-relaxed">Food, pharmaceutical, automotive, and warehouse applications.</p>
+        </a>
+        <a href="/conveyor-functions/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">By Function</h3>
+          <p class="text-base text-white/60 leading-relaxed">Accumulate, index, reject, lane, load trays — task-based selection.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What resources are available for specifying conveyor systems?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>This site provides free technical resources including a <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost and pricing guide</a>, <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems overview</a>, design and sizing calculations, manufacturer directory, maintenance guides, safety references, and belt selection guides. All resources target packaging engineers and plant managers rather than general audiences.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I estimate conveyor system costs?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Conveyor costs depend on type (roller, belt, MDR, spiral), length, width, material (carbon steel vs. stainless vs. aluminum), motor/drive type, controls complexity, environment (standard vs. washdown vs. cleanroom), and installation requirements. The <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> breaks down each factor with relative cost comparisons using a $ to $$$$ scale. Contact manufacturers directly for project-specific quotes.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

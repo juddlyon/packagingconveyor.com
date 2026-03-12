@@ -132,7 +132,19 @@ test.describe('Terms page', () => {
 });
 
 test.describe('SEO fundamentals', () => {
-  const allPages = ['/', '/about/', '/privacy/', '/terms/', '/thank-you/'];
+  const allPages = [
+    '/', '/about/', '/privacy/', '/terms/', '/thank-you/',
+    '/conveyor-types/', '/conveyor-types/roller-conveyors/', '/conveyor-types/roller-conveyors/gravity/',
+    '/conveyor-types/roller-conveyors/powered/', '/conveyor-types/accumulation-conveyors/',
+    '/conveyor-types/transfer-conveyors/', '/conveyor-types/cdlr-conveyors/',
+    '/conveyor-types/mdr-conveyors/', '/conveyor-types/live-roller-conveyors/',
+    '/conveyor-types/vertical-reciprocating/',
+    '/industries/', '/industries/food-conveyors/', '/industries/food-conveyors/sanitary/',
+    '/industries/packaging-line-conveyors/', '/industries/packaging-line-conveyors/pallet/',
+    '/conveyor-functions/', '/conveyor-functions/tray-loading/', '/conveyor-functions/indexing-conveyors/',
+    '/conveyor-functions/collating-laning/', '/conveyor-functions/reject-systems/',
+    '/resources/', '/resources/automated-conveyor-systems/', '/resources/conveyor-cost-guide/',
+  ];
 
   for (const path of allPages) {
     test(`${path} should have required meta tags`, async ({ page }) => {

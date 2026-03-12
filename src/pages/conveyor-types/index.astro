@@ -1,0 +1,545 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const conveyorTypes = [
+  {
+    name: 'Roller Conveyors',
+    slug: '/conveyor-types/roller-conveyors/',
+    desc: 'Gravity, powered, MDR, and line-shaft roller systems for cases, cartons, and totes. The most widely installed conveyor category in packaging.',
+    tags: ['Gravity', 'Powered', 'MDR', 'Line-Shaft'],
+  },
+  {
+    name: 'Gravity Roller Conveyors',
+    slug: '/conveyor-types/roller-conveyors/gravity/',
+    desc: 'Unpowered roller systems that move product by gravity or manual push. Lowest cost, zero energy, minimal maintenance.',
+    tags: ['Unpowered', 'Low Cost'],
+  },
+  {
+    name: 'Powered & Live Roller Conveyors',
+    slug: '/conveyor-types/roller-conveyors/powered/',
+    desc: 'Belt-driven, line-shaft, and chain-driven powered roller systems with zone control and accumulation capability.',
+    tags: ['Belt-Driven', 'Line-Shaft', 'Chain-Driven'],
+  },
+  {
+    name: 'Accumulation Conveyors',
+    slug: '/conveyor-types/accumulation-conveyors/',
+    desc: 'Zero-pressure and minimum-pressure accumulation systems that buffer product between processes without damage.',
+    tags: ['ZPA', 'Min-Pressure', 'Buffer'],
+  },
+  {
+    name: 'Transfer Conveyors',
+    slug: '/conveyor-types/transfer-conveyors/',
+    desc: 'Right-angle transfers, pop-up transfers, turntables, and push diverters for multi-directional product routing.',
+    tags: ['Right-Angle', 'Pop-Up', 'Turntable'],
+  },
+  {
+    name: 'CDLR Conveyors',
+    slug: '/conveyor-types/cdlr-conveyors/',
+    desc: 'Chain Driven Live Roller conveyors for heavy-duty pallet and case handling. High load capacity with positive drive.',
+    tags: ['Heavy-Duty', 'Pallet', 'Chain-Drive'],
+  },
+  {
+    name: 'MDR Conveyors',
+    slug: '/conveyor-types/mdr-conveyors/',
+    desc: 'Motor Driven Roller conveyors with 24VDC motorized rollers, zone control, and zero-pressure accumulation.',
+    tags: ['24VDC', 'Zone Control', 'ZPA'],
+  },
+  {
+    name: 'Live Roller Conveyors',
+    slug: '/conveyor-types/live-roller-conveyors/',
+    desc: 'Belt-driven live roller, line-shaft, and chain-driven powered roller comparison. Zone control and accumulation options.',
+    tags: ['BDLR', 'Line-Shaft', 'CDLR'],
+  },
+  {
+    name: 'Vertical Reciprocating Conveyors',
+    slug: '/conveyor-types/vertical-reciprocating/',
+    desc: 'VRCs for vertical material transport between mezzanine levels. Load capacities, safety codes, and comparison to freight elevators.',
+    tags: ['VRC', 'Mezzanine', 'Vertical'],
+  },
+  {
+    name: 'Belt Conveyors',
+    slug: '/conveyor-types/flat-belt-conveyors/',
+    desc: 'Flat, cleated, and modular belt conveyors for lightweight products, irregular shapes, and incline/decline transport.',
+    tags: ['Flat Belt', 'Cleated', 'Modular'],
+  },
+  {
+    name: 'Spiral Conveyors',
+    slug: '/conveyor-types/spiral-conveyors/',
+    desc: 'Continuous vertical elevation change in a compact footprint. Ideal for multi-level packaging facilities.',
+    tags: ['Vertical', 'Compact', 'Continuous'],
+  },
+  {
+    name: 'Chain Conveyors',
+    slug: '/conveyor-types/chain-conveyors/',
+    desc: 'Drag chain, slat chain, and overhead chain conveyors for heavy or hot products and assembly lines.',
+    tags: ['Drag', 'Slat', 'Overhead'],
+  },
+  {
+    name: 'Sortation & Diverting',
+    slug: '/conveyor-types/diverting-merging/',
+    desc: 'High-speed sortation systems including shoe sorters, pop-up wheel diverters, and sliding shoe sorters.',
+    tags: ['Shoe Sorter', 'Divert', 'Merge'],
+  },
+  {
+    name: 'Screw Conveyors',
+    slug: '/conveyor-types/screw-conveyors/',
+    desc: 'Auger-type conveyors for bulk powder and granular material transport in food and chemical processing.',
+    tags: ['Auger', 'Bulk', 'Powder'],
+  },
+  {
+    name: 'Tabletop Chain Conveyors',
+    slug: '/conveyor-types/tabletop-conveyors/',
+    desc: 'Flat-top and gripper chain conveyors for bottles, cans, cartons, and small containers on high-speed lines.',
+    tags: ['Bottles', 'Cans', 'High-Speed'],
+  },
+  {
+    name: 'Vibratory Conveyors',
+    slug: '/conveyor-types/vibratory-conveyors/',
+    desc: 'Vibratory feeders and conveyors for parts feeding, bulk handling, and hopper discharge.',
+    tags: ['Feeder', 'Bulk', 'Parts'],
+  },
+  {
+    name: 'Magnetic Conveyors',
+    slug: '/conveyor-types/magnetic-conveyors/',
+    desc: 'Magnetic belt and slide conveyors for ferrous containers, lids, and components in packaging lines.',
+    tags: ['Ferrous', 'Lids', 'Cans'],
+  },
+  {
+    name: 'Vacuum Conveyors',
+    slug: '/conveyor-types/vacuum-conveyors/',
+    desc: 'Vacuum belt conveyors for thin, lightweight, or flexible products that standard belts cannot grip.',
+    tags: ['Thin Film', 'Labels', 'Pouches'],
+  },
+  {
+    name: 'Overhead Conveyors',
+    slug: '/conveyor-types/overhead-conveyors/',
+    desc: 'Power-and-free, enclosed track, and monorail overhead conveyor systems for paint lines and assembly.',
+    tags: ['Power-and-Free', 'Monorail', 'Paint Line'],
+  },
+  {
+    name: 'Flexible & Expandable Conveyors',
+    slug: '/conveyor-types/flexible-conveyors/',
+    desc: 'Accordion-style expandable conveyors and portable units for truck loading and temporary applications.',
+    tags: ['Expandable', 'Portable', 'Dock'],
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many types of conveyors are there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The packaging industry uses over 30 distinct conveyor types. The major categories include roller conveyors (gravity, powered, MDR, CDLR), belt conveyors (flat, cleated, modular), chain conveyors (tabletop, drag, slat), accumulation conveyors, transfer conveyors, spiral conveyors, sortation systems, vertical reciprocating conveyors, overhead conveyors, and specialty types like vibratory, magnetic, and vacuum conveyors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common conveyor type in packaging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt conveyors and roller conveyors are the two most common conveyor types in packaging operations. Belt conveyors handle lightweight and irregular products. Roller conveyors (gravity and powered) dominate case and carton transport. MDR roller conveyors have become the standard for zone-controlled accumulation in distribution and fulfillment centers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose the right conveyor type?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conveyor selection depends on five key factors: product characteristics (weight, size, shape, bottom surface), throughput requirement (units per minute), function needed (transport, accumulate, sort, elevate), environment (food-grade, washdown, cleanroom, temperature), and budget. Start by defining these requirements, then match them against conveyor type capabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a belt conveyor and a roller conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt conveyors use a continuous belt surface and can carry products of any shape, size, or bottom condition. Roller conveyors use a series of cylindrical rollers and require products with a flat, rigid bottom at least 3 rollers wide. Belt conveyors handle inclines and declines better. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy loads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor types support zero-pressure accumulation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three conveyor types commonly provide zero-pressure accumulation (ZPA): MDR (Motor Driven Roller) conveyors use independent 24VDC motorized zones. Belt-driven live roller conveyors use pneumatic clutches or band brakes per zone. Accumulation conveyors with photo-eye sensors and zone controllers manage product spacing. MDR is the most widely specified ZPA technology for new installations."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Types of Conveyors: Complete Guide to Packaging Conveyor Systems",
+  "description": "Comprehensive guide to 30+ packaging conveyor types including roller, belt, chain, accumulation, transfer, MDR, CDLR, spiral, and sortation conveyors with specifications and selection criteria.",
+  "url": "https://packagingconveyor.com/conveyor-types/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PackagingConveyor.com",
+    "url": "https://packagingconveyor.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Types of Conveyors: Complete Guide to 30+ Packaging Conveyor Systems"
+  description="Comprehensive guide to 30+ types of conveyors used in packaging. Roller, belt, chain, MDR, CDLR, accumulation, transfer, spiral & more with specs and selection criteria."
+  canonical="https://packagingconveyor.com/conveyor-types/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Conveyor Types</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO Definition -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Types</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Types of Conveyors: Complete Guide to Packaging Conveyor Systems
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Packaging operations use over 30 distinct conveyor types to transport, accumulate, sort, and elevate products between processes. The major categories include roller conveyors, belt conveyors, chain conveyors, accumulation conveyors, transfer conveyors, vertical conveyors, and sortation systems. Each type serves a specific function based on product weight, shape, speed requirements, and environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Types Grid -->
+  <section class="py-20 bg-surface" aria-labelledby="all-types-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Browse All Types</div>
+      <h2 id="all-types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-6">
+        30+ Conveyor Types for <span class="text-accent">Packaging</span>
+      </h2>
+      <p class="text-lg text-ink-muted leading-relaxed max-w-3xl mb-12">
+        Select a conveyor type below for detailed specifications, selection criteria, manufacturer references, and comparison data. Pages marked with a tag list indicate key sub-types covered.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {conveyorTypes.map((type) => (
+          <a href={type.slug} class="card group p-6 flex flex-col">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">{type.name}</h3>
+            <p class="text-base text-ink-muted leading-relaxed mb-4 flex-1">{type.desc}</p>
+            <div class="flex flex-wrap gap-2">
+              {type.tags.map((tag: string) => (
+                <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Choose the Right <span class="text-accent">Conveyor Type</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Conveyor selection starts with five fundamental parameters. Define these before evaluating any equipment.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">1. Product Characteristics</h3>
+        <p>Product weight, dimensions, shape, bottom surface condition, and fragility determine which conveyor types qualify. Flat-bottomed rigid cases suit <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>. Irregular shapes or soft-bottom bags require belt conveyors. Heavy pallets need <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> or pallet chain conveyors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">2. Throughput Requirements</h3>
+        <p>Calculate your required conveyor speed using this formula: Speed (FPM) = (products per minute x product length in feet) + gap allowance. Add 10-15% headroom above peak production rate. Higher throughput applications may require <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyors</a> or high-speed belt systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">3. Function Needed</h3>
+        <p>Transport is the baseline function. Beyond transport, you may need <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> (buffering between processes), <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> (direction changes), sortation (routing to multiple destinations), or <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical transport</a> (elevation changes).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">4. Environment</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage operations</a> require <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary, washdown-rated conveyors</a> in stainless steel. Pharmaceutical plants need cleanroom-compatible systems. Standard warehouse environments can use painted carbon steel frames.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">5. Budget</h3>
+        <p>Conveyor cost varies dramatically by type. <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">Gravity roller conveyors</a> represent the lowest cost option ($). <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> cost more upfront ($$$) but reduce energy and maintenance costs over time. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed cost factor breakdowns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Quick Reference</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Conveyor Type <span class="text-accent">Comparison Table</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Type</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Load</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Accumulation</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover">Gravity Roller</a></td>
+              <td class="py-3 pr-4">Cases, cartons, totes</td>
+              <td class="py-3 pr-4 font-mono text-sm">Gravity</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 200 lbs</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover">Powered Roller</a></td>
+              <td class="py-3 pr-4">Continuous case flow</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 500 lbs</td>
+              <td class="py-3 pr-4">With add-ons</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a></td>
+              <td class="py-3 pr-4">Zone accumulation</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-180 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 250 lbs</td>
+              <td class="py-3 pr-4">Built-in ZPA</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover">CDLR</a></td>
+              <td class="py-3 pr-4">Heavy pallets, cases</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-120 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 10,000 lbs</td>
+              <td class="py-3 pr-4">No (continuous)</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover">Live Roller (BDLR)</a></td>
+              <td class="py-3 pr-4">Medium-duty transport</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 500 lbs</td>
+              <td class="py-3 pr-4">With zones</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">Accumulation</a></td>
+              <td class="py-3 pr-4">Line buffering</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-180 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 300 lbs</td>
+              <td class="py-3 pr-4">Primary function</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover">Transfer</a></td>
+              <td class="py-3 pr-4">Direction changes</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-150 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Varies</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 font-mono text-sm">$$-$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover">Belt</a></td>
+              <td class="py-3 pr-4">Irregular shapes, inclines</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-400 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 100 lbs</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover">Spiral</a></td>
+              <td class="py-3 pr-4">Elevation changes</td>
+              <td class="py-3 pr-4 font-mono text-sm">50-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 75 lbs</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover">VRC</a></td>
+              <td class="py-3 pr-4">Mezzanine transport</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-40 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 6,000 lbs</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 font-mono text-sm">$$$-$$$$</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover">Tabletop Chain</a></td>
+              <td class="py-3 pr-4">Bottles, cans, cartons</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-100 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 50 lbs</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Relative cost: $ = lowest, $$$$ = highest. Actual pricing depends on length, materials, controls, and manufacturer. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Category Breakdown -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="categories-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Category Breakdown</div>
+      <h2 id="categories-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Conveyor Types by <span class="text-accent">Category</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-8">
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Roller Conveyors</h3>
+          <p><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Roller conveyors</a> represent the largest conveyor category in packaging. They use cylindrical rollers mounted in side frames to transport flat-bottomed products. The four primary sub-types are <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> (unpowered), <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller</a> (belt-driven or line-shaft), <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> (motor driven roller), and <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> (chain driven live roller). Manufacturers like Hytrol, Interroll, and Dematic produce roller conveyor systems for case weights from 5 lbs to over 10,000 lbs.</p>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Belt Conveyors</h3>
+          <p>Belt conveyors use a continuous belt surface to transport products. They handle irregular shapes, soft-bottom bags, loose items, and incline/decline applications that roller conveyors cannot. Flat belt, cleated belt, and modular plastic belt are the three main sub-types. Dorner, mk North America, and Hytrol are major belt conveyor manufacturers for packaging applications.</p>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Accumulation Conveyors</h3>
+          <p><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> buffer product between upstream and downstream processes. They absorb line stops, speed mismatches, and operator breaks without shutting down the entire <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a>. Zero-pressure accumulation (ZPA) and minimum-pressure accumulation are the two primary modes. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR technology</a> dominates new ZPA installations.</p>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Transfer & Sortation Conveyors</h3>
+          <p><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer conveyors</a> change product direction at right angles or multiple angles. Pop-up transfers, turntables, push diverters, and right-angle chain transfers handle different speed and load requirements. Sortation systems extend this concept to high-speed multi-lane routing for distribution and fulfillment applications.</p>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Vertical Conveyors</h3>
+          <p><a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">Vertical reciprocating conveyors (VRCs)</a> lift product between floor levels or mezzanines. They provide an alternative to freight elevators with simpler code requirements and lower installation cost. Spiral conveyors provide continuous vertical transport without the stop-and-go cycle of reciprocating units.</p>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Specialty Conveyors</h3>
+          <p>Specialty conveyor types address specific packaging needs. Tabletop chain conveyors handle bottles and cans on high-speed <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage lines</a>. Vibratory conveyors feed bulk parts and powders. Magnetic conveyors transport ferrous lids and cans. Vacuum conveyors grip thin films, labels, and pouches that standard belts cannot hold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Conveyor Types by <span class="text-accent">Industry</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage packaging lines</a> typically use <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary stainless steel belt conveyors</a>, tabletop chain conveyors for bottles, and washdown-rated roller conveyors for cased goods. USDA and 3-A sanitary standards drive material and design requirements.</p>
+        <p><a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">General packaging lines</a> combine multiple conveyor types. A typical end-of-line system includes belt conveyors feeding a case packer, <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> transporting sealed cases, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a> buffering before a palletizer, and <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyors</a> moving loaded pallets to stretch wrap and shipping.</p>
+        <p>Distribution and fulfillment centers rely on <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> for zone-controlled accumulation, sortation systems for multi-lane routing, and <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRCs</a> for mezzanine transport. <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">Automated conveyor systems</a> integrate these types with warehouse management software (WMS) for hands-free product flow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How many types of conveyors are there?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>The packaging industry uses over 30 distinct conveyor types. Major categories include <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> (gravity, powered, MDR, CDLR), belt conveyors (flat, cleated, modular), chain conveyors (tabletop, drag, slat), <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>, <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyors</a>, spiral conveyors, sortation systems, and <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the most common conveyor type in packaging?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt conveyors and <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> are the two most common types. Belt conveyors handle lightweight and irregular products. Roller conveyors dominate case and carton transport. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR roller conveyors</a> have become the standard for zone-controlled accumulation in distribution centers.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I choose the right conveyor type?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Conveyor selection depends on five key factors: product characteristics (weight, size, shape, bottom surface), throughput requirement (units per minute), function needed (transport, accumulate, sort, elevate), environment (food-grade, washdown, cleanroom), and budget. Define these requirements first, then match them against conveyor type capabilities using the comparison table above.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a belt conveyor and a roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt conveyors use a continuous belt surface and carry products of any shape or bottom condition. <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Roller conveyors</a> use cylindrical rollers and require flat, rigid bottoms spanning at least 3 rollers. Belt conveyors handle inclines and declines. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>, and lower friction for heavy loads.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyor types support zero-pressure accumulation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Three conveyor types commonly provide zero-pressure accumulation (ZPA). <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> use independent 24VDC motorized zones. <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller conveyors</a> use pneumatic clutches or band brakes per zone. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Dedicated accumulation conveyors</a> with photo-eye sensors and zone controllers manage product spacing. MDR dominates new ZPA installations.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Resources</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/resources/conveyor-cost-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Conveyor Cost Guide</div>
+          <p class="text-sm text-white/60">Pricing factors for every type</p>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Automated Systems</div>
+          <p class="text-sm text-white/60">Full system integration guide</p>
+        </a>
+        <a href="/industries/packaging-line-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Packaging Lines</div>
+          <p class="text-sm text-white/60">Conveyor integration for packaging</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary and washdown systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

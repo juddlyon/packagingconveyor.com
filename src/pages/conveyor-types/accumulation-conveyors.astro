@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Accumulation Conveyors", "item": "https://packagingconveyor.com/conveyor-types/accumulation-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is zero-pressure accumulation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) stops and queues products on a conveyor with controlled gaps between each item — no product-to-product contact and no backpressure. Each zone has its own sensor and independent drive control. When a downstream zone is occupied, the upstream zone holds its product with a gap between them. ZPA prevents product damage, label scuffing, and carton crushing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between zero-pressure and minimum-pressure accumulation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact (typically 2-5 lbs of backpressure) within zones. ZPA costs more because it requires more zones and sensors per linear foot. Minimum-pressure suits durable products like corrugated cases. ZPA is required for fragile products, printed labels, and shrink-wrapped goods." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much accumulation buffer do I need on my packaging line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Accumulation buffer length depends on downstream equipment downtime frequency and duration. A common rule of thumb is to provide 3-5 minutes of buffer capacity between major equipment sections. Calculate buffer length using: Length (ft) = (products per minute x product length in feet x buffer minutes) + gap allowances. Critical transitions like before palletizers or case packers often require more buffer than transitions between labelers or checkweighers." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor type is best for accumulation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) conveyors are the most widely specified technology for zero-pressure accumulation in new installations. Belt-driven live roller with pneumatic zones and line-shaft with clutch/brake zones are legacy alternatives. Belt conveyors with servo-driven zone controls handle irregular product shapes. The best type depends on product characteristics, throughput, budget, and whether compressed air is available." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Accumulation Conveyors: Zero-Pressure & Minimum-Pressure Systems",
+  "description": "Complete guide to accumulation conveyors including zero-pressure (ZPA), minimum-pressure, and slug-mode accumulation. Buffer sizing, zone control technology, and packaging line integration.",
+  "url": "https://packagingconveyor.com/conveyor-types/accumulation-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Accumulation Conveyors: Zero-Pressure & Minimum-Pressure Buffer Systems"
+  description="Complete guide to accumulation conveyors: zero-pressure (ZPA), minimum-pressure, and slug-mode. Buffer sizing formulas, zone control technology, and packaging line integration."
+  canonical="https://packagingconveyor.com/conveyor-types/accumulation-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Accumulation Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Accumulation Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Accumulation Conveyors: Zero-Pressure & Minimum-Pressure
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>An accumulation conveyor buffers products between upstream and downstream processes, absorbing speed differences, equipment stoppages, and operator breaks without shutting down the entire packaging line. Accumulation conveyors operate in three modes: zero-pressure (ZPA), minimum-pressure, and slug-mode. They use zone-controlled roller or belt drive systems to stop, hold, and release products on demand, preventing the product damage and line inefficiency caused by uncontrolled backpressure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Accumulation Matters -->
+  <article class="py-20 bg-surface" aria-labelledby="why-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">The Problem</div>
+      <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Why Accumulation <span class="text-accent">Matters</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Every <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> consists of multiple machines operating at different speeds with different reliability profiles. A filler runs at 120 bottles per minute. A labeler runs at 100 per minute. A case packer stops for 15 seconds every time it forms a new case. A palletizer cycles every 45 seconds. Without accumulation, any downstream stop forces an immediate upstream stop, cascading back through the entire line.</p>
+
+        <p>Accumulation conveyors decouple these processes. Products queue in a controlled buffer zone, and upstream machines continue producing while downstream equipment catches up. This decoupling increases overall line efficiency (OEE) by 10-30% in typical packaging line applications. The buffer absorbs the micro-stops, speed differences, and changeovers that otherwise cascade into full-line shutdowns.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">The Backpressure Problem</h3>
+        <p>Without proper accumulation technology, products pile up on standard conveyors with full backpressure. The lead product presses against the stopped downstream machine. Every upstream product presses against the one in front of it. This causes label scuffing, carton crushing, shrink-wrap damage, and product shifting inside cases. Backpressure also overloads conveyor motors, trips drives, and increases belt and roller wear.</p>
+        <p>Accumulation conveyors solve this by controlling each zone independently, eliminating or minimizing the pressure between products.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Three Modes -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="modes-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Accumulation Modes</div>
+      <h2 id="modes-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Three Accumulation <span class="text-accent">Modes</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zero-Pressure Accumulation (ZPA)</h3>
+        <p>ZPA stops each product in its own zone with a controlled gap to the next product. No product-to-product contact occurs at any point during accumulation. Each zone uses a photo-eye sensor to detect product presence and an independent drive mechanism to start or stop rollers in that zone. When a downstream zone signals "occupied," the upstream zone holds its product and sends an "occupied" signal further upstream.</p>
+        <p>ZPA protects fragile products, printed labels, shrink-wrapped packs, and any product where surface contact during accumulation causes damage. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> provide the cleanest ZPA implementation because each zone has its own motor. Belt-driven live roller conveyors achieve ZPA with pneumatic belt lifters or pop-up stops, but these add mechanical complexity.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Minimum-Pressure Accumulation</h3>
+        <p>Minimum-pressure accumulation allows light product-to-product contact, typically 2-5 lbs of backpressure per product. Products queue touching each other but with controlled force that prevents damage to durable goods like corrugated cases and rigid totes. Minimum-pressure systems need fewer zones and sensors per foot than ZPA, reducing cost by 20-40%.</p>
+        <p>Minimum-pressure accumulation uses roller conveyors with zones controlled by pneumatic clutches, band brakes, or belt-release mechanisms. As backpressure from downstream products pushes against an upstream zone's roller, a sensor detects the product's backward movement and disengages the drive in that zone. The product stops with only the light contact pressure of the immediately adjacent downstream product.</p>
+        <p>Hytrol, Intelligrated, and Dematic offer both ZPA and minimum-pressure accumulation configurations on their <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyor</a> platforms.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Slug-Mode Accumulation</h3>
+        <p>Slug-mode accumulation groups products into batches (slugs) with full backpressure within each slug but gaps between slugs. A slug zone typically holds 3-10 products. Slug accumulation suits batch-oriented downstream processes like <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading</a>, case packing, palletizer layer forming, and <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating and laning operations</a>.</p>
+        <p>Slug zones release entire groups simultaneously on command from a PLC. The conveyor runs at transport speed between releases and holds the slug at rest between cycles. Slug mode is the lowest-cost accumulation method because it requires the fewest zones and sensors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Accumulation Mode <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Zero-Pressure (ZPA)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Minimum-Pressure</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Slug-Mode</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Contact</td>
+              <td class="py-3 pr-4">None (gaps maintained)</td>
+              <td class="py-3 pr-4">Light (2-5 lbs)</td>
+              <td class="py-3">Full within slug</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Protection</td>
+              <td class="py-3 pr-4">Highest</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3">Low</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Zones per Foot</td>
+              <td class="py-3 pr-4">1 zone per product</td>
+              <td class="py-3 pr-4">1 zone per 3-5 products</td>
+              <td class="py-3">1 zone per slug</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Sensors Required</td>
+              <td class="py-3 pr-4">Photo-eye per zone</td>
+              <td class="py-3 pr-4">Fewer sensors</td>
+              <td class="py-3">Fewest sensors</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best Technology</td>
+              <td class="py-3 pr-4">MDR, pneumatic BDLR</td>
+              <td class="py-3 pr-4">Pneumatic BDLR/line-shaft</td>
+              <td class="py-3">Any powered roller</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Fragile, labeled, wrapped</td>
+              <td class="py-3 pr-4">Corrugated cases, totes</td>
+              <td class="py-3">Batch release, layer forming</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Cost comparison is relative within accumulation category. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Buffer Sizing -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="sizing-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="sizing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Size <span class="text-accent">Accumulation Buffer</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Buffer length determines how long the upstream line can continue running while downstream equipment is stopped. Undersizing the buffer eliminates the decoupling benefit. Oversizing wastes floor space and capital.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Buffer Length Formula</h3>
+        <p class="font-mono text-ink bg-surface px-4 py-3 border border-border"><strong>Buffer Length (ft) = (Products/min x Product Length in ft x Buffer Minutes) + (Gaps x Number of Products)</strong></p>
+        <p>For ZPA with 3" gaps between 12" cases at 30 cases per minute with 3 minutes of buffer:</p>
+        <p class="font-mono text-ink bg-surface px-4 py-3 border border-border">Buffer = (30 x 1.0 x 3) + (0.25 x 90) = 90 + 22.5 = <strong>112.5 ft</strong></p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">How Much Buffer Time?</h3>
+        <p>Buffer time depends on the downstream equipment's typical stop duration and frequency. General guidelines:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Before a palletizer:</strong> 3-5 minutes. Palletizers stop for sheet feeding, pallet dispensing, and stretch wrap cycles.</li>
+          <li><strong class="text-ink">Before a case packer:</strong> 2-3 minutes. Case packers stop for case blank replenishment and minor jams.</li>
+          <li><strong class="text-ink">Before a labeler or printer:</strong> 1-2 minutes. Short stops for ribbon changes and label roll changes.</li>
+          <li><strong class="text-ink">Before a manual station:</strong> 3-5 minutes. Operator breaks, shift changes, and task completion variability.</li>
+        </ul>
+        <!-- VERIFY: Buffer time guidelines against PMMI packaging line design references -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Floor Space Alternatives</h3>
+        <p>Long accumulation runs consume floor space. Two alternatives reduce the footprint. Spiral accumulators wrap the accumulation conveyor into a vertical helix, trading vertical space for floor space. Bi-level accumulation tables use an upper and lower conveyor tier connected by incline/decline sections, doubling capacity per floor square foot. Both alternatives increase cost significantly compared to single-level accumulation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Options -->
+  <section class="py-20 bg-surface" aria-labelledby="tech-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technology</div>
+      <h2 id="tech-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Accumulation Conveyor <span class="text-accent">Technologies</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">MDR Zero-Pressure Accumulation</h3>
+        <p><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR (Motor Driven Roller) conveyors</a> provide the cleanest ZPA implementation. Each zone contains a 24VDC motorized roller, 2-4 slave rollers driven by O-ring bands, and a photo-eye sensor. The zone controller card reads the sensor, communicates with adjacent zones, and drives the motor. No compressed air, no pneumatic valves, and no mechanical clutches. Interroll, Itoh Denki, and Rulmeca supply the MDR components that Dematic, Intelligrated, TGW, and Bastian Solutions integrate into complete <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated systems</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pneumatic BDLR Accumulation</h3>
+        <p><a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller</a> accumulators use pneumatic cylinders to raise and lower the drive belt in each zone. When a zone must hold product, the cylinder drops the belt away from the rollers, and the rollers coast to a stop. When the zone must release, the cylinder lifts the belt back into contact. This requires compressed air infrastructure (typically 80-100 PSI) and pneumatic valve banks. Hytrol's accumulation models use this approach.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Line-Shaft Accumulation</h3>
+        <p>Line-shaft accumulators use pneumatic or mechanical O-ring release mechanisms. A pneumatic clamp presses or releases the O-ring bands against the rotating line shaft. Released rollers coast to a stop. Engaged rollers drive the product forward. Line-shaft accumulation suits lighter products (under 100 lbs) and moderate speeds. See our <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyor guide</a> for line-shaft details.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Conveyor Accumulation</h3>
+        <p>Belt conveyors can provide accumulation for irregularly shaped products that cannot ride on rollers. Servo-driven zone belt conveyors use individual belt sections with independent drives. Each belt section operates like an MDR zone but with a continuous belt surface. Dorner and mk North America offer precision zone belt conveyors for small-product packaging applications. Belt accumulation costs more per foot than roller accumulation but handles products that rollers cannot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Accumulation Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Pre-palletizer buffering:</strong> The most common accumulation application in packaging. Cases accumulate before the palletizer so the upstream case packing line continues running during pallet changes, sheet insert cycles, and stretch wrapping. A 3-5 minute buffer before the palletizer can increase line OEE by 15-25%.</p>
+
+        <p><strong class="text-ink">Between filling and packing:</strong> Filled containers accumulate between the filler/capper and the case packer. This absorbs the case packer's stop-and-go cycle and prevents the filler from shutting down during case forming delays.</p>
+
+        <p><strong class="text-ink">Before <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">quality inspection and reject</a>:</strong> Products accumulate before checkweighers, metal detectors, and vision inspection stations. The buffer ensures a steady, controlled feed rate into inspection equipment for reliable detection.</p>
+
+        <p><strong class="text-ink">Distribution center merge points:</strong> Products from multiple pick zones accumulate before merging onto trunk conveyor lines. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR ZPA zones</a> prevent products from colliding at merge points and ensure orderly release onto the main line.</p>
+
+        <p><strong class="text-ink">Before <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> and sortation:</strong> Products accumulate before right-angle transfers, diverters, and sorting stations. The accumulation zone meters products into the transfer at the correct spacing and timing for reliable transfer operation.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage lines</a>:</strong> ZPA accumulation protects labeled bottles, shrink-wrapped multipacks, and decorated cans from scuffing during line stops. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary accumulation conveyors</a> use stainless steel MDR rollers and open-frame construction for washdown environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is zero-pressure accumulation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>ZPA stops and queues products with controlled gaps between each item. No product-to-product contact occurs. Each zone has its own sensor and independent drive. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> provide the simplest ZPA implementation.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between zero-pressure and minimum-pressure?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>ZPA maintains gaps between every product. Minimum-pressure allows 2-5 lbs of contact force between adjacent products. ZPA costs more (more zones, more sensors). Minimum-pressure suits durable corrugated cases. ZPA is required for fragile, labeled, or shrink-wrapped products.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much buffer do I need on my packaging line?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Provide 3-5 minutes of buffer before palletizers, 2-3 minutes before case packers, and 1-2 minutes before labelers. Use the formula: Length (ft) = (Products/min x Product Length in ft x Buffer Minutes) + gap allowances. See our <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line conveyor guide</a> for layout planning details.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyor type is best for accumulation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> dominate new ZPA installations. <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller</a> with pneumatic zones and line-shaft with clutch/brake are legacy alternatives. Belt conveyors with servo zones handle irregular shapes. Selection depends on product, throughput, budget, and air supply availability.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Built-in ZPA technology</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">All roller types compared</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Diverting and routing</p>
+        </a>
+        <a href="/industries/packaging-line-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Packaging Lines</div>
+          <p class="text-sm text-white/60">Line layout and integration</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

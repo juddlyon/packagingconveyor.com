@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "CDLR Conveyors", "item": "https://packagingconveyor.com/conveyor-types/cdlr-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does CDLR stand for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "CDLR stands for Chain Driven Live Roller. It is a powered roller conveyor where roller chains and sprockets connect adjacent rollers, and a gearmotor drives the chain to positively rotate all rollers. CDLR provides zero-slip positive drive, making it the standard technology for heavy-duty pallet and case conveying." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the weight capacity of a CDLR conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard CDLR conveyors handle 500 to 4,000 lbs per product. Heavy-duty structural-frame CDLR systems handle up to 10,000 lbs or more. Capacity depends on roller diameter (typically 2.5 to 3.5 inches), wall thickness (11 to 7 gauge), bearing type, axle diameter, frame gauge, and chain strength. Hytrol, Dematic, and Intelligrated publish load rating tables for their CDLR platforms." }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use CDLR instead of MDR or belt-driven roller?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use CDLR when product weight exceeds 250-500 lbs, when you need positive drive with zero slip (pallets, drums, heavy cases), or when product bottoms have poor friction surfaces that belt-driven systems cannot grip. MDR handles up to 250 lbs and provides zone control. Belt-driven live roller handles up to 500 lbs. CDLR handles 500-10,000+ lbs with positive chain drive." }
+    },
+    {
+      "@type": "Question",
+      "name": "What maintenance does a CDLR conveyor require?",
+      "acceptedAnswer": { "@type": "Answer", "text": "CDLR conveyors require regular chain lubrication (typically monthly for standard duty), periodic chain tension adjustment, sprocket inspection for wear, and chain/sprocket replacement when worn. Motor and gearbox lubrication follows the manufacturer's schedule. Chain wear is the primary maintenance cost — properly lubricated chains last 3-5 years in standard pallet handling applications." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CDLR: Chain Driven Live Roller Conveyors",
+  "description": "Complete guide to CDLR (Chain Driven Live Roller) conveyors for heavy-duty pallet and case handling. Load capacities, chain types, when to use CDLR vs MDR or belt-driven systems.",
+  "url": "https://packagingconveyor.com/conveyor-types/cdlr-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="CDLR: Chain Driven Live Roller Conveyors | Heavy-Duty Guide"
+  description="Complete CDLR conveyor guide: chain driven live roller for heavy pallets and cases. Load capacities up to 10,000 lbs, chain types, CDLR vs MDR vs belt-driven comparison."
+  canonical="https://packagingconveyor.com/conveyor-types/cdlr-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">CDLR Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">CDLR Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        CDLR: Chain Driven Live Roller Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A CDLR (Chain Driven Live Roller) conveyor uses roller chains and sprockets to positively drive conveyor rollers, providing zero-slip heavy-duty transport for pallets, drums, heavy cases, and other loads from 500 to over 10,000 lbs. CDLR conveyors serve as the standard powered conveyor technology for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet handling systems</a>, end-of-line packaging, and any application where product weight exceeds the capacity of belt-driven or <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR roller conveyors</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How CDLR Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technical Deep-Dive</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How CDLR Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Each roller in a CDLR conveyor has a sprocket welded or keyed to one end. A continuous roller chain loop wraps around adjacent roller sprockets, connecting them in pairs or in a single continuous strand. A gearmotor at one end drives the chain, which positively rotates every roller in the section. The chain provides mechanical positive engagement — rollers turn regardless of product weight, surface friction, or load distribution.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain Drive Configurations</h3>
+        <p>CDLR conveyors use two primary chain drive configurations. In the <strong class="text-ink">continuous chain strand</strong> configuration, a single chain loops around all roller sprockets in the section, driven by the gearmotor sprocket. This provides uniform speed across all rollers. In the <strong class="text-ink">paired chain</strong> configuration, short chain loops connect adjacent roller pairs. The drive roller transfers motion to the first pair, which transfers to the next pair via the chain loop. Paired chains are easier to maintain because replacing one chain segment does not require dismantling the entire drive.</p>
+
+        <p>Standard CDLR chains use ANSI #40 (1/2" pitch) for light-medium duty and ANSI #50 (5/8" pitch) or #60 (3/4" pitch) for heavy-duty pallet applications. Chain guards protect operators and prevent debris from entering the chain path. Hytrol, Dematic, and Intelligrated offer CDLR systems with both continuous and paired chain configurations.</p>
+        <!-- VERIFY: Common ANSI chain sizes for Hytrol CDLR models -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Construction</h3>
+        <p>CDLR rollers are heavier-duty than standard powered roller or <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> designs. Typical CDLR roller diameters range from 2.5" to 3.5". Wall thickness ranges from 11-gauge (0.120") for medium cases to 7-gauge (0.180") for heavy pallets. Axle diameters range from 11/16" to 1-3/16" hex or round. Heavy-duty sealed bearings (ABEC-1 or higher) support the roller loads. Roller pitch (spacing) is typically 3", 4", 6", or wider depending on product size.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Construction</h3>
+        <p>CDLR frames use heavier steel than standard roller conveyor frames. Medium-duty frames use 10-gauge formed channel. Heavy-duty pallet CDLR uses 7-gauge structural channel or structural tube frames. Frame widths range from 24" to 60" between rails for pallet applications. Hytrol's heavy-duty CDLR line and Dematic's pallet conveyor platform use structural steel frames with bolt-together construction for field assembly.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Speed and Control</h3>
+        <p>CDLR conveyors operate at 20-120 FPM. Most pallet CDLR applications run at 20-60 FPM. Variable frequency drives (VFDs) provide adjustable speed control. CDLR sections integrate with PLC controls for start/stop sequencing, photo-eye product detection, and coordination with upstream and downstream equipment. Multiple CDLR sections can operate at different speeds to create accumulation zones, though CDLR does not typically provide zero-pressure accumulation — products accumulate with full backpressure unless mechanical stops or pneumatic pop-ups are added.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- When to Use CDLR -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="when-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="when-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        When to Use CDLR vs <span class="text-accent">Other Roller Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>CDLR occupies the heavy-duty end of the <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> spectrum. Choose CDLR over other roller conveyor types in these scenarios:</p>
+
+        <p><strong class="text-ink">Product weight exceeds 500 lbs.</strong> <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> top out at approximately 250 lbs per zone. <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller</a> handles up to 500 lbs. CDLR handles 500-10,000+ lbs with positive chain drive. Any loaded pallet application typically requires CDLR.</p>
+
+        <p><strong class="text-ink">Zero slip is required.</strong> Belt-driven and O-ring-driven roller conveyors rely on friction to transfer drive force. Heavy loads, wet surfaces, or dusty environments can cause belt or O-ring slip. CDLR's chain-and-sprocket engagement provides positive drive with zero slip regardless of surface conditions.</p>
+
+        <p><strong class="text-ink">Poor product bottom surface.</strong> Products with uneven, wet, or low-friction bottoms may not grip belt-driven rollers. CDLR rollers rotate regardless of the product's bottom surface condition — the chain drives the rollers whether or not the product slips on them.</p>
+
+        <p><strong class="text-ink">Choose MDR or BDLR instead when:</strong> products weigh under 250-500 lbs, you need zone-controlled <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>, noise is a concern (CDLR runs at 75-85 dB vs MDR at 55-65 dB), or energy efficiency is a priority. MDR provides superior zone control and energy savings for lighter loads. See our <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyor comparison</a> for a detailed head-to-head analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications -->
+  <section class="py-20 bg-surface" aria-labelledby="specs-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specifications</div>
+      <h2 id="specs-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        CDLR <span class="text-accent">Specification Ranges</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[650px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Parameter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Medium-Duty</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Heavy-Duty (Pallet)</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Roller Diameter</td>
+              <td class="py-3 pr-4 font-mono text-sm">2.5"</td>
+              <td class="py-3 font-mono text-sm">3.5"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Wall Thickness</td>
+              <td class="py-3 pr-4 font-mono text-sm">11 ga (0.120")</td>
+              <td class="py-3 font-mono text-sm">7 ga (0.180")</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Product</td>
+              <td class="py-3 pr-4 font-mono text-sm">500-2,000 lbs</td>
+              <td class="py-3 font-mono text-sm">2,000-10,000+ lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-120 FPM</td>
+              <td class="py-3 font-mono text-sm">20-60 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Chain Size</td>
+              <td class="py-3 pr-4 font-mono text-sm">ANSI #40-#50</td>
+              <td class="py-3 font-mono text-sm">ANSI #50-#60</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Frame Width (BF)</td>
+              <td class="py-3 pr-4 font-mono text-sm">18"-36"</td>
+              <td class="py-3 font-mono text-sm">36"-60"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise Level</td>
+              <td class="py-3 pr-4 font-mono text-sm">70-80 dB</td>
+              <td class="py-3 font-mono text-sm">75-85 dB</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$-$$$</td>
+              <td class="py-3 font-mono text-sm">$$$-$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Specifications represent typical ranges from Hytrol, Dematic, and Intelligrated CDLR product lines. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        CDLR Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Pallet conveyor systems:</strong> CDLR is the default drive technology for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyor systems</a>. Loaded pallets (typically 1,500-3,500 lbs) transport between palletizers, stretch wrappers, labelers, and shipping docks on CDLR conveyors. Right-angle chain <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a> route pallets to multiple shipping lanes.</p>
+
+        <p><strong class="text-ink">Drum and barrel handling:</strong> Steel drums and barrels (500-2,000 lbs) ride on CDLR rollers. The positive chain drive prevents the slip issues that belt-driven systems experience with round, smooth drum surfaces. Chemical, petroleum, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> facilities use CDLR for drum transport.</p>
+
+        <p><strong class="text-ink">Heavy case transport:</strong> Cases and totes exceeding 200 lbs — such as automotive parts, appliance components, and heavy industrial goods — use CDLR conveyors. The positive chain drive handles variable loads without the speed variation that belt-driven systems exhibit under changing load conditions.</p>
+
+        <p><strong class="text-ink">Between palletizer and stretch wrapper:</strong> The section between the palletizer discharge and the stretch wrapper infeed is one of the most critical CDLR applications in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>. Full pallets (often 2,000-3,500 lbs) must transfer reliably at 20-40 FPM with precise positioning for the stretch wrapper's turntable or ring wrapper. CDLR provides the torque and positive drive this application demands.</p>
+
+        <p><strong class="text-ink">With <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors</a>:</strong> CDLR sections feed loaded pallets onto VRC platforms for multi-level transport. The positive chain drive ensures reliable loading/unloading of the VRC even with heavy, off-center pallet loads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface" aria-labelledby="maintenance-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maintenance-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        CDLR <span class="text-accent">Maintenance</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>CDLR conveyors require more maintenance than <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> but handle loads that MDR cannot. Key maintenance items include:</p>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Chain lubrication:</strong> Apply chain lubricant monthly for standard-duty applications, weekly for heavy continuous duty. Use food-grade lubricant (H1) in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage</a> environments. Under-lubricated chains wear 3-5x faster.</li>
+          <li><strong class="text-ink">Chain tension:</strong> Check chain tension quarterly. Loose chains skip sprocket teeth and cause roller speed variation. Over-tight chains accelerate bearing and sprocket wear.</li>
+          <li><strong class="text-ink">Sprocket inspection:</strong> Inspect sprocket teeth for hooked, worn, or broken profiles annually. Replace sprockets when tooth wear reaches 50% of original tooth thickness.</li>
+          <li><strong class="text-ink">Chain replacement:</strong> Replace chains when stretch exceeds 3% of original length. Properly lubricated ANSI roller chains last 3-5 years in standard pallet handling. Replace all chains in a section simultaneously to maintain uniform speed.</li>
+          <li><strong class="text-ink">Bearing and roller inspection:</strong> Check for rough-running, seized, or noisy bearings semi-annually. Replace failed rollers individually without dismantling the chain drive.</li>
+        </ul>
+        <!-- VERIFY: Chain replacement interval and stretch percentage threshold from ANSI/ASME standards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What does CDLR stand for?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>CDLR stands for Chain Driven Live Roller. Roller chains and sprockets positively drive all rollers with zero slip. CDLR is the standard for heavy-duty <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveying</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the weight capacity of a CDLR conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Standard: 500-4,000 lbs. Heavy-duty structural: up to 10,000+ lbs. Capacity depends on roller diameter, wall thickness, bearing type, frame gauge, and chain size.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            When should I use CDLR instead of MDR?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Use CDLR when product weight exceeds 250-500 lbs, you need zero-slip positive drive, or product bottoms have poor friction. Use <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> for lighter loads needing zone control and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What maintenance does CDLR require?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Monthly chain lubrication, quarterly chain tension checks, annual sprocket inspection, and chain replacement every 3-5 years (when stretch exceeds 3%). Motor/gearbox lubrication per manufacturer schedule.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">All roller types compared</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">For lighter loads with zone control</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Right-angle pallet transfers</p>
+        </a>
+        <a href="/conveyor-types/vertical-reciprocating/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">VRC</div>
+          <p class="text-sm text-white/60">Vertical pallet transport</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

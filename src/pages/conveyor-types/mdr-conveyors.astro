@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "MDR Conveyors", "item": "https://packagingconveyor.com/conveyor-types/mdr-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does MDR stand for in conveyor systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR stands for Motor Driven Roller. Each motorized roller contains a small brushless DC motor (typically 24VDC) inside the roller tube itself. The motor drives the roller and 2-4 adjacent slave rollers through O-ring bands, creating an independent zone. MDR conveyors provide zero-pressure accumulation, zone-by-zone control, and energy-efficient operation." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the advantages of MDR over belt-driven roller conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR conveyors offer five key advantages over belt-driven live roller: built-in zone control without pneumatics, 50%+ energy savings (zones only run when product is present), quieter operation (55-65 dB vs 70-80 dB), less maintenance (no belts, chains, or O-rings between motor and roller to replace), and easier zone-by-zone expansion. MDR costs more per foot upfront but typically delivers lower total cost of ownership over the conveyor's 15-20 year lifespan." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the weight capacity of MDR conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard MDR conveyors handle 50-250 lbs per zone. Interroll's RollerDrive EC5000 series handles up to about 230 lbs per roller. Itoh Denki's PM600 series handles similar loads. For products exceeding 250-300 lbs, belt-driven live roller or CDLR (chain driven live roller) conveyors are better suited. MDR roller motor torque is the limiting factor." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does MDR zone control work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Each MDR zone contains one motorized roller, 2-4 slave rollers connected by O-ring bands, a photo-eye sensor, and a zone controller card. The sensor detects product presence. The controller communicates with upstream and downstream zone controllers. When a downstream zone is occupied, it signals the upstream zone to hold. The upstream zone's motor stops, and the product stops with a gap to the next product. This creates zero-pressure accumulation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who manufactures MDR rollers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The three leading MDR roller manufacturers are Interroll (RollerDrive series, based in Switzerland), Itoh Denki (PM series, based in Japan), and Rulmeca (RDR series, based in Italy). These companies manufacture the motorized roller components that system integrators like Hytrol, Dematic, Intelligrated (Honeywell), TGW, and Bastian Solutions (Toyota) build into complete conveyor systems." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MDR: Motor Driven Roller Conveyors — Technology, Zone Control & Selection",
+  "description": "Complete guide to MDR (Motor Driven Roller) conveyors: 24VDC technology, zone control, zero-pressure accumulation, energy savings, and comparison to belt-driven and line-shaft systems.",
+  "url": "https://packagingconveyor.com/conveyor-types/mdr-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="MDR: Motor Driven Roller Conveyors | 24VDC Zone Control Guide"
+  description="Complete MDR conveyor guide: 24VDC motor driven roller technology, zone control, zero-pressure accumulation. MDR vs line-shaft vs belt-driven comparison with specs."
+  canonical="https://packagingconveyor.com/conveyor-types/mdr-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">MDR Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">MDR Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        MDR: Motor Driven Roller Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>An MDR (Motor Driven Roller) conveyor uses small 24VDC brushless DC motors built inside individual conveyor rollers to create independently controlled zones for product transport and zero-pressure accumulation. MDR technology has become the dominant powered roller platform for new conveyor installations in distribution, fulfillment, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> applications because it eliminates external motors, belts, chains, and compressed air while reducing energy consumption by 50% or more compared to conventional <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How MDR Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technical Deep-Dive</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How MDR Technology <span class="text-accent">Works</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">The Motorized Roller</h3>
+        <p>An MDR roller looks identical to a standard conveyor roller from the outside — a steel or aluminum tube with bearings and axles. Inside, a compact brushless DC (BLDC) motor and planetary gearbox convert 24VDC power into roller rotation. The motor stator mounts to the fixed axle. The rotor drives the outer roller tube. No external gearmotor, belt, or chain exists. The entire drive system fits inside a standard 1.9" or 2.0" diameter roller tube.</p>
+        <p>Interroll's RollerDrive EC5000 series, Itoh Denki's PM600 series, and Rulmeca's RDR series are the three leading MDR roller platforms. These rollers deliver 0.3-2.5 Nm of torque at speeds from 0.1 to 1.2 m/s (approximately 20-230 FPM). Power consumption per roller is typically 10-50 watts — a fraction of the power consumed by a conventional gearmotor driving an entire conveyor section.</p>
+        <!-- VERIFY: Interroll EC5000 torque and speed range specs -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zone Architecture</h3>
+        <p>Each MDR zone consists of four components: one motorized roller, 2-4 slave rollers (connected to the motor roller by polyurethane O-ring bands), one photo-eye sensor, and one zone controller card. The zone controller reads the sensor, communicates with adjacent zone controllers via a simple signal wire, and controls the motor roller's speed and direction.</p>
+        <p>Zone length matches the product length plus a gap. A zone for 24" cases is typically 30" long (24" case + 6" gap). A zone for 12" cartons is typically 18" long. Each zone operates independently — running, stopped, or reversing — regardless of what adjacent zones are doing. This independent zone control is the foundation of <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zero-Pressure Accumulation Logic</h3>
+        <p>MDR ZPA uses a cascading signal protocol between zones. Each zone has three states: empty (no product detected), occupied-and-running (product present, downstream clear), and occupied-and-stopped (product present, downstream occupied). When a zone detects "downstream occupied," it stops its motor. The product stops in that zone with a controlled gap to the product ahead. This signal cascades upstream, filling zones back-to-front with gaps between every product.</p>
+        <p>When the downstream blockage clears, the leading zone starts first, creating a gap. The next zone starts, and the release cascades upstream. This provides smooth, sequential product release — sometimes called "first-in, first-out" (FIFO) accumulation.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">24VDC Power Distribution</h3>
+        <p>MDR systems use 24VDC power, distributed from a central power supply to each zone controller. The low voltage (24VDC is Class 2 / SELV) simplifies wiring — no conduit is required in most jurisdictions. Zone controllers draw 1-3 amps each. A single 24VDC power supply (typically 10-40 amps) serves 10-30 zones depending on load. The 24VDC architecture eliminates 480V/240V wiring to individual conveyor sections, reducing electrical installation cost significantly.</p>
+        <!-- VERIFY: NEC Class 2 wiring exemptions for 24VDC MDR installations -->
+      </div>
+    </div>
+  </article>
+
+  <!-- MDR vs Others -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        MDR vs Line-Shaft vs <span class="text-accent">Belt-Driven</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[750px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">MDR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt-Driven (BDLR)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Line-Shaft</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Method</td>
+              <td class="py-3 pr-4">24VDC motor inside roller</td>
+              <td class="py-3 pr-4">AC gearmotor + belt</td>
+              <td class="py-3">AC gearmotor + shaft + O-rings</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Zone Control</td>
+              <td class="py-3 pr-4">Built-in per zone</td>
+              <td class="py-3 pr-4">Add-on (pneumatic)</td>
+              <td class="py-3">Add-on (clutch/brake)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">ZPA Capability</td>
+              <td class="py-3 pr-4">Native</td>
+              <td class="py-3 pr-4">With belt lifters</td>
+              <td class="py-3">With O-ring release</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Zone</td>
+              <td class="py-3 pr-4 font-mono text-sm">150-250 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 500 lbs</td>
+              <td class="py-3 font-mono text-sm">Up to 300 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-180 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">50-200 FPM</td>
+              <td class="py-3 font-mono text-sm">30-180 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Energy Use</td>
+              <td class="py-3 pr-4">50%+ less (on-demand)</td>
+              <td class="py-3 pr-4">Motor runs continuously</td>
+              <td class="py-3">Motor runs continuously</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise</td>
+              <td class="py-3 pr-4 font-mono text-sm">55-65 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">70-80 dB</td>
+              <td class="py-3 font-mono text-sm">75-85 dB</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Compressed Air</td>
+              <td class="py-3 pr-4">Not required</td>
+              <td class="py-3 pr-4">Required for zones</td>
+              <td class="py-3">Required for zones</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Key Maintenance</td>
+              <td class="py-3 pr-4">Replace motor roller</td>
+              <td class="py-3 pr-4">Belt, gearmotor</td>
+              <td class="py-3">O-rings, gearmotor</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Upfront Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">MDR costs more per foot upfront but typically delivers lower total cost of ownership over 15-20 years due to energy and maintenance savings. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        MDR Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Distribution and fulfillment:</strong> MDR dominates new distribution center conveyor installations. Totes, shipping cartons, and polybag mailers route through pick modules, merge onto trunk lines, and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulate</a> before shipping sorters. Dematic, Intelligrated, TGW, and Bastian Solutions build large-scale fulfillment systems around MDR platforms. The quiet operation (55-65 dB) improves the working environment in facilities where hundreds of feet of conveyor run simultaneously.</p>
+
+        <p><strong class="text-ink">E-commerce order processing:</strong> E-commerce facilities process high volumes of small, lightweight items. MDR conveyors handle the variable product mix (poly bags, padded envelopes, small boxes) at 60-150 FPM with ZPA that prevents damage during accumulation. <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">Automated conveyor systems</a> integrate MDR zones with barcode scanners, print-and-apply labelers, and sortation systems.</p>
+
+        <p><strong class="text-ink">Packaging line accumulation:</strong> MDR provides the cleanest ZPA for <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>. Cases, cartons, and shrink-wrapped packs queue between fillers, labelers, case packers, and palletizers without backpressure damage. The 24VDC architecture eliminates the pneumatic infrastructure that belt-driven accumulation systems require.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage:</a></strong> MDR rollers are available in stainless steel with IP54/IP65 rated motors for wet environments. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary MDR systems</a> feature open-frame construction and sealed motors. The absence of exposed belts and chains simplifies cleaning and reduces contamination risk.</p>
+
+        <p><strong class="text-ink">Before <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a> and merges:</strong> MDR zones upstream of pop-up transfers, merges, and sortation diverters provide precise product positioning. The zone controller holds each product at a known position and releases it on command, ensuring reliable transfer timing. This eliminates the product spacing variability that causes transfer jams on continuous-run conveyors.</p>
+
+        <p><strong class="text-ink"><a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing applications:</a></strong> MDR zones provide stop-and-go indexing for robotic pick-and-place, vision inspection, labeling, and printing stations. Each zone acts as a precision positioning station. The motor controller stops the product at the sensor position with repeatable accuracy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        When to Choose <span class="text-accent">MDR</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Choose MDR when:</strong></p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>You need zero-pressure accumulation without pneumatic infrastructure</li>
+          <li>Product weight is under 250 lbs per zone</li>
+          <li>Energy efficiency is a priority (50%+ savings over continuous-run systems)</li>
+          <li>Low noise is important (55-65 dB vs 70-85 dB for belt/chain systems)</li>
+          <li>You want minimal maintenance (no belts, chains, or O-rings between motor and driven shaft)</li>
+          <li>You need easy future expansion (add zones without new motors or pneumatics)</li>
+          <li>24VDC Class 2 wiring simplifies your electrical installation</li>
+        </ul>
+
+        <p><strong class="text-ink">Choose <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">belt-driven live roller</a> instead when:</strong> product weight exceeds 300 lbs, you need speeds above 200 FPM, or upfront cost is the primary constraint and you do not need accumulation.</p>
+
+        <p><strong class="text-ink">Choose <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> instead when:</strong> product weight exceeds 500 lbs (pallets, drums), you need positive chain drive with zero slip, or <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet handling</a> is the primary application.</p>
+
+        <p><strong class="text-ink">Choose <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> instead when:</strong> no powered transport is needed, a slight decline is available, and budget is the top constraint.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface" aria-labelledby="mfg-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Manufacturers</div>
+      <h2 id="mfg-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        MDR Roller <span class="text-accent">Manufacturers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>The MDR supply chain has two tiers: component manufacturers (who make the motorized rollers) and system integrators (who build complete conveyor systems).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">MDR Roller Manufacturers</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Interroll</strong> — RollerDrive EC5000 series. Swiss-based global leader. Supplies motorized rollers to most major conveyor integrators.</li>
+          <li><strong class="text-ink">Itoh Denki</strong> — PM600/PM500 series. Japanese manufacturer with strong presence in Asia and North America.</li>
+          <li><strong class="text-ink">Rulmeca</strong> — RDR (RollerDrive) series. Italian manufacturer with global distribution.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">System Integrators Using MDR</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Hytrol</strong> — EZLogic MDR platform with proprietary zone control logic.</li>
+          <li><strong class="text-ink">Dematic</strong> — Integrated MDR conveyor systems for distribution and fulfillment.</li>
+          <li><strong class="text-ink">Intelligrated (Honeywell)</strong> — MDR accumulation and transport in IntelliSort systems.</li>
+          <li><strong class="text-ink">TGW</strong> — KingDrive MDR platform for e-commerce and retail distribution.</li>
+          <li><strong class="text-ink">Bastian Solutions (Toyota)</strong> — MDR conveyor design and integration for fulfillment centers.</li>
+        </ul>
+        <!-- VERIFY: TGW KingDrive platform name and current product branding -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What does MDR stand for?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>MDR stands for Motor Driven Roller. A 24VDC brushless DC motor sits inside the roller tube, creating an independent drive zone. See our <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor hub</a> for all roller types.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the advantages over belt-driven roller?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Built-in ZPA without pneumatics, 50%+ energy savings, quieter (55-65 dB), less maintenance, easier expansion. Higher upfront cost but lower total cost of ownership. See the <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller comparison</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What weight can MDR handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Standard MDR: 50-250 lbs per zone. For heavier loads, use <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">belt-driven live roller</a> (up to 500 lbs) or <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> (up to 10,000 lbs).</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does MDR zone control work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Each zone has one motorized roller, 2-4 slave rollers, a photo-eye sensor, and a zone controller card. The controller reads the sensor and communicates with adjacent zones. When downstream is occupied, the upstream zone holds its product with a gap — creating <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Who manufactures MDR rollers?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Interroll (RollerDrive EC5000), Itoh Denki (PM series), and Rulmeca (RDR series) manufacture the rollers. Hytrol, Dematic, Intelligrated, TGW, and Bastian Solutions integrate them into complete systems.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">ZPA modes and buffer sizing</p>
+        </a>
+        <a href="/conveyor-types/live-roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Live Roller</div>
+          <p class="text-sm text-white/60">Full BDLR vs line-shaft vs CDLR</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Complete roller type hub</p>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cost Guide</div>
+          <p class="text-sm text-white/60">MDR total cost of ownership</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

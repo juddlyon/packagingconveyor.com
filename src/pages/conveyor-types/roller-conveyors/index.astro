@@ -1,0 +1,412 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Roller Conveyors", "item": "https://packagingconveyor.com/conveyor-types/roller-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the different types of roller conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The four main types of roller conveyors are gravity roller (unpowered, product moves by gravity or manual push), powered roller or belt-driven live roller (BDLR, single motor drives all rollers via belt), line-shaft roller (single motor drives all rollers via splined shaft and O-ring bands), and motor driven roller (MDR, individual 24VDC motors inside rollers for zone control). Chain driven live roller (CDLR) is a fifth type used for heavy-duty pallet handling." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose between gravity and powered roller conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose gravity roller when you have a slight decline available (3-5 degrees), product weights are consistent, and you do not need controlled speed or accumulation. Choose powered roller when you need consistent speed regardless of load, uphill transport, controlled accumulation, or integration with automated systems. Gravity roller costs significantly less than powered roller per linear foot." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the weight capacity of a roller conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Roller conveyor weight capacity depends on the type. Standard gravity rollers handle up to 75-200 lbs per product. Belt-driven live roller (BDLR) handles up to 500 lbs. MDR conveyors typically handle up to 150-250 lbs per zone. CDLR conveyors handle 500-10,000+ lbs for heavy pallet applications. Capacity depends on roller diameter, wall thickness, bearing type, axle size, and frame gauge." }
+    },
+    {
+      "@type": "Question",
+      "name": "What roller spacing do I need?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The standard rule is that at least 3 rollers must contact the product bottom at all times. Divide your smallest product length by 3, then round down to the nearest standard pitch. Common roller spacings are 1.5 inches, 2 inches, 3 inches, 4.5 inches, and 6 inches. For example, a 12-inch case needs 4-inch or smaller roller spacing (12 / 3 = 4)." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is MDR and why is it replacing line-shaft conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) uses small brushless DC motors built inside individual conveyor rollers, controlled in independent zones. MDR is replacing line-shaft and belt-driven live roller because it provides zero-pressure accumulation without pneumatics, uses 50%+ less energy, runs quieter (65 dB vs 80+ dB), requires less maintenance (no belts, chains, or O-rings to replace), and supports easy zone-by-zone expansion. Interroll, Itoh Denki, and Rulmeca are leading MDR roller manufacturers." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Roller Conveyors: Types, Applications & Specifications",
+  "description": "Complete guide to roller conveyor types including gravity, powered, MDR, line-shaft, and CDLR. Comparison tables, specifications, and selection criteria for packaging applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/roller-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Roller Conveyors: Types, Applications & Specifications | Packaging Conveyor Guide"
+  description="Complete guide to roller conveyor types: gravity, powered, MDR, line-shaft, and CDLR. Comparison tables, weight capacities, roller spacing rules, and selection criteria for packaging."
+  canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Roller Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO Definition -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Roller Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Roller Conveyors: Types, Applications & Specifications
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A roller conveyor uses a series of cylindrical rollers mounted between side frames to transport flat-bottomed products such as cases, cartons, totes, and pallets. Roller conveyors come in five primary types: gravity (unpowered), belt-driven live roller (BDLR), line-shaft, motor driven roller (MDR), and chain driven live roller (CDLR). They are the most widely installed conveyor category in packaging and distribution facilities worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-type Navigation -->
+  <section class="py-16 bg-surface" aria-labelledby="subtypes-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Roller Conveyor Types</div>
+      <h2 id="subtypes-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Explore Roller Conveyor <span class="text-accent">Sub-Types</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="/conveyor-types/roller-conveyors/gravity/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Gravity Roller</h3>
+          <p class="text-base text-ink-muted">Unpowered systems using gravity or manual push. Lowest cost and zero energy consumption.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">$</span><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">0 Energy</span></div>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/powered/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Powered & Live Roller</h3>
+          <p class="text-base text-ink-muted">Belt-driven, line-shaft, and chain-driven powered systems with zone control and accumulation.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">$$-$$$</span><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Zone Control</span></div>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">MDR (Motor Driven Roller)</h3>
+          <p class="text-base text-ink-muted">24VDC motorized rollers with built-in zone control and zero-pressure accumulation.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">$$$</span><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">ZPA Built-In</span></div>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">CDLR (Chain Driven Live Roller)</h3>
+          <p class="text-base text-ink-muted">Heavy-duty chain-driven rollers for pallets, drums, and heavy cases up to 10,000 lbs.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">$$$</span><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Heavy-Duty</span></div>
+        </a>
+        <a href="/conveyor-types/live-roller-conveyors/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Live Roller Systems</h3>
+          <p class="text-base text-ink-muted">Complete comparison of BDLR, line-shaft, and CDLR powered roller technologies.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Comparison</span></div>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="card group p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">Accumulation</h3>
+          <p class="text-base text-ink-muted">Zero-pressure and minimum-pressure roller accumulation for line buffering.</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">ZPA</span><span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Buffer</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Roller Conveyors Work -->
+  <article class="py-20 bg-surface-dim bg-dots" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technical Deep-Dive</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Roller Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Every roller conveyor shares the same basic structure: cylindrical rollers rotate on bearings seated in side frames. Products ride on top of the rollers. The rollers either spin freely (gravity) or are driven by an external force (powered). Frame construction uses formed steel channel or structural angle in gauges from 7 to 12, depending on load capacity.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Construction</h3>
+        <p>Standard conveyor rollers consist of a steel or aluminum tube, two precision bearings (typically ABEC-1 or ABEC-3), and a hex or spring-loaded axle. Roller diameter ranges from 1.375 inches (light duty) to 3.5 inches (heavy duty). Wall thickness ranges from 16-gauge (0.065") for light cases to 7-gauge (0.180") for heavy pallets. Manufacturers like Interroll, Rulmeca, and Dematic-Hytrol offer rollers in carbon steel, stainless steel, PVC, and aluminum.</p>
+        <!-- VERIFY: Exact ABEC ratings offered by Interroll vs Rulmeca for standard conveyor rollers -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Spacing (Pitch)</h3>
+        <p>Roller pitch determines how many rollers contact the product at any time. The universal rule requires at least 3 rollers under the product at all times. Common pitch values include 1.5", 2", 3", 4.5", and 6" center-to-center. Closer pitch provides smoother transport for small or lightweight items. Wider pitch reduces cost and suits large, heavy products. Hytrol publishes a detailed roller pitch selection table in their engineering manual that cross-references product length to recommended pitch.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bearing Types</h3>
+        <p>Conveyor roller bearings come in three grades. Precision ball bearings (lowest rolling resistance) suit <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller conveyors</a> where minimal force must move the product. Standard ball bearings work for <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> where the drive system overcomes bearing friction. Sealed and lubricated-for-life bearings dominate <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage</a> applications where contamination risk prohibits re-lubrication.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Types</h3>
+        <p>Roller conveyor frames use three common profiles. Channel frame (C-channel) offers the highest strength-to-weight ratio for heavy-duty applications. Angle frame (L-shaped) provides a low-profile, economical option for light-duty gravity sections. Structural tube frame suits custom fabrications and <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary stainless steel designs</a>. Frame widths range from 12" to 60" between rails. Support heights range from 24" to 42" for standard floor-mounted installations.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Roller Conveyor Type <span class="text-accent">Comparison</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[900px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Gravity</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">BDLR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Line-Shaft</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">MDR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">CDLR</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Method</td>
+              <td class="py-3 pr-4">None (gravity)</td>
+              <td class="py-3 pr-4">Belt under rollers</td>
+              <td class="py-3 pr-4">Splined shaft + O-rings</td>
+              <td class="py-3 pr-4">24VDC motor in roller</td>
+              <td class="py-3">Chain loops on sprockets</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">Gravity</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-180 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-180 FPM</td>
+              <td class="py-3 font-mono text-sm">20-120 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Product</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 200 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 500 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 300 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 250 lbs</td>
+              <td class="py-3 font-mono text-sm">Up to 10,000 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Accumulation</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">With pneumatic zones</td>
+              <td class="py-3 pr-4">With clutch/brake</td>
+              <td class="py-3 pr-4">Built-in ZPA</td>
+              <td class="py-3">No (continuous)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise Level</td>
+              <td class="py-3 pr-4 font-mono text-sm">&lt;60 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">70-80 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">75-85 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">55-65 dB</td>
+              <td class="py-3 font-mono text-sm">75-85 dB</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Energy Use</td>
+              <td class="py-3 pr-4">None</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Low (on-demand)</td>
+              <td class="py-3">Moderate-High</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Maintenance</td>
+              <td class="py-3 pr-4">Minimal</td>
+              <td class="py-3 pr-4">Belt tension, tracking</td>
+              <td class="py-3 pr-4">O-ring replacement</td>
+              <td class="py-3 pr-4">Very low</td>
+              <td class="py-3">Chain lubrication</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Speed and load values represent typical ranges from Hytrol, Interroll, and Dematic product lines. Actual capacity depends on roller diameter, pitch, bearing type, and frame gauge. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing details.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Roller Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Case and Carton Transport</h3>
+        <p>Roller conveyors dominate case transport in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line applications</a>. Sealed cases with flat bottoms ride smoothly across rollers at speeds from 30 to 200 FPM. End-of-line systems typically use <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> between case packers, case sealers, labelers, and palletizers. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> buffer cases before palletizing.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Distribution and Fulfillment</h3>
+        <p>Distribution centers use <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR roller conveyors</a> for zone-controlled transport and accumulation. Totes and shipping cartons route through pick modules, merge onto trunk lines, and accumulate before shipping sorters. MDR provides silent zero-pressure accumulation that protects product and reduces energy consumption. Intelligrated (Honeywell), Dematic, and TGW integrate MDR roller conveyors into large-scale <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pallet Handling</h3>
+        <p><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> handle loaded pallets between stretch wrappers, pallet jacks, and truck loading areas. Heavy-duty rollers with 3.5" diameter and 7-gauge wall thickness support pallet loads up to 4,000 lbs on standard frames and 10,000+ lbs on structural frames. <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet conveyor systems</a> often include <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">right-angle transfers</a> and <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors</a> for multi-level facilities.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Food and Beverage</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage facilities</a> use stainless steel roller conveyors with sealed bearings and open-frame construction for washdown cleaning. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary roller conveyors</a> feature tool-free roller removal, sloped frame surfaces that shed water, and FDA-compliant bearing seals. Dorner and mk North America manufacture purpose-built sanitary roller conveyor lines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Loading Docks and Shipping</h3>
+        <p><a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">Gravity roller conveyors</a> are the standard for loading dock applications. Workers push cases down a slight decline into trailers. Flexible/expandable gravity roller sections telescope to reach deep into trailers. These cost a fraction of powered systems and require zero electrical infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Criteria</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Roller Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Selecting the right roller conveyor requires matching six parameters to available equipment.</p>
+
+        <p><strong class="text-ink">1. Product bottom surface.</strong> Roller conveyors require a flat, rigid bottom surface. Soft bags, pouches, and irregular shapes fall between rollers and require belt conveyors instead. The product bottom must span at least 3 rollers at the chosen pitch.</p>
+
+        <p><strong class="text-ink">2. Product weight.</strong> Individual product weight determines roller diameter, wall thickness, bearing type, and frame gauge. Light cases (under 50 lbs) use 1.9" diameter rollers in light-gauge frames. Heavy pallets (over 500 lbs) require 3.5" rollers in structural frames with heavy-duty bearings.</p>
+
+        <p><strong class="text-ink">3. Speed and throughput.</strong> Calculate required speed from your throughput formula. <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">Gravity systems</a> provide variable, uncontrolled speed. Powered systems provide consistent, adjustable speed. Match the conveyor speed to your upstream and downstream equipment rates.</p>
+
+        <p><strong class="text-ink">4. Accumulation requirement.</strong> If products must queue without backpressure, select <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> or pneumatic <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>. Continuous transport without accumulation allows simpler <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller</a> or gravity configurations.</p>
+
+        <p><strong class="text-ink">5. Environment.</strong> Wet or washdown environments require stainless steel rollers, sealed bearings, and corrosion-resistant frames. Standard warehouse environments use galvanized or painted carbon steel. High-temperature environments require special bearing lubricants and heat-resistant materials.</p>
+
+        <p><strong class="text-ink">6. Budget.</strong> <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">Gravity roller</a> costs the least per foot. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> costs more upfront but saves on energy and maintenance over the conveyor's 15-20 year life. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> costs more due to heavier construction but handles loads that lighter conveyors cannot. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for factor-by-factor cost breakdowns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="manufacturers-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Manufacturers</div>
+      <h2 id="manufacturers-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Leading Roller Conveyor <span class="text-accent">Manufacturers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>The roller conveyor market includes both component manufacturers (who make rollers and frames) and system integrators (who design and install complete systems). Key players include:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Hytrol</strong> — Jonesboro, AR. Full range of gravity, BDLR, CDLR, and MDR roller conveyors. One of the largest North American conveyor manufacturers with a nationwide integrator network.</li>
+          <li><strong class="text-ink">Interroll</strong> — Global. Manufactures MDR rollers (RollerDrive series), gravity roller modules, and conveyor platforms. Major OEM supplier to system integrators.</li>
+          <li><strong class="text-ink">Dematic</strong> — Global. System integrator offering MDR, BDLR, and CDLR roller conveyor systems for distribution and fulfillment.</li>
+          <li><strong class="text-ink">Intelligrated (Honeywell)</strong> — Mason, OH. Full conveyor system integrator with IntelliSort sortation and roller conveyor lines.</li>
+          <li><strong class="text-ink">TGW</strong> — Global. Integrated roller conveyor systems for e-commerce and distribution.</li>
+          <li><strong class="text-ink">Bastian Solutions (Toyota)</strong> — Indianapolis, IN. Conveyor system integrator specializing in distribution and fulfillment.</li>
+          <li><strong class="text-ink">Dorner</strong> — Hartland, WI. Precision roller and belt conveyors for packaging, assembly, and food processing.</li>
+          <li><strong class="text-ink">mk North America</strong> — Bloomfield, CT. Modular aluminum-frame roller and belt conveyors for packaging and automation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the different types of roller conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>The five main roller conveyor types are: <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> (unpowered), belt-driven live roller or BDLR (single motor drives all rollers via belt), line-shaft roller (motor drives rollers via splined shaft and O-rings), <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> (24VDC motors inside individual rollers), and <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> (chain loops drive rollers via sprockets for heavy loads).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I choose between gravity and powered roller conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Choose <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> when you have a slight decline (3-5 degrees), consistent product weights, and no need for speed control or <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>. Choose <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller</a> when you need consistent speed, uphill transport, accumulation, or integration with <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated systems</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What roller spacing do I need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>At least 3 rollers must contact the product bottom at all times. Divide your smallest product length by 3, then round down to the nearest standard pitch (1.5", 2", 3", 4.5", or 6"). A 12-inch long case needs 4-inch or smaller roller spacing. A 24-inch pallet needs 8-inch or smaller spacing.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the weight capacity of a roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Weight capacity depends on roller type. Standard gravity rollers: 75-200 lbs per product. BDLR: up to 500 lbs. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a>: 150-250 lbs per zone. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a>: 500-10,000+ lbs for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet applications</a>. Capacity depends on roller diameter, wall thickness, bearing type, and frame gauge.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Why is MDR replacing line-shaft conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR technology</a> provides zero-pressure accumulation without pneumatics, uses 50%+ less energy (zones only run when needed), runs quieter (65 dB vs 80+ dB), requires less maintenance (no belts, chains, or O-rings), and supports easy zone-by-zone expansion. Interroll, Itoh Denki, and Rulmeca are leading MDR roller manufacturers.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Conveyor Types</div>
+          <p class="text-sm text-white/60">Browse 30+ conveyor types</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">ZPA and buffer conveyors</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Right-angle and multi-directional</p>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cost Guide</div>
+          <p class="text-sm text-white/60">Pricing factors by type</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

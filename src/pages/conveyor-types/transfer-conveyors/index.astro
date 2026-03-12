@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Transfer Conveyors", "item": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a transfer conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A transfer conveyor changes product direction, typically at 90 degrees (right angle), between two conveyor lines. Common types include pop-up chain transfers, pop-up ball transfers, right-angle roller chain transfers, turntables, and push diverters. Each type handles different product sizes, weights, and speed requirements." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a pop-up transfer and a push diverter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A pop-up transfer lifts chains or balls above the roller surface to carry the product sideways across the rollers. A push diverter uses a pneumatic or electric actuator to physically push the product off the conveyor onto a perpendicular spur. Pop-up transfers maintain product orientation and handle higher speeds. Push diverters are simpler and cheaper but can rotate products during the push." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can a transfer conveyor operate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Transfer speed depends on the type. Pop-up chain transfers typically operate at 30-120 FPM with transfer cycle times of 2-4 seconds. Push diverters handle line speeds up to 200 FPM. Turntables are the slowest with 6-10 second cycle times. High-speed sortation diverters (shoe sorters, pop-up wheel sorters) handle 300-600 FPM." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Transfer Conveyors: Right-Angle, 90-Degree & Multi-Directional Systems",
+  "description": "Complete guide to transfer conveyors including pop-up transfers, right-angle chain transfers, turntables, push diverters, and multi-directional transfer systems.",
+  "url": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Transfer Conveyors: Right-Angle, 90° & Multi-Directional Transfer Systems"
+  description="Complete guide to transfer conveyors: pop-up transfers, right-angle chain, turntables, push diverters. Comparison table, speed ratings, and selection criteria for packaging."
+  canonical="https://packagingconveyor.com/conveyor-types/transfer-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Transfer Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Transfer Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Transfer Conveyors: Right-Angle, 90&deg; & Multi-Directional
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A transfer conveyor changes the direction of product flow between two conveyor lines, typically at a 90-degree (right-angle) intersection. Transfer conveyors include pop-up chain transfers, pop-up ball transfers, right-angle roller chain transfers, turntables, and push diverters. Each type handles different product sizes, weights, and throughput requirements, making transfer technology selection critical for efficient <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line layouts</a> and distribution system routing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transfer Types -->
+  <article class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Transfer Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Five Transfer Conveyor <span class="text-accent">Technologies</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pop-Up Chain Transfer</h3>
+        <p>Pop-up chain transfers use parallel chains mounted between the rollers of a <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a>. A pneumatic or electric actuator lifts the chains above the roller surface. The chains engage the product bottom and carry it perpendicular to the original direction of travel. When the transfer is not active, the chains retract below the rollers and the product continues straight on the roller conveyor.</p>
+        <p>Pop-up chain transfers handle products from 10 to 300 lbs at speeds of 30-120 FPM. Transfer cycle time is typically 2-4 seconds (lift, transfer, lower). The product maintains its orientation throughout the transfer. Hytrol, Dematic, and Intelligrated offer pop-up chain transfer modules that integrate with their roller conveyor platforms. Pop-up chains work best with flat-bottomed cases and cartons that span at least 2 chain strands.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pop-Up Ball Transfer</h3>
+        <p>Pop-up ball transfers use a grid of ball transfer units (omnidirectional ball bearings) mounted between rollers. When the balls rise above the roller surface, the product rides on the ball field and can be pushed or guided in any direction — not limited to 90 degrees. Pop-up ball transfers suit light products (under 75 lbs) and are used where multi-directional routing is needed from a single transfer point.</p>
+        <p>Ball transfers provide the most routing flexibility but the least positive drive. They rely on external pushers, guide rails, or downstream conveyors to pull the product in the desired direction. They are slower than chain transfers and less suitable for high-throughput applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Right-Angle Roller Chain Transfer</h3>
+        <p>A right-angle roller chain transfer is a dedicated section with perpendicular chain-driven rollers that transfer product at 90 degrees. Unlike pop-up units that lift above existing rollers, the right-angle transfer section has its own set of rollers oriented at 90 degrees to the incoming line. The product enters on the infeed rollers, stops, and the perpendicular rollers engage to carry the product sideways onto the discharge conveyor.</p>
+        <p>Right-angle roller chain transfers handle heavy loads (up to 4,000 lbs for pallet applications) and provide reliable positive drive throughout the transfer. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyor</a> systems commonly use right-angle chain transfers for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet routing</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Turntable Transfer</h3>
+        <p>A turntable transfer rotates the entire conveyor section (and the product on it) to change direction. The product enters the turntable section, the section physically rotates 90, 180, or any angle, and the product exits in the new direction. Turntables handle the heaviest loads (up to 10,000 lbs for pallet turntables) but have the slowest cycle time (6-10 seconds per transfer).</p>
+        <p>Turntable transfers excel in pallet handling where pop-up mechanisms cannot support the load. They also serve applications where the product must be rotated (not just redirected) — for example, rotating a pallet 90 degrees for stretch wrapping or rotating a case for label application on a different face.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Push Diverter</h3>
+        <p>A push diverter uses a pneumatic or electric actuator to push the product off the main conveyor line onto a perpendicular spur. The simplest designs use a flat pusher plate. More sophisticated versions use angled paddles or sweep arms that guide the product at an angle rather than a sudden perpendicular push. Push diverters handle line speeds up to 200 FPM and work with products from 1 to 100 lbs.</p>
+        <p>Push diverters cost less than pop-up transfers but can rotate the product during the push, which is unacceptable for orientation-sensitive products. They also generate more product impact force. Push diverters are common in <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject systems</a> where failed QC products are pushed off the main line.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Transfer Type <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Chain</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Ball</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Right-Angle Chain</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Turntable</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Push Diverter</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">300 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">4,000 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">10,000 lbs</td>
+              <td class="py-3 font-mono text-sm">100 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Cycle Time</td>
+              <td class="py-3 pr-4 font-mono text-sm">2-4 sec</td>
+              <td class="py-3 pr-4 font-mono text-sm">3-5 sec</td>
+              <td class="py-3 pr-4 font-mono text-sm">3-5 sec</td>
+              <td class="py-3 pr-4 font-mono text-sm">6-10 sec</td>
+              <td class="py-3 font-mono text-sm">1-2 sec</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Orientation</td>
+              <td class="py-3 pr-4">Maintained</td>
+              <td class="py-3 pr-4">Maintained</td>
+              <td class="py-3 pr-4">Maintained</td>
+              <td class="py-3 pr-4">Rotated</td>
+              <td class="py-3">May rotate</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Direction Angles</td>
+              <td class="py-3 pr-4">90&deg; only</td>
+              <td class="py-3 pr-4">Any angle</td>
+              <td class="py-3 pr-4">90&deg; only</td>
+              <td class="py-3 pr-4">Any angle</td>
+              <td class="py-3">90&deg; typical</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Cases, cartons</td>
+              <td class="py-3 pr-4">Light items, multi-dir</td>
+              <td class="py-3 pr-4">Heavy pallets</td>
+              <td class="py-3 pr-4">Very heavy loads</td>
+              <td class="py-3">Rejects, light divert</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Cycle times and load ratings represent typical values from Hytrol, Dematic, and Intelligrated product lines. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Transfer Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Packaging line routing:</strong> <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Packaging lines</a> use transfers to route products between parallel process lines. Cases divert from a main transport line to one of several case packers, labelers, or palletizers using pop-up chain transfers. The PLC routes each case based on product SKU, destination, or load-balancing logic.</p>
+
+        <p><strong class="text-ink">Pallet handling:</strong> <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet conveyor systems</a> use right-angle chain transfers and turntables to route loaded pallets between stretch wrappers, labelers, and shipping lanes. The heavy loads (2,000-4,000 lbs) require positive chain drive or turntable rotation. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> feed right-angle chain transfers for heavy pallet routing.</p>
+
+        <p><strong class="text-ink">Distribution center sortation:</strong> Transfer conveyors divert totes and cartons from trunk lines to pick zones, pack stations, and shipping lanes. High-volume operations use high-speed shoe sorters or pop-up wheel diverters (300-600 FPM). Lower-volume operations use pop-up chain transfers or push diverters.</p>
+
+        <p><strong class="text-ink">Reject and quality control:</strong> <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">Reject systems</a> use push diverters to remove failed products from the main conveyor line. Checkweighers, metal detectors, and vision systems trigger the diverter to push rejects onto a spur conveyor or into a reject bin. Push diverters offer the fastest cycle time (1-2 seconds) for reject applications.</p>
+
+        <p><strong class="text-ink"><a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating and laning:</a></strong> Transfer conveyors distribute products from a single infeed lane across multiple output lanes. Each transfer diverts a programmed number of products to fill lanes evenly before <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading</a> or case packing.</p>
+
+        <p><strong class="text-ink">Vertical integration:</strong> Transfer conveyors connect horizontal conveyor runs to <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors (VRCs)</a> and spiral conveyors. A right-angle transfer feeds product onto the VRC platform or spiral infeed, and another transfer receives product at the upper level.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Transfer Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Product weight drives the first cut.</strong> Products under 100 lbs qualify for pop-up chains, pop-up balls, or push diverters. Products from 100-500 lbs need pop-up chain or right-angle chain transfers. Products over 500 lbs require right-angle chain transfers or turntables. <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet loads</a> over 2,000 lbs typically use turntables or heavy-duty right-angle chain transfers.</p>
+
+        <p><strong class="text-ink">Throughput determines cycle time requirements.</strong> Calculate the maximum number of transfers per minute needed. Divide 60 seconds by the required transfers per minute to get the maximum allowable cycle time. Pop-up chains at 2-4 seconds deliver 15-30 transfers per minute. Turntables at 6-10 seconds deliver 6-10 transfers per minute. If throughput exceeds single-transfer capacity, add parallel transfers or switch to high-speed sortation technology.</p>
+
+        <p><strong class="text-ink">Orientation sensitivity matters.</strong> Push diverters can rotate products during the push. Pop-up chain transfers and right-angle transfers maintain product orientation. Turntables intentionally rotate the product. If barcode labels, product graphics, or downstream equipment require a specific product orientation, avoid push diverters.</p>
+
+        <p><strong class="text-ink">Direction flexibility.</strong> Pop-up chains and right-angle transfers handle 90-degree transfers only. Pop-up ball transfers and turntables handle any angle. Push diverters typically push at 90 degrees but angled sweeps can push at 30-60 degrees.</p>
+
+        <p>Transfers must integrate with upstream <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zones</a> that meter products into the transfer at the correct spacing and timing. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor zones</a> upstream of the transfer provide precise product positioning for reliable transfer operation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a transfer conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A transfer conveyor changes product direction between two conveyor lines, typically at 90 degrees. Types include pop-up chain, pop-up ball, right-angle chain, turntable, and push diverter. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">complete conveyor type guide</a> for the full picture.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a pop-up transfer and a push diverter?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Pop-up transfers lift chains or balls above the roller surface to carry the product sideways. Push diverters physically push the product off the line. Pop-ups maintain orientation and handle higher loads. Push diverters are cheaper and faster but may rotate the product.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast can a transfer conveyor operate?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Pop-up chain: 30-120 FPM, 2-4 sec cycle. Push diverter: up to 200 FPM, 1-2 sec cycle. Turntable: 6-10 sec cycle. High-speed sortation diverters handle 300-600 FPM. Choose based on your transfers-per-minute requirement.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Transport lines that feed transfers</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Buffer before transfer points</p>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">CDLR Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty pallet transfer feed</p>
+        </a>
+        <a href="/conveyor-functions/reject-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Reject Systems</div>
+          <p class="text-sm text-white/60">Push diverter applications</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

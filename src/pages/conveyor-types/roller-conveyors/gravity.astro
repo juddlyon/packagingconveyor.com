@@ -1,0 +1,324 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Roller Conveyors", "item": "https://packagingconveyor.com/conveyor-types/roller-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Gravity Roller", "item": "https://packagingconveyor.com/conveyor-types/roller-conveyors/gravity/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What angle do you need for a gravity roller conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most gravity roller conveyors require a decline of 3 to 5 degrees (approximately 3/8 inch to 5/8 inch drop per foot of conveyor length) to move standard cases and cartons. Heavier products need less decline. Lighter products need more. The exact pitch depends on product weight, roller bearing quality, and roller diameter. Test with your actual product before finalizing the installation pitch." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the weight limit for a gravity roller conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard light-duty gravity roller conveyors handle up to 50-75 lbs per product. Medium-duty gravity rollers handle 75-200 lbs. Heavy-duty gravity roller sections with 2.5 to 3.5 inch diameter rollers and structural frames can handle up to 500+ lbs. The capacity depends on roller diameter, wall thickness, bearing grade, axle size, and frame gauge." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does gravity roller conveyor cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gravity roller conveyor is the lowest cost conveyor type available ($). Key cost factors include frame material (aluminum vs steel vs stainless), roller diameter, bearing type (precision vs standard), overall width, and length. Stainless steel construction for food-grade applications increases cost significantly over standard galvanized or painted carbon steel." }
+    },
+    {
+      "@type": "Question",
+      "name": "What roller spacing should I use for gravity conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The rule is: at least 3 rollers must contact the product bottom at all times. Divide the smallest product length by 3, then round down to the nearest standard pitch. Common gravity roller pitches are 1.5 inches, 3 inches, 4.5 inches, and 6 inches center-to-center. A 12-inch case needs 4-inch or closer spacing. A 6-inch box needs 2-inch or closer spacing." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gravity Roller Conveyors: Design, Specifications & Selection Guide",
+  "description": "Complete guide to gravity roller conveyors including decline angles, roller spacing rules, weight capacity tables, and selection criteria for packaging applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/roller-conveyors/gravity/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Gravity Roller Conveyors: Angles, Spacing & Selection Guide"
+  description="Complete guide to gravity roller conveyors. Decline angles, roller spacing rules, weight capacities, and selection criteria. Lowest cost conveyor option for cases and cartons."
+  canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/gravity/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/roller-conveyors/" class="hover:text-accent transition-colors">Roller Conveyors</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Gravity Roller</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO Definition -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Gravity Roller Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Gravity Roller Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A gravity roller conveyor moves products using gravity on a slight decline or by manual push on a level surface, with no motors, belts, or external power source. Gravity roller conveyors are the lowest-cost, lowest-maintenance conveyor type available and handle flat-bottomed cases, cartons, and totes from 1 lb to over 500 lbs depending on roller construction. They serve as the default conveyor for loading docks, manual packing stations, shipping areas, and anywhere products need simple point-to-point transport without speed control or accumulation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technical Deep-Dive</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Gravity Roller Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Gravity roller conveyors operate on the simplest mechanical principle in material handling. Free-spinning rollers mounted on precision bearings rotate under the weight of the product. A slight downward angle converts gravitational potential energy into kinetic energy, moving the product forward without any power input. The rollers themselves provide minimal rolling resistance, allowing even lightweight products to travel significant distances on a modest decline.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Decline Angle and Pitch</h3>
+        <p>The decline angle (also called pitch or slope) determines product travel speed. Most gravity roller installations use a decline of 3 to 5 degrees, which translates to approximately 3/8" to 5/8" of drop per linear foot of conveyor. Hytrol recommends starting at 3/8" per foot for standard corrugated cases weighing 20-50 lbs on 1.9" diameter rollers with precision bearings.</p>
+        <p>Heavier products require less decline. A 100 lb case may need only 1/4" per foot. Lighter products require more. A 5 lb carton may need 3/4" per foot or more. The only reliable method to determine the correct pitch is testing with actual product on the specific roller conveyor being installed. Manufacturers typically ship gravity conveyors with adjustable-height legs so the installer can fine-tune the decline angle on site.</p>
+        <!-- VERIFY: Hytrol's specific recommended drop per foot values by product weight range -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Diameter Selection</h3>
+        <p>Roller diameter affects both load capacity and rolling resistance. Common gravity roller diameters include:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">1.375" (1-3/8") diameter</strong> — Ultra-light-duty. Small parts, envelopes, and poly bags under 10 lbs. Used on gravity chutes and inspection tables.</li>
+          <li><strong class="text-ink">1.9" diameter</strong> — The standard for most gravity roller applications. Cases, cartons, and totes from 5 to 75 lbs. Available in 16-gauge to 11-gauge wall thickness.</li>
+          <li><strong class="text-ink">2.5" diameter</strong> — Medium-duty. Heavier cases, totes, and bins from 50 to 200 lbs. Thicker wall and larger bearings increase load capacity.</li>
+          <li><strong class="text-ink">3.5" diameter</strong> — Heavy-duty. Drums, heavy totes, and pallets from 100 to 500+ lbs. Structural frame required.</li>
+        </ul>
+        <p>Interroll, Rulmeca, and Hytrol publish detailed roller load rating tables that specify maximum load per roller based on diameter, wall thickness, bearing type, and shaft size.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Spacing Rules</h3>
+        <p>Roller pitch (center-to-center spacing) must ensure at least 3 rollers contact the product bottom at all times. This rule prevents the product from rocking, tipping, or jamming between rollers. The formula is simple:</p>
+        <p class="font-mono text-ink bg-surface-dim px-4 py-3 border border-border"><strong>Maximum roller pitch = smallest product length / 3</strong></p>
+        <p>Standard roller pitches include 1.5", 2", 3", 4.5", and 6" center-to-center. A 12" case requires 4" pitch or smaller. A 24" carton allows 6" pitch or smaller. Closer pitch provides smoother transport and lower per-roller loading but increases cost per foot because more rollers are needed.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Construction</h3>
+        <p>Gravity roller conveyor frames use channel or angle side rails. Light-duty frames use 12-gauge formed channel. Medium-duty uses 10-gauge. Heavy-duty uses 7-gauge structural channel. Standard frame widths range from 12" to 36" between rails (BF dimension). Overall width adds 3-6" for the frame rails themselves.</p>
+        <p>Support leg options include fixed-height, adjustable tripod, and floor-mount H-stands. Adjustable legs allow on-site fine-tuning of the decline angle. Standard support spacing is 5 to 10 feet depending on total conveyor load.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Curve Sections</h3>
+        <p>Gravity roller curves use tapered (conical) rollers to maintain product tracking through 30, 45, and 90-degree turns. The taper creates a speed differential that keeps the product centered in the curve. Curve widths must match the straight sections they connect. Standard curve inside radii range from 24" to 48". Larger radii provide smoother product flow and reduce the risk of jams on curves.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Specifications Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="specs-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specifications</div>
+      <h2 id="specs-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Gravity Roller <span class="text-accent">Specification Ranges</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Parameter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Light-Duty</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Medium-Duty</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Heavy-Duty</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Roller Diameter</td>
+              <td class="py-3 pr-4 font-mono text-sm">1.375" - 1.9"</td>
+              <td class="py-3 pr-4 font-mono text-sm">1.9" - 2.5"</td>
+              <td class="py-3 font-mono text-sm">2.5" - 3.5"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Wall Thickness</td>
+              <td class="py-3 pr-4 font-mono text-sm">16 - 14 ga</td>
+              <td class="py-3 pr-4 font-mono text-sm">14 - 11 ga</td>
+              <td class="py-3 font-mono text-sm">11 - 7 ga</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Product</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 50 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">50 - 200 lbs</td>
+              <td class="py-3 font-mono text-sm">200 - 500+ lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Frame Width (BF)</td>
+              <td class="py-3 pr-4 font-mono text-sm">12" - 18"</td>
+              <td class="py-3 pr-4 font-mono text-sm">18" - 30"</td>
+              <td class="py-3 font-mono text-sm">24" - 48"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Roller Pitch</td>
+              <td class="py-3 pr-4 font-mono text-sm">1.5" - 3"</td>
+              <td class="py-3 pr-4 font-mono text-sm">3" - 4.5"</td>
+              <td class="py-3 font-mono text-sm">4.5" - 6"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Decline Angle</td>
+              <td class="py-3 pr-4 font-mono text-sm">1/2" - 3/4" per ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">3/8" - 5/8" per ft</td>
+              <td class="py-3 font-mono text-sm">1/4" - 3/8" per ft</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Specifications represent typical ranges across Hytrol, Interroll, and Dematic product lines. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factor details.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Gravity Roller Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Loading Docks and Truck Loading</h3>
+        <p>Gravity roller conveyors are the standard equipment at loading docks worldwide. Workers slide cases down a slight decline from the dock into the trailer. Flexible/expandable gravity roller sections telescope from 8 to 24 feet to reach deep into trailers without workers climbing inside. Skate wheel alternatives exist for very lightweight packages, but gravity rollers handle a wider weight range.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Manual Packing and Shipping Stations</h3>
+        <p>Pack stations use gravity roller conveyors to queue empty cartons, move packed cartons to taping stations, and transport sealed cartons to shipping. These level (zero-decline) sections rely on manual push to move products. Workers appreciate the low friction and quiet operation. Gravity roller sections between workstations cost a fraction of <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> and require zero energy.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">End-of-Line Packaging</h3>
+        <p>Many <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line layouts</a> use gravity roller sections between case sealers and palletizing areas. The slight decline moves sealed cases from the case sealer to a staging area where palletizers or manual stackers pick them up. These sections typically connect to <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller</a> or <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyor</a> sections upstream.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Assembly and Inspection</h3>
+        <p>Manufacturing facilities use gravity roller conveyors as assembly and inspection workstation lines. Products sit on the rollers while workers assemble, inspect, or rework them, then push the product to the next station. The open-roller design provides access to the product bottom. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyors</a> offer a powered alternative for higher-throughput assembly lines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Food and Beverage</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage operations</a> use <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary stainless steel gravity roller conveyors</a> for cased product in dry environments. The open-roller design allows debris to fall through rather than accumulating on a belt surface. Sealed stainless steel bearings and smooth-welded frames support washdown cleaning protocols.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Upgrade -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="upgrade-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guidance</div>
+      <h2 id="upgrade-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        When to Choose <span class="text-accent">Powered Over Gravity</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Gravity roller conveyors excel in specific scenarios but have clear limitations. Upgrade to a powered system when any of these conditions apply:</p>
+
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">You need controlled speed.</strong> Gravity conveyors deliver variable speed that depends on product weight and decline angle. <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">Powered roller conveyors</a> maintain consistent speed regardless of load.</li>
+          <li><strong class="text-ink">You need uphill transport.</strong> Gravity works downhill only. Any incline or level transport over long distances requires a powered system.</li>
+          <li><strong class="text-ink">You need accumulation.</strong> Products on gravity conveyors pile up with full backpressure at the low end. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> and <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR systems</a> provide zero-pressure queuing.</li>
+          <li><strong class="text-ink">You need integration with automated systems.</strong> PLC-controlled packaging lines require conveyors that start, stop, and vary speed on command. <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">Automated conveyor systems</a> use powered drive technologies.</li>
+          <li><strong class="text-ink">Product weight varies significantly.</strong> A gravity decline tuned for 50 lb cases will over-accelerate 10 lb cases and stall 100 lb cases. Powered conveyors handle variable loads at consistent speed.</li>
+          <li><strong class="text-ink">You need direction changes.</strong> Gravity conveyors can navigate gentle curves but cannot execute 90-degree <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a> or multi-directional routing without powered assist.</li>
+        </ul>
+
+        <p>Gravity roller conveyors remain the right choice for simple point-to-point transport with consistent product weight, available decline, no accumulation requirement, and budget priority. They also serve as the standard gravity take-away section downstream of powered systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What angle do you need for a gravity roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Most gravity roller conveyors require a decline of 3 to 5 degrees (approximately 3/8" to 5/8" drop per foot). Heavier products need less decline. Lighter products need more. The correct pitch depends on product weight, roller bearing quality, and roller diameter. Test with your actual product before committing to a fixed installation angle.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the weight limit for a gravity roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Light-duty gravity rollers handle up to 50-75 lbs. Medium-duty handles 75-200 lbs. Heavy-duty gravity roller sections with 3.5" diameter rollers and structural frames handle 500+ lbs. For loads above 500 lbs, consider <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> for positive chain drive.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much does gravity roller conveyor cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Gravity roller conveyor is the lowest cost type ($). Cost factors include frame material (aluminum, galvanized steel, or stainless steel), roller diameter and gauge, bearing type, overall width, and length. Stainless steel construction for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food-grade applications</a> costs significantly more. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for a full breakdown.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What roller spacing should I use?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>At least 3 rollers must always contact the product bottom. Divide your smallest product length by 3, round down to the nearest standard pitch (1.5", 2", 3", 4.5", or 6"). A 12-inch case needs 4-inch or closer spacing. See our <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor hub page</a> for more details on pitch selection.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">All roller conveyor types</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/powered/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Powered Roller</div>
+          <p class="text-sm text-white/60">Belt-driven and line-shaft</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">24VDC motorized roller</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Zero-pressure buffering</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

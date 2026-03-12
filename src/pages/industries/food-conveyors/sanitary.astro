@@ -1,0 +1,620 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Food-Grade Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Sanitary & Washdown Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/sanitary/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between IP65, IP66, and IP69K for washdown conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IP65 protects against low-pressure water jets from any direction (6.3mm nozzle, 12.5 liters/min). IP66 protects against high-pressure water jets from any direction (12.5mm nozzle, 100 liters/min). IP69K protects against close-range high-pressure, high-temperature water jets (80°C / 176°F at 80-100 bar / 1160-1450 PSI). IP69K is required for food plants using CIP, foam-and-rinse, or high-pressure steam sanitation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is CIP cleaning on a food conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CIP (Clean-in-Place) means the conveyor is cleaned without disassembly using automated spray systems, chemical circulation, and rinse cycles. CIP systems pump cleaning solution through spray nozzles positioned along the conveyor, then rinse with clean water. CIP conveyors require IP69K-rated components, self-draining frame designs, and smooth surfaces without crevices or dead legs where cleaning solution cannot reach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CIP and COP for conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CIP (Clean-in-Place) cleans the conveyor without disassembly using automated spray systems. COP (Clean-out-of-Place) requires removing parts (belts, rollers, guards) and cleaning them in a separate wash station or tank. Many food conveyors use a combination: the frame and drive components clean via CIP, while the belt removes for COP cleaning in a sanitizing tank. Modular plastic belts support COP because individual links snap out for tank cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need USDA acceptance for my food conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "USDA acceptance is required for conveyor equipment used in federally inspected meat, poultry, dairy, and egg processing plants where the equipment contacts food or operates in the processing zone. It is not required for conveyors handling sealed packages in secondary packaging areas, or for facilities not under federal USDA inspection. State-inspected facilities may have different requirements. Check with your local USDA inspector for your specific plant requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What surface finish do sanitary conveyors require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3-A Sanitary Standards specify a maximum surface roughness of 32 microinch (0.8 micrometer) Ra for product-contact surfaces. Non-product-contact surfaces should be 25 Ra (0.63 micrometer) or smoother to prevent soil accumulation. These finishes are achieved through mechanical polishing or electropolishing. Electropolishing provides a smoother, more corrosion-resistant surface than mechanical polishing and is preferred for critical food-contact applications."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Sanitary & Washdown Conveyors: IP Ratings, CIP Cleaning & USDA Standards",
+  "description": "Technical guide to sanitary and washdown conveyor systems for food processing. Covers IP65/IP66/IP69K ratings, CIP/COP cleaning methods, USDA/3-A acceptance, sanitary design principles, and belt material selection.",
+  "url": "https://packagingconveyor.com/industries/food-conveyors/sanitary/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Sanitary & Washdown Conveyors: IP Ratings, CIP, USDA | PackagingConveyor.com"
+  description="Technical guide to sanitary and washdown conveyors for food processing. Covers IP65 through IP69K ratings, CIP/COP cleaning, USDA and 3-A acceptance, belt materials, and sanitary design principles from Dorner, Nercon, mk North America, and Key Technology."
+  canonical="https://packagingconveyor.com/industries/food-conveyors/sanitary/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface-dim border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/industries/" class="hover:text-accent transition-colors">Industries</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/industries/food-conveyors/" class="hover:text-accent transition-colors">Food Conveyors</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Sanitary & Washdown</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero / AIO -->
+  <section class="py-24 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Food Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-6">
+        Sanitary & Washdown Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
+        <p>
+          Sanitary conveyors are food-processing conveyor systems designed for thorough cleaning through washdown, CIP (Clean-in-Place), or COP (Clean-out-of-Place) methods. They use IP65 through IP69K rated components, stainless steel frames with crevice-free welds, self-draining surfaces, and FDA-compliant contact materials to meet USDA acceptance and 3-A Sanitary Standards.
+        </p>
+        <p>
+          Washdown conveyors protect food products from cross-contamination by allowing sanitation crews to clean equipment in place using water, chemicals, foam, and high-pressure rinses without damaging motors, bearings, or electrical components.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <article>
+  <!-- IP Rating Deep Dive -->
+  <section class="py-24 bg-surface" aria-labelledby="ip-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">IP Ratings Explained</div>
+      <h2 id="ip-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        IP65, IP66 & IP69K: Choosing the Right Washdown Rating
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          The Ingress Protection (IP) rating system (IEC 60529) uses two digits to describe protection level. The first digit rates solid particle protection (6 = dust-tight). The second digit rates water protection. Food conveyors typically start at IP65 and go up to IP69K depending on the severity of the cleaning protocol.
+        </p>
+        <p>
+          <strong class="text-ink">Choosing the wrong IP rating is the most common and most expensive mistake in food conveyor specification.</strong> Under-specifying causes premature motor failures, bearing corrosion, and electrical faults. Over-specifying wastes budget that could go toward additional conveyors or automation. The right choice depends entirely on your sanitation protocol.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-10 mb-4">IP65: Low-Pressure Water Protection</h3>
+        <p>
+          IP65 protects against low-pressure water jets from any direction (6.3 mm nozzle, 12.5 liters per minute at 3 meters). This rating handles splash zones, occasional wipe-down cleaning, and environments where the conveyor gets wet but does not face direct hose-down cleaning.
+        </p>
+        <p>
+          <strong class="text-ink">Use IP65 for:</strong> dry food packaging areas with periodic cleaning, beverage secondary packaging, bakery environments without direct washdown, and enclosed product-handling areas where only incidental splashing occurs.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-10 mb-4">IP66: High-Pressure Water Protection</h3>
+        <p>
+          IP66 protects against high-pressure water jets from any direction (12.5 mm nozzle, 100 liters per minute at 3 meters). This rating handles standard food plant washdown where sanitation crews use pressure washers and spray wands during shift changes or end-of-day cleaning.
+        </p>
+        <p>
+          <strong class="text-ink">Use IP66 for:</strong> standard food processing washdown environments, produce handling, canning lines, and facilities where daily hose-down cleaning is part of the sanitation SOP. IP66 is the most commonly specified rating for food plant conveyors.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-10 mb-4">IP69K: High-Pressure, High-Temperature Protection</h3>
+        <p>
+          IP69K (originally defined under DIN 40050 Part 9, now included in IEC 60529) protects against close-range high-pressure, high-temperature water jets: 80 C (176 F) water at 80-100 bar (1160-1450 PSI) from a distance of 100-150 mm, with the nozzle angled at 0, 30, 60, and 90 degrees to the enclosure. <!-- VERIFY: Exact IP69K test parameters per current IEC 60529 -->
+        </p>
+        <p>
+          <strong class="text-ink">Use IP69K for:</strong> meat and poultry processing, dairy plants, seafood handling, and any facility running CIP (Clean-in-Place) cycles, high-pressure foam-and-rinse sanitation, or steam cleaning. USDA-inspected meat and poultry plants typically require IP69K on all motors and drives in the processing area.
+        </p>
+        <p>
+          Dorner's AquaPruf series and Nercon's sanitary platforms offer IP69K-rated motor and drive configurations. IP69K components use stainless steel housings with special shaft seals and potted electrical connections. These components cost 3-5 times more than standard TEFC motors.
+        </p>
+      </div>
+
+      <!-- IP Rating Comparison Table -->
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[750px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Factor</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">IP65</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">IP66</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">IP69K</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Water pressure</td>
+              <td class="py-4 pr-4">Low-pressure jets</td>
+              <td class="py-4 pr-4">High-pressure jets</td>
+              <td class="py-4">80-100 bar (1160-1450 PSI)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Temperature</td>
+              <td class="py-4 pr-4">Ambient</td>
+              <td class="py-4 pr-4">Ambient</td>
+              <td class="py-4">80 C / 176 F</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Cleaning method</td>
+              <td class="py-4 pr-4">Wipe-down, light spray</td>
+              <td class="py-4 pr-4">Pressure washer, hose</td>
+              <td class="py-4">CIP, steam, foam-and-rinse</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Food application</td>
+              <td class="py-4 pr-4">Dry packaging, bakery</td>
+              <td class="py-4 pr-4">General food processing</td>
+              <td class="py-4">Meat, poultry, dairy, USDA</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Relative cost</td>
+              <td class="py-4 pr-4 font-mono text-sm">$$</td>
+              <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-4 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIP / COP Cleaning -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="cip-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Cleaning Methods</div>
+      <h2 id="cip-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        CIP and COP Cleaning for Food Conveyors
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Food plants use two primary cleaning approaches for conveyor systems: CIP (Clean-in-Place) and COP (Clean-out-of-Place). The cleaning method affects conveyor design, component selection, and total cost of ownership. Most food plants use a combination of both methods on different parts of the same conveyor system.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">CIP (Clean-in-Place)</h3>
+        <p>
+          CIP cleaning uses automated spray systems to circulate cleaning solution, rinse water, and sanitizer across conveyor surfaces without disassembly. Spray nozzles mount along the conveyor frame and target all product-contact surfaces. A typical CIP cycle runs: pre-rinse, alkaline wash, intermediate rinse, acid wash, final rinse, and sanitizer application.
+        </p>
+        <p>
+          CIP-capable conveyors require specific design features:
+        </p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Self-draining frame design:</strong> All surfaces slope toward drain points with no horizontal ledges or pockets that trap liquid.</li>
+          <li><strong class="text-ink">Smooth, crevice-free welds:</strong> All welds ground flush to eliminate bacterial harborage points. No skip welds or spot welds on product-contact surfaces.</li>
+          <li><strong class="text-ink">Sealed penetrations:</strong> Every bolt hole, bearing mount, and wire entry uses food-grade gaskets or silicone seals to prevent cleaning solution from entering cavities.</li>
+          <li><strong class="text-ink">IP69K components:</strong> All motors, drives, sensors, and enclosures withstand the temperature and pressure of CIP cleaning chemistry.</li>
+          <li><strong class="text-ink">No dead legs:</strong> No tubing or frame cavities where cleaning solution can pool without drainage.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">COP (Clean-out-of-Place)</h3>
+        <p>
+          COP cleaning requires removing components from the conveyor and cleaning them separately. The most common COP components are belts, rollers, and guards. Sanitation crews remove these parts and wash them in a COP tank or automated parts washer, then reinstall them after drying and inspection.
+        </p>
+        <p>
+          Conveyors designed for COP cleaning feature:
+        </p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Tool-free belt removal:</strong> Quick-release tensioners allow the belt to be removed without wrenches or keys. Dorner's AquaPruf tip-up tail design is a leading example.</li>
+          <li><strong class="text-ink">Modular plastic belts:</strong> Individual belt links snap apart for tank cleaning. Acetal or polypropylene links resist cleaning chemicals and handle repeated disassembly cycles.</li>
+          <li><strong class="text-ink">Hinged guards and covers:</strong> Guards swing open or lift off without tools for full frame access.</li>
+          <li><strong class="text-ink">Quick-disconnect rollers:</strong> Rollers pop out of the frame for tank cleaning or replacement without removing the conveyor from the line.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Combined CIP/COP Approach</h3>
+        <p>
+          Many food plants combine CIP and COP. The conveyor frame and drive components clean via CIP spray systems during the sanitation cycle. The belt removes for COP tank cleaning, where it soaks in sanitizer solution, gets scrubbed, rinsed, and inspected before reinstallation. This combination provides the most thorough sanitation while keeping line downtime manageable.
+        </p>
+        <p>
+          Nercon's sanitary conveyor platforms support this combined approach with quick-release belts on CIP-capable stainless frames. mk North America's modular designs also allow rapid belt change-outs during COP cycles.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanitary Design Principles -->
+  <section class="py-24 bg-surface" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Design</div>
+      <h2 id="design-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        Sanitary Design Principles for Food Conveyors
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Sanitary design goes beyond material selection. The geometry of every surface, joint, and cavity determines whether the conveyor can be cleaned effectively. USDA, 3-A, and BISSC standards all reference the same core design principles, even though each standard applies them differently.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Surface Finish Requirements</h3>
+        <p>
+          3-A Sanitary Standards specify maximum surface roughness of 32 microinch (0.8 micrometer) Ra for product-contact surfaces. Non-contact surfaces should be smooth enough to prevent soil accumulation. Electropolishing provides a smoother, more corrosion-resistant surface than mechanical polishing because it removes the surface layer of disturbed metal left by grinding operations. <!-- VERIFY: Current 3-A Ra requirement for conveyor surfaces specifically -->
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Corner Radii and Crevice Elimination</h3>
+        <p>
+          All internal corners on product-contact surfaces require minimum radii to prevent product accumulation and bacterial growth. 3-A standards specify a minimum 1/4-inch (6 mm) radius on internal corners. Larger radii are preferred. Square corners trap product and resist cleaning -- bacteria colonies establish in these dead zones and contaminate subsequent production runs.
+        </p>
+        <p>
+          Sanitary conveyor manufacturers eliminate crevices by using continuous welds (no skip welds), avoiding threaded fasteners on product-contact surfaces, and using formed one-piece components instead of assembled multi-piece brackets.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Frame Design: Open vs. Enclosed</h3>
+        <p>
+          Sanitary food conveyors use open-frame construction that exposes all surfaces for inspection and cleaning. Hollow tubes and closed box sections trap moisture, cleaning chemicals, and bacteria inside cavities that cannot be accessed. Open-profile frames (like mk North America's extruded stainless profiles) or solid round-tube frames with continuous welds and no internal cavities are the standard sanitary approach.
+        </p>
+        <p>
+          The frame must also allow cleaning access underneath the conveyor. Conveyors mounted on cantilever supports or open legs allow sanitation crews to clean the floor and underside without blind spots. Conveyors bolted to solid pads or enclosed bases create harborage zones under the equipment.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Self-Draining Surfaces</h3>
+        <p>
+          All frame surfaces must slope toward drain points. Standing water creates bacterial growth environments and dilutes sanitizer concentration. Self-draining design is especially critical on conveyor side rails, supports, and the underside of the belt return path.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">Bearings, Seals, and Lubrication</h3>
+        <p>
+          Bearings in sanitary conveyors use sealed housings that prevent cleaning water from entering the bearing cavity and prevent lubricant from leaking onto the product. Food-grade lubricants (NSF H1 registered) are required for any bearing in a food contact zone. Sealed stainless steel bearing housings resist corrosion from cleaning chemicals.
+        </p>
+        <p>
+          Some sanitary conveyors use self-lubricating polymer bearings that eliminate lubricant contamination risk entirely. These bearings cost more and wear faster than steel bearings but eliminate the need for lubricant management in food contact zones.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Materials for Sanitary Applications -->
+  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="belts-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Belt Materials</div>
+      <h2 id="belts-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        Belt Materials for Washdown Environments
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Belt material selection for sanitary conveyors balances four factors: FDA compliance, chemical resistance to cleaning agents, cleanability (surface texture and porosity), and detection capability (metal-detectable or X-ray detectable materials). The belt is the primary food-contact surface and the most frequently cleaned component on the conveyor.
+        </p>
+
+        <div class="overflow-x-auto -mx-4 px-4 mt-8">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Temp Range</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Cleaning Method</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">TPU (Polyurethane)</td>
+                <td class="py-4 pr-4 font-mono text-sm">-22 to 176 F</td>
+                <td class="py-4 pr-4">CIP and COP</td>
+                <td class="py-4 pr-4">General food, bakery, snacks</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Silicone</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 500 F</td>
+                <td class="py-4 pr-4">COP</td>
+                <td class="py-4 pr-4">Bakery dough, sticky products</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Modular plastic</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 250 F</td>
+                <td class="py-4 pr-4">COP (snap-apart)</td>
+                <td class="py-4 pr-4">Meat, poultry, seafood</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">SS Wire Mesh</td>
+                <td class="py-4 pr-4 font-mono text-sm">-100 to 1800 F</td>
+                <td class="py-4 pr-4">CIP</td>
+                <td class="py-4 pr-4">Ovens, freezers, fryers</td>
+                <td class="py-4 font-mono text-sm">$$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Metal-detectable PU</td>
+                <td class="py-4 pr-4 font-mono text-sm">-22 to 176 F</td>
+                <td class="py-4 pr-4">CIP and COP</td>
+                <td class="py-4 pr-4">Lines with metal detectors</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">Temperature ranges are typical manufacturer specifications. Actual limits vary by manufacturer, belt construction, and chemical exposure. <!-- VERIFY: Temperature limits for each belt type --></p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-10 mb-4">Metal-Detectable Belting</h3>
+        <p>
+          Metal-detectable belt materials contain additives that allow inline metal detectors to identify belt fragments if the belt wears or breaks. Standard colors are blue (for visual detection against most food products) or white. Food safety programs like SQF, BRC, and FSSC 22000 increasingly require metal-detectable belting on lines with inline metal detection equipment. The cost premium over standard TPU belting is moderate.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-10 mb-4">Belt Color Standards</h3>
+        <p>
+          White and blue are the standard belt colors for food conveyors. White provides the best visual contrast for most contaminants. Blue is visible against nearly all food products and makes foreign-body detection easier during visual inspection. Some food plants use different colors for different product zones (e.g., red for raw meat, blue for cooked product) to prevent cross-contamination through belt mix-ups during COP cleaning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USDA and 3-A Acceptance -->
+  <section class="py-24 bg-surface" aria-labelledby="acceptance-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Regulatory Acceptance</div>
+      <h2 id="acceptance-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        USDA and 3-A Acceptance for Washdown Conveyors
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          USDA acceptance and 3-A authorization are separate processes with different requirements, different governing bodies, and different scopes of application. Understanding which applies to your facility prevents over-specifying (wasting budget) or under-specifying (failing audit).
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">USDA Acceptance Process</h3>
+        <p>
+          Equipment manufacturers submit detailed engineering drawings and material specifications to the USDA's Equipment Design Review Program. USDA engineers review the design against their sanitary design criteria. Accepted equipment receives a letter of acceptance that references the specific model, configuration, and material specification reviewed. The letter does not transfer to modified configurations -- any change to frame dimensions, belt material, or motor position requires a new review submission.
+        </p>
+        <p>
+          USDA acceptance is required for equipment in meat, poultry, and egg products processing under federal inspection. Dairy equipment falls under different USDA programs. Conveyor models from Dorner (AquaPruf) and Nercon carry current USDA acceptance letters. <!-- VERIFY: Current USDA acceptance status for these specific models -->
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">3-A Sanitary Standards Authorization</h3>
+        <p>
+          3-A authorization requires third-party verification that equipment meets the applicable 3-A standard. An authorized 3-A evaluator inspects the equipment against published criteria for material composition, surface finish, cleanability, drainability, and design geometry. Equipment meeting all criteria earns the right to display the 3-A symbol.
+        </p>
+        <p>
+          3-A standards apply primarily to dairy processing equipment. However, many food safety audit schemes (SQF, BRC, FSSC 22000) reference 3-A design principles as best practice for all food-contact equipment. Meeting 3-A criteria provides a defensible standard of sanitary design during audits, even for non-dairy applications.
+        </p>
+
+        <h3 class="font-display text-2xl font-800 text-ink tracking-wide mt-8 mb-4">When Acceptance Is Required vs. Optional</h3>
+        <p>
+          The following table clarifies when USDA and 3-A acceptance are mandatory versus recommended.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4 mt-8">
+        <table class="w-full text-left border-collapse min-w-[600px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Scenario</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">USDA</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">3-A</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Federally inspected meat/poultry plant, direct food contact</td>
+              <td class="py-4 pr-4 text-green font-semibold">Required</td>
+              <td class="py-4">Recommended</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Dairy processing plant</td>
+              <td class="py-4 pr-4">Per program</td>
+              <td class="py-4 text-green font-semibold">Required (many states)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Sealed-package conveying in food plant</td>
+              <td class="py-4 pr-4">Not required</td>
+              <td class="py-4">Not required</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">SQF/BRC-audited facility, food contact zone</td>
+              <td class="py-4 pr-4">Recommended</td>
+              <td class="py-4">Recommended</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Bakery/snack processing</td>
+              <td class="py-4 pr-4">Not required</td>
+              <td class="py-4">BISSC applicable</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturer Comparison -->
+  <section class="py-24 bg-ink-light" aria-labelledby="mfg-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Manufacturers</div>
+      <h2 id="mfg-heading" class="font-display text-4xl font-800 text-white tracking-wide mb-8">
+        Sanitary Conveyor Manufacturers Compared
+      </h2>
+      <div class="text-lg text-white/60 leading-relaxed space-y-4">
+        <p>
+          Several manufacturers compete in the sanitary conveyor space. Each brings different strengths in terms of standard platform offerings, customization flexibility, and industry specialization. The table below provides a high-level comparison.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-white/30">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Manufacturer</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Key Sanitary Series</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">USDA Accepted</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4">Strength</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-white/60">
+            <tr class="border-b border-white/10">
+              <td class="py-4 pr-4 font-semibold text-white">Dorner</td>
+              <td class="py-4 pr-4">AquaGard, AquaPruf</td>
+              <td class="py-4 pr-4">Yes (AquaPruf)</td>
+              <td class="py-4">Standard platform, fast delivery</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-4 pr-4 font-semibold text-white">Nercon</td>
+              <td class="py-4 pr-4">Custom sanitary lines</td>
+              <td class="py-4 pr-4">Yes (select models)</td>
+              <td class="py-4">Full-line food packaging integration</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-4 pr-4 font-semibold text-white">mk North America</td>
+              <td class="py-4 pr-4">Modular SS profiles</td>
+              <td class="py-4 pr-4">Per configuration</td>
+              <td class="py-4">Modular design, reconfigurable layouts</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-white">Key Technology</td>
+              <td class="py-4 pr-4">Iso-Flo vibratory</td>
+              <td class="py-4 pr-4">Per configuration</td>
+              <td class="py-4">Vibratory conveyors, optical sorting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VERIFY: USDA acceptance status and current product series names for all manufacturers listed -->
+      <p class="text-sm text-white/60 mt-4">Manufacturer data is based on publicly available product information. Contact manufacturers directly for current specifications and acceptance status. PackagingConveyor.com does not represent any manufacturer. See our <a href="/about/" class="text-accent-bright hover:text-white font-semibold">about page</a>.</p>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-24 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
+        How to Specify a Sanitary Conveyor
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>
+          Specifying a sanitary conveyor correctly requires answering these questions before contacting manufacturers. Missing any one of these leads to respecification, change orders, or (worst case) a conveyor that fails audit.
+        </p>
+        <ol class="list-decimal list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">What is the product?</strong> Raw or cooked? Direct contact or sealed package? Temperature at the conveyor (frozen, ambient, hot)?</li>
+          <li><strong class="text-ink">What is the cleaning protocol?</strong> Wipe-down, hose-down, high-pressure washdown, CIP, or COP? Frequency (every shift, daily, weekly)?</li>
+          <li><strong class="text-ink">What cleaning chemicals are used?</strong> Quaternary ammonium, chlorinated alkaline, peracetic acid, caustic, or other? This determines 304 vs. 316 stainless and belt material compatibility.</li>
+          <li><strong class="text-ink">Which regulatory standard applies?</strong> USDA, 3-A, BISSC, or general FDA/FSMA compliance?</li>
+          <li><strong class="text-ink">What is the environment?</strong> Ambient dry, humid, wet floor, outdoor, or temperature-controlled?</li>
+          <li><strong class="text-ink">What throughput is required?</strong> Products per minute, line speed (FPM), and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation requirements</a>.</li>
+          <li><strong class="text-ink">What upstream/downstream equipment connects?</strong> <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer points</a>, elevation changes, and <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning/collating</a> requirements.</li>
+        </ol>
+        <p>
+          Collect these answers into your RFQ document before requesting quotes. This ensures you receive comparable quotes from multiple manufacturers and prevents scope creep during the project.
+        </p>
+      </div>
+    </div>
+  </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between IP65, IP66, and IP69K?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><strong class="text-ink">IP65</strong> handles low-pressure water jets -- suitable for splash zones and light wipe-down cleaning. <strong class="text-ink">IP66</strong> handles high-pressure water jets from any direction -- suitable for standard food plant washdown. <strong class="text-ink">IP69K</strong> handles high-pressure, high-temperature water (176 F / 80 C at 1450 PSI) -- required for CIP cleaning, steam sanitation, and USDA-inspected meat/poultry plants.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is CIP cleaning on a food conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><strong class="text-ink">CIP (Clean-in-Place)</strong> uses automated spray systems to clean the conveyor without disassembly. Spray nozzles mounted along the conveyor circulate cleaning solution, rinse water, and sanitizer across all product-contact surfaces. CIP-capable conveyors require self-draining frames, smooth crevice-free welds, sealed penetrations, and IP69K-rated components.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Do I need USDA acceptance for my food conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>USDA acceptance is required for equipment in <strong class="text-ink">federally inspected meat, poultry, and egg processing plants</strong> where the equipment contacts food or operates in the processing zone. Conveyors handling sealed packages in secondary packaging areas, and facilities not under federal USDA inspection, typically do not require USDA acceptance.</p>
+            <p>Even when not legally required, USDA-accepted equipment demonstrates sanitary design compliance during SQF, BRC, and FSSC 22000 audits.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What surface finish do sanitary conveyors require?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>3-A Sanitary Standards specify <strong class="text-ink">32 microinch (0.8 micrometer) Ra</strong> maximum surface roughness for product-contact surfaces. Electropolishing produces a smoother, more corrosion-resistant finish than mechanical polishing. Non-contact surfaces should be smooth enough to prevent soil accumulation and facilitate cleaning.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-surface" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-ink tracking-wide mb-8">
+        Related Resources
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/industries/food-conveyors/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Food-Grade Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Materials, standards, and belt selection</div>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Roller Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Stainless and food-grade roller options</div>
+        </a>
+        <a href="/conveyor-functions/reject-systems/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Reject Systems</div>
+          <div class="text-sm text-ink-muted mt-1">Metal detect and QC rejection conveyors</div>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Cost Guide</div>
+          <div class="text-sm text-ink-muted mt-1">Food-grade conveyor pricing factors</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

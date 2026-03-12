@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const functions = [
+  { name: 'Accumulate & Buffer', slug: 'storage-conveyors', desc: 'Queue product between processes to absorb line stops and rate mismatches', status: 'coming' },
+  { name: 'Collate & Lane', slug: 'collating-laning', desc: 'Distribute single-file product across multiple lanes for case packing', status: 'live' },
+  { name: 'Load Trays', slug: 'tray-loading', desc: 'Automatically load, denest, and unload trays for bakery, snack, and produce lines', status: 'live' },
+  { name: 'Index & Position', slug: 'indexing-conveyors', desc: 'Precision stop-and-go motion for filling, labeling, and robotic pick-and-place', status: 'live' },
+  { name: 'Reject & Divert', slug: 'reject-systems', desc: 'Remove non-conforming product from the line after metal detectors, checkweighers, or vision systems', status: 'live' },
+  { name: 'Turn & Orient', slug: 'product-handling', desc: 'Rotate, flip, or invert product orientation before downstream processes', status: 'coming' },
+  { name: 'Merge & Combine', slug: 'merging-conveyors', desc: 'Combine multiple product streams into a single lane without collisions', status: 'coming' },
+  { name: 'Sort & Divert', slug: 'sorting-conveyors', desc: 'Route product to specific destinations based on size, weight, barcode, or vision data', status: 'coming' },
+  { name: 'Elevate & Lower', slug: 'elevation-conveyors', desc: 'Change product elevation between mezzanines, floors, or process heights', status: 'coming' },
+  { name: 'Weigh & Inspect', slug: 'inspection-conveyors', desc: 'Integrate checkweighers, metal detectors, X-ray, and vision inspection inline', status: 'coming' },
+  { name: 'Cool & Condition', slug: 'cooling-conveyors', desc: 'Cool, freeze, dry, or condition product during conveying using spirals or tunnels', status: 'coming' },
+  { name: 'Feed & Singulate', slug: 'feeding-conveyors', desc: 'Convert bulk or random product flow into single-file, oriented, and spaced product', status: 'coming' },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a conveyor function?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor function describes the specific task a conveyor performs in a packaging line — accumulating, indexing, rejecting, laning, tray loading, or sorting. Choosing by function rather than equipment type helps engineers match the right conveyor to the actual production need." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose the right conveyor function for my line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start by identifying the bottleneck or gap in your process. If product queues up and causes jams, you need accumulation. If a downstream machine requires precise positioning, you need indexing. If you must remove failed QC product, you need a reject system. Define the function first, then select the conveyor type and manufacturer." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one conveyor perform multiple functions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many conveyors combine functions — for example, an MDR accumulation conveyor can also perform zero-pressure buffering and metered release (indexing). A laning conveyor often includes accumulation zones upstream. However, trying to combine too many functions into one section usually leads to compromised performance. Dedicated function-specific conveyors generally outperform multi-function compromises." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Functions: What Do You Need Your Conveyor to Do? | PackagingConveyor.com"
+  description="Browse packaging conveyor systems by function — accumulate, index, reject, lane, load trays, sort, merge, and more. Task-based conveyor selection for packaging engineers."
+  canonical="https://packagingconveyor.com/conveyor-functions/"
+  schema={[breadcrumbSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Conveyor Functions</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Functions</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          What Do You Need Your Conveyor to <span class="text-accent-bright">Do?</span>
+        </h1>
+        <p class="text-xl text-white/60 max-w-2xl leading-relaxed">
+          Stop shopping by equipment name. Start with the job your line needs done. Every function below links to the conveyor types, configurations, and manufacturers that solve that specific problem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-lg text-ink leading-relaxed">
+        <strong>Conveyor functions</strong> describe the specific tasks a conveyor performs inside a packaging line — accumulating, indexing, rejecting, laning, loading trays, sorting, merging, or elevating product. Selecting a conveyor by function rather than by equipment type ensures the system matches the actual production requirement. Most packaging lines combine four or more distinct conveyor functions between primary packaging and palletizing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ FUNCTION CARDS GRID ═══ -->
+  <section class="py-24 bg-surface" aria-labelledby="functions-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">All Functions</div>
+      <h2 id="functions-heading" class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase mb-4">
+        Browse by <span class="text-accent">Function</span>
+      </h2>
+      <p class="text-lg text-ink-muted mb-12 max-w-3xl">
+        Each card represents a distinct packaging line task. Pages marked "Guide Available" have full technical deep-dives with manufacturer comparisons, specs, and selection criteria.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
+        {functions.map((fn) => (
+          <a href={`/conveyor-functions/${fn.slug}/`} class="card group p-7 flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{fn.name}</h3>
+              {fn.status === 'live' ? (
+                <span class="text-xs font-mono font-semibold text-green bg-green/10 px-2 py-1 flex-shrink-0">Guide Available</span>
+              ) : (
+                <span class="text-xs font-mono font-semibold text-ink-muted bg-surface-dim px-2 py-1 flex-shrink-0">Coming Soon</span>
+              )}
+            </div>
+            <p class="text-base text-ink-muted leading-relaxed mb-4">{fn.desc}</p>
+            <div class="mt-auto flex items-center gap-1 text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+              {fn.status === 'live' ? 'Read the guide' : 'Preview'}
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW TO USE THIS SECTION ═══ -->
+  <section class="py-24 bg-surface-dim" aria-labelledby="howto-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Approach</div>
+      <h2 id="howto-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+        Function-First <span class="text-accent">Selection</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>
+          Most packaging engineers start conveyor selection by asking "What brand of belt conveyor should I buy?" That approach skips the most important step: defining what the conveyor must <em>do</em>. Two plants running the same product at the same speed can need completely different conveyor configurations if their line layouts, accumulation requirements, or reject rates differ.
+        </p>
+        <p>
+          The function-first approach works in three steps:
+        </p>
+        <ol class="list-decimal list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Map every transition</strong> between machines on your packaging line. Each transition is a conveyor function — accumulate, index, lane, reject, merge, or elevate.</li>
+          <li><strong class="text-ink">Define requirements per function</strong> — throughput, product size, weight, orientation, accumulation time, and environment (washdown, cleanroom, etc.).</li>
+          <li><strong class="text-ink">Select conveyor type per function</strong> — a single line may use <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> for case transport, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> for accumulation, and a dedicated <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject system</a> after the checkweigher.</li>
+        </ol>
+        <p>
+          This approach prevents the common mistake of over-specifying expensive conveyor types where simple gravity sections would suffice — or under-specifying critical accumulation and reject zones that cause line stoppages. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for how function selection affects project budgets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CROSS-REFERENCE TABLE ═══ -->
+  <section class="py-24 bg-surface" aria-labelledby="xref-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Quick Reference</div>
+      <h2 id="xref-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Function vs. <span class="text-accent">Conveyor Type</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[750px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Function</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Common Conveyor Types</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Spec</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Accumulate & Buffer</td>
+              <td class="py-4 pr-4"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a>, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">Zero-Pressure</a></td>
+              <td class="py-4 pr-4 font-mono text-sm">Buffer time (min)</td>
+              <td class="py-4 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover">Collate & Lane</a></td>
+              <td class="py-4 pr-4">Belt, Tabletop, Modular</td>
+              <td class="py-4 pr-4 font-mono text-sm">Lanes, PPM</td>
+              <td class="py-4 font-mono text-sm">$$–$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover">Load Trays</a></td>
+              <td class="py-4 pr-4">Pick-and-place, Servo, Robotic</td>
+              <td class="py-4 pr-4 font-mono text-sm">Trays/min</td>
+              <td class="py-4 font-mono text-sm">$$$–$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover">Index & Position</a></td>
+              <td class="py-4 pr-4">Servo belt, Timing screw, Pallet</td>
+              <td class="py-4 pr-4 font-mono text-sm">&plusmn; positioning (mm)</td>
+              <td class="py-4 font-mono text-sm">$$–$$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover">Reject & Divert</a></td>
+              <td class="py-4 pr-4">Air blast, Pusher, Diverter arm</td>
+              <td class="py-4 pr-4 font-mono text-sm">Response time (ms)</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Turn & Orient</td>
+              <td class="py-4 pr-4"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover">Transfer</a>, Turner bar, Twist belt</td>
+              <td class="py-4 pr-4 font-mono text-sm">Rotation angle</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Merge & Combine</td>
+              <td class="py-4 pr-4">Belt merge, <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Powered roller</a></td>
+              <td class="py-4 pr-4 font-mono text-sm">Merge ratio, PPM</td>
+              <td class="py-4 font-mono text-sm">$$–$$$</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Elevate & Lower</td>
+              <td class="py-4 pr-4">Spiral, VRC, Incline belt</td>
+              <td class="py-4 pr-4 font-mono text-sm">Elevation (ft), FPM</td>
+              <td class="py-4 font-mono text-sm">$$$–$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">
+        Relative cost: $ = lowest, $$$$ = highest. Actual pricing depends on throughput, materials, controls, and environment.
+        <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See full cost guide</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ RELATED PILLARS ═══ -->
+  <section class="py-24 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Explore More</div>
+      <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+        Other Ways to <span class="text-accent-bright">Browse</span>
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <a href="/conveyor-types/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">By Conveyor Type</h3>
+          <p class="text-base text-white/60 leading-relaxed">30+ conveyor types — roller, belt, MDR, spiral, tabletop, chain, and more.</p>
+        </a>
+        <a href="/industries/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">By Industry</h3>
+          <p class="text-base text-white/60 leading-relaxed">Food & beverage, pharmaceutical, automotive, and warehouse applications.</p>
+        </a>
+        <a href="/resources/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-3">Resources</h3>
+          <p class="text-base text-white/60 leading-relaxed">Cost guides, design references, manufacturer directories, and technical tools.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a conveyor function?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor function describes the specific task a conveyor performs — accumulating, indexing, rejecting, laning, or loading trays. Packaging lines typically require four or more distinct functions between the primary packaging machine and the palletizer. Selecting by function ensures you match equipment to the actual production need rather than defaulting to a familiar conveyor brand or type.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I choose the right conveyor function for my line?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Map every machine-to-machine transition on your packaging line. Each transition represents a conveyor function. Common sequences include: filler to capper (indexing), capper to labeler (accumulation), labeler to checkweigher (transport), checkweigher to case packer (<a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject</a> + <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning</a>), and case packer to palletizer (accumulation + merge).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Can one conveyor perform multiple functions?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Yes, some conveyors combine functions. An <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR accumulation conveyor</a> can buffer product and meter release (combining accumulation with basic indexing). A <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning conveyor</a> often includes upstream accumulation zones. However, combining too many functions into a single section usually compromises performance. Dedicated function-specific conveyors outperform multi-function compromises in most high-throughput applications.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

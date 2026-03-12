@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Live Roller Conveyors", "item": "https://packagingconveyor.com/conveyor-types/live-roller-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a live roller conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A live roller conveyor is any roller conveyor where the rollers are actively driven by a power source, as opposed to gravity roller conveyors where rollers spin freely. The three main live roller technologies are belt-driven live roller (BDLR), line-shaft, and chain-driven live roller (CDLR). MDR (Motor Driven Roller) is a newer technology where the motor is inside the roller itself." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BDLR and line-shaft conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BDLR (Belt Driven Live Roller) uses a flat belt running under the rollers — friction contact drives the rollers. Line-shaft uses a splined shaft with individual O-ring bands to each roller. BDLR handles heavier loads (up to 500 lbs vs 300 lbs) and provides more consistent drive force. Line-shaft provides natural slip-clutch accumulation through O-ring flexibility and is better suited for pop-up transfer diverting applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is belt driven live roller used for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt driven live roller (BDLR) conveyors transport cases, cartons, and totes at controlled speeds of 50-200 FPM in packaging lines, distribution centers, and manufacturing facilities. BDLR serves as the workhorse powered roller conveyor for medium-duty applications (up to 500 lbs). With added pneumatic zone controls, BDLR can also provide zero-pressure or minimum-pressure accumulation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose MDR or belt-driven live roller?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose MDR when you need built-in zone control, zero-pressure accumulation, energy efficiency, and low noise, and products weigh under 250 lbs. Choose belt-driven live roller when products weigh 250-500 lbs, you need continuous-run transport without accumulation, or upfront budget is the primary constraint. MDR costs more upfront but saves on energy and maintenance over 15-20 years." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Live Roller Conveyor Systems: BDLR, Line-Shaft & Chain-Driven Comparison",
+  "description": "Complete guide to live roller conveyor systems: belt-driven live roller (BDLR), line-shaft, and chain-driven (CDLR) comparison with specifications, zone control, and accumulation options.",
+  "url": "https://packagingconveyor.com/conveyor-types/live-roller-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Live Roller Conveyor Systems: BDLR, Line-Shaft & Chain-Driven Guide"
+  description="Complete live roller conveyor guide: belt driven live roller (BDLR), line-shaft, and chain-driven (CDLR) comparison. Zone control, accumulation, specs, and when to use each."
+  canonical="https://packagingconveyor.com/conveyor-types/live-roller-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Live Roller Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Live Roller Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Live Roller Conveyor Systems
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A live roller conveyor is any roller conveyor where the rollers are actively driven by a power source, as opposed to <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller conveyors</a> where rollers spin freely. The three conventional live roller drive technologies are belt-driven live roller (BDLR), line-shaft, and chain-driven live roller (CDLR). <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR (Motor Driven Roller)</a> represents a fourth, newer approach where the motor sits inside the roller itself. This page compares all four technologies head-to-head to help you select the right live roller system for your application.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Overview -->
+  <article class="py-20 bg-surface" aria-labelledby="tech-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technology Overview</div>
+      <h2 id="tech-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Four Live Roller <span class="text-accent">Drive Technologies</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt-Driven Live Roller (BDLR)</h3>
+        <p>BDLR conveyors use a continuous flat belt running beneath the rollers. The belt contacts the underside of each roller through friction. A single AC gearmotor at one end drives the belt via a drive pulley. Tension is maintained by a spring-loaded take-up. BDLR handles the widest load range of the three conventional live roller types — up to 500 lbs per product at speeds of 50-200 FPM.</p>
+        <p>BDLR provides the foundation for most <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyor</a> installations. Hytrol, Dematic, and Intelligrated offer extensive BDLR product lines. With added pneumatic zone controls (belt lifters or pop-up stops), BDLR supports both zero-pressure and minimum-pressure <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Line-Shaft</h3>
+        <p>A line-shaft conveyor uses a continuously rotating splined steel shaft running the conveyor length. Individual polyurethane O-ring bands connect each roller to the shaft. The shaft rotates via an AC gearmotor, and O-rings transfer rotation from shaft to roller. Line-shaft conveyors handle up to 300 lbs at 30-180 FPM.</p>
+        <p>The O-ring connection provides a built-in slip clutch — if a product stops, the O-ring slips on the shaft rather than stalling the motor. This passive slip provides a degree of light <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> without active zone control. Line-shaft works particularly well with pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> sections because the O-ring can be disengaged from stopped rollers in the transfer zone without affecting adjacent rollers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain-Driven Live Roller (CDLR)</h3>
+        <p><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> use roller chains and sprockets to positively drive all rollers. The chain-and-sprocket engagement provides zero-slip positive drive at any load. CDLR handles 500 to over 10,000 lbs per product at 20-120 FPM. CDLR serves as the standard live roller technology for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyor systems</a> and heavy industrial applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Motor Driven Roller (MDR)</h3>
+        <p><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> place a 24VDC brushless DC motor inside the roller tube itself. Each motor roller drives 2-4 adjacent slave rollers via O-ring bands, creating an independent zone. MDR handles up to 250 lbs per zone at 20-180 FPM. MDR provides built-in zero-pressure accumulation without pneumatics, belts, or chains, and has become the dominant technology for new conveyor installations in distribution and fulfillment.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Full Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Head-to-Head Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Live Roller <span class="text-accent">Comparison Table</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[850px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">BDLR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Line-Shaft</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">CDLR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">MDR</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Element</td>
+              <td class="py-3 pr-4">Flat belt under rollers</td>
+              <td class="py-3 pr-4">Splined shaft + O-rings</td>
+              <td class="py-3 pr-4">Roller chain + sprockets</td>
+              <td class="py-3">24VDC motor in roller</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Motor Type</td>
+              <td class="py-3 pr-4">AC gearmotor (external)</td>
+              <td class="py-3 pr-4">AC gearmotor (external)</td>
+              <td class="py-3 pr-4">AC gearmotor (external)</td>
+              <td class="py-3">24VDC BLDC (internal)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">50-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-180 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-120 FPM</td>
+              <td class="py-3 font-mono text-sm">20-180 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Product</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 500 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 300 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 10,000 lbs</td>
+              <td class="py-3 font-mono text-sm">Up to 250 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Zone Control</td>
+              <td class="py-3 pr-4">Pneumatic add-on</td>
+              <td class="py-3 pr-4">Clutch/brake add-on</td>
+              <td class="py-3 pr-4">Not standard</td>
+              <td class="py-3">Built-in per zone</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">ZPA Capability</td>
+              <td class="py-3 pr-4">With belt lifters</td>
+              <td class="py-3 pr-4">With O-ring release</td>
+              <td class="py-3 pr-4">No (continuous drive)</td>
+              <td class="py-3">Native</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Energy Efficiency</td>
+              <td class="py-3 pr-4">Moderate (continuous run)</td>
+              <td class="py-3 pr-4">Moderate (continuous run)</td>
+              <td class="py-3 pr-4">Moderate-High</td>
+              <td class="py-3">High (on-demand)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise Level</td>
+              <td class="py-3 pr-4 font-mono text-sm">70-80 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">75-85 dB</td>
+              <td class="py-3 pr-4 font-mono text-sm">75-85 dB</td>
+              <td class="py-3 font-mono text-sm">55-65 dB</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Compressed Air</td>
+              <td class="py-3 pr-4">For zone control</td>
+              <td class="py-3 pr-4">For zone control</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Key Maintenance</td>
+              <td class="py-3 pr-4">Belt tension/tracking</td>
+              <td class="py-3 pr-4">O-ring replacement</td>
+              <td class="py-3 pr-4">Chain lubrication</td>
+              <td class="py-3">Motor roller swap</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Upfront Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Typical specifications from Hytrol, Interroll, Dematic, and Intelligrated product lines. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing details.</p>
+    </div>
+  </section>
+
+  <!-- Decision Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="decision-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Decision Guide</div>
+      <h2 id="decision-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Which Live Roller Technology <span class="text-accent">Do You Need?</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Start with Product Weight</h3>
+        <p>Product weight is the first and most decisive filter. Products under 250 lbs qualify for any live roller technology including MDR. Products from 250-500 lbs narrow the field to BDLR. Products over 500 lbs require <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Do You Need Accumulation?</h3>
+        <p>If yes, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> provides the simplest and most reliable <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>. BDLR with pneumatic zones is the traditional alternative. Line-shaft provides light passive accumulation through O-ring slip. CDLR does not accumulate (continuous positive drive).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Is Noise a Constraint?</h3>
+        <p>MDR operates at 55-65 dB — conversational level. BDLR runs at 70-80 dB. Line-shaft and CDLR run at 75-85 dB. Facilities with hundreds of feet of conveyor in occupied work areas benefit significantly from MDR's quiet operation.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Do You Need Diverting?</h3>
+        <p>Line-shaft conveyors work best with pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> diverters because individual rollers can be disengaged from the shaft at the transfer point without affecting the rest of the conveyor. BDLR and MDR also work with transfers but require different zone control approaches at the divert point.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Budget: Upfront vs Total Cost</h3>
+        <p>BDLR and line-shaft cost less per foot upfront ($$). MDR and CDLR cost more ($$$). However, MDR's on-demand energy use (zones only power when product is present) and lower maintenance (no belts, chains, or O-rings to replace) typically deliver a lower total cost of ownership over the conveyor's 15-20 year lifespan. The <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> breaks down these factors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mixed Systems</h3>
+        <p>Most <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a> combine multiple live roller technologies. A typical <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> might use MDR for accumulation zones, BDLR for high-speed transport sections, CDLR for pallet handling, and <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> for take-away and manual stations. The conveyor frame and roller dimensions can be matched across technologies for seamless product transition between sections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Live Roller <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">End-of-line packaging:</strong> BDLR and MDR transport sealed cases between case sealers, labelers, and palletizers. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> buffer cases before the palletizer. CDLR handles loaded pallets between the palletizer and stretch wrapper.</p>
+
+        <p><strong class="text-ink">Distribution and fulfillment:</strong> MDR dominates new distribution center installations for tote and carton transport with ZPA. Line-shaft conveyors remain common in legacy systems and diverter-intensive layouts.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage:</a></strong> Stainless steel BDLR and MDR conveyors handle cased goods in <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary</a> and washdown environments. Open-frame construction and sealed bearings support cleaning protocols.</p>
+
+        <p><strong class="text-ink">Pallet handling:</strong> <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> is the only live roller technology rated for full pallet loads. <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet conveyor systems</a> use CDLR for transport, right-angle chain <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a> for routing, and <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRCs</a> for vertical transport.</p>
+
+        <p><strong class="text-ink">Assembly and manufacturing:</strong> Live roller conveyors transport work-in-process between assembly stations. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing configurations</a> stop and start products at each station for manual or robotic operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a live roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Any <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> where rollers are actively powered. The four technologies are BDLR (belt-driven), line-shaft, <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> (chain-driven), and <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> (motor inside roller).</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            BDLR vs line-shaft — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>BDLR uses a belt under rollers (friction drive, up to 500 lbs). Line-shaft uses a splined shaft with O-rings (up to 300 lbs, natural slip-clutch). BDLR handles heavier loads. Line-shaft suits diverting and light accumulation. See <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> for details.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Should I choose MDR or belt-driven live roller?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>MDR for zone control, ZPA, energy efficiency, and low noise (under 250 lbs). BDLR for heavier loads (250-500 lbs), continuous transport, or lower upfront budget. MDR delivers lower total cost of ownership over 15-20 years.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is belt driven live roller used for?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>BDLR transports cases, cartons, and totes at 50-200 FPM in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a> and distribution centers. It handles up to 500 lbs and supports <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> with pneumatic zone add-ons.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">24VDC zone control deep-dive</p>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">CDLR Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty chain drive</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">ZPA and buffer sizing</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/gravity/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Gravity Roller</div>
+          <p class="text-sm text-white/60">Unpowered alternative</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Vertical Reciprocating Conveyors", "item": "https://packagingconveyor.com/conveyor-types/vertical-reciprocating/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a vertical reciprocating conveyor (VRC)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vertical reciprocating conveyor (VRC) is a mechanical device that moves materials vertically between two or more levels on a guided carriage or platform. VRCs are classified as conveyors (not elevators) under ASME B20.1 Safety Standard for Conveyors and Related Equipment, which means they are subject to different — and generally simpler — code requirements than freight elevators. VRCs cannot carry people." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a VRC and a freight elevator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "VRCs move materials only and cannot carry people. They are governed by ASME B20.1 (conveyor standard). Freight elevators move materials and people, and are governed by ASME A17.1 (elevator standard). VRCs have simpler code requirements, shorter permitting timelines, lower installation cost, and do not require a machine room or hoistway. Freight elevators require full elevator code compliance, an elevator contractor license, annual inspections, and typically a pit and overhead machine room." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the weight capacity of a VRC?",
+      "acceptedAnswer": { "@type": "Answer", "text": "VRC load capacities range from 500 lbs for light-duty package lifts to 20,000 lbs or more for heavy-duty pallet and automotive applications. Standard pallet VRCs typically handle 2,000-6,000 lbs. The capacity depends on the VRC type (mechanical, hydraulic, or straddle), guide column construction, platform size, and drive system. PFlow, Wildeck, and Autoquip are leading VRC manufacturers that publish detailed capacity tables." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a VRC cost compared to a freight elevator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "VRCs cost significantly less than freight elevators for the same lift height and capacity. A VRC typically costs 40-60% less than a comparable freight elevator when you factor in equipment, installation, pit construction, machine room, and code compliance. VRC installation timelines are also shorter — weeks versus months for a freight elevator. However, VRCs cannot carry people, which limits their use to material-only applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What safety standards apply to VRCs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "VRCs are governed by ASME B20.1 Safety Standard for Conveyors and Related Equipment, specifically Section 3008 for vertical reciprocating conveyors. Key requirements include: full guarding of the carriage path at all levels, interlocked gates that prevent operation unless closed, upper and lower travel limit switches, emergency stop buttons at each level, and slack chain/cable detection devices. Local building codes and fire codes may add additional requirements." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vertical Reciprocating Conveyors (VRCs): Types, Capacities & Safety Codes",
+  "description": "Complete guide to vertical reciprocating conveyors (VRCs): types, load capacities, safety codes (ASME B20.1), VRC vs freight elevator comparison, and applications for packaging and distribution.",
+  "url": "https://packagingconveyor.com/conveyor-types/vertical-reciprocating/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Vertical Reciprocating Conveyors (VRCs): Types, Capacities & Safety Codes"
+  description="Complete VRC guide: vertical reciprocating conveyor types, load capacities up to 20,000 lbs, ASME B20.1 safety codes, VRC vs freight elevator comparison. For packaging and distribution."
+  canonical="https://packagingconveyor.com/conveyor-types/vertical-reciprocating/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Vertical Reciprocating Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Vertical Reciprocating Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Vertical Reciprocating Conveyors (VRCs)
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A vertical reciprocating conveyor (VRC) lifts materials between two or more levels on a guided carriage or platform. VRCs are classified as conveyors under ASME B20.1 — not elevators — which simplifies code compliance, reduces installation cost, and shortens permitting timelines compared to freight elevators. VRCs handle loads from 500 lbs to over 20,000 lbs and serve as the standard vertical transport solution for mezzanine-to-floor transfers in packaging, distribution, and manufacturing facilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VRC Types -->
+  <article class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">VRC Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Four VRC <span class="text-accent">Configurations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mechanical (Chain/Cable) VRC</h3>
+        <p>Mechanical VRCs use roller chains or wire rope cables wound around a drum or driven by sprockets to raise and lower the carriage. An electric gearmotor provides the drive force. Mechanical VRCs offer the widest capacity range (500-20,000 lbs), fastest travel speeds (typically 20-40 FPM), and serve the broadest application base. PFlow Industries and Wildeck are leading mechanical VRC manufacturers. Four-post designs provide the greatest stability for heavy loads.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Hydraulic VRC</h3>
+        <p>Hydraulic VRCs use hydraulic cylinders to lift the carriage. A hydraulic power unit (pump, reservoir, and valves) pressurizes hydraulic fluid that extends the cylinder. Hydraulic VRCs provide smooth, controlled motion and handle heavy loads (up to 10,000+ lbs). Travel height is limited by cylinder stroke length — typically up to 20-25 feet. Hydraulic VRCs suit applications requiring precise speed control and soft start/stop motion. Autoquip and Pflow manufacture hydraulic VRC platforms.</p>
+        <!-- VERIFY: Autoquip max hydraulic VRC travel height -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Straddle VRC</h3>
+        <p>Straddle VRCs use two vertical mast columns with a carriage that travels between them. The mast straddles one or two sides of the platform opening. Straddle designs provide clear access from multiple sides for fork truck loading or conveyor infeed/outfeed. They suit applications where the VRC must be approached from the front and one or both sides simultaneously.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cantilever VRC</h3>
+        <p>Cantilever VRCs use a single mast column with the carriage extending outward like a shelf. The platform is supported from one side only. Cantilever designs provide three-sided access to the platform and suit applications with tight floor space. Load capacity is lower than four-post designs because the single-mast structure must resist the tilting moment of off-center loads. Cantilever VRCs typically handle 500-4,000 lbs.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- VRC vs Freight Elevator -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">VRC vs Elevator</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        VRC vs Freight Elevator vs <span class="text-accent">Spiral Conveyor</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[750px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">VRC</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Freight Elevator</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Spiral Conveyor</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Carries People?</td>
+              <td class="py-3 pr-4">No (materials only)</td>
+              <td class="py-3 pr-4">Yes (materials + people)</td>
+              <td class="py-3">No (materials only)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Governing Code</td>
+              <td class="py-3 pr-4">ASME B20.1 (conveyor)</td>
+              <td class="py-3 pr-4">ASME A17.1 (elevator)</td>
+              <td class="py-3">ASME B20.1 (conveyor)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Load Capacity</td>
+              <td class="py-3 pr-4 font-mono text-sm">500-20,000 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">2,000-20,000+ lbs</td>
+              <td class="py-3 font-mono text-sm">Up to 75 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Flow</td>
+              <td class="py-3 pr-4">Batch (reciprocating)</td>
+              <td class="py-3 pr-4">Batch (reciprocating)</td>
+              <td class="py-3">Continuous</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Throughput</td>
+              <td class="py-3 pr-4">10-20 loads/hr typical</td>
+              <td class="py-3 pr-4">10-15 loads/hr typical</td>
+              <td class="py-3">Continuous (matched to line)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Height</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 100+ ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">Unlimited</td>
+              <td class="py-3 font-mono text-sm">Up to 40 ft</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Pit Required?</td>
+              <td class="py-3 pr-4">No (surface mount)</td>
+              <td class="py-3 pr-4">Yes (code required)</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Machine Room?</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">Yes (code required)</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Installation Time</td>
+              <td class="py-3 pr-4">1-3 weeks</td>
+              <td class="py-3 pr-4">2-6 months</td>
+              <td class="py-3">2-4 weeks</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">VRC costs 40-60% less than a comparable freight elevator when factoring in equipment, installation, pit, machine room, and code compliance. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a>.</p>
+    </div>
+  </section>
+
+  <!-- Specifications -->
+  <section class="py-20 bg-surface" aria-labelledby="specs-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specifications</div>
+      <h2 id="specs-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        VRC <span class="text-accent">Specification Ranges</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>VRC specifications vary widely based on type and application. Typical ranges across PFlow, Wildeck, and Autoquip product lines:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Load capacity:</strong> 500-20,000 lbs (standard), up to 100,000 lbs (custom heavy-duty)</li>
+          <li><strong class="text-ink">Travel speed:</strong> 20-40 FPM (standard), up to 100 FPM (high-speed)</li>
+          <li><strong class="text-ink">Travel height:</strong> 5-100+ feet (mechanical), 5-25 feet (hydraulic)</li>
+          <li><strong class="text-ink">Platform size:</strong> 3' x 3' (minimum) to 12' x 12' (large pallet/cart)</li>
+          <li><strong class="text-ink">Number of stops:</strong> 2-6 levels</li>
+          <li><strong class="text-ink">Power:</strong> 208-480V three-phase (mechanical), hydraulic power unit (hydraulic)</li>
+          <li><strong class="text-ink">Drive types:</strong> Chain-driven, cable-driven, hydraulic cylinder</li>
+        </ul>
+        <!-- VERIFY: PFlow max capacity and max travel height specifications -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Codes -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="safety-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Safety & Codes</div>
+      <h2 id="safety-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        VRC Safety Standards and <span class="text-accent">Code Requirements</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">ASME B20.1 Section 3008</h3>
+        <p>ASME B20.1 is the primary safety standard governing VRCs. Section 3008 specifically addresses vertical reciprocating conveyors. Key requirements include full guarding of the carriage path at every accessible level, interlocked access gates that prevent VRC operation unless all gates are closed, upper and lower travel limit switches, emergency stop buttons accessible from each level, slack chain/cable detection devices, and overload protection.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Building Code Requirements</h3>
+        <p>The International Building Code (IBC) recognizes VRCs as conveyors, not elevators, provided they comply with ASME B20.1 and do not carry people. The VRC shaft opening between floors may require fire-rated enclosures or sprinkler protection depending on the building's fire code classification. Consult your local authority having jurisdiction (AHJ) for specific requirements.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Key Safety Features</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Interlocked gates:</strong> Every access point (loading/unloading level) has a gate that must be closed and locked before the VRC operates. Interlock circuits prevent bypassing.</li>
+          <li><strong class="text-ink">Overtravel limits:</strong> Redundant limit switches stop the carriage if it overtravel past the upper or lower stop position.</li>
+          <li><strong class="text-ink">Slack chain/cable detection:</strong> Sensors detect if lifting chains or cables go slack (indicating a broken chain or obstruction). The VRC stops immediately.</li>
+          <li><strong class="text-ink">Emergency stops:</strong> E-stop buttons at each level and on the control panel. Red mushroom-head style per NFPA 79.</li>
+          <li><strong class="text-ink">Velocity fuse (hydraulic):</strong> Hydraulic VRCs include a velocity fuse that stops the carriage if it descends faster than normal operating speed, preventing freefall in case of hydraulic line failure.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">VRC Cannot Carry People</h3>
+        <p>VRCs are classified as material-only conveyors. They cannot carry people under any circumstance. Signage must clearly state "NOT FOR PERSONNEL USE" or equivalent. If your application requires lifting both materials and people, you must install a freight elevator under ASME A17.1. This distinction is the fundamental difference between VRC and elevator classification.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        VRC <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Mezzanine material transport:</strong> The most common VRC application. VRCs lift pallets, cases, and totes between the ground floor and mezzanine pick modules in distribution centers and warehouses. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> feed pallets onto the VRC platform at the lower level and receive them at the upper level.</p>
+
+        <p><strong class="text-ink">Multi-level <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging facilities</a>:</strong> Packaging plants with production on one floor and warehousing on another use VRCs to move cased goods and pallets between levels. The VRC integrates with horizontal <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> systems via <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyors</a> at each level.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage:</a></strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary stainless steel</a> VRCs move product between processing floors and packaging areas. Food-grade VRCs use washdown-rated components and sealed enclosures to maintain hygienic conditions.</p>
+
+        <p><strong class="text-ink">Manufacturing:</strong> VRCs move raw materials from receiving docks to elevated production floors and return finished goods to ground-level shipping. Heavy-duty VRCs (6,000-20,000 lbs) handle steel coils, engine assemblies, and fabricated sub-assemblies in automotive and industrial manufacturing.</p>
+
+        <p><strong class="text-ink">Retail distribution:</strong> Multi-level retail distribution centers use VRCs to move merchandise between receiving, pick floors, and shipping levels. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor</a> systems on each level connect to VRCs via powered <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zones</a> that stage product for lift cycles.</p>
+
+        <p><strong class="text-ink">When to choose a VRC over a spiral:</strong> VRCs suit batch-mode applications where throughput of 10-20 loads per hour is sufficient, loads are heavy (pallets, carts), or the lift height exceeds 40 feet. Spiral conveyors suit continuous-flow applications with lightweight products (under 75 lbs) and moderate lift heights. The VRC's batch cycle is the key trade-off — it lifts one load at a time, while spirals provide uninterrupted flow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Specify a <span class="text-accent">VRC</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>VRC specification requires defining these key parameters:</p>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Load weight and size:</strong> Maximum load weight, platform dimensions needed (width x depth x height clearance), and whether the load is a pallet, cart, tote, or mixed.</li>
+          <li><strong class="text-ink">Travel height:</strong> Floor-to-floor distance between the lowest and highest stop. Include any below-grade pit or overhead clearance constraints.</li>
+          <li><strong class="text-ink">Number of stops:</strong> Two-stop (ground + mezzanine) is the most common. Multi-stop VRCs serve 3-6 levels.</li>
+          <li><strong class="text-ink">Throughput requirement:</strong> Loads per hour required. Calculate cycle time: travel time (up + down) + load time + unload time + gate open/close time. Divide 60 minutes by cycle time to get max loads per hour.</li>
+          <li><strong class="text-ink">Loading method:</strong> Fork truck, hand pallet jack, powered <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">conveyor</a>, or manual cart push. Conveyor-fed VRCs integrate with horizontal <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> or <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller</a> lines for automated loading/unloading.</li>
+          <li><strong class="text-ink">Environment:</strong> Indoor/outdoor, temperature range, washdown, and hazardous area classification affect material selection and component ratings.</li>
+          <li><strong class="text-ink">Code jurisdiction:</strong> Confirm local AHJ requirements for VRC installations. Some jurisdictions require permits, inspections, or registrations beyond ASME B20.1.</li>
+        </ul>
+        <p>See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for VRC pricing factors. Request quotes from at least two VRC manufacturers (PFlow, Wildeck, Autoquip) to compare options. <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">System integrators</a> can design the complete horizontal + vertical conveyor system as a turnkey project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface" aria-labelledby="mfg-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Manufacturers</div>
+      <h2 id="mfg-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Leading VRC <span class="text-accent">Manufacturers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">PFlow Industries</strong> — Milwaukee, WI. Largest dedicated VRC manufacturer in North America. Mechanical chain-driven VRCs with capacities from 500 to 100,000 lbs.</li>
+          <li><strong class="text-ink">Wildeck</strong> — Waukesha, WI. VRCs, mezzanines, and vertical lifts. Mechanical and hydraulic models from 500 to 20,000 lbs.</li>
+          <li><strong class="text-ink">Autoquip</strong> — Guthrie, OK. Hydraulic and mechanical VRCs and scissor lifts from 500 to 20,000 lbs.</li>
+          <li><strong class="text-ink">Pallet Runner</strong> — VRC integration with automated pallet conveyor systems.</li>
+          <li><strong class="text-ink">Dematic / Intelligrated</strong> — System integrators who specify and integrate VRCs from component manufacturers into complete <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vertical reciprocating conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A VRC lifts materials vertically between levels on a guided carriage. VRCs are classified as conveyors under ASME B20.1, not elevators, which simplifies code compliance. VRCs cannot carry people. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">complete conveyor type guide</a> for other vertical transport options.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            VRC vs freight elevator — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>VRCs move materials only (ASME B20.1). Freight elevators move materials and people (ASME A17.1). VRCs cost 40-60% less, install in weeks (not months), and do not require a pit or machine room. Elevators are required only when people must ride with the load.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the weight capacity of a VRC?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>500-20,000 lbs standard, up to 100,000 lbs custom. Standard pallet VRCs handle 2,000-6,000 lbs. PFlow, Wildeck, and Autoquip publish detailed capacity tables.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What safety standards apply to VRCs?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>ASME B20.1 Section 3008 governs VRCs. Key requirements: full guarding, interlocked gates, travel limit switches, emergency stops, slack chain/cable detection, and overload protection. Local building codes may add additional requirements. The VRC must never carry people.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much does a VRC cost compared to an elevator?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>VRCs cost 40-60% less than a comparable freight elevator. VRCs do not require a pit, machine room, or elevator contractor license. Installation takes weeks, not months. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed pricing factors.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Conveyor Types</div>
+          <p class="text-sm text-white/60">Browse 30+ types</p>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">CDLR Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty pallet transport</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Feed conveyors for VRC loading</p>
+        </a>
+        <a href="/industries/packaging-line-conveyors/pallet/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pallet Conveyors</div>
+          <p class="text-sm text-white/60">Complete pallet handling guide</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

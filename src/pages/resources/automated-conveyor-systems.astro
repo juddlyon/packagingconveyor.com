@@ -1,0 +1,460 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Automated Conveyor Systems", "item": "https://packagingconveyor.com/resources/automated-conveyor-systems/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Automated Conveyor Systems for Manufacturing",
+  "description": "Complete guide to automated conveyor systems — automation levels, PLC integration, sensor types, VFDs, Industry 4.0/IIoT, warehouse automation vs packaging line automation.",
+  "url": "https://packagingconveyor.com/resources/automated-conveyor-systems/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an automated conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An automated conveyor system uses PLCs, sensors, variable frequency drives (VFDs), and networked controls to transport, sort, accumulate, and process product without manual intervention. Automation ranges from simple start/stop motor control to fully integrated Industry 4.0 systems with real-time data collection, predictive maintenance, and adaptive throughput optimization. Manufacturers including Hytrol, Dematic, Intelligrated (Honeywell), and Bastian Solutions build automated conveyor systems for packaging, warehousing, and manufacturing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between warehouse conveyor automation and packaging line automation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Warehouse conveyor automation focuses on case and tote transport, sortation, and order fulfillment at high throughput (1,000-10,000+ cartons per hour). Packaging line automation focuses on product-level handling — filling, labeling, inspecting, accumulating, and case packing — with tight integration between conveyors and processing machines. Warehouse systems prioritize throughput and routing logic. Packaging systems prioritize machine synchronization, product protection, and changeover flexibility." }
+    },
+    {
+      "@type": "Question",
+      "name": "What PLC brands are commonly used for conveyor automation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Allen-Bradley (Rockwell Automation) dominates North American conveyor automation with ControlLogix and CompactLogix PLCs. Siemens (S7-1500, S7-1200) leads in European installations. Other common platforms include Beckhoff (TwinCAT), B&R Automation, Mitsubishi, and Omron. The PLC choice typically follows the plant's existing standard to simplify maintenance, spare parts, and training." }
+    },
+    {
+      "@type": "Question",
+      "name": "What sensors do automated conveyor systems use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automated conveyors use photoelectric sensors (through-beam, retro-reflective, diffuse) for product detection, proximity sensors (inductive, capacitive) for position sensing, encoders for speed measurement, ultrasonic sensors for level detection, laser scanners for dimensioning, barcode readers and RFID for identification, and vision cameras for inspection. Sensor selection depends on the product material, size, speed, and environmental conditions." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Automated Conveyor Systems for Manufacturing | PackagingConveyor.com"
+  description="Complete guide to automated conveyor systems — PLC integration, sensors, VFDs, Industry 4.0/IIoT, and the difference between warehouse and packaging line automation."
+  canonical="https://packagingconveyor.com/resources/automated-conveyor-systems/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Automated Conveyor Systems</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Automated Conveyor Systems for <span class="text-accent-bright">Manufacturing</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          An automated conveyor system uses PLCs, sensors, variable frequency drives (VFDs), and networked controls to transport, sort, accumulate, and process product without manual intervention. Automation ranges from simple start/stop motor control to fully integrated Industry 4.0 systems with real-time data collection, predictive maintenance, and adaptive throughput optimization. Hytrol, Dematic, Intelligrated (Honeywell), and Bastian Solutions build automated conveyor systems for packaging, warehousing, and manufacturing plants across North America.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ AUTOMATION LEVELS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="levels-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Automation Spectrum</div>
+        <h2 id="levels-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Levels of Conveyor <span class="text-accent">Automation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyor automation exists on a spectrum from manual to fully autonomous. Understanding where your system sits — and where you want it to go — prevents over-engineering (wasting budget on controls you do not need) and under-engineering (buying conveyors that cannot support future automation).
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Level 1: Manual Start/Stop</h3>
+          <p>
+            The simplest automation: an operator presses a button to start the conveyor motor and presses another button to stop it. No sensors, no PLC, no feedback. This level suits gravity <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> and simple powered belt sections where product flow does not interact with other machines. Relative controls cost: minimal.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Level 2: Sensor-Controlled</h3>
+          <p>
+            Photoelectric sensors detect product presence and trigger conveyor actions — start when product arrives, stop when product leaves, divert when a lane is full. A small PLC or smart relay (Allen-Bradley Micro800, Siemens LOGO!) coordinates sensor inputs and motor outputs. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> with zone controllers operate at this level — each zone has a photo-eye sensor and an independent motor that starts and stops based on product detection. Relative controls cost: moderate.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Level 3: PLC-Integrated</h3>
+          <p>
+            A central PLC manages the entire conveyor system — coordinating motor speeds, sensor inputs, diverter positions, <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject mechanisms</a>, and interlocks with upstream and downstream machines. The PLC runs ladder logic, function blocks, or structured text programs that implement the conveyor's operating modes: run, stop, E-stop, jam detection, product tracking, and diagnostics. HMI touchscreens display system status, production counts, fault messages, and recipe parameters.
+          </p>
+          <p>
+            Level 3 automation is standard for <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line conveyors</a> that must synchronize with fillers, labelers, case packers, and palletizers. Allen-Bradley ControlLogix and CompactLogix PLCs dominate North American installations. Siemens S7-1500 and S7-1200 PLCs serve European-origin packaging machinery. Relative controls cost: significant (typically 15–30% of total conveyor system cost).
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Level 4: Networked / Industry 4.0</h3>
+          <p>
+            The conveyor system connects to a plant-wide network (EtherNet/IP, PROFINET, EtherCAT) and shares data with SCADA, MES (Manufacturing Execution System), and cloud platforms. Real-time data includes motor current, belt speed, product counts, reject rates, zone utilization, and energy consumption. This data feeds dashboards, OEE calculations, and predictive maintenance algorithms.
+          </p>
+          <p>
+            IIoT (Industrial Internet of Things) sensors add vibration monitoring, temperature sensing, and current analysis to conveyor motors, gearboxes, and bearings. These sensors detect degradation before failure, enabling planned maintenance instead of unplanned downtime. Companies like Dematic, Intelligrated (Honeywell), and Bastian Solutions offer cloud-connected conveyor systems with built-in analytics. Relative controls cost: highest (25–40% of total system cost), but with measurable ROI through reduced downtime, labor, and energy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PLC INTEGRATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="plc-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Controls Architecture</div>
+        <h2 id="plc-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          PLC <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The PLC is the brain of an automated conveyor system. It receives inputs from sensors, processes logic, and sends outputs to motors, VFDs, solenoids, and indicators. PLC selection for conveyor automation depends on three factors: the plant's existing PLC standard, the I/O count, and the communication protocol requirements.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Common PLC Platforms</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Allen-Bradley (Rockwell Automation):</strong> ControlLogix for large systems (500+ I/O), CompactLogix for medium systems (100–500 I/O), Micro800 for small standalone sections. EtherNet/IP communication. Dominant in North American packaging and warehouse automation.</li>
+            <li><strong class="text-ink">Siemens:</strong> S7-1500 for large systems, S7-1200 for medium, S7-200 SMART for small. PROFINET and PROFIBUS communication. Standard on European packaging machines (Bosch/Syntegon, Krones, KHS).</li>
+            <li><strong class="text-ink">Beckhoff:</strong> TwinCAT 3 platform combines PLC and motion control on an industrial PC. EtherCAT communication. Fast scan times for high-speed <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing</a> and servo-synchronized applications.</li>
+            <li><strong class="text-ink">B&R Automation:</strong> X20 and X67 I/O systems with Automation Studio software. POWERLINK and OPC UA communication. Strong in European packaging OEMs.</li>
+          </ul>
+          <!-- VERIFY: Siemens S7-200 SMART availability and target application in North America -->
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Controls Architecture Patterns</h3>
+          <p>
+            Two architecture patterns dominate conveyor automation. <strong class="text-ink">Centralized</strong> architecture uses one PLC to control all conveyors, motors, and sensors. Simple to program and troubleshoot, but the PLC becomes a single point of failure. All wiring runs back to a central control panel, which increases cable cost on long conveyor systems.
+          </p>
+          <p>
+            <strong class="text-ink">Distributed</strong> architecture places small controllers or I/O modules at each conveyor section. Each section operates semi-independently, communicating with a supervisory PLC over the network. MDR conveyor zone controllers are an example — each zone has its own controller board that runs start/stop logic locally. Distributed architecture reduces wiring, improves fault isolation, and allows sections to run independently during partial system failures. Hytrol's E24 zone controller and Intelligrated's IntelliSort are examples of distributed conveyor controls.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SENSORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="sensors-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Sensing & Detection</div>
+        <h2 id="sensors-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Sensor Types for <span class="text-accent">Conveyor Automation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Sensors provide the input data that drives conveyor automation logic. Selecting the right sensor type for each application prevents false triggers, missed detections, and nuisance faults that erode OEE.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Photoelectric Sensors</h3>
+          <p>
+            Photoelectric sensors detect product presence by emitting a light beam and measuring reflection or interruption. Three subtypes cover most conveyor applications:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li><strong class="text-ink">Through-beam:</strong> Emitter and receiver face each other across the conveyor. Product breaks the beam. Most reliable, longest range (up to 30m), but requires mounting on both sides of the conveyor.</li>
+            <li><strong class="text-ink">Retro-reflective:</strong> Emitter and receiver in one housing; a reflector on the opposite side returns the beam. Product breaks the reflected beam. Single-side wiring, but shiny product (foil bags, glossy cartons) can reflect light and cause false triggers.</li>
+            <li><strong class="text-ink">Diffuse (proximity):</strong> Emitter and receiver in one housing. The sensor detects light reflected off the product surface. No reflector needed. Short range (typically under 1m). Suitable for dark, matte products; unreliable on transparent or reflective surfaces.</li>
+          </ul>
+          <p>
+            Sensor manufacturers including Banner Engineering, SICK, Keyence, Omron, and ifm electronic supply photoelectric sensors designed for conveyor applications. Food-grade stainless steel housings (IP69K) serve <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary washdown environments</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Encoders</h3>
+          <p>
+            Encoders measure conveyor belt speed and distance traveled. A rotary encoder mounts on the conveyor drive shaft or a tracking wheel riding on the belt. The PLC uses encoder pulses to calculate belt speed (for VFD feedback), product position (for <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject timing</a>), and throughput (products per minute based on product spacing and belt speed). Incremental encoders provide relative position; absolute encoders provide position on power-up without homing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Barcode Readers & RFID</h3>
+          <p>
+            Barcode readers (1D and 2D) identify products by scanning labels. Fixed-mount readers above or beside the conveyor read barcodes at line speed for sorting, tracking, and verification. RFID readers detect RFID tags embedded in product, packaging, or pallets for identification without line-of-sight. Warehouse conveyor systems use barcode readers and RFID for order routing, sortation lane assignment, and inventory tracking.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Vision Systems</h3>
+          <p>
+            Vision cameras capture images of product on the conveyor for inspection (label verification, fill level, cosmetic defects), identification (OCR, barcode reading), and guidance (robot pick coordinates). Smart cameras from Cognex, Keyence, and Banner combine imaging and processing in one unit. Multi-camera vision systems on <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">robotic tray loading</a> lines track product position for delta robot pick-and-place.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VFDS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="vfd-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Motor Control</div>
+        <h2 id="vfd-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Variable Frequency <span class="text-accent">Drives</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Variable frequency drives (VFDs) control AC motor speed by varying the frequency and voltage supplied to the motor. VFDs enable conveyors to run at adjustable speeds, accelerate and decelerate smoothly, and synchronize with upstream and downstream machines. Every non-MDR powered conveyor with speed control uses a VFD.
+          </p>
+          <p>
+            VFD benefits for conveyor automation include:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li><strong class="text-ink">Speed matching:</strong> Adjust conveyor speed to match filler output, labeler speed, or case packer cycle rate. The PLC sends a speed reference signal to the VFD (0–10V analog, 4–20mA, or digital via network).</li>
+            <li><strong class="text-ink">Soft start/stop:</strong> Controlled acceleration prevents product tipping on startup. Controlled deceleration prevents product sliding on stop. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyors</a> use VFDs with S-curve acceleration profiles for smooth motion.</li>
+            <li><strong class="text-ink">Energy savings:</strong> Motors running at reduced speed consume significantly less power than motors running at full speed with mechanical speed reduction. A conveyor running at 50% speed uses roughly 12.5% of full-speed power (power scales with the cube of speed for centrifugal loads).</li>
+            <li><strong class="text-ink">Diagnostics:</strong> Modern VFDs report motor current, temperature, speed, torque, and fault history to the PLC. Abnormal current draw indicates belt slipping, bearing wear, or product jamming.</li>
+          </ul>
+          <p>
+            Allen-Bradley PowerFlex, Siemens Sinamics, ABB ACS, and SEW Eurodrive MOVITRAC VFDs are common on packaging conveyor systems. VFD selection depends on motor horsepower, voltage, and the communication protocol matching the plant's PLC platform. For cost implications, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WAREHOUSE VS PACKAGING AUTOMATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Warehouse vs. Packaging Line <span class="text-accent">Automation</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[750px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Attribute</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Warehouse Automation</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Packaging Line Automation</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Product handled</td>
+                <td class="py-4 pr-4">Cases, totes, cartons, pallets</td>
+                <td class="py-4">Individual products, bottles, bags, trays</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Primary function</td>
+                <td class="py-4 pr-4">Transport, sort, store, retrieve</td>
+                <td class="py-4">Fill, label, inspect, accumulate, case pack</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Throughput measure</td>
+                <td class="py-4 pr-4">Cartons/hour, orders/hour</td>
+                <td class="py-4">Products/minute, cases/minute</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Conveyor types</td>
+                <td class="py-4 pr-4"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Roller</a>, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a>, sortation</td>
+                <td class="py-4">Belt, tabletop, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">accumulation</a>, indexing</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Key integration</td>
+                <td class="py-4 pr-4">WMS, WCS, barcode/RFID</td>
+                <td class="py-4">OEM machines, PLC, HMI, vision</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Controls architecture</td>
+                <td class="py-4 pr-4">Distributed (zone controllers)</td>
+                <td class="py-4">Centralized (line PLC)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Changeover need</td>
+                <td class="py-4 pr-4">Low (standard case sizes)</td>
+                <td class="py-4">High (multiple SKUs, formats)</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Major suppliers</td>
+                <td class="py-4 pr-4">Dematic, Intelligrated, Bastian, Hytrol</td>
+                <td class="py-4">Dorner, Shuttleworth, mk North America</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INDUSTRY 4.0 & IIoT ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="iiot-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Smart Conveyors</div>
+        <h2 id="iiot-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Industry 4.0 & <span class="text-accent">IIoT</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Industry 4.0 extends conveyor automation beyond real-time control into data-driven optimization. IIoT (Industrial Internet of Things) sensors on conveyor components collect vibration, temperature, current, and runtime data. This data flows to cloud or edge platforms for analysis, visualization, and machine learning.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Predictive Maintenance</h3>
+          <p>
+            Vibration sensors on conveyor bearings, gearboxes, and motors detect early signs of wear. A bearing developing a fault produces a characteristic vibration signature months before failure. Predictive maintenance software (from vendors like SKF, Augury, and Nanoprecise) identifies these signatures and schedules replacement during planned downtime. The alternative — running to failure — causes unplanned conveyor shutdowns that stop entire packaging lines.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">OEE & Throughput Analytics</h3>
+          <p>
+            Automated conveyor systems generate data that feeds Overall Equipment Effectiveness (OEE) calculations. Product counters, speed sensors, and fault logs provide the availability, performance, and quality inputs OEE requires. Real-time OEE dashboards show line performance by shift, product, and conveyor section. Identifying the section with the lowest performance metric pinpoints the bottleneck for improvement.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Digital Twin & Simulation</h3>
+          <p>
+            A digital twin is a software model of the physical conveyor system. It runs the same PLC logic against simulated product flow. Engineers test new recipes, speed changes, and layout modifications in the digital twin before implementing them on the production floor. Siemens (Tecnomatik), Rockwell (Emulate), and Dematic offer digital twin platforms for conveyor system simulation.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Communication Protocols</h3>
+          <p>
+            Industry 4.0 conveyor systems use standard industrial protocols for device-to-PLC and PLC-to-cloud communication:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li><strong class="text-ink">EtherNet/IP:</strong> Allen-Bradley standard. TCP/IP-based, widely supported by sensors and VFDs.</li>
+            <li><strong class="text-ink">PROFINET:</strong> Siemens standard. Ethernet-based, supports isochronous real-time (IRT) for high-speed motion.</li>
+            <li><strong class="text-ink">EtherCAT:</strong> Beckhoff-originated. Extremely fast cycle times (sub-millisecond) for servo-synchronized <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing applications</a>.</li>
+            <li><strong class="text-ink">OPC UA:</strong> Vendor-neutral protocol for PLC-to-MES and PLC-to-cloud data exchange. Increasingly standard for Industry 4.0 interoperability.</li>
+            <li><strong class="text-ink">MQTT:</strong> Lightweight publish/subscribe protocol for IIoT sensor data. Used for edge-to-cloud communication in predictive maintenance systems.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONVEYOR TYPES FOR AUTOMATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveyor Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor Types in <span class="text-accent">Automated Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Automated systems combine multiple conveyor types, each chosen for its function within the system:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR Conveyors</a>:</strong> Built-in zone control makes MDR the most automation-ready conveyor type. Each zone operates independently with its own sensor and motor. Zero-pressure accumulation requires no PLC programming beyond zone configuration.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Powered Roller Conveyors</a>:</strong> VFD-controlled powered roller sections handle continuous transport at adjustable speeds. Simpler controls than MDR but without zone-level accumulation.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">Accumulation Conveyors</a>:</strong> Zero-pressure accumulation absorbs rate differences between machines. Critical for maintaining line uptime when upstream and downstream machines run at different speeds or experience intermittent stops.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover">Live Roller Conveyors</a>:</strong> Belt-driven or chain-driven rollers provide continuous motion for transport sections between automated workstations.</li>
+            <li><strong class="text-ink"><a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover">Laning & Collating Conveyors</a>:</strong> Servo-controlled laning divides and groups product for automated case packing.</li>
+          </ul>
+          <p>
+            For a complete overview of all conveyor types, visit the <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types directory</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION CRITERIA ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Planning</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Planning an Automated <span class="text-accent">Conveyor System</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Successful conveyor automation projects start with clear requirements and avoid common over-specification traps:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Define automation level per section.</strong> Not every conveyor section needs PLC control. Transport sections between automated machines may need only a VFD-controlled motor. Accumulation zones need sensor-controlled logic. <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">Reject zones</a> need tight integration with inspection devices. Match the automation level to the function.</li>
+            <li><strong class="text-ink">Standardize the PLC platform.</strong> Mixing Allen-Bradley, Siemens, and Beckhoff on the same line creates maintenance headaches. Choose one platform and stick with it — even if a particular OEM machine ships with a different PLC brand. Insist on your standard or budget for controls conversion.</li>
+            <li><strong class="text-ink">Plan for future expansion.</strong> Size the PLC with 20–30% spare I/O capacity. Run empty conduit to locations where future sensors or motors may install. Select a network architecture that supports additional nodes without rewiring.</li>
+            <li><strong class="text-ink">Budget controls separately.</strong> Controls cost 15–40% of total automated conveyor system cost depending on automation level. Lumping controls into the conveyor hardware budget leads to under-specification. For detailed cost planning, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</li>
+            <li><strong class="text-ink">Specify commissioning and training.</strong> Automated conveyor systems require on-site commissioning — PLC tuning, sensor calibration, VFD parameter setup, and integration testing with connected machines. Budget 2–4 weeks of commissioning time for a full packaging line. Include operator and maintenance training in the project scope.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Guides</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/resources/conveyor-cost-guide/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Cost & Pricing Guide</h3>
+            <p class="text-base text-white/60">How automation level affects conveyor cost</p>
+          </a>
+          <a href="/conveyor-functions/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Conveyor Functions</h3>
+            <p class="text-base text-white/60">Task-based selection for automated lines</p>
+          </a>
+          <a href="/conveyor-types/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">All Conveyor Types</h3>
+            <p class="text-base text-white/60">30+ types with specs and automation features</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an automated conveyor system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An automated conveyor system uses PLCs, sensors, VFDs, and networked controls to transport, sort, accumulate, and process product without manual intervention. Automation levels range from simple start/stop motor control to fully integrated Industry 4.0 systems with real-time analytics and predictive maintenance.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Warehouse automation vs. packaging line automation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Warehouse automation focuses on case/tote transport and sortation at high throughput (1,000–10,000+ cartons/hour). Packaging line automation focuses on product-level handling with tight machine synchronization, product protection, and frequent changeovers. Warehouse systems use <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> and <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>. Packaging systems use belt, tabletop, and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What PLC brands work for conveyor automation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Allen-Bradley (Rockwell) dominates North American conveyor automation. Siemens leads European installations. Beckhoff and B&R serve high-speed and servo-intensive applications. The right choice usually follows the plant's existing PLC standard — mixing platforms increases maintenance costs and spare part complexity.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What sensors do automated conveyors use?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Photoelectric sensors (through-beam, retro-reflective, diffuse) detect product presence. Encoders measure belt speed and distance. Proximity sensors detect pallet and fixture positions. Barcode readers and RFID identify products for sorting and tracking. Vision cameras inspect labels, fill levels, and defects. Banner Engineering, SICK, Keyence, and Cognex supply conveyor-specific sensors.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

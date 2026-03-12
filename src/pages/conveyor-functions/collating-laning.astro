@@ -1,0 +1,414 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Collating & Laning", "item": "https://packagingconveyor.com/conveyor-functions/collating-laning/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Collating & Laning Conveyors",
+  "description": "Complete guide to collating and laning conveyors — multi-lane distribution, chicaning (serpentine routing), and collation for case packing on packaging lines.",
+  "url": "https://packagingconveyor.com/conveyor-functions/collating-laning/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a laning conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A laning conveyor distributes a single-file stream of product across multiple parallel lanes. The product enters on one lane and exits on two, three, four, or more lanes. Laning conveyors feed case packers, tray loaders, and cartoners that require product arranged in rows. Common laning methods include serpentine (chicane) diverters, lane-select pushers, and angled belt transfers." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between collating and laning?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Laning divides a single product stream into multiple parallel lanes. Collating arranges products from those lanes into a specific pattern — a 3x4 array for a case pack, a 2x3 pattern for a tray load, etc. Laning happens first (one lane becomes many); collating happens second (many lanes form a pattern). Both functions often occur on the same conveyor section." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is chicaning on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Chicaning (also called serpentine routing) is a laning method where product follows an S-shaped path through angled guide rails. Product enters single-file, contacts the first angled rail, diverts to lane one. When lane one is full, a gate sends the next products past to lane two, and so on. Chicaning is common for round containers (bottles, cans, jars) because the product rolls naturally against the guide rails." }
+    },
+    {
+      "@type": "Question",
+      "name": "What throughput can a laning conveyor achieve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Laning conveyor throughput depends on the infeed rate, number of output lanes, and laning method. A chicane laning system handling bottles typically runs 100-600 bottles per minute. Servo-controlled lane select diverters handle 50-200 packages per minute. The throughput math is simple: infeed rate divided by number of lanes equals per-lane rate. The laning mechanism must switch lanes faster than the product arrival interval." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Collating & Laning Conveyors | PackagingConveyor.com"
+  description="Complete guide to collating and laning conveyors — multi-lane distribution, chicaning, serpentine routing, and collation for case packing on packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-functions/collating-laning/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Collating & Laning</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Collating & Laning <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A laning conveyor distributes a single-file product stream across multiple parallel lanes to feed case packers, tray loaders, and cartoners. A collating conveyor arranges products from those lanes into a specific pattern — a 3&times;4 array, a 2&times;5 group, or any count pattern the downstream machine requires. Shuttleworth, Kleenline, and Benchmark Automation build laning and collating systems for food, beverage, personal care, and pharmaceutical packaging lines running 50 to 600+ products per minute.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ LANING VS COLLATING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="diff-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Fundamentals</div>
+        <h2 id="diff-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Laning vs. <span class="text-accent">Collating</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Laning and collating are distinct functions that often happen in sequence on the same conveyor section. Understanding the difference prevents specification errors:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Laning</strong> divides one stream into many. Product enters on a single lane at high speed and exits on two, three, four, or more lanes at proportionally lower speed. A 600 BPM single-file line laned into four lanes produces 150 BPM per lane. Laning happens upstream of the case packer.</li>
+            <li><strong class="text-ink">Collating</strong> arranges products within lanes into groups. A collating section gathers 12 bottles into a 3&times;4 pattern for case loading. Collating happens after laning and immediately before the case packer or <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loader</a>.</li>
+          </ul>
+          <p>
+            A typical bottle line runs: filler &rarr; capper &rarr; labeler &rarr; single-file conveyor &rarr; <strong class="text-ink">laning section</strong> &rarr; <strong class="text-ink">collating section</strong> &rarr; case packer. The laning section reduces line speed and distributes product. The collating section groups product into the pattern the case packer expects. Specifying these as one "laning conveyor" in an RFQ misses the collating requirement and often leads to unexpected project scope growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LANING METHODS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="methods-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Laning Methods</div>
+        <h2 id="methods-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          How Laning <span class="text-accent">Works</span>
+        </h2>
+
+        <div class="space-y-12">
+          <!-- Chicane -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Chicane (Serpentine) Laning</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Chicane laning routes product through S-shaped guide rails on a wide belt or tabletop conveyor. Product enters single-file on one side of the belt. Angled guide rails direct product into the first lane. When a downstream sensor detects that lane is full (or a counter triggers), a gate diverts subsequent product past the first lane and into the second. The process repeats for each lane.
+              </p>
+              <p>
+                Chicane systems excel with round containers — bottles, cans, jars — because the product rolls smoothly against guide rails without jamming. The conveyor belt runs wider than the combined lane width, and lane dividers create the individual lanes downstream. Chicane laning handles 200–600+ bottles per minute on high-speed beverage lines. Hartness (ITW) and Kleenline supply chicane laning systems for beverage and dairy applications.
+              </p>
+              <p>
+                The primary limitation of chicane laning is product shape. Square or rectangular packages do not slide smoothly against angled rails — they catch corners and jam. Non-round products require servo-controlled or pusher-based laning instead. Chicane systems also struggle with lightweight products that tip at the guide rail contact points. Adding back-pressure control or Shuttleworth-style slip-torque conveyors at the guide rails reduces tipping on lightweight containers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Servo Lane Select -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Servo Lane-Select Diverter</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Servo lane-select diverters use a servo-driven gate, pusher, or deflector to route each product to a specific lane. A sensor detects the incoming product, the PLC determines the target lane, and the servo actuator positions the diverter before the product arrives. This method handles round, square, rectangular, and irregular products because the diverter physically pushes or deflects each product rather than relying on guide rail contact.
+              </p>
+              <p>
+                Servo diverters run 50–200+ packages per minute depending on product spacing, diverter travel distance, and servo response time. They require more sophisticated controls than chicane systems — each diverter needs a servo drive, controller, and sensor integration with the line PLC. Benchmark Automation and Bastian Solutions build servo lane-select systems for case-packed goods, pouches, and cartons.
+              </p>
+              <p>
+                The advantage of servo lane selection is positive control. Every product goes to a known lane. Lane assignment can follow any algorithm — sequential (1-2-3-4-1-2-3-4), fill-and-switch, priority-based, or dynamic load balancing. This flexibility matters when lane fill rates differ (e.g., one case packer runs faster than the other) or when different SKUs route to different lanes for mixed-case packing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Speed Differential -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Speed-Differential Laning</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Speed-differential laning uses multiple belts running at different speeds to separate product into lanes. Product enters on a fast belt. A slower belt alongside creates a speed difference that pulls product sideways through an opening into the adjacent lane. This method is gentle — no mechanical pushers, gates, or guide rails contact the product.
+              </p>
+              <p>
+                Shuttleworth's slip-torque conveyors are the best-known implementation of speed-differential laning. Individual rollers slip under product that contacts a side rail or stop, allowing the conveyor to continue running without building back-pressure. Products naturally fill lanes in sequence as downstream lanes back up. This self-regulating behavior reduces controls complexity — no sensors, no PLC logic, no servo drives. The slip-torque principle makes Shuttleworth conveyors popular for fragile bakery, snack, and confectionery products that cannot tolerate contact pressure.
+              </p>
+              <p>
+                Speed-differential laning runs best at moderate speeds (50–200 PPM) and works for products with a flat, stable bottom surface. Products with high centers of gravity or narrow bases tend to tip during the lateral transfer. Adding low-profile side guides stabilizes tall products but adds changeover parts for different product widths.
+              </p>
+            </div>
+          </div>
+
+          <!-- Robotic -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Robotic Laning (Delta Robot)</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Delta robots mounted above the conveyor pick products from a single-file infeed and place them directly into lanes — combining laning and collating in one step. Vision systems track product on the infeed belt, and the robot picks and places each product into the correct position within the lane/collation pattern. This approach eliminates separate laning and collating conveyor sections.
+              </p>
+              <p>
+                Robotic laning costs more than mechanical alternatives but excels in two scenarios: (1) very high SKU counts where mechanical changeover would consume too much time, and (2) random product orientation where the robot can orient product during the pick-place cycle. BluePrint Automation and ABB supply delta robot systems for combined laning/collating in bakery and snack applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COLLATING METHODS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="collating-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Collating</div>
+        <h2 id="collating-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Collating <span class="text-accent">Methods</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Lane-Stop Collating</h3>
+          <p>
+            The simplest collation method uses stops at the end of each lane. Product accumulates against the stop until the lane holds the correct count (e.g., 4 bottles per lane &times; 3 lanes = 12-count case pattern). When all lanes reach their count, the stops retract simultaneously and the collated group advances onto the case packer's infeed. This method requires <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation capability</a> in each lane to prevent back-pressure damage. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor</a> zones or Shuttleworth slip-torque sections provide the zero-pressure accumulation needed for lane-stop collating.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Sweep Collating</h3>
+          <p>
+            Sweep collating uses a servo-driven pusher bar that sweeps a row of product from the lanes onto the case packer's bucket or dead plate. Product accumulates in lanes continuously. When the correct count fills each lane, the sweep bar pushes the entire row as a unit. Sweep collating is faster than lane-stop collating because product flow does not stop — the sweep bar moves with the lane conveyor during the push, maintaining continuous infeed.
+          </p>
+          <p>
+            Sweep collating handles 60–150+ cases per minute on high-speed lines. Kleenline and Benchmark Automation build sweep collating systems for beverage, dairy, and CPG applications. The critical design parameter is sweep bar timing — the bar must arrive at the push position precisely when all lanes have the correct product count. A mistimed sweep pushes an incomplete pattern, causing a case packer fault.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Metering Collating</h3>
+          <p>
+            Metering collating uses timed conveyor sections to group product. A slow metering belt feeds product into a faster spacing belt, creating gaps between groups. The gap size corresponds to the case packer's cycle time. This method avoids mechanical contact with product — no stops, no pushers, no sweep bars — making it ideal for fragile or delicate products. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyors</a> with servo control provide the precise speed changes metering collation requires.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Laning Method <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Method</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed (PPM)</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Shapes</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Controls</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Chicane (Serpentine)</td>
+                <td class="py-4 pr-4 font-mono text-sm">200–600+</td>
+                <td class="py-4 pr-4">Round only</td>
+                <td class="py-4 pr-4">Simple (sensors + gates)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Bottles, cans, jars</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Servo Lane-Select</td>
+                <td class="py-4 pr-4 font-mono text-sm">50–200+</td>
+                <td class="py-4 pr-4">All shapes</td>
+                <td class="py-4 pr-4">Moderate (servo + PLC)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Cases, cartons, pouches</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Speed-Differential</td>
+                <td class="py-4 pr-4 font-mono text-sm">50–200</td>
+                <td class="py-4 pr-4">Flat-bottom</td>
+                <td class="py-4 pr-4">Minimal (self-regulating)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$–$$$</td>
+                <td class="py-4">Fragile bakery, snack</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Delta Robot</td>
+                <td class="py-4 pr-4 font-mono text-sm">80–200/robot</td>
+                <td class="py-4 pr-4">All shapes</td>
+                <td class="py-4 pr-4">Complex (vision + robot)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">High-SKU, random infeed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">PPM = products per minute. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See full cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Industry <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Beverage Lines</h3>
+          <p>
+            Beverage lines represent the highest-speed laning application. A typical bottling line runs 400–1,200 BPM (bottles per minute) through the filler and capper. The single-file output must lane into 4–8 lanes to feed case packers running at 30–60 cases per minute. Chicane laning with tabletop chain conveyors handles the round containers at speed. Back-pressure management is critical — bottles backed up in chicane lanes can topple, jam, and halt the line. Hartness, Kleenline, and Intelligrated supply high-speed chicane laning for beverage.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Bakery & Snack Foods</h3>
+          <p>
+            Bakery lines lane cookies, crackers, bars, and pastries from oven discharge into multi-lane <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading</a> stations. Products are fragile, irregularly shaped, and arrive from the oven in random orientation. Shuttleworth slip-torque conveyors provide gentle laning without contact pressure. Delta robot cells combine laning and tray loading into a single step. Benchmark Automation integrates bakery laning with downstream case packing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Case Packing</h3>
+          <p>
+            Every drop-packer, wrap-around case packer, and robotic case packer requires product collated into the correct count and pattern. The laning/collating section is the bridge between the single-file packaging line and the case packer. A 24-count case with a 4&times;6 pattern needs 4-lane collating. A 12-count case with a 3&times;4 pattern needs 3-lane collating. Changing case counts requires laning and collating changeover — the fewer mechanical adjustments required, the faster the changeover. Servo-controlled laning and electronic collation recipe changes support rapid format changes in multi-SKU operations.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Pharmaceutical & Personal Care</h3>
+          <p>
+            Pharmaceutical cartons, tubes, and bottles lane into collating sections that feed case packers. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary requirements</a> may apply for topical products and oral care. Servo lane-select diverters handle the rectangular product shapes (cartons, tubes) that chicane systems cannot. Traceability requirements in pharmaceutical applications mean each product's lane assignment may need to be logged for batch records — servo diverters with PLC logging satisfy this requirement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION CRITERIA ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting a Laning & <span class="text-accent">Collating System</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Start with five questions that narrow the technology and configuration:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li>
+              <strong class="text-ink">What is the infeed rate?</strong> Products per minute entering the laning section. Divide by the number of output lanes to calculate per-lane rate. Ensure the case packer can handle the per-lane rate.
+            </li>
+            <li>
+              <strong class="text-ink">What product shape?</strong> Round containers suit chicane laning. Square/rectangular products need servo diverters or speed-differential systems. Fragile products need Shuttleworth slip-torque or delta robots.
+            </li>
+            <li>
+              <strong class="text-ink">How many output lanes?</strong> Determined by the case pattern. A 24-count case in a 4&times;6 pattern needs 4 lanes. Changing case counts may require changing lane count — design for the maximum lane count and blank off unused lanes for smaller patterns.
+            </li>
+            <li>
+              <strong class="text-ink">How many SKUs and how often do you change over?</strong> Chicane systems with fixed guide rails require 15–30 minutes for product-width changeover. Servo diverters change over in 1–2 minutes via recipe. Delta robots change over in seconds.
+            </li>
+            <li>
+              <strong class="text-ink">What case packer type feeds downstream?</strong> Drop packers need products collated in a tightly grouped pattern from above. Wrap-around packers need products collated on a flat surface. Robotic case packers may accept product in lanes without collating. Match the laning/collating output to the case packer's infeed requirement.
+            </li>
+          </ol>
+          <p>
+            Budget the laning and collating section as 15–25% of the total packaging line cost. Lines that underinvest in this section suffer chronic jams, miscounts, and case packer faults. For cost planning, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>. For broader automation context, see the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a> guide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/tray-loading/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Tray Loading</h3>
+            <p class="text-base text-white/60">Load collated product into trays</p>
+          </a>
+          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
+            <p class="text-base text-white/60">Precision metering for collation timing</p>
+          </a>
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Remove defects before laning</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a laning conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A laning conveyor distributes a single-file stream of product across multiple parallel lanes. Product enters on one lane and exits on two, three, four, or more lanes. Laning conveyors feed case packers, <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loaders</a>, and cartoners that require product arranged in rows.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is chicaning on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Chicaning (serpentine routing) lanes product through S-shaped guide rails. Product enters single-file, contacts the first angled rail, and diverts to lane one. When lane one fills, a gate sends the next products past to lane two, and so on. Chicaning works best for round containers (bottles, cans, jars) that roll smoothly against guide rails.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between collating and laning?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Laning divides one product stream into multiple parallel lanes. Collating arranges products within those lanes into a specific pattern — a 3&times;4 array, a 2&times;5 group — for case packing. Laning happens first (one stream becomes many lanes). Collating happens second (many lanes form a count pattern). Both functions often occur on the same conveyor section.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What throughput can a laning conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Throughput depends on the laning method. Chicane systems handle 200–600+ bottles per minute. Servo lane-select diverters handle 50–200+ packages per minute. Speed-differential systems handle 50–200 products per minute. Delta robots handle 80–200 picks per minute per robot. The throughput math: infeed rate divided by number of lanes equals per-lane rate.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

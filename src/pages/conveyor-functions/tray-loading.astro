@@ -1,0 +1,441 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Tray Loading", "item": "https://packagingconveyor.com/conveyor-functions/tray-loading/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Automatic Tray Loading & Unloading Systems",
+  "description": "Complete guide to automatic tray loading systems for packaging lines — pick-and-place, servo-driven, and robotic tray loaders for bakery, snack, produce, and ready meals.",
+  "url": "https://packagingconveyor.com/conveyor-functions/tray-loading/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an automatic tray loader?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An automatic tray loader is a packaging machine that places product into trays without manual labor. It typically includes a tray denester, a product infeed conveyor, a placement mechanism (pick-and-place, servo, or robot), and an outfeed conveyor. Automatic tray loaders handle 20 to 300+ trays per minute depending on configuration." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between pick-and-place and robotic tray loading?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pick-and-place tray loaders use fixed-motion mechanisms (servo gantries or cam-driven arms) that follow a repeatable path at high speed. Robotic tray loaders use articulated or delta robots with programmable motion paths, offering more flexibility for product changeovers but typically at higher cost. Pick-and-place suits high-speed, low-SKU operations; robotic suits high-SKU, frequent-changeover environments." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use automatic tray loading systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automatic tray loading systems serve bakery (cookies, pastries, bread), snack foods (crackers, bars, chips), fresh produce (berries, tomatoes, salads), ready meals and prepared foods, meat and poultry, confectionery, and pharmaceutical blister packing. Any operation that places discrete products into thermoformed or pre-formed trays benefits from automation." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can an automatic tray loader run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the loading mechanism and product type. Cam-driven pick-and-place systems reach 200-300+ placements per minute for small items like cookies. Servo gantry systems typically run 60-150 placements per minute for medium products. Delta robots handle 80-200 picks per minute. Multi-head systems multiply these rates by the number of pick heads." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Automatic Tray Loading & Unloading Systems | PackagingConveyor.com"
+  description="Complete guide to automatic tray loading systems — pick-and-place, servo-driven, and robotic tray loaders for bakery, snack, produce, and ready-meal packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-functions/tray-loading/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Tray Loading</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Automatic Tray Loading & <span class="text-accent-bright">Unloading</span> Systems
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          An automatic tray loader places product into trays at speeds ranging from 20 to 300+ placements per minute, replacing manual hand-packing on bakery, snack, produce, and ready-meal lines. These systems combine a tray denester, product infeed conveyor, placement mechanism (pick-and-place, servo gantry, or delta robot), and outfeed conveyor into an integrated cell. Manufacturers such as Shuttleworth, BluePrint Automation, and Bosch Packaging (now Syntegon) build tray loading systems ranging from semi-automatic single-head units to fully robotic multi-line installations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY AUTOMATE TRAY LOADING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Justification</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why Automate <span class="text-accent">Tray Loading?</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Manual tray loading remains one of the most labor-intensive tasks on a packaging line. A single tray loading station typically requires two to four operators per shift. Automating that station eliminates six to twelve labor positions across three shifts — the payback period on most automatic tray loaders falls between 12 and 24 months at current labor costs.
+          </p>
+          <p>
+            Beyond labor savings, automatic tray loading delivers three operational advantages. First, <strong class="text-ink">consistency</strong>: machines place every product in the same orientation, at the same position, every cycle. Manual loading introduces variation that causes downstream problems at lidding, sealing, and case-packing stations. Second, <strong class="text-ink">speed</strong>: even a mid-range servo tray loader sustains 80–120 placements per minute — a rate no manual crew can match over a full shift. Third, <strong class="text-ink">hygiene</strong>: reducing human contact with product is critical in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing environments</a> where contamination risk drives recalls.
+          </p>
+          <p>
+            The decision to automate tray loading usually begins when a line runs above 30 trays per minute or when the product requires precise orientation for downstream sealing or labeling. Below that threshold, semi-automatic systems with operator-assisted placement often provide a cost-effective middle ground.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TRAY LOADING TECHNOLOGIES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="tech-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Technologies</div>
+        <h2 id="tech-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Tray Loading <span class="text-accent">Technologies</span>
+        </h2>
+
+        <div class="space-y-12">
+          <!-- Pick and Place -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Cam-Driven Pick-and-Place</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Cam-driven pick-and-place systems use mechanical cams to create repeatable, high-speed motion profiles. The pick head follows a fixed oval or elliptical path — down to pick, up and over, down to place. Benchmark Automation and Bosch Packaging (Syntegon) build cam-driven systems that reach 200–300+ placements per minute for small, uniform products like cookies, crackers, and confectionery pieces.
+              </p>
+              <p>
+                The trade-off is flexibility. Cam-driven systems excel at one specific motion profile. Changing the pick pattern, tray size, or product dimensions often requires mechanical changeover — swapping cams, adjusting stroke lengths, and re-timing the infeed. Lines running a single SKU at high volume benefit most from this technology.
+              </p>
+              <!-- VERIFY: Benchmark Automation specific cam-driven model names and max speed claims -->
+            </div>
+          </div>
+
+          <!-- Servo Gantry -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Servo Gantry Systems</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Servo gantry tray loaders replace mechanical cams with servo motors on X, Y, and Z axes. The motion profile is programmable — operators change pick positions, place positions, and motion paths through the HMI without mechanical adjustment. Shuttleworth and BluePrint Automation offer servo gantry systems that handle 60–150 placements per minute depending on travel distance and product weight.
+              </p>
+              <p>
+                Servo gantry systems accept a wider range of tray sizes and product configurations than cam-driven units. Changeover involves loading a new recipe on the HMI and, in some cases, swapping the end-of-arm tooling (vacuum cups, grippers, or suction plates). Total changeover time runs 5 to 15 minutes on well-designed systems. This flexibility makes servo gantry the default choice for lines running 5–20 SKUs.
+              </p>
+              <p>
+                The servo drive also enables soft-start and soft-stop profiles that protect fragile products — decorated cakes, frosted pastries, and delicate produce — from acceleration damage. Variable speed profiles let the system slow down during the pick phase and accelerate during the traverse phase, optimizing both gentleness and throughput.
+              </p>
+            </div>
+          </div>
+
+          <!-- Robotic (Delta) -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Delta Robot Tray Loading</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Delta robots (also called spider robots or parallel kinematic robots) mount above the conveyor and use three or four arms connected to a common platform. Vision-guided delta robots track product on a moving conveyor belt, compute pick coordinates in real time, and place product into trays at 80–200+ picks per minute per robot. BluePrint Automation, ABB, and FANUC supply delta robots commonly used in tray loading applications.
+              </p>
+              <p>
+                The key advantage of delta robots is random-infeed capability. Product arrives on the infeed conveyor in no particular order or spacing. The vision system photographs the belt, identifies each product's position and orientation, and assigns picks to the robot in real time. This eliminates the need for upstream singulation, orientation, and precise spacing — functions that require significant conveyor length and complexity with non-robotic systems.
+              </p>
+              <p>
+                Multi-robot cells place two to six delta robots in series over a single conveyor. Each robot picks product that upstream robots missed. This redundancy means the cell continues running at reduced capacity if one robot goes down for maintenance. BluePrint Automation's Vision Guided Robotics (VGR) systems and ABB's FlexPicker IRB 360 are widely used in bakery and snack food tray loading.
+              </p>
+              <!-- VERIFY: ABB FlexPicker IRB 360 specific pick rate for food applications -->
+            </div>
+          </div>
+
+          <!-- Tray Denesting -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Tray Denesting & Feeding</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Every automatic tray loading cell requires a tray denester — the mechanism that separates individual trays from a nested stack and places them on the loading conveyor. Denesting reliability is critical because a tray-feed jam stops the entire cell. Common denesting mechanisms include vacuum cup separators, mechanical finger separators, and air-knife assisted systems.
+              </p>
+              <p>
+                Vacuum cup denesters grip the top tray with suction cups and pull it from the stack. They work well with rigid thermoformed trays (CPET, APET, polypropylene) but struggle with thin, flexible trays that deform under vacuum. Mechanical finger denesters use spring-loaded fingers to separate trays by inserting into the nesting flange. They handle a broader range of tray materials but require adjustment when tray flange dimensions change.
+              </p>
+              <p>
+                Stack capacity matters for operator ergonomics. A denester with a 200-tray magazine capacity reduces reload frequency to once every 2–3 minutes at 80 trays/minute. Systems with automatic stack replenishment — where a new stack feeds into the magazine without stopping — eliminate reload-related downtime entirely. Shuttleworth and Benchmark Automation offer continuous-feed denesting options for high-speed lines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INFEED & OUTFEED CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="conveyors-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveyor Integration</div>
+        <h2 id="conveyors-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Infeed & Outfeed <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Tray loading systems depend on two critical conveyor sections: the product infeed and the tray outfeed. The infeed conveyor delivers product to the pick zone in the correct orientation, spacing, and speed. The outfeed conveyor carries loaded trays to the next process — typically lidding, sealing, over-wrapping, or case packing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Product Infeed Conveyor</h3>
+          <p>
+            The product infeed conveyor must deliver product to the pick zone at a consistent, controlled rate. For cam-driven and servo gantry systems, the infeed typically uses an <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> that positions each product at a precise pick point. For delta robot systems, the infeed uses a continuously running belt conveyor with a vision camera mounted upstream — the robot calculates pick coordinates from the vision data and tracks the moving product.
+          </p>
+          <p>
+            Infeed conveyor belt material matters for food applications. White FDA-approved polyurethane belting is standard for direct food contact. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary conveyor designs</a> with tool-free belt removal, open-frame construction, and IP69K-rated motors simplify daily washdown. Dorner's AquaPruf series and Shuttleworth's slip-torque conveyors are popular infeed choices for bakery and snack applications.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Tray Outfeed Conveyor</h3>
+          <p>
+            The tray outfeed conveyor carries loaded trays from the loading station to downstream processes. This conveyor must handle the combined weight of the tray plus product without tipping or shifting the load. For lightweight trays (berries, cookies), flat belt conveyors work well. For heavier trays (ready meals, meat), <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyors</a> or tabletop chain conveyors provide more stability.
+          </p>
+          <p>
+            Accumulation on the outfeed side is critical. Downstream machines (sealers, lidders) often cycle slower than the tray loader. Without <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyor</a> capacity between the loader and the sealer, the tray loader must stop every time the sealer cycles — reducing effective throughput by 15–30%. Zero-pressure accumulation using <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> is the preferred solution for tray outfeed buffering.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Tray Loading Technology <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[800px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Technology</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed (PPM)</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Changeover</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">SKU Range</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Cam-Driven Pick-and-Place</td>
+                <td class="py-4 pr-4 font-mono text-sm">200–300+</td>
+                <td class="py-4 pr-4">30–60 min (mechanical)</td>
+                <td class="py-4 pr-4">1–3 SKUs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">High-volume, single SKU</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Servo Gantry</td>
+                <td class="py-4 pr-4 font-mono text-sm">60–150</td>
+                <td class="py-4 pr-4">5–15 min (recipe)</td>
+                <td class="py-4 pr-4">5–20 SKUs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Mid-volume, multi-SKU</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Delta Robot (single)</td>
+                <td class="py-4 pr-4 font-mono text-sm">80–200</td>
+                <td class="py-4 pr-4">2–5 min (recipe + EOAT)</td>
+                <td class="py-4 pr-4">10–50+ SKUs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">Random infeed, high SKU count</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Multi-Robot Cell (2–6)</td>
+                <td class="py-4 pr-4 font-mono text-sm">200–800+</td>
+                <td class="py-4 pr-4">2–5 min (recipe + EOAT)</td>
+                <td class="py-4 pr-4">10–50+ SKUs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">Highest throughput + flexibility</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">PPM = placements per minute. EOAT = end-of-arm tooling. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See full cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- ═══ INDUSTRY APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Industry <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Bakery & Snack Foods</h3>
+          <p>
+            Bakery lines load cookies, crackers, pastries, bars, and breadsticks into thermoformed trays before over-wrapping or flow-wrapping. Products arrive from the oven conveyor at high speed and often in random orientation. Delta robot cells with vision guidance handle the random infeed without upstream singulation. Cam-driven systems serve dedicated cookie lines running a single product at 200+ pieces per minute. Bosch Packaging (Syntegon) and BluePrint Automation dominate bakery tray loading, with installed bases in major CPG plants worldwide.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Fresh Produce</h3>
+          <p>
+            Produce tray loading handles berries, cherry tomatoes, mushrooms, and salad components. The primary challenge is product fragility — berries bruise under even moderate gripping force. Vacuum pick-and-place with soft silicone cups and controlled vacuum pressure provides the gentlest handling. Produce lines also require full <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary washdown construction</a> for daily cleaning. Shuttleworth's slip-torque tray loading conveyors protect delicate produce by allowing product to slip against stopped gates rather than building pressure.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Ready Meals & Prepared Foods</h3>
+          <p>
+            Ready-meal tray loading places main courses, sides, and sauces into compartmented CPET or aluminum trays. Products vary in shape, consistency, and temperature — cold salads, room-temperature grains, and hot proteins load into different compartments of the same tray. Multi-head servo gantry systems with independent pick modules handle the different product streams. The outfeed conveyor delivers loaded trays to modified-atmosphere packaging (MAP) sealers or top-seal machines.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Meat & Poultry</h3>
+          <p>
+            Meat tray loading places cuts, portions, or formed products into foam or rigid trays for retail overwrap or MAP sealing. The challenge is handling wet, irregular product in a cold (35–40°F) environment with aggressive daily sanitation. Stainless steel frame construction, IP69K drives, and quick-disconnect conveyor sections are mandatory. Multivac, Harpak-ULMA, and Benchmark Automation supply integrated tray loading and sealing systems for meat processing.
+          </p>
+          <!-- VERIFY: Harpak-ULMA specific tray loading product line names -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION CRITERIA ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          How to Select a <span class="text-accent">Tray Loader</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Tray loader selection starts with four questions that determine the technology, size, and cost of the system:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li>
+              <strong class="text-ink">What is your throughput requirement?</strong> Measure in products per minute and trays per minute (products per tray times trays per minute). A line placing 8 cookies per tray at 30 trays/minute requires 240 placements/minute — that eliminates servo gantry and requires either cam-driven or multi-robot.
+            </li>
+            <li>
+              <strong class="text-ink">How many SKUs and how often do you change over?</strong> Lines running 1–3 SKUs with changeovers once per shift favor cam-driven. Lines running 10+ SKUs with changeovers every 30–60 minutes demand robotic or servo gantry with recipe-based changeover.
+            </li>
+            <li>
+              <strong class="text-ink">What is the product's fragility and shape consistency?</strong> Fragile products (decorated cakes, fresh berries) need controlled-force gripping — delta robots with force-limited vacuum cups. Uniform, robust products (granola bars, frozen entrees) handle mechanical pick-and-place well.
+            </li>
+            <li>
+              <strong class="text-ink">What is your environment and sanitation requirement?</strong> Full daily washdown (bakery, meat) requires stainless steel construction, IP69K drives, and tool-free belt removal. Dry ambient environments (confectionery, snack) accept standard painted steel frames and enclosed drives.
+            </li>
+          </ol>
+          <p>
+            Beyond these four questions, consider upstream and downstream integration. The tray loader does not operate in isolation — it depends on a reliable product infeed (often an <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a>) and a buffered outfeed (often an <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyor</a>). Budget 30–50% of the tray loader cost for the surrounding conveyor infrastructure.
+          </p>
+          <p>
+            For detailed cost factors across all conveyor types, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost and pricing guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MANUFACTURERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="mfr-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Manufacturers</div>
+        <h2 id="mfr-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Key <span class="text-accent">Manufacturers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The automatic tray loading market includes dedicated tray-loading OEMs, robot integrators, and broad-line packaging machine builders. The following manufacturers have significant installed bases in North American tray loading:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">BluePrint Automation (BPA)</strong> — Specializes in vision-guided robotic tray loading for bakery, snack, and pet food. Their Vision Guided Robotics platform uses delta robots with integrated vision for random-product pick-and-place.</li>
+            <li><strong class="text-ink">Syntegon (formerly Bosch Packaging)</strong> — Offers cam-driven and servo pick-and-place tray loaders for high-speed confectionery, bakery, and snack lines. Strong in single-SKU, high-volume applications.</li>
+            <li><strong class="text-ink">Shuttleworth</strong> — Known for slip-torque conveyor technology that provides gentle product handling. Their tray loading systems use Shuttleworth conveyors as the infeed and accumulation platform with integrated pick-and-place or robotic cells.</li>
+            <li><strong class="text-ink">Benchmark Automation</strong> — Builds custom tray loading and case packing systems, often integrating delta robots or servo gantries. Strong presence in snack food and confectionery.</li>
+            <li><strong class="text-ink">Multivac</strong> — Supplies integrated tray sealing and loading systems. Their thermoform-fill-seal (TFFS) machines combine tray forming, filling, and sealing in one system for meat, cheese, and ready-meal applications.</li>
+          </ul>
+          <!-- VERIFY: BluePrint Automation current product line branding - may have changed after ProMach acquisition -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED FUNCTIONS ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
+            <p class="text-base text-white/60">Precision positioning for tray loading infeed</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Organize product before tray loading</p>
+          </a>
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Remove defects before tray loading</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an automatic tray loader?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An automatic tray loader places product into trays without manual labor. The system combines a tray denester, product infeed conveyor, placement mechanism (pick-and-place, servo gantry, or delta robot), and outfeed conveyor. Speeds range from 20 to 300+ placements per minute depending on the technology and product type.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between pick-and-place and robotic tray loading?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Pick-and-place systems use fixed-motion mechanisms — cam-driven or servo gantry — that follow repeatable paths at high speed. Robotic systems use delta or articulated robots with programmable motion paths and vision guidance. Pick-and-place suits high-speed, low-SKU operations. Robotic suits high-SKU, frequent-changeover environments where random product infeed is common.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast can an automatic tray loader run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Cam-driven systems reach 200–300+ placements per minute for small, uniform products. Servo gantry systems run 60–150 placements per minute. Single delta robots handle 80–200 picks per minute. Multi-robot cells with 2–6 robots in series achieve 200–800+ combined placements per minute. Actual speed depends on product size, weight, fragility, and tray configuration.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use automatic tray loading?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Bakery and snack foods (cookies, crackers, bars), fresh produce (berries, tomatoes), ready meals and prepared foods, meat and poultry, confectionery, and pharmaceutical blister packing all use automatic tray loading. Any operation placing discrete products into thermoformed or pre-formed trays benefits from automation when volumes exceed 30 trays per minute or when manual labor availability is constrained.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

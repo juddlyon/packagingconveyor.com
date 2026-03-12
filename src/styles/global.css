@@ -53,6 +53,19 @@ body {
   font-size: 1rem; /* 18px effective */
 }
 
+/* ─── Links — underline for a11y (link-vs-text contrast) ── */
+
+article a:not([class*="block"]):not([class*="btn"]),
+main p a,
+main li a,
+main td a,
+main dd a {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
 /* ─── Typography — GO BIG ────────────────────── */
 
 h1, h2, h3, h4, h5, h6 {

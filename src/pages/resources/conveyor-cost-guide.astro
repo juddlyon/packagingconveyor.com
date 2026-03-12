@@ -1,0 +1,498 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Cost Guide", "item": "https://packagingconveyor.com/resources/conveyor-cost-guide/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Cost & Pricing Guide",
+  "description": "Understand what drives conveyor system costs — conveyor type, length, materials, motor/drive type, controls, environment, and installation. Relative cost comparison table for 10+ conveyor types.",
+  "url": "https://packagingconveyor.com/resources/conveyor-cost-guide/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a conveyor system cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor system costs depend on seven primary factors: conveyor type, length and width, frame material, motor and drive type, controls complexity, environment rating, and installation requirements. Gravity roller conveyors are the least expensive; fully automated systems with PLC controls, servo drives, and sanitary stainless steel construction are the most expensive. Specific pricing varies widely by manufacturer, region, and project scope. Contact manufacturers directly for project-specific quotes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most expensive part of a conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Controls and automation are typically the most expensive component of an automated conveyor system, accounting for 15-40% of total cost. This includes the PLC, HMI, VFDs, servo drives, sensors, wiring, control panels, and programming. For simple conveyors without automation, the frame and drive components dominate cost. For sanitary environments, stainless steel construction can add 50-100% over carbon steel." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do conveyor prices vary so much between quotes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor price variation between vendors comes from differences in materials (carbon steel vs stainless), motor quality (standard vs premium efficiency), controls scope (what is and isn't included), design engineering time, manufacturing location, warranty terms, and installation services. A detailed specification document (conveyor type, length, width, speed, load, material, controls, environment) reduces quote variation by ensuring all vendors bid on the same scope." }
+    },
+    {
+      "@type": "Question",
+      "name": "What questions should I ask conveyor manufacturers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Key questions include: What is the lead time? What controls are included vs. excluded? What is the warranty period and coverage? What is included in installation — mechanical only, or electrical and controls commissioning too? What is the maintenance schedule and cost of wear parts (belts, rollers, bearings)? Can the system be expanded later? What is the energy consumption estimate? What food safety or environmental certifications does the equipment meet?" }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Cost & Pricing Guide | PackagingConveyor.com"
+  description="Understand what drives conveyor costs — type, materials, controls, environment, and installation. Relative cost comparison for 10+ conveyor types. Questions to ask manufacturers."
+  canonical="https://packagingconveyor.com/resources/conveyor-cost-guide/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Cost Guide</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor Cost & <span class="text-accent-bright">Pricing</span> Guide
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor system costs depend on seven primary factors: conveyor type, length and width, frame material, motor and drive type, controls complexity, environment rating (standard, washdown, cleanroom, hazardous), and installation scope. Gravity roller conveyors sit at the low end of the cost spectrum; fully automated packaging lines with PLC controls, servo indexing, and sanitary stainless steel construction sit at the high end. This guide explains each cost factor, provides relative cost comparisons across conveyor types, and lists the questions to ask manufacturers before committing to a quote.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY WE DON'T PUBLISH PRICES ═══ -->
+    <section class="py-16 bg-surface" aria-labelledby="disclaimer-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-l-4 border-accent p-6 bg-accent/5">
+          <h2 id="disclaimer-heading" class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Why This Guide Uses Relative Costs, Not Dollar Amounts</h2>
+          <p class="text-base text-ink-muted leading-relaxed">
+            Published conveyor prices become outdated within months due to steel prices, motor availability, labor rates, and regional differences. A dollar figure without context misleads more than it helps. Instead, this guide uses a relative cost scale ($&ndash;$$$$) and explains the factors that move a project up or down that scale. Armed with this understanding, you can build a meaningful budget estimate by getting 2&ndash;3 quotes from manufacturers for your specific requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 1: CONVEYOR TYPE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="type-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #1</div>
+        <h2 id="type-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Conveyor <span class="text-accent">Type</span>
+        </h2>
+
+        <div class="max-w-4xl mb-10">
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Conveyor type is the single largest cost determinant. A gravity roller section costs a fraction of a servo-driven <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> of the same length. The table below ranks common packaging conveyor types from lowest to highest relative cost per linear foot.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Conveyor Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Drives Cost Up</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Common Applications</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Gravity Roller</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$</td>
+                <td class="py-4 pr-4">Curves, gates, wider widths</td>
+                <td class="py-4">End-of-line, shipping, packing stations</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Flat Belt (basic)</td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$</td>
+                <td class="py-4 pr-4">Belt material, width, food-grade</td>
+                <td class="py-4">Lightweight product transport</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Tabletop Chain</td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$</td>
+                <td class="py-4 pr-4">Stainless chain, curves, sanitary</td>
+                <td class="py-4">Bottles, cans, cartons</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover">Live Roller (belt-driven)</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$</td>
+                <td class="py-4 pr-4">Motor HP, roller diameter, heavy loads</td>
+                <td class="py-4">Case transport, continuous flow</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Powered Roller (chain-driven)</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$–$$$</td>
+                <td class="py-4 pr-4">Heavy-duty rollers, drives, guarding</td>
+                <td class="py-4">Heavy cases, totes, pallet handling</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR (Motor Driven Roller)</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$</td>
+                <td class="py-4 pr-4">Zone count, controls, 24VDC power</td>
+                <td class="py-4"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover">Accumulation</a>, zone control</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Modular Belt</td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$</td>
+                <td class="py-4 pr-4">Belt material, width, sanitary design</td>
+                <td class="py-4"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover">Food processing</a>, incline/decline</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover">Servo Indexing Belt</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$–$$$$</td>
+                <td class="py-4 pr-4">Servo drive/controller, precision belt</td>
+                <td class="py-4">Filling, labeling, pick-and-place</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Spiral</td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$$</td>
+                <td class="py-4 pr-4">Elevation, width, sanitary/freezer</td>
+                <td class="py-4">Elevation change, cooling/freezing</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover">Transfer (right-angle)</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$–$$$$</td>
+                <td class="py-4 pr-4">Lift mechanism, servo control</td>
+                <td class="py-4">Multi-directional routing, pallets</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet Conveyor (chain)</a></td>
+                <td class="py-4 pr-4 font-mono text-sm font-bold">$$$$</td>
+                <td class="py-4 pr-4">Load capacity, safety guarding</td>
+                <td class="py-4">Heavy palletized loads, end-of-line</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">$ = lowest relative cost per linear foot. $$$$ = highest. All comparisons assume standard industrial construction. Sanitary, cleanroom, and hazardous-area ratings shift any type upward.</p>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 2: LENGTH, WIDTH, HEIGHT ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="dims-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #2</div>
+        <h2 id="dims-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Length, Width & <span class="text-accent">Height</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyor cost scales roughly linearly with length — double the length, roughly double the cost for the conveyor section (excluding motors, which serve the entire run). Width has a nonlinear effect: wider conveyors require heavier frames, wider belts or more rollers, and larger motors. A 36-inch-wide conveyor costs significantly more than a 12-inch-wide conveyor of the same length and type.
+          </p>
+          <p>
+            Height (elevation) adds cost through incline/decline sections, support structures, and potentially larger motors to handle the gravitational load. A 10-foot elevation change using an incline belt conveyor requires a longer conveyor run (due to maximum incline angle, typically 15&ndash;30 degrees) and a more powerful motor. Spiral conveyors reduce floor space for elevation changes but sit at the top of the cost scale.
+          </p>
+          <p>
+            <strong class="text-ink">Cost optimization tip:</strong> Minimize conveyor length by optimizing packaging line layout. Every foot of unnecessary conveyor adds equipment cost, floor space, and maintenance. A well-planned layout with machines close together and minimal conveyor runs costs less than a sprawling layout with long transport sections. Work with a layout engineer or integrator like Bastian Solutions or Hytrol distribution partners to optimize your floor plan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 3: MATERIALS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="materials-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #3</div>
+        <h2 id="materials-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Frame & Belt <span class="text-accent">Materials</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Frame Material</h3>
+          <p>
+            Frame material is the second-largest cost driver after conveyor type. Three materials cover most packaging applications:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Painted carbon steel ($):</strong> Standard industrial construction. Lowest cost. Adequate for dry environments handling cases, cartons, and totes. Not suitable for washdown or food-contact applications.</li>
+            <li><strong class="text-ink">Aluminum ($$):</strong> Lightweight, corrosion-resistant, anodized finish. Popular for clean assembly and packaging applications. Extruded aluminum profiles (mk North America, Bosch Rexroth) provide modular construction with T-slot mounting. More expensive than carbon steel but less than stainless.</li>
+            <li><strong class="text-ink">Stainless steel ($$$):</strong> Required for <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary food-grade</a> and pharmaceutical applications. 304 stainless steel is standard for most food environments. 316 stainless steel adds cost but resists salt, acid, and aggressive cleaning chemicals. Stainless steel frame construction adds 50&ndash;100% over painted carbon steel for the same conveyor type and size.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Belt Material</h3>
+          <p>
+            Belt material ranges from commodity PVC to specialty silicone:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">PVC ($):</strong> General-purpose belt for dry applications. Not food-grade in most formulations.</li>
+            <li><strong class="text-ink">Polyurethane ($$):</strong> FDA-approved formulations available for direct food contact. White or blue for visual contamination detection. Standard for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food conveyors</a>.</li>
+            <li><strong class="text-ink">Modular plastic ($$&ndash;$$$):</strong> Interlocking plastic modules. Easy to repair (replace individual modules). Available in food-grade materials. Higher cost but lower long-term maintenance than flat belts.</li>
+            <li><strong class="text-ink">Silicone ($$$):</strong> High-temperature resistance for bakery applications (oven discharge, cooling). FDA-approved. Expensive and less durable than polyurethane.</li>
+            <li><strong class="text-ink">Wire mesh ($$$):</strong> Metal mesh belts for high-temperature or heavy-load applications. Common in baking, cooling, and freezing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 4: MOTORS & DRIVES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="motors-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #4</div>
+        <h2 id="motors-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Motors & <span class="text-accent">Drives</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Motor and drive selection affects both equipment cost and long-term energy cost. The cost hierarchy from lowest to highest:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">No motor — gravity ($):</strong> Gravity conveyors (roller or skatewheel) require no motor. Product moves by gravity or manual push. Lowest equipment and energy cost.</li>
+            <li><strong class="text-ink">Fixed-speed AC motor ($$):</strong> Standard 3-phase AC motor running at a single speed. Simple and reliable. Cannot adjust speed without mechanical changes (sprocket/pulley swap). Suitable for continuous-run transport sections where speed never changes.</li>
+            <li><strong class="text-ink">VFD-controlled AC motor ($$$):</strong> A variable frequency drive controls motor speed electronically. Adjustable speed, soft start/stop, and PLC-controlled speed changes. Standard for most <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>. The VFD adds cost beyond the motor itself.</li>
+            <li><strong class="text-ink">MDR motorized rollers ($$$):</strong> 24VDC brushless motors embedded inside rollers. Each zone has its own motor. Energy efficient (zones run only when product is present). Higher per-zone cost but lower energy and maintenance cost long-term.</li>
+            <li><strong class="text-ink">Servo drives ($$$$):</strong> Precision motion control for <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a>. Programmable position, speed, and acceleration profiles. The servo motor plus drive plus controller costs significantly more than a VFD-controlled AC motor. Justified when the application requires precise positioning (&plusmn;0.5mm or better).</li>
+          </ul>
+          <p>
+            <strong class="text-ink">Washdown motors</strong> (IP69K, stainless steel housing, epoxy-sealed) add a premium over standard enclosed motors. Required in any environment where the conveyor undergoes daily washdown with pressurized water or chemicals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 5: CONTROLS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="controls-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #5</div>
+        <h2 id="controls-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Controls <span class="text-accent">Complexity</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Controls cost is often the most underestimated line item in a conveyor project. The range from simple to complex is dramatic:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Manual start/stop ($):</strong> Push-button station, motor starter, E-stop. Minimal cost. No sensors, no PLC.</li>
+            <li><strong class="text-ink">Basic sensor logic ($$):</strong> Photo-eye sensors with relay logic or a micro-PLC. Conveyor starts when product arrives, stops when product leaves. Adequate for standalone conveyor sections not integrated with other machines.</li>
+            <li><strong class="text-ink">PLC-integrated ($$$):</strong> Allen-Bradley CompactLogix or Siemens S7-1200 PLC with HMI touchscreen. Controls multiple conveyor sections, VFDs, sensors, interlocks, and diagnostics. Includes programming, panel build, wiring, and commissioning. This level represents 15&ndash;25% of total system cost.</li>
+            <li><strong class="text-ink">Full automation ($$$$):</strong> PLC with servo motion, vision integration, <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject system control</a>, recipe management, data logging, OEE reporting, and network connectivity. Includes extensive programming, system integration testing, and commissioning. This level represents 25&ndash;40% of total system cost. See the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a> for details.</li>
+          </ul>
+          <p>
+            <strong class="text-ink">Critical clarification:</strong> When comparing quotes, verify what "controls" includes. Some vendors quote the conveyor with a motor starter and call it "controls included." Others quote a full PLC package. This scope difference can account for the majority of price variation between quotes for the same conveyor type.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 6: ENVIRONMENT ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="env-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #6</div>
+        <h2 id="env-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Environmental <span class="text-accent">Requirements</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The operating environment multiplies the base cost of any conveyor type:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Standard industrial (baseline):</strong> Dry, room-temperature, non-corrosive environment. Painted carbon steel frames, standard motors, standard bearings. This is the cost baseline — all other environments add premium.</li>
+            <li><strong class="text-ink">Washdown (+30&ndash;60%):</strong> Daily water and chemical washdown. Requires stainless steel frames, IP69K motors, sealed bearings, and food-grade belt material. Open-frame construction for drainage. Dorner's AquaPruf and Shuttleworth's slip-torque <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary conveyors</a> are built for washdown environments.</li>
+            <li><strong class="text-ink">Cleanroom (+40&ndash;80%):</strong> ISO Class 5&ndash;8 cleanroom environments for pharmaceutical and electronics. Low-particulate designs with enclosed motors, smooth surfaces, and specialized lubrication. Minimal exposed fasteners. Higher material and fabrication standards add significant cost.</li>
+            <li><strong class="text-ink">Hazardous area (+50&ndash;100%):</strong> ATEX or Class I/II Division-rated environments (explosive dust or gas). Explosion-proof motors, sealed electrical enclosures, intrinsically safe sensors. Requires third-party certification. The highest-cost environment rating.</li>
+            <li><strong class="text-ink">Freezer/cold room (+20&ndash;40%):</strong> Operating temperatures down to -20&deg;F to -40&deg;F. Cold-rated lubricants, condensation-resistant materials, and motors rated for cold start. Stainless steel is standard to prevent corrosion from condensation cycles.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST FACTOR 7: INSTALLATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="install-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Factor #7</div>
+        <h2 id="install-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Installation & <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Installation costs range from 10% to 40% of the equipment cost, depending on site conditions and integration complexity:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Mechanical installation:</strong> Unloading, assembling, leveling, anchoring, and connecting conveyor sections. Simple bolt-together conveyors (Hytrol, Dorner) install faster than welded-frame custom conveyors. Budget for rigging equipment if sections exceed forklift capacity.</li>
+            <li><strong class="text-ink">Electrical installation:</strong> Running power and control cables, connecting motors, wiring sensors, and building or mounting control panels. Electrical scope is proportional to the number of motors, sensors, and the distance between the conveyor and the main electrical panel.</li>
+            <li><strong class="text-ink">Controls commissioning:</strong> PLC programming, sensor calibration, VFD parameter setup, and integration testing with upstream/downstream machines. Commissioning takes 1&ndash;4 weeks for a full packaging line. Requires the equipment vendor's controls engineer on site.</li>
+            <li><strong class="text-ink">Structural supports:</strong> Floor supports, mezzanine penetrations, overhead supports, and building modifications. If the conveyor runs above existing equipment or through walls, structural engineering adds cost and lead time.</li>
+            <li><strong class="text-ink">Removal of existing equipment:</strong> If the new conveyor replaces an existing system, demolition and disposal costs apply. Hazardous materials (lead paint, asbestos in old conveyor insulation) require specialized abatement.</li>
+          </ul>
+          <p>
+            <strong class="text-ink">Cost optimization tip:</strong> Get installation quotes from both the conveyor manufacturer and independent millwright/electrical contractors. Manufacturers charge higher hourly rates but know their equipment. Independent contractors charge less but may need more time to learn the system. For complex integration, use the manufacturer's team for commissioning and an independent crew for mechanical/electrical installation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TOTAL COST OF OWNERSHIP ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="tco-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Beyond Purchase Price</div>
+        <h2 id="tco-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Total Cost of <span class="text-accent">Ownership</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The purchase price represents only 40&ndash;60% of a conveyor's lifetime cost. The remaining 40&ndash;60% accrues over the equipment's 15&ndash;25 year life in energy, maintenance, and downtime:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Energy cost:</strong> <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> consume 50%+ less energy than powered roller conveyors because zones run only when product is present. VFD-controlled motors save 20&ndash;40% vs. fixed-speed motors running continuously. A conveyor running 16 hours/day, 250 days/year accumulates significant energy cost over its life.</li>
+            <li><strong class="text-ink">Wear part replacement:</strong> Belts, rollers, bearings, chains, and sprockets wear and need periodic replacement. Belt replacement frequency depends on product abrasion, belt material, and operating speed. Modular plastic belts cost more upfront but allow section replacement without removing the entire belt.</li>
+            <li><strong class="text-ink">Labor for maintenance:</strong> Conveyors need preventive maintenance — belt tracking, lubrication, roller inspection, motor cleaning, and sensor alignment. MDR conveyors require less maintenance than belt-driven powered roller conveyors (no belts or chains to adjust). The time your maintenance crew spends on conveyors is time they cannot spend on other equipment.</li>
+            <li><strong class="text-ink">Downtime cost:</strong> A conveyor failure that stops a packaging line costs the value of lost production per minute of downtime. Reliable conveyors with redundant features (dual drives, quick belt change, modular zone replacement) cost more upfront but prevent costly downtime events.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ QUESTIONS TO ASK ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="questions-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Buyer's Checklist</div>
+        <h2 id="questions-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Questions to Ask <span class="text-accent">Manufacturers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Use these questions when requesting and evaluating conveyor quotes. They expose hidden cost differences between vendors and prevent scope surprises:
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Scope & Specification</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2">
+            <li>What is included in "controls" — motor starter only, or PLC, HMI, sensors, and VFDs?</li>
+            <li>What frame material is quoted — carbon steel, aluminum, or stainless? What grade of stainless (304 vs 316)?</li>
+            <li>What motor type and efficiency rating (IE1, IE2, IE3) is included?</li>
+            <li>Are sensors, mounting hardware, and wiring included, or are they customer-supplied?</li>
+            <li>What belt material is quoted, and what is the expected belt life at my operating conditions?</li>
+          </ol>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Lead Time & Delivery</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2" start="6">
+            <li>What is the lead time from order to ship? Does that include controls panel build?</li>
+            <li>What is the delivery method — crated freight, flatbed, or vendor installation?</li>
+            <li>Is pre-assembly available? (Pre-assembled conveyor sections reduce on-site installation time.)</li>
+          </ol>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Installation & Commissioning</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2" start="9">
+            <li>What installation services are included — mechanical only, or electrical and controls commissioning?</li>
+            <li>How many days of on-site commissioning are included in the quote?</li>
+            <li>Who provides operator and maintenance training, and how many hours are included?</li>
+          </ol>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Warranty & Support</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2" start="12">
+            <li>What is the warranty period (months) and what does it cover — parts only, or parts and labor?</li>
+            <li>What wear parts are excluded from warranty (belts, rollers, bearings)?</li>
+            <li>What is the estimated annual cost for wear part replacement at my operating conditions?</li>
+            <li>What is the response time for warranty service — phone support hours, on-site response commitment?</li>
+          </ol>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Future Expansion</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2" start="16">
+            <li>Can the system be extended (longer runs, additional sections) in the future?</li>
+            <li>Does the PLC have spare I/O capacity for future sensors, motors, or integration?</li>
+            <li>Can the VFDs and motors handle higher speeds or loads if my throughput requirement increases?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Guides</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/resources/automated-conveyor-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Automated Conveyor Systems</h3>
+            <p class="text-base text-white/60">How automation level affects cost</p>
+          </a>
+          <a href="/conveyor-types/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">All Conveyor Types</h3>
+            <p class="text-base text-white/60">30+ types with specs and cost factors</p>
+          </a>
+          <a href="/conveyor-functions/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Conveyor Functions</h3>
+            <p class="text-base text-white/60">Function-based selection affects cost</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much does a conveyor system cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Conveyor costs depend on seven factors: type, length/width, frame material, motor/drive, controls, environment, and installation. Gravity <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> are the least expensive. Fully automated systems with servo drives and <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary stainless steel</a> construction are the most expensive. Get 2&ndash;3 manufacturer quotes with a detailed specification to compare accurately.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the most expensive part of a conveyor system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Controls and automation typically account for 15&ndash;40% of total cost on <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>. This includes the PLC, HMI, VFDs, servo drives, sensors, control panels, wiring, and programming. For simple conveyors, the frame and drive components dominate cost. For sanitary environments, stainless steel construction adds 50&ndash;100% over carbon steel.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Why do conveyor prices vary so much between quotes?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Quote variation stems from scope differences — materials (carbon steel vs stainless), controls scope (motor starter vs PLC package), motor quality, design engineering time, warranty terms, and installation services. A detailed specification document ensures all vendors bid on the same scope. Use the "Questions to Ask Manufacturers" checklist above to identify scope differences between quotes.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What questions should I ask conveyor manufacturers?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Ask about controls scope (what's included vs. excluded), frame and belt materials, lead time, installation services, commissioning duration, warranty coverage (parts vs. parts + labor), wear part costs, energy consumption, and future expansion capability. See the full 18-question checklist above for the complete list.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
