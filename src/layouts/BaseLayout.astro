@@ -5,10 +5,39 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  schema?: object[];
 }
 
-const { title, description = 'Find the right packaging conveyor system. Get matched with 3 qualified suppliers who compete for your business. Free, no obligation.', canonical } = Astro.props;
+const { title, description = 'Find the right packaging conveyor system. Get matched with at least 3 qualified suppliers who compete for your business. Free, no obligation.', canonical, schema = [] } = Astro.props;
 const siteUrl = 'https://packagingconveyor.com';
+const pageUrl = canonical || siteUrl;
+
+// Default org + website schema on every page
+const defaultSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PackagingConveyor.com",
+    "url": siteUrl,
+    "description": "Free conveyor matching service for packaging, food, pharmaceutical, and industrial applications. Get matched with 3+ qualified conveyor suppliers.",
+    "areaServed": "US",
+    "serviceType": "Conveyor System Supplier Matching"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PackagingConveyor.com",
+    "url": siteUrl,
+    "description": description,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  }
+];
+
+const allSchema = [...defaultSchema, ...schema];
 ---
 
 <!DOCTYPE html>
@@ -19,6 +48,9 @@ const siteUrl = 'https://packagingconveyor.com';
   <title>{title}</title>
   <meta name="description" content={description} />
   {canonical && <link rel="canonical" href={canonical} />}
+
+  <!-- SEO: robots -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,16 +64,28 @@ const siteUrl = 'https://packagingconveyor.com';
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonical || siteUrl} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:site_name" content="PackagingConveyor.com" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Structured Data -->
+  {allSchema.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
 </head>
 <body class="min-h-screen flex flex-col">
   <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-accent flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5">
+        <a href="/" class="flex items-center gap-3 group" aria-label="PackagingConveyor.com home">
+          <div class="w-10 h-10 bg-accent flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5">
               <circle cx="6" cy="18" r="3" />
               <circle cx="18" cy="18" r="3" />
               <circle cx="12" cy="18" r="3" />
@@ -49,40 +93,40 @@ const siteUrl = 'https://packagingconveyor.com';
               <path d="M4 14h16" />
             </svg>
           </div>
-          <div class="font-display text-lg font-bold tracking-wider uppercase leading-none">
+          <div class="font-display text-xl font-bold tracking-wider uppercase leading-none">
             <span class="text-ink">Packaging</span><span class="text-accent">Conveyor</span>
           </div>
         </a>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-1">
-          <a href="/conveyor-types/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Conveyor Types</a>
-          <a href="/industries/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Industries</a>
-          <a href="/conveyor-functions/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Functions</a>
-          <a href="/resources/" class="px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Resources</a>
-          <a href="#get-matched" class="ml-3 px-5 py-2 bg-accent text-white font-display font-bold text-sm tracking-wider uppercase hover:bg-accent-hover transition-colors">
-            Get 3 Quotes
+        <!-- Desktop Nav — bigger click targets -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <a href="/conveyor-types/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors">Conveyor Types</a>
+          <a href="/industries/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors">Industries</a>
+          <a href="/conveyor-functions/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors">Functions</a>
+          <a href="/resources/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors">Resources</a>
+          <a href="/resources/conveyor-cost-guide/" class="ml-4 px-6 py-3 bg-accent text-white font-display font-bold text-base tracking-wider uppercase hover:bg-accent-hover transition-colors">
+            Pricing Guide
           </a>
         </nav>
 
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-ink-muted hover:text-ink" aria-label="Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Mobile menu button — bigger tap target -->
+        <button id="mobile-menu-btn" class="md:hidden p-3 text-ink-muted hover:text-ink" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mobile Nav — bigger links for fat fingers -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-surface">
-      <div class="px-4 py-3 space-y-1">
-        <a href="/conveyor-types/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Conveyor Types</a>
-        <a href="/industries/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Industries</a>
-        <a href="/conveyor-functions/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Functions</a>
-        <a href="/resources/" class="block px-3 py-2 text-sm font-semibold text-ink-muted hover:text-ink">Resources</a>
-        <a href="#get-matched" class="block mt-2 px-5 py-2.5 bg-accent text-white font-display font-bold text-sm tracking-wider uppercase text-center">Get 3 Quotes</a>
-      </div>
+      <nav class="px-4 py-4 space-y-1" aria-label="Mobile navigation">
+        <a href="/conveyor-types/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Conveyor Types</a>
+        <a href="/industries/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Industries</a>
+        <a href="/conveyor-functions/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Functions</a>
+        <a href="/resources/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Resources</a>
+        <a href="/resources/conveyor-cost-guide/" class="block mt-3 px-6 py-4 bg-accent text-white font-display font-bold text-lg tracking-wider uppercase text-center">Pricing Guide</a>
+      </nav>
     </div>
   </header>
 
@@ -98,18 +142,18 @@ const siteUrl = 'https://packagingconveyor.com';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Brand -->
         <div class="lg:col-span-1">
-          <div class="font-display text-xl font-bold tracking-wider uppercase text-white mb-4">
+          <div class="font-display text-2xl font-bold tracking-wider uppercase text-white mb-4">
             Packaging<span class="text-accent">Conveyor</span>
           </div>
-          <p class="text-sm leading-relaxed">
+          <p class="text-base leading-relaxed">
             The packaging industry's conveyor resource. Get matched with qualified suppliers who compete for your business.
           </p>
         </div>
 
         <!-- Conveyor Types -->
         <div>
-          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Conveyor Types</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Conveyor Types</h4>
+          <ul class="space-y-2.5 text-base">
             <li><a href="/conveyor-types/roller-conveyors/" class="hover:text-white transition-colors">Roller Conveyors</a></li>
             <li><a href="/conveyor-types/accumulation-conveyors/" class="hover:text-white transition-colors">Accumulation</a></li>
             <li><a href="/conveyor-types/transfer-conveyors/" class="hover:text-white transition-colors">Transfer</a></li>
@@ -120,8 +164,8 @@ const siteUrl = 'https://packagingconveyor.com';
 
         <!-- Industries -->
         <div>
-          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Industries</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Industries</h4>
+          <ul class="space-y-2.5 text-base">
             <li><a href="/industries/food-conveyors/" class="hover:text-white transition-colors">Food & Beverage</a></li>
             <li><a href="/industries/packaging-line-conveyors/" class="hover:text-white transition-colors">Packaging Lines</a></li>
             <li><a href="/industries/pharmaceutical-conveyors/" class="hover:text-white transition-colors">Pharmaceutical</a></li>
@@ -132,8 +176,8 @@ const siteUrl = 'https://packagingconveyor.com';
 
         <!-- Resources -->
         <div>
-          <h4 class="font-display text-sm font-bold tracking-widest uppercase text-white mb-4">Resources</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Resources</h4>
+          <ul class="space-y-2.5 text-base">
             <li><a href="/resources/conveyor-manufacturers/" class="hover:text-white transition-colors">Manufacturer Directory</a></li>
             <li><a href="/resources/conveyor-cost-guide/" class="hover:text-white transition-colors">Cost & Pricing Guide</a></li>
             <li><a href="/resources/conveyor-design-guide/" class="hover:text-white transition-colors">Design Guide</a></li>
@@ -142,7 +186,7 @@ const siteUrl = 'https://packagingconveyor.com';
         </div>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
         <p>&copy; {new Date().getFullYear()} PackagingConveyor.com. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="/privacy/" class="hover:text-white/70 transition-colors">Privacy</a>
@@ -154,7 +198,10 @@ const siteUrl = 'https://packagingconveyor.com';
 
   <script>
     document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      menu?.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', menu?.classList.contains('hidden') ? 'false' : 'true');
     });
   </script>
 </body>

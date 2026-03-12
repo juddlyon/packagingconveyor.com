@@ -1,0 +1,160 @@
+---
+/**
+ * Email capture component — Phase 1 soft CTA.
+ * "Get the Free Conveyor Buyer's Guide"
+ * Netlify Forms powered with honeypot spam protection.
+ */
+interface Props {
+  id?: string;
+  variant?: 'hero' | 'inline';
+}
+
+const { id = 'email-capture', variant = 'hero' } = Astro.props;
+const isHero = variant === 'hero';
+---
+
+<div id={id} class:list={[
+  "email-capture",
+  isHero ? "bg-ink-light border border-white/10" : "bg-surface border border-border shadow-card",
+  "overflow-hidden"
+]}>
+  <div class={isHero ? "p-6 sm:p-8" : "p-6 sm:p-8"}>
+    <!-- Form state -->
+    <div data-capture-form>
+      <div class="flex items-center gap-3 mb-4">
+        <div class:list={["w-12 h-12 flex items-center justify-center flex-shrink-0", isHero ? "bg-accent/20" : "bg-accent/10"]}>
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        </div>
+        <div>
+          <h3 class:list={[
+            "font-display text-2xl sm:text-3xl font-bold tracking-wide uppercase",
+            isHero ? "text-white" : "text-ink"
+          ]}>
+            Free Conveyor Buyer's Guide
+          </h3>
+        </div>
+      </div>
+
+      <p class:list={["text-base mb-6 leading-relaxed", isHero ? "text-white/60" : "text-ink-muted"]}>
+        Pricing ranges, spec sheets, and selection criteria for 30+ conveyor types. Used by plant engineers and packaging managers to spec conveyor systems.
+      </p>
+
+      <ul class:list={["text-base mb-6 space-y-2", isHero ? "text-white/50" : "text-ink-muted"]}>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+          <span>Pricing ranges for every conveyor type</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+          <span>Selection criteria by application</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+          <span>RFQ template you can send to vendors</span>
+        </li>
+      </ul>
+
+      <!-- Netlify Form -->
+      <form
+        name="buyers-guide"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="space-y-4"
+        id={`${id}-form`}
+      >
+        <input type="hidden" name="form-name" value="buyers-guide" />
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <input type="hidden" name="_form_loaded" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="name"
+            placeholder="Your name"
+            class:list={[
+              "w-full px-5 py-4 text-base border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+              isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+            ]}
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="Work email"
+            class:list={[
+              "w-full px-5 py-4 text-base border focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors",
+              isHero ? "bg-white/5 border-white/15 text-white placeholder-white/30" : "bg-surface border-border text-ink placeholder-ink-muted/50"
+            ]}
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-5 bg-accent text-white font-display font-bold tracking-widest uppercase hover:bg-accent-hover transition-all cursor-pointer flex items-center justify-center gap-3 text-lg"
+        >
+          <span>Send Me the Guide</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </button>
+
+        <p class:list={["text-sm text-center", isHero ? "text-white/30" : "text-ink-muted"]}>
+          Free PDF &middot; No spam &middot; Unsubscribe anytime
+        </p>
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div data-capture-success class="hidden">
+      <div class="text-center py-6">
+        <div class="w-20 h-20 rounded-full bg-green/10 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <h3 class:list={[
+          "font-display text-3xl font-bold tracking-wide uppercase mb-3",
+          isHero ? "text-white" : "text-ink"
+        ]}>
+          Check Your Inbox
+        </h3>
+        <p class:list={["text-lg max-w-sm mx-auto", isHero ? "text-white/60" : "text-ink-muted"]}>
+          Your Conveyor Buyer's Guide is on the way. Check your email in a few minutes.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ id }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const form = document.getElementById(`${id}-form`);
+    if (!form) return;
+
+    const loadTime = Date.now();
+    const loadInput = form.querySelector('[name="_form_loaded"]');
+    if (loadInput) loadInput.value = loadTime.toString();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Timing honeypot
+      if (Date.now() - loadTime < 3000) return;
+
+      const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).then(() => {
+        container.querySelector('[data-capture-form]')?.classList.add('hidden');
+        container.querySelector('[data-capture-success]')?.classList.remove('hidden');
+      }).catch(() => {
+        form.submit();
+      });
+    });
+  });
+</script>
