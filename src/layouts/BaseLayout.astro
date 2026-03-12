@@ -8,9 +8,10 @@ interface Props {
   schema?: object[];
 }
 
-const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, pricing data, and selection criteria for 30+ conveyor types.", canonical, schema = [] } = Astro.props;
+const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [] } = Astro.props;
 const siteUrl = 'https://packagingconveyor.com';
-const pageUrl = canonical || siteUrl;
+const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const pageUrl = canonical || `${siteUrl}${currentPath}`;
 
 // Default org + website schema on every page
 const defaultSchema = [
@@ -41,7 +42,7 @@ const allSchema = [...defaultSchema, ...schema];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  {canonical && <link rel="canonical" href={canonical} />}
+  <link rel="canonical" href={pageUrl} />
 
   <!-- SEO: robots -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
