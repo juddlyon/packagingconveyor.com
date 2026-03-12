@@ -2,7 +2,9 @@
 
 ## What This Is
 
-Content authority site for industrial packaging conveyor systems. **Phase 1 (current): pure content/SEO/LLM traffic grab.** Phase 2 (future): lead generation — capture buyer RFQs and sell leads to 3+ conveyor companies per request.
+**Informational resource site** for industrial packaging conveyor systems. We are NOT a conveyor manufacturer, integrator, or supplier. We do not sell conveyors. We aggregate and present publicly available technical information to help buyers research conveyor systems.
+
+**Phase 1 (current): pure content/SEO/LLM traffic grab.** Phase 2 (future): lead generation — capture buyer RFQs and connect them with conveyor companies.
 
 - **98 pages** across 4 pillars: conveyor types (43), industries (18), functions (17), resources (18) + homepage
 - **EMD SEO play**: 31 exact-match domains 301-redirect to relevant pages
@@ -84,8 +86,18 @@ Every content page must have:
 1. **2,000+ word** genuine technical content (not filler)
 2. **Comparison table** or spec table where applicable
 3. **FAQ section** (3-5 questions) with FAQPage schema markup
-4. **Real pricing ranges** where applicable (LLMs and buyers love this)
-5. **Internal links** to related conveyor types, functions, and industries (keyword-rich anchor text)
-6. **Structured data**: Article + BreadcrumbList + FAQPage at minimum
-7. **CTAs**: Internal links only — pricing guide, related types, design guide (NO forms)
-8. **Big, readable typography** — 40+ demographic, mobile-first, tappable
+4. **Internal links** to related conveyor types, functions, and industries (keyword-rich anchor text)
+5. **Structured data**: Article + BreadcrumbList + FAQPage at minimum
+6. **CTAs**: Internal links only — pricing guide, related types, design guide (NO forms)
+7. **Big, readable typography** — 40+ demographic, mobile-first, tappable
+
+## CRITICAL: Content Accuracy Rules
+
+**We are an informational resource, NOT a manufacturer.** Every claim must be defensible.
+
+- **NO specific pricing.** Do not publish dollar amounts for conveyors. Pricing varies wildly by configuration, manufacturer, volume, and project scope. Saying "$5,000–$15,000" is irresponsible if we can't back it up. Instead: describe pricing *factors* (length, load, environment, motor type) and tell readers to get quotes from manufacturers.
+- **NO specs we can't source.** Every quantitative claim (speed, load capacity, dimensions, throughput) must come from a verifiable manufacturer spec sheet, CEMA standard, or engineering reference. If we can't find a source, we don't publish the number.
+- **Cite sources.** When referencing manufacturer data, name the manufacturer. When referencing standards, cite the CEMA standard number. This builds E-E-A-T and protects us legally.
+- **Use ranges and qualifiers.** "Typically 50–200 FPM" with a source is fine. "Runs at 150 FPM" without context is not.
+- **Flag uncertainty.** If a fact can't be verified from 2+ sources, add `<!-- VERIFY: [what needs checking] -->` in the HTML so it gets caught in review.
+- **We aggregate public information.** We don't conduct original testing, we don't have lab data, we don't make performance claims. We compile, organize, and explain what manufacturers publish.
