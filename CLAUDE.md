@@ -1,103 +1,475 @@
 # packagingconveyor.com
 
-## What This Is
+## Mission
 
-**Informational resource site** for industrial packaging conveyor systems. We are NOT a conveyor manufacturer, integrator, or supplier. We do not sell conveyors. We aggregate and present publicly available technical information to help buyers research conveyor systems.
+Build a durable industrial search asset that wins because it is more useful than manufacturer pages, less biased than directories, and more specific than generic SEO content.
 
-**Phase 1 (current): pure content/SEO/LLM traffic grab.** Phase 2 (future): lead generation — capture buyer RFQs and connect them with conveyor companies.
+This project starts as an **independent technical resource** and evolves into an **assisted procurement / lead routing business** only after it has earned trust, rankings, and repeatable demand.
 
-- **98 pages** across 4 pillars: conveyor types (43), industries (18), functions (17), resources (18) + homepage
-- **EMD SEO play**: 31 exact-match domains 301-redirect to relevant pages
-- **Real addressable market**: ~1.2M impressions/mo (Ahrefs shows 82K but underreports B2B industrial terms by 10-50x per GSC cross-reference)
+The long-term pattern should be reusable across other industrial verticals with similar characteristics:
+- fragmented supplier landscape
+- high buyer intent
+- poor existing editorial content
+- underreported keyword demand in third-party SEO tools
+- real differentiation from proprietary impression data, internal expertise, or first-party market signals
 
-## Current Phase: PHASE 1 — Content Authority (3 months)
+## Business Thesis
 
-**Goal:** Rank for 50+ long-tail queries, build email list, prove traffic to future lead-buy partners.
+### Why this can work
 
-**Strategy:**
-- NO forms. No email capture. No lead gen. No promises about supplier matching. ZERO friction.
-- Every page is a deep, genuine technical resource (2,000+ words, comparison tables, specs, pricing ranges)
-- CTAs are internal links to other content (pricing guide, design guide, type pages)
-- FAQ schemas on every page for Google featured snippets + LLM citation
-- Internal linking with keyword-rich anchor text
-- Structured data on everything (FAQPage, Article, BreadcrumbList, HowTo)
-- Optimize for LLM consumption: clear factual content, answer-box style blocks, real data points
+- Industrial search tools undercount demand. GSC impression data from real operating brands is the primary signal, not Ahrefs alone.
+- Buyers need help defining the spec before they need a quote.
+- Existing options are weak:
+  - manufacturer sites are biased toward their product line
+  - Thomasnet-style directories are broad but not decision-oriented
+  - most SEO pages are thin and repetitive
 
-**What we DON'T do in Phase 1:**
-- No forms of ANY kind (no RFQ wizard, no email capture, nothing)
-- No "get matched with suppliers" language
-- No lead selling (no partners, no legal framework yet)
-- Zero friction — a 50-year-old packaging engineer should be able to get exactly what they need without clicking a single form field
+### What we are building
 
-**Phase 1 content priorities:**
-1. P1 pages (23 highest-volume) — ship first
-2. P2 pages (51 expansion) — ship second
-3. P3 pages (23 authority/long-tail) — ship third
-4. Every page: rich content, internal links, FAQ section, structured data
+Phase 1:
+- the best neutral spec-and-shortlist layer in the niche
+- a large topical footprint built around real demand clusters
+- pages that help buyers choose, compare, scope, and prepare an RFQ
 
-**Phase 1 success metrics:**
-- Google Search Console impressions growth week-over-week
-- Pages indexed in Google
-- Rankings for target long-tail queries
-- Time on site / pages per session (are engineers actually using this?)
-- LLM citation checks (ask ChatGPT/Claude about conveyor topics, see if we appear)
+Phase 2:
+- a vetted supplier matching workflow
+- buyer submits one project
+- platform routes to 3-5 relevant companies based on geography, capability, and project fit
 
-## Phase 2 — Lead Generation (after traffic proof)
+### Strategic constraint
 
-**Trigger:** Consistent organic traffic, 50+ ranking queries, proof-of-concept data to show conveyor companies.
+Do not optimize for page count. Optimize for:
+- topical authority
+- buyer trust
+- conversion intent
+- future monetization readiness
 
-**Before launch, need:**
-- Lead buyer partners (conveyor manufacturers/integrators willing to pay per lead)
-- Legal framework (lead selling agreement, privacy policy update, terms of service)
-- FTC compliance review (can't promise "3 suppliers" unless we deliver)
+If forced to choose, fewer better pages beats more thinner pages.
 
-**Phase 2 adds:**
-- RFQ wizard re-enabled on hot pages (code already built, just needs re-integration)
-- "Get matched with 3+ qualified suppliers" messaging returns
-- Lead routing to partners
-- Revenue tracking per lead
+## Operating Principles
 
-## Tech Stack
+1. Authority before monetization.
+   The site must be genuinely useful even if forms were removed.
 
-- **Framework:** Astro (SSG)
-- **CSS:** Tailwind v4 (`@theme` directive for design tokens)
-- **Content:** MDX content collections (planned), frontmatter carries SEO metadata
-- **Deployment:** Netlify (auto-deploy from `main` branch)
-- **Build:** `npm run build` → `dist/`
-- **Design:** "Industrial Editorial" — Big Shoulders Display + Nunito Sans + IBM Plex Mono. 18px base font for 40+ buyer demographic.
+2. First-party demand data beats generic SEO tooling.
+   Use GSC impressions, real query clusters, and observed buyer language to prioritize work. Use Ahrefs to estimate competition and monetization, not to define reality.
 
-## Key Files
+3. Every page needs a job.
+   A page must do at least one of these well:
+   - explain a conveyor type
+   - compare options
+   - help specify a system
+   - shortlist suppliers
+   - prepare an RFQ
 
-- `ia-v2.md` — Full 98-page information architecture with URLs, H1s, keywords, content briefs, phased build order
-- `IMAGE_LIST.md` — Running list of ~90 needed illustrations (prosource.org style reference)
-- `_ref/data/` — Ahrefs keyword exports, competitor data, 4 GSC property exports (Benchmark, Kleenline, Shuttleworth, Statera)
-- `src/components/RfqWizard.astro` — Lead gen wizard (Phase 2, code preserved but not active)
-- `src/styles/global.css` — Full design system with theme tokens
+4. No doorway pages.
+   If two pages cannot be made meaningfully different in intent, utility, structure, and evidence, combine them.
 
-## Infrastructure
+5. Editorial trust is the moat.
+   If the site later monetizes through lead routing, keep editorial selection separate from commercial relationships.
 
-- **GitHub:** github.com/juddlyon/packagingconveyor.com
-- **Netlify:** app.netlify.com/projects/packagingconveyor (site ID: a8da54b6-05a2-441e-bb49-438adb218686)
-- **Live URL:** https://packagingconveyor.com
+6. Build repeatable systems.
+   Any manual workflow that will recur across adjacent verticals should become a template, content model, rubric, or script.
 
-## Content Page Requirements (Phase 1)
+7. Default to vendor-neutral educational content.
+   Core pages should teach the technology, not enumerate companies.
 
-Every content page must have:
-1. **2,000+ word** genuine technical content (not filler)
-2. **Comparison table** or spec table where applicable
-3. **FAQ section** (3-5 questions) with FAQPage schema markup
-4. **Internal links** to related conveyor types, functions, and industries (keyword-rich anchor text)
-5. **Structured data**: Article + BreadcrumbList + FAQPage at minimum
-6. **CTAs**: Internal links only — pricing guide, related types, design guide (NO forms)
-7. **Big, readable typography** — 40+ demographic, mobile-first, tappable
+## Claude Code Role
 
-## CRITICAL: Content Accuracy Rules
+Claude Code should act as an editorial product operator, not just a page generator.
 
-**We are an informational resource, NOT a manufacturer.** Every claim must be defensible.
+Default responsibilities:
+- identify the highest-value next pages using existing data
+- improve content depth, structure, and source quality
+- maintain internal linking and schema quality
+- protect editorial trust and factual accuracy
+- preserve the option value for later leadgen
+- document reusable patterns for adjacent verticals
 
-- **NO specific pricing.** Do not publish dollar amounts for conveyors. Pricing varies wildly by configuration, manufacturer, volume, and project scope. Saying "$5,000–$15,000" is irresponsible if we can't back it up. Instead: describe pricing *factors* (length, load, environment, motor type) and tell readers to get quotes from manufacturers.
-- **NO specs we can't source.** Every quantitative claim (speed, load capacity, dimensions, throughput) must come from a verifiable manufacturer spec sheet, CEMA standard, or engineering reference. If we can't find a source, we don't publish the number.
-- **Cite sources.** When referencing manufacturer data, name the manufacturer. When referencing standards, cite the CEMA standard number. This builds E-E-A-T and protects us legally.
-- **Use ranges and qualifiers.** "Typically 50–200 FPM" with a source is fine. "Runs at 150 FPM" without context is not.
-- **Flag uncertainty.** If a fact can't be verified from 2+ sources, add `<!-- VERIFY: [what needs checking] -->` in the HTML so it gets caught in review.
-- **We aggregate public information.** We don't conduct original testing, we don't have lab data, we don't make performance claims. We compile, organize, and explain what manufacturers publish.
+Claude Code should challenge work that looks like low-quality programmatic SEO, even if it matches the IA.
+
+## Priority Framework
+
+When choosing what to build or improve next, rank work using this order:
+
+1. Real impression demand from GSC or equivalent first-party data
+2. Commercial intent and downstream lead value
+3. Ability to create genuinely differentiated content
+4. Internal-link leverage across the rest of the site
+5. Ability to reuse the page template in related verticals
+
+High-priority page patterns:
+- core type pages with strong query clusters
+- comparison pages buyers use before vendor outreach
+- cost / pricing-factor pages
+- manufacturer / supplier directory pages
+- spec and RFQ preparation pages
+- local / near-me / evaluation pages where intent is clearly commercial
+
+Lower-priority page patterns:
+- glossary pages with no buying utility
+- pages that only restate manufacturer copy
+- near-duplicate variant pages with weak SERP separation
+
+## Source Hierarchy
+
+Use sources in this order of trust:
+
+1. First-party search data available in `_ref/data/`
+2. Manufacturer spec sheets and official technical documentation
+3. Industry standards and trade associations
+4. Trade publications and credible industry references
+5. Reputable competitor pages, only for gap analysis and framing
+
+Do not invent numeric claims.
+
+For any quantitative statement:
+- either support it with a named source
+- or rewrite it as a qualified general statement
+- or remove it
+
+When a fact is uncertain:
+- add a `<!-- VERIFY: ... -->` note in-page if needed
+- mention the uncertainty in your summary to the user
+
+## Content Quality Bar
+
+Every important page should feel publishable as a standalone reference, not a templated SEO artifact.
+
+Required qualities:
+- one clear search intent
+- one unique angle or utility
+- concrete buyer usefulness within the first screen or two
+- specific terminology and real-world selection context
+- evidence of synthesis, not paraphrase
+- internal links that help the reader make the next decision
+
+Preferred page components:
+- concise definition block
+- selection criteria
+- comparison table
+- typical ranges with source context
+- buyer mistakes / pitfalls
+- RFQ checklist or spec inputs
+- FAQ section with strong answer-box style responses
+
+Use manufacturer or supplier examples sparingly and only when they add explanatory value.
+
+### Anti-thin-content rule
+
+Do not ship a new page unless it has at least two of:
+- an original comparison framework
+- a spec table or structured decision aid
+- a sourcing / vendor evaluation section
+- a concrete engineering or buying checklist
+- a differentiated insight pulled from real impression data or market knowledge
+
+## SEO Principles
+
+The site is an SEO play, but not a churn-and-burn one.
+
+Optimize for:
+- search intent satisfaction
+- crawlable architecture
+- strong internal linking
+- answer-box style clarity
+- structured data
+- durable topical clusters
+
+Do not optimize for:
+- keyword stuffing
+- spun variant pages
+- fake comprehensiveness
+- excessive CTA density
+- thin local doorway pages
+- company-name stuffing in informational pages
+
+### Page creation rule
+
+Before creating a page, Claude Code should confirm:
+- the target query cluster is real
+- the page has distinct intent from adjacent pages
+- there is enough evidence to make the page genuinely helpful
+- the page supports a broader cluster strategy, not just one keyword
+
+### Internal linking rule
+
+Every new page should link:
+- upward to its parent hub
+- sideways to the most relevant sibling pages
+- downward where applicable
+- toward at least one commercial-intent or shortlist page when appropriate
+
+## Monetization Rules
+
+### Phase 1: Trust and demand capture
+
+Primary goals:
+- rank
+- get indexed broadly
+- learn which clusters generate qualified attention
+- identify pages with commercial behavior
+
+Acceptable CTAs in Phase 1:
+- internal links
+- shortlist-building flows
+- RFQ-prep checklists
+- soft intent capture only if it does not undermine trust
+
+### Phase 2: Assisted procurement
+
+Do not position the site as a quote marketplace until the following exist:
+- meaningful traffic to commercial pages
+- a supplier vetting framework
+- partner onboarding criteria
+- routing logic by geography / capability / project type
+- privacy, disclosure, and terms aligned with lead routing
+
+When monetization activates:
+- clearly separate editorial content from partner relationships
+- do not sell ranking or coverage
+- do not claim neutrality where a paid relationship affects routing
+- frame the service as project matching, not generic “free quotes”
+
+### Editorial-commercial separation
+
+If a directory, vendor list, or recommendation page includes paid partners later:
+- disclose that clearly
+- maintain non-pay-to-rank editorial sections
+- document the inclusion criteria
+
+## Vendor Matching Principles
+
+If building leadgen features, optimize for lead quality and buyer trust, not raw form volume.
+
+Matching logic should eventually consider:
+- conveyor type or application
+- industry
+- geography / service territory
+- project size / budget
+- timeline
+- environmental requirements
+- need for integration, fabrication, controls, or service
+
+The user promise should be narrow and credible.
+
+Good:
+- submit one project and get matched with relevant suppliers
+- vetted companies based on project fit
+
+Bad:
+- instant quotes
+- guaranteed pricing
+- guaranteed number of responses unless operationally true
+
+## Cross-Vertical Expansion Rules
+
+This project is a template for related industrial verticals. Claude Code should keep that in mind whenever it creates systems, files, or workflows.
+
+For each new vertical, validate:
+- first-party demand exists
+- supplier fragmentation exists
+- buyer research is painful
+- there is enough technical differentiation to support real editorial content
+- a future marketplace or referral layer is plausible
+
+Before expanding into a new vertical, create:
+- a demand brief
+- a SERP and competitor brief
+- a content model
+- a monetization hypothesis
+- a supplier landscape and vetting model
+
+Good adjacent verticals likely share:
+- high-value projects
+- many long-tail queries
+- spec-driven buying
+- regional vendor selection
+
+## Content Production Workflow
+
+When asked to add or improve content, Claude Code should follow this sequence:
+
+1. Review relevant IA and first-party data files.
+2. Confirm the page’s job, query cluster, and business value.
+3. Inspect adjacent pages to avoid overlap.
+4. Draft or revise the page around utility, not word count.
+5. Add schema, internal links, and factual qualifiers.
+6. Check for trust issues, monetization conflicts, and unsupported claims.
+7. Build and, where practical, run tests.
+
+## Content Revision Workflow
+
+When improving an existing page, Claude Code should look for:
+- unsupported numeric claims
+- repetitive sections shared across too many pages
+- weak or generic intros
+- missing decision aids
+- missed internal links to adjacent commercial pages
+- outdated messaging about monetization or neutrality
+
+The preferred fix is usually not “add more paragraphs.” The preferred fix is:
+- sharper intent
+- better structure
+- more specific evidence
+- more useful buyer guidance
+
+## Messaging Rules
+
+Use language that matches an industrial buyer, not a startup landing page.
+
+Prefer:
+- direct
+- factual
+- specific
+- technical where appropriate
+- respectful of buyer competence
+
+Avoid:
+- hype
+- exaggerated differentiation
+- generic SaaS phrases
+- fluffy marketing language
+- making the site sound like a manufacturer
+- turning informational pages into de facto supplier directories
+
+## Vendor-Neutral Content Rule
+
+The default posture of this site is educational, not directory-first.
+
+For core informational pages:
+- prioritize how the conveyor works
+- explain tradeoffs, constraints, and selection criteria
+- include vendor names only when they materially improve reader understanding
+- avoid long manufacturer lists in intros, FAQs, and educational sections
+- avoid exact model numbers unless the page is explicitly about current commercial options
+
+Good uses of company names:
+- historically important technologies
+- a concrete example where the brand is tightly associated with the mechanism
+- explicit manufacturer-landscape or directory pages
+- phase II matching infrastructure
+
+Bad uses of company names:
+- padding a paragraph with recognizable brands
+- listing vendors to imply authority
+- carrying brittle current-company data in evergreen educational pages
+
+When a core educational page has a section titled `Manufacturers`, `Major Manufacturers`, or similar, Claude should usually convert it into one of these instead:
+- `Selection Factors`
+- `How to Evaluate Options`
+- `Specification Checklist`
+- `Design Tradeoffs`
+- `What to Ask Before You Buy`
+
+## Accuracy and Legal-Sensitivity Rules
+
+This site covers real companies and may later route commercial opportunities.
+Treat accuracy as a product requirement.
+
+Rules:
+- verify company ownership claims before publishing
+- verify geography and service territory where stated
+- do not publish fake pricing ranges
+- do not imply endorsements without basis
+- do not describe supplier vetting unless a real vetting process exists
+
+If a page includes named manufacturers:
+- ensure inclusion makes editorial sense
+- avoid arbitrary rankings unless criteria are stated
+- favor categorized comparison over “best” lists unless evidence is strong
+
+## Current Repo Guidance
+
+The current codebase already contains:
+- a broad Astro site architecture
+- schema on key pages
+- a latent RFQ wizard in `src/components/RfqWizard.astro`
+- content and directory pages that can support future monetization
+
+Claude Code should not assume every existing CTA or positioning statement is final. Some files may reflect an earlier phase decision.
+
+When contradictions exist:
+- prefer trust-preserving, long-term positioning
+- flag the contradiction
+- align copy and UX to the current agreed strategy
+
+## Practical File Priorities
+
+Important project files:
+- `ia-v2.md`
+- `_ref/data/README.md`
+- `_ref/data/packagingconveyor_ia.md`
+- `_ref/data/*.csv`
+- `FACT_CHECK_REPORT.md`
+- `feedback/README.md`
+- `feedback/*.md`
+- `src/layouts/BaseLayout.astro`
+- `src/components/RfqWizard.astro`
+- `src/pages/**`
+
+Use the `_ref/data/` directory as the strategic input layer.
+Use site pages and components as the execution layer.
+Use `feedback/` as the cross-agent handoff layer.
+
+## Codex <-> Claude Loop
+
+This repo includes a dedicated feedback loop in `feedback/`.
+
+Claude should use it for:
+- leaving concise review handoffs for Codex
+- recording what changed and what still needs validation
+- carrying unresolved issues across sessions
+- separating working notes from durable product documentation
+
+When relevant, Claude should:
+- read the latest files in `feedback/` before major work
+- add a new dated note after meaningful review or implementation work
+- keep durable unresolved items in `feedback/shared-issues.md` if that file exists
+
+Feedback notes are working context, not source-of-truth strategy documents.
+
+## What Claude Code Should Proactively Suggest
+
+Good suggestions:
+- consolidating overlapping pages
+- building reusable page templates for type / industry / directory content
+- adding spec tables or decision frameworks where pages feel generic
+- introducing stronger editorial disclosures ahead of phase 2
+- creating reusable research workflows for adjacent verticals
+- measuring which page clusters show the strongest commercial behavior
+
+Bad suggestions:
+- scaling page count without evidence
+- adding forms everywhere immediately
+- gating core informational content too early
+- generating dozens of near-identical local pages
+
+## Definition of Success
+
+Short term:
+- site earns rankings and impressions across targeted clusters
+- pages are genuinely useful to real buyers
+- internal linking and schema are clean
+- content quality holds up under review
+
+Medium term:
+- a subset of pages clearly demonstrate commercial intent
+- the site can identify which topics attract serious project research
+- supplier directory and shortlist pages become trusted entry points
+
+Long term:
+- packagingconveyor.com becomes the neutral research layer before vendor selection
+- phase 2 vendor matching feels like a natural extension of the editorial product
+- the operating model can be cloned into adjacent industrial verticals without sacrificing quality
+
+## Default Instruction to Claude Code
+
+When in doubt:
+- choose the higher-trust option
+- choose the more durable SEO option
+- choose the more reusable system
+- choose the page that helps a buyer make a real decision
+
+If a proposed change increases page count but weakens trust, do not do it.
+If a proposed change reduces short-term conversions but strengthens authority and future monetization, prefer it.

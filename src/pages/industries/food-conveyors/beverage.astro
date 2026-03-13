@@ -1,0 +1,460 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Food Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Beverage Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/beverage/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an air conveyor for beverage bottles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An air conveyor uses pressurized air jets to move empty PET bottles by their neck rings along a stainless steel or UHMW rail. The bottles hang from the neck ring and glide on an air cushion at speeds up to 2000+ bottles per minute. Air conveyors eliminate belt contact with the bottle body, preventing scuffing and contamination. They connect blow molders to fillers in high-speed beverage lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor speeds do beverage lines run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Beverage line conveyor speeds vary by container type and line section. High-speed PET water and carbonated soft drink lines run 600-2000+ containers per minute (CPM). Beer and craft beverage lines typically run 100-600 CPM. Juice and dairy lines run 100-400 CPM. The filler sets the line speed, and upstream/downstream conveyors run faster to provide accumulation buffer." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a mass flow accumulator conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A mass flow accumulator is a wide conveyor section where containers spread from single-file into a mass of containers side-by-side. It provides buffer capacity between machines with different speeds or during short stops. When the downstream machine stops, containers accumulate on the wide belt. When it restarts, the accumulator releases containers back into single file. Serpentine accumulators provide similar buffering in a smaller footprint." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do beverage conveyors need to handle wet environments?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Beverage plants use water extensively — for rinsing, pasteurizing, cooling filled containers, CIP cleaning, and washdown. Conveyors operate in standing water, spray zones, and high-humidity environments. Components must resist corrosion (stainless steel 304 or 316 frames, plastic belts or chains) and feature sealed bearings, covered drives, and drainage provisions to prevent bacterial harborage." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Beverage Packaging Conveyors: Air Conveyors, Accumulators & High-Speed Lines",
+  "description": "Technical guide to beverage packaging conveyors — air conveyors for PET bottles, mass flow accumulators, single-filing, can conveying, wet environment design, and high-speed beverage line integration.",
+  "url": "https://packagingconveyor.com/industries/food-conveyors/beverage/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Beverage Packaging Conveyors: Air Conveyors, Accumulators & High-Speed Lines | PackagingConveyor.com"
+  description="Technical guide to beverage packaging conveyors — air conveyors for PET bottles, mass flow accumulators, single-filing and laning, can conveyors, wet environment design, and high-speed line integration."
+  canonical="https://packagingconveyor.com/industries/food-conveyors/beverage/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/food-conveyors/" class="hover:text-white/70">Food Conveyors</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Beverage Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Industry</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Beverage <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Beverage packaging conveyors transport bottles, cans, cartons, and pouches through filling, capping, labeling, case packing, and palletizing at speeds from 100 to 2000+ containers per minute (CPM). These systems include air conveyors for empty PET bottles, tabletop chain conveyors for filled containers, mass flow accumulators for line buffering, and magnetic conveyors for steel can handling. Beverage conveyors operate in wet, washdown-intensive environments and must resist corrosion while maintaining the speed, stability, and gentle handling that high-throughput beverage operations demand.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ AIR CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="air-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Empty Bottle Transport</div>
+        <h2 id="air-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Air Conveyors for <span class="text-accent">PET Bottles</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Air conveyors move empty PET bottles by suspending them from their neck rings on a guide rail and propelling them with pressurized air. The bottle body never contacts a belt or chain surface. This eliminates scuff marks, reduces contamination risk, and allows speeds exceeding 2000 bottles per minute on high-speed water and CSD (carbonated soft drink) lines.
+          </p>
+          <p>
+            The air conveyor consists of a stainless steel or UHMW (ultra-high molecular weight polyethylene) channel that cradles the neck ring, with air nozzles spaced along the channel that direct jets of filtered, compressed air against the bottle body. The air pressure differential between front and back of each bottle propels it forward. Adjustable air pressure controls bottle speed and spacing.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Blow Molder to Filler Connection</h3>
+          <p>
+            In integrated beverage plants, the stretch blow molder produces empty PET bottles and discharges them directly onto an air conveyor that feeds the filler. This blow-fill connection eliminates the need for bulk bottle storage and reduces contamination exposure. The air conveyor includes curves, inclines, and declines to route bottles from the blow molder (often on a mezzanine) down to the filler on the production floor. Integrated blow-fill lines with air conveyor connections are standard on high-speed water and CSD lines.
+          </p>
+          <p>
+            Air conveyor routing must account for bottle orientation — bottles travel neck-up and must maintain that orientation through all turns and elevation changes. Improperly designed curves cause bottles to tilt, jam, or fall off the neck rail. Curve radii, air pressure at curves, and guide rail geometry must be engineered for the specific bottle dimensions and weight.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Air Conveyor Considerations</h3>
+          <p>
+            Air conveyors consume significant compressed air — a major operating cost. A 100-meter air conveyor running at full speed can use 500-1000+ SCFM of compressed air. Energy-efficient designs use low-pressure blowers instead of plant compressed air, reducing energy consumption by 40-60%. Some modern systems use a combination of mechanical conveying (tabletop chain) and short air conveyor sections only where non-contact handling is critical.
+          </p>
+          <!-- VERIFY: Typical SCFM consumption ranges for beverage air conveyors -->
+          <p>
+            Lightweight bottles (below 10 grams for 500 mL water bottles) are particularly sensitive to air conveyor settings. Excessive air pressure deforms the thin-walled bottles. Insufficient pressure causes jams. Changeover between bottle sizes requires adjusting neck rail width, air pressure, and guide rail height — a process that takes 15-30 minutes on well-designed systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TABLETOP CHAIN ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="tabletop-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Filled Container Transport</div>
+        <h2 id="tabletop-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Tabletop Chain <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop chain conveyors</a> are the workhorse of beverage packaging lines. Filled bottles, cans, and cartons ride on a flat-top chain running over a stainless steel wear strip. The chain provides a stable, continuous surface that handles the weight of filled containers while maintaining precise spacing for downstream machines.
+          </p>
+          <p>
+            Beverage tabletop chains come in several configurations depending on application:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Straight-running chains:</strong> Standard flat-top chains for straight conveyor sections. Acetal (POM) or stainless steel links. Acetal is lighter, quieter, and lower friction; stainless steel handles higher loads and wet environments with less wear.</li>
+            <li><strong class="text-ink">Side-flexing chains:</strong> Chains with pivot links that allow horizontal curves. Minimum curve radius depends on chain pitch — smaller pitch allows tighter curves. Side-flexing chains enable S-curves, 90-degree turns, and serpentine layouts without transferring containers between conveyors.</li>
+            <li><strong class="text-ink">Low-friction chains:</strong> Chains with reduced coefficient of friction for low-backpressure accumulation. Containers slide on the chain surface when held by a downstream gate. Standard chains with high friction cause containers to tip under backpressure; low-friction chains allow containers to accumulate without tipping.</li>
+            <li><strong class="text-ink">Magnetic chains:</strong> Chains with embedded magnets or magnetized steel tops for transporting steel (tinplate) cans. The <a href="/conveyor-types/magnetic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">magnetic conveyor</a> holds cans securely through inclines, declines, and inversions — critical for can rinsing and drying operations where cans run inverted.</li>
+          </ul>
+          <p>
+            Chain selection affects noise level, container stability, wear life, and maintenance cost. High-speed lines (800+ CPM) generate significant noise from container-to-chain and container-to-container contact. Noise reduction strategies include low-friction chain surfaces, guide rail materials with damping properties, and reduced conveyor speed differentials between sections.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ACCUMULATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="accum-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Line Buffering</div>
+        <h2 id="accum-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Accumulation & <span class="text-accent">Storage Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Beverage lines run at high speed, and every machine in the line has a different uptime and efficiency. Without accumulation between machines, a single machine stoppage halts the entire line. <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> buffer containers between machines to absorb short stops (30 seconds to 5 minutes) and maintain upstream and downstream machine utilization.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Mass Flow Accumulators</h3>
+          <p>
+            A mass flow accumulator widens the conveyor from single-file width (one container wide) to a broad table (6-20+ containers wide). Containers spread across the wide surface under low-pressure mass flow. When the downstream machine stops, containers continue to fill the wide accumulation table. When the downstream machine restarts, the accumulator funnels containers back into single file for release.
+          </p>
+          <p>
+            Mass flow accumulator capacity depends on table width, length, and container size. A 6-foot-wide by 20-foot-long accumulator table holds approximately 2000-4000 standard 12-ounce cans — providing 1 to 4 minutes of buffer at 1000 CPM. Accumulator tables use low-friction chain surfaces to minimize container tipping under mass-flow pressure. Dead plates (stainless steel transition plates between chain runs) must be flush with the chain surface to prevent container catching.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Serpentine Accumulators</h3>
+          <p>
+            <a href="/conveyor-types/serpentine-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Serpentine accumulators</a> use a single-file conveyor that weaves back and forth in multiple parallel passes. Total accumulation length equals the number of passes multiplied by the length of each pass. A serpentine accumulator with 10 passes of 20 feet each provides 200 feet of single-file accumulation in a 20-foot-long footprint.
+          </p>
+          <p>
+            Serpentine accumulators maintain container orientation (label facing forward) better than mass flow tables, which randomize container orientation. This matters for labeled containers heading to inspection or case packing. Serpentine systems also handle unstable containers (tall, narrow bottles) better than mass flow, since containers remain single-file and supported by side rails.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Accumulation Strategy</h3>
+          <p>
+            Beverage line engineers place accumulation at critical points: between the filler and the labeler, between the labeler and the case packer, and between the case packer and the palletizer. The filler is the most expensive machine and the line speed reference — accumulation upstream and downstream of the filler maximizes filler utilization. Industry targets 95-98% filler efficiency, which requires adequate accumulation to cover downstream stops.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LANING AND SINGLE-FILING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="laning-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Container Flow</div>
+        <h2 id="laning-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Single-Filing & <span class="text-accent">Laning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Most beverage packaging machines — fillers, labelers, cappers — process containers in single file or in a fixed number of lanes. Conveyors must transition containers between mass flow (wide, multi-row) and single file (one row) at multiple points in the line. <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating and laning conveyors</a> manage these transitions.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Mass Flow to Single File</h3>
+          <p>
+            Converging containers from a wide mass flow table into a single-file lane requires a funnel section — tapered guide rails that progressively narrow the container stream. The funnel section uses low-friction chain and gradually increasing conveyor speed (speed-up sections) to space containers and reduce pressure as they converge. Poor funnel design causes container jams, tipping, and label damage at the convergence point.
+          </p>
+          <p>
+            Design parameters for funnel sections include taper angle (typically 15-30 degrees), chain speed increase ratio (1.5:1 to 3:1 from wide section to single-file), and guide rail material (UHMW for low friction and container protection). Round containers funnel more reliably than square or rectangular containers, which interlock and bridge across the funnel.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Multi-Lane Dividing</h3>
+          <p>
+            Case packers and tray packers require containers in multiple parallel lanes — typically 3 to 6 lanes matching the case pattern. Lane dividers split a single-file stream into parallel lanes using guide rails and speed-matched parallel conveyors. Each lane feeds one row of the case pack pattern. Lane dividers must maintain equal count in each lane to prevent partial cases.
+          </p>
+          <p>
+            Active lane dividers use servo-driven gate mechanisms or star wheels to distribute containers precisely. Passive lane dividers use guide rail geometry to split flow — simpler and cheaper but less precise at high speeds. For lines above 800 CPM, active lane dividing provides more reliable container distribution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CAN CONVEYING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="can-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Can Handling</div>
+        <h2 id="can-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Can Conveying & <span class="text-accent">Magnetic Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Beverage cans — aluminum and steel (tinplate) — present unique conveying challenges. Empty cans weigh 10-15 grams and are easily damaged by excessive conveyor pressure, misalignment, or falls. A dented can cannot be filled and must be rejected. High-speed can lines run 1500-2000+ CPM, making gentle handling at extreme speeds a primary design requirement.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Empty Can Handling</h3>
+          <p>
+            Empty cans arrive at the beverage plant in bulk — palletized layers separated by tier sheets. A depalletizer feeds cans onto a mass flow conveyor, which funnels them into single file for the rinser. Empty can conveyors use low-backpressure tabletop chains with side guides that prevent can rotation and tipping. Dead plates and chain transitions must be perfectly flush — a lip of even 1-2 mm catches the thin can edge and causes jams.
+          </p>
+          <p>
+            <a href="/conveyor-types/magnetic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Magnetic conveyors</a> hold steel cans to the chain surface using permanent magnets embedded beneath the chain or in the conveyor bed. Magnetic hold allows cans to travel through inclines, declines, and even inverted sections without falling. Can rinsers invert cans (open end down) for air or water rinsing before filling — magnetic conveyors transport cans through the inversion and back upright.
+          </p>
+          <p>
+            Aluminum cans (the dominant material in North American beverage markets) are non-ferrous and not attracted to permanent magnets. Aluminum can conveyors rely on vacuum hold-down, mechanical guides, or air pressure to maintain can control through inclines and inversions. Some systems use electromagnetic eddy current effects for aluminum can control on inclined sections.
+          </p>
+          <!-- VERIFY: Current methods for aluminum can inversion and control on high-speed lines -->
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Filled Can Handling</h3>
+          <p>
+            Filled cans are heavier (330-500 grams for standard sizes) and more stable than empty cans but still require careful handling. Carbonated beverages in aluminum cans maintain internal pressure (15-30 PSI) that provides structural rigidity — a pressurized can withstands vertical loads that would crush an unpressurized empty can. Conveyors for filled carbonated cans exploit this internal pressure for stability.
+          </p>
+          <p>
+            Non-carbonated beverages (juice, tea, water) in cans lack internal pressure, making the filled can more susceptible to denting from side pressure in accumulation zones. Low-backpressure conveyor designs and reduced accumulation table widths address this vulnerability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WET ENVIRONMENTS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="wet-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Environment</div>
+        <h2 id="wet-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Wet Environment <span class="text-accent">Design</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Beverage plants are wet environments. Water is present everywhere — container rinsing, pasteurizer spray, filler area washdown, cooling tunnels after pasteurization, CIP (clean-in-place) chemical cycles, and daily sanitation washdown with hot water and caustic. Conveyors must survive continuous water exposure, chemical contact, and daily high-pressure washdown without corrosion, bearing failure, or chain degradation.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Material Selection</h3>
+          <p>
+            Beverage conveyor frames use 304 stainless steel as the baseline material. Areas with CIP chemical exposure (caustic soda, peracetic acid, chlorinated cleaners) may require 316 stainless steel for superior corrosion resistance. Frame construction uses tubular stainless steel with sealed ends — no open tube ends where water and bacteria can collect.
+          </p>
+          <p>
+            Conveyor chains for wet beverage applications are acetal (POM), polyethylene, or stainless steel. Acetal chains resist most beverage-plant chemicals but swell slightly in hot caustic solutions. Stainless steel chains provide maximum durability in aggressive chemical environments but cost more and generate more noise. Chain selection involves balancing chemical resistance, wear life, noise, and cost for the specific plant environment.
+          </p>
+          <p>
+            Bearings in wet beverage environments use sealed or shielded configurations with food-grade grease. IP67 or IP69K rated bearings withstand submersion and high-pressure washdown. Bearing failure from water ingress is the most common conveyor maintenance issue in beverage plants — sealed bearing upgrades pay for themselves in reduced downtime. For detailed maintenance practices, see the <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">conveyor maintenance guide</a>.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Drainage and Hygiene</h3>
+          <p>
+            Conveyor frames must drain completely — no flat surfaces or pockets where water pools. Pooled water becomes a bacterial growth site. Frame members slope toward drain holes. Conveyor bed supports use open designs that allow water to flow through, not collect. Legs and feet use sanitary designs — rounded tubing, no exposed threads, adjustable leveling feet with smooth surfaces.
+          </p>
+          <p>
+            Lubrication of conveyor chains in beverage plants uses water-based lubricants (wet-running) or dry-running (lubricant-free) chains. Wet lubricant systems spray diluted food-grade lubricant onto the chain continuously. Dry-running chains use self-lubricating materials (UHMW wear strips, low-friction acetal chain) that eliminate lubricant entirely — reducing chemical consumption, floor slipperiness, and wastewater treatment load. The trend in beverage plants is toward dry-running systems for environmental and safety reasons.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LINE SPEEDS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="speed-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Performance</div>
+        <h2 id="speed-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Beverage Line <span class="text-accent">Speeds & Layout</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Beverage line speed is measured in containers per minute (CPM) at the filler. The filler determines the rated line speed, and all other machines and conveyors must keep pace. Conveyors between machines run faster than the filler rate to provide accumulation capacity and to avoid starving or blocking adjacent machines.
+          </p>
+          <div class="overflow-x-auto -mx-4 px-4 mt-4">
+            <table class="w-full text-left border-collapse min-w-[700px]">
+              <thead>
+                <tr class="border-b-2 border-ink">
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Beverage Type</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Container</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical CPM</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Conveyor Cost</th>
+                </tr>
+              </thead>
+              <tbody class="text-base text-ink-muted">
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Water / CSD</td>
+                  <td class="py-4 pr-4">PET bottle</td>
+                  <td class="py-4 pr-4 font-mono text-sm">600-2000+</td>
+                  <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Beer (macro)</td>
+                  <td class="py-4 pr-4">Can / glass bottle</td>
+                  <td class="py-4 pr-4 font-mono text-sm">800-2000+</td>
+                  <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Beer (craft)</td>
+                  <td class="py-4 pr-4">Can / glass bottle</td>
+                  <td class="py-4 pr-4 font-mono text-sm">100-400</td>
+                  <td class="py-4 font-mono text-sm">$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Juice / dairy</td>
+                  <td class="py-4 pr-4">PET / carton</td>
+                  <td class="py-4 pr-4 font-mono text-sm">100-400</td>
+                  <td class="py-4 font-mono text-sm">$$-$$$</td>
+                </tr>
+                <tr>
+                  <td class="py-4 pr-4 font-semibold text-ink">Spirits / wine</td>
+                  <td class="py-4 pr-4">Glass bottle</td>
+                  <td class="py-4 pr-4 font-mono text-sm">50-200</td>
+                  <td class="py-4 font-mono text-sm">$$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- VERIFY: CPM ranges for major beverage categories -->
+          <p class="text-sm text-ink-muted mt-4">CPM ranges represent typical production line speeds. Actual speeds depend on container size, product type, and equipment selection.</p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Line Layout Principles</h3>
+          <p>
+            Beverage line layout follows a standard sequence: depalletizer (empty containers) → rinser → filler/capper → warmer or pasteurizer (if required) → cooler → labeler → inspector → case packer → case sealer → palletizer. Conveyors connect each machine and provide accumulation between major machine groups.
+          </p>
+          <p>
+            The line layout determines total conveyor length, number of drives, and accumulation capacity. Compact layouts minimize conveyor length and cost but reduce accumulation capacity. Longer layouts with dedicated accumulation sections between major machines maximize line efficiency at higher capital cost. Beverage line engineers balance layout compactness against the efficiency gains from accumulation.
+          </p>
+          <p>
+            Elevation changes add complexity. Fillers typically sit at floor level. Pasteurizers and coolers may be elevated. Palletizers require floor-level infeed. Conveyors must include inclines and declines — either ramped belt conveyors with cleats for cases and trays, or spiral elevators for individual containers that need gentle handling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECONDARY PACKAGING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="secondary-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Secondary Packaging</div>
+        <h2 id="secondary-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case Packing & <span class="text-accent">Palletizing Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            After filling, capping, and labeling, beverages enter secondary packaging — case packing (placing containers into cases or trays) and palletizing (stacking cases onto pallets). Conveyors in this zone transport individual containers into the case packer, filled cases from the packer through the sealer, and sealed cases to the palletizer.
+          </p>
+          <p>
+            Case packing conveyors use lane dividers to arrange containers into the case pattern. A 4x6 case pattern (24-pack) requires 4 lanes of 6 containers each. The lane divider conveyor must deliver containers in precisely timed groups matching the case packer cycle. Case packing speeds range from 10-15 cases per minute for small craft operations to 60-80+ cases per minute for high-speed lines.
+          </p>
+          <p>
+            Case conveyors between the sealer and palletizer use roller conveyors or <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt conveyors</a>. Cases are heavier (10-20 kg for a 24-pack of cans) and more stable than individual containers. Powered roller conveyors with zone accumulation buffer cases before the palletizer. The palletizer infeed conveyor meters cases in the correct sequence and orientation for the pallet pattern.
+          </p>
+          <p>
+            For an overview of <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food-grade conveyor requirements</a> that apply across beverage operations, see our parent guide. Details on <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary conveyor design</a> — including CIP, washdown ratings, and material certifications — apply directly to beverage conveyor specification.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Pages</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/industries/food-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Food Conveyors</h3>
+            <p class="text-base text-white/60">Food-grade materials, sanitary design, FDA compliance</p>
+          </a>
+          <a href="/conveyor-types/tabletop-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Tabletop Conveyors</h3>
+            <p class="text-base text-white/60">Flat-top chain systems for bottles and cans</p>
+          </a>
+          <a href="/conveyor-types/magnetic-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Magnetic Conveyors</h3>
+            <p class="text-base text-white/60">Steel can handling, inversions, inclines</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an air conveyor for beverage bottles?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An air conveyor suspends empty PET bottles from their neck rings and propels them with pressurized air jets at speeds up to 2000+ bottles per minute. No belt contact with the bottle body — eliminates scuffing and contamination. Connects blow molders to fillers on high-speed beverage lines.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyor speeds do beverage lines run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>High-speed PET water and CSD lines run 600-2000+ CPM. Beer lines run 100-2000+ CPM depending on operation scale. Juice and dairy run 100-400 CPM. Spirits and wine run 50-200 CPM. The filler sets line speed; conveyors run faster to provide accumulation buffer.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a mass flow accumulator?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A wide conveyor section where containers spread from single file into multiple rows side-by-side, providing buffer capacity between machines. When a downstream machine stops, containers accumulate on the wide table. When it restarts, containers funnel back into single file. <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Serpentine accumulators</a> offer similar buffering in a smaller footprint.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Why do beverage conveyors need wet environment design?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Beverage plants use water for rinsing, pasteurizing, cooling, CIP cleaning, and daily washdown. Conveyors operate in standing water and spray zones. All components need corrosion resistance (304/316 stainless steel frames, plastic chains), sealed bearings (IP67/IP69K), and drainage designs that prevent bacterial harborage.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-blueprint py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+        Specify the Right <span class="text-accent-bright">Beverage Conveyor</span>
+      </h2>
+      <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+        From air conveyors to palletizer infeed, beverage line conveyor design determines throughput, efficiency, and uptime. Use our technical guides to specify the right system for your line speed and container type.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/conveyor-types/tabletop-conveyors/" class="inline-block bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Tabletop Conveyors</a>
+        <a href="/industries/food-conveyors/" class="inline-block border border-white/30 hover:border-white/50 text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Food Conveyors</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

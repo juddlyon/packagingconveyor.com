@@ -1,0 +1,372 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Bag Loading", "item": "https://packagingconveyor.com/conveyor-functions/bag-loading/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bag Loading Conveyors for Packaging Lines",
+  "description": "Complete guide to bag loading conveyors — flat bag conveying, bag stacking, bag-in-box loading, pouch handling, vacuum-assist bag feeding, and shingling for case packers and cartoners.",
+  "url": "https://packagingconveyor.com/conveyor-functions/bag-loading/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a bag loading conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A bag loading conveyor positions, orients, and feeds filled bags — pillow bags, stand-up pouches, gusseted bags, and flat pouches — into case packers, tray loaders, and cartoning machines. Bag loading conveyors handle the unique challenges of flexible packaging: floppy products that do not stand upright, irregular shapes that resist consistent conveying, and delicate seals that cannot tolerate excessive pressure or impact." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are bags difficult to convey?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bags are flexible and conform to the conveyor surface rather than maintaining a rigid shape. They do not stand upright reliably, their dimensions change depending on fill level and product settling, their center of gravity shifts as contents move, and their surfaces (especially printed film) have variable friction coefficients. These properties make bags unpredictable on standard conveyors designed for rigid products like cartons and bottles." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is bag shingling on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Shingling overlaps bags like roofing shingles — each bag partially covers the one behind it. A speed differential between two conveyor sections causes trailing bags to slide onto the leading edge of the bag ahead. Shingling reduces the footprint of a bag stream and pre-stages bags for stacking or loading into cases where bags must overlap or nest together." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does vacuum-assist bag conveying work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vacuum-assist conveyors apply suction through perforated belts or vacuum cups to hold bags flat against the belt surface. The vacuum overcomes the bag's tendency to curl, fold, or shift during conveying and speed changes. Vacuum assist is essential for lightweight pouches, flat bags, and any bag that lacks enough weight to maintain friction contact with the belt during acceleration, deceleration, or incline conveying." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bag Loading Conveyors for Packaging Lines | PackagingConveyor.com"
+  description="Complete guide to bag loading conveyors — flat bag conveying, bag stacking, bag-in-box loading, pouch handling, vacuum-assist feeding, and shingling for case packers and cartoners."
+  canonical="https://packagingconveyor.com/conveyor-functions/bag-loading/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Bag Loading</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Bag Loading <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Bag loading conveyors position, orient, and feed filled bags — pillow bags, stand-up pouches, gusseted bags, and flat pouches — into case packers, tray loaders, and cartoning machines. Bags are flexible products that do not stand upright reliably, change shape depending on fill level, and have variable friction surfaces that make them difficult to convey with the precision required by downstream machines. Bag loading systems use vacuum-assist belts, shingling sections, stacking mechanisms, and servo-controlled feeding to present bags to packing machines in the correct orientation, quantity, and timing across <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a>, snack, pet food, pharmaceutical, and consumer goods packaging lines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ BAG CONVEYING CHALLENGES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="challenge-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">The Challenge</div>
+        <h2 id="challenge-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Flat Bag Conveying <span class="text-accent">Challenges</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Bags present conveying problems that rigid products never create. A carton has fixed dimensions, a flat bottom, a predictable center of gravity, and consistent friction with belt surfaces. A filled bag has none of these properties. The bag conforms to the belt surface. Its dimensions change as the contents settle, shift, or compress. Its center of gravity moves as product redistributes inside the bag. Its friction coefficient varies with the printing, lamination, and film type on the bag surface.
+          </p>
+          <p>
+            Pillow bags (horizontal form-fill-seal bags with fin seals on top and end seals on each side) are the most common flexible package and the most common bag loading challenge. A filled pillow bag lies flat on a conveyor with a rounded top profile and sealed edges that curl upward. The bag slides easily on smooth belts because the contact area is small (only the center bottom contacts the belt; the sealed edges lift off). Speed changes cause pillow bags to slide, rotate, or shift out of alignment.
+          </p>
+          <p>
+            Stand-up pouches (SUPs) have a bottom gusset that allows them to stand upright, but conveying them upright is unreliable at speed. The filled pouch has a high center of gravity relative to its narrow base width. Accelerating, decelerating, or turning causes pouches to tip, fall, and jam. Most bag loading systems convey stand-up pouches lying flat (on their side or face) rather than upright, standing them up only at the final loading point if the case pack pattern requires upright orientation.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Product Settling and Dimension Variation</h3>
+          <p>
+            Filled bags change dimension over time. A freshly filled snack bag is taut with residual nitrogen gas. Within minutes, the gas permeates through the film and the bag deflates slightly, changing its height and footprint. A bag filled with granular product (rice, coffee beans, pet food kibble) has a different shape depending on whether the product has settled to the bottom or is distributed throughout the bag. Bag loading conveyors must tolerate this variation — side guides, stacking mechanisms, and case packer infeed dimensions need clearance for the largest bag condition while still controlling the smallest.
+          </p>
+          <!-- VERIFY: Typical dimensional variation ranges for pillow bags between freshly filled and settled states -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VACUUM-ASSIST BAG FEEDING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="vacuum-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Holding Method</div>
+        <h2 id="vacuum-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vacuum-Assist <span class="text-accent">Bag Feeding</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Vacuum-assist conveyors apply suction through perforated belts to hold bags flat against the belt surface during conveying. A vacuum plenum (chamber) beneath the belt creates negative pressure that pulls air through holes in the belt. The suction holds the bag against the belt, preventing sliding during acceleration and deceleration, holding bag edges flat instead of curled, and stabilizing lightweight bags on inclines.
+          </p>
+          <p>
+            Vacuum belt systems use modular plastic belts with molded holes or perforated flat belts (polyurethane or silicone with laser-cut holes) running over a vacuum plenum. The plenum connects to a regenerative blower or vacuum pump. Vacuum levels range from 2 to 15 inches of water column depending on bag weight and surface area. Lightweight pouches (under 100 grams) need only 2-5 inches of vacuum; heavy bags (1-5 kg) need 8-15 inches.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Selective Vacuum Zones</h3>
+          <p>
+            Advanced vacuum conveyors use zoned vacuum plenums that activate suction only under the section of belt carrying a product. Zones without product have vacuum blocked by a sliding valve or shutoff plate. Zoned vacuum reduces air consumption and blower energy — a vacuum belt with 50% product coverage wastes half its suction on empty belt sections. Zone control also allows different vacuum levels for different products on the same conveyor (heavier bags in one zone, lighter bags in another).
+          </p>
+          <p>
+            Vacuum-assist is essential for bag loading systems that use speed changes for metering or gap creation. Standard belt friction cannot hold a lightweight pouch against 2-3x speed increases needed for gap creation. Vacuum hold-down maintains bag position through aggressive acceleration and deceleration profiles that would launch an unrestrained bag off the belt surface.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SHINGLING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="shingle-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Arrangement</div>
+        <h2 id="shingle-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Shingling & <span class="text-accent">Overlapping</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Shingling overlaps bags like roofing shingles — each bag partially covers the trailing edge of the bag ahead. A speed differential between a faster upstream belt and a slower downstream belt causes trailing bags to ride up onto the leading bag. The overlap percentage depends on the speed ratio: a 2:1 speed reduction (upstream at 200 FPM, downstream at 100 FPM) creates approximately 50% overlap.
+          </p>
+          <p>
+            Shingling serves two purposes. First, it compresses the product stream — overlapped bags take less linear space than spaced bags, allowing more bags to accumulate on a given conveyor length. Second, shingling pre-stages bags for case packing patterns that require shingled or nested bag arrangements inside the case. Some case packing patterns load bags vertically (standing on edge) by first shingling them horizontally and then rotating the shingled stack 90 degrees for insertion into the case.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Controlling Shingle Quality</h3>
+          <p>
+            Consistent shingling requires consistent bag dimensions, consistent bag spacing before the shingling section, and a clean speed transition between the fast and slow belts. Bags with variable fill levels produce inconsistent shingle patterns — an overfilled bag sits higher and shingles differently than an underfilled bag. The speed transition zone (where the two belts meet) must be as short as possible — a gap between belts allows bags to drop and lose their position, disrupting the shingle pattern.
+          </p>
+          <p>
+            Overhead hold-down belts above the shingling section apply gentle downward pressure to keep bags flat during the overlap process. Without hold-down, the trailing edge of the shingled bag tends to lift and curl upward instead of lying flat over the leading bag. Hold-down belt pressure must be light enough to avoid compressing the bag contents (which changes bag dimension and can damage product) while firm enough to maintain the shingle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BAG STACKING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="stack-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Grouping</div>
+        <h2 id="stack-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Bag <span class="text-accent">Stacking</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Bag stacking creates vertical stacks of bags for case packing. A case pack pattern of "2 stacks of 6 bags" requires the bag loading system to count bags into groups of 6, stack each group vertically, and present two stacks side-by-side for insertion into the case. <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">Stacking machines</a> use several methods to build bag stacks from a single-file stream.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Drop Stacking</h3>
+          <p>
+            Drop stacking feeds bags off the end of a conveyor and drops them onto a platform or lower conveyor. Each bag falls on top of the previous one, building a stack from the bottom up. A photoeye or product counter tracks the bag count. When the stack reaches the target count, the platform indexes forward to clear space for the next stack. Drop stacking is simple and reliable for flat, stable bags (pillow bags, flat pouches) but produces inconsistent stacks with stand-up pouches or irregularly shaped bags that land in unpredictable orientations.
+          </p>
+          <p>
+            Drop height must be minimized — bags falling more than a few inches shift position, bounce, and land misaligned. Short drop heights (1-2 inches) keep stacks neat. Adjustable-height platforms that lower as the stack grows maintain a constant drop distance for every bag in the stack.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Flighted Stacking</h3>
+          <p>
+            Flighted stacking uses an inclined conveyor with flights (cleats or paddles) that push bags upward along an inclined surface. Bags accumulate against a stop plate at the top of the incline, stacking face-to-face in a controlled manner. A gate or pusher releases the completed stack into the case packer infeed. Flighted stacking produces consistent, tight stacks and handles a wider range of bag types than drop stacking.
+          </p>
+          <p>
+            Flight spacing determines the maximum bag thickness the system can handle. Flights spaced 2 inches apart handle bags up to 2 inches thick. Changeover between bag sizes requires adjusting flight spacing — some flighted stackers use quick-change flight attachment systems for fast changeover. Flighted stacking systems are typically integrated directly with case packers for synchronized bag-to-case loading.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BAG-IN-BOX LOADING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="bib-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Loading Patterns</div>
+        <h2 id="bib-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Bag-in-Box <span class="text-accent">Loading</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Bag-in-box loading places bags into cases (corrugated boxes) in a specified arrangement — flat stacks, on-edge rows, shingled layers, or a combination. The case pack pattern determines how bags must be oriented and grouped before insertion. A 24-count snack bag case might use 4 layers of 6 bags stacked flat, or 2 rows of 12 bags standing on edge. Each pattern requires different bag handling upstream of the <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packer</a>.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Flat Loading</h3>
+          <p>
+            Flat loading lays bags horizontally into the case in stacked layers. The bag loading conveyor delivers bags flat (face up or face down), counts them into groups matching the layer count, and presents each group for insertion. A top-loading case packer lowers a vacuum head or gripper to pick the bag group and place it into the open case. Flat loading produces stable, cube-efficient case packs and works well for thin, flat bags (single-serve snack bags, flat pouches, sachets).
+          </p>
+          <p>
+            Layer separation — a cardboard divider or slip sheet between bag layers — prevents bags from interlocking between layers and eases retail display unpacking. The bag loading system pauses between layers for the case packer to insert a divider before loading the next bag layer.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">On-Edge Loading</h3>
+          <p>
+            On-edge loading stands bags upright in the case with the bag face visible from the case opening. This arrangement suits retail display cases where the consumer sees the bag graphics through an open case top. <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating and laning systems</a> arrange bags side-by-side in the correct number of lanes matching the case width. The on-edge row slides or pushes into the case from the side or end.
+          </p>
+          <p>
+            On-edge loading requires bags with enough structural rigidity to stand without toppling. Bags filled with granular product (chips, cookies, cereal) have a settled lower section that provides a base, but the upper portion may flop over. Side compression plates hold bags upright during the loading sequence. Stand-up pouches with bottom gussets load on-edge more reliably than pillow bags because the gusset provides a flat bottom for standing.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Pouch Handling Specifics</h3>
+          <p>
+            Stand-up pouches, spouted pouches, and retort pouches each present unique loading challenges. Spouted pouches have a rigid spout that protrudes above the pouch body — the spout must align consistently for case packing and cannot be compressed during stacking. Retort pouches (sterilized food pouches) are thick, stiff after processing, and resist bending — they stack well but their rigidity limits how tightly they pack into cases. Spouted pouch loading systems use spout-locating guides that align the spout position during conveying and loading, ensuring the spout does not interfere with case packer operation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SLUG LOADING BAGS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="slug-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Machine Feeding</div>
+        <h2 id="slug-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Bag Feeding for <span class="text-accent">Case Packers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <a href="/conveyor-functions/slug-loading/" class="text-accent hover:text-accent-hover font-semibold">Slug loading</a> groups bags into a counted row (slug) and loads the entire slug into the case in one motion. The bag loading conveyor meters bags into groups matching the case row count, closes the gap between bags in the slug, and presents the slug to the case packer's loading mechanism (pusher bar, bucket, or robotic arm).
+          </p>
+          <p>
+            Bag slug formation is more challenging than rigid product slug formation. Rigid cartons pushed together in a slug maintain alignment — their flat sides contact each other cleanly. Bags pushed together in a slug deform, bunch, fold at the edges, and shift out of alignment. Gentle slug formation — using low-pressure conveyor compression rather than hard mechanical pushers — prevents bag deformation during slug building.
+          </p>
+          <p>
+            Servo-driven slug belts control each bag's position during slug formation. A multi-zone servo belt feeds bags one at a time, decelerates each bag as it contacts the previous bag in the slug, and positions the completed slug at the case packer loading point. The servo system applies minimal compression force — just enough to close gaps without deforming the bags. Servo-driven bag slug formation is typically integrated directly with the case packing system for coordinated motion control.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Robotic Bag Loading</h3>
+          <p>
+            Delta robots and SCARA robots pick individual bags or bag groups from the conveyor and place them directly into cases. Robotic loading handles the widest range of bag types, orientations, and case patterns because the robot arm can grasp, orient, and place each bag individually. Vision systems guide the robot to each bag's position on the conveyor, compensating for the position variation inherent in flexible product conveying.
+          </p>
+          <p>
+            Robotic bag loading uses vacuum end-of-arm tooling (EOAT) with suction cups sized and positioned for the specific bag dimensions. The vacuum cups contact the bag's flat face and lift it without squeezing or compressing the bag body. Bag film surface quality affects vacuum grip — matte films grip better than glossy laminated films. Porous or perforated bags (for venting gas from fresh produce) require foam-faced vacuum cups that seal against the rough surface.
+          </p>
+          <!-- VERIFY: Common delta robot cycle times for bag picking applications -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LINE INTEGRATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">System Design</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Line <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            A complete bag loading line runs from the form-fill-seal (FFS) machine or premade pouch filler through conveying, inspection, and loading into cases. The typical sequence is: bag machine discharge &rarr; takeaway conveyor &rarr; checkweigher &rarr; metal detector &rarr; reject diverter &rarr; accumulation conveyor &rarr; metering conveyor &rarr; stacking or shingling section &rarr; case packer infeed. Each section must handle the bag gently while maintaining the throughput rate set by the bag machine.
+          </p>
+          <p>
+            Bag machines (vertical FFS, horizontal FFS, premade pouch fillers) discharge bags at rates from 30 to 300+ bags per minute depending on machine type and bag size. The bag loading system must keep pace with the machine output. Multiple bag machines feeding a single case packer require a merge conveyor that combines the streams from multiple machines into one line without bag damage or orientation loss.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Accumulation for Bags</h3>
+          <p>
+            Bag accumulation between the bag machine and the case packer buffers production during case packer stoppages (case supply interruptions, case sealer jams, pallet changes). Standard conveyor accumulation techniques — zero-pressure zones, low-backpressure belts — apply to bags with modifications. Bags cannot tolerate the backpressure that rigid products withstand. Excessive backpressure deforms bags, pops seals, and damages product. Low-pressure accumulation conveyors use friction-controlled belt zones that stop each bag independently without transmitting pressure from downstream bags to upstream bags.
+          </p>
+          <p>
+            Vertical accumulation systems store bags in a buffer tower using an elevator that lifts bags from the main conveyor to storage shelves and releases them back onto the conveyor when the downstream machine resumes. Vertical accumulators provide minutes of buffer capacity in a small floor footprint — important in facilities where floor space between the bag machine and case packer is limited. For broader context on accumulation and buffering, see <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">storage conveyors</a>.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Changeover and Flexibility</h3>
+          <p>
+            Bag packaging lines run multiple bag sizes and styles. A snack food line might run 1-ounce single-serve bags, 10-ounce family size bags, and 16-ounce party size bags on the same case packer. Each bag size requires different guide rail widths, stacking heights, case patterns, and metering speeds. Quick-changeover bag loading systems use tool-free guide rail adjustment (hand knobs or quick-release clamps), recipe-based servo settings (stored electronically for each SKU), and modular stacking components that swap for different stack heights. Changeover targets of 15-30 minutes or less keep line utilization high on short production runs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Industries</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/slug-loading/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Slug Loading</h3>
+            <p class="text-base text-white/60">Grouped product loading for case packers</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Multi-lane arrangement for packing patterns</p>
+          </a>
+          <a href="/industries/food-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Food Conveyors</h3>
+            <p class="text-base text-white/60">Food-grade materials and sanitary design</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a bag loading conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A bag loading conveyor positions, orients, and feeds filled bags — pillow bags, stand-up pouches, gusseted bags, and flat pouches — into case packers, tray loaders, and cartoning machines. These systems handle the unique challenges of flexible packaging: floppy products, variable dimensions, and delicate seals.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Why are bags difficult to convey?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Bags are flexible and conform to the conveyor surface rather than maintaining a rigid shape. They do not stand upright reliably, their dimensions change with fill level and product settling, their center of gravity shifts as contents move, and their film surfaces have variable friction. These properties make bags unpredictable on conveyors designed for rigid products.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is bag shingling on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Shingling overlaps bags like roofing shingles — each bag partially covers the one behind it. A speed differential between two conveyors causes trailing bags to slide onto the leading bag. Shingling compresses the product stream and pre-stages bags for case packing patterns that require overlapped or nested arrangements.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does vacuum-assist bag conveying work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Vacuum-assist conveyors apply suction through perforated belts to hold bags flat against the belt surface. A vacuum plenum beneath the belt creates negative pressure. The suction prevents sliding during speed changes, holds bag edges flat, and stabilizes lightweight bags on inclines. Vacuum assist is essential for pouches and flat bags that lack enough weight for reliable friction-based conveying.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-blueprint py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+        Specify the Right <span class="text-accent-bright">Bag Loading System</span>
+      </h2>
+      <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+        From vacuum-assist conveying to robotic case loading, bag handling system design determines how reliably your flexible packaging line meets throughput targets. Use our technical guides to match bag loading methods to your product and packing requirements.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/conveyor-functions/slug-loading/" class="inline-block bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Slug Loading</a>
+        <a href="/industries/food-conveyors/" class="inline-block border border-white/30 hover:border-white/50 text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Food Conveyors</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

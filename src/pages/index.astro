@@ -8,7 +8,7 @@ const conveyorTypes = [
   { name: 'Spiral', slug: 'spiral-conveyors', desc: 'Vertical elevation change', icon: '⟳' },
   { name: 'Chain', slug: 'chain-conveyors', desc: 'Drag, slat & overhead chain', icon: '⛓' },
   { name: 'Sortation', slug: 'diverting-merging', desc: 'Diverting & merging systems', icon: '⑂' },
-  { name: 'Pallet', slug: '../industries/packaging-line-conveyors/pallet', desc: 'Heavy-duty pallet handling', icon: '⬚' },
+  { name: 'Pallet', slug: '/industries/packaging-line-conveyors/pallet', desc: 'Heavy-duty pallet handling', icon: '⬚' },
   { name: 'Screw', slug: 'screw-conveyors', desc: 'Bulk auger conveying', icon: '⏚' },
   { name: 'Tabletop', slug: 'tabletop-conveyors', desc: 'Bottles, cans & cartons', icon: '⊟' },
   { name: 'Vibratory', slug: 'vibratory-conveyors', desc: 'Parts feeders & hoppers', icon: '∿' },
@@ -229,7 +229,7 @@ const webPageSchema = {
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 stagger">
         {conveyorTypes.map((type) => (
           <a
-            href={type.slug ? `/conveyor-types/${type.slug}/` : '/conveyor-types/'}
+            href={type.slug ? (type.slug.startsWith('/') ? `${type.slug}/` : `/conveyor-types/${type.slug}/`) : '/conveyor-types/'}
             class:list={[
               "card group flex flex-col p-5",
               !type.slug && "bg-accent/5 border-accent/20 hover:bg-accent/10"
@@ -372,7 +372,7 @@ const webPageSchema = {
               <td class="py-4 font-mono text-sm">Up to 50 lbs</td>
             </tr>
             <tr>
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="../industries/packaging-line-conveyors/pallet" class="text-accent hover:text-accent-hover">Pallet</a></td>
+              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet</a></td>
               <td class="py-4 pr-4">Heavy palletized loads</td>
               <td class="py-4 pr-4 font-mono text-sm">20–60 FPM</td>
               <td class="py-4 pr-4 font-mono text-sm">$$$$</td>

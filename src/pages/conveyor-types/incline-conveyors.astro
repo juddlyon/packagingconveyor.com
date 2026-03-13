@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Incline Conveyors", "item": "https://packagingconveyor.com/conveyor-types/incline-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the maximum incline angle for a belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A smooth flat belt conveyor can reliably transport products up to about 18-20 degrees. Cleated belts extend the range to 45 degrees or more. Rough-top and high-friction belts handle 25-30 degrees for many products. The practical maximum depends on product type, weight, surface texture, and belt material. Steeper angles require cleats, sidewalls, or enclosed belt designs to prevent product rollback." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an incline conveyor and a Z-frame conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An incline conveyor is a straight angled run from low to high elevation. A Z-frame conveyor has three sections: a horizontal infeed section, an inclined middle section, and a horizontal discharge section, forming a Z-shape when viewed from the side. The horizontal sections at each end provide smooth transitions for product loading and unloading, eliminating the noseover challenges of straight incline conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent products from sliding on an incline conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use rough-top or textured belt surfaces for moderate inclines. Add cleats (flights) perpendicular to belt travel for steeper angles. Use sidewalls (corrugated edges) to contain loose or bulk materials. Increase belt speed slightly to reduce product dwell time on the incline. For round or cylindrical products, use V-shaped or troughed belt profiles to cradle products during the incline." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can incline conveyors also run in decline mode?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most incline conveyors can operate as decline conveyors by reversing the belt direction or repositioning the unit. Decline operation requires back-tension or regenerative braking on the drive to control belt speed as gravity pulls products downward. Without proper braking, the belt can accelerate and dump products at the discharge end." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Incline Conveyors: Elevation Change with Belt, Cleated & Z-Frame Systems",
+  "description": "Complete guide to incline conveyors covering incline angles, cleated belts, Z-frame designs, decline conveyors, noseover transfers, and product grip strategies for packaging and processing lines.",
+  "url": "https://packagingconveyor.com/conveyor-types/incline-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Incline Conveyors: Elevation Change with Belt, Cleated & Z-Frame Systems"
+  description="Complete guide to incline conveyors: incline angles, cleated belts, Z-frame designs, decline operation, noseover transfers, and product grip for packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-types/incline-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Incline Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Incline & Decline Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Incline Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>An incline conveyor moves products between different elevation levels using an angled belt, cleated belt, or modular belt surface. Incline angles typically range from 5 to 45 degrees depending on the belt type and product characteristics. These conveyors connect floor-level processes to elevated <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyor</a> lines, mezzanines, and overhead systems in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging facilities</a>, distribution centers, and food processing plants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Incline Conveyors Work -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Incline Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>An incline conveyor operates on the same principle as a horizontal belt conveyor but with the bed frame tilted at an angle. A continuous belt wraps around a head (drive) pulley at the top and a tail (idler) pulley at the bottom. The motor drives the head pulley, which pulls the belt and any products upward from the lower infeed point to the higher discharge point. Gravity is the primary challenge — the conveyor must overcome the gravitational component acting along the incline surface to move products upward reliably.</p>
+
+        <p>The belt rides on a slider bed (solid surface) or roller bed depending on the load. Slider beds are standard for most packaging incline applications because they provide uniform belt support across the full width. Roller beds reduce friction for heavier loads but introduce gaps between rollers that can destabilize small products on inclines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Incline Angle Ranges</h3>
+        <p>The incline angle determines what belt type and surface treatment the conveyor requires. At 0 to 10 degrees, a standard smooth belt handles most products. From 10 to 20 degrees, rough-top or textured belts provide sufficient friction for flat-bottomed boxes, cartons, and packages. Between 20 and 30 degrees, high-grip belts or shallow cleats become necessary. Above 30 degrees and up to 45 degrees or more, deep cleats with sidewalls contain products and prevent rollback. Each step up in angle increases the conveyor cost because belt complexity and drive power requirements rise accordingly.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Power Calculations</h3>
+        <p>Incline conveyors require more drive power than horizontal conveyors of the same length. The motor must overcome belt friction (same as horizontal) plus the gravitational load component. The gravitational load equals the total weight of products on the incline multiplied by the sine of the incline angle. A 30-degree incline carrying 200 pounds of product adds 100 pounds of gravitational force (200 x sin 30 degrees) to the drive requirement. Steeper angles and heavier product loads demand proportionally larger motors and stronger belts.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Belt Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="belt-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Options</div>
+      <h2 id="belt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt Types for <span class="text-accent">Incline Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Smooth Belt</h3>
+        <p>Standard smooth belts work on gentle inclines up to about 15-18 degrees for most packaged goods. The belt surface relies on friction alone to grip products. Smooth belts are the lowest cost option and the easiest to clean. They suit cartons, cases, and flat-bottomed containers that have a stable base and sufficient contact area with the belt surface. Products with slick or oily bottom surfaces slide at lower angles than dry products.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Rough-Top Belt</h3>
+        <p>Rough-top belts have a textured or embossed surface that increases friction between the belt and the product. Common surface patterns include diamond, pebble, and grass-top textures. These belts extend the usable incline range to 25-30 degrees for many products. Rough-top belts cost slightly more than smooth belts but avoid the mechanical complexity of cleats. They are widely available in food-grade, oil-resistant, and general-purpose compounds from most major belting suppliers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cleated Belt</h3>
+        <p><a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Cleated belts</a> have raised flights (cleats) molded or welded perpendicular to the belt travel direction. Cleats act as mechanical barriers that prevent products from sliding backward on steep inclines. Cleat heights range from 0.5 inches (low profile) to 6 inches or more. Cleat spacing depends on product size — spacing must allow the product to sit between consecutive cleats. Cleated belts handle inclines of 30 to 90 degrees (vertical). They are the standard choice for elevating bulk materials, individual parts, and irregularly shaped products up steep grades.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sidewall Belt</h3>
+        <p>Sidewall belts combine vertical corrugated sidewalls along both belt edges with horizontal cleats across the belt surface. The sidewalls contain products laterally while the cleats prevent backward sliding. This combination allows the belt to transport bulk materials (granules, powders, small parts) at steep inclines up to 90 degrees without spillage. Sidewall belts are common on Z-frame and vertical elevator conveyors where products must be fully contained throughout the elevation change.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Modular Plastic Belt</h3>
+        <p>Modular plastic belts with raised-rib and non-skid surface options suit incline applications. These belts snap together from individual interlocking modules, making field repairs straightforward — a damaged section can be replaced without removing the entire belt. Modular belts handle inclines up to 30-35 degrees with the appropriate surface texture and resist chemicals, moisture, and washdown procedures better than fabric belts in food processing environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Z-Frame and Configurations -->
+  <section class="py-20 bg-surface" aria-labelledby="config-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Frame Configurations</div>
+      <h2 id="config-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Z-Frame, Straight Incline & <span class="text-accent">Other Configurations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Straight Incline</h3>
+        <p>A straight incline conveyor is a single angled run from low elevation to high elevation. The entire conveyor frame sits at the incline angle. Products load at the bottom and discharge at the top. The simplicity of this design makes it the lowest cost incline option. The main limitation is product handling at both ends — products must transition from horizontal to angled travel at the infeed (noseover) and from angled to horizontal at the discharge. Products can tip, rotate, or lose stability at these transition points, especially at steeper angles.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Z-Frame Conveyor</h3>
+        <p>A Z-frame conveyor addresses noseover challenges by incorporating three sections: a horizontal infeed section at the lower elevation, an inclined middle section, and a horizontal discharge section at the upper elevation. The three sections form a Z-shape when viewed from the side. The horizontal infeed section allows products to load onto the belt while it is level, stabilizing products before the incline begins. The horizontal discharge section receives products from the incline and delivers them level to downstream equipment. Z-frame conveyors use a single belt that traverses all three sections, bending over transition rollers or curves at each angle change.</p>
+
+        <p>Z-frame designs eliminate the need for separate infeed and discharge conveyors at each elevation, reducing total system complexity and footprint. They are the most popular incline conveyor configuration for <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> applications where products enter from a low table or process machine and discharge onto an elevated conveyor system or mezzanine.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Noseover Transfers</h3>
+        <p>The noseover is the transition point where the conveyor angle changes — from horizontal to inclined, or from inclined to horizontal. A sharp noseover creates a bump that can destabilize products. A gradual noseover with a large-radius curve provides a smoother transition but requires more length. The noseover radius depends on belt type: fabric belts flex around relatively tight radii (12-24 inches), while modular plastic belts and cleated belts need wider radii (36-60 inches or more) because the belt modules are rigid. Proper noseover design is critical for fragile products, filled bottles, and tall unstable packages.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">L-Frame Conveyor</h3>
+        <p>An L-frame conveyor has a horizontal section at one end and an inclined section at the other, forming an L-shape. This design provides a level loading zone at one elevation and an angled discharge or pickup at the other. L-frames are common where products load from a process machine at floor level and discharge at an angle onto an elevated <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt conveyor</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decline Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="decline-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Decline Operation</div>
+      <h2 id="decline-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Decline <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Decline conveyors lower products from a higher elevation to a lower one. Mechanically, they are the same as incline conveyors but with the drive managing downhill gravitational forces instead of lifting against them. The motor must maintain controlled belt speed as gravity accelerates products downward. Without proper drive control, the belt overruns and products pile up or spill at the lower discharge point.</p>
+
+        <p><strong class="text-ink">Regenerative braking</strong> is a key feature on powered decline conveyors. The drive motor acts as a generator during decline operation, converting the gravitational energy of descending products into electrical energy that feeds back to the power supply or dissipates through resistors. Regenerative drives maintain constant belt speed regardless of product load variations. Variable frequency drives (VFDs) with regenerative capability are standard on decline conveyor installations.</p>
+
+        <p><strong class="text-ink">Gravity decline</strong> conveyors use no motor at all. Products descend under gravity on a smooth, sloped surface or gravity roller bed. Speed control relies on surface friction, brake rollers, or retarding devices. Gravity declines are common in <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse</a> and shipping operations where cartons slide from a pick level to a lower packing station. The decline angle must be carefully calibrated — too shallow and products stall, too steep and they accelerate uncontrollably.</p>
+
+        <p><strong class="text-ink">Controlled descent for fragile products</strong> requires powered decline conveyors with soft-start drives and low belt speeds. Glass bottles, electronic components, and filled containers need smooth, consistent belt speed to avoid tipping and breakage during the descent. Cleated belts on decline conveyors prevent products from sliding ahead of the belt surface and colliding with each other at the discharge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grip and Slip Prevention -->
+  <section class="py-20 bg-surface" aria-labelledby="grip-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Product Control</div>
+      <h2 id="grip-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Product Grip & <span class="text-accent">Slip Prevention</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Product slippage on incline conveyors leads to throughput loss, product damage, and jams. The coefficient of friction between the belt surface and the product bottom determines the maximum incline angle before slipping occurs. Dry cardboard on a smooth belt has a friction coefficient around 0.3-0.5, allowing inclines up to 17-27 degrees. Wet or oily products reduce the friction coefficient and require grip-enhancing strategies at lower angles.</p>
+
+        <p><strong class="text-ink">Belt surface treatments</strong> include rough-top textures, silicone coatings, and urethane spray patterns that increase grip without adding mechanical height. These treatments suit products with flat, stable bottoms that maintain full contact with the belt surface throughout the incline.</p>
+
+        <p><strong class="text-ink">Vacuum hold-down</strong> systems apply suction through perforated belts to hold lightweight products against the belt surface during incline travel. Vacuum incline conveyors handle sheet materials, flat lids, labels, and lightweight packages that would blow off or slide on conventional inclines. The vacuum chamber beneath the belt creates negative pressure that holds products firmly in place regardless of incline angle.</p>
+
+        <p><strong class="text-ink">Side guides and guardrails</strong> prevent products from drifting laterally on inclines. As gravity pulls products downward, any lateral belt tracking error or product misalignment causes products to migrate toward the lower belt edge. Adjustable side guides keep products centered on the belt. For round products like bottles and cans, custom-profile guides cradle the product and prevent rolling.</p>
+
+        <p><strong class="text-ink">Product spacing control</strong> matters more on inclines than on horizontal runs. Products spaced too closely on an incline can collide if the leading product slows or stops — the trailing product slides forward under gravity into the leading one. Proper spacing, typically 1.5 to 2 times the product length, prevents collisions. Timed-release infeed devices meter products onto the incline at controlled intervals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Incline Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Case elevation in packaging lines:</strong> Incline conveyors lift sealed cases from floor-level case packers and sealers to elevated takeaway conveyors that feed palletizers or <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation systems</a>. Z-frame configurations handle this transition smoothly for standard RSC cases at incline angles of 15-25 degrees.</p>
+
+        <p><strong class="text-ink">Bulk material elevation:</strong> Cleated sidewall incline conveyors elevate granular and powdered materials from ground-level hoppers to elevated process equipment. Food ingredients, pharmaceutical powders, recycled materials, and agricultural products travel up steep inclines (45-90 degrees) in fully contained cleated sidewall belts. The belt contains the material completely, eliminating dust and spillage that open conveyors would generate.</p>
+
+        <p><strong class="text-ink">Truck loading and unloading:</strong> Portable incline conveyors positioned at truck dock doors move packages between the truck bed and the facility floor. These units typically adjust in height and angle to accommodate different truck bed heights. Many portable inclines include telescoping sections that extend into the truck for direct loading. See our <a href="/conveyor-types/telescopic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">telescopic conveyor guide</a> for dedicated truck loading solutions.</p>
+
+        <p><strong class="text-ink">Parts elevation in manufacturing:</strong> Small parts, stampings, and components ride cleated incline conveyors from collection bins or processing machines to elevated inspection stations, assembly lines, or packaging equipment. The cleats separate individual parts and meter the flow rate based on cleat spacing and belt speed.</p>
+
+        <p><strong class="text-ink">Mezzanine access:</strong> Incline conveyors transport products between facility floor levels without the batch-cycling limitations of <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors</a> or the cost of <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">spiral conveyors</a>. Where floor space allows a long incline run at moderate angle, incline belt conveyors are the most cost-effective elevation change option ($ relative cost).</p>
+
+        <p><strong class="text-ink">Recycling and waste handling:</strong> Incline conveyors with heavy-duty cleated belts elevate recyclable materials (cardboard, plastics, metals) from sorting stations to balers, compactors, or collection containers at elevated positions. The aggressive cleats and robust belt construction handle mixed, irregular materials without jamming.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select an <span class="text-accent">Incline Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Determine the elevation change and available floor space.</strong> The elevation change divided by the available horizontal distance defines the minimum incline angle. A 5-foot elevation change over 15 horizontal feet requires approximately 18 degrees. If floor space is limited, steeper angles with cleated belts become necessary. Consult our <a href="/resources/conveyor-design-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor design guide</a> for layout planning details.</p>
+
+        <p><strong class="text-ink">Match the belt type to the incline angle and product.</strong> Start with the simplest (lowest cost) belt that works at the required angle. Smooth belt for under 15 degrees, rough-top for 15-25 degrees, cleated for 25 degrees and above. Test the belt-product friction with actual product samples before committing to a belt specification — coefficient of friction varies significantly between product types and environmental conditions.</p>
+
+        <p><strong class="text-ink">Select the frame configuration.</strong> Straight incline for simple elevation changes with compatible infeed and discharge equipment. Z-frame for smooth product transitions at both ends. L-frame where a horizontal section is needed at only one end. The frame configuration affects total conveyor length, cost, and the need for additional transition conveyors at the endpoints.</p>
+
+        <p><strong class="text-ink">Size the drive for the application.</strong> Calculate the total load on the incline (product weight per linear foot multiplied by belt length on the incline), multiply by the sine of the angle to find the gravitational component, add belt and slider friction forces, and size the motor with a safety factor of 1.5 to 2.0. Undersized drives stall under peak load. Oversized drives waste energy and cost more upfront but provide margin for future throughput increases.</p>
+
+        <p><strong class="text-ink">Plan for washdown and sanitation if required.</strong> Food and pharmaceutical incline conveyors need stainless steel frames, FDA-approved belt materials, and open frame designs for easy cleaning access. Incline conveyors are harder to clean than horizontal units because cleaning solutions and debris run downhill and collect at the lower end. Open frame construction with drip pans, removable belt covers, and tilting bed designs simplify sanitation procedures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the maximum incline angle for a belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Smooth flat belts handle up to about 18-20 degrees. Rough-top belts extend to 25-30 degrees. <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Cleated belts</a> handle 45 degrees and above — with sidewalls, up to 90 degrees (vertical). The practical maximum depends on product weight, surface texture, and belt material.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between an incline conveyor and a Z-frame conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A straight incline conveyor is a single angled run. A Z-frame conveyor adds horizontal sections at both ends (infeed and discharge) to form a Z-shape. The horizontal sections provide smooth product loading and unloading without noseover challenges. Z-frames use a single continuous belt through all three sections.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I prevent products from sliding on an incline conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Use rough-top or textured belts for moderate angles. Add cleats for steeper inclines. Apply sidewalls for bulk materials. Consider vacuum hold-down for lightweight or flat products. Always test with actual product samples because friction varies with product surface, moisture, and temperature.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Can incline conveyors also run in decline mode?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Yes. Most incline conveyors reverse to decline operation. Decline mode requires regenerative braking or back-tension on the drive to control belt speed as gravity pulls products downward. Without proper braking, the belt accelerates and products pile up at the discharge.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">Horizontal belt transport basics</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Steep incline belt solutions</p>
+        </a>
+        <a href="/conveyor-types/spiral-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Spiral Conveyors</div>
+          <p class="text-sm text-white/60">Compact vertical elevation change</p>
+        </a>
+        <a href="/resources/conveyor-design-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Design Guide</div>
+          <p class="text-sm text-white/60">Layout planning and specifications</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

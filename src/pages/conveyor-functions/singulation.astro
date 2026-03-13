@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Singulation", "item": "https://packagingconveyor.com/conveyor-functions/singulation/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Singulation Conveyors for Packaging Lines",
+  "description": "Complete guide to singulation conveyors — speed-differential separation, plowing, gap creation, parcel singulation, bottle singulation, and vision-guided singulation systems.",
+  "url": "https://packagingconveyor.com/conveyor-functions/singulation/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is singulation on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Singulation is the process of separating a bulk or mass-flow stream of products into individual, spaced units traveling in single file. Products enter a singulation system touching or overlapping and exit with a controlled gap between each unit. Singulation prepares products for scanning, labeling, weighing, diverting, or machine feeding — all operations that require individual product access. Common singulation methods include speed-differential belts, angled plows, and retractable belt aligners." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does speed-differential singulation work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Speed-differential singulation uses two or more conveyor belts running at progressively faster speeds. Products ride from a slower upstream belt onto a faster downstream belt. The speed increase pulls the leading product away from the product behind it, creating a gap. Multiple speed-change zones in sequence increase the gap until each product is individually separated. Typical speed increases are 1.5x to 3x from the slowest belt to the fastest belt." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between singulation and metering?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Singulation separates touching or overlapping products into individual spaced units. Metering controls the rate and precise spacing of already-singulated products entering a downstream process. Singulation happens first — it turns a mass of product into single file. Metering happens second — it controls how fast and at what spacing those single-file products enter a machine or process. Many packaging lines combine singulation and metering in sequence." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use singulation conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "E-commerce and parcel distribution centers use singulation to separate packages from bulk unloading for automated scanning and sorting. Beverage lines use bottle singulation to convert mass-flow bottle streams into single file for labeling and packing. Food packaging uses singulation for individual package scanning and checkweighing. Pharmaceutical lines use singulation for serialization scanning where every unit must be individually identified." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Singulation Conveyors for Packaging Lines | PackagingConveyor.com"
+  description="Complete guide to singulation conveyors — speed-differential separation, plowing, gap creation, parcel singulation, and bottle singulation for packaging and distribution."
+  canonical="https://packagingconveyor.com/conveyor-functions/singulation/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Singulation</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Singulation <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Singulation separates bulk or mass-flow product streams into individual, spaced units for scanning, labeling, diverting, or machine feeding. Products enter the singulation zone touching, overlapping, or side-by-side and exit in single file with a controlled gap between each unit. Singulation conveyor systems serve e-commerce distribution, beverage packaging, food processing, and pharmaceutical serialization lines where downstream operations require individual product access.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY SINGULATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">The Function</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why <span class="text-accent">Singulation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Downstream processes need individual product access. Barcode scanners read one label at a time. Checkweighers weigh one package at a time. Diverters push one product at a time. Labelers apply one label at a time. None of these operations work when products arrive in a mass — touching, overlapping, stacked, or side-by-side. Singulation creates the conditions these downstream systems require: single file, one product at a time, with a gap between each unit.
+          </p>
+          <p>
+            Without singulation, automated scanning and sorting systems produce read errors, double-reads, and mis-sorts. A barcode scanner aimed at a conveyor of touching parcels reads the barcode on the leading parcel but may also partially read the barcode on the parcel behind it, creating a double-read that confuses the sortation controller. A diverter timed to push one parcel pushes two touching parcels together, sending the wrong parcel down the wrong lane. Singulation eliminates these failures by guaranteeing a gap between every product.
+          </p>
+          <p>
+            Singulation is distinct from <a href="/conveyor-functions/metering/" class="text-accent hover:text-accent-hover font-semibold">metering</a>. Singulation separates touching products into individuals. Metering controls the rate and precise spacing of already-separated products. In practice, most packaging lines perform singulation first (create individuals from a mass) and metering second (control the spacing and rate of those individuals entering the next machine). The two functions often occur on adjacent conveyor sections and are sometimes combined in a single system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPEED-DIFFERENTIAL SINGULATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="speed-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Primary Method</div>
+        <h2 id="speed-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Speed-Differential <span class="text-accent">Singulation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Speed-differential singulation is the most common method for creating gaps between touching products. The system uses two or more conveyor belts arranged in series, each running faster than the one before it. Products ride from a slower belt onto a faster belt. The speed increase pulls the leading product forward and away from the trailing product, creating a gap.
+          </p>
+          <p>
+            A typical three-zone speed-differential singulator runs the first belt at 100 feet per minute, the second at 200 FPM, and the third at 300 FPM. Products exit the first belt touching. The 2x speed increase at the first transition creates a gap equal to the product length (one product length of space opens for every product length of travel). The second 1.5x increase widens the gap further. By the third belt, products are separated by gaps large enough for barcode scanning, diverting, or machine feeding.
+          </p>
+          <p>
+            Speed ratios depend on the product characteristics. Uniform products (identical cases, identical bottles) respond predictably to speed differentials — a 2:1 ratio reliably creates a one-product-length gap. Mixed products (varying sizes, weights, and friction coefficients) require higher speed ratios because lighter products accelerate faster than heavier ones, causing inconsistent gap sizes. Parcel distribution centers handling mixed parcels use 3:1 or higher ratios with photoeye feedback to verify gap creation.
+          </p>
+          <p>
+            <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Flat belt conveyors</a> are the standard platform for speed-differential singulation. The flat belt surface provides consistent friction across the full product width, preventing products from rotating or skewing during acceleration. Roller conveyors can perform speed-differential singulation but tend to rotate lightweight or non-square products because individual rollers apply uneven forces across the product width.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PLOWING AND GUIDING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="plow-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Alignment</div>
+        <h2 id="plow-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Plowing & <span class="text-accent">Guiding</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Speed-differential singulation creates gaps but does not necessarily create single file. Products arriving side-by-side remain side-by-side unless a lateral force pushes them into a single lane. Plowing (also called guiding or aligning) adds that lateral force to convert a multi-abreast stream into single file.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Angled Belt Plows</h3>
+          <p>
+            Angled belt singulators use a conveyor belt oriented at an angle (typically 15-30 degrees) to the direction of travel. The belt surface moves products forward and simultaneously pushes them toward one side rail. Products arriving two or three abreast are forced into single file against the guide rail. The angled belt method works well for parcels, cartons, and rigid packages. It struggles with round or cylindrical products that roll unpredictably on the angled surface.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Tapered Guide Rails</h3>
+          <p>
+            Tapered (funnel-shaped) guide rails narrow the conveyor path from a wide infeed to a single-product-width discharge. Products entering the wide end are progressively squeezed into single file. Tapered rails work for slow-speed applications with uniform products. At high speeds or with mixed products, the narrowing point creates a jam-prone bottleneck where products wedge against each other and the rails. Tapered rail singulation is common for bottle lines, where round containers slide easily along stainless guide rails and gravity or back-pressure resolves most jams.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Active Wall Alignment</h3>
+          <p>
+            Active wall singulators use a powered belt running perpendicular to the main conveyor direction, mounted vertically along one side of the conveyor. The active wall belt pushes products laterally toward the opposite guide rail while the main conveyor belt moves products forward. The combination of forward motion and lateral push creates single-file alignment without the jam-prone bottleneck of static tapered rails. Active wall systems handle mixed parcels at high throughput (3,000-5,000+ parcels per hour) in distribution centers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GAP CREATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="gap-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Gap Control</div>
+        <h2 id="gap-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Gap <span class="text-accent">Creation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The gap between singulated products must be large enough for the downstream operation but not so large that it wastes conveyor capacity and reduces throughput. Barcode scanners typically need 4-6 inches of gap to distinguish individual products. Diverters need gaps equal to the diverter's actuation time multiplied by the conveyor speed — a diverter that actuates in 200 milliseconds on a 400 FPM conveyor needs at least 16 inches of gap. Checkweighers need the gap to exceed the scale platform length to avoid weighing two products simultaneously.
+          </p>
+          <p>
+            Photoeye feedback systems measure the actual gap between products after singulation and adjust upstream belt speeds in real time to maintain the target gap. Without feedback, speed-differential singulation produces inconsistent gaps — the first few products in a slug separate cleanly, but products deeper in the slug receive less effective speed differential because the products ahead of them absorb the acceleration. Closed-loop gap control uses a photoeye at the singulator discharge to measure each gap, compares it to the target, and adjusts the speed ratios of the upstream belts to correct deviations.
+          </p>
+          <p>
+            Gap creation interacts directly with <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed</a> requirements. A filling machine expecting containers at 200 per minute with 6-inch gaps needs a singulator that produces exactly that rate and spacing. Over-gapping reduces throughput (the machine starves). Under-gapping causes double-feeds and jams. The singulator is the throughput governor — its gap performance sets the maximum sustainable rate for the entire downstream line.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATION: PARCEL SINGULATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="parcel-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="parcel-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Parcel <span class="text-accent">Singulation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            E-commerce and parcel distribution centers face the most challenging singulation problem: mixed parcels ranging from small poly mailers to large corrugated cases, dumped from gaylords or unloaded from trailers in random orientation, arriving on the singulation conveyor in a disorganized mass. The singulator must separate this mass into individually spaced parcels in single file for automated barcode scanning and sortation.
+          </p>
+          <p>
+            Parcel singulation systems combine multiple techniques in sequence. A typical system runs: bulk belt (slow) &rarr; speed-differential acceleration zone &rarr; angled belt plow &rarr; active wall aligner &rarr; final gap-creation belt &rarr; scan tunnel. Each zone addresses one aspect of the singulation problem — speed differential creates longitudinal gaps, the plow handles side-by-side parcels, the active wall forces stragglers into single file, and the final belt creates consistent gaps for scanning.
+          </p>
+          <p>
+            <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Warehouse and distribution</a> centers measure singulation performance by the singulation rate (parcels per hour successfully singulated) and the recirculation rate (percentage of parcels that fail singulation and must recirculate through the system). Best-in-class parcel singulators achieve 95-98% first-pass singulation rates at 3,000-5,000 parcels per hour. Failed singulation events — double-reads, no-reads, side-by-side parcels — recirculate back to the singulator infeed for a second attempt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATION: BOTTLE SINGULATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="bottle-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Beverage Lines</div>
+        <h2 id="bottle-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Bottle <span class="text-accent">Singulation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Beverage lines accumulate bottles in mass-flow on wide accumulation tables or mass conveyors between the filler and the labeler, packer, or palletizer. Bottles on these mass conveyors touch on all sides — no gaps, no single file. The singulation section converts this mass back into single file for labeling, inspection, and case packing.
+          </p>
+          <p>
+            Bottle singulation uses tapered guide rails (funnel guides) that narrow from the full width of the mass conveyor down to a single-bottle-width lane. Back-pressure from the mass pushes bottles through the funnel. The narrowing rails force bottles into single file by allowing only one bottle at a time through the discharge point. Bottle-on-bottle friction, guide rail geometry, and conveyor belt speed control the singulation rate and prevent jamming at the funnel neck.
+          </p>
+          <p>
+            Dead plates (static flat surfaces) at the funnel transition point reduce friction and allow bottles to slide and rotate as they jostle into single file. Air-lubricated dead plates use low-pressure air jets through small holes to create an air cushion that further reduces friction and prevents label damage on pre-labeled bottles. Beverage singulation systems handle 200 to 1,200+ bottles per minute depending on bottle diameter and stability.
+          </p>
+          <p>
+            After singulation, bottles proceed to <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning conveyors</a> for case packing or directly to labelers and inspection stations. The singulation-to-laning sequence appears on nearly every beverage packaging line.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VISION-GUIDED SINGULATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="vision-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Advanced</div>
+        <h2 id="vision-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vision-Guided <span class="text-accent">Singulation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Vision-guided singulation uses overhead cameras and image processing to identify individual products in a mass flow, determine their positions and orientations, and command actuators (diverters, pushers, or robotic arms) to separate them. Vision-guided systems handle the scenarios that speed-differential and plowing methods cannot — overlapping products, stacked products, and products that interlock due to irregular shapes.
+          </p>
+          <p>
+            The vision system captures an image of the product mass, identifies individual items by detecting edges and boundaries, calculates each item's position and orientation on the conveyor, and sends coordinates to downstream actuators. A robotic arm picks overlapping items off the pile and places them on a clear section of belt. Alternatively, selective belt segments under different products run at different speeds to separate interleaved items.
+          </p>
+          <p>
+            Vision-guided singulation costs $$ compared to $ for mechanical singulation, but it achieves higher first-pass singulation rates with difficult product mixes. Distribution centers handling irregularly shaped parcels, soft poly bags, and tubes that tangle and overlap increasingly adopt vision-guided systems to reduce recirculation rates and increase scanner read rates. Machine learning algorithms improve singulation accuracy over time by learning from product shapes and failure patterns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Types</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/metering/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Metering</h3>
+            <p class="text-base text-white/60">Rate and spacing control</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Multi-lane distribution</p>
+          </a>
+          <a href="/conveyor-functions/infeed-outfeed/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Infeed & Outfeed</h3>
+            <p class="text-base text-white/60">Machine feeding systems</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is singulation on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Singulation separates a bulk or mass-flow product stream into individual, spaced units in single file. Products enter touching or overlapping and exit with a controlled gap between each unit. Singulation prepares products for scanning, labeling, diverting, or machine feeding.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does speed-differential singulation work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Two or more belts run at progressively faster speeds. Products transfer from a slower belt to a faster one. The speed increase pulls the leading product away from trailing products, creating a gap. Multiple speed zones in sequence widen the gap until each product is individually separated.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between singulation and metering?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-functions/singulation/" class="text-accent hover:text-accent-hover font-semibold">Singulation</a> separates touching products into individuals. <a href="/conveyor-functions/metering/" class="text-accent hover:text-accent-hover font-semibold">Metering</a> controls the rate and spacing of already-separated products. Singulation happens first (mass to single file), metering happens second (controlling the feed rate into a machine).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use singulation conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>E-commerce and parcel distribution (package scanning and sorting), <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse operations</a>, beverage lines (bottle singulation for labeling and packing), food packaging (individual package scanning), and pharmaceutical lines (serialization scanning requiring individual unit identification).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

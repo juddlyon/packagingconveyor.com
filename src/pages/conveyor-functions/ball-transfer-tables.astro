@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Ball Transfer Tables", "item": "https://packagingconveyor.com/conveyor-functions/ball-transfer-tables/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ball Transfer Tables for Packaging Conveyors",
+  "description": "Complete guide to ball transfer tables — omnidirectional product movement using ball caster arrays for packing stations, end-of-line conveyor systems, and manual case rotation.",
+  "url": "https://packagingconveyor.com/conveyor-functions/ball-transfer-tables/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a ball transfer table?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A ball transfer table is a flat conveyor surface embedded with an array of omnidirectional ball casters (ball transfers) that allow products to be pushed, rotated, or redirected in any horizontal direction with minimal effort. Each ball transfer unit consists of a large load-bearing ball seated on a cluster of smaller support balls inside a housing. Ball transfer tables are used at packing stations, end-of-line conveyor intersections, and anywhere operators need to manually reposition cases, cartons, or trays." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much weight can a ball transfer table hold?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Individual ball transfer units are rated from 15 lbs to over 2,000 lbs per unit depending on ball diameter, housing material, and ball material. A table's total load capacity equals the number of units supporting the product multiplied by each unit's rating, but the practical limit is the per-unit rating times the minimum number of units under the smallest product. Standard packaging ball transfer tables with 1-inch carbon steel balls typically support 30-75 lbs per unit. Heavy-duty units with hardened steel balls handle 200-2,000+ lbs per unit for pallet and heavy case applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between fixed and spring-loaded ball transfers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fixed ball transfers mount at a set height and the ball does not retract. They provide consistent product elevation and are the standard choice for most packaging applications. Spring-loaded ball transfers allow the ball to retract below the table surface under load, letting conveyor belts or rollers carry the product over the transfer point. When the belt or roller releases the product over the ball zone, the springs push the balls up to support the product for omnidirectional movement. Pop-up (pneumatic) ball transfers retract fully below the surface and extend on command." }
+    },
+    {
+      "@type": "Question",
+      "name": "What ball transfer spacing pattern should I use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ball transfer spacing depends on the smallest product footprint and the required load support. Standard packaging applications use 4-inch to 6-inch center-to-center spacing in a staggered (diamond) pattern. The staggered pattern ensures at least 3-4 balls support any product regardless of its position on the table. For small products, tighter 3-inch spacing prevents products from sitting between balls. For heavy loads, closer spacing distributes weight across more units. The minimum rule: at least three ball transfers must contact the product at all times." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Ball Transfer Tables for Packaging Conveyors | PackagingConveyor.com"
+  description="Complete guide to ball transfer tables — omnidirectional product movement using ball caster arrays for packing stations, end-of-line systems, and manual case rotation."
+  canonical="https://packagingconveyor.com/conveyor-functions/ball-transfer-tables/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Ball Transfer Tables</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Ball Transfer <span class="text-accent-bright">Tables</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A ball transfer table uses an array of omnidirectional ball casters mounted in a flat surface to allow manual or powered product movement in any horizontal direction. Each ball transfer unit contains a large load-bearing ball sitting on smaller support balls inside a pressed or machined housing, enabling 360-degree rolling with minimal push force. Ball transfer tables and ball transfer conveyor sections serve packing stations, end-of-line case handling, and manual product rotation in packaging facilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT IS A BALL TRANSFER TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="what-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">The Function</div>
+        <h2 id="what-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          What Ball Transfer Tables <span class="text-accent">Do</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Standard conveyors move products in one direction — forward. Ball transfer tables remove that constraint. Products placed on a ball transfer surface can be pushed, pulled, rotated, or slid in any horizontal direction because every ball rotates freely in its housing. This omnidirectional capability solves several packaging line problems that linear conveyors cannot address.
+          </p>
+          <p>
+            At packing stations, operators need to rotate cases to access different sides for taping, labeling, or inspection. On a roller conveyor, rotating a 40-lb case requires lifting it. On a ball transfer table, the operator spins it with one hand. At conveyor intersections, ball transfer sections let products change direction 90 degrees without a dedicated <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyor</a> mechanism. The product simply rolls from one conveyor line onto the ball transfer surface and continues onto the perpendicular line.
+          </p>
+          <p>
+            Ball transfer tables serve as low-cost, zero-maintenance transition points between powered conveyor sections. They require no motors, drives, belts, or controllers. Product moves by manual push, gravity, or momentum from an upstream powered conveyor. This simplicity makes ball transfer tables the most reliable and lowest-cost conveyor components in a packaging line.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BALL TRANSFER UNIT TYPES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Unit Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Ball Transfer <span class="text-accent">Unit Types</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Fixed Ball Transfers</h3>
+          <p>
+            Fixed ball transfer units mount at a set height in the table surface. The ball protrudes above the surface by a fixed amount — typically 0.25 to 0.50 inches — and does not retract. Fixed units are the standard choice for standalone ball transfer tables, packing stations, and manual workstations where the table surface is the primary product support. They offer the simplest construction, lowest cost per unit, and longest service life because no spring mechanism exists to wear or fail.
+          </p>
+          <p>
+            Fixed ball transfers use a pressed steel or machined aluminum housing. The load ball sits on a bed of smaller transfer balls (typically 20-60 small balls) that distribute load and allow rotation. Carbon steel load balls are standard for dry environments. Stainless steel load balls resist corrosion in washdown or humid environments. Nylon load balls prevent marking on finished product surfaces and reduce noise.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Spring-Loaded Ball Transfers</h3>
+          <p>
+            Spring-loaded ball transfers retract below the conveying surface under product weight and extend back above the surface when the product moves past. This design lets ball transfer units integrate into <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> sections. The rollers carry the product directionally, and when the product reaches the ball transfer zone, the spring-loaded balls pop up between the rollers to provide omnidirectional movement. When the product leaves the zone, the balls retract and the next roller section resumes directional transport.
+          </p>
+          <p>
+            Spring rates determine the crossover threshold. Light springs (5-15 lbs) suit lightweight cartons and trays. Medium springs (15-50 lbs) handle standard cases. Heavy springs (50-200+ lbs) support loaded pallets and heavy products. Selecting the wrong spring rate causes either premature retraction (product sinks and drags on the housing) or failure to retract (balls interfere with roller transport). Spring-loaded units require more maintenance than fixed units because springs fatigue over millions of cycles and contamination (dust, product debris, moisture) can bind the retraction mechanism.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Pop-Up (Pneumatic) Ball Transfers</h3>
+          <p>
+            Pop-up ball transfers use pneumatic cylinders to raise and lower the ball assemblies on command. A PLC or zone controller activates the air supply, and the balls extend above the roller or belt surface. When retracted, the balls sit flush with or below the conveying surface, allowing normal linear conveying. Pop-up ball transfers enable fully automated right-angle transfers, 90-degree diverts, and multi-directional sorting without mechanical pushers or diverter arms.
+          </p>
+          <p>
+            Pop-up systems require compressed air supply (typically 60-80 PSI), solenoid valves, and PLC control. They cost $$ compared to $ for fixed or spring-loaded units, but they eliminate the need for dedicated transfer conveyor mechanisms at right-angle intersections. Pop-up cycle times range from 0.3 to 1.0 seconds for full extension, limiting throughput at high-speed sort points. For higher-speed right-angle transfers, dedicated <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyors</a> with pop-up roller or belt mechanisms offer faster cycle times.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Flange-Mount vs. Drop-In vs. Stud-Mount</h3>
+          <p>
+            Ball transfer units attach to tables using three primary mounting methods. Flange-mount units bolt to the top surface through a flange ring — strongest hold, easiest to replace, but the flange sits above the table surface and can catch product edges. Drop-in units press into a drilled hole from above — flush surface, clean appearance, but harder to replace if the hole wears. Stud-mount units thread into a tapped hole from below — fully flush surface, secure hold, but require access to the underside for installation and replacement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TABLE CONSTRUCTION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="construction-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Construction</div>
+        <h2 id="construction-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Table <span class="text-accent">Construction</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Carbon Steel Tables</h3>
+          <p>
+            Carbon steel is the standard frame and deck material for ball transfer tables in dry packaging environments. Formed channel or structural steel frames support punched or drilled steel deck plates. Carbon steel tables cost $ and handle the widest range of product weights. Paint or powder coat finishes protect against corrosion in climate-controlled facilities. Carbon steel is not suitable for washdown environments, outdoor installations, or food-contact applications requiring USDA or FDA-compliant surfaces.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Stainless Steel Tables</h3>
+          <p>
+            Stainless steel (304 or 316 grade) ball transfer tables serve food, beverage, and pharmaceutical packaging lines where sanitation, washdown, and corrosion resistance are requirements. 304 stainless handles standard washdown with mild detergents. 316 stainless resists chloride-based sanitizers and acidic product contact. Stainless tables cost $$ compared to carbon steel. The ball transfer units themselves must also be stainless — mixing carbon steel ball units into a stainless table defeats the corrosion resistance. Stainless ball transfer tables are standard in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging</a> and pharmaceutical applications where USDA or FDA surface compliance is required.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Aluminum Tables</h3>
+          <p>
+            Aluminum ball transfer tables offer corrosion resistance at lower weight than stainless steel. Aluminum extrusion frames with machined aluminum deck plates suit cleanroom, electronics, and lightweight product handling. Aluminum does not handle heavy loads as well as steel — the deck plate can deform under concentrated point loads. Aluminum tables cost $$ (between carbon steel and stainless) and are common in <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse and distribution</a> applications where table portability and repositioning matter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPACING PATTERNS & LOAD CAPACITY ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="spacing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Design</div>
+        <h2 id="spacing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Spacing Patterns & <span class="text-accent">Load Capacity</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Staggered (Diamond) Pattern</h3>
+          <p>
+            The staggered pattern offsets alternating rows by half the column spacing, forming a diamond grid. This pattern maximizes the minimum number of ball contacts under any product position. A product placed anywhere on the table always contacts at least three or four balls. Staggered patterns are the standard for packaging ball transfer tables because they prevent products from sitting in a gap between balls regardless of placement. Typical center-to-center spacing in staggered patterns ranges from 3 inches (small product, light load) to 8 inches (large product, heavy load), with 4-to-6-inch spacing being the most common for case handling.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Square (Grid) Pattern</h3>
+          <p>
+            The square pattern aligns all rows and columns on a uniform grid. Square patterns are easier to manufacture (uniform hole drilling) but create diagonal gaps where small products can settle between four balls without contacting any. Square patterns work when the smallest product dimension is at least 1.5 times the center-to-center spacing. Square patterns are common on heavy-duty tables where large products (pallets, heavy cases) always span multiple balls and the gap concern is irrelevant.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Load Capacity Calculation</h3>
+          <p>
+            Ball transfer table load capacity is determined by the weakest link: individual unit rating, number of units under the product, and table frame capacity. The practical load limit equals the per-unit rating multiplied by the number of units under the smallest product footprint. A table with 1-inch balls rated at 50 lbs each on 4-inch staggered centers supports approximately 200 lbs for a 12x12-inch case (four balls contact the bottom). The same table supports only 100 lbs for a 6x8-inch carton (two balls contact). Always size ball transfers for the smallest, heaviest product that will cross the table.
+          </p>
+          <p>
+            Ball diameter directly affects load rating and rolling resistance. Common packaging ball diameters are 1 inch (30-75 lbs per unit), 1.5 inches (75-200 lbs per unit), and 2 inches (200-600 lbs per unit). Larger balls also reduce rolling resistance, making manual pushing easier for heavy products. For light products under 10 lbs, 0.625-inch or 0.75-inch balls provide adequate support with tighter spacing for small footprints.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Packaging Line <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Packing Stations</h3>
+          <p>
+            Manual packing stations use ball transfer tables as the primary work surface. Operators receive empty cases from one conveyor, pull products from another, pack the case on the ball transfer surface (rotating the case as needed to access all sides), and push the packed case onto an outfeed conveyor. The ball transfer surface eliminates lifting during rotation and repositioning, reducing operator fatigue and repetitive strain injuries. Ergonomic studies show that ball transfer packing stations reduce push-pull forces by 60-80% compared to static table surfaces.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">End-of-Line Case Handling</h3>
+          <p>
+            Ball transfer sections at the end of packaging lines allow operators to manually redirect cases, rotate them for label inspection, or push them onto pallets. A ball transfer table between the case sealer and the palletizing area gives operators flexibility to sort, inspect, and stage cases without dedicated diverter conveyors. This low-cost approach suits manual and semi-automated <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a> operations running under 15 cases per minute where full automation is not justified.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Manual Case Rotation</h3>
+          <p>
+            Print-and-apply labeling systems and barcode verification stations sometimes require cases to be rotated 90 or 180 degrees. Ball transfer sections before and after the labeler let operators spin cases to present the correct face. Automated alternatives (case turntables, servo-driven rotators) cost $$, making manual rotation on ball transfers the economical choice for lines running under 10-12 cases per minute.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Conveyor Intersections and Right-Angle Transfers</h3>
+          <p>
+            Ball transfer tables at conveyor intersections serve as passive right-angle transfer points. Product arriving on one conveyor rolls onto the ball transfer surface and is pushed (manually or by a pneumatic pusher) onto a perpendicular conveyor. Pop-up ball transfer sections automate this process — the balls extend to lift the product off the linear conveyor, a pusher diverts the product, and the balls retract to allow normal conveying to resume. This application integrates ball transfer technology with <a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">product handling</a> functions for flexible routing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Accumulation and Staging</h3>
+          <p>
+            Ball transfer tables serve as zero-pressure accumulation zones where products can be manually rearranged, sorted, or held. Unlike roller or belt accumulation conveyors, ball transfer accumulation zones allow products to be pushed in any direction — operators can rearrange the queue, pull priority products forward, or push rejected products to the side without disrupting the line. This flexibility is valuable at quality inspection stations and rework areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INTEGRATION WITH CONVEYOR SYSTEMS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Integration</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor System <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Ball transfer tables integrate into conveyor lines at transition points between powered sections. The critical design parameter is height matching — the ball transfer surface must align with the conveying surface of adjacent roller or belt conveyors within &plusmn;0.125 inches. Height mismatches cause product hang-ups at the transition, especially for small or flexible products with leading edges that can catch on surface steps.
+          </p>
+          <p>
+            When integrating ball transfers between <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> sections, the ball protrusion height must match the roller tangent line (the top of the rollers). Ball transfers protruding above the roller line cause products to ride up and lose contact with the drive rollers. Ball transfers sitting below the roller line create a dip that traps light products.
+          </p>
+          <p>
+            Side guide rails at ball transfer sections require careful design. Standard fixed guides work for products moving in one direction, but omnidirectional ball transfer zones often need removable or swing-away guides to allow multi-directional product movement. Adjustable guide rails with quick-release clamps let operators reconfigure the ball transfer zone for different product sizes and flow directions without tools.
+          </p>
+          <p>
+            Maintenance requirements are minimal. Ball transfer units require periodic lubrication (every 3-6 months in clean environments) to maintain free rotation. Contamination — shrink wrap fragments, corrugated dust, adhesive residue — is the primary cause of ball transfer failure. Sealed or shielded ball transfer units resist contamination but cost more than open units. In food packaging environments, washdown-rated stainless ball transfers with sealed housings prevent water and debris from entering the ball cavity and causing corrosion or binding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION CRITERIA ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selection <span class="text-accent">Criteria</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Selecting the right ball transfer table requires matching five parameters to the application: product weight, product footprint, environment, throughput mode (manual vs. automated), and adjacent conveyor type.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Product weight</strong> determines ball diameter and unit load rating. Size for the heaviest product at the smallest footprint.</li>
+            <li><strong class="text-ink">Product footprint</strong> determines ball spacing. The smallest product must always contact at least three balls.</li>
+            <li><strong class="text-ink">Environment</strong> determines material — carbon steel for dry, stainless for washdown, nylon balls for finished surfaces.</li>
+            <li><strong class="text-ink">Throughput mode</strong> determines unit type — fixed for manual stations, spring-loaded for roller integration, pop-up for automated transfers.</li>
+            <li><strong class="text-ink">Adjacent conveyor type</strong> determines height, width, and transition geometry. Ball transfer surface must match adjacent conveying height.</li>
+          </ul>
+          <p>
+            Common specification errors include undersizing ball diameter for the product weight (leading to flat spots and premature ball failure), using too-wide spacing for small products (products fall between balls), and selecting carbon steel units for washdown environments (corrosion within months). Always specify the full product range — lightest, heaviest, smallest, and largest — and design for the worst-case combination.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Types</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/product-handling/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Product Handling</h3>
+            <p class="text-base text-white/60">Orienting, rotating, positioning</p>
+          </a>
+          <a href="/conveyor-types/roller-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Roller Conveyors</h3>
+            <p class="text-base text-white/60">Gravity and powered roller systems</p>
+          </a>
+          <a href="/conveyor-types/transfer-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Transfer Conveyors</h3>
+            <p class="text-base text-white/60">Right-angle and multi-directional transfers</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a ball transfer table?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A ball transfer table is a flat surface embedded with omnidirectional ball casters that allow products to move in any horizontal direction with minimal push force. Each unit contains a large load ball on smaller support balls. Ball transfer tables are used at packing stations, conveyor intersections, and manual case handling areas in packaging lines.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much weight can a ball transfer table hold?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Individual ball transfer units handle 15 to 2,000+ lbs depending on ball diameter and material. Table capacity equals the per-unit rating times the number of units under the smallest product. Standard 1-inch steel ball units rate 30-75 lbs each. Heavy-duty 2-inch units handle 200-600+ lbs each.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between fixed and spring-loaded ball transfers?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Fixed ball transfers stay at a set height — they do not retract. Spring-loaded units retract below the surface under load, allowing <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> to carry products over them. Pop-up (pneumatic) units extend on command for automated right-angle transfers.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What ball transfer spacing pattern should I use?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Use a staggered (diamond) pattern with 4-to-6-inch centers for most packaging applications. Staggered patterns ensure 3-4 balls always contact the product. Tighten to 3-inch spacing for small products. The minimum rule: at least three balls must support the product at all positions on the table.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

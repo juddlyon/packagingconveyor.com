@@ -8,12 +8,10 @@ const functions = [
   { name: 'Index & Position', slug: 'indexing-conveyors', desc: 'Precision stop-and-go motion for filling, labeling, and robotic pick-and-place', status: 'live' },
   { name: 'Reject & Divert', slug: 'reject-systems', desc: 'Remove non-conforming product from the line after metal detectors, checkweighers, or vision systems', status: 'live' },
   { name: 'Turn & Orient', slug: 'product-handling', desc: 'Rotate, flip, or invert product orientation before downstream processes', status: 'coming' },
-  { name: 'Merge & Combine', slug: 'merging-conveyors', desc: 'Combine multiple product streams into a single lane without collisions', status: 'coming' },
-  { name: 'Sort & Divert', slug: 'sorting-conveyors', desc: 'Route product to specific destinations based on size, weight, barcode, or vision data', status: 'coming' },
-  { name: 'Elevate & Lower', slug: 'elevation-conveyors', desc: 'Change product elevation between mezzanines, floors, or process heights', status: 'coming' },
-  { name: 'Weigh & Inspect', slug: 'inspection-conveyors', desc: 'Integrate checkweighers, metal detectors, X-ray, and vision inspection inline', status: 'coming' },
-  { name: 'Cool & Condition', slug: 'cooling-conveyors', desc: 'Cool, freeze, dry, or condition product during conveying using spirals or tunnels', status: 'coming' },
-  { name: 'Feed & Singulate', slug: 'feeding-conveyors', desc: 'Convert bulk or random product flow into single-file, oriented, and spaced product', status: 'coming' },
+  { name: 'Merge & Combine', slug: '/conveyor-types/diverting-merging', desc: 'Combine multiple product streams into a single lane without collisions', status: 'live', external: true },
+  { name: 'Sort & Divert', slug: '/conveyor-types/diverting-merging/sortation', desc: 'Route product to specific destinations based on size, weight, barcode, or vision data', status: 'live', external: true },
+  { name: 'Elevate & Lower', slug: '/conveyor-types/incline-conveyors', desc: 'Change product elevation between mezzanines, floors, or process heights', status: 'live', external: true },
+  { name: 'Weigh & Inspect', slug: 'inspection-detection', desc: 'Integrate checkweighers, metal detectors, X-ray, and vision inspection inline', status: 'live' },
 ];
 
 const breadcrumbSchema = {
@@ -97,7 +95,7 @@ const faqSchema = {
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
         {functions.map((fn) => (
-          <a href={`/conveyor-functions/${fn.slug}/`} class="card group p-7 flex flex-col">
+          <a href={fn.slug.startsWith('/') ? `${fn.slug}/` : `/conveyor-functions/${fn.slug}/`} class="card group p-7 flex flex-col">
             <div class="flex items-start justify-between mb-3">
               <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{fn.name}</h3>
               {fn.status === 'live' ? (

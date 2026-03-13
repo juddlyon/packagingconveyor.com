@@ -1,0 +1,363 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Design Guide", "item": "https://packagingconveyor.com/resources/conveyor-design-guide/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor System Design Guide",
+  "description": "Complete guide to designing conveyor systems for packaging lines — requirements gathering, layout planning, conveyor selection, controls architecture, and integration with packaging machinery.",
+  "url": "https://packagingconveyor.com/resources/conveyor-design-guide/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the first steps in designing a conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start by defining product characteristics (dimensions, weight, shape, fragility, surface friction), throughput requirements (products per minute or cases per hour), and environmental conditions (temperature, moisture, washdown, cleanroom). These three parameters determine conveyor type, belt material, frame construction, and motor sizing. Document these requirements in a User Requirements Specification (URS) before contacting conveyor manufacturers." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you select the right conveyor type for a packaging line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor type selection depends on product type, handling requirements, and line function. Flat belt conveyors suit lightweight cartons and packages. Roller conveyors handle cases and totes. MDR conveyors provide zero-pressure accumulation. Tabletop chain conveyors handle bottles and containers. Incline conveyors move products between elevations. Match conveyor type to function: transport, accumulation, indexing, merging, diverting, or elevation change." }
+    },
+    {
+      "@type": "Question",
+      "name": "What information do conveyor manufacturers need to provide a quote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Manufacturers need: product dimensions and weight range, throughput rate, conveyor length and width, elevation changes, environment (dry, washdown, cleanroom, hazardous area), frame material preference, controls scope (standalone, integrated with PLC), power supply available, and floor plan or CAD layout. A detailed specification reduces quote turnaround time and ensures accurate pricing. Include photos of the product and installation area when possible." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to design and install a conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Timeline depends on system complexity. Simple standalone conveyors take 2-4 weeks for design and 4-8 weeks for fabrication. Multi-conveyor integrated systems require 4-8 weeks of design engineering, 8-16 weeks of fabrication, and 1-4 weeks of installation and commissioning. Custom systems with complex controls, vision inspection, or robotic integration can take 6-12 months from concept to commissioning." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor System Design Guide | PackagingConveyor.com"
+  description="Complete guide to designing conveyor systems for packaging — requirements gathering, layout planning, conveyor type selection, controls architecture, and integration with packaging machines."
+  canonical="https://packagingconveyor.com/resources/conveyor-design-guide/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Conveyor Design Guide</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor System <span class="text-accent-bright">Design</span> Guide
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor system design is the engineering process of selecting, sizing, and laying out conveyors to move products through a packaging line at a target throughput rate. The process starts with defining product characteristics, throughput requirements, and environmental conditions, then proceeds through conveyor type selection, layout planning, controls architecture, and integration with upstream and downstream packaging machines. This guide covers every phase of conveyor system design and links to detailed sub-guides on <a href="/resources/conveyor-design-guide/components/" class="text-accent hover:text-accent-hover font-semibold">conveyor components</a> and <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">conveyor engineering calculations</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ REQUIREMENTS GATHERING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="requirements-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 1</div>
+        <h2 id="requirements-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Requirements <span class="text-accent">Gathering</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Every conveyor design project begins with a detailed requirements gathering phase. The information collected here determines every downstream decision — conveyor type, frame material, belt material, motor size, controls complexity, and cost. Skipping or rushing this phase is the leading cause of conveyor system redesigns and change orders.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Product Characteristics</h3>
+          <p>
+            Document every product that will run on the conveyor system. Record the minimum, maximum, and typical values for length, width, height, and weight. Irregular shapes, flexible packaging, and round products (bottles, cans, jars) each require different conveyor surfaces and guide rail configurations. Note product surface characteristics — smooth, rough, sticky, oily, or dusty — because surface friction affects belt material selection and incline angle limits.
+          </p>
+          <p>
+            Fragile products require low-impact transfers and accumulation zones that prevent product-to-product contact pressure. Temperature-sensitive products (chocolate, frozen goods, pharmaceuticals) dictate environmental controls and belt material temperature ratings. Record the product packaging type: bare product, pouches, cartons, cases, shrink-wrapped bundles, or pallets. Each packaging format has different conveying requirements.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Throughput Requirements</h3>
+          <p>
+            Define throughput in the units that matter to production: products per minute, cases per hour, pallets per shift, or pounds per hour. Conveyor speed and width are calculated directly from throughput. A single-file conveyor running at 60 feet per minute with a 12-inch product pitch delivers 60 products per minute. Higher throughput requires wider conveyors for multi-lane operation, faster belt speeds, or both.
+          </p>
+          <p>
+            Account for peak throughput, not just average. Upstream machines often surge — a case erector may output 30 cases per minute on average but burst to 40 cases per minute between changeovers. The conveyor system must handle peak rates without jamming. Add a 15-20% throughput margin above the maximum upstream machine rate.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Environmental Conditions</h3>
+          <p>
+            Environment determines frame material, belt material, motor enclosure rating, and overall system cost. Standard dry environments use painted carbon steel frames and PVC belts at the lowest cost point. Washdown environments (USDA, dairy, meat, bakery) require stainless steel frames, polyurethane or modular plastic belts, and sealed motors with IP65 or IP69K ratings. For belt material details, see the <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">conveyor belting guide</a>.
+          </p>
+          <p>
+            Cleanroom environments (pharmaceutical, medical device) require smooth, non-particle-shedding surfaces, enclosed drives, and HEPA-compatible designs. Hazardous environments (Class I/II, Division 1/2) require explosion-proof motors and controls. Cold storage and freezer environments require components rated for temperatures down to -40&deg;F, condensation management, and low-temperature lubricants.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LAYOUT PLANNING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="layout-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 2</div>
+        <h2 id="layout-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Layout <span class="text-accent">Planning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Layout planning translates throughput requirements and floor space constraints into a physical conveyor arrangement. Start with a scaled floor plan showing all existing equipment, columns, doorways, utilities, and operator access areas. Mark the product flow path from the start of the packaging line (infeed) to the end (palletizer or shipping).
+          </p>
+          <p>
+            Conveyor layouts follow one of four basic patterns: straight-line, L-shaped, U-shaped, or S-shaped. Straight-line layouts are simplest and lowest cost but require the most floor space in one direction. U-shaped layouts return the product to the same end of the building as the infeed, reducing forklift travel distance. L-shaped layouts fit into corner spaces. S-shaped layouts fit long processes into compact footprints.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Elevation Changes</h3>
+          <p>
+            Packaging lines frequently require elevation changes — from floor level to machine infeed height, between mezzanine levels, or over aisle crossings. Incline conveyors handle gradual elevation changes up to 30 degrees for cartons and cases. Steeper angles require cleated belts, bucket elevators, or vertical reciprocating conveyors. The <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">engineering calculations guide</a> covers incline angle limits for different product types.
+          </p>
+          <p>
+            Spiral conveyors provide continuous elevation change in a compact footprint — a spiral conveyor occupies roughly 6&times;6 feet of floor space while lifting products 10-15 feet. Vertical reciprocating conveyors (VRCs) handle pallets and heavy loads between levels. Bucket elevators handle bulk materials vertically.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Transfer Points</h3>
+          <p>
+            Transfer points — where product moves from one conveyor to another, or between a conveyor and a machine — are the most failure-prone locations in any conveyor system. Dead plates, nose bar transfers, and pop-up transfers each suit different product types. Small products and flexible packages require dead plate transfers with minimal gaps. Cases and totes transfer reliably between roller conveyors with powered transfer sections.
+          </p>
+          <p>
+            Every transfer point introduces a potential jam location. Minimize the number of transfers in the layout. When transfers are unavoidable, add photoeye sensors upstream and downstream of each transfer to detect jams early and stop upstream conveyors before product piles up. For a deeper look at transfer conveyor options, see the <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types overview</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Operator Access and Ergonomics</h3>
+          <p>
+            Design conveyor height for operator comfort. Standard conveyor working height is 34-36 inches for standing operators — matching standard workbench height. Manual pack stations require 24-30 inches of clear space between the conveyor edge and any obstruction. Leave at least 36 inches of aisle clearance on both sides of conveyors for maintenance access, and 48 inches minimum for forklift aisles.
+          </p>
+          <p>
+            Place E-stop buttons within reach of every operator position. ANSI/ASME B20.1 requires E-stop devices at intervals not exceeding 50 feet along the conveyor path. Pull-cord E-stops provide continuous access along the full length of long conveyors. For full safety requirements, see the <a href="/resources/conveyor-safety/" class="text-accent hover:text-accent-hover font-semibold">conveyor safety guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONVEYOR SELECTION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 3</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Selection</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyor type selection matches the product, function, and environment to the right conveyor technology. Each conveyor type excels at a specific set of tasks and fails at others. Choosing the wrong type creates chronic problems — jams, product damage, premature wear, and downtime — that no amount of adjustment can fix.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Selection by Product Type</h3>
+          <p>
+            Bottles, jars, and cylindrical containers run best on tabletop chain conveyors with side guide rails. The smooth, low-friction chain surface prevents bottles from tipping. Cartons, cases, and trays run well on both belt conveyors and roller conveyors. Belt conveyors provide positive control of product position; roller conveyors allow easy manual push-on and push-off at operator stations. Pouches, bags, and flexible packages require belt conveyors — roller conveyors allow flexible products to sag between rollers and jam.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Selection by Function</h3>
+          <p>
+            Transport conveyors move product from point A to point B at a constant speed. Belt conveyors and powered roller conveyors handle this function. Accumulation conveyors buffer product between machines running at different speeds. Zero-pressure accumulation conveyors (MDR or zero-pressure roller) prevent product contact during accumulation, protecting fragile or labeled products. For more on accumulation, see the <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a> page.
+          </p>
+          <p>
+            Indexing conveyors start, stop, and position product at precise locations for filling, labeling, printing, or inspection. Servo-driven belt conveyors provide the position accuracy required for indexing. Merging and diverting conveyors combine or split product flows using pop-up transfers, pusher diverters, or activated roller belt (ARB) technology.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Selection by Environment</h3>
+          <p>
+            Standard dry environments support any conveyor type. Washdown environments narrow the field to stainless steel frame conveyors with open-frame designs that shed water and allow cleaning access. Sanitary environments add requirements for crevice-free construction, tool-free belt removal, and FDA-compliant contact surfaces. Cold storage environments require components rated for sub-zero temperatures and designs that manage condensation.
+          </p>
+          <p>
+            Understanding the cost implications of each environment is important for budgeting. The <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> compares relative costs across environment types and conveyor categories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTROLS ARCHITECTURE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="controls-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 4</div>
+        <h2 id="controls-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Controls <span class="text-accent">Architecture</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Controls architecture defines how conveyors communicate with each other and with packaging machines. The complexity ranges from standalone conveyors with a simple on/off switch to fully networked systems with PLC control, HMI displays, and Ethernet/IP communication to every device on the line.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Standalone Controls</h3>
+          <p>
+            Standalone conveyors operate independently with a motor starter or VFD mounted on the conveyor frame. An operator uses a local start/stop station or speed dial to control the conveyor. Standalone controls work for simple transport conveyors that run continuously at a fixed speed. Cost is lowest because no PLC, no network wiring, and no programming are required.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Distributed Controls</h3>
+          <p>
+            Distributed controls place intelligence at each conveyor zone. MDR (motorized drive roller) conveyors use this approach — each zone has its own motor, controller card, and photoeye sensor. Zones communicate with neighboring zones using simple signal wires. When a downstream zone is full, the upstream zone stops. This provides zero-pressure accumulation without a central PLC. Distributed controls suit warehouse and distribution conveyor systems with long runs and many accumulation zones.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Centralized PLC Controls</h3>
+          <p>
+            Centralized PLC controls provide the highest level of coordination between conveyors and packaging machines. A programmable logic controller (PLC) — typically Allen-Bradley (Rockwell Automation), Siemens, or Beckhoff — runs the control logic for all conveyors and communicates with upstream and downstream machines via Ethernet/IP, PROFINET, or EtherCAT. An HMI (human-machine interface) touchscreen provides operator control, speed adjustment, diagnostics, and alarm history.
+          </p>
+          <p>
+            Centralized controls are required for lines that perform indexing, product tracking, sortation, recipe-based changeover, or data logging. The PLC knows the position and speed of every conveyor, can synchronize conveyor speed to machine speed, and can implement complex routing logic for sortation and diverting. Variable frequency drives (VFDs) on each motor allow the PLC to adjust conveyor speed in real time. For motor and drive selection, see the <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">motors and drives guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INTEGRATION WITH PACKAGING MACHINES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 5</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Machine <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyors connect packaging machines into a production line. The integration between conveyors and machines determines line efficiency. Poor integration creates bottlenecks, jams, and product damage at every machine-to-conveyor transfer point.
+          </p>
+          <p>
+            Each packaging machine has a discharge height, discharge speed, and product orientation that the receiving conveyor must match. A case erector discharges flat cases at a specific height and speed — the receiving conveyor must match that height exactly and run at a speed that clears each case before the next one arrives. A carton closer or shrink wrapper discharges product in a specific orientation — the conveyor must maintain that orientation through any downstream turns or transfers.
+          </p>
+          <p>
+            Accumulation between machines is critical for line efficiency. Without accumulation, a jam or stoppage at any single machine stops the entire line. Add accumulation conveyors upstream of every machine that runs slower than the preceding machine. Size the accumulation zone to buffer at least 2-3 minutes of production at the upstream machine's rate. This allows operators time to clear a jam or perform a short adjustment without stopping the upstream machines.
+          </p>
+          <p>
+            Speed matching between conveyors and machines prevents product gaps and bunching. When a conveyor feeds a machine, the conveyor speed should match or slightly exceed the machine's infeed speed. Running the conveyor too fast creates product collisions at the machine infeed. Running too slow starves the machine and reduces throughput. For high-speed lines, servo-driven indexing conveyors synchronize electronically to the machine cycle via encoder feedback.
+          </p>
+          <p>
+            The <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">conveyor manufacturers directory</a> lists companies that provide integrated conveyor and packaging line design services, from concept through commissioning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INSTALLATION PLANNING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="installation-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Phase 6</div>
+        <h2 id="installation-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Installation <span class="text-accent">Planning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Installation planning begins during design, not after fabrication. Floor condition, power availability, compressed air supply, and rigging access all affect conveyor design decisions. Verify floor flatness — conveyor systems require level floors within &frac14; inch over 10 feet for proper belt tracking and roller operation. Uneven floors require adjustable leg levelers on every support.
+          </p>
+          <p>
+            Power requirements depend on the total connected horsepower of all conveyor motors. A typical packaging line with 10-15 conveyors draws 20-50 amps at 480V three-phase. Confirm that the facility electrical panel has capacity for the additional load. Plan conduit routing from the electrical panel to each conveyor motor and control panel. Overhead cable tray is preferred over floor-level conduit to keep the floor clear for cleaning and forklift access.
+          </p>
+          <p>
+            Conveyor sections must fit through doorways, elevators, and aisles to reach the installation area. Maximum section length is typically 10-12 feet for indoor delivery — limited by door width and turning radius in hallways. Longer conveyor runs are shipped in sections and bolted together on-site. Confirm rigging access — some installations require a crane or forklift to position elevated conveyors.
+          </p>
+          <p>
+            Factory acceptance testing (FAT) at the manufacturer's facility reduces installation time and risk. During FAT, the manufacturer assembles the conveyor system, runs test products, verifies speeds and throughput, and demonstrates controls functionality. Issues found during FAT are faster and cheaper to fix than issues found after shipping and installation. Site acceptance testing (SAT) after installation confirms that the system meets performance specifications in the production environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DESIGN GUIDE SUB-PAGES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="subpages-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Deep Dives</div>
+        <h2 id="subpages-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Design Guide <span class="text-accent">Sub-Guides</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            This design guide provides the overall framework. The following sub-guides go deep on specific technical areas.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
+          <a href="/resources/conveyor-design-guide/components/" class="block p-8 bg-surface-dim border border-ink/10 hover:border-accent transition-colors">
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Conveyor Components</h3>
+            <p class="text-ink-muted leading-relaxed">Frames, belts, rollers, drives, pulleys, bearings, motors, sensors, and guards — every physical component in a conveyor system.</p>
+          </a>
+          <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="block p-8 bg-surface-dim border border-ink/10 hover:border-accent transition-colors">
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Engineering Calculations</h3>
+            <p class="text-ink-muted leading-relaxed">Belt pull, motor sizing, speed calculations, throughput formulas, accumulation zone sizing, and incline angle limits.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Common Questions</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor Design <span class="text-accent">FAQ</span>
+        </h2>
+        <div class="space-y-4">
+          <details open class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What are the first steps in designing a conveyor system?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Start by defining product characteristics (dimensions, weight, shape, fragility, surface friction), throughput requirements (products per minute or cases per hour), and environmental conditions (temperature, moisture, washdown, cleanroom). These three parameters determine conveyor type, belt material, frame construction, and motor sizing. Document these requirements in a User Requirements Specification (URS) before contacting conveyor manufacturers.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">How do you select the right conveyor type for a packaging line?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Conveyor type selection depends on product type, handling requirements, and line function. Flat belt conveyors suit lightweight cartons and packages. Roller conveyors handle cases and totes. MDR conveyors provide zero-pressure accumulation. Tabletop chain conveyors handle bottles and containers. Incline conveyors move products between elevations. Match conveyor type to function: transport, accumulation, indexing, merging, diverting, or elevation change. See the <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types overview</a> for detailed comparisons.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What information do conveyor manufacturers need for a quote?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Manufacturers need: product dimensions and weight range, throughput rate, conveyor length and width, elevation changes, environment (dry, washdown, cleanroom, hazardous area), frame material preference, controls scope (standalone or PLC-integrated), power supply available, and floor plan or CAD layout. A detailed specification reduces quote variation and turnaround time. Include photos of the product and installation area when possible.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">How long does conveyor design and installation take?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Simple standalone conveyors take 2-4 weeks for design and 4-8 weeks for fabrication. Multi-conveyor integrated systems require 4-8 weeks of design engineering, 8-16 weeks of fabrication, and 1-4 weeks of installation and commissioning. Custom systems with complex controls, vision inspection, or robotic integration can take 6-12 months from concept to commissioning.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="py-20 bg-blueprint">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+          Ready to Design Your <span class="text-accent-bright">Conveyor System</span>?
+        </h2>
+        <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-10">
+          Use the <a href="/resources/conveyor-manufacturers/" class="text-accent-bright hover:text-white font-semibold">manufacturer directory</a> to find conveyor companies that specialize in packaging line design, or explore the <a href="/resources/conveyor-cost-guide/" class="text-accent-bright hover:text-white font-semibold">cost guide</a> to understand budgeting before requesting quotes.
+        </p>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>

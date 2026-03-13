@@ -1,0 +1,450 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Mining Conveyors", "item": "https://packagingconveyor.com/industries/mining-conveyors/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mining Conveyors: Overland, Underground & Heavy-Duty Belt Systems",
+  "description": "Technical guide to mining conveyors — overland belt conveyors, underground transport, steel cord and multi-ply belting, troughing idlers, belt scales, dust suppression, and conveyor safety systems for ore, coal, and aggregate operations.",
+  "url": "https://packagingconveyor.com/industries/mining-conveyors/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a mining conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A mining conveyor is a heavy-duty belt conveyor system that transports bulk materials — ore, coal, aggregate, overburden, and waste rock — across distances from hundreds of feet to several miles. Mining conveyors use thick, reinforced belting (multi-ply fabric or steel cord), heavy troughing idlers, high-powered drives, and robust steel structures to handle abrasive, heavy materials at throughputs of hundreds to thousands of tonnes per hour." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far can an overland mining conveyor run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Single-flight overland conveyors can run 10 miles or more using high-tension steel cord belting and multiple drive stations. Horizontal curve conveyors follow terrain contours to avoid transfer points. The longest single-flight conventional conveyor systems exceed 20 km. Multi-flight systems with transfer towers extend total conveying distance further." }
+    },
+    {
+      "@type": "Question",
+      "name": "What belt types are used in mining conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mining conveyors use two primary belt constructions: multi-ply fabric belts and steel cord belts. Multi-ply belts use layers of polyester, nylon, or aramid fabric for tensile strength and are common for conveyors under 1-2 miles. Steel cord belts embed parallel steel cables in rubber for high-tension, long-distance applications. Steel cord belts handle tensions exceeding 5000 PIW (pounds per inch of width) and are standard for overland conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do mining operations suppress conveyor dust?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mining conveyor dust suppression uses multiple methods: water spray bars at transfer points and along belt runs wet the material surface to reduce airborne dust; foam suppression systems use surfactant-enhanced water for better dust control with less moisture; wind covers and conveyor galleries enclose the belt to contain dust; and dust collection systems with baghouse filters capture airborne particles at transfer points and crusher discharge areas." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Mining Conveyors: Overland, Underground & Heavy-Duty Belt Systems | PackagingConveyor.com"
+  description="Technical guide to mining conveyors — overland belt conveyors, underground transport, steel cord and multi-ply belting, troughing idlers, belt scales, dust suppression, and conveyor safety for ore, coal, and aggregate."
+  canonical="https://packagingconveyor.com/industries/mining-conveyors/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Mining Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Industry</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Mining <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Mining conveyors transport bulk materials — ore, coal, aggregate, overburden, and waste rock — across distances from hundreds of feet to several miles at throughputs of hundreds to thousands of tonnes per hour. These heavy-duty belt conveyor systems use reinforced belting (multi-ply fabric or steel cord), troughing idlers, high-powered drives, and robust steel structures to move abrasive, dense materials from the pit or underground face to processing plants, stockpiles, or load-out facilities. Systems range from short in-pit conveyors to multi-mile overland installations and are specified for surface mining, underground mining, and aggregate operations worldwide.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ OVERLAND CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="overland-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Surface Mining</div>
+        <h2 id="overland-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Overland <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Overland conveyors move material across the surface from the mine pit to processing plants, rail load-outs, or port facilities. Single-flight overland conveyors span distances of one mile to ten miles or more, replacing haul truck fleets with a continuous, lower-cost transport system. The capital cost of an overland conveyor is significant, but operating cost per tonne-mile is a fraction of truck haulage — eliminating fuel, tires, drivers, and road maintenance.
+          </p>
+          <p>
+            Overland conveyor routing must follow terrain contours. Vertical curves (concave and convex) transition the belt over hills and through valleys. Horizontal curves allow the conveyor to change direction without transfer towers. Horizontally curved conveyors tilt the belt slightly at curves to keep material centered. Curve radii depend on belt width, belt tension, and material load — wider belts and higher tensions require larger radii. Steel cord belting for curved overland systems is engineered with specific transverse stiffness to maintain trough shape and material centering through horizontal curves.
+          </p>
+          <p>
+            Drive systems for overland conveyors use multiple drive stations distributed along the conveyor length. A single head-end drive cannot provide enough tension for a 5-mile belt. Intermediate drives — called booster drives or tripper drives — apply additional pulling force at mid-points. Each drive station uses one or more high-horsepower motors (500 to 3000+ HP each) with fluid couplings or variable frequency drives (VFDs) for soft starting and speed control. Coordinated multi-drive control prevents belt tension spikes during starting and stopping.
+          </p>
+          <!-- VERIFY: Maximum single-flight overland conveyor distances currently in operation -->
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Tension and Takeup</h3>
+          <p>
+            Overland conveyors operate under high belt tension — tens of thousands to hundreds of thousands of pounds of tension distributed across the belt width. Steel cord belts handle tensions exceeding 5000 PIW (pounds per inch of width). Belt tension varies with load, elevation change, and ambient temperature. Gravity takeup systems use a weighted carriage on a vertical tower to maintain constant belt tension as the belt stretches and contracts. Hydraulic and winch-type takeup systems provide adjustable tension for conveyors with limited vertical space for gravity takeup towers.
+          </p>
+          <p>
+            Belt stretch on long overland conveyors is substantial. A 5-mile steel cord belt stretches 20-50 feet under full tension. The takeup system must accommodate this stretch range plus additional travel for belt splicing and maintenance. Insufficient takeup travel causes belt sag between idlers, material spillage, and drive slippage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ UNDERGROUND CONVEYORS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="underground-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Underground Mining</div>
+        <h2 id="underground-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Underground <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Underground mining conveyors transport ore and coal from the working face to the mine portal or shaft, where material transfers to surface conveyors or hoisting systems. Underground conveyors operate in confined spaces with low ceilings, tight curves, and limited access for installation and maintenance. Belt widths range from 24 to 72 inches depending on tunnel dimensions and production requirements.
+          </p>
+          <p>
+            Fire safety dominates underground conveyor design. A belt fire in an underground mine produces toxic smoke that spreads rapidly through ventilation airways, creating a life-threatening hazard. Regulations require fire-resistant belting (MSHA-approved in the United States, tested to ASTM and EN standards) that self-extinguishes when the ignition source is removed. Belt covers use chloroprene or other flame-resistant rubber compounds. Fire-resistant belts cost more than standard surface-mine belts, but compliance is mandatory and enforced through regular inspection. For more on <a href="/resources/conveyor-safety/" class="text-accent hover:text-accent-hover font-semibold">conveyor safety</a> practices, see our dedicated guide.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Extensible Conveyors</h3>
+          <p>
+            Continuous miners and longwall systems advance the working face deeper into the seam over time. The conveyor system must extend to follow the advancing face. Extensible (extendable) conveyors use a belt storage magazine at the tail end that stores extra belt in a series of loops. As the face advances, belt releases from the storage magazine and the tail structure moves forward. A single extensible conveyor can extend thousands of feet before requiring a new belt splice.
+          </p>
+          <p>
+            Underground conveyor structures use bolt-together steel frames designed for installation in confined tunnels. Components arrive in sections small enough to transport through mine entries. Assembly occurs underground using portable tools. Modular frame designs reduce underground installation time compared to welded structures by enabling bolt-together assembly with standard hand tools.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Ventilation and Dust Control</h3>
+          <p>
+            Underground conveyors share the mine ventilation system with personnel. Dust generated at transfer points, loading zones, and belt return areas enters the airstream and degrades air quality. Enclosed transfer chutes with dust curtains contain dust at loading and discharge points. Water sprays at transfer points suppress airborne dust before it enters the ventilation flow. Belt cleaning systems (primary and secondary scrapers) remove carryback material from the return belt to prevent dust generation along the return run.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BELTING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="belting-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Construction</div>
+        <h2 id="belting-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Heavy-Duty <span class="text-accent">Belting</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Mining conveyor belts must withstand impact from large, heavy material; resist abrasion from sharp-edged ore and rock; maintain structural integrity under high tension over long distances; and survive environmental exposure to UV, moisture, and temperature extremes. Belt selection affects conveyor performance, maintenance cost, and operating life more than any other single component. For a broader look at belt materials and constructions, see the <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">conveyor belting resource</a>.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Multi-Ply Fabric Belts</h3>
+          <p>
+            Multi-ply belts use two to six layers of woven fabric (polyester warp, nylon weft — called EP fabric) bonded with rubber to form the belt carcass. Each ply adds tensile strength. A 3-ply EP belt might rate at 330 PIW; a 5-ply at 800 PIW. Multi-ply belts handle most mining applications under 2 miles in length. They splice with mechanical fasteners (for quick field replacement) or vulcanized splices (for longer life and higher strength).
+          </p>
+          <p>
+            The top cover — the rubber layer that contacts the material — resists abrasion and impact. Cover thickness ranges from 1/8 inch for light-duty applications to 3/4 inch or more for heavy impact zones under crushers and chutes. Cover rubber grades vary by application: standard abrasion-resistant compounds handle most ore and aggregate; super-abrasion-resistant grades extend life in extremely abrasive applications like sharp quartzite or hardite ore; heat-resistant covers handle material from kilns or sinter plants; and oil-resistant covers handle oil sands or oil-contaminated material.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Steel Cord Belts</h3>
+          <p>
+            Steel cord belts embed parallel steel cables (cords) in rubber. The steel cords provide tensile strength far exceeding fabric plies — steel cord belts rate from 1000 PIW to 7000+ PIW. Steel cord construction is the standard for long-distance overland conveyors, high-lift conveyors, and any application where belt tension exceeds the capacity of multi-ply fabric belts.
+          </p>
+          <p>
+            Steel cord belts require vulcanized splices — the steel cords of two belt ends are overlapped and bonded under heat and pressure. A vulcanized steel cord splice takes 8-16 hours to complete in the field, requiring specialized equipment and trained technicians. Splice quality directly affects belt life; a poorly made splice is the weakest point and the most likely failure location. Belt suppliers typically provide factory-trained splice crews for critical installations to ensure splice integrity meets design specifications.
+          </p>
+          <!-- VERIFY: Current max PIW ratings for steel cord belts from major manufacturers -->
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Rip Detection</h3>
+          <p>
+            A longitudinal belt rip — caused by a sharp object penetrating the belt and slicing it lengthwise as the belt moves — can destroy hundreds of feet of expensive belting in seconds. Belt rip detection systems identify rips in progress and stop the conveyor before catastrophic damage occurs. Detection methods include embedded sensor loops in the belt (wire loops that break when the belt rips, triggering an alarm), surface-mounted rip sensors that detect belt edge damage, and vision systems that monitor the belt surface for tears. Rip detection systems integrate with conveyor control PLCs for automatic shutdown when a rip event is confirmed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TROUGHING IDLERS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="idler-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Components</div>
+        <h2 id="idler-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Troughing Idlers & <span class="text-accent">Support Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <a href="/conveyor-types/trough-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Trough conveyors</a> shape the flat belt into a trough cross-section using angled idler rollers. The trough increases the belt's carrying capacity by containing material in a U-shaped channel instead of a flat surface. Standard trough angles are 20, 35, and 45 degrees — higher angles carry more material but require more flexible belting and generate higher edge stress.
+          </p>
+          <p>
+            A troughing idler set consists of three rollers: a flat center roller and two angled wing rollers. The center roller supports the belt bottom; the wing rollers lift the belt edges to form the trough. Idler sets mount on cross-frames spaced 3 to 5 feet apart along the conveyor carrying side. Return idlers (flat or V-shaped) support the empty belt on the return run underneath, spaced 8 to 10 feet apart.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Impact Idlers and Transition Zones</h3>
+          <p>
+            Loading zones — where material falls onto the belt from chutes, feeders, or crushers — subject the belt and idlers to severe impact forces. Impact idlers use rubber-cushioned rollers or rubber disc assemblies that absorb shock and protect the belt from puncture and damage. Impact idler spacing is tighter (12 to 18 inches apart) than standard carrying idler spacing to distribute impact forces across more rollers.
+          </p>
+          <p>
+            Transition zones at the head and tail pulleys change the belt profile from troughed to flat (at the pulley) and back to troughed. The transition distance must be long enough to avoid overstressing the belt edges during the profile change. Insufficient transition distance causes belt edge buckling, premature edge wear, and splice failures. Engineering calculations set the minimum transition distance based on belt width, trough angle, and belt tension.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Idler Maintenance and Failure</h3>
+          <p>
+            A large mining conveyor has thousands of idler rollers. A single seized (frozen) idler creates a hot spot that can ignite the belt — a serious fire risk, especially underground. Idler monitoring systems use thermal cameras, vibration sensors, or acoustic sensors to detect failing idlers before seizure. Infrared scanning systems mounted along the conveyor structure continuously monitor idler temperatures and alert maintenance when a roller exceeds temperature limits. Proactive idler replacement based on condition monitoring prevents belt fires and reduces unplanned downtime. For comprehensive component inspection strategies, see the <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">conveyor maintenance guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BELT SCALES AND MONITORING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="scale-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Measurement</div>
+        <h2 id="scale-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt Scales & <span class="text-accent">Monitoring</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Belt scales (also called belt weighers) measure the mass flow rate of material on a moving conveyor belt. The scale integrates belt load (weight per unit length) with belt speed to calculate tonnes per hour and cumulative tonnage. Mining operations use belt scale data for production tracking, process control (crusher feed rate, blend ratios), inventory management, and trade settlement (material sold by weight).
+          </p>
+          <p>
+            A belt scale consists of one or more weigh idler sets mounted on load cells, plus a belt speed sensor. The load cells measure the gravitational force of the material on the idlers. The speed sensor (typically a tachometer on the return belt or a speed wheel on the carry side) measures belt velocity. The scale integrator multiplies load by speed to produce a flow rate and totalizes cumulative weight over time.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Scale Accuracy</h3>
+          <p>
+            Belt scale accuracy depends on installation quality, calibration, and the number of weigh idlers. Single-idler scales achieve 1-2% accuracy under controlled conditions. Multi-idler scales (two or four weigh idler sets) improve accuracy to 0.5-1% by averaging load measurements over a longer belt section. Trade-certified (legal for trade) scales require multi-idler configurations, regular calibration with test chains or known weights, and compliance with NTEP (National Type Evaluation Program) or OIML standards.
+          </p>
+          <p>
+            Installation location affects accuracy. Belt scales should be installed on a straight, horizontal section of conveyor with at least 20 feet of straight belt upstream and downstream of the scale. Curves, inclines, and belt tension variations near the scale introduce measurement errors. Conveyor structure rigidity matters — frame deflection under load changes the relationship between material weight and load cell readings.
+          </p>
+          <!-- VERIFY: Typical accuracy ranges for single-idler vs. multi-idler belt scales -->
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Tracking and Alignment</h3>
+          <p>
+            Belt mistracking — where the belt drifts to one side — spills material, damages belt edges, and causes structural damage to the conveyor frame. Mining conveyors use training idlers (self-aligning idlers) that pivot in response to belt drift and steer the belt back to center. Training idlers mount at regular intervals along the conveyor length. Severe mistracking triggers belt drift switches that stop the conveyor before the belt runs off the structure entirely. Belt alignment is critical for belt scale accuracy — a misaligned belt shifts load distribution across the weigh idlers and introduces measurement error.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DUST SUPPRESSION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="dust-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Environmental Control</div>
+        <h2 id="dust-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Dust Suppression & <span class="text-accent">Conveyor Galleries</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Dust is the primary environmental and health concern for mining conveyors. Material transfer points — where material drops from one conveyor to another through a chute — generate the most dust. Windblown dust from open belt runs adds to the problem. Mining operations must control dust to meet environmental permits, protect worker health, and maintain equipment reliability (dust infiltrates bearings, drives, and electrical systems).
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Transfer Point Dust Control</h3>
+          <p>
+            Engineered transfer chutes control material trajectory and reduce dust generation at transfer points. A well-designed chute directs material smoothly from the discharge conveyor to the receiving conveyor, minimizing free-fall height and material turbulence. Modern transfer point engineering uses hood and spoon chute geometry, impact cradles, and stilling zones to reduce dust and material degradation at transfers.
+          </p>
+          <p>
+            Dust curtains (rubber flaps) at chute entry and exit points contain dust within the chute enclosure. Skirtboard sealing along the receiving belt edges prevents dust escape where the chute meets the belt. Primary and secondary belt scrapers on the discharge conveyor head pulley remove carryback material from the belt before it falls off the return run and creates dust. Belt cleaning systems use tungsten carbide or polyurethane scraper blades that conform to the belt surface for effective carryback removal.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Water and Foam Suppression</h3>
+          <p>
+            Water spray systems at transfer points and along belt runs wet the material surface to reduce airborne dust. Spray nozzles atomize water into fine droplets that bind with dust particles and prevent them from becoming airborne. The challenge is applying enough water to suppress dust without adding excessive moisture that affects downstream processing (screening, crushing, or material handling). Typical moisture addition targets 1-3% by weight.
+          </p>
+          <p>
+            Foam suppression systems mix a surfactant with water to create a foam that spreads across the material surface. Foam covers more surface area per gallon of water than spray alone, reducing water consumption by 50-90% compared to spray systems while achieving equal or better dust suppression. Foam suppression is standard practice at many coal handling and preparation plants where moisture addition must be minimized.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Conveyor Galleries</h3>
+          <p>
+            Conveyor galleries are enclosed structures (buildings) that house the conveyor belt run. Galleries contain windblown dust from open belt sections, protect the conveyor from weather (rain, snow, wind, UV exposure), and provide a protected walkway for maintenance access. Galleries are standard on overland conveyors near populated areas and in operations with strict environmental permit conditions.
+          </p>
+          <p>
+            Gallery construction ranges from simple corrugated metal enclosures to fully insulated, heated structures for arctic and cold-climate operations. Gallery design must allow access for belt replacement — one side wall or roof sections must be removable to thread new belt lengths through the structure. Ventilation within the gallery prevents dust accumulation and provides airflow for worker comfort during inspections. <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">Bucket elevators</a> at gallery elevation changes provide vertical material transport in compact footprints when conveyor incline angles exceed practical belt limits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SAFETY ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="safety-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Safety</div>
+        <h2 id="safety-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor Safety <span class="text-accent">Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Mining conveyors present serious safety hazards — pinch points at pulleys and idlers, entanglement in moving belts, falling material from elevated structures, and fire risk from belt friction and seized idlers. Mining safety regulations (MSHA in the United States, provincial mining acts in Canada and Australia) mandate specific safety devices on all conveyor installations. For a complete overview of safety requirements, see the <a href="/resources/conveyor-safety/" class="text-accent hover:text-accent-hover font-semibold">conveyor safety guide</a>.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Pull-Cord Emergency Stop</h3>
+          <p>
+            Emergency stop pull cords (also called rip cords) run the entire length of both sides of the conveyor. Pulling the cord at any point stops the conveyor immediately. Pull-cord switches are spaced every 50-100 feet along the conveyor. The cord must be tensioned so that pulling it anywhere between two switches activates at least one switch. Pull-cord systems latch in the tripped position — the conveyor cannot restart until the cord is manually reset at the trip location, ensuring the hazard is investigated before restarting.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Guarding and Access</h3>
+          <p>
+            All pinch points — where the belt meets a pulley, where the belt contacts idler rollers, and at the takeup mechanism — require guards that prevent body contact with moving parts. Guard design must allow inspection without removal (mesh guards provide visibility) and must be lockable to prevent unauthorized removal. Walkways alongside elevated conveyors require handrails, toe boards, and non-slip surfaces. Access platforms at drive stations, head pulleys, and tail pulleys provide safe maintenance positions.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Monitoring and Interlocks</h3>
+          <p>
+            Mining conveyor control systems interlock multiple safety devices: belt drift switches (stop the conveyor if the belt mistracts beyond a set limit), speed sensors (stop the conveyor if the belt stops moving while the drive motor runs — indicating a slipping belt), blocked chute detectors (stop the upstream conveyor if the discharge chute fills with material), and sequential start/stop systems that start conveyors downstream-to-upstream and stop upstream-to-downstream to prevent material pile-up.
+          </p>
+          <p>
+            Pre-start warning alarms (audible horns and visual beacons) activate 10-30 seconds before the conveyor starts, alerting personnel in the area to stand clear. The alarm sequence is a regulatory requirement for mining conveyors and must be tied into the conveyor control system so the belt cannot start without completing the warning period.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="app-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="app-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Mining Conveyor <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <div class="overflow-x-auto -mx-4 px-4 mt-4">
+            <table class="w-full text-left border-collapse min-w-[700px]">
+              <thead>
+                <tr class="border-b-2 border-ink">
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Application</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Type</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+                </tr>
+              </thead>
+              <tbody class="text-base text-ink-muted">
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">In-Pit Conveyor</td>
+                  <td class="py-4 pr-4">Ore, overburden</td>
+                  <td class="py-4 pr-4 font-mono text-sm">Multi-ply EP</td>
+                  <td class="py-4 font-mono text-sm">$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Overland</td>
+                  <td class="py-4 pr-4">Ore, coal</td>
+                  <td class="py-4 pr-4 font-mono text-sm">Steel cord</td>
+                  <td class="py-4 font-mono text-sm">$$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Underground</td>
+                  <td class="py-4 pr-4">Coal, ore</td>
+                  <td class="py-4 pr-4 font-mono text-sm">Fire-resistant EP</td>
+                  <td class="py-4 font-mono text-sm">$$</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Aggregate Plant</td>
+                  <td class="py-4 pr-4">Crushed stone, sand</td>
+                  <td class="py-4 pr-4 font-mono text-sm">Multi-ply EP</td>
+                  <td class="py-4 font-mono text-sm">$</td>
+                </tr>
+                <tr>
+                  <td class="py-4 pr-4 font-semibold text-ink">Ship/Rail Loadout</td>
+                  <td class="py-4 pr-4">Coal, grain, ore</td>
+                  <td class="py-4 pr-4 font-mono text-sm">Steel cord / EP</td>
+                  <td class="py-4 font-mono text-sm">$$-$$$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-ink-muted mt-4">Relative cost reflects belt and structure investment. Actual cost depends on distance, throughput, and site conditions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Pages</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-types/trough-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Trough Conveyors</h3>
+            <p class="text-base text-white/60">Troughed belt systems for bulk material handling</p>
+          </a>
+          <a href="/conveyor-types/bucket-elevators/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Bucket Elevators</h3>
+            <p class="text-base text-white/60">Vertical bulk material transport</p>
+          </a>
+          <a href="/resources/conveyor-belting/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Conveyor Belting</h3>
+            <p class="text-base text-white/60">Belt materials, constructions, and selection</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a mining conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A mining conveyor is a heavy-duty belt conveyor that transports bulk materials — ore, coal, aggregate, overburden — across distances from hundreds of feet to miles. Mining conveyors use reinforced belting (multi-ply fabric or steel cord), troughing idlers, and high-powered drives to handle abrasive, heavy materials at throughputs of hundreds to thousands of tonnes per hour.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How far can an overland mining conveyor run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Single-flight overland conveyors can run 10 miles or more using high-tension steel cord belting and multiple drive stations. Horizontal curve conveyors follow terrain contours to avoid transfer points. Multi-flight systems with transfer towers extend total conveying distance further.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt types are used in mining conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Two primary constructions: multi-ply fabric belts (polyester/nylon layers for conveyors under 1-2 miles) and steel cord belts (parallel steel cables in rubber for high-tension, long-distance applications exceeding 5000 PIW). See the <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">conveyor belting guide</a> for detailed construction information.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do mining operations suppress conveyor dust?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Multiple methods work together: water spray bars at transfer points wet the material surface; foam suppression systems use surfactant-enhanced water for better control with less moisture; conveyor galleries enclose open belt runs; and dust collection systems with baghouse filters capture airborne particles at transfer and crusher discharge points.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-blueprint py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+        Specify the Right <span class="text-accent-bright">Mining Conveyor</span>
+      </h2>
+      <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+        From in-pit conveyors to multi-mile overland systems, mining conveyor design determines throughput, operating cost, and equipment life. Use our technical guides to specify belting, idlers, and safety systems for your operation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/conveyor-types/trough-conveyors/" class="inline-block bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Trough Conveyors</a>
+        <a href="/resources/conveyor-belting/" class="inline-block border border-white/30 hover:border-white/50 text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Conveyor Belting</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

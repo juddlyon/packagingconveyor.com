@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Modular Conveyors", "item": "https://packagingconveyor.com/conveyor-types/modular-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a modular belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A modular belt conveyor uses a conveying surface made of interlocking plastic modules that snap together with hinge rods to form a continuous belt. Unlike fabric or rubber belts that are one continuous piece, modular belts consist of individual segments that can be replaced individually if damaged. Modular belts handle curves, inclines, and washdown environments better than most fabric belt alternatives." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the advantages of modular belt over flat belt conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modular belts offer field-repairable construction (replace individual modules instead of the entire belt), inherent ability to navigate curves without special belt tracking, superior chemical and moisture resistance for washdown environments, and a wide range of surface patterns (flush grid, raised rib, perforated) for different product types. Flat belts offer lower initial cost, smoother surface for delicate products, and quieter operation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can modular belt conveyors handle curves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Modular belts navigate curves by design. The individual modules articulate at the hinge points, allowing the belt to follow curved paths without edge stretching or tracking issues. Inside modules travel a shorter path than outside modules, accommodated by the hinge geometry. Curve radii as tight as 1.5 times the belt width are possible with standard modules." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I look for when choosing a modular belt supplier?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Several global belting companies manufacture modular conveyor belts, each offering proprietary module designs with different surface patterns, materials, and hinge configurations. When evaluating suppliers, focus on module geometry options for your product type, material compatibility with your washdown chemicals and temperature range, local spare parts availability, and whether the belt pitch and hinge rod design are cross-compatible with your existing conveyor frames." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Modular Belt Conveyors: Interlocking Plastic Belt Systems for Packaging & Food",
+  "description": "Complete guide to modular belt conveyors covering belt types, surface patterns, curve capability, washdown design, manufacturer comparison, and selection for food processing and packaging applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/modular-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Modular Belt Conveyors: Interlocking Plastic Belt Systems for Packaging & Food"
+  description="Complete guide to modular belt conveyors: belt types, surface patterns, curve capability, washdown design, and manufacturer comparison for food and packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-types/modular-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Modular Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Modular Belt Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Modular Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A modular belt conveyor uses interlocking plastic belt modules that snap together with hinge rods to form the conveying surface. Each module is a molded plastic segment — typically polypropylene, polyethylene, or acetal — that links to adjacent modules to create a continuous belt of any required width and length. Modular belts dominate <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a>, beverage, and packaging applications where washdown capability, chemical resistance, and field-repairable belt construction outweigh the higher initial cost compared to <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt conveyors</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Modular Belts Work -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Modular Belt Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Modular belt conveyors drive the belt using sprockets rather than friction-drive pulleys. The sprocket teeth engage with the underside of the belt modules, positively driving the belt through the conveyor path. This positive drive eliminates belt slippage — the belt moves at exactly the speed the sprocket dictates. Sprocket drive also means the belt does not need high tension to maintain traction, reducing wear on the belt and frame components compared to friction-driven flat belts.</p>
+
+        <p>The belt rides on a wear strip support system — UHMW (ultra-high molecular weight polyethylene) strips or rails that run the length of the conveyor frame. The belt modules slide along these wear strips with low friction. Wear strips are replaceable and inexpensive, protecting the more costly frame structure from belt abrasion. Some heavy-duty modular belt conveyors use roller supports instead of wear strips to reduce friction for heavy product loads.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Module Construction</h3>
+        <p>Each belt module is an injection-molded plastic piece with interlocking tabs on the leading and trailing edges. A hinge rod — typically a stainless steel or plastic pin — threads through aligned holes in the tabs of adjacent modules to connect them. The hinge rods allow each module row to articulate relative to the next, enabling the belt to flex around sprockets, navigate curves, and conform to conveyor frame geometry. Modules range in width from 1 inch (narrow modules assembled to any belt width) to 12 inches or more for wider single-piece modules.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Assembly and Repair</h3>
+        <p>Assembling a modular belt requires no special tools or adhesives. Modules interlock by hand or with simple fixtures, and hinge rods slide through to complete the connection. This assembly method is the primary advantage over fabric belts: a damaged section of modular belt is repaired by removing the hinge rods on either side of the damaged area, swapping out the bad modules, and reinserting the rods. The repair takes minutes and happens on the conveyor frame without removing the entire belt. Fabric belt repairs require vulcanizing, lacing, or complete belt replacement.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Belt Surface Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="surface-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Surface Patterns</div>
+      <h2 id="surface-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Modular Belt <span class="text-accent">Surface Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Flush Grid</h3>
+        <p>Flush grid belts have a flat, smooth top surface with small openings at the hinge points between modules. The surface is nearly continuous, providing stable support for flat-bottomed products. Flush grid is the most common modular belt surface for general conveying of boxes, cartons, bottles, and packages. The small grid openings allow air circulation and water drainage, making flush grid belts suitable for washdown environments. Flush grid modules are available from every major modular belt supplier in a range of pitches, materials, and load ratings.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Raised Rib</h3>
+        <p>Raised rib belts have longitudinal or diagonal ribs molded into the top surface. The ribs increase friction between the belt and products, preventing slipping on incline and decline conveyor sections. Rib heights typically range from 0.1 to 0.5 inches. Raised rib belts handle inclines up to 25-30 degrees for most products without requiring cleats. They suit applications where products need lateral stability — the ribs resist sideways sliding during curves and transfers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Perforated (Open Area)</h3>
+        <p>Perforated modular belts have large open areas — 20% to 60% or more of the belt surface — for drainage, air flow, or vacuum. Food processing uses perforated belts under spray washers, blanchers, and coating applicators where liquid must drain through the belt. Cooling and drying applications use perforated belts to allow air to pass through the product layer. Vacuum transfer applications use perforated belts over vacuum chambers to hold lightweight products (labels, lids, pouches) against the belt surface.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Non-Skid (Friction Top)</h3>
+        <p>Non-skid belts have rubber or silicone inserts molded into or bonded onto the module top surface. These inserts provide high friction grip for incline and decline applications where standard plastic surfaces lack sufficient traction. Non-skid modules handle steeper angles than raised rib designs and suit wet or oily product environments where plastic-on-product friction drops significantly. The rubber inserts are replaceable on some module designs, extending belt life in high-wear applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Top</h3>
+        <p>Roller top modular belts embed small rollers into the module surface, oriented perpendicular to belt travel. Products on roller top belts can slide laterally (across the belt) while the belt carries them forward. This enables zero-pressure accumulation — when products back up against a stop, they stop moving laterally while the belt continues underneath them. Roller top belts serve accumulation, diverting, and merging applications in packaging and distribution. Activated roller belt (ARB) designs use powered rollers embedded in modular belt modules for active product diverting and sorting without traditional diverter hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curve Capability -->
+  <section class="py-20 bg-surface" aria-labelledby="curve-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Curve Capability</div>
+      <h2 id="curve-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Navigating Curves with <span class="text-accent">Modular Belts</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Modular belts handle curves inherently. The individual modules articulate at each hinge point, allowing the belt to follow curved conveyor frames without the edge-stretching and tracking problems that plague fabric belts on curves. On a curve, the inside edge of the belt travels a shorter distance than the outside edge. Modular belt modules accommodate this differential through the hinge geometry — modules on the inside compress slightly while modules on the outside separate slightly at the hinge points.</p>
+
+        <p>Minimum curve radius depends on module width and hinge design. Standard modules achieve curve radii as tight as 1.5 to 2.0 times the belt width. Specialized tight-radius modules reduce this further. A 24-inch-wide belt on standard modules navigates curves with an inside radius as tight as 36-48 inches. Tighter curves increase belt wear and require more frequent replacement of wear strips on the inside curve edge where friction concentrates.</p>
+
+        <p>Curve conveyors with modular belts eliminate the need for separate <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">tabletop chain conveyors</a> or dedicated curve sections. A single modular belt conveyor handles straight runs, curves, and elevation changes in one continuous belt path. This reduces the number of conveyor-to-conveyor transfers and the associated product handling risks (jams, misalignment, gaps) that occur at each transfer point.</p>
+
+        <p>Side-flexing modular belt chains (often called MatTop-style chains) combine the side-flexing capability of tabletop chains with the wider surface area and snap-together construction of modular belts. These hybrid designs suit applications that require tight curves (90-degree and 180-degree turns) at high speeds with positive product control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Washdown and Sanitation -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="wash-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Design</div>
+      <h2 id="wash-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Washdown & <span class="text-accent">Sanitation</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Modular belts excel in washdown environments. The plastic modules resist water, cleaning chemicals, and sanitizers that degrade fabric belts. Polypropylene and acetal modules withstand caustic and acidic cleaning solutions at concentrations and temperatures that destroy fabric belt materials. The open construction of modular belts — gaps at hinge points and between modules — allows cleaning solutions to penetrate and flush contaminants from the belt surface and underside.</p>
+
+        <p><strong class="text-ink">Clean-in-place (CIP) capability</strong> is a major advantage. Modular belts can be cleaned on the conveyor frame without removal. High-pressure spray, foam cleaning, and chemical sanitizing reach all belt surfaces because the belt is not a continuous sealed membrane. Fabric belts trap contaminants between the top cover and carcass layers — a problem modular belts avoid because each module is a solid, non-layered piece of plastic.</p>
+
+        <p><strong class="text-ink">FDA and USDA compliance</strong> drives modular belt selection in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a>. Major modular belt manufacturers offer belt materials that meet FDA 21 CFR requirements for food contact and USDA acceptance for meat and poultry processing. Color-coded modules (typically blue or white for food applications) enable visual contamination detection — a foreign plastic fragment from a blue belt is visible on food products, unlike fragments from a clear or food-colored belt.</p>
+
+        <p><strong class="text-ink">Metal-detectable modules</strong> contain additives that make the plastic detectable by standard metal detection equipment used in food processing lines. If a module fragment breaks off into the product stream, downstream metal detectors catch the contamination. Metal-detectable modules are available from all major modular belt suppliers and are increasingly standard on food safety-critical applications.</p>
+
+        <p><strong class="text-ink">Conveyor frame sanitary design</strong> complements the belt sanitation features. Stainless steel frames with open construction, rounded edges (no square corners that trap debris), sloped surfaces for drainage, and tool-free belt removal mechanisms complete the washdown conveyor system. Sideguards on modular belt conveyors must also meet sanitary requirements — food-grade plastic guards with smooth surfaces and quick-release mounting are standard on food-grade modular belt conveyors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Factors -->
+  <section class="py-20 bg-surface" aria-labelledby="mfg-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Factors</div>
+      <h2 id="mfg-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        What Actually Matters When You <span class="text-accent">Specify Modular Belt</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Module geometry:</strong> Flush-grid, raised-rib, friction-top, roller-top, and closed-top designs behave very differently. Start with how the product sits on the belt, whether drainage is needed, and whether the belt must accumulate, divert, or index product without slip.</p>
+
+        <p><strong class="text-ink">Material and temperature:</strong> Polypropylene, polyethylene, and acetal each have different chemical resistance, impact performance, and temperature limits. The right plastic depends on washdown chemistry, freezer or oven exposure, and whether the line runs dry or wet.</p>
+
+        <p><strong class="text-ink">Sprocket and tracking design:</strong> Modular belts solve many tracking issues that plague flat belts, but only when sprocket engagement, shaft spacing, returnway support, and thermal expansion are handled correctly. The support structure matters as much as the belt itself.</p>
+
+        <p><strong class="text-ink">Repairability and spare strategy:</strong> One of the biggest advantages of modular belt is field repair. Specify how quickly individual modules, rods, sprockets, and wear strips can be replaced, and keep spare modules and sprockets on hand for the line's critical widths.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modular vs Flat Belt Comparison -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Modular Belt vs. <span class="text-accent">Flat Belt</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Modular Belt</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Flat Belt</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Type</td>
+              <td class="py-3 pr-4">Sprocket (positive)</td>
+              <td class="py-3">Friction (pulley)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Curve Capability</td>
+              <td class="py-3 pr-4">Inherent</td>
+              <td class="py-3">Requires special tracking</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Field Repair</td>
+              <td class="py-3 pr-4">Replace individual modules</td>
+              <td class="py-3">Splice or replace entire belt</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Washdown</td>
+              <td class="py-3 pr-4">Excellent (open construction)</td>
+              <td class="py-3">Good (sealed surface traps moisture)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise Level</td>
+              <td class="py-3 pr-4">Higher (sprocket engagement)</td>
+              <td class="py-3">Lower (smooth belt on pulleys)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Surface Smoothness</td>
+              <td class="py-3 pr-4">Gaps at hinge points</td>
+              <td class="py-3">Continuous smooth surface</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Modular Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Meat and poultry processing:</strong> Modular belts are the standard conveying surface in meat and poultry plants. Flush grid and perforated belts carry raw product through cutting, trimming, marinating, and packaging operations. The belts endure daily high-pressure washdown with hot water and chemical sanitizers. USDA-accepted materials and metal-detectable options meet regulatory requirements for direct food contact.</p>
+
+        <p><strong class="text-ink">Beverage packaging lines:</strong> Modular belt conveyors transport bottles, cans, and cartons through filling, capping, labeling, and packing operations. The positive sprocket drive maintains precise belt speed for synchronized operations. Curve-capable modular belts navigate the complex layouts of beverage lines that include multiple 90-degree and 180-degree turns in compact floor spaces. <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop chain conveyors</a> compete in this application for single-file container handling.</p>
+
+        <p><strong class="text-ink">Baking and snack food:</strong> Perforated modular belts carry bakery products through ovens, proofers, coolers, and freezers. The open belt surface allows air to circulate around products for uniform heating and cooling. Heat-resistant acetal and polypropylene modules withstand oven temperatures. Cooling spiral conveyors in bakeries frequently use modular belts because the modules handle the helical path and high-temperature environment.</p>
+
+        <p><strong class="text-ink">Pharmaceutical and cosmetics:</strong> Modular belts in pharmaceutical packaging convey bottles, vials, tubes, and cartons through filling, capping, labeling, and cartoning equipment. The chemical resistance of plastic modules withstands cleaning agents used in pharmaceutical manufacturing. White or light-colored modules enable visual inspection of the belt surface for contamination.</p>
+
+        <p><strong class="text-ink">Parcel and e-commerce sorting:</strong> Roller-top modular belts enable zero-pressure accumulation and active diverting in parcel sorting systems. Activated roller belt (ARB) technology uses modular belt modules with embedded powered rollers to divert packages to specific lanes without traditional diverter hardware. These systems handle the high throughput and gentle handling requirements of e-commerce fulfillment operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a modular belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A modular belt conveyor uses interlocking plastic modules connected by hinge rods to form the conveying surface. Unlike one-piece fabric belts, modular belts consist of individual segments that snap together and can be replaced individually if damaged. See our <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt conveyor guide</a> for comparison.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the advantages of modular belt over flat belt?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Modular belts offer field-repairable construction, inherent curve capability, superior chemical resistance for washdown environments, and a wide range of surface patterns. Flat belts cost less and provide smoother, quieter operation for delicate products.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Can modular belt conveyors handle curves?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Yes. Modules articulate at hinge points, allowing the belt to follow curved paths without tracking issues. Inside modules travel a shorter path than outside modules, accommodated by hinge geometry. Curve radii as tight as 1.5 times the belt width are possible with standard modules.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What should I look for when choosing a modular belt supplier?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Evaluate module geometry options for your product, material compatibility with your washdown chemistry and temperature range, local spare parts availability, and whether the belt pitch and hinge rod design are cross-compatible with your existing frames. Several global suppliers offer proprietary designs, so confirm that replacement modules and sprockets are stocked regionally.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Flat Belt</div>
+          <p class="text-sm text-white/60">Fabric belt alternative comparison</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary conveyor requirements</p>
+        </a>
+        <a href="/conveyor-types/tabletop-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Tabletop Chains</div>
+          <p class="text-sm text-white/60">Single-file container handling</p>
+        </a>
+        <a href="/conveyor-types/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Conveyor Types</div>
+          <p class="text-sm text-white/60">Browse complete conveyor index</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

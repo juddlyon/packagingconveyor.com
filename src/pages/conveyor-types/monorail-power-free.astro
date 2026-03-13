@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Monorail & Power-and-Free Conveyors", "item": "https://packagingconveyor.com/conveyor-types/monorail-power-free/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a monorail conveyor and a power-and-free conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A monorail conveyor uses a single overhead track with a continuously moving chain that connects all carriers. Every carrier moves at the same speed and cannot stop independently. A power-and-free conveyor uses two tracks — an upper power track with a continuously moving chain and a lower free track carrying independent trolleys. Carriers on the free track engage and disengage from the power chain using mechanical dogs, allowing individual carriers to stop, accumulate, switch to spur tracks, and travel at different speeds independently of the main chain." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use monorail and power-and-free conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automotive manufacturing is the largest user — power-and-free conveyors transport car bodies through paint shops, e-coat systems, and assembly lines. Other major users include appliance manufacturing (washer, dryer, and refrigerator painting), aerospace (component coating and curing), heavy equipment manufacturing (construction and agricultural equipment painting), and general industrial finishing (powder coating, wet painting, and curing ovens). Any process requiring products to pass through enclosed ovens, paint booths, wash stations, or long dwell-time curing zones benefits from overhead monorail or power-and-free conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast do monorail and power-and-free conveyors run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Monorail conveyors typically run at 10-40 feet per minute. The speed is constant because all carriers are connected to the same chain. Power-and-free conveyors run the power chain at 20-60 feet per minute, but individual carriers travel at that speed only when engaged with the chain. Carriers on spur tracks and accumulation zones move at different speeds or stop completely. Paint line and coating conveyors run slower (5-20 FPM) to provide adequate dwell time in spray booths and curing ovens. Assembly line conveyors run faster (20-40 FPM) to match production takt times." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much weight can a monorail or power-and-free conveyor carry?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Load capacity depends on the track size, trolley design, and chain strength. Light-duty monorail systems carry 100-500 lbs per carrier. Medium-duty power-and-free systems handle 500-2,000 lbs per carrier. Heavy-duty automotive power-and-free conveyors carry 4,000-10,000 lbs per carrier — enough for complete car bodies with carriers and fixtures. The overhead building structure must support the total conveyor load including the track, chain, all carriers, and all products simultaneously." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Monorail & Power-and-Free Conveyors: Overhead Track Systems for Paint, Coating & Assembly",
+  "description": "Complete guide to monorail and power-and-free conveyors covering overhead track systems, trolleys, carriers, spur tracks, accumulation, paint lines, e-coat systems, and selection for automotive and manufacturing applications.",
+  "datePublished": "2026-03-12",
+  "url": "https://packagingconveyor.com/conveyor-types/monorail-power-free/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Monorail & Power-and-Free Conveyors: Overhead Track Systems for Paint, Coating & Assembly"
+  description="Complete guide to monorail and power-and-free conveyors: overhead track systems, trolleys, carriers, spur tracks, accumulation, paint lines, e-coat, and selection for automotive and manufacturing."
+  canonical="https://packagingconveyor.com/conveyor-types/monorail-power-free/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Monorail & Power-and-Free Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Monorail & Power-and-Free Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Monorail & Power-and-Free Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Monorail and power-and-free conveyors use overhead track-mounted carriers to transport products through manufacturing, painting, coating, curing, and assembly processes. A monorail conveyor connects all carriers to a single continuously moving chain — every carrier travels at the same constant speed. A power-and-free conveyor separates the power chain from the product carriers, allowing individual carriers to stop, accumulate, divert to spur tracks, and re-engage with the chain independently. These <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">overhead chain conveyor</a> systems free floor space for workers and equipment while routing products through enclosed process environments like paint booths, wash stations, and curing ovens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How They Work -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Monorail and Power-and-Free <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Monorail Conveyors (Continuous Chain)</h3>
+        <p>A monorail conveyor consists of a single enclosed or open I-beam track suspended from the ceiling or supported on floor-mounted columns. A continuous chain runs inside or alongside the track, driven by one or more motorized drive units spaced along the circuit. Trolleys ride inside the track on hardened steel wheels. Each trolley attaches directly to the chain at fixed intervals. Carriers (hooks, fixtures, platforms, or cradles) hang from the trolleys and hold the products.</p>
+
+        <p>Because every trolley connects to the same chain, all carriers move at the same speed and maintain fixed spacing. The chain runs continuously at 10-40 FPM, carrying all carriers through the complete circuit — loading station, process zones (paint booths, ovens, wash stations), and unloading station. Monorail conveyors suit processes where every product requires the same dwell time in each zone and no product needs to stop independently. The system is simple, reliable, and costs $ to $$ compared to power-and-free systems.</p>
+
+        <p>The limitation of monorail conveyors is inflexibility. If one carrier must stop (for product loading, inspection, or a process delay), the entire chain stops. Every carrier halts simultaneously. The fixed carrier spacing cannot change — the system cannot accumulate carriers in a buffer zone or spread them apart in a process zone. Adding or removing carriers requires stopping the chain and manually adding or removing chain links. Spur tracks and branch lines are not possible because the chain follows a single continuous loop.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Power-and-Free Conveyors (Independent Carrier Control)</h3>
+        <p>A power-and-free conveyor uses two parallel tracks — an upper power track carrying a continuously moving chain, and a lower free track carrying independent trolleys and carriers. The trolleys ride in the free track on their own wheels and are not physically connected to the chain. A mechanical dog (pusher) on the power chain engages a corresponding dog on each free trolley to push the trolley along the free track. When the free-track dog disengages from the power-chain dog (triggered by a mechanical stop, a proximity switch, or an automated diverter), the trolley stops while the chain continues moving.</p>
+
+        <p>This engage-disengage mechanism gives power-and-free conveyors their defining capability: independent carrier control. Individual carriers stop at load/unload stations, accumulate in buffer zones, divert to spur tracks, accelerate through empty zones, and decelerate into process zones — all while the power chain runs continuously. Multiple carriers accumulate nose-to-tail in accumulation zones without chain stoppage. Carriers switch to branch lines and spur tracks through mechanical or pneumatic track switches.</p>
+
+        <p>Power-and-free conveyors cost $$ to $$$ depending on load capacity, track complexity, and control sophistication. The two-track design, mechanical dogs, track switches, stops, and controls add cost and complexity compared to simple monorail systems. The flexibility and independent carrier control justify the higher cost for complex manufacturing processes with varying dwell times, multiple process paths, and buffer requirements.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Key Components -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="components-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Components</div>
+      <h2 id="components-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Key <span class="text-accent">Components</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Track</h3>
+        <p>Overhead track is the structural backbone. Enclosed track uses a hollow steel profile (typically 3-inch, 4-inch, or 6-inch) that contains the trolley wheels and chain inside a protected enclosure. Enclosed track keeps lubrication contained, prevents contamination from falling into the process below, and protects the chain and trolleys from the process environment (paint overspray, wash chemicals, oven heat). Open track uses a standard I-beam with trolley wheels riding on the bottom flange. Open track costs less and allows visual inspection of trolley condition but exposes the chain and trolley to the environment.</p>
+
+        <p>Track sections bolt together with splice plates and precision alignment pins. Horizontal curves, vertical curves (elevation changes), and track switches connect straight sections into the complete circuit. Track supports hang from the ceiling structure with threaded rods, clevis hangers, or structural steel brackets. The building structure must carry the total suspended load — track weight, chain weight, all trolleys, all carriers, and all products. Structural engineers verify building capacity before installation. Enclosed-track power-and-free systems are available from several overhead conveyor specialists in track sizes ranging from 3-inch light-duty to 6-inch-plus heavy-duty profiles.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Trolleys and Carriers</h3>
+        <p>Trolleys are wheeled assemblies that ride inside the track. Each trolley has four or more hardened steel wheels that bear the load and guide the trolley through curves and switches. The trolley bracket extends below the track to connect to the carrier. On power-and-free systems, the trolley includes a dog mechanism that engages with the chain dog for propulsion and disengages for stopping and accumulation.</p>
+
+        <p>Carriers are the product-holding fixtures that hang from the trolleys. Carrier design varies by product: simple hooks for hanging parts, cradles for cylindrical items, platforms for flat components, and complex multi-point fixtures for car bodies and large assemblies. Each carrier typically uses two or more trolleys spaced along the track to distribute the load and maintain carrier stability. Carrier design is critical — it must hold the product securely through all process zones including vertical elevation changes, horizontal curves, and the vibration of chain engagement.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Units and Chain</h3>
+        <p>Drive units power the <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain conveyor</a> system. A drive unit consists of a motor, gearbox, and drive sprocket or caterpillar drive that engages the chain and pulls it through the track. Long circuits use multiple drive units spaced along the circuit to distribute the pull force and reduce chain tension. Caterpillar drives grip a long section of chain (3-6 feet) and pull it forward, distributing the drive force over many chain links rather than concentrating it at a single sprocket tooth. This reduces chain wear and allows higher loads.</p>
+
+        <p>Chain types include rivetless (drop-forged links that pivot on integral pins), roller (links with rollers for reduced track friction), and forged (high-strength links for heavy loads). Chain pitch (link-to-link distance) determines the carrier spacing resolution. Common pitches are 4 inches and 6 inches for light-duty systems and 6 inches and 12 inches for heavy-duty systems. Take-up units (gravity, spring, or screw type) maintain proper chain tension as the chain wears and stretches over time.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spur Tracks and Switches</h3>
+        <p>Power-and-free systems route carriers to spur tracks (branch lines) using track switches. A track switch is a movable section of track that aligns with either the main line or the spur line. Pneumatic cylinders, electric actuators, or mechanical cam mechanisms operate the switch. Carriers approaching the switch disengage from the power chain, coast into the switch zone, and the switch directs them onto the spur or main line. On the spur, a separate chain section or gravity propels the carrier to a workstation, storage zone, or alternative process path.</p>
+
+        <p>Spur tracks enable process flexibility. Carriers route to different paint colors, different assembly options, quality inspection stations, rework areas, or storage banks. A production control system (PLC or MES) tracks each carrier by ID (barcode, RFID, or position encoding) and commands switches to route each carrier to the correct spur based on its process recipe. Complex automotive paint shops use dozens of spur tracks to route car bodies through primer, base coat, clear coat, and specialty color booths in various sequences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paint Line and Coating Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="paint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Paint & Coating</div>
+      <h2 id="paint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Paint Line and <span class="text-accent">Coating Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Automotive paint shops:</strong> Power-and-free conveyors are the standard transport system in <a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover font-semibold">automotive</a> paint shops worldwide. Car bodies mount on carriers that travel through pre-treatment (phosphate wash, rinse, deionized water rinse), e-coat (electrodeposition primer), e-coat bake oven, sealer application, primer surfacer spray, primer bake, base coat spray, clear coat spray, and final bake oven. The total paint shop circuit is often 2-4 miles of track. Each zone requires different dwell times — spray booths need 2-4 minutes per body, bake ovens need 20-30 minutes, and e-coat tanks need 3-5 minutes of immersion. Power-and-free carrier independence allows carriers to dwell in each zone for the required time without affecting carriers in other zones.</p>
+
+        <p><strong class="text-ink">E-coat (electrodeposition) systems:</strong> E-coat processes immerse products in a paint tank charged with an electric current. The product enters the tank on the overhead conveyor carrier, descends into the tank on a vertical track section, travels through the submerged section for 2-5 minutes, and ascends out of the tank on another vertical section. The carrier then travels through rinse stages and into a bake oven. Power-and-free conveyors handle the vertical elevation changes (dip entry and exit) and the varying speeds needed for each process step. Monorail conveyors can also handle e-coat if all products require the same dip time.</p>
+
+        <p><strong class="text-ink">Powder coating lines:</strong> Powder coating applies dry powder to metal parts using electrostatic spray guns. The parts travel on an overhead conveyor through pre-treatment (wash and phosphate), dry-off oven, powder spray booth, and cure oven (typically 375-425°F for 10-20 minutes). Monorail conveyors handle powder coating lines effectively because the process is sequential and the dwell times are consistent. Larger operations with multiple product sizes or colors use power-and-free systems to route parts to different color booths and accumulate parts before the cure oven.</p>
+        <!-- VERIFY: Powder coating cure temperature range 375-425°F -->
+
+        <p><strong class="text-ink">Wet paint spray lines:</strong> Liquid paint (wet paint) spray lines use overhead conveyors to carry parts through spray booths and flash-off zones. The overhead conveyor keeps the product elevated in the spray booth, allowing painters or robots to access all surfaces. Carriers rotate products in the spray booth using spinning fixtures (rotary carriers) to expose all sides to the spray guns. The conveyor speed through the spray booth determines the paint film thickness — slower speed gives a thicker coat. Flash-off zones between spray coats allow solvents to evaporate before the next coat application.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assembly and Manufacturing Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="assembly-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Assembly Applications</div>
+      <h2 id="assembly-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Assembly and <span class="text-accent">Manufacturing Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Automotive final assembly:</strong> Power-and-free conveyors transport car bodies through <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly line</a> stations where workers install components — wiring harnesses, dashboards, seats, engines, transmissions, doors, and trim. The conveyor stops each body at each workstation for a fixed takt time (typically 50-90 seconds per station). Workers complete their assigned tasks during the stop, and the conveyor indexes the body to the next station. Accumulation zones between assembly sections buffer bodies when one section runs faster or slower than another.</p>
+
+        <p><strong class="text-ink">Appliance manufacturing:</strong> Washer, dryer, dishwasher, and refrigerator manufacturers use overhead conveyors to move cabinets and shells through paint and assembly. The overhead conveyor keeps the floor clear for ergonomic workstation design, tool access, and parts delivery. Carriers lower products to ergonomic working height at assembly stations and raise them for transport between stations. Power-and-free conveyors are standard in major appliance manufacturing plants because the cabinet painting and assembly processes require varying dwell times and multiple spur track routing options.</p>
+
+        <p><strong class="text-ink">Heavy equipment manufacturing:</strong> Construction equipment, agricultural equipment, and truck manufacturers use heavy-duty power-and-free conveyors to move frames, cabs, and large weldments through paint and assembly. These systems carry loads of 5,000-10,000 lbs per carrier on reinforced track and heavy-duty trolleys. The track layout includes spur lines for multiple paint colors, rework stations, and model-specific assembly options. Truck cab paint shops and heavy equipment assembly plants rely on power-and-free systems to handle the wide variation in product size, paint color, and assembly configuration within a single production line.</p>
+
+        <p><strong class="text-ink">Aerospace component finishing:</strong> Aircraft manufacturers and aerospace suppliers use overhead conveyors to transport aluminum and composite parts through chemical treatment (anodizing, chromate conversion), primer application, and top coat painting. Aerospace finishing requires precise process control, traceability, and contamination prevention. Power-and-free conveyors with RFID carrier tracking provide the process routing and traceability documentation that aerospace quality standards require.</p>
+
+        <p><strong class="text-ink">Distribution and storage:</strong> Overhead conveyors transport garments on hangers through sorting, storage, and order fulfillment in apparel distribution centers. Garment-on-hanger (GOH) systems use lightweight monorail track with simple hook carriers. Each hanger hangs from the carrier hook and travels through scanning, sorting, and loading zones. GOH overhead conveyors handle 5,000-20,000 garments per hour in major distribution centers. The overhead transport keeps garments wrinkle-free and eliminates the folding, boxing, and unboxing steps that floor-level conveyor transport would require.</p>
+        <!-- VERIFY: 5,000-20,000 garments per hour throughput for GOH systems -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Monorail vs. <span class="text-accent">Power-and-Free Selection</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Choose monorail when:</strong> All products follow the same process path. Every product requires the same dwell time in each zone. No accumulation or buffering is needed between process steps. The process runs at a steady, constant rate. No spur tracks or alternate routing is required. Budget favors the simpler, lower-cost option. Monorail suits single-product, constant-throughput operations like basic powder coating lines, dip-tank coating, and continuous drying ovens.</p>
+
+        <p><strong class="text-ink">Choose power-and-free when:</strong> Products require different dwell times in different zones. Multiple process paths are needed (different colors, different treatments, different assembly options). Accumulation and buffering between process sections is required. Products must stop at individual workstations while other products continue moving. Spur tracks route products to specialized stations. Production control requires tracking and routing individual carriers. Power-and-free suits multi-product, variable-process operations like automotive paint shops, multi-color powder coating lines, and mixed-model assembly lines.</p>
+
+        <p><strong class="text-ink">Determine load capacity.</strong> Calculate the maximum product weight plus carrier weight plus fixture weight. Add a 25% safety factor. This total determines the track size, trolley rating, and chain strength. Light-duty systems (under 500 lbs per carrier) use 3-inch or 4-inch enclosed track. Medium-duty systems (500-2,000 lbs) use 4-inch or 6-inch track. Heavy-duty systems (2,000-10,000 lbs) use 6-inch or larger track with heavy-duty trolleys and forged chain.</p>
+
+        <p><strong class="text-ink">Plan the circuit layout.</strong> Map every process zone, workstation, spur track, accumulation zone, load station, and unload station. Calculate the total circuit length. Identify elevation changes (dip tanks, mezzanine levels, overhead clearances). Determine the minimum curve radii for horizontal and vertical curves based on the carrier length and product overhang. The circuit layout drives the track quantity, number of drive units, chain length, and total carrier count.</p>
+
+        <p><strong class="text-ink">Evaluate the building structure.</strong> Overhead conveyors suspend their entire load from the building structure. Calculate the point loads at each hanger location (track weight, chain weight, carrier weight, product weight distributed to each hanger). Verify that the roof structure, columns, and building foundation can support these point loads plus safety factors. Many retrofit installations require structural reinforcement — adding steel beams, column extensions, or foundation upgrades — before the overhead conveyor installation begins.</p>
+
+        <p><strong class="text-ink">Specify the process environment.</strong> Paint booths require explosion-proof chain lubrication (or dry-film lubrication), spark-free trolley wheels, and grounding provisions to prevent electrostatic discharge. Ovens require heat-resistant chain lubricant, high-temperature trolley wheels, and track expansion joints to accommodate thermal growth. Wash stations require corrosion-resistant track and trolley materials. E-coat tanks require electrically insulated carriers to prevent current leakage from the dip tank to the conveyor structure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between monorail and power-and-free?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A monorail conveyor connects all carriers to one continuously moving <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain</a> — every carrier moves at the same speed and cannot stop independently. A power-and-free conveyor uses two tracks: a power track with a moving chain and a free track with independent trolleys. Carriers engage and disengage from the chain, allowing individual stop, accumulation, and spur track routing.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use these conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p><a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Automotive manufacturing</a> is the largest user — power-and-free conveyors transport car bodies through paint shops and <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly lines</a>. Other major users include appliance manufacturing, aerospace component finishing, heavy equipment manufacturing, and general industrial coating operations (powder coating, wet paint, e-coat).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast do these conveyors run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Monorail conveyors run at 10-40 FPM constant speed. Power-and-free systems run the power chain at 20-60 FPM while individual carriers travel at variable speeds. Paint line conveyors run 5-20 FPM for adequate dwell time in spray booths and ovens. Assembly conveyors run 20-40 FPM to match production takt times.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much weight can they carry?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Light-duty monorail systems carry 100-500 lbs per carrier. Medium-duty power-and-free systems handle 500-2,000 lbs. Heavy-duty automotive systems carry 4,000-10,000 lbs per carrier — enough for complete car bodies with fixtures. The building structure must support the total suspended load of track, chain, carriers, and products.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/chain-conveyors/overhead/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Overhead Chain Conveyors</div>
+          <p class="text-sm text-white/60">Overhead chain drive fundamentals</p>
+        </a>
+        <a href="/industries/automotive-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Automotive Conveyors</div>
+          <p class="text-sm text-white/60">Paint shop and assembly transport</p>
+        </a>
+        <a href="/industries/assembly-line-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Assembly Line Conveyors</div>
+          <p class="text-sm text-white/60">Workstation-to-workstation transport</p>
+        </a>
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">Chain drive types and applications</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,453 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Pharmaceutical Conveyors", "item": "https://packagingconveyor.com/industries/pharmaceutical-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Cleanroom Conveyors", "item": "https://packagingconveyor.com/industries/pharmaceutical-conveyors/cleanroom/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a cleanroom conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A cleanroom conveyor is a material handling system designed to operate within ISO 14644-1 classified environments (ISO Class 5 through Class 8) without generating particles that would compromise the cleanroom classification. Cleanroom conveyors use smooth, non-shedding surfaces (electropolished stainless steel, anodized aluminum), sealed bearings, enclosed drives, and materials that do not outgas volatile organic compounds. They serve pharmaceutical, medical device, semiconductor, and optics manufacturing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What ISO cleanroom classes require specialized conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ISO Class 7 and Class 8 environments can use standard stainless steel conveyors with sealed bearings and smooth finishes. ISO Class 6 requires enclosed drives, particle-tested belts, and certified low-particle generation. ISO Class 5 (equivalent to the old Federal Standard 209E Class 100) requires fully enclosed conveyor systems, HEPA-filtered enclosures, and rigorous material qualification to prevent particle generation above 0.5 microns." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor belt materials are cleanroom compatible?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom-compatible belt materials include silicone-free polyurethane, PTFE-coated fiberglass, and monofilament polyester mesh. These materials generate minimal particles during operation, do not outgas volatile compounds, and resist the cleaning chemicals used in cleanroom environments (IPA, hydrogen peroxide, quaternary ammonium). Standard PVC and rubber belts are generally not cleanroom-compatible due to plasticizer outgassing and particle shedding." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you validate a cleanroom conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom conveyor validation includes particle generation testing (running the conveyor and measuring airborne particles at the belt surface), outgassing testing (measuring VOC emissions from belt and component materials), surface finish verification (Ra values on metal surfaces), and operational qualification under production conditions. Validation follows the facility's cleanroom qualification protocol and must demonstrate the conveyor does not cause the room to exceed its ISO classification during operation." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cleanroom Conveyors: ISO Class 5-8 Pharmaceutical & Semiconductor Systems",
+  "description": "Technical guide to cleanroom conveyors for pharmaceutical, medical device, and semiconductor manufacturing — ISO classification, particle control, materials, GMP compliance, and clean-in-place design.",
+  "url": "https://packagingconveyor.com/industries/pharmaceutical-conveyors/cleanroom/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Cleanroom Conveyors: ISO Class 5-8 Pharmaceutical & Semiconductor Systems | PackagingConveyor.com"
+  description="Technical guide to cleanroom conveyors for pharmaceutical, medical device, and semiconductor manufacturing — ISO classification, particle generation, GMP compliance, CIP, and HEPA-compatible designs."
+  canonical="https://packagingconveyor.com/industries/pharmaceutical-conveyors/cleanroom/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/pharmaceutical-conveyors/" class="hover:text-white/70">Pharmaceutical</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Cleanroom Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Industry</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Cleanroom <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Cleanroom conveyors operate within ISO 14644-1 classified environments — from ISO Class 5 (100 particles per cubic foot at 0.5 microns) through ISO Class 8 (3,520,000 particles per cubic meter at 0.5 microns) — for pharmaceutical, medical device, and semiconductor manufacturing. These conveyors use electropolished stainless steel or anodized aluminum frames, non-shedding belt materials, sealed bearings, and enclosed drives to minimize particle generation that would compromise the cleanroom classification. Cleanroom-rated conveyor systems ship with documented particle generation data and GMP-compliant construction certifications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ ISO CLASSIFICATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="iso-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Classification</div>
+        <h2 id="iso-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          ISO Cleanroom <span class="text-accent">Classifications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            ISO 14644-1 defines cleanroom classifications by the maximum allowable particle concentration per cubic meter at specified particle sizes. The classification determines how stringent the conveyor design must be — each step from ISO Class 8 down to ISO Class 5 tightens the requirements on materials, surface finishes, bearings, drives, and belt selection.
+          </p>
+          <div class="overflow-x-auto -mx-4 px-4 mt-4">
+            <table class="w-full text-left border-collapse min-w-[750px]">
+              <thead>
+                <tr class="border-b-2 border-ink">
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">ISO Class</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Particles/m3 (0.5 um)</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Application</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Conveyor Requirements</th>
+                </tr>
+              </thead>
+              <tbody class="text-base text-ink-muted">
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">ISO 5</td>
+                  <td class="py-4 pr-4 font-mono text-sm">3,520</td>
+                  <td class="py-4 pr-4">Sterile fill-finish, semiconductor fab</td>
+                  <td class="py-4">Enclosed, HEPA-filtered, certified materials</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">ISO 6</td>
+                  <td class="py-4 pr-4 font-mono text-sm">35,200</td>
+                  <td class="py-4 pr-4">Aseptic processing, implant assembly</td>
+                  <td class="py-4">Enclosed drives, particle-tested belts</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">ISO 7</td>
+                  <td class="py-4 pr-4 font-mono text-sm">352,000</td>
+                  <td class="py-4 pr-4">Tablet packaging, device assembly</td>
+                  <td class="py-4">Sealed bearings, smooth finishes, SS or anodized Al</td>
+                </tr>
+                <tr>
+                  <td class="py-4 pr-4 font-semibold text-ink">ISO 8</td>
+                  <td class="py-4 pr-4 font-mono text-sm">3,520,000</td>
+                  <td class="py-4 pr-4">Secondary packaging, gowning rooms</td>
+                  <td class="py-4">Standard SS with sealed bearings</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- VERIFY: ISO 14644-1 particle count limits per class at 0.5 microns -->
+          <p class="text-sm text-ink-muted mt-4">Particle counts from ISO 14644-1:2015. Actual limits vary by particle size measured.</p>
+          <p>
+            The conveyor's contribution to room particle count depends on its surface area, operating speed, belt material, bearing type, and maintenance condition. A well-designed cleanroom conveyor adds fewer than 1,000 particles per cubic foot at 0.5 microns to the local air — insignificant in an ISO 7 or 8 room but potentially significant in an ISO 5 environment where the total room budget is much tighter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PARTICLE GENERATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="particle-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Particle Control</div>
+        <h2 id="particle-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Particle Generation <span class="text-accent">Sources</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Every moving part in a conveyor generates particles. The primary sources are belt-to-wear-strip friction, bearing seal abrasion, drive component wear, and belt splice or joint degradation. Cleanroom conveyor design addresses each source systematically.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt-to-Wear-Strip Contact</h3>
+          <p>
+            The belt slides over wear strips (slider bed) or rides on rollers along the conveyor bed. Belt-to-wear-strip friction is the largest particle source in a <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt conveyor</a>. Standard UHMW wear strips shed visible particles under normal operation. Cleanroom conveyors use polished stainless steel slider beds or low-friction engineered polymer wear strips that generate fewer particles. Some designs replace slider beds with precision rollers to eliminate sliding friction entirely.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Bearings</h3>
+          <p>
+            Standard open or shielded bearings release grease mist and metal particles into the air. Cleanroom conveyors use permanently sealed bearings with food-grade or cleanroom-rated grease that does not migrate. Double-sealed (2RS) bearings with contact seals prevent particle escape. For ISO 5 and 6 environments, bearings are located outside the cleanroom envelope — the drive end of the conveyor extends through a wall penetration, placing bearings and drives in a non-classified maintenance corridor.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Drive Components</h3>
+          <p>
+            Gear motors, chains, belts, and sprockets generate particles through friction and wear. Cleanroom conveyors enclose all drive components in sealed housings with gaskets. Internal drive cavities may use positive pressure with filtered air to prevent particle escape. Direct-drive motors (no gearbox, no belt, no chain) eliminate the particle sources associated with power transmission components. Servo direct drives provide the cleanest solution but cost more than geared motor drives.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Splices</h3>
+          <p>
+            Belt splices (where belt ends are joined) create a discontinuity that generates particles as it passes over rollers and wear strips. Finger splices generate fewer particles than mechanical fastener splices. Welded or fused splices (thermal bonding) eliminate the overlap and produce the smoothest joint. For the highest cleanroom ratings, endless belts (no splice) eliminate this source entirely — the belt is manufactured to the exact conveyor length with no joint.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MATERIALS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="materials-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Construction</div>
+        <h2 id="materials-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Frame & Belt <span class="text-accent">Materials</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Frame Materials</h3>
+          <p>
+            Cleanroom conveyor frames use two primary materials: <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel</a> (304 or 316L) and anodized aluminum. Stainless steel provides superior corrosion resistance, handles aggressive cleaning chemicals, and does not shed particles when properly finished. Electropolished stainless steel (Ra 0.4-0.8 micrometers surface roughness) presents the smoothest surface for cleaning and minimal particle harborage.
+          </p>
+          <p>
+            Anodized aluminum offers a lighter-weight alternative at lower cost. Hard-coat anodizing (Type III, 0.002-inch thickness) creates a durable, non-shedding surface that resists most cleanroom cleaning chemicals. Aluminum frames reduce conveyor weight by 60-65% compared to stainless steel — significant when conveyors are mounted on adjustable-height stands or cantilevered from walls. Modular aluminum profile conveyor systems are widely used in ISO 7 and 8 cleanrooms because their extruded construction allows fast reconfiguration and clean-in-place compatibility.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Materials</h3>
+          <p>
+            Cleanroom belt materials must meet three criteria: low particle generation, no outgassing of volatile organic compounds (VOCs), and resistance to cleanroom cleaning agents. Standard PVC belts fail on all three — they shed plasticizer particles, outgas phthalates and chlorinated compounds, and degrade under IPA (isopropyl alcohol) and hydrogen peroxide cleaning.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Polyurethane (silicone-free):</strong> The most common cleanroom belt material. Low particle generation, minimal outgassing, good chemical resistance. Silicone-free formulation prevents silicone contamination — critical in pharmaceutical and semiconductor environments where silicone causes adhesion and coating defects.</li>
+            <li><strong class="text-ink">PTFE-coated fiberglass:</strong> Extremely low friction, excellent chemical resistance, and minimal particle generation. Temperature resistant to 500 F. Used in pharmaceutical drying and coating applications within cleanrooms.</li>
+            <li><strong class="text-ink">Monofilament polyester mesh:</strong> Open mesh belt for cleanroom ovens, dryers, and processes requiring airflow through the belt. Monofilament construction (single strand, not braided) minimizes particle trapping in the belt structure.</li>
+            <li><strong class="text-ink">Stainless steel flat wire:</strong> For high-temperature or ultra-clean applications. No organic material to outgas. Particle generation limited to metal-to-metal contact points.</li>
+          </ul>
+          <!-- VERIFY: Specific belt material certifications for cleanroom use -->
+          <p>
+            Belt manufacturers provide particle generation test data per IEST-RP-CC004 (Institute of Environmental Sciences and Technology recommended practice for evaluating cleanroom materials). Request belt particle generation data at the expected operating speed before specifying a belt for ISO 5 or 6 environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SURFACE FINISH ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="finish-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Surface Quality</div>
+        <h2 id="finish-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Surface Finishes & <span class="text-accent">Outgassing</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Surface roughness (Ra value) determines how easily a surface can be cleaned and how many particles it harbors in microscopic valleys and scratches. Smoother surfaces harbor fewer particles and clean more effectively. Pharmaceutical cleanroom standards specify maximum Ra values for product-contact and non-contact conveyor surfaces.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Ra 0.8 um (32 microinch):</strong> Standard for ISO 7-8 cleanroom frames. Achieved with #4 brushed finish on stainless steel.</li>
+            <li><strong class="text-ink">Ra 0.4 um (16 microinch):</strong> Required for ISO 5-6 and GMP product-contact surfaces. Achieved with electropolishing after mechanical polishing.</li>
+            <li><strong class="text-ink">Ra 0.2 um (8 microinch):</strong> Ultra-clean applications — semiconductor wafer handling, sterile injectable manufacturing. Requires electropolishing to a mirror finish.</li>
+          </ul>
+          <p>
+            Electropolishing removes a controlled layer of surface metal through an electrochemical process, smoothing peaks and valleys, and creating a chromium-rich passive layer that resists corrosion. Electropolished stainless steel is the standard for pharmaceutical cleanroom conveyors operating under GMP (Good Manufacturing Practice) requirements.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Outgassing</h3>
+          <p>
+            Outgassing is the release of volatile organic compounds (VOCs) from materials at room temperature or under process conditions. In semiconductor fabs, outgassed compounds deposit on wafer surfaces and cause defects. In pharmaceutical cleanrooms, VOCs can contaminate drug products. Conveyor materials must be tested for outgassing per ASTM E595 or facility-specific protocols.
+          </p>
+          <p>
+            Common outgassing culprits in conveyor construction include PVC belt materials (plasticizer migration), rubber seals and gaskets (sulfur compounds), adhesive-backed labels and tape, and lubricants. Cleanroom conveyor design eliminates these materials or substitutes low-outgassing alternatives — silicone-free polyurethane belts, PTFE seals, laser-etched identification marks (no labels), and dry-running or sealed lubrication.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GMP AND PHARMA ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="gmp-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Compliance</div>
+        <h2 id="gmp-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          GMP Compliance & <span class="text-accent">Pharmaceutical Requirements</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical conveyors</a> in cleanrooms must comply with cGMP (current Good Manufacturing Practice) regulations enforced by the FDA (21 CFR Parts 210 and 211) and equivalent international standards (EU GMP Annex 1 for sterile manufacturing). GMP requirements affect conveyor design in several specific ways.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Cleanability</h3>
+          <p>
+            All conveyor surfaces must be accessible for cleaning and inspection. No hidden cavities, dead legs, or areas that cannot be reached with cleaning agents. Fasteners use smooth-head bolts (no hex socket heads that trap particles) or are eliminated in favor of welded construction. Frame joints are continuous-welded and ground smooth — no crevices for particle or microbial harborage.
+          </p>
+          <p>
+            Pharmaceutical cleanroom conveyors support two cleaning regimes: manual wipe-down with IPA or approved disinfectant (daily or per batch), and periodic deep cleaning with hydrogen peroxide vapor (HPV) or vaporized peracetic acid for room-level decontamination. Belt and frame materials must withstand repeated exposure to these agents without degradation, discoloration, or particle generation.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Clean-in-Place (CIP)</h3>
+          <p>
+            CIP systems clean conveyor surfaces automatically using spray nozzles that apply cleaning solution, rinse water, and sanitizer without disassembly. CIP is common in <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary food conveyors</a> and applies to pharmaceutical cleanroom conveyors in certain applications — particularly liquid and semi-solid pharmaceutical manufacturing where product contact occurs. CIP-capable conveyors use sealed frame construction, welded joints, and belt materials rated for CIP chemical exposure (caustic, acid, sanitizer cycles).
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Documentation and Traceability</h3>
+          <p>
+            GMP requires documented evidence that the conveyor meets specifications. Conveyor manufacturers provide material certificates (mill certs for stainless steel), surface finish measurements, weld inspection records, and particle generation test reports. An IQ/OQ (Installation Qualification / Operational Qualification) protocol verifies that the installed conveyor meets design specifications and operates within cleanroom requirements. Equipment suppliers that serve pharmaceutical customers provide IQ/OQ documentation packages as part of the conveyor delivery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HEPA DESIGN ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="hepa-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Airflow Integration</div>
+        <h2 id="hepa-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          HEPA-Compatible <span class="text-accent">Conveyor Design</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Cleanrooms maintain particle control through unidirectional (laminar) airflow from ceiling-mounted HEPA filters downward through the work zone and out through floor-level returns. Conveyors must not obstruct this airflow pattern. A solid conveyor frame placed under a HEPA filter bank creates a turbulent wake zone where particles accumulate instead of being swept away.
+          </p>
+          <p>
+            HEPA-compatible conveyor design principles include minimizing frame cross-section in the airflow path, using open frame construction (tube profiles instead of solid panels), positioning drives and motors below the work zone or outside the classified area, and orienting the conveyor to align with — not perpendicular to — the dominant airflow direction.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Enclosed Conveyor Systems</h3>
+          <p>
+            For ISO 5 environments, the conveyor and product travel inside a sealed enclosure with its own HEPA-filtered air supply. The enclosure maintains positive pressure relative to the surrounding room, preventing unfiltered air from entering. Transfer points between the enclosure and processing equipment use sealed pass-throughs or rapid-close doors that minimize air exchange.
+          </p>
+          <p>
+            Enclosed conveyor tunnels with integrated HEPA filtration create a localized ISO 5 environment within a less-classified room (ISO 7 or 8). This approach costs less than classifying the entire room to ISO 5. The conveyor enclosure becomes part of the facility's cleanroom qualification — its filter integrity, air change rate, and particle count are tested during room certification.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Isolator and RABS Integration</h3>
+          <p>
+            In sterile pharmaceutical manufacturing, conveyors pass through isolators (sealed enclosures with glove ports) and RABS (Restricted Access Barrier Systems). The conveyor penetrates the isolator wall through a sealed port with inflatable gaskets or labyrinth seals. The conveyor section inside the isolator must be sterilized — typically with vaporized hydrogen peroxide (VHP) — along with the rest of the isolator interior before production.
+          </p>
+          <p>
+            Conveyor belt material must withstand VHP sterilization cycles (35% hydrogen peroxide vapor at 30-50 C) without degradation. Silicone-free polyurethane and PTFE belts tolerate VHP. Stainless steel belt surfaces provide the highest chemical resistance for isolator applications. Drive components remain outside the isolator, with the belt passing through sealed wall penetrations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Cleanroom Conveyor <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Pharmaceutical Fill-Finish</h3>
+          <p>
+            Sterile injectable drugs (vials, syringes, ampoules) are filled in ISO 5 environments. Conveyors transport empty containers from the washer/depyrogenation tunnel into the filling isolator, through the filling and stoppering stations, and out to capping and inspection. Line speeds range from 50 to 600+ containers per minute. The conveyor must maintain sterility assurance — zero particle contribution to the critical zone around open containers.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Medical Device Assembly</h3>
+          <p>
+            Medical devices — implants, surgical instruments, diagnostic cartridges — are assembled in ISO 7 or 8 cleanrooms. Conveyors transport components through assembly stations, adhesive curing zones, inspection cameras, and packaging. Pallet-transfer conveyors with servo indexing position components precisely for automated assembly. Conveyor surfaces must be biocompatible or at least non-contaminating — no material transfer from belt to product.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Semiconductor Manufacturing</h3>
+          <p>
+            Semiconductor fabs operate at ISO 3-5 in critical process areas. Wafer transport within process tools is highly specialized (robotic handling in sealed mini-environments). Between process steps, wafer cassettes (FOUPs — Front Opening Unified Pods) travel on overhead transport systems (OHT) or automated material handling systems (AMHS). Conveyors in semiconductor support areas (ISO 6-7) transport materials, components, and packaging with cleanroom-compatible construction.
+          </p>
+          <!-- VERIFY: Current semiconductor fab cleanroom conveyor practices and FOUP transport systems -->
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Optics and Photonics</h3>
+          <p>
+            Optical component manufacturing (lenses, mirrors, fiber optics) requires cleanroom environments to prevent particle contamination on optical surfaces. Conveyors transport optical elements through coating, inspection, and assembly. Vibration control is critical — conveyor drives must produce minimal vibration that could misalign optical components during bonding or measurement. Direct-drive servo motors with vibration-damped frames address this requirement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPECIFICATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="spec-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Specification</div>
+        <h2 id="spec-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Specifying a <span class="text-accent">Cleanroom Conveyor</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Cleanroom conveyor specifications start with the ISO classification of the target environment. The classification drives every material and design decision. A conveyor for an ISO 8 room requires sealed bearings and smooth stainless steel or anodized aluminum frames — standard cleanroom practice. A conveyor for an ISO 5 isolator requires enclosed drives, particle-tested endless belts, electropolished surfaces, and VHP sterilization compatibility — a fundamentally different design at a much higher cost point.
+          </p>
+          <p>
+            Key specification parameters for cleanroom conveyors:
+          </p>
+          <ol class="list-decimal list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">ISO classification</strong> of the operating environment (determines material and design requirements)</li>
+            <li><strong class="text-ink">Product type and weight</strong> — pharmaceutical vials, medical device components, semiconductor wafers</li>
+            <li><strong class="text-ink">Line speed and indexing requirements</strong> — continuous motion or stop-and-go</li>
+            <li><strong class="text-ink">Cleaning protocol</strong> — wipe-down (IPA), CIP, VHP sterilization</li>
+            <li><strong class="text-ink">Frame material</strong> — 304SS, 316L SS (electropolished), anodized aluminum</li>
+            <li><strong class="text-ink">Belt material</strong> — silicone-free PU, PTFE, polyester mesh, stainless steel</li>
+            <li><strong class="text-ink">Surface finish</strong> — Ra value for product-contact and non-contact surfaces</li>
+            <li><strong class="text-ink">Drive location</strong> — inside classified area (enclosed) or outside (through-wall)</li>
+            <li><strong class="text-ink">Documentation</strong> — material certs, surface finish reports, IQ/OQ protocols</li>
+          </ol>
+          <p>
+            For budgeting, cleanroom conveyors cost $$-$$$ for ISO 7-8 applications using standard stainless steel or anodized aluminum construction. ISO 5-6 conveyors with enclosed drives, electropolished surfaces, and particle-tested belts cost $$$-$$$$ — two to five times the cost of equivalent non-cleanroom conveyors. For a broader overview of <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical conveyor systems</a> beyond cleanroom-specific requirements, see our parent guide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Pages</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/industries/pharmaceutical-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Pharmaceutical Conveyors</h3>
+            <p class="text-base text-white/60">GMP systems, tablet handling, packaging lines</p>
+          </a>
+          <a href="/conveyor-types/stainless-steel-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Stainless Steel Conveyors</h3>
+            <p class="text-base text-white/60">304/316 construction, electropolished finishes</p>
+          </a>
+          <a href="/conveyor-types/flat-belt-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Flat Belt Conveyors</h3>
+            <p class="text-base text-white/60">Belt types, slider beds, precision transport</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a cleanroom conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor designed to operate within ISO 14644-1 classified environments without generating particles that compromise the cleanroom rating. Uses smooth, non-shedding surfaces (electropolished SS, anodized aluminum), sealed bearings, enclosed drives, and non-outgassing materials. Serves <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a>, medical device, and semiconductor manufacturing.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What ISO classes require specialized conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>ISO 7-8 use standard stainless steel with sealed bearings. ISO 6 requires enclosed drives and particle-tested belts. ISO 5 requires fully enclosed systems, HEPA-filtered enclosures, certified materials, and often through-wall drive placement to keep particle sources outside the classified zone.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt materials are cleanroom compatible?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Silicone-free polyurethane (most common), PTFE-coated fiberglass, monofilament polyester mesh, and stainless steel flat wire. These generate minimal particles, do not outgas VOCs, and resist IPA and hydrogen peroxide cleaning. Standard PVC and rubber belts are not cleanroom-compatible.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do you validate a cleanroom conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Validation includes particle generation testing (measuring airborne particles at the belt surface during operation), outgassing testing (VOC emissions), surface finish verification (Ra values), and operational qualification under production conditions. The conveyor must not cause the room to exceed its ISO classification during operation.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-blueprint py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+        Specify Cleanroom-Grade <span class="text-accent-bright">Conveyor Systems</span>
+      </h2>
+      <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+        From ISO 8 packaging lines to ISO 5 sterile fill-finish, cleanroom conveyor design determines whether your classified environment maintains its rating under production conditions.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/industries/pharmaceutical-conveyors/" class="inline-block bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Pharmaceutical Conveyors</a>
+        <a href="/conveyor-types/stainless-steel-conveyors/" class="inline-block border border-white/30 hover:border-white/50 text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Stainless Steel Conveyors</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Curved Conveyors", "item": "https://packagingconveyor.com/conveyor-types/curved-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a curved conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A curved conveyor changes product travel direction through an angle — typically 30, 45, 90, or 180 degrees — using tapered rollers, curved belt sections, or modular belt designs. Curved conveyors maintain product flow around corners in packaging lines, distribution centers, and manufacturing plants where straight-line conveyor layouts are not possible due to facility constraints." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum radius for a curved conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Minimum curve radius depends on the conveyor type and product size. Powered roller curves typically require a minimum inside radius of 24-36 inches for standard package sizes. Belt curves need wider radii — 36-60 inches — to maintain belt tracking. Modular belt curves achieve tighter radii, down to 1.5 times the belt width. The product must also fit within the curve without overhanging the conveyor edges." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do products rotate when going through a curved conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Products tend to rotate on curves because the outside edge travels faster and farther than the inside edge. Tapered roller curves minimize rotation by running the outside rollers faster than the inside rollers, matching the differential speed across the curve width. Belt curves with proper tracking also minimize rotation. Tall, narrow products are more prone to rotation than wide, flat products." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Curved Conveyors: Roller Curves, Belt Curves & Modular Belt Turns",
+  "description": "Complete guide to curved conveyors covering tapered roller curves, belt curves, modular belt turns, gravity curves, product orientation, minimum radius, and selection for packaging and distribution layouts.",
+  "url": "https://packagingconveyor.com/conveyor-types/curved-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Curved Conveyors: Roller Curves, Belt Curves & Modular Belt Turns"
+  description="Complete guide to curved conveyors: tapered roller curves, belt curves, modular belt turns, gravity curves, product orientation, and minimum radius for packaging and distribution."
+  canonical="https://packagingconveyor.com/conveyor-types/curved-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Curved Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Curved Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Curved Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A curved conveyor changes product travel direction through an angle — typically 30, 45, 90, or 180 degrees — using tapered rollers, curved belt sections, or modular belt designs. Curved conveyors connect straight conveyor runs that cannot align in a single line due to facility layout constraints, column obstructions, or process equipment placement. They maintain continuous product flow around corners in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>, distribution centers, and manufacturing plants where right-angle transfers or turntables would disrupt throughput.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Curved Conveyors Work -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Curved Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>The fundamental challenge of a curved conveyor is differential speed across the belt or roller width. On a curve, the outside edge travels a longer distance than the inside edge. A 90-degree curve with a 36-inch inside radius and a 24-inch belt width has an outside radius of 60 inches. The outside edge travels 94 inches (60 x pi/2) while the inside edge travels 57 inches (36 x pi/2) — a 65% difference. The conveyor must accommodate this speed differential or products rotate, skew, or jam.</p>
+
+        <p>Different curved conveyor technologies address this differential speed problem in different ways. Tapered rollers spin faster at the outside edge than the inside edge. Curved belts use conical or crowned tracking rollers to maintain belt position while allowing the belt to flex through the curve. Modular plastic belts articulate at each hinge point to accommodate the differential path length inherently.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Curve Geometry</h3>
+        <p>Curved conveyors are defined by three dimensions: curve angle (degrees of turn), inside radius (distance from the curve center to the inside belt or roller edge), and belt or roller width. Standard curve angles are 30, 45, 60, 90, and 180 degrees. Custom angles are available from most manufacturers. The inside radius determines the curve footprint and the severity of the differential speed issue — tighter radii create larger speed differentials. Wider belts on tight curves experience the greatest differential and are the most challenging to manage.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Types of Curved Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Curve Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Types of <span class="text-accent">Curved Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tapered Roller Curves</h3>
+        <p>Tapered roller curves use conical (tapered) rollers that are wider at the outside edge of the curve than at the inside edge. The taper causes the roller surface to move faster at the outside than at the inside, matching the differential path length of the curve. Products ride on these tapered rollers and change direction smoothly without rotating. Tapered rollers are the standard solution for <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> curves handling cases, cartons, and totes. Powered tapered roller curves use a belt or chain drive to rotate the rollers, while gravity tapered roller curves rely on product weight and momentum.</p>
+
+        <p>The taper ratio depends on the curve geometry — tighter curves with wider conveyors need more aggressive taper. Standard tapered roller curves handle 30-degree through 180-degree turns. Minimum inside radius for standard tapered rollers is typically 24-36 inches, with product size setting the practical lower limit. The product diagonal dimension must not exceed the roller width or the product overhangs the conveyor on the inside of the curve.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Curves</h3>
+        <p>Belt curves use a continuous belt that flexes through the curve over a curved slider bed or curved roller bed. The belt tracks on the curve using conical end rollers (drive and tail rollers with a taper that matches the curve geometry) and lateral belt guides. Belt curves provide a smooth, continuous surface for products — no gaps between rollers — making them suitable for small items, bags, and irregularly shaped products that would catch on roller gaps.</p>
+
+        <p><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Flat belt</a> curves handle the differential speed by allowing the belt to slide laterally on the slider bed. The inside edge of the belt decelerates slightly while the outside edge accelerates, accommodated by the belt elasticity and the conical rollers at each end. This introduces some belt wear and requires periodic tracking adjustment. Belt curves are noisier and consume more power than straight belt runs due to the increased friction.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Modular Belt Curves</h3>
+        <p><a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular belt</a> conveyors navigate curves inherently. The interlocking plastic modules articulate at each hinge point, allowing inside modules to compress together while outside modules spread apart. No special curve-specific hardware is needed — the same modular belt that handles straight runs handles curves. This eliminates the belt tracking challenges of fabric belt curves and the product gaps of roller curves. Minimum curve radius depends on module design but is typically 1.5-2.0 times the belt width.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gravity Curves</h3>
+        <p>Gravity curves use unpowered tapered rollers or skate wheels on a curved frame. Products coast through the curve under their own momentum from the upstream powered conveyor section. Gravity curves are the simplest and lowest cost curve option ($ relative cost). They work for rigid, flat-bottomed products (cases, cartons, totes) with sufficient momentum to carry through the curve without stalling. Lightweight products, bags, and flexible items stall on gravity curves because they lack the mass and momentum to overcome roller friction through the turn. Guard rails on the outside edge prevent products from flying off the curve due to centrifugal force.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Wheel Curves</h3>
+        <p>Wheel curves (skate wheel curves) use rows of small skate wheels mounted on axles that follow the curve radius. The wheels provide low-friction product support with minimal contact area. Wheel curves excel for flat-bottomed rigid products and are the lowest cost and lowest maintenance curve option. They do not suit products with soft bottoms, small footprints, or irregular shapes because these products sag between the wheel rows or catch on wheel edges. Wheel curves are gravity-only — no powered wheel curve exists as a standard product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Orientation -->
+  <section class="py-20 bg-surface" aria-labelledby="orient-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Product Control</div>
+      <h2 id="orient-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Product Orientation <span class="text-accent">Through Curves</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Product rotation through curves is a common concern. On a curve, differential speed between the inside and outside edges creates a torque on the product that tends to rotate it. The degree of rotation depends on the curve radius (tighter curves cause more rotation), the product aspect ratio (long narrow products rotate more than square products), and the friction between the product bottom and the conveyor surface.</p>
+
+        <p><strong class="text-ink">Tapered rollers minimize rotation</strong> by matching the surface speed differential to the curve geometry. When the taper ratio is correct, every point across the roller width moves at the speed appropriate for its distance from the curve center. Products ride through the curve without rotation because no net torque acts on them. Mismatched taper ratios (wrong rollers for the curve radius) cause rotation in one direction or the other.</p>
+
+        <p><strong class="text-ink">Side guides control product position</strong> through curves but introduce friction. Inside guides prevent products from cutting the corner and falling off the inside edge. Outside guards prevent products from flying off the outside edge due to centrifugal effects. Adjustable guides accommodate different product widths. Spring-loaded or roller-edge guides reduce friction and prevent product damage on contact.</p>
+
+        <p><strong class="text-ink">Product spacing through curves</strong> must increase compared to straight runs. Products on a curve occupy more conveyor width because they take a diagonal position as they rotate through the turn. If products are spaced too closely, adjacent products contact each other on the curve, causing jams. A general rule: increase product spacing by 30-50% through curves compared to the straight run spacing upstream and downstream.</p>
+
+        <p><strong class="text-ink">High-speed curves</strong> amplify rotation and centrifugal problems. Products traveling at 200+ FPM through tight curves can slide outward, tip over, or rotate significantly. Reducing speed through curves — using a separate drive zone with a slower belt or roller speed — improves product stability. Alternatively, increasing the curve radius reduces the centrifugal force and differential speed for a given belt speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Powered vs Gravity -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="power-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Power Options</div>
+      <h2 id="power-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Powered vs. <span class="text-accent">Gravity Curves</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Powered curves</strong> use motor-driven rollers or belts to actively propel products through the turn. The drive ensures consistent product speed and reliable transport regardless of product weight or momentum. Powered curves are essential when products vary in weight, when the upstream conveyor speed is low (insufficient momentum for gravity), when the curve leads to an incline, or when precise product spacing must be maintained through the turn.</p>
+
+        <p>Drive methods for powered roller curves include tangential belt drives (a flat belt running along the underside of the rollers, driving them through friction), round belt or O-ring drives (round belts connecting adjacent rollers through grooves), and motorized rollers (one or more rollers with integral motors that drive adjacent rollers through belts or gears). MDR (motor-driven roller) curve sections integrate directly with <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR straight sections</a> for zone-controlled curve operation, using the same 24V or 48V motorized rollers and communication protocols as the straight zones.</p>
+        <!-- VERIFY: Itoh Denki and NORD as MDR curve suppliers -->
+
+        <p><strong class="text-ink">Gravity curves</strong> cost less and require no power or controls. They suit applications where products carry sufficient momentum from upstream powered sections, product weight is relatively consistent, and the curve angle is 90 degrees or less. Gravity curves at 180 degrees are challenging because products lose too much momentum through the long turn. Declining gravity curves (outside edge slightly lower than inside edge) use gravity assist to maintain product momentum through the turn.</p>
+
+        <p><strong class="text-ink">Hybrid approaches</strong> use gravity curves with powered assist at the entry or exit. A short powered section at the curve entry boosts product momentum into the gravity curve. A powered section at the curve exit pulls products out of the curve and onto the downstream conveyor. This hybrid approach costs less than a fully powered curve while handling the momentum limitations of pure gravity operation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Curved Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Packaging line direction changes:</strong> Curved conveyors redirect product flow around obstacles, between process equipment, and through facility constraints. A typical packaging line includes multiple 90-degree curves to fit within available floor space while connecting fillers, labelers, case packers, and palletizers in a logical process sequence.</p>
+
+        <p><strong class="text-ink">Distribution center sortation layouts:</strong> High-speed curved conveyors connect straight sortation lanes in distribution and fulfillment centers. Products travel through multiple curves at speeds of 200-600 FPM between induction points, scanning stations, and divert locations. These curves use powered tapered rollers or belt curves to maintain product orientation and spacing at high speeds.</p>
+
+        <p><strong class="text-ink">U-turn and return conveyors:</strong> 180-degree curves create U-turn conveyors that reverse product direction. Return conveyors bring empty containers, pallets, or trays back to the line start using 180-degree curves at each end. Food processing lines use 180-degree curves on conveyor accumulation tables (serpentine layouts) to maximize buffering capacity in compact floor space.</p>
+
+        <p><strong class="text-ink">Mezzanine and multi-level layouts:</strong> Curved conveyors at mezzanine levels navigate around structural columns, stairways, and equipment while maintaining product flow between vertical transport points (spiral conveyors, VRCs, incline conveyors) and processing or storage areas.</p>
+
+        <p><strong class="text-ink">Airport baggage handling:</strong> Curved conveyor sections route luggage through the complex paths between check-in, security screening, sorting, and aircraft loading. These curves handle high speeds, mixed product sizes (luggage varies greatly), and continuous high-volume operation. The curves use powered belt or powered roller designs for reliable transport of irregularly shaped, varying-weight bags.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Curved Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Define the curve angle and available space.</strong> The facility layout determines the required turn angle and the available floor area for the curve. Tighter curves (smaller radius) save floor space but increase product handling challenges. Leave room for maintenance access around the curve — both inside and outside radii need clearance for roller replacement and belt adjustment.</p>
+
+        <p><strong class="text-ink">Match the curve type to the product.</strong> Rigid flat-bottomed products (cases, cartons, totes): tapered roller curve or gravity wheel curve. Small items, bags, pouches: belt curve. Products requiring washdown: modular belt curve. Mixed product sizes with varying weights: powered tapered roller curve.</p>
+
+        <p><strong class="text-ink">Size the radius for the product diagonal.</strong> The product's diagonal dimension (corner to corner) must fit within the belt or roller width throughout the curve. On the inside of the curve, the effective conveyor width narrows because the product sweeps an arc wider than its own width. Calculate the required conveyor width based on the product diagonal and the curve radius using the geometry of the curve arc.</p>
+
+        <p><strong class="text-ink">Decide powered or gravity.</strong> Use powered curves when product weight varies by more than 30%, when upstream speed is below 60 FPM, when the curve angle exceeds 90 degrees, or when precise product spacing is critical. Use gravity curves for cost savings when product weight is consistent, momentum is sufficient, and spacing precision is not critical.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a curved conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A curved conveyor changes product direction through an angle (30, 45, 90, or 180 degrees) using tapered rollers, curved belts, or modular belt designs. It maintains continuous product flow around corners in packaging, distribution, and manufacturing layouts. See our <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor guide</a> for tapered roller details.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the minimum radius for a curved conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Powered roller curves: 24-36 inches inside radius for standard packages. Belt curves: 36-60 inches. <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular belt</a> curves: as tight as 1.5 times the belt width. The product diagonal dimension must fit within the conveyor width throughout the curve.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Do products rotate when going through a curved conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Products tend to rotate because the outside edge travels faster than the inside edge. Tapered roller curves minimize rotation by matching the speed differential across the curve width. Proper taper ratio, side guides, and increased product spacing all reduce rotation. Tall, narrow products rotate more than wide, flat products.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Tapered roller curve foundations</p>
+        </a>
+        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">Curved belt conveyor technology</p>
+        </a>
+        <a href="/conveyor-types/modular-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Modular Belts</div>
+          <p class="text-sm text-white/60">Inherent curve capability</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Zone-controlled curve sections</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

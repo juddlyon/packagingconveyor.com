@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Design Guide", "item": "https://packagingconveyor.com/resources/conveyor-design-guide/" },
+    { "@type": "ListItem", "position": 4, "name": "Components", "item": "https://packagingconveyor.com/resources/conveyor-design-guide/components/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Components Guide — Frames, Belts, Rollers, Drives & Sensors",
+  "description": "Detailed guide to conveyor system components: frame materials, belt types, rollers, drive configurations, pulleys, bearings, motors, sensors, and safety guards for packaging conveyors.",
+  "url": "https://packagingconveyor.com/resources/conveyor-design-guide/components/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the main components of a conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor system consists of a frame (structural support), conveying surface (belt, rollers, or chain), drive system (motor, gearbox, drive pulley), tail pulley or idler, take-up mechanism for belt tension, bearings, sensors (photoeyes, proximity switches, encoders), controls (motor starter or VFD), and safety guards. Each component must be specified for the application's load capacity, speed, environment, and product type." }
+    },
+    {
+      "@type": "Question",
+      "name": "What frame material should I use for a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Carbon steel (painted or powder-coated) is the standard choice for dry, non-food environments at the lowest cost. Stainless steel 304 is required for food-grade washdown environments. Stainless steel 316 handles corrosive chemicals, salt, and aggressive cleaning agents. Aluminum extrusion frames offer lightweight, corrosion-resistant construction for cleanroom, pharmaceutical, and light-duty applications. Frame material affects cost significantly — stainless steel frames cost roughly 50-100% more than equivalent carbon steel frames." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an end drive and a center drive conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An end drive places the motor and drive pulley at the discharge end of the conveyor. This is the most common configuration — the top belt strand is pulled toward the drive, keeping it under tension. A center drive places the motor underneath the conveyor at the midpoint, driving the belt from below via a pressure roller. Center drives suit long conveyors because they reduce maximum belt tension by half compared to an equivalent end-drive conveyor. Center drives also allow nose-over transfers at both ends of the conveyor." }
+    },
+    {
+      "@type": "Question",
+      "name": "What sensors are used on packaging conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Common conveyor sensors include: photoelectric sensors (photoeyes) for product detection and jam sensing; retroreflective photoeyes for product presence; through-beam sensors for precise position detection; proximity sensors for metal detection and roller rotation verification; rotary encoders for speed measurement and position tracking; ultrasonic sensors for product height or stack counting. Sensors connect to the PLC or zone controller to trigger conveyor start/stop, accumulation, diverting, and alarm functions." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Components Guide — Frames, Belts, Rollers, Drives & Sensors | PackagingConveyor.com"
+  description="Deep dive on conveyor components: frame materials, belt types, rollers, drive configurations, pulleys, bearings, motors, sensors, and guards. Selection criteria for packaging conveyor systems."
+  canonical="https://packagingconveyor.com/resources/conveyor-design-guide/components/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/conveyor-design-guide/" class="hover:text-white/70">Design Guide</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Components</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor <span class="text-accent-bright">Components</span> Guide
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor components are the individual mechanical, electrical, and structural parts that make up a conveyor system. The major components are the frame (carbon steel, stainless steel, or aluminum), conveying surface (belt, rollers, or chain), drive system (motor, gearbox, and drive pulley), pulleys, bearings, sensors, and guards. Selecting the right component specification for each position in the system determines conveyor performance, reliability, maintenance cost, and service life. This guide covers every component category with selection criteria for packaging conveyor applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ FRAMES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="frames-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Structural</div>
+        <h2 id="frames-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Frames</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The frame is the structural backbone of every conveyor. It supports the belt or rollers, the drive system, the product load, and any mounted accessories (guide rails, sensors, guards). Frame material, cross-section profile, and joint construction determine load capacity, corrosion resistance, cleanability, and cost.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Carbon Steel</h3>
+          <p>
+            Carbon steel frames are the lowest-cost option for dry, non-corrosive environments. Frames are fabricated from structural channel, angle, or tube steel, then painted or powder-coated for corrosion protection. Carbon steel handles heavy loads — structural channel frames support 200+ pounds per linear foot without excessive deflection. Most standard-duty conveyor product lines use carbon steel as the default frame material. Paint or powder coating must be maintained; chips and scratches expose bare steel to rust.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Stainless Steel</h3>
+          <p>
+            Stainless steel frames are required for washdown, food-grade, pharmaceutical, and corrosive environments. Type 304 stainless steel handles most food and beverage applications, including daily washdown with standard cleaning chemicals. Type 316 stainless steel resists chlorides, acids, and aggressive sanitizers — required for salt, citric acid, and chlorinated-cleaning environments. Stainless frames use TIG-welded construction with ground and polished welds to eliminate crevices that harbor bacteria. Stainless steel conveyor systems for sanitary applications are widely available from packaging conveyor specialists.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Aluminum Extrusion</h3>
+          <p>
+            Aluminum extrusion frames use T-slot profiles that bolt together without welding. This modular construction allows quick assembly, reconfiguration, and disassembly. Aluminum frames are lightweight (roughly one-third the weight of steel), naturally corrosion-resistant, and offer a clean appearance suitable for cleanroom, pharmaceutical, and light-duty packaging applications. Aluminum extrusion-framed conveyors are available from multiple conveyor builders. Load capacity is lower than steel — aluminum frames typically support 50-100 pounds per linear foot depending on span and profile size.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Painted and Powder-Coated Steel</h3>
+          <p>
+            Painted carbon steel frames add a layer of corrosion protection at lower cost than stainless steel. Powder coating is more durable than wet paint and resists chipping, scratching, and chemical exposure better. Standard colors are machine gray, safety blue, or custom RAL colors. Powder-coated frames suit dry food packaging (packaged products, not exposed food) and general industrial environments. For exposed food and full washdown, stainless steel is the better choice. Replacement <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">conveyor parts</a> and accessories must match the frame material for corrosion compatibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BELTS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="belts-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveying Surface</div>
+        <h2 id="belts-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt <span class="text-accent">Types</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The belt is the product contact surface. Belt material determines grip, temperature tolerance, chemical resistance, FDA compliance, and wear life. The <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">conveyor belting guide</a> covers belt materials in depth. This section summarizes the five primary belt types used in packaging conveyor systems.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">PVC Belts</h3>
+          <p>
+            PVC belts are the lowest-cost option for dry, room-temperature conveying of packaged goods, cartons, and cases. Available in smooth, rough-top, and fabric-textured surfaces. Temperature range is approximately -10&deg;F to 180&deg;F. Not FDA-compliant for direct food contact in most formulations. PVC belts last 1-3 years in typical dry applications. PVC belting is available from all major belt suppliers in a wide range of surface textures and thicknesses.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Polyurethane (PU) Belts</h3>
+          <p>
+            Polyurethane is the standard food-grade belt material. FDA 21 CFR 177.2600 compliant formulations allow direct food contact. PU belts resist abrasion, cuts, oils, fats, and cleaning chemicals. Temperature range extends from -22&deg;F to 212&deg;F in standard formulations. PU belts cost more than PVC but last 2-5 years and provide superior hygiene. They are the default belt for sanitary conveyor applications.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Modular Plastic Belts</h3>
+          <p>
+            Modular plastic belts consist of interlocking modules connected by hinge rods. Damaged modules are individually replaceable without removing the entire belt — reducing downtime from hours to minutes. Available in acetal (Delrin) and polypropylene in FDA-compliant formulations. Intralox pioneered the modular plastic belt category and remains a leading supplier alongside several competitors. Modular belts handle curves, inclines, and heavy loads. Higher upfront cost is offset by lower maintenance cost over the belt's 5-10+ year life.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Wire Mesh and Metal Belts</h3>
+          <p>
+            Wire mesh belts handle high-temperature applications (ovens, dryers, fryers) and heavy loads. Stainless steel wire mesh operates at temperatures up to 1100&deg;F. Flat wire belts provide a smooth surface for small products. Chain-edge belts handle heavy loads in accumulation applications. Metal belts are common in baking, snack food, and heat-treat applications where high temperatures and heavy loads exceed the capabilities of polymer belts.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Steel Belts</h3>
+          <p>
+            Solid stainless steel belts (also called steel bands) provide a flat, non-porous surface for cooling, freezing, and processing applications. Steel belts are used in chocolate cooling, pharmaceutical tablet pressing, and chemical processing where absolute surface cleanliness and temperature control are required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ROLLERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="rollers-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveying Surface</div>
+        <h2 id="rollers-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Rollers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Rollers are the conveying surface on roller conveyors. Roller diameter, material, bearing type, and spacing determine load capacity, speed, noise, and service life. For a detailed overview of roller conveyor types, see the <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors page</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gravity Rollers</h3>
+          <p>
+            Gravity rollers are unpowered. Product moves by gravity (on a slight decline) or by manual push. Gravity rollers are the simplest and lowest-cost conveyor component. Standard gravity rollers use carbon steel tubes with precision bearings. Diameters range from 1.375 inches (light-duty) to 3.5 inches (heavy-duty). Roller spacing is determined by product size — at least three rollers must support the product at all times. Gravity roller conveyors are one of the most widely available conveyor products, offered by nearly every conveyor manufacturer.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Powered Rollers</h3>
+          <p>
+            Powered rollers are driven by belts, chains, or line shafts from an external motor. Belt-driven live roller (BDLR) conveyors use a flat belt running under the rollers. The belt contacts the bottom of each roller, spinning it. Chain-driven live roller (CDLR) conveyors use roller chain and sprockets to drive each roller — handling heavier loads than belt-driven rollers. Line-shaft driven conveyors use a rotating shaft with O-ring or spool drives to power individual rollers.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Accumulation Rollers</h3>
+          <p>
+            Accumulation rollers allow products to queue on the conveyor without back pressure. Minimum-pressure accumulation conveyors disengage roller drive when a zone is full — the drive belt or chain slips on a clutch mechanism. Zero-pressure accumulation conveyors use independently controlled zones with photoeye sensors — each zone stops its rollers when the downstream zone is occupied. MDR (motorized drive roller) conveyors achieve zero-pressure accumulation using a 24V DC motor embedded inside a drive roller in each zone. MDR rollers are available from several global suppliers specializing in motorized roller technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DRIVES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="drives-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Power Transmission</div>
+        <h2 id="drives-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Drive <span class="text-accent">Configurations</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The drive system converts electrical power into belt or roller motion. Drive configuration — end drive, center drive, or head drive — affects belt tension distribution, transfer point design, and maintenance access. For motor and VFD selection details, see the <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">motors and drives guide</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">End Drive</h3>
+          <p>
+            End drives place the motor and drive pulley at the discharge end of the conveyor. The motor mounts below or beside the conveyor frame and drives the head pulley via a gear reducer. This is the most common belt conveyor drive configuration. The top belt strand runs in tension from the tail pulley to the drive pulley. End drives are simple, reliable, and easy to maintain. One limitation: the drive pulley at the discharge end creates a larger nose radius, making close-gap transfers more difficult.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Center Drive</h3>
+          <p>
+            Center drives place the motor underneath the conveyor, typically at the midpoint. A driven roller or belt presses against the underside of the conveyor belt, driving it by friction. Center drives reduce maximum belt tension by roughly half compared to an end drive of the same length — enabling longer conveyors on a single drive. Both ends of the conveyor can have small-diameter nose rollers (knife-edge) for tight product transfers. Center drives are common on food-grade conveyors where sanitary design requires small-diameter nose rollers at both ends.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Head Drive</h3>
+          <p>
+            Head drive is functionally similar to an end drive but specifically refers to roller conveyors where the motor drives the head (discharge) roller directly. The head roller transmits power to adjacent rollers via belts, chains, or O-rings. Head drives are standard on BDLR and CDLR conveyors. The motor mounts at the conveyor end, making it accessible for maintenance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PULLEYS AND BEARINGS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="pulleys-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Power Transmission</div>
+        <h2 id="pulleys-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Pulleys & <span class="text-accent">Bearings</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Pulleys redirect and tension the conveyor belt. Every belt conveyor has at least two pulleys — a drive pulley and a tail pulley. Larger systems add snub pulleys to increase belt wrap angle on the drive pulley, and take-up pulleys to maintain proper belt tension.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Pulley</h3>
+          <p>
+            The drive pulley transmits motor torque to the belt. Larger diameter drive pulleys provide more belt wrap angle and greater traction. Drive pulleys are crowned (slightly larger diameter at center) to track the belt. Lagging — a rubber or ceramic coating bonded to the pulley surface — increases the coefficient of friction between pulley and belt. Lagging is essential for high-tension, incline, and wet environments where belt slip is a risk.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tail Pulley</h3>
+          <p>
+            The tail pulley is located at the infeed end of the conveyor. It redirects the belt from the return strand to the carrying strand. Tail pulleys are typically the same diameter as or smaller than the drive pulley. Wing-style tail pulleys have vanes that shed debris, preventing material buildup that causes belt mistracking.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Take-Up Mechanisms</h3>
+          <p>
+            Take-up mechanisms maintain belt tension as the belt stretches over time. Screw take-ups use threaded rods to adjust the tail pulley position manually — simple and low-cost for short conveyors. Gravity take-ups use a weighted pulley that automatically maintains constant belt tension — preferred for long conveyors and systems where belt elongation is significant. Spring-loaded take-ups provide automatic tension adjustment for medium-length conveyors.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bearings</h3>
+          <p>
+            Bearings support pulley shafts and roller shafts. Pillow block bearings and flanged bearings are standard on conveyor pulleys. Sealed bearings prevent contamination from dust, water, and cleaning chemicals. Stainless steel bearings and food-grade bearings with H1-rated lubricant are required for washdown and food-contact environments. Bearing failure is one of the top causes of conveyor downtime. Predictive maintenance using vibration monitoring and temperature monitoring detects bearing degradation before failure. The <a href="/resources/conveyor-design-guide/" class="text-accent hover:text-accent-hover font-semibold">design guide hub</a> covers maintenance planning as part of the design process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SENSORS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="sensors-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Electrical</div>
+        <h2 id="sensors-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Sensors & <span class="text-accent">Detection</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Sensors provide the data that controls use to start, stop, speed-match, accumulate, and divert products on the conveyor system. Sensor selection depends on product characteristics (size, shape, color, material), detection range, response speed, and environment.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Photoelectric Sensors (Photoeyes)</h3>
+          <p>
+            Photoeyes are the most common conveyor sensor. They detect product presence by emitting a light beam and detecting its reflection or interruption. Retroreflective photoeyes bounce light off a reflector mounted on the opposite side of the conveyor — the product breaks the beam, triggering detection. Diffuse (direct reflection) photoeyes detect light reflected from the product surface — no reflector needed, but range and reliability are lower. Through-beam sensors use a separate emitter and receiver on opposite sides of the conveyor for the highest reliability and fastest response time. Photoelectric sensors for conveyor applications are available from all major industrial sensor suppliers.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Proximity Sensors</h3>
+          <p>
+            Inductive proximity sensors detect metal objects without contact. On conveyors, proximity sensors verify roller rotation (using a target bolt on the roller end), detect metal pallets or containers, and monitor chain position. Capacitive proximity sensors detect non-metallic objects (plastic containers, cardboard, liquids) at short range. Proximity sensors are more resistant to dust, moisture, and contamination than photoeyes.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Encoders</h3>
+          <p>
+            Rotary encoders measure shaft rotation to calculate conveyor belt speed and product position. Incremental encoders generate pulses per revolution — the PLC counts pulses to determine distance traveled. Absolute encoders provide a unique position value at every shaft angle — used for precise indexing applications. Encoders mount on the drive pulley shaft, motor shaft, or a measuring wheel that contacts the belt. Product tracking systems use encoder data to follow individual products through the conveyor system for sortation and diverting.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Safety Sensors</h3>
+          <p>
+            Safety light curtains protect operator access points where guards are not practical. Safety area scanners monitor zones around conveyor intersections and robot cells. Safety sensors connect to the safety PLC or safety relay to implement emergency stopping when an operator enters a hazardous area. Safety sensor selection and placement must comply with ANSI/ASME B20.1 and OSHA requirements. See the <a href="/resources/conveyor-safety/" class="text-accent hover:text-accent-hover font-semibold">conveyor safety guide</a> for detailed standards and requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GUARDS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="guards-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Safety</div>
+        <h2 id="guards-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Guards & <span class="text-accent">Guarding</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Guards prevent operator contact with moving conveyor components — nip points, drive components, belt edges, and rotating shafts. OSHA 29 CFR 1910.219 requires guarding of all power transmission components. ANSI/ASME B20.1 provides specific guarding requirements for conveyor systems.
+          </p>
+          <p>
+            Nip point guards cover the pinch points where the belt wraps around drive pulleys, tail pulleys, and snub pulleys. These are the most critical guard locations — nip points can pull in clothing, fingers, and hair. Guards must be fixed (bolted) and require a tool for removal. Interlocked guards connect to the safety circuit so that removing the guard stops the conveyor motor.
+          </p>
+          <p>
+            Drive guards enclose the motor, gearbox, belts, chains, and sprockets. Perforated metal or wire mesh guards allow airflow for motor cooling while preventing contact. Underguards cover the return strand of belt conveyors to prevent contact and to catch material that falls off the conveyor. Side guards prevent product from falling off the conveyor edges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Common Questions</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Components <span class="text-accent">FAQ</span>
+        </h2>
+        <div class="space-y-4">
+          <details open class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What are the main components of a conveyor system?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              A conveyor system consists of a frame (structural support), conveying surface (belt, rollers, or chain), drive system (motor, gearbox, drive pulley), tail pulley or idler, take-up mechanism for belt tension, bearings, sensors (photoeyes, proximity switches, encoders), controls (motor starter or VFD), and safety guards. Each component must be specified for the application's load capacity, speed, environment, and product type.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What frame material should I use for a conveyor?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Carbon steel (painted or powder-coated) is the standard for dry, non-food environments at the lowest cost. Stainless steel 304 is required for food-grade washdown environments. Stainless steel 316 handles corrosive chemicals and aggressive sanitizers. Aluminum extrusion frames offer lightweight, corrosion-resistant construction for cleanroom and light-duty applications. Stainless frames cost roughly 50-100% more than equivalent carbon steel frames.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What is the difference between an end drive and a center drive?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              An end drive places the motor and drive pulley at the discharge end. The top belt strand is pulled under tension toward the drive. A center drive places the motor underneath at the midpoint, driving the belt from below. Center drives reduce maximum belt tension by half, enabling longer conveyors on a single drive and small-diameter nose rollers at both ends for tight product transfers.
+            </p>
+          </details>
+          <details class="border border-ink/10 bg-surface p-6">
+            <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">What sensors are used on packaging conveyors?</summary>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Common sensors include photoelectric sensors (photoeyes) for product detection, retroreflective photoeyes for product presence, through-beam sensors for precise detection, proximity sensors for metal detection and roller rotation verification, rotary encoders for speed and position tracking, and ultrasonic sensors for height measurement. These connect to the PLC or zone controller for conveyor start/stop, accumulation, diverting, and alarm functions.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="py-20 bg-blueprint">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+          Source <span class="text-accent-bright">Conveyor Components</span>
+        </h2>
+        <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-10">
+          Browse the <a href="/resources/conveyor-parts/" class="text-accent-bright hover:text-white font-semibold">conveyor parts guide</a> for sourcing replacement components, or return to the <a href="/resources/conveyor-design-guide/" class="text-accent-bright hover:text-white font-semibold">design guide hub</a> for the full system design process.
+        </p>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>

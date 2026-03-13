@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Portable Conveyors", "item": "https://packagingconveyor.com/conveyor-types/portable-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a portable conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A portable conveyor is a mobile, self-contained conveyor unit mounted on wheels, casters, or a towable frame that operators reposition between work areas without tools or rigging. Portable conveyors serve temporary material handling needs — truck loading and unloading, seasonal production surges, construction material transport, and mobile packaging operations. They include their own drive motor, controls, and power source (electric cord, battery, or pneumatic) in a single movable assembly." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can a portable conveyor be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard portable belt conveyors range from 5 to 30 feet in length. Telescoping portable conveyors extend from a collapsed length of 12-15 feet to an extended length of 30-50 feet. Longer portable conveyors become impractical because the frame weight and rigidity requirements make them difficult to move. For distances beyond 50 feet, operators typically use multiple shorter portable conveyors in series or install permanent conveyor systems." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can portable conveyors handle inclines?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most portable conveyors include adjustable-height legs or hydraulic lift mechanisms that allow incline operation up to 30 degrees for smooth-belt models and up to 45 degrees for cleated-belt models. Portable conveyors load trucks by inclining from the warehouse floor up to the truck bed height (typically 48-52 inches). Cleated belts, textured belts, or sidewall belts prevent products from sliding back down the incline. The steeper the incline, the lower the maximum product weight the conveyor can handle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What power options are available for portable conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Portable conveyors use three main power sources: standard AC electric (110V or 220V plugged into facility outlets), battery-electric (rechargeable lithium-ion or lead-acid batteries for cordless operation), and pneumatic (compressed air motors for hazardous or wet environments). AC electric is the most common and least expensive. Battery-powered units provide 4-8 hours of runtime per charge and work in locations without electrical outlets — outdoor yards, remote loading docks, and agricultural fields." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Portable Conveyors: Mobile Belt, Roller & Telescoping Units for Dock Loading",
+  "description": "Complete guide to portable conveyors covering mobile belt conveyors, telescoping units, wheeled frames, dock loading, battery power, and selection for warehouse, seasonal, and temporary conveying operations.",
+  "datePublished": "2026-03-12",
+  "url": "https://packagingconveyor.com/conveyor-types/portable-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Portable Conveyors: Mobile Belt, Roller & Telescoping Units for Dock Loading"
+  description="Complete guide to portable conveyors: mobile belt conveyors, telescoping units, wheeled frames, dock loading, battery power, and selection for warehouse and temporary conveying operations."
+  canonical="https://packagingconveyor.com/conveyor-types/portable-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Portable Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Portable Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Portable Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A portable conveyor is a mobile, self-contained conveyor unit mounted on wheels or casters that operators reposition between work areas without tools, cranes, or rigging. Portable conveyors serve temporary and flexible material handling needs — truck loading and unloading, seasonal production surges, construction aggregate transport, and mobile packaging operations. They include their own drive motor, controls, and power connection in a single movable assembly, making them the go-to solution for <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse operations</a> and distribution facilities that need conveying capacity they can deploy, move, and store as demand changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Portable Conveyors Work -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Portable Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A portable conveyor combines the same belt, roller, or flexible conveying surface found on permanent installations with a self-supporting mobile frame. The frame mounts on swivel casters (for indoor use on smooth floors), pneumatic tires (for outdoor and rough-surface use), or fixed wheels with tow hitches (for vehicle-towed transport between sites). The frame includes adjustable-height legs, hydraulic lift cylinders, or screw-jack mechanisms that allow operators to set the conveyor height and incline angle for each application.</p>
+
+        <p>Most portable conveyors use a single electric motor driving a belt or powered roller section through a gearbox. The motor and gearbox mount on the frame with the belt or roller assembly. Controls range from a simple on/off switch with a speed dial to variable-frequency drives (VFDs) with digital speed readouts and remote start/stop. Power reaches the motor through a standard electrical cord (15-50 feet of cord stored on the frame) plugged into facility outlets, through an onboard battery pack, or through a compressed-air supply hose for pneumatic motors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Design and Mobility</h3>
+        <p>Portable conveyor frames use lightweight materials — aluminum extrusions, thin-wall steel tubing, or hybrid aluminum-steel construction — to keep the total unit weight low enough for one or two operators to move. A typical 10-foot portable belt conveyor weighs 150-300 lbs. A 20-foot unit weighs 300-600 lbs. Units above 500 lbs typically include push handles, tow bars, or powered drive wheels for repositioning. Locking casters hold the conveyor stationary during operation. Floor locks or outrigger stabilizers prevent tipping when the conveyor operates at steep inclines or handles heavy loads near the discharge end.</p>
+
+        <p>Folding portable conveyors collapse for storage and transport. The frame folds at one or more hinge points, reducing the conveyor length by 40-60%. A 20-foot portable conveyor folds to 10-12 feet for transport through standard doorways and storage in tight spaces. The belt or roller section remains on the frame during folding — operators do not need to remove or reinstall conveying components. Unfolding and setup takes 2-5 minutes without tools.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Types of Portable Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Portable Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Types of <span class="text-accent">Portable Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Portable Belt Conveyors</h3>
+        <p>Portable belt conveyors are the most common type. A continuous belt runs over a slider bed or roller bed on a wheeled frame. Belt widths range from 12 to 36 inches for package handling and up to 48 inches for bulk material handling. Belt speeds adjust from 20 to 200 FPM for packages and up to 400 FPM for bulk materials. Portable belt conveyors handle cases, cartons, bags, loose parts, bulk materials, and irregularly shaped items. They operate horizontally or on inclines up to 30 degrees with smooth belts and up to 45 degrees with cleated or textured belts.</p>
+
+        <p>Portable belt conveyors are available from most major conveyor OEMs in configurations ranging from light-duty package handlers to heavy-duty aggregate conveyors. Light-duty portable belt conveyors cost $ while heavy-duty units with hydraulic height adjustment and VFD speed control cost $$.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Telescoping Portable Conveyors</h3>
+        <p><a href="/conveyor-types/telescopic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Telescoping conveyors</a> extend and retract to reach into truck trailers, shipping containers, and rail cars. A portable telescoping conveyor mounts on heavy-duty casters or a fixed base at the dock door and extends a belt conveyor section 15-40 feet into the trailer. As workers load or unload the trailer from front to back, the conveyor extends or retracts to keep the discharge point near the current work area. Portable telescoping conveyors eliminate the long carry distance that workers face when loading the far end of a 53-foot trailer by hand.</p>
+
+        <p>The telescoping mechanism uses nested frame sections (two or three stages) that slide within each other on guide rollers. The belt loops through the nested sections so it conveys at any extension length. Electric or hydraulic drives power the extension and retraction. Some portable telescoping conveyors include powered vertical lift at the dock end to match the trailer floor height. These units weigh 1,500-4,000 lbs and require powered drive wheels or a forklift for repositioning between dock doors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Portable Roller Conveyors</h3>
+        <p>Portable <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> use gravity rollers or powered rollers on a wheeled frame. Gravity roller portable conveyors are the simplest and least expensive option ($ cost). Operators tilt the conveyor slightly downhill and products roll by gravity from one end to the other. Powered roller portable conveyors use motorized rollers or belt-driven rollers to propel products at controlled speeds. Portable roller conveyors handle flat-bottomed rigid products — cases, cartons, totes, and drums — but do not suit bags, small items, or irregularly shaped products that fall between the rollers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Portable Flexible Conveyors</h3>
+        <p><a href="/conveyor-types/flexible-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Flexible conveyors</a> (accordion conveyors or expandable conveyors) use a scissor-link frame that extends, contracts, and curves. Portable flexible conveyors start collapsed at 5-8 feet and expand to 20-60 feet. They mount on casters and roll into position at dock doors, between staging areas, or through aisles between storage racks. The scissor-link frame allows the conveyor to follow curved paths around obstacles. These conveyors use gravity skate wheels or powered rollers on the flexible frame. Portable flexible conveyors excel for truck loading and unloading operations where the conveyor must reach deep into the trailer and curve around dock obstacles.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Battery-Powered Portable Conveyors</h3>
+        <p>Battery-powered portable conveyors operate without any external power connection. An onboard rechargeable battery pack (lithium-ion or sealed lead-acid) powers the conveyor drive motor and controls. Runtime ranges from 4 to 8 hours per charge depending on battery capacity, conveyor size, and load. Battery-powered units are essential for outdoor applications (loading trucks in yards without power outlets), agricultural operations (field harvesting and sorting), and emergency or disaster response material handling. Charging takes 4-8 hours on standard outlets or 1-2 hours with fast chargers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dock Loading Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="dock-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Dock Loading</div>
+      <h2 id="dock-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Dock Loading and <span class="text-accent">Truck Unloading</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Floor-loaded trailers:</strong> The primary application for portable conveyors is loading and unloading floor-loaded truck trailers — trailers where cartons, cases, and bags are stacked directly on the trailer floor without pallets. A portable belt or flexible conveyor bridges the gap between the dock and the trailer interior. Workers inside the trailer place packages on the conveyor, which carries them out to the dock for palletizing or sorting. For loading, the flow reverses — workers at the dock place packages on the conveyor, which carries them into the trailer for stacking.</p>
+
+        <p><strong class="text-ink">Parcel and e-commerce operations:</strong> Parcel carriers and e-commerce fulfillment centers use portable conveyors to unload package trailers at peak season. During holiday surges, facilities add portable conveyors at temporary dock positions to handle overflow volume. The conveyors deploy in minutes and store in a fraction of the dock door footprint when not in use. This flexibility allows facilities to scale <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse conveying</a> capacity up and down with demand rather than investing in permanent conveyors that sit idle during off-peak periods.</p>
+
+        <p><strong class="text-ink">Height adjustment for mixed vehicles:</strong> Portable conveyors with hydraulic or electric height adjustment accommodate different vehicle bed heights — from low-deck delivery vans (24-30 inches) to standard dry van trailers (48-52 inches) to high-deck flatbed trailers (60 inches). The operator adjusts the conveyor height at the discharge end to match the vehicle floor, creating a smooth transition. Some units include automatic height-sensing that tracks the trailer floor height as the trailer suspension settles during loading.</p>
+
+        <p><strong class="text-ink">Container stripping and stuffing:</strong> International shipping containers (20-foot and 40-foot ISO containers) load and unload at ports, rail yards, and distribution centers. Portable conveyors reach into the container from the door end, eliminating manual carrying through the 20-40 foot container depth. Telescoping portable conveyors are preferred for container work because they extend and retract as the work progresses from the container door to the back wall. Container floors are rough wood, so portable conveyors for container work use heavy-duty casters or pneumatic tires rather than smooth-floor swivel casters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal and Temporary Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="seasonal-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Temporary Operations</div>
+      <h2 id="seasonal-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Seasonal and <span class="text-accent">Temporary Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Agricultural harvest and processing:</strong> Farms and agricultural processors deploy portable conveyors during harvest season to move produce from field bins to washing, sorting, and packing equipment. Between harvests, the conveyors store in barns or equipment sheds. Portable conveyors in agricultural applications use corrosion-resistant frames (stainless steel or powder-coated aluminum), food-grade belts, and washdown-rated motors and controls. Battery-powered models work in fields and orchards without electrical service.</p>
+
+        <p><strong class="text-ink">Construction and demolition:</strong> Portable conveyors move aggregate, sand, gravel, debris, and construction materials on job sites. Heavy-duty portable belt conveyors with cleated belts transport bulk materials up inclines from excavations to dump trucks or stockpiles. Towable portable conveyors move between job sites behind pickup trucks. These units feature rugged tubular steel frames, pneumatic tires, and heavy-duty bearings rated for abrasive materials. Belt widths of 18-36 inches handle material flow rates of 50-200 tons per hour depending on belt speed and material density.</p>
+        <!-- VERIFY: 50-200 tons per hour throughput range for portable conveyors -->
+
+        <p><strong class="text-ink">Event and temporary facility setup:</strong> Portable conveyors support temporary operations at trade shows, pop-up distribution sites, disaster relief staging areas, and military field operations. The conveyors arrive by truck, set up in minutes, operate for the duration of the event, and break down for transport to the next location. Folding portable conveyors fit inside standard cargo vans for transport.</p>
+
+        <p><strong class="text-ink">Line reconfiguration and plant moves:</strong> Manufacturing and packaging facilities use portable conveyors during production line changeovers, equipment installations, and plant relocations. A portable conveyor temporarily connects two machines while the permanent conveyor between them is being replaced, modified, or relocated. This avoids production downtime during conveyor system upgrades. Portable conveyors also serve as temporary bypass routes during maintenance on permanent conveyor sections.</p>
+
+        <p><strong class="text-ink">Rental fleets:</strong> Material handling distributors and equipment rental companies maintain fleets of portable conveyors for short-term rental. Rental eliminates the capital investment for seasonal or infrequent applications. Rental rates run $ per day for basic portable belt conveyors to $$ per day for telescoping or battery-powered models. Rental periods range from single days for special projects to multi-month seasonal contracts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Portable Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Define the primary application.</strong> Dock loading and unloading favors telescoping or flexible portable conveyors with height adjustment. Bulk material handling favors heavy-duty portable belt conveyors with cleated belts. Package transport between work areas favors simple portable belt or roller conveyors. The application determines the conveyor type, belt surface, speed range, and load capacity requirements.</p>
+
+        <p><strong class="text-ink">Measure the required reach and working height.</strong> Measure the maximum distance the conveyor must span (truck depth, work area separation, or incline length). Measure the lowest and highest discharge heights the conveyor must reach. These dimensions determine the conveyor length and height adjustment range. For truck loading, a 20-24 foot conveyor reaches the back of a standard 28-foot pup trailer, and a 30-foot conveyor reaches midway into a 53-foot dry van. <a href="/conveyor-types/telescopic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Telescoping models</a> reach further without requiring proportionally longer storage space.</p>
+
+        <p><strong class="text-ink">Determine power requirements.</strong> Facilities with electrical outlets at every use point suit AC-powered portable conveyors — the lowest-cost option. Outdoor yards, remote docks, and field operations without power access require battery-powered models. Hazardous environments (explosive dust, flammable vapors) require pneumatic-powered or explosion-proof electric models. Battery capacity must cover the full shift duration plus a safety margin.</p>
+
+        <p><strong class="text-ink">Evaluate mobility needs.</strong> Conveyors that move between dock doors several times per shift need easy-roll casters, push handles, and lightweight frames. Conveyors that move between buildings or job sites need tow hitches, pneumatic tires, and highway-towable frames. Conveyors that store in tight spaces between uses need folding frames. The total unit weight determines whether one operator, two operators, or a forklift/tug is required for repositioning.</p>
+
+        <p><strong class="text-ink">Consider product characteristics.</strong> Flat-bottomed rigid packages work on belt or roller portable conveyors. Bags, loose items, and bulk materials require belt conveyors. Incline applications require cleated or high-friction belts. Heavy items (over 75 lbs each) require heavy-duty frames and reinforced belts. Fragile products require soft belt surfaces and gentle handling at transfer points.</p>
+
+        <p><strong class="text-ink">Budget and ownership vs. rental.</strong> Portable conveyors used daily justify purchase. Seasonal use (under 3 months per year) may favor rental depending on the rental rate vs. purchase price. A basic portable belt conveyor costs $ to purchase, comparable to 20-40 rental days. Heavy-duty telescoping and battery-powered units cost $$ to $$$ to purchase. Rental fleets from distributors provide maintenance, replacement, and flexible scaling without capital commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety and Best Practices -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="safety-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Safety</div>
+      <h2 id="safety-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Safety and <span class="text-accent">Best Practices</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Lock casters before operating.</strong> Portable conveyors on unlocked casters roll away from the operator or the dock edge during loading. Lock all swivel casters and deploy floor brakes or outrigger stabilizers before starting the conveyor. Recheck the locks after repositioning and before resuming operation.</p>
+
+        <p><strong class="text-ink">Secure the conveyor to the dock or vehicle.</strong> The discharge end of a portable conveyor extending into a truck trailer must not fall off the trailer edge if the truck moves unexpectedly. Use dock locks, vehicle restraints, or physical chocks to secure the vehicle. Secure the conveyor discharge end to the trailer floor with a chain, strap, or clamp where possible. Train dock workers to verify vehicle restraint before deploying the conveyor.</p>
+
+        <p><strong class="text-ink">Respect load limits on inclines.</strong> Portable conveyors operating on steep inclines concentrate the load weight at the low end of the frame. If the load exceeds the frame's tipping moment, the high end of the conveyor lifts off the ground. Follow the manufacturer's load chart for maximum product weight at each incline angle. Never exceed the rated capacity, even briefly. Counterweights or stabilizer legs at the low end increase the tipping threshold for incline use.</p>
+
+        <p><strong class="text-ink">Manage electrical cords.</strong> AC-powered portable conveyors trail 15-50 feet of power cord across the floor. Route the cord along walls, under cord covers, or through overhead drops to prevent tripping hazards. Use GFCI-protected outlets for all portable conveyor connections. Inspect cords before each use for damage, cuts, or exposed conductors. Replace damaged cords immediately — portable conveyors in wet dock environments create electrocution risks with damaged cords.</p>
+
+        <p><strong class="text-ink">Inspect before each deployment.</strong> Portable conveyors endure rough handling during transport and storage. Before each use, inspect the belt for tears, fraying, and splice failures. Check the frame for bent members, cracked welds, and loose fasteners. Verify that casters roll freely and lock securely. Test the drive motor, controls, and emergency stop. Portable conveyors that fail during operation are more difficult to repair in the field than permanent conveyors with full shop access.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a portable conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A portable conveyor is a mobile, self-contained conveyor unit on wheels or casters that operators reposition between work areas. They serve truck loading/unloading, seasonal operations, and temporary lines. Portable conveyors include belt, roller, <a href="/conveyor-types/flexible-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flexible</a>, and <a href="/conveyor-types/telescopic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">telescoping</a> types.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How long can a portable conveyor be?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Standard portable belt conveyors range from 5 to 30 feet. Telescoping models extend from 12-15 feet collapsed to 30-50 feet extended. Beyond 50 feet, use multiple shorter portable conveyors in series or install permanent systems. Folding models collapse to 40-60% of their operating length for storage and transport.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Can portable conveyors handle inclines?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Most portable conveyors include adjustable-height mechanisms that allow inclines up to 30 degrees for smooth belts and up to 45 degrees for cleated belts. They commonly load trucks by inclining from warehouse floor level to the truck bed height of 48-52 inches. Steeper inclines reduce the maximum product weight capacity.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What power options are available?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Three main power sources: AC electric (110V/220V, most common), battery-electric (lithium-ion or lead-acid, 4-8 hours runtime), and pneumatic (compressed air for hazardous environments). AC electric costs the least. Battery models work where no outlets exist — outdoor yards, remote docks, and agricultural fields. Choose based on your facility power availability and operating environment.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/telescopic-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Telescopic Conveyors</div>
+          <p class="text-sm text-white/60">Extending reach for truck loading</p>
+        </a>
+        <a href="/industries/warehouse-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Warehouse Conveyors</div>
+          <p class="text-sm text-white/60">Distribution and fulfillment systems</p>
+        </a>
+        <a href="/conveyor-types/flexible-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Flexible Conveyors</div>
+          <p class="text-sm text-white/60">Expandable accordion-style systems</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Gravity and powered roller options</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

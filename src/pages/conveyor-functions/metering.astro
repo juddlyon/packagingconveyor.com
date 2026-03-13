@@ -1,0 +1,371 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Metering", "item": "https://packagingconveyor.com/conveyor-functions/metering/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Metering Conveyors for Packaging Lines",
+  "description": "Complete guide to metering conveyors — gap-based metering, timer-based release, servo-driven metering belts, pack-to-pack gap creation, and machine-synchronized metering for packaging operations.",
+  "url": "https://packagingconveyor.com/conveyor-functions/metering/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a metering conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A metering conveyor controls the rate and spacing of products entering a downstream process or machine. Products arrive from an upstream conveyor at irregular spacing, and the metering system releases them at a controlled rate with consistent gaps. Metering ensures the downstream machine receives products at the exact rate it can process them — preventing jams from over-feeding and starvation from under-feeding." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between metering and singulation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Singulation separates touching or overlapping products into individual spaced units. Metering controls the rate and precise spacing of already-separated products entering a downstream machine. Singulation turns a mass into single file; metering controls how fast those single-file products feed into the next process. Most packaging lines perform singulation first, then metering." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does photoeye-based metering work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A photoeye sensor detects each product on the metering conveyor. When the photoeye senses a product, the conveyor control system calculates the gap to the next product and adjusts belt speed to create the target gap before the product reaches the downstream machine. The photoeye provides real-time feedback that allows the system to correct spacing errors on each product cycle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is servo-driven metering?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Servo-driven metering uses a servo motor to control the metering belt with high-precision speed and position control. The servo accelerates or decelerates the belt for each product individually, placing every product at the exact position required by the downstream machine. Servo metering achieves gap accuracy within 1-2 mm and synchronizes with machine cycles for timing-critical applications like case packing and cartoning." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Metering Conveyors for Packaging Lines | PackagingConveyor.com"
+  description="Complete guide to metering conveyors — gap-based metering, timer-based release, servo-driven metering belts, pack-to-pack gap creation, and machine-synchronized metering for packaging operations."
+  canonical="https://packagingconveyor.com/conveyor-functions/metering/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Metering</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Metering <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Metering conveyors control the rate and spacing of products entering a downstream process or machine. Products arrive from upstream conveyors at irregular spacing, and the metering system releases them at a controlled rate with consistent gaps that match the downstream machine's cycle. Metering prevents jams from over-feeding and starvation from under-feeding, serving packaging, food processing, pharmaceutical, and distribution operations across a wide range of product types and line speeds.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY METERING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">The Function</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why <span class="text-accent">Metering</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Downstream packaging machines — case packers, cartoners, wrappers, labelers, checkweighers — expect products at a specific rate with a specific gap between each product. A case packer loading 12 bottles per case at 15 cases per minute needs 180 bottles per minute arriving with uniform spacing. If bottles arrive in bursts (five close together, then a gap, then three more), the packer either jams on the burst or starves during the gap. Metering smooths irregular upstream flow into the steady, evenly spaced stream the machine requires.
+          </p>
+          <p>
+            Metering is distinct from <a href="/conveyor-functions/singulation/" class="text-accent hover:text-accent-hover font-semibold">singulation</a>. Singulation separates touching products into individual units. Metering controls the rate and precise spacing of already-separated products. In most packaging lines, singulation happens first (converting a mass into single file) and metering happens second (controlling the feed rate into the next machine). Some systems combine both functions — separating and spacing in one integrated conveyor section.
+          </p>
+          <p>
+            Without metering, line efficiency drops. Machines that receive irregular product flow run in start-stop cycles instead of continuous motion. Start-stop operation reduces throughput, increases mechanical wear, wastes energy, and generates rejects from partial fills, mis-wraps, and mis-labels. A metering conveyor at the <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed</a> of each major machine smooths flow and keeps the machine running continuously at its rated speed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GAP-BASED METERING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="gap-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Primary Method</div>
+        <h2 id="gap-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Gap-Based <span class="text-accent">Metering</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Gap-based metering uses photoeye sensors and belt speed control to create a target gap between each product. A photoeye mounted near the metering belt discharge detects each product as it passes. The control system measures the time between consecutive photoeye triggers to determine the current gap. If the gap is too small, the belt decelerates to delay the next product. If the gap is too large, the belt accelerates to close the distance. The system adjusts continuously, correcting spacing errors on every product cycle.
+          </p>
+          <p>
+            The metering belt is typically a short section of conveyor — 2 to 6 feet long — positioned immediately upstream of the machine infeed. Products queue on an upstream accumulation conveyor and transfer onto the metering belt one at a time. The metering belt runs at a variable speed controlled by a VFD (variable frequency drive) or servo motor that responds to photoeye feedback. The metering belt speed varies around the machine's nominal feed rate — speeding up and slowing down to correct each gap.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Photoeye Placement</h3>
+          <p>
+            Photoeye placement determines metering accuracy and response time. The sensor must be far enough from the discharge point to allow the belt speed adjustment to take effect before the product leaves the metering belt. If the photoeye is too close to the discharge, the system detects a gap error but cannot correct it in the remaining belt distance. A sensing point 12-24 inches before the discharge gives the system enough travel distance to adjust speed and close or open the gap.
+          </p>
+          <p>
+            Retroreflective photoeyes work for opaque products — the beam reflects off a reflector on the opposite side and breaks when a product passes through. Through-beam (emitter/receiver) photoeyes provide more reliable detection for products with irregular profiles. Diffuse-reflective photoeyes detect the product surface directly without a reflector — useful for clear or translucent packages but less precise for gap measurement on shiny or curved surfaces.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Speed Control Logic</h3>
+          <p>
+            The gap-based metering control loop operates as a proportional system. The control measures the current gap (from photoeye timing), compares it to the target gap, and calculates a speed correction proportional to the error. Large errors produce large speed changes; small errors produce small corrections. The proportional gain must be tuned for the product characteristics — heavy products need slower acceleration to prevent sliding; light products respond quickly to speed changes. PLC-based controllers run the metering loop with scan times of 5-20 milliseconds, fast enough for product rates of 200+ per minute.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TIMER-BASED RELEASE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="timer-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Simple Method</div>
+        <h2 id="timer-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Timer-Based <span class="text-accent">Release</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Timer-based metering releases products at fixed time intervals regardless of actual product position. A gate, stop, or belt section holds products and releases them one at a time based on a timer. The timer period equals the machine cycle time — if the downstream machine processes one product every 0.5 seconds, the metering gate opens every 0.5 seconds.
+          </p>
+          <p>
+            Physical gates use a pneumatic cylinder or servo-actuated blade that blocks product flow. The gate opens for a set duration (long enough for one product to pass), then closes. The next product queues behind the gate until the timer triggers the next opening. Gate-based metering works well for rigid, uniform products (cartons, bottles, cans) where every product has the same dimensions and the gate clearance matches the product size.
+          </p>
+          <p>
+            Timer-based metering is simpler than gap-based systems — no photoeyes, no speed control loop, no PLC programming for gap correction. The trade-off is lower accuracy. If the upstream product spacing varies, the timer releases products at the correct rate but cannot correct individual gap errors. A product that arrives late at the gate releases late, creating a gap in the output stream. Timer-based systems work best when upstream flow is reasonably consistent and the downstream machine tolerates minor spacing variation.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Stop-and-Go Belt Metering</h3>
+          <p>
+            A variation of timer-based metering uses a belt that stops and starts instead of a physical gate. The metering belt runs at the machine feed speed. When a product reaches the discharge position (detected by a photoeye), the belt stops and holds the product until the timer signal commands release. The belt restarts and delivers the product to the machine, then stops again when the next product arrives at the discharge position. This method avoids the mechanical complexity and product contact issues of physical gates.
+          </p>
+          <p>
+            Stop-and-go metering belts must accelerate quickly to match the downstream machine speed and decelerate without skidding. High-friction belt surfaces (silicone or polyurethane top covers) prevent product sliding during acceleration and deceleration. Lightweight products (pouches, bags, small cartons) are most susceptible to sliding — belt surface selection must match the product's bottom surface characteristics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVO-DRIVEN METERING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="servo-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Precision Method</div>
+        <h2 id="servo-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Servo-Driven <span class="text-accent">Metering Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Servo-driven metering belts use servo motors for high-precision speed and position control. The servo motor accelerates or decelerates the belt for each individual product, placing every product at the exact position required by the downstream machine. Servo metering achieves gap accuracy within 1-2 mm — far tighter than VFD-based gap metering — and synchronizes belt motion with machine cycles for timing-critical applications.
+          </p>
+          <p>
+            The servo metering system receives a timing signal (encoder pulse, registration mark, or fieldbus command) from the downstream machine. This signal tells the metering belt exactly when the machine expects the next product. The servo controller calculates the belt speed profile needed to deliver the product at the right instant: accelerate to close a gap, decelerate to wait for the machine cycle, then match machine speed for a smooth handoff. Each product gets a custom speed profile based on its measured position and the machine's timing demand.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Registration and Phasing</h3>
+          <p>
+            Servo metering integrates with machine registration systems for position-critical applications. A wrapper that applies film at a precise position on each product needs the product to arrive at an exact position within the wrapper's motion cycle. The servo metering belt reads a registration mark on the product (using a vision sensor or contrast sensor), calculates the phase offset between the product position and the machine cycle position, and adjusts belt speed to correct the phase error. The product arrives at the machine in phase — positioned within 1-2 mm of the target.
+          </p>
+          <p>
+            Phasing capability makes servo metering essential for <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> applications where products must arrive at exact positions synchronized to machine motion. Cartoners, wrap-around labelers, and horizontal form-fill-seal machines rely on servo metering for product registration.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Multi-Zone Servo Metering</h3>
+          <p>
+            Complex metering applications use multiple servo-driven belt sections in sequence. Each belt zone independently controls one product. As a product passes from zone to zone, each servo belt adjusts speed to refine the gap and position. A three-zone servo metering system handles products arriving at irregular spacing on zone one, rough-meters them to approximate spacing on zone two, and fine-meters them to exact spacing on zone three. The multi-zone approach achieves consistent results even with highly variable incoming product flow.
+          </p>
+          <p>
+            <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR (motor-driven roller) conveyors</a> with individually controlled zones can perform multi-zone metering without separate belt conveyors. Each roller zone acts as an independent metering section, accelerating and decelerating products under zone-level control. MDR metering suits cartons and cases that ride well on rollers. Belt-based servo metering suits smaller, lighter, or irregular products that need flat belt support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PACK-TO-PACK GAP CREATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="pack-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Packaging Application</div>
+        <h2 id="pack-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Pack-to-Pack <span class="text-accent">Gap Creation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Pack-to-pack gap creation is a specific metering application where products travel nose-to-tail (touching) and the metering system inserts a controlled gap between each product. Products exit a filling machine, wrapper, or labeler in a continuous stream with no gap. The downstream machine — a checkweigher, metal detector, case packer, or diverter — needs a gap between each product to function correctly.
+          </p>
+          <p>
+            The metering belt runs faster than the upstream conveyor. As each product transitions from the slower upstream belt to the faster metering belt, the speed increase pulls the product away from the one behind it. The gap size equals the speed differential multiplied by the product length divided by the upstream belt speed. For example, if the upstream belt runs at 100 FPM and the metering belt runs at 120 FPM (1.2:1 ratio), a 12-inch-long product generates a 2.4-inch gap.
+          </p>
+          <p>
+            Consistent gap creation requires consistent product length. If product length varies (different SKUs on the same line), the speed ratio produces different gaps for different product lengths. Adaptive metering uses a photoeye to measure each product's length and adjusts the metering belt speed per-product to maintain a constant gap regardless of product length. Adaptive systems require servo or VFD speed control with photoeye feedback — they cannot run open-loop.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Slug Creation for Case Packing</h3>
+          <p>
+            <a href="/conveyor-functions/slug-loading/" class="text-accent hover:text-accent-hover font-semibold">Slug loading</a> into case packers requires a specific metering pattern: products grouped into slugs (a row of products touching nose-to-tail) with a gap between slugs. The metering system counts products into groups and inserts a gap after each group. A case packer loading 6 products per row needs slugs of 6 with a gap between each slug for the packer's flight bar or pusher to operate.
+          </p>
+          <p>
+            Slug metering uses a photoeye and product counter. The metering belt runs at the machine feed speed while counting products. When the count reaches the slug size (6 in this example), the belt accelerates to create a gap, then returns to the feed speed for the next slug. Servo-driven metering belts handle slug creation with the precision required by high-speed case packing — gap placement accurate to within a few millimeters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MACHINE-SYNCHRONIZED METERING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="sync-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Integration</div>
+        <h2 id="sync-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Machine-Synchronized <span class="text-accent">Metering</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Machine-synchronized metering ties the metering belt speed directly to the downstream machine's operating speed. If the machine speeds up, the metering belt speeds up. If the machine slows or stops, the metering belt matches. Synchronization prevents the metering belt from feeding products into a stopped or slowing machine, which causes jams at the machine infeed.
+          </p>
+          <p>
+            Synchronization uses a speed reference signal from the machine — typically a digital encoder output or a fieldbus (EtherNet/IP, PROFINET, EtherCAT) speed command. The metering conveyor's drive reads this signal and adjusts belt speed to maintain a fixed ratio to the machine speed. The ratio accounts for the difference between conveyor speed (feet per minute) and machine speed (products per minute, cycles per minute, or rotary speed).
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Line Integration</h3>
+          <p>
+            In a fully integrated packaging line, every metering conveyor synchronizes with its downstream machine, and every machine coordinates with the line controller. The line controller sets the master speed; machines and metering conveyors follow. When any machine faults, the line controller stops the upstream metering conveyor to prevent product pile-up. When the machine restarts, the metering conveyor ramps up in sync with the machine's restart sequence.
+          </p>
+          <p>
+            Speed matching at transitions between the metering belt and the machine infeed is critical. A speed mismatch causes products to bunch (metering belt faster than machine) or gap (metering belt slower). The belt-to-machine speed ratio must account for product pitch — the distance between product centers on the metering belt versus the distance between product pockets, lugs, or stations on the machine.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Reject and Recirculation Handling</h3>
+          <p>
+            When the metering system detects a missing product (gap where a product should be), it must decide whether to advance the remaining products to fill the gap or maintain the gap and let the downstream machine handle an empty cycle. Case packers and cartoners typically need continuous product flow — a missing product creates a partial case or empty carton pocket. The metering system detects the gap and accelerates the belt to close it, maintaining continuous product delivery to the machine.
+          </p>
+          <p>
+            Upstream reject systems (checkweighers, metal detectors, vision inspectors) remove defective products and create gaps in the product stream. The metering conveyor downstream of the reject point must absorb these gaps without disrupting machine feeding. High reject rates create frequent gaps that challenge the metering system's ability to maintain steady flow. Buffer zones between the reject point and the metering conveyor give the system space to re-establish uniform spacing after reject events.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRODUCT CONSIDERATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="product-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Product Handling</div>
+        <h2 id="product-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product <span class="text-accent">Considerations</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Product characteristics determine metering method, belt surface, and control strategy. Rigid products (cartons, cans, glass bottles) respond predictably to belt speed changes — they accelerate and decelerate with the belt without deforming or shifting. Flexible products (bags, pouches, wrapped bundles) deform under acceleration forces, change contact area with the belt as they flex, and may shift position during speed changes. Metering flexible products requires lower acceleration rates and higher-friction belt surfaces.
+          </p>
+          <p>
+            Product weight affects metering response time. Heavy products (large bottles, jars, multipack cases) have more inertia and resist belt speed changes. The metering belt must apply more force (higher friction, longer acceleration ramp) to change the product's speed. Light products respond instantly to belt speed changes but may become unstable — a lightweight pouch can bounce or shift position when the belt accelerates or decelerates abruptly.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Surface Selection</h3>
+          <p>
+            Metering belt surfaces must grip the product firmly enough to control its speed without damaging the product bottom or label. Common belt surfaces include rough-top polyurethane (high grip for cartons and cases), smooth silicone (moderate grip, easy release for sticky or adhesive-backed products), and fabric-finished belts (moderate grip for bottles and containers). Vacuum-assist metering belts use suction through perforations in the belt to hold lightweight or flexible products firmly against the belt surface during speed changes. Vacuum assist is common for pouches, bags, and lightweight cartons that standard belt friction cannot reliably control.
+          </p>
+          <p>
+            Belt width must exceed the product width by at least 1-2 inches on each side to prevent products from catching on side guides during speed changes. Products narrower than the belt track reliably; products wider than the belt overhang the edges and catch on frame members. Side guides (if used) must be set wider than the product to avoid friction contact that interferes with metering accuracy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Types</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/singulation/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Singulation</h3>
+            <p class="text-base text-white/60">Mass-to-single-file separation</p>
+          </a>
+          <a href="/conveyor-functions/infeed-outfeed/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Infeed & Outfeed</h3>
+            <p class="text-base text-white/60">Machine feeding systems</p>
+          </a>
+          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
+            <p class="text-base text-white/60">Precise position-based transport</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a metering conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A metering conveyor controls the rate and spacing of products entering a downstream process or machine. Products arrive at irregular spacing and the metering system releases them at a controlled rate with consistent gaps that match the machine's cycle time. Metering prevents jams from over-feeding and starvation from under-feeding.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between metering and singulation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-functions/singulation/" class="text-accent hover:text-accent-hover font-semibold">Singulation</a> separates touching or overlapping products into individual spaced units. Metering controls the rate and precise spacing of already-separated products. Singulation turns a mass into single file; metering controls how fast those single-file products feed into the next machine. Most packaging lines perform singulation first, then metering.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does photoeye-based metering work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A photoeye sensor detects each product on the metering belt. The control system measures the gap between consecutive products and adjusts belt speed to create the target gap before the product reaches the downstream machine. The photoeye provides real-time feedback that corrects spacing errors on every product cycle.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is servo-driven metering?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Servo-driven metering uses a servo motor to control the belt with high-precision speed and position control. The servo accelerates or decelerates for each product individually, achieving gap accuracy within 1-2 mm. Servo metering synchronizes with machine cycles for timing-critical applications like case packing and cartoning.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="bg-blueprint py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-6">
+        Specify the Right <span class="text-accent-bright">Metering System</span>
+      </h2>
+      <p class="text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+        From photoeye gap control to servo-driven machine synchronization, metering conveyor design determines how reliably your packaging machines run at rated speed. Use our technical guides to match metering method to your product and machine requirements.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/conveyor-functions/singulation/" class="inline-block bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Singulation</a>
+        <a href="/conveyor-functions/infeed-outfeed/" class="inline-block border border-white/30 hover:border-white/50 text-white font-display font-bold uppercase tracking-wider px-8 py-4 transition-colors">Infeed & Outfeed</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
