@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Wire Mesh Belt Conveyors", "item": "https://packagingconveyor.com/conveyor-types/wire-mesh-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a wire mesh belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A wire mesh belt conveyor uses an open-weave metal belt made from interlocking wire spirals or welded wire mesh instead of a solid rubber or plastic belt. Wire mesh belts allow airflow, drainage, and heat transfer through the belt surface, making them essential for ovens, freezers, washdown systems, and drying applications. Belt materials include carbon steel, stainless steel (304 and 316), and Inconel for extreme temperatures." }
+    },
+    {
+      "@type": "Question",
+      "name": "What temperature can a wire mesh belt handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wire mesh belt temperature range depends on the belt material. Carbon steel handles up to 800 degrees F. 304 stainless steel handles up to 1,500 degrees F in oxidizing atmospheres. 316 stainless steel handles up to 1,600 degrees F. Inconel 601 handles up to 2,100 degrees F. For sub-zero applications, stainless steel mesh belts operate in freezers down to -60 degrees F without embrittlement." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main wire mesh belt weave types?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The three main wire mesh belt weave types are balanced weave, compound balanced weave, and chain-driven mesh. Balanced weave uses alternating left and right spirals connected by cross rods — it provides a flat surface and handles light to moderate loads. Compound balanced weave adds additional cross rods for a denser mesh that supports smaller products. Chain-driven mesh uses roller chains on both edges to drive a welded or woven wire mesh panel, handling heavy loads at high temperatures." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you clean a wire mesh conveyor belt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wire mesh belts clean more easily than solid belts because water, steam, and cleaning solutions pass through the open mesh. Standard cleaning methods include CIP (clean-in-place) spray bars mounted above and below the belt, ultrasonic cleaning baths for fine mesh, and manual brushing for heavy buildup. Stainless steel mesh resists corrosion from alkaline and acidic cleaning chemicals. Belt tension should be released before deep cleaning to allow full access between wire spirals." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Wire Mesh Belt Conveyors: Weave Types, Temperature Ranges & Applications",
+  "description": "Complete guide to wire mesh belt conveyors: balanced weave, compound balanced, chain-driven mesh. Oven, freezer, washdown applications. Temperature ranges, belt materials, and food processing uses.",
+  "url": "https://packagingconveyor.com/conveyor-types/wire-mesh-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Wire Mesh Belt Conveyors: Weave Types, Temperature Ranges & Applications"
+  description="Complete guide to wire mesh belt conveyors: balanced weave, compound balanced, chain-driven mesh. Oven, freezer, and washdown applications with temperature ranges from -60F to 2,100F."
+  canonical="https://packagingconveyor.com/conveyor-types/wire-mesh-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Wire Mesh Belt Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Wire Mesh Belt Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Wire Mesh Belt Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A wire mesh belt conveyor uses an open-weave metal belt made from interlocking wire spirals or welded wire panels to transport products through ovens, freezers, washdown zones, and drying tunnels. The open mesh allows airflow, drainage, and radiant heat to pass directly through the belt surface &mdash; something no solid belt can do. Wire mesh belts operate from -60&deg;F in spiral freezers to over 2,100&deg;F in heat-treatment furnaces, making them the dominant conveyor technology for thermal processing in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a>, metalworking, electronics, and glass manufacturing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weave Types -->
+  <article class="py-20 bg-surface" aria-labelledby="weave-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Construction</div>
+      <h2 id="weave-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Wire Mesh <span class="text-accent">Weave Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Balanced Weave</h3>
+        <p>Balanced weave belts use alternating right-hand and left-hand wire spirals connected by straight cross rods (also called connector rods or crimp rods). The spirals interlock, and the cross rods hold them together. This creates a flat, flexible mesh with uniform openings. Balanced weave is the most common wire mesh belt type and handles light to moderate loads in baking ovens, cooling tunnels, tempering lines, and drying applications. Wire diameters typically range from 0.062" to 0.192". Cambridge Engineered Solutions and Wire Belt Company of America are leading balanced weave manufacturers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Compound Balanced Weave</h3>
+        <p>Compound balanced weave adds two cross rods per spiral instead of one, creating a denser mesh with smaller openings. The additional rods provide more surface area to support smaller products that would fall through standard balanced weave. Compound balanced belts suit bakery products (cookies, crackers, pastries), electronic components, small castings, and any product under 2 inches in size. The denser weave also distributes load more evenly, reducing product marking (belt pattern imprints) on soft goods like bread and confections.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain-Driven Mesh</h3>
+        <p>Chain-driven mesh belts use roller chains on both belt edges to drive a welded or woven wire mesh panel. The chains engage sprockets at the drive and tail shafts, providing positive drive without the belt slip that can occur with friction-driven balanced weave belts. Chain-driven mesh handles the heaviest loads (castings, forgings, stampings) and highest temperatures (heat-treatment furnaces, sintering ovens). Ashworth Bros. and Lumsden Belting manufacture chain-driven mesh belts for industrial heat-treatment applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Flat Wire / Honeycomb</h3>
+        <p>Flat wire belts use flat strips (instead of round wire) woven into a honeycomb or herringbone pattern. Flat wire provides more surface contact area than round wire, reducing product marking on soft goods. The flat surface also supports small items more reliably. Flat wire belts are common in chocolate enrobing, bread cooling, and snack food production. Wire Belt Company and Twentebelt manufacture flat wire belt configurations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Woven Wire Cloth</h3>
+        <p>Woven wire cloth belts use extremely fine wire woven into tight mesh patterns with openings as small as 30 microns. These belts serve filtration, drying of fine powders, sintering of metal powders, and applications requiring very fine particle support. Wire cloth belts operate at lower tensions and speeds than spiral-weave belts but provide the finest available mesh opening size.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Materials & Temperature -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="material-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Materials</div>
+      <h2 id="material-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Belt Materials & <span class="text-accent">Temperature Ranges</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Max Temp</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Corrosion Resistance</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Applications</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Carbon Steel</td>
+              <td class="py-3 pr-4">800&deg;F</td>
+              <td class="py-3 pr-4">Low (rusts without treatment)</td>
+              <td class="py-3 pr-4">Heat treating, drying non-food</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">304 Stainless</td>
+              <td class="py-3 pr-4">1,500&deg;F</td>
+              <td class="py-3 pr-4">Good (general purpose)</td>
+              <td class="py-3 pr-4">Food baking, cooling, freezing</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">316 Stainless</td>
+              <td class="py-3 pr-4">1,600&deg;F</td>
+              <td class="py-3 pr-4">Excellent (chloride/acid)</td>
+              <td class="py-3 pr-4">Seafood, chemical, coastal</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Inconel 601</td>
+              <td class="py-3 pr-4">2,100&deg;F</td>
+              <td class="py-3 pr-4">Superior (oxidation-resistant)</td>
+              <td class="py-3 pr-4">Sintering, brazing, glass</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Nichrome</td>
+              <td class="py-3 pr-4">2,000&deg;F</td>
+              <td class="py-3 pr-4">High (scaling-resistant)</td>
+              <td class="py-3 pr-4">Furnaces, kilns, annealing</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VERIFY: Max temperature ratings against Cambridge, Ashworth, and Wire Belt Company published specs -->
+      <p class="text-sm text-ink-muted mt-4">Temperatures are continuous-duty maximums in oxidizing atmospheres. Reducing atmospheres lower maximum ratings. See <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel conveyor guide</a> for alloy selection details.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Wire Mesh Belt <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Oven & Baking Conveyors</h3>
+        <p>Wire mesh belts are the standard oven conveyor in commercial bakeries, snack food plants, and prepared food facilities. The open mesh allows hot air to circulate around all product surfaces, producing uniform browning and cooking. Baking applications typically use 304 stainless balanced weave or flat wire belts at temperatures from 350-550&deg;F. Ashworth, Cambridge, and Wire Belt Company supply oven belts for commercial baking lines producing bread, cookies, crackers, pizza, and snack foods.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Freezer & Cooling Conveyors</h3>
+        <p>Spiral freezers and IQF (individually quick frozen) tunnels use stainless wire mesh belts to carry products through sub-zero environments down to -40&deg;F or colder. The mesh allows cold air to contact the product underside, accelerating freeze times. Spiral freezers stack a single continuous mesh belt in a helical tower, maximizing freezing capacity in minimal floor space. JBT FoodTech, GEA, and Linde use wire mesh belts in their spiral freezer systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Washdown & Aqueous Cleaning</h3>
+        <p>Wire mesh belts carry parts through aqueous wash systems, rinse tanks, and drying tunnels. Water drains through the mesh, eliminating pooling. Parts washers in automotive, aerospace, and electronics manufacturing rely on wire mesh belts to move components through multi-stage wash, rinse, and dry cycles. The mesh openings allow spray nozzles positioned below the belt to reach the product underside.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Heat Treatment & Sintering</h3>
+        <p>Industrial furnaces use chain-driven mesh belts for continuous heat treatment of metal parts. Applications include hardening, tempering, annealing, brazing, and sintering of powdered metal components. Belt temperatures reach 2,000&deg;F+ in controlled-atmosphere furnaces. Inconel and Nichrome alloy belts withstand these temperatures without excessive scaling or creep. Abbott Furnace, Gasbarre, and Seco/Warwick build continuous mesh-belt furnaces for metalworking applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Coating & Enrobing</h3>
+        <p>Chocolate enrobing, glazing, and coating lines use fine-mesh wire belts. Product rides on the belt through a curtain of liquid coating. Excess coating drains through the mesh. Air knives or vibration removes additional excess. The mesh pattern should be fine enough that the product does not deform into the openings but open enough for drainage. Food-grade <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary belt</a> standards apply to enrobing applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="engineering-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="engineering-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Specifying Wire <span class="text-accent">Mesh Belts</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mesh Opening Size</h3>
+        <p>The mesh opening determines the smallest product that can ride on the belt without falling through. For food baking, typical openings range from 1/4" to 1" depending on the product. For parts washing, openings must be smaller than the smallest part. For heat treatment, openings should be large enough for atmosphere circulation but small enough to support the lightest part. Mesh opening is specified as the clear distance between adjacent wires, not wire center-to-center.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Width & Edge Treatment</h3>
+        <p>Wire mesh belts range from 6" to over 120" wide. Edge treatment affects belt tracking and product containment. Welded edges seal the outside wire to prevent snagging and product loss. Chain edges use roller chains for positive drive and tracking. Clinched edges fold the outer wire back on itself for a smooth perimeter. The edge type must match the drive method (friction vs. sprocket) and the application's product containment needs.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Tracking & Support</h3>
+        <p>Wire mesh belts track on rails, slider bars, or roller supports. At high temperatures, belt elongation from thermal expansion requires spring-loaded or gravity take-up systems to maintain tension. Belt guides or flanged sprockets prevent lateral drift. Proper support spacing prevents belt sag between supports, which causes product shifting and uneven cooking in oven applications. Cambridge recommends support spacing of 24-48 inches depending on belt type and load.</p>
+        <!-- VERIFY: Cambridge support spacing recommendation -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Life & Replacement</h3>
+        <p>Wire mesh belt life depends on temperature, load, speed, and belt material. In baking applications at 400-500&deg;F, a quality stainless balanced weave belt lasts 2-5 years with proper maintenance. In heat treatment furnaces above 1,800&deg;F, Inconel belts may last 6-18 months. Belt failure typically manifests as wire fatigue breaks at cross rod connections, edge chain elongation, or mesh distortion from creep at sustained high temperatures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface" aria-labelledby="maint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleaning & <span class="text-accent">Maintenance</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Daily cleaning (food applications):</strong> CIP spray bars above and below the belt apply hot water, detergent, and sanitizer while the belt runs at low speed. Bottom sprays are critical because debris lodges on the return side. Effective CIP requires spray pressure of 40-60 PSI and full coverage across the belt width.</p>
+
+        <p><strong class="text-ink">Weekly deep cleaning:</strong> Release belt tension, run the belt through an alkaline soak, and brush stubborn deposits from cross rod junctions. Automated belt washers use rotating brushes that scrub both belt surfaces as the belt runs through the washer housing. Cambridge and Ashworth offer belt washer systems designed for their belt profiles.</p>
+
+        <p><strong class="text-ink">Lubrication:</strong> Most wire mesh belts in food and high-temperature applications run dry (no lubrication). In ambient industrial applications, food-grade lubricants can extend edge chain life on chain-driven mesh. Never use petroleum-based lubricants on food-contact belts.</p>
+
+        <p><strong class="text-ink">Tension monitoring:</strong> Wire mesh belts stretch over time. Excess slack causes tracking problems, sag between supports, and erratic belt speed. Check tension weekly. Spring-loaded take-ups compensate automatically. Screw take-ups require manual adjustment. Replace the belt when it has stretched beyond the take-up adjustment range, typically 2-4% of total belt length.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a wire mesh belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A wire mesh belt conveyor uses an open-weave metal belt that allows airflow, drainage, and heat transfer through the conveying surface. Essential for ovens, freezers, washdown systems, and drying tunnels. Belt materials range from carbon steel to Inconel for temperatures from -60&deg;F to 2,100&deg;F.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What temperature can a wire mesh belt handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Carbon steel: up to 800&deg;F. 304 stainless: up to 1,500&deg;F. 316 stainless: up to 1,600&deg;F. Inconel 601: up to 2,100&deg;F. For freezing, stainless mesh operates down to -60&deg;F. Material choice depends on temperature, atmosphere, and corrosion requirements.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the main wire mesh belt weave types?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Balanced weave (spiral + cross rod, general purpose), compound balanced (denser mesh for small products), and chain-driven mesh (roller chains on edges for heavy loads and high temps). Flat wire and woven wire cloth serve specialty coating and fine-particle applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do you clean a wire mesh conveyor belt?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>CIP spray bars clean both belt surfaces during operation. Weekly deep cleaning includes releasing tension, alkaline soaking, and brushing cross rod junctions. Automated belt washers with rotating brushes handle daily sanitation in food plants. Bottom sprays are critical for removing debris from the return side.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/stainless-steel-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Stainless Steel</div>
+          <p class="text-sm text-white/60">304 vs 316, sanitary frames</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Incline belt handling</p>
+        </a>
+        <a href="/conveyor-types/hinged-steel-belt/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Hinged Steel Belt</div>
+          <p class="text-sm text-white/60">Heavy-duty metal belts</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">FDA and USDA compliance</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

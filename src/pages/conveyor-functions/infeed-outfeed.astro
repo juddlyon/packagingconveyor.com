@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Infeed & Outfeed Systems", "item": "https://packagingconveyor.com/conveyor-functions/infeed-outfeed/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an infeed conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An infeed conveyor delivers products to a downstream machine (filler, labeler, wrapper, case packer) at the precise speed, spacing, and orientation the machine requires. Infeed systems use timing screws, starwheels, servo-driven phasing belts, or flight conveyors to establish consistent product pitch before machine entry. The infeed conveyor is the critical link between random-spaced product flow and the machine's timed cycle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a timing screw?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A timing screw (feed screw, worm drive) is a helical screw that rotates alongside a conveyor to capture products and space them at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on the conveyor belt while the screw controls separation. Timing screws are dominant for round containers (bottles, cans, jars) before labeling, filling, and capping. Servo-driven screws adjust pitch through recipe changes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a starwheel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A starwheel is a rotating disc with evenly spaced pockets that captures containers from an infeed conveyor and delivers them at precise timing to a rotary machine (rotary filler, rotary labeler, rotary capper). Each pocket holds one container. The starwheel's rotation speed and pocket count match the machine's station count and cycle rate. Starwheels are standard on rotary bottle filling and capping lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a servo infeed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A servo infeed uses servo-driven belts or flights to precisely control product spacing on the conveyor feeding a downstream machine. The servo motor accelerates and decelerates individual products or groups to match the machine's cycle. Servo infeeds provide recipe-based pitch adjustment for multiple product sizes without mechanical changeover. They replace fixed-pitch timing screws on multi-SKU lines." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Infeed & Outfeed Conveyor Systems: Timing Screws, Starwheels & Servo Infeeds",
+  "description": "Technical guide to infeed and outfeed conveyor systems — timing screws, starwheels, servo infeed conveyors, wrapper feeders, and machine integration for packaging lines.",
+  "url": "https://packagingconveyor.com/conveyor-functions/infeed-outfeed/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Infeed & Outfeed Systems: Timing Screws, Starwheels & Servo Infeeds | PackagingConveyor.com"
+  description="Technical guide to infeed and outfeed conveyor systems — timing screws, starwheels, servo infeeds, wrapper feeders, and machine integration for packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-functions/infeed-outfeed/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Infeed & Outfeed</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Infeed & Outfeed <span class="text-accent-bright">Systems</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Infeed and outfeed conveyor systems control the speed, spacing, and timing of products entering and exiting packaging machines. Infeed systems use timing screws, starwheels, servo-driven phasing belts, and flight conveyors to convert random product flow into precisely timed machine-ready spacing. Outfeed systems receive product from machines and transition back to transport speed. Manufacturers like Hartness (ITW), Morrison Container Handling Solutions, Aagard, and Dorner supply infeed and outfeed conveyor components for filling, labeling, capping, wrapping, and cartoning lines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ TIMING SCREWS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="screw-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Timing Screws</div>
+        <h2 id="screw-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Timing Screws & <span class="text-accent">Feed Screws</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Timing screws (feed screws, worm drives) use a helical screw rotating alongside or above a conveyor belt to capture products and establish precise pitch. Products ride on the belt; the screw's helix profile controls spacing. As product enters the screw's infeed section, the helix captures it and gradually accelerates or decelerates it to the target pitch.
+          </p>
+          <p>
+            The screw's helix geometry determines the output pitch. A constant-pitch screw maintains existing spacing. A variable-pitch screw (progressive helix) changes spacing — for example, receiving bottles at 2-inch spacing and delivering them at 4-inch spacing for labeler clearance. The screw length, pitch profile, and rotation speed must all be engineered for the specific container diameter and target pitch.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Fixed vs. Servo Timing Screws</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Fixed-pitch screws ($$):</strong> Machined for one container diameter and one output pitch. Changing container size requires a physical screw swap — 15-45 minutes changeover. Cost-effective for dedicated lines running one container size. Hartness and Morrison supply fixed-pitch timing screws.</li>
+            <li><strong class="text-ink">Servo-driven screws ($$$-$$$$):</strong> A servo motor controls screw rotation speed relative to belt speed. Adjusting the speed ratio changes the effective output pitch. Recipe-based changeover for different container diameters — 1-2 minutes. Justifies the cost on multi-SKU lines. The screw still needs physical swapping for major diameter changes, but pitch adjustment is electronic.</li>
+          </ul>
+          <p>
+            Timing screws are the dominant infeed technology for round containers — bottles, cans, jars, and vials — before <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing</a> into fillers, labelers, and cappers. Non-round containers (rectangular cartons, pouches) use different infeed methods because screw contact surfaces cannot accommodate flat sides.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STARWHEELS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="star-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Starwheels</div>
+        <h2 id="star-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Starwheel <span class="text-accent">Transfers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Starwheels (star wheels, transfer stars) are rotating discs with evenly spaced pockets machined to match the container diameter. Each pocket captures one container from the infeed conveyor and delivers it at precise timing to a rotary machine — filler, labeler, capper, or inspection station. The starwheel's pocket count and rotation speed synchronize with the machine's station count and cycle rate.
+          </p>
+          <p>
+            A typical bottle filling line uses three starwheels in sequence: an infeed starwheel that captures bottles from the timing screw conveyor, a machine starwheel that carries bottles through the filling process, and an outfeed starwheel that returns filled bottles to the outfeed conveyor. All starwheels are mechanically geared or servo-synchronized to maintain precise timing throughout the transfer sequence.
+          </p>
+          <p>
+            Starwheel changeover for different container diameters requires swapping the starwheel disc — the pocket shape must match the container profile. Quick-change starwheel systems reduce changeover time from 30+ minutes to 5-10 minutes using tool-free mounting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVO INFEEDS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="servo-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Servo Systems</div>
+        <h2 id="servo-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Servo <span class="text-accent">Infeed Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Servo infeed conveyors use servo-driven belts or flights to precisely control product spacing before a downstream machine. Unlike timing screws (which suit round containers), servo infeeds handle any product shape — cartons, pouches, bags, trays, and irregularly shaped items. The servo controller accelerates or decelerates products individually to achieve target spacing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Speed-Differential Phasing</h3>
+          <p>
+            Two or more belt sections run at different speeds. Products transfer from a slow belt to a fast belt, stretching the gap between them. Multiple speed zones can establish precise pitch from random-spaced product. This is the simplest servo infeed approach and suits moderate accuracy (±2-5mm pitch).
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Flight (Lug) Conveyors</h3>
+          <p>
+            Servo-driven flights (lugs or pusher bars) attached to a timing belt engage each product from behind and push it at the correct pitch. Flight spacing equals the machine pitch. The flight belt runs at machine speed, and each flight delivers one product at the exact timing the machine requires. Flights provide ±0.5-1.0mm pitch accuracy — the most precise servo infeed method. Used for <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">wrapper infeed</a> on flow-wrap lines.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Independent Cart Systems</h3>
+          <p>
+            Linear motor transport systems (Beckhoff XTS, B&R SuperTrak, Rockwell iTRAK) use independent magnetic movers on a track. Each mover carries one product and moves independently — accelerating, decelerating, and spacing without mechanical linkage. Any pitch, any speed, any product. The most flexible and expensive infeed technology ($$$-$$$$). Justified for high-speed, high-mix packaging lines.
+          </p>
+          <!-- VERIFY: Beckhoff XTS, B&R SuperTrak, Rockwell iTRAK current product names -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ OUTFEED ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="outfeed-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Outfeed</div>
+        <h2 id="outfeed-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Outfeed <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Outfeed conveyors receive product from a machine and transition it back to transport speed and spacing. The outfeed must match the machine's discharge rate without creating back-pressure that jams the machine output. Key outfeed functions:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Speed matching:</strong> The outfeed belt runs at or slightly above machine discharge speed. Running too slow creates accumulation at the machine exit; running too fast creates gaps that reduce downstream conveyor utilization.</li>
+            <li><strong class="text-ink">Product stabilization:</strong> Filled containers exiting a filler may be top-heavy. The outfeed conveyor uses side guides, low-friction belt surfaces, and gentle speed profiles to prevent tipping.</li>
+            <li><strong class="text-ink">Accumulation transition:</strong> The outfeed connects to an <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zone</a> that buffers product between machines. The transition from machine-speed outfeed to accumulation speed requires careful belt speed management.</li>
+            <li><strong class="text-ink"><a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Laning</a>:</strong> Single-file product from a machine may split into multiple lanes for downstream <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">stacking</a> or <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Infeed Technology <span class="text-accent">Comparison</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Technology</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Pitch Accuracy</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Changeover</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Timing screw (fixed)</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.25 mm</td>
+                <td class="py-4 pr-4">Round containers only</td>
+                <td class="py-4 pr-4">Screw swap (15-45 min)</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Timing screw (servo)</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.25 mm</td>
+                <td class="py-4 pr-4">Round containers only</td>
+                <td class="py-4 pr-4">Recipe (1-2 min) + screw</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Starwheel</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.1 mm</td>
+                <td class="py-4 pr-4">Round containers</td>
+                <td class="py-4 pr-4">Disc swap (5-30 min)</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Speed-differential belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;2-5 mm</td>
+                <td class="py-4 pr-4">Any shape</td>
+                <td class="py-4 pr-4">Recipe (1 min)</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Flight (lug) conveyor</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.5-1.0 mm</td>
+                <td class="py-4 pr-4">Any shape</td>
+                <td class="py-4 pr-4">Recipe + flight change</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Independent cart (LMT)</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.01 mm</td>
+                <td class="py-4 pr-4">Any shape</td>
+                <td class="py-4 pr-4">Recipe (instant)</td>
+                <td class="py-4 font-mono text-sm">$$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">LMT = Linear Motor Transport. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for detailed pricing factors.</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an infeed conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Delivers products to a downstream machine at the precise speed, spacing, and orientation required. Uses timing screws, starwheels, servo phasing, or flights to convert random flow into timed machine-ready spacing.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a timing screw?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A helical screw rotating alongside a conveyor that captures round containers and spaces them at precise pitch. Dominant for bottles, cans, and jars before filling, labeling, and capping. Fixed screws need physical swapping; servo screws adjust electronically.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a starwheel?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A rotating disc with pockets matching the container diameter. Captures containers and delivers them at precise timing to rotary machines (fillers, cappers, labelers). Pocket count and speed synchronize with the machine cycle.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a servo infeed?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Servo-driven belts or flights that control product spacing for any product shape (not just round containers). Recipe-based pitch adjustment. Replaces fixed-pitch timing screws on multi-SKU lines. Flight conveyors achieve ±0.5-1.0mm accuracy.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Packaging Line Conveyors", "item": "https://packagingconveyor.com/industries/packaging-line-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Case Packing & Case Conveyors", "item": "https://packagingconveyor.com/industries/packaging-line-conveyors/case/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a case packing conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A case packing conveyor system integrates case erectors, product collating conveyors, case packers (drop-pack, wrap-around, or robotic), case sealers, and case transport conveyors into a unified end-of-line packaging system. The conveyor connects each machine, buffers product between operations, and transports finished cases to palletizing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between drop-pack and wrap-around case packing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Drop-pack (vertical) case packing drops product vertically into a pre-erected case from above. Wrap-around case packing wraps a flat corrugated blank around a collated product group — the case forms around the product. Drop-pack suits rigid products like bottles and cans. Wrap-around produces tighter-fitting cases with less corrugated material but requires products stable enough to hold position during the wrapping motion." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor types are used between case packer and palletizer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Case transport conveyors between case packers and palletizers typically use belt-driven live roller, chain-driven live roller (CDLR), or MDR (motor-driven roller) conveyors. Roller conveyors handle the weight of sealed cases (10-60 lb typically) at moderate speeds (50-150 FPM). Accumulation zones buffer cases when the palletizer cycles. Gravity roller sections serve where elevation permits." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast do case packing lines run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Case packing line speeds range from 5-10 cases per minute (CPM) for manual-assist systems to 60+ CPM for high-speed robotic or continuous-motion case packers. The conveyor system must match the case packer's output rate while providing accumulation for downstream equipment cycles. Typical mid-range systems run 15-30 CPM." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Case Packing & Case Conveyor Systems: Erectors, Packers, Sealers",
+  "description": "Complete guide to case packing conveyor systems — case erectors, drop-pack and wrap-around case packers, case sealers, and case transport conveyors for end-of-line packaging.",
+  "url": "https://packagingconveyor.com/industries/packaging-line-conveyors/case/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Case Packing & Case Conveyors: Erectors, Packers, Sealers | PackagingConveyor.com"
+  description="Complete guide to case packing conveyor systems — case erectors, drop-pack and wrap-around packers, robotic case packing, case sealers, and transport conveyors for end-of-line packaging."
+  canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/case/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/packaging-line-conveyors/" class="hover:text-white/70">Packaging Lines</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Case Packing</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Packaging Line Conveyors</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Case Packing & <span class="text-accent-bright">Case Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Case packing conveyor systems integrate case erectors, product collating conveyors, case packers, case sealers, and case transport conveyors into a complete end-of-line packaging operation. The conveyor system connects each machine, meters product flow, buffers between operations, and transports finished cases to <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizing</a>. Manufacturers like Pearson Packaging, Wexxar Bel, Loveshaw, Brenton (ProMach), and Combi Packaging supply case erectors, sealers, and packers with integrated conveyor sections.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ CASE ERECTORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="erector-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Case Forming</div>
+        <h2 id="erector-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case <span class="text-accent">Erectors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Case erectors take flat (knocked-down) corrugated blanks from a magazine, open them into box shape, fold and seal the bottom flaps, and discharge an empty, open-top case onto a conveyor. The erected case then travels to the case packer for product loading.
+          </p>
+          <p>
+            Two erector types serve different speed and flexibility requirements:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Gravity-assist erectors ($-$$):</strong> Use gravity and mechanical fingers to open pre-scored blanks. Operator loads blank magazine manually. Speeds: 5-15 CPM. Suits low-volume operations. Wexxar Bel WF30 and Combi 2-EZ series are representative models. <!-- VERIFY: Current model numbers for Wexxar Bel and Combi erectors --></li>
+            <li><strong class="text-ink">Servo-driven erectors ($$-$$$):</strong> Use servo motors and vacuum cups to extract blanks from the magazine, open, fold, and seal. Speeds: 15-50+ CPM. Recipe-based changeover for multiple case sizes. Pearson CE25-T and Brenton M2000 are examples. <!-- VERIFY: Current model numbers for Pearson and Brenton erectors --></li>
+          </ul>
+          <p>
+            The conveyor between case erector and case packer is typically a short section of flat belt or roller conveyor with photoeye sensors. The sensor signals the erector to stop when accumulated cases reach a set count, preventing case buildup that jams the packer infeed. Case spacing on this conveyor matches the packer's loading cycle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CASE PACKING METHODS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="packing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Packing Methods</div>
+        <h2 id="packing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case Packing <span class="text-accent">Methods</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Drop-Pack (Vertical) Case Packing</h3>
+          <p>
+            Drop-pack case packers collate product on a conveyor above the case, then drop the product group vertically into an open-top case positioned below. The product collating conveyor uses <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning and grouping</a> mechanisms to form the case pattern (e.g., 4x3 or 6x4). A servo-driven bucket or flight system partitions product into groups. The case indexes under the loading station, the loading head descends to place product, and the loaded case advances to sealing.
+          </p>
+          <p>
+            Drop-pack suits bottles, cans, jars, and rigid containers that withstand the vertical drop without damage. Typical speeds: 10-40 CPM. Cushioned landing mechanisms (foam pads, air cylinders) soften the drop for fragile items.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Wrap-Around Case Packing</h3>
+          <p>
+            Wrap-around packers form the case around a collated product group. A flat corrugated blank wraps around the product — bottom first, then sides, then top — creating a tightly fitting case with minimal void space. The wrapping motion uses mechanical plows and servo-controlled folding arms.
+          </p>
+          <p>
+            Wrap-around packing uses less corrugated material than pre-erected cases (no overlapping flaps). The tighter fit protects product better during shipping and reduces dunnage costs. However, products must be stable enough to hold their collated pattern during the wrapping motion. Wrap-around suits multipacks of bottles, cans, cartons, and pouches. Typical speeds: 15-60 CPM.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Robotic Case Packing</h3>
+          <p>
+            <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">Robotic case packers</a> use delta robots, articulated arms, or gantry systems to pick products from a conveyor and place them into cases. Robotic packing handles the widest range of product types, sizes, and case patterns — recipe-based changeover adjusts pick patterns, place coordinates, and speed. See our dedicated <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">robotic case packing guide</a> for detailed coverage.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Side-Load Case Packing</h3>
+          <p>
+            Side-load packers push product horizontally into an open-end case. A collating conveyor groups products, and a pusher mechanism slides the group into the case from the side. Side-load suits cartons, trays, and flat packages. The product conveyor runs parallel to the case conveyor, and the loading mechanism transfers product at right angles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRODUCT COLLATING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="collate-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Collating</div>
+        <h2 id="collate-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product <span class="text-accent">Collating Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Product collating conveyors arrange individual products or packages into the case pattern before loading. A case holding 24 bottles in a 4x6 pattern needs the collating conveyor to form 4 lanes of 6 bottles each — precisely spaced and aligned. This is the critical conveyor between the primary packaging line and the case packer.
+          </p>
+          <p>
+            Collating methods include:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Lane dividers:</strong> Guide rails split a single product stream into multiple parallel lanes. Products fill lanes sequentially until the case count is reached. Simple and low cost. Limited to uniform, round products. See <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating and laning</a> for details.</li>
+            <li><strong class="text-ink">Servo-driven grouping:</strong> Servo belts with flights or pushers separate and group products at precise intervals. Handles variable product sizes through recipe changes. Higher cost but maximum flexibility.</li>
+            <li><strong class="text-ink">Robot-based collating:</strong> Delta robots pick individual products and place them into the case pattern on a staging conveyor. Handles mixed products, random orientation, and complex patterns. Highest cost but unlimited flexibility.</li>
+          </ul>
+          <p>
+            The collating conveyor must match the case packer's cycle rate. If the packer loads one case every 3 seconds (20 CPM), the collating conveyor must form a complete pattern every 3 seconds. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> upstream buffer product when the packer stops for case changeover or jam clearing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CASE SEALERS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="sealer-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Case Sealing</div>
+        <h2 id="sealer-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case <span class="text-accent">Sealers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Case sealers close and seal loaded cases using tape, hot-melt glue, or staples. The sealer integrates with the case conveyor — the loaded case enters the sealer on powered rollers or belt, the top flaps close (gravity, plows, or pneumatic arms), adhesive applies, and the sealed case exits.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Tape sealers ($):</strong> Apply pressure-sensitive tape to the top and bottom center seam. Uniform-size sealers (fixed width and height) cost the least. Random-size sealers (auto-adjusting) handle multiple case sizes without manual changeover. Loveshaw and 3M-Matic supply tape sealers. <!-- VERIFY: Current 3M-Matic branding --></li>
+            <li><strong class="text-ink">Hot-melt sealers ($$):</strong> Apply hot-melt adhesive to flaps and compress. Produces a tamper-evident seal and a cleaner appearance than tape. Required for club store (Costco, Sam's Club) shipments that prohibit tape. Nordson supplies hot-melt application equipment.</li>
+            <li><strong class="text-ink">Staple closers ($$):</strong> Wire stitching through corrugated flaps. Used for heavy-duty cases (meat, produce) where tape adhesion fails in cold or wet environments.</li>
+          </ul>
+          <p>
+            Case sealer throughput must match or exceed the case packer output. A 30 CPM case packer needs a sealer capable of 30+ CPM. Sealer belt speed typically runs 80-150 FPM. Photoeye sensors at the sealer infeed detect case arrival and trigger the sealing cycle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CASE TRANSPORT ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="transport-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Case Transport</div>
+        <h2 id="transport-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case Transport <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Case transport conveyors move sealed cases from the sealer to palletizing, labeling, checkweighing, or shipping. These conveyors handle case weights from 5 lb (lightweight consumer goods) to 80+ lb (heavy industrial parts). Conveyor type selection depends on case weight, speed, and routing complexity.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink"><a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller</a> ($$):</strong> Standard for moderate case loads (10-50 lb) at 50-150 FPM. O-ring or poly-V belt drives rollers. Quiet, energy-efficient, and low maintenance. Hytrol and TGW supply high-volume BDLR case conveyors.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Chain-driven live roller (CDLR)</a> ($$$):</strong> For heavy cases (40-80+ lb). Roller chain drives each roller. Handles impact loading from case packers and accumulation pressure from palletizer staging.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR (motor-driven roller)</a> ($$$):</strong> Zero-pressure accumulation for case staging before palletizer. Each zone independently controlled. Energy-efficient — zones run only when product is present. Preferred for modern <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse and distribution</a> systems.</li>
+          </ul>
+          <p>
+            Routing conveyors use <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">right-angle transfers</a>, diverters, and merge conveyors to direct cases from multiple packing lines to a central palletizer or shipping area. For budgeting, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Case Packing Methods <span class="text-accent">Compared</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Method</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed (CPM)</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Changeover</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Drop-pack</td>
+                <td class="py-4 pr-4 font-mono text-sm">10-40</td>
+                <td class="py-4 pr-4">Rigid bottles, cans, jars</td>
+                <td class="py-4 pr-4">Mechanical (15-30 min)</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Wrap-around</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-60</td>
+                <td class="py-4 pr-4">Multipacks, stable groups</td>
+                <td class="py-4 pr-4">Recipe + blank change</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Side-load</td>
+                <td class="py-4 pr-4 font-mono text-sm">10-30</td>
+                <td class="py-4 pr-4">Cartons, trays, flat items</td>
+                <td class="py-4 pr-4">Mechanical (15-30 min)</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Robotic</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-60+</td>
+                <td class="py-4 pr-4">Any shape, mixed products</td>
+                <td class="py-4 pr-4">Recipe (1-2 min)</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">CPM = cases per minute. Speeds are typical ranges for single-machine systems.</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a case packing conveyor system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A case packing conveyor system integrates case erectors, product collating conveyors, case packers, case sealers, and case transport conveyors into a unified end-of-line system. The conveyor connects each machine and buffers product between operations.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Drop-pack vs. wrap-around case packing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Drop-pack drops product vertically into pre-erected cases — suits rigid bottles and cans. Wrap-around forms the case around the product group — uses less corrugated, fits tighter, but requires stable product. See also: <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">robotic case packing</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyor types connect packer to palletizer?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven live roller</a>, <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a>, or <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> handle case weights of 10-60+ lb at 50-150 FPM with accumulation zones for palletizer staging.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast do case packing lines run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>5-10 CPM for manual-assist, 15-30 CPM for mid-range systems, 30-60+ CPM for high-speed robotic or continuous-motion packers. The conveyor system must match packer output while providing accumulation for downstream equipment.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

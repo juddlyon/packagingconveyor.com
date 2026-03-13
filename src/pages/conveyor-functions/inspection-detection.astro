@@ -1,0 +1,375 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Inspection & Detection", "item": "https://packagingconveyor.com/conveyor-functions/inspection-detection/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Metal Detectors & Inspection Systems for Conveyor Lines",
+  "description": "Complete guide to conveyor-mounted inspection systems — metal detectors, X-ray inspection, checkweighers, and vision systems for packaging line quality assurance and food safety.",
+  "url": "https://packagingconveyor.com/conveyor-functions/inspection-detection/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What inspection systems are used on packaging conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Four primary inspection systems operate on packaging conveyors: (1) Metal detectors scan for ferrous, non-ferrous, and stainless steel contamination. (2) X-ray inspection detects metal, glass, stone, bone, and dense plastic contaminants plus performs fill level and component counting. (3) Checkweighers weigh every product in motion, rejecting underweight and overweight units. (4) Vision inspection systems check label presence/accuracy, seal integrity, fill level, cap presence, and cosmetic defects. Most packaging lines deploy two or more of these systems at different points." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a metal detector and X-ray inspection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Metal detectors use electromagnetic fields to detect metallic contamination only — ferrous metals, non-ferrous metals (aluminum, copper), and stainless steel. X-ray systems use radiation to detect any material denser than the product — including metal, glass, stone, bone, ceramic, and dense plastics. X-ray also performs mass estimation, component counting, and fill level checking. Metal detectors cost less ($ to $$), detect smaller metal fragments, and require no radiation safety measures. X-ray systems cost more ($$$ to $$$$) but detect a wider range of contaminants." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should inspection systems be placed on a packaging line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Optimal placement depends on the contaminant type and detection sensitivity. Metal detectors perform best on individual products before case packing — smaller apertures detect smaller metal fragments. X-ray can inspect through cases. Checkweighers go after filling and before case packing. Vision inspection goes after labeling and sealing. Best practice is to place the final metal detector or X-ray as the last inspection point before palletizing, ensuring no downstream contamination enters the finished case." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do conveyor inspection systems require integrated reject mechanisms?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inspection system that identifies defects must have an integrated or immediately downstream reject mechanism to remove defective product from the line. A metal detector that finds contamination but cannot reject the product provides no safety benefit. Most inspection system manufacturers (Mettler-Toledo, Loma Systems, Fortress Technology, Ishida) supply integrated conveyor-reject-inspection units as complete systems. Reject confirmation sensors verify that rejected product actually left the conveyor." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Metal Detectors & Inspection Systems for Conveyors | PackagingConveyor.com"
+  description="Complete guide to conveyor inspection systems — metal detectors, X-ray, checkweighers, and vision for packaging line quality assurance. Placement, integration, and reject system requirements."
+  canonical="https://packagingconveyor.com/conveyor-functions/inspection-detection/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Inspection & Detection</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Metal Detectors & <span class="text-accent-bright">Inspection</span> Systems
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor-mounted inspection systems scan every product on the packaging line for contaminants, weight deviations, label defects, and package integrity failures — then trigger <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject mechanisms</a> to remove non-conforming product before it reaches the consumer. The four primary inspection technologies are metal detectors, X-ray systems, checkweighers, and vision inspection. Mettler-Toledo, Loma Systems, Fortress Technology, Ishida, Eriez, and Cognex manufacture inspection systems with integrated conveyor and reject hardware for food, pharmaceutical, and consumer goods packaging lines.
+        </p>
+      </div>
+    </section>
+
+    <!-- METAL DETECTION -->
+    <section class="py-20 bg-surface" aria-labelledby="metal-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Metal Detection</div>
+        <h2 id="metal-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Metal Detectors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyor metal detectors pass product through a balanced coil aperture that generates an electromagnetic field. Metal contamination — ferrous, non-ferrous, or stainless steel — disturbs the field, triggering a detection signal. The detector sends a reject command to the downstream reject mechanism after calculating the delay for product travel from the aperture to the reject point.
+          </p>
+          <p>
+            Detection sensitivity depends on aperture size, product effect (the electromagnetic signal the product itself generates), and contaminant type. Ferrous metals are easiest to detect — fragments as small as 0.5mm in diameter in non-conductive products. Non-ferrous metals (aluminum, copper) require 1.0-1.5mm minimum. Stainless steel 316 is the most difficult — 1.5-2.5mm minimum for reliable detection. Wet, salty, or conductive products (fresh meat, cheese, salty snacks) generate high product effect that masks small contaminant signals, requiring advanced multi-frequency or multi-simultaneous-frequency (MSF) detectors.
+          </p>
+          <p>
+            Mettler-Toledo's Profile Advantage, Loma Systems' IQ4 series, and Fortress Technology's Interceptor line represent current multi-frequency metal detection technology for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging lines</a>. These systems automatically adjust frequency and sensitivity based on product characteristics, reducing false rejects while maintaining detection performance.
+          </p>
+          <!-- VERIFY: Mettler-Toledo Profile Advantage current model designation and MSF capability -->
+          <p>
+            Metal detector conveyor integration requires a metal-free zone around the aperture — no metal conveyor components within the aperture area. The conveyor belt uses non-metallic splices (sewn or plastic pin). The conveyor frame transitions from steel to plastic or stainless steel through the detection zone. Most inspection manufacturers supply the conveyor section as part of the integrated metal detector system, ensuring proper metal-free zone design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- X-RAY INSPECTION -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="xray-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">X-Ray Inspection</div>
+        <h2 id="xray-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          X-Ray <span class="text-accent">Inspection Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            X-ray inspection systems use low-energy X-ray beams to create a density image of every product on the conveyor. The X-ray image reveals contaminants that differ in density from the product — metal, glass, stone, bone, ceramic, dense plastics, and rubber. Software algorithms analyze the image in real time (5-20ms per product) and trigger rejection when a contaminant is detected.
+          </p>
+          <p>
+            X-ray systems detect contaminant types that metal detectors miss. Glass fragments in glass jars, stone chips in grain products, bone fragments in meat, and rubber gasket pieces in sauced products are invisible to metal detectors but visible on X-ray. X-ray systems also perform secondary inspection functions — fill level verification, missing component detection (e.g., a missing prize in a cereal box), mass estimation, and seal integrity checking.
+          </p>
+          <p>
+            Mettler-Toledo, Ishida, Eagle Product Inspection (part of the Mettler-Toledo group), and Eriez manufacture X-ray inspection systems for packaging conveyor lines. Systems range from compact single-beam units for individual product inspection to dual-beam and side-shoot configurations for detecting contaminants in tall or irregularly shaped products.
+          </p>
+          <!-- VERIFY: Eagle Product Inspection current ownership structure (Mettler-Toledo acquisition) -->
+          <p>
+            X-ray systems require radiation safety compliance — shielding, interlocks, warning labels, and periodic radiation surveys. Modern food-grade X-ray systems are fully shielded and emit no measurable radiation outside the cabinet. The product receives a dose far below any regulatory limit. However, facility safety officers must register X-ray equipment and maintain inspection records per state and federal radiation safety regulations.
+          </p>
+          <p>
+            Relative cost for X-ray systems is $$$ to $$$$ — significantly more than metal detectors ($ to $$). The higher cost is justified when the contamination risk includes non-metallic foreign objects or when secondary inspection functions (fill level, component counting) replace separate inspection stations. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for inspection system cost factors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKWEIGHERS -->
+    <section class="py-20 bg-surface" aria-labelledby="checkweigh-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Checkweighers</div>
+        <h2 id="checkweigh-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          In-Motion <span class="text-accent">Checkweighers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Checkweighers weigh every product in motion on the conveyor without stopping the line. A precision load cell under a short conveyor section captures the product weight as it crosses the weigh zone. Products outside the target weight range (underweight or overweight) trigger a reject signal. Checkweighers verify fill accuracy, detect missing components, and ensure regulatory weight compliance (NIST Handbook 133, EU Prepackages Directive).
+          </p>
+          <p>
+            Checkweigher accuracy depends on product speed, vibration isolation, and weigh zone length. Typical accuracy is &plusmn;0.1g to &plusmn;1g depending on product weight and belt speed. Higher speeds reduce weighing time per product, decreasing accuracy. The weigh zone must be long enough for the product to settle on the load cell — typically 1.5 to 2 times the product length. Products must arrive with controlled spacing — only one product on the weigh section at a time. An <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> or speed-up belt upstream creates the required gap.
+          </p>
+          <p>
+            Mettler-Toledo, Ishida, Wipotec-OCS, and Minebea Intec manufacture high-speed checkweighers with integrated conveyor and reject systems. Throughput ranges from 50 to 600+ products per minute depending on product size and weight range. High-speed pharmaceutical checkweighers (Wipotec, Mettler-Toledo) verify individual blister pack weights at 400+ per minute with accuracy of &plusmn;0.05g.
+          </p>
+          <!-- VERIFY: Wipotec-OCS high-speed pharmaceutical checkweigher accuracy and throughput specs -->
+          <p>
+            Checkweighers integrate with upstream filling equipment through feedback control. The checkweigher's statistical weight data feeds back to the filler's PLC, allowing automatic fill weight adjustment to maintain target weight and minimize overfill giveaway. A filler consistently producing packages 2g heavy wastes product worth thousands of dollars per shift — checkweigher feedback eliminates this giveaway.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION INSPECTION -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="vision-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Vision Inspection</div>
+        <h2 id="vision-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vision <span class="text-accent">Inspection Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Vision inspection systems use industrial cameras and image processing software to inspect product appearance, label accuracy, package integrity, and dimensional conformance at line speed. A camera captures an image of each product as it passes a fixed position on the conveyor. The software analyzes the image against trained criteria and sends a pass/fail signal to the reject controller within 5-50ms.
+          </p>
+          <p>
+            Common vision inspection checks on packaging conveyors include:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Label presence and position:</strong> Confirms a label exists and is positioned within tolerance. Detects missing labels, skewed labels, and wrinkled labels.</li>
+            <li><strong class="text-ink">Label content verification:</strong> OCR reads text on labels (lot codes, date codes, ingredient lists) and verifies correctness. Catches wrong-product labels and expired date codes.</li>
+            <li><strong class="text-ink">Barcode and 2D code readability:</strong> Scans barcodes and QR codes to verify readability and correct data. Unreadable codes cause retailer chargebacks and shipping rejections.</li>
+            <li><strong class="text-ink">Cap and seal integrity:</strong> Detects missing caps, crooked caps, broken tamper bands, and incomplete heat seals. Critical for product safety and shelf life.</li>
+            <li><strong class="text-ink">Fill level:</strong> Measures visible fill level through transparent or translucent containers. Detects underfilled and overfilled packages.</li>
+            <li><strong class="text-ink">Color and surface defects:</strong> Detects discoloration, surface damage, foreign material on the product surface, and cosmetic defects that indicate quality problems.</li>
+          </ul>
+          <p>
+            Cognex, Keyence, Omron (Microscan), and SICK manufacture vision systems for packaging conveyor applications. Cognex's In-Sight series and Keyence's CV-X series are widely deployed on food and pharmaceutical packaging lines. Smart cameras integrate the camera, processor, and I/O in a single unit, simplifying installation on existing conveyors.
+          </p>
+          <p>
+            Vision system integration requires controlled lighting (LED bar lights, dome lights, or backlight panels), a fixed camera mount position relative to the conveyor, and a product trigger sensor that tells the camera when to capture. Product tracking from the camera position to the <a href="/conveyor-functions/pusher-diverter/" class="text-accent hover:text-accent-hover font-semibold">reject mechanism</a> uses an encoder on the conveyor to calculate when the defective product reaches the reject point.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPECTION LINE PLACEMENT -->
+    <section class="py-20 bg-surface" aria-labelledby="placement-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Line Placement</div>
+        <h2 id="placement-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Where to Place <span class="text-accent">Inspection Systems</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Inspection system placement follows two principles: <strong class="text-ink">inspect as early as possible</strong> (to prevent defective product from wasting downstream processing) and <strong class="text-ink">inspect as late as possible</strong> (to catch contamination introduced by downstream equipment). Best practice uses both — early inspection catches incoming defects, final inspection catches everything.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">After filling, before sealing:</strong> Checkweigher verifies fill weight. Rejects underweight and overweight before the package is sealed, allowing product rework (refill underweight, reduce overfill).</li>
+            <li><strong class="text-ink">After labeling:</strong> Vision system verifies label presence, position, content, and barcode readability. Rejects mislabeled product before case packing.</li>
+            <li><strong class="text-ink">Before case packing:</strong> Metal detector scans individual products at maximum sensitivity (small aperture). Individual product inspection detects smaller contaminants than case-level inspection.</li>
+            <li><strong class="text-ink">After case packing (final inspection):</strong> X-ray or metal detector scans the sealed case as the last check before palletizing. Catches contamination introduced during case packing. Some retailers require this final inspection point specifically.</li>
+          </ul>
+          <p>
+            Every inspection point requires a <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject system</a> immediately downstream. The conveyor design at each inspection station must provide controlled product spacing, consistent belt speed, and adequate clearance for the reject mechanism. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> upstream of inspection stations ensure steady product flow for reliable detection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONVEYOR REQUIREMENTS -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="conveyor-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveyor Design</div>
+        <h2 id="conveyor-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Requirements</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Inspection systems impose specific requirements on the conveyor sections that carry product through the inspection zone:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Consistent speed:</strong> VFD-controlled motors with encoder feedback maintain belt speed within &plusmn;1%. Speed variation causes checkweigher inaccuracy and reject timing errors. The conveyor speed signal feeds the inspection system's product tracking calculation.</li>
+            <li><strong class="text-ink">Product spacing:</strong> Checkweighers require one product on the weigh cell at a time. Metal detectors and X-ray systems need sufficient gap between products to assign reject signals to individual products. Minimum spacing depends on the inspection system — typically 1-2 product lengths between products.</li>
+            <li><strong class="text-ink">Vibration isolation:</strong> Checkweighers require vibration-free mounting. The weigh conveyor section isolates from the main conveyor frame using rubber mounts or spring isolators. Adjacent equipment vibration (compressors, other conveyors) transmits through the floor and degrades weighing accuracy.</li>
+            <li><strong class="text-ink">Metal-free zones:</strong> Metal detector conveyor sections eliminate metal from the detection zone — non-metallic belt splices, plastic idler rollers, and stainless steel or plastic frame components within the aperture. The metal-free zone extends 12-18 inches on each side of the aperture.</li>
+            <li><strong class="text-ink">Sanitary construction:</strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Food-grade inspection conveyors</a> use stainless steel frames, FDA-compliant belts, IP69K motors, and open-frame designs for washdown cleaning. The inspection equipment itself must match the environmental rating.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Inspection System <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">System</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Detects</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Key Manufacturers</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Metal detector</td>
+                <td class="py-4 pr-4">Ferrous, non-ferrous, SS</td>
+                <td class="py-4 pr-4 font-mono text-sm">Up to 500+ FPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">$-$$</td>
+                <td class="py-4">Mettler-Toledo, Loma, Fortress</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">X-ray</td>
+                <td class="py-4 pr-4">Metal, glass, stone, bone</td>
+                <td class="py-4 pr-4 font-mono text-sm">Up to 300+ FPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$-$$$$</td>
+                <td class="py-4">Mettler-Toledo, Ishida, Eriez</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Checkweigher</td>
+                <td class="py-4 pr-4">Weight deviation</td>
+                <td class="py-4 pr-4 font-mono text-sm">50-600+ UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Mettler-Toledo, Ishida, Wipotec</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Vision</td>
+                <td class="py-4 pr-4">Labels, seals, codes, cosmetic</td>
+                <td class="py-4 pr-4 font-mono text-sm">Up to 1000+ UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Cognex, Keyence, Omron</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">UPM = units per minute. Cost: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Guides</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Removing detected defects</p>
+          </a>
+          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
+            <p class="text-base text-white/60">Product spacing for inspection</p>
+          </a>
+          <a href="/resources/automated-conveyor-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Automated Systems</h3>
+            <p class="text-base text-white/60">Inspection in automated lines</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What inspection systems are used on packaging conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Four primary systems: metal detectors (ferrous/non-ferrous/SS contamination), X-ray (metal, glass, stone, bone), checkweighers (weight verification), and vision (labels, seals, codes, cosmetic). Most packaging lines deploy two or more at different inspection points.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Metal detector vs. X-ray — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Metal detectors find metallic contamination only using electromagnetic fields. X-ray detects any dense foreign object — metal, glass, stone, bone, ceramic. Metal detectors cost less and detect smaller metal fragments. X-ray costs more but finds non-metallic contaminants and performs secondary checks (fill level, component counting).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Where should inspection systems go on the line?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Checkweighers after filling. Vision after labeling. Metal detectors before case packing (individual product) and after case packing (final check). X-ray as the final inspection point before palletizing. Each inspection point needs a downstream <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject mechanism</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Do inspection systems need reject mechanisms?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Yes. Every inspection system detecting defects must have a reject mechanism to remove non-conforming product. A detector without a reject provides no safety benefit. Most manufacturers supply integrated conveyor-reject-inspection systems with reject confirmation sensors to verify successful removal.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

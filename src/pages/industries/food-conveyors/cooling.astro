@@ -1,0 +1,389 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Food-Grade Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Cooling Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/cooling/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a cooling conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A cooling conveyor transports hot or warm products through a cooling zone — ambient air, forced air, or refrigerated — to reduce product temperature before packaging, further processing, or storage. Cooling conveyors use mesh belts, modular plastic belts, or spiral belt systems that allow air circulation around the product. Common in bakery, confectionery, meat, and industrial applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a spiral cooler and a straight-line cooler?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A spiral cooler stacks belt tiers vertically in a helical tower, providing 30-60 minutes of cooling time in a 10-15 foot diameter footprint. A straight-line cooler runs product on a long horizontal belt. Spirals use 10-20x less floor space than straight-line systems for the same cooling time but cost more. Straight-line coolers are simpler, cheaper, and easier to clean." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate cooling conveyor length?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cooling conveyor length = belt speed (FPM) × required cooling time (minutes). Required cooling time depends on product mass, initial temperature, target temperature, and cooling method (ambient, forced-air, or refrigerated). Forced-air cooling reduces required time by 2-3x compared to ambient. Consult a heat transfer engineer for precise calculations based on your product's thermal properties." }
+    },
+    {
+      "@type": "Question",
+      "name": "What belt types are used for cooling conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cooling conveyors primarily use wire mesh belts (stainless or carbon steel) for maximum airflow, modular plastic belts (perforated for air passage), and flat wire compound belts for heavy products. Mesh aperture size affects both airflow and product support — smaller products need finer mesh. Food-contact belts must be FDA-compliant." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cooling Conveyors: Ambient, Forced-Air & Spiral Cooling Systems",
+  "description": "Technical guide to cooling conveyors — ambient cooling, forced-air tunnels, spiral coolers, mesh-belt systems, and refrigerated cooling conveyors for bakery, confectionery, meat, and industrial applications.",
+  "url": "https://packagingconveyor.com/industries/food-conveyors/cooling/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Cooling Conveyors: Ambient, Forced-Air & Spiral Cooling | PackagingConveyor.com"
+  description="Technical guide to cooling conveyors — ambient, forced-air, and spiral cooling systems with mesh belts for bakery, confectionery, meat, and industrial product cooling before packaging."
+  canonical="https://packagingconveyor.com/industries/food-conveyors/cooling/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/food-conveyors/" class="hover:text-white/70">Food Conveyors</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Cooling Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Food Conveyors</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Cooling <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A cooling conveyor transports hot or warm products through a cooling zone to reduce temperature before packaging, coating, or further processing. Cooling methods include ambient (natural convection), forced-air (fan-driven airflow across the belt), refrigerated tunnel (chilled air at 33-40 F), and cryogenic (liquid nitrogen or CO2 spray). Spiral cooling conveyors compact 200+ feet of cooling length into a vertical tower occupying 100-150 square feet of floor space. Manufacturers like Ashworth, Intralox, Wire Belt Company, and Linde (cryogenic) supply cooling conveyor belt systems and complete cooling solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY COOLING MATTERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Fundamentals</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why Cooling Before <span class="text-accent">Packaging Matters</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Packaging warm product traps moisture inside the package. Trapped moisture condenses on the inside of the film as the product cools, creating visible fog (consumer complaint) and a moist environment that promotes mold growth (food safety hazard and reduced shelf life). Each product has a target packaging temperature — exceed it, and you get quality and safety problems.
+          </p>
+          <p>
+            Target packaging temperatures vary by product:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Bread:</strong> 95-100 F (35-38 C) — below the dew point inside the bag to prevent condensation</li>
+            <li><strong class="text-ink">Cookies and crackers:</strong> 80-90 F (27-32 C) — prevents soft texture and moisture migration in sealed packages</li>
+            <li><strong class="text-ink">Confectionery (chocolate):</strong> 60-65 F (16-18 C) — prevents bloom and ensures proper snap</li>
+            <li><strong class="text-ink">Cooked meat:</strong> Below 40 F (4 C) — food safety requirement per USDA cooling guidelines</li>
+            <li><strong class="text-ink">Industrial parts:</strong> Varies by downstream process — coating, assembly, or inspection temperature requirements</li>
+          </ul>
+          <!-- VERIFY: USDA cooked meat cooling requirements and temperature targets -->
+          <p>
+            The cooling conveyor bridges the gap between the process (oven, fryer, cooker, molder) and the packaging line. Insufficient cooling time or capacity becomes a production bottleneck — the cooling conveyor sets the maximum line speed when it is the limiting factor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COOLING METHODS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="methods-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cooling Methods</div>
+        <h2 id="methods-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Ambient, Forced-Air & <span class="text-accent">Refrigerated Cooling</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Ambient Cooling</h3>
+          <p>
+            Ambient cooling relies on natural convection — room-temperature air passively removes heat from the product surface. No fans, no refrigeration, no energy cost beyond the conveyor drive. Ambient cooling works for products with low thermal mass (thin cookies, crackers, flatbreads) and long available cooling time. The limiting factor is the product's surface-to-volume ratio — thin products cool quickly by convection; thick, dense products cool slowly.
+          </p>
+          <p>
+            Ambient cooling conveyors use open mesh belts that allow air circulation from below. Belt speed is slow — 3 to 10 FPM — to maximize residence time. For <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery applications</a>, ambient spirals preserve crust moisture on bread better than forced-air systems.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Forced-Air Cooling</h3>
+          <p>
+            Forced-air cooling uses fans or blowers to push conditioned air across the product on the belt. Air velocity across the product surface increases the convective heat transfer coefficient by 2-5x compared to ambient, reducing required cooling time (and conveyor length) proportionally. Air can be room temperature, conditioned (dehumidified), or chilled.
+          </p>
+          <p>
+            Forced-air cooling tunnels enclose the conveyor in an insulated housing with air handling units. Air enters through distribution plenums, flows across the belt tiers (cross-flow or counter-flow pattern), and exits through return ducts. Cross-flow directs air perpendicular to product travel. Counter-flow blows air against the direction of travel, exposing the coolest product to the coldest air for maximum temperature differential.
+          </p>
+          <p>
+            Cookie and cracker lines use forced-air cooling to accelerate cooling and free floor space. However, excessive air velocity dries the product surface — bakeries balance airflow rate against moisture loss. Adjustable fan speed (via VFD) lets operators tune airflow for different products.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Refrigerated Cooling</h3>
+          <p>
+            Refrigerated cooling tunnels use mechanical refrigeration (compressor-driven) to cool air to 33-40 F before it contacts the product. Required for products needing temperatures below ambient — chocolate confections, cooked meats, cheese, and temperature-sensitive pharmaceuticals. Refrigerated tunnels cost significantly more to purchase and operate than ambient or forced-air systems due to the refrigeration plant, insulated enclosure, and energy consumption.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Cryogenic Cooling</h3>
+          <p>
+            Cryogenic cooling sprays liquid nitrogen (LN2) or liquid carbon dioxide (CO2) directly onto product on the conveyor belt. Surface temperatures drop to -100 F or below within seconds. Cryogenic cooling suits products requiring rapid crust-freezing (IQF shrimp, berries, meat patties), chocolate enrobing (rapid set), and applications where floor space for conventional cooling is unavailable. Linde, Air Liquide, and Messer supply cryogenic cooling tunnels with integrated conveyor systems. <!-- VERIFY: Current cryogenic tunnel manufacturers and product names -->
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPIRAL COOLERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="spiral-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Spiral Systems</div>
+        <h2 id="spiral-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Spiral <span class="text-accent">Cooling Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Spiral coolers stack a continuous belt in a helical path inside a tower. Product rides the belt upward or downward through multiple tiers. A 10-foot-diameter, 15-foot-tall spiral provides 300+ feet of effective belt length in a 100-square-foot floor footprint — a 10:1 floor space advantage over straight-line coolers.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Self-Stacking vs. Drum-Driven Spirals</h3>
+          <p>
+            Two spiral belt technologies dominate the market:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Self-stacking (overdrive):</strong> The belt layers stack on top of each other, supported by the belt's own structure (collapsing links or overlay bars). No intermediate support structure inside the spiral. Self-stacking belts handle heavier loads and more tiers. Ashworth and Intralox manufacture self-stacking spiral belt systems.</li>
+            <li><strong class="text-ink">Drum-driven:</strong> A central rotating drum drives the belt through friction. The drum supports the belt from the inside. Drum-driven spirals provide smoother, more consistent belt tension and gentler product handling. Preferred for fragile products like decorated cakes, open-top cups, and unstable containers.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Spiral Cooler Sizing</h3>
+          <p>
+            Spiral cooler size depends on four factors: required cooling time, belt width, belt speed, and product loading density. A wider belt handles more product per tier. More tiers (taller tower) provide longer cooling time. Belt speed determines throughput — faster speeds mean shorter residence time per product but higher products-per-minute capacity.
+          </p>
+          <p>
+            Typical spiral cooler specifications for bakery applications: 24 to 48 inch belt width, 10 to 30 tiers, 8 to 15 foot tower diameter, and 2 to 8 FPM belt speed. For a complete overview of <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery conveyor systems</a>, see our dedicated guide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MESH BELT TYPES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="mesh-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Selection</div>
+        <h2 id="mesh-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Mesh Belt Types for <span class="text-accent">Cooling</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Cooling conveyor belt selection balances airflow (open area), product support (mesh size), strength (load capacity), and cleanability. The belt is the primary heat transfer surface — its open area directly affects cooling efficiency.
+          </p>
+        </div>
+        <div class="overflow-x-auto -mx-4 px-4 mt-8">
+          <table class="w-full text-left border-collapse min-w-[750px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Open Area</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Temp Rating</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Balanced weave</td>
+                <td class="py-4 pr-4 font-mono text-sm">30-50%</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 1800 F</td>
+                <td class="py-4 pr-4">General cooling, baking</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Flat wire (compound)</td>
+                <td class="py-4 pr-4 font-mono text-sm">20-40%</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 1200 F</td>
+                <td class="py-4 pr-4">Heavy products, flat surface</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Honeycomb</td>
+                <td class="py-4 pr-4 font-mono text-sm">40-60%</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 900 F</td>
+                <td class="py-4 pr-4">Max airflow, light products</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Modular plastic (perforated)</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-30%</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 250 F</td>
+                <td class="py-4 pr-4">Low-temp cooling, easy cleaning</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Spiral (self-stacking)</td>
+                <td class="py-4 pr-4 font-mono text-sm">25-45%</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 500 F</td>
+                <td class="py-4 pr-4">Spiral towers, compact cooling</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- VERIFY: Belt open area percentages and temperature ratings per manufacturer specs -->
+        <p class="text-sm text-ink-muted mt-4">Open area and temperature specifications vary by manufacturer and wire gauge. Contact belt manufacturers for application-specific recommendations.</p>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Cooling Conveyor <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Bakery</h3>
+          <p>
+            <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">Bakery cooling</a> is the largest application for cooling conveyors. Bread exits the oven at 200+ F and must cool to 95-100 F before slicing and bagging. Cookies cool from 300 F to 80-90 F before wrapping. <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">Cookie and cracker lines</a> need gentle handling during cooling to prevent breakage.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Confectionery</h3>
+          <p>
+            Chocolate-enrobed products (bars, nuts, pretzels) pass through a cooling tunnel to set the chocolate coating. The tunnel maintains 55-65 F with controlled humidity to prevent bloom (white discoloration from fat or sugar crystal migration). Belt speed and tunnel length provide 5-15 minutes of cooling time. Cooling tunnels for confectionery use stainless steel mesh belts and <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary frame construction</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Meat and Poultry</h3>
+          <p>
+            Cooked meat products must cool from cooking temperature (165+ F) to below 40 F within USDA-mandated time limits to prevent bacterial growth. Spiral coolers with refrigerated air handling achieve rapid cooling in a compact footprint. Stainless steel construction and IP69K-rated components handle the daily washdown required in meat plants.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Industrial and Non-Food</h3>
+          <p>
+            Cooling conveyors serve non-food applications including plastic part cooling after injection molding, metal part cooling after heat treatment, rubber product cooling after vulcanization, and glass cooling after forming. These applications use carbon steel mesh belts (no food-grade requirement) and ambient or forced-air cooling. Part weight and temperature determine belt construction and support structure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SIZING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="sizing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Engineering</div>
+        <h2 id="sizing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Sizing a <span class="text-accent">Cooling Conveyor</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Cooling conveyor sizing starts with required cooling time — the time needed to reduce product from inlet temperature to target temperature. Cooling time depends on product thermal properties (mass, specific heat, thermal conductivity, surface area), cooling medium temperature, and air velocity.
+          </p>
+          <p>
+            A simplified sizing approach:
+          </p>
+          <ol class="list-decimal list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Determine required cooling time</strong> from product testing or heat transfer calculations. For bakery products, empirical data from similar products is the most reliable source.</li>
+            <li><strong class="text-ink">Calculate belt length</strong> = belt speed (FPM) x cooling time (minutes). For spirals, this is the total belt path length inside the tower.</li>
+            <li><strong class="text-ink">Determine belt width</strong> from product width, number of lanes, and edge clearance. Minimum 2 inches of edge clearance per side.</li>
+            <li><strong class="text-ink">Calculate throughput</strong> = products per belt foot x belt speed (FPM). Verify that throughput meets production requirements.</li>
+            <li><strong class="text-ink">Add 15-20% safety factor</strong> for product variation, ambient temperature changes, and belt loading inefficiency.</li>
+          </ol>
+          <p>
+            For budgeting, straight-line ambient cooling conveyors cost $$ per linear foot. Forced-air tunnels cost $$$ due to the enclosure, air handling, and controls. Spiral coolers cost $$$$ but deliver maximum cooling capacity per square foot of floor space. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed cost factors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Pages</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/industries/food-conveyors/bakery/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Bakery Conveyors</h3>
+            <p class="text-base text-white/60">Oven bands, spirals, and packaging lines</p>
+          </a>
+          <a href="/industries/food-conveyors/sanitary/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Sanitary Conveyors</h3>
+            <p class="text-base text-white/60">IP ratings, CIP cleaning, USDA standards</p>
+          </a>
+          <a href="/conveyor-functions/product-handling/spreader/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Spreader Conveyors</h3>
+            <p class="text-base text-white/60">Even distribution for cooling and freezing</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a cooling conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A cooling conveyor transports hot or warm products through a cooling zone — ambient air, forced air, or refrigerated — to reduce temperature before packaging. Uses mesh belts for airflow. Common in <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery</a>, confectionery, meat, and industrial applications.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Spiral cooler vs. straight-line cooler?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Spirals stack belt tiers vertically, providing 30-60 minutes of cooling in a 10-15 foot footprint. Straight-line coolers run horizontally — simpler and cheaper but use 10-20x more floor space. Spirals suit medium and high-volume operations; straight-line suits small operations with available floor space.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do you calculate cooling conveyor length?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt length = belt speed (FPM) x required cooling time (minutes). Required cooling time depends on product thermal properties, cooling method, and air velocity. Forced-air reduces time by 2-3x vs. ambient. Add 15-20% safety factor.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt types are used for cooling?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Wire mesh belts (stainless or carbon steel, 30-60% open area), modular plastic (perforated, 15-30% open area), and flat wire compound belts. Mesh size must support the product while maximizing airflow. FDA-compliant materials required for food contact.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

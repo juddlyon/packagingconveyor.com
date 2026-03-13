@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Hinged Steel Belt Conveyors", "item": "https://packagingconveyor.com/conveyor-types/hinged-steel-belt/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a hinged steel belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A hinged steel belt conveyor uses interlocking steel plates connected by hinge pins to form a continuous belt. The steel plates overlap like shingles, creating a solid, rugged conveying surface that handles hot metal chips, stampings, die-cast parts, scrap, and heavy industrial debris. Hinged steel belt conveyors are the standard chip and scrap removal system for CNC machining centers, stamping presses, and metalworking operations." }
+    },
+    {
+      "@type": "Question",
+      "name": "What can a hinged steel belt conveyor handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hinged steel belt conveyors handle metal chips (turnings, swarf, borings), stamping scrap (slugs, skeletons, trim), die-cast parts, hot forgings, and heavy industrial waste. They withstand hot materials up to 900 degrees F (carbon steel belts), coolant and cutting oil exposure, sharp edges, and impact loading. Load capacities range from light chip handling to over 1,000 lbs per linear foot for heavy scrap." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a hinged steel belt differ from a wire mesh belt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hinged steel belt conveyors use solid overlapping steel plates that form a closed surface, while wire mesh belt conveyors use open-weave wire that allows airflow and drainage. Hinged steel belts handle heavier loads, sharper materials, and higher impact than wire mesh. Wire mesh belts allow heat transfer and drainage, making them better for ovens, freezers, and washing. Hinged steel belts are preferred for chip and scrap handling; wire mesh is preferred for thermal processing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What maintenance does a hinged steel belt conveyor require?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Key maintenance tasks include daily coolant/chip debris removal from the return side, weekly hinge pin and plate inspection for wear and damage, monthly chain tension checks, and quarterly drive component inspection. Coolant filtration should remove fines that accelerate hinge pin wear. Replace individual damaged plates rather than the entire belt when possible. Typical belt life is 5-15 years depending on application severity." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hinged Steel Belt Conveyors: Scrap, Chip & Stamping Handling",
+  "description": "Complete guide to hinged steel belt conveyors for metalworking: scrap handling, chip removal, stamping operations. Belt types, capacities, and heavy-duty industrial applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/hinged-steel-belt/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Hinged Steel Belt Conveyors: Scrap, Chip & Stamping Handling"
+  description="Complete guide to hinged steel belt conveyors for metalworking scrap, chip removal, and stamping operations. Belt types, load capacities, and heavy-duty industrial applications."
+  canonical="https://packagingconveyor.com/conveyor-types/hinged-steel-belt/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Hinged Steel Belt Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Hinged Steel Belt Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Hinged Steel Belt Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A hinged steel belt conveyor uses interlocking steel plates connected by hinge pins to form a continuous, rugged conveying surface for metal chips, stampings, scrap, and heavy industrial debris. The overlapping plate design creates a solid belt that withstands hot materials up to 900&deg;F, resists cutting oil and coolant, and handles sharp-edged scrap that would slice rubber or plastic belts. Hinged steel belt conveyors are the standard chip and scrap removal system in CNC machining centers, stamping presses, laser cutters, and metalworking shops worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Construction</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Hinged Steel <span class="text-accent">Belts Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Hinged steel belt construction begins with individual steel plates stamped from sheet steel (typically 10-16 gauge). Each plate has a formed hinge along one edge and a mating lip along the opposite edge. Hinge pins pass through the hinge barrels of adjacent plates, linking them into a continuous chain-like belt. The plates overlap when the belt runs on the flat carrying surface and separate slightly as the belt wraps around the head and tail sprockets.</p>
+
+        <p>The belt rides on side rails or wear strips inside a formed steel trough. Drive sprockets at the discharge end engage the hinge pins or side chains to pull the belt forward. A gravity or spring take-up at the tail end maintains belt tension. The belt's top (carrying) run transports material from the loading point to the discharge, where it wraps around the head sprocket and material falls by gravity into a bin, hopper, or secondary conveyor.</p>
+
+        <p>The return run travels below the carrying run inside the same trough. This enclosed design keeps chips, coolant, and debris contained. Some designs include a coolant collection trough beneath the return run that channels cutting fluid back to the machine's coolant tank for recirculation.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Belt Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Configurations</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Hinged Belt <span class="text-accent">Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Standard Hinged Belt</h3>
+        <p>Standard hinged belts use flat overlapping plates with simple hinge-pin connections. They handle most chip types including turnings, borings, and small stampings. Plate widths range from 6" to 48". Standard belts suit light to medium-duty applications at CNC lathes, mills, and drill presses. Mayfran, Jorgensen, and LNS manufacture standard hinged steel belt conveyors for machine tool integration.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Heavy-Duty Hinged Belt</h3>
+        <p>Heavy-duty hinged belts use thicker plates (10-12 gauge vs. 14-16 gauge standard), hardened hinge pins, and reinforced side chains. They handle large stamping scrap, die-cast runners, heavy turnings from large-diameter bar stock, and forging flash. Load capacities reach 500-1,000+ lbs per linear foot. Heavy-duty belts serve stamping press lines, large CNC turning centers, and foundry operations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Perforated Hinged Belt</h3>
+        <p>Perforated hinged belts have holes punched in each plate to allow coolant drainage while still conveying chips. The perforations let cutting fluid pass through the belt into the collection trough below rather than being carried to the discharge point. Perforated belts are standard on wet machining applications where coolant recovery is important. Perforation size must be smaller than the smallest chip to prevent fine swarf from passing through.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Magnetic Hinged Belt</h3>
+        <p>Magnetic hinged belts incorporate permanent magnets beneath the carrying surface to hold ferrous chips and small parts against the belt on incline sections. Magnets prevent fine chips from sliding backward on steep inclines and eliminate the need for <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleats</a>. Magnetic belts handle inclines up to 60 degrees for ferrous materials. They do not work with non-ferrous metals (aluminum, brass, stainless steel).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Chip Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Hinged Steel Belt</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Drag Chain / Scraper</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Auger / Screw</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Chip Types</td>
+              <td class="py-3 pr-4">All types: turnings, stringy, bushy</td>
+              <td class="py-3 pr-4">Short chips, fines, sludge</td>
+              <td class="py-3">Short chips, fines only</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Heavy Scrap</td>
+              <td class="py-3 pr-4">Yes (up to 1,000+ lbs/ft)</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Hot Material</td>
+              <td class="py-3 pr-4">Up to 900&deg;F</td>
+              <td class="py-3 pr-4">Up to 600&deg;F</td>
+              <td class="py-3">Up to 400&deg;F</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Coolant Handling</td>
+              <td class="py-3 pr-4">Good (perforated option)</td>
+              <td class="py-3 pr-4">Excellent (filtration built-in)</td>
+              <td class="py-3">Limited</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Incline Capability</td>
+              <td class="py-3 pr-4">Up to 60&deg; (magnetic)</td>
+              <td class="py-3 pr-4">Up to 45&deg;</td>
+              <td class="py-3">Vertical possible</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Cost is relative within chip/scrap conveyor category. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Hinged Steel Belt <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">CNC machine chip removal:</strong> The primary application. Hinged steel belts sit beneath CNC lathes, machining centers, and grinders to collect and convey metal chips from the cutting zone to a chip bin. The belt handles all chip morphologies: continuous turnings from lathes, broken chips from mills, and fine swarf from grinders. Mayfran, Jorgensen, LNS, and Hennig are leading chip conveyor manufacturers that integrate directly with major CNC machine brands.</p>
+
+        <p><strong class="text-ink">Stamping press scrap:</strong> Hinged steel belts remove blanking slugs, trim scrap, and skeleton scrap from stamping presses. The belt sits in a pit beneath the press or at floor level behind the press, receiving scrap as it falls from the die. Heavy-duty belts handle the impact loading of large slugs dropping from progressive and transfer dies. Multiple presses feed a common trunk-line hinged belt conveyor that delivers all scrap to a central collection point.</p>
+
+        <p><strong class="text-ink">Laser and plasma cutting:</strong> Hinged belts collect cut parts, slugs, and dross from laser cutting tables and plasma cutters. The belt handles hot dross particles and sharp cut edges without damage. Some configurations position the belt below the cutting table's slat support system to catch falling parts and scrap simultaneously.</p>
+
+        <p><strong class="text-ink">Die casting and foundry:</strong> Hinged steel belts transport hot die-cast parts, runners, gates, and flash from die-cast machines and trim presses. The belt withstands the 600-900&deg;F temperatures of freshly cast aluminum and zinc parts. Coolant spray sections along the belt path cool parts during transport.</p>
+
+        <p><strong class="text-ink">Parts transfer:</strong> Beyond scrap, hinged steel belts transport finished parts between operations in metalworking plants. The rugged steel surface handles heavy, sharp, and oily parts that would damage rubber or plastic belts. Parts ride from one machine to the next for multi-operation processing.</p>
+
+        <p><strong class="text-ink">Coolant filtration systems:</strong> Hinged steel belts integrated with coolant tanks filter chips from cutting fluid. The belt lifts chips out of the coolant while fluid drains through the perforated belt back into the clean tank. This replaces standalone coolant filtration systems on machines with moderate chip volumes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sizing & Selection -->
+  <section class="py-20 bg-surface" aria-labelledby="sizing-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specification</div>
+      <h2 id="sizing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sizing & <span class="text-accent">Selection</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Width</h3>
+        <p>Belt width must accommodate the chip discharge area of the machine tool. Standard widths: 6", 8", 10", 12", 15", 18", 24", 30", 36", and 48". For stamping press scrap, belt width must exceed the die width to catch all falling scrap. For CNC machines, the machine manufacturer's chip conveyor opening dimension determines the required belt width.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Speed</h3>
+        <p>Hinged steel belt speeds typically range from 10 to 30 FPM. Slower speeds (10-15 FPM) suit continuous chip removal where a steady trickle of chips falls onto the belt. Faster speeds (20-30 FPM) suit batch discharge from stamping presses where large volumes of scrap fall at once. Variable-speed drives allow the belt to run faster during heavy chip production and slower during light cuts.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Discharge Height</h3>
+        <p>The discharge end of the belt inclines to dump material into a collection bin. Standard discharge heights range from 30" to 60" above floor level. Higher discharge requires a steeper incline angle, which may need magnetic assist for ferrous materials or <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleated belt</a> features. Discharge height should clear the top of the collection bin plus 6-12 inches for material piling.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Material Selection</h3>
+        <p>Carbon steel plates are standard and handle most metalworking applications. Stainless steel plates (304 or 316) serve applications with corrosive coolants, stainless steel machining, or food-adjacent manufacturing. See our <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel conveyor guide</a> for alloy selection guidance. Hardened plates extend life in abrasive scrap applications but cost more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="maint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Maintenance <span class="text-accent">Guide</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Daily:</strong> Check for chip jams at the discharge point and hinge pin area. Remove stringy turnings that wrap around the head sprocket. Verify coolant drainage is unobstructed. Inspect the belt for obvious plate damage or missing plates.</p>
+
+        <p><strong class="text-ink">Weekly:</strong> Inspect hinge pins for excessive wear. Check belt tracking and alignment. Verify the take-up mechanism maintains proper tension. Clean the coolant return trough of sludge and fine chip accumulation.</p>
+
+        <p><strong class="text-ink">Monthly:</strong> Measure chain elongation to predict replacement timing. Lubricate the drive gearbox per manufacturer specifications. Inspect sprocket teeth for wear patterns that indicate misalignment. Check motor amperage against baseline to detect increasing friction or overloading.</p>
+
+        <p><strong class="text-ink">Belt replacement:</strong> Individual damaged plates can be replaced by removing the hinge pins on either side, sliding out the damaged plate, and inserting a replacement. This field-serviceable design is a major advantage over <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">wire mesh belts</a> that require full belt replacement when damaged. Full belt replacement every 5-15 years is typical depending on application severity and maintenance quality.</p>
+        <!-- VERIFY: Belt life range of 5-15 years against Mayfran/Jorgensen published data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a hinged steel belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A hinged steel belt conveyor uses interlocking steel plates connected by hinge pins to form a rugged continuous belt. The overlapping plates handle hot chips, sharp scrap, and heavy metalworking debris that would destroy rubber or plastic belts. It is the standard chip removal system for CNC machines and stamping presses.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What can a hinged steel belt conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Metal chips, turnings, stamping scrap, die-cast parts, hot forgings, and heavy industrial waste. Handles temperatures up to 900&deg;F, sharp edges, coolant exposure, and impact loading. Load capacity from light chip duty to over 1,000 lbs per linear foot for heavy stamping scrap.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does a hinged steel belt differ from wire mesh?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Hinged steel belts use solid overlapping plates (closed surface) for heavy scrap and chip handling. <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Wire mesh belts</a> use open-weave wire for airflow and drainage in ovens, freezers, and wash systems. Hinged steel handles heavier loads and sharper materials. Wire mesh handles heat transfer and drainage applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What maintenance does a hinged steel belt require?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Daily chip jam removal and drainage checks. Weekly hinge pin and plate inspection. Monthly chain tension and motor amperage checks. Individual damaged plates can be field-replaced without removing the entire belt. Typical belt life is 5-15 years depending on application severity.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/wire-mesh-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Wire Mesh Conveyors</div>
+          <p class="text-sm text-white/60">Open-weave metal belts</p>
+        </a>
+        <a href="/conveyor-types/slat-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Slat Conveyors</div>
+          <p class="text-sm text-white/60">Steel and wood slat systems</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Incline belt handling</p>
+        </a>
+        <a href="/conveyor-types/stainless-steel-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Stainless Steel</div>
+          <p class="text-sm text-white/60">304 vs 316 alloy selection</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

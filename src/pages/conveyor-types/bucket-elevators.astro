@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Bucket Elevators", "item": "https://packagingconveyor.com/conveyor-types/bucket-elevators/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a bucket elevator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A bucket elevator lifts bulk materials vertically using a series of buckets attached to a belt or chain that loops around a head (top) pulley and a boot (bottom) pulley inside an enclosed casing. Material feeds into the buckets at the boot, rides up the vertical leg, and discharges at the head by centrifugal force or gravity. Bucket elevators are the most efficient method for vertical bulk material transport, handling grain, cement, ore, chemicals, and food ingredients." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between centrifugal and continuous bucket elevators?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Centrifugal discharge elevators run at high speed and rely on centrifugal force to throw material out of the buckets as they pass over the head pulley. Buckets are spaced apart on the belt or chain. Continuous discharge elevators run at lower speed with buckets mounted back-to-back (no gaps). Material discharges by gravity as the bucket inverts over the head pulley. Centrifugal elevators handle free-flowing materials at high capacity. Continuous elevators handle fragile, sluggish, and heavy materials more gently." }
+    },
+    {
+      "@type": "Question",
+      "name": "How high can a bucket elevator lift material?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard bucket elevators lift material 20-150 feet. Large industrial elevators in grain terminals, cement plants, and mining operations reach 200+ feet. Belt-type elevators suit lifts up to 150 feet. Chain-type elevators suit lifts up to 200+ feet and handle heavier, more abrasive materials. The casing, belt/chain, and drive components scale with lift height and capacity." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bucket Elevators: Centrifugal, Continuous & Internal Discharge Systems",
+  "description": "Complete guide to bucket elevators including centrifugal discharge, continuous discharge, and internal discharge types for vertical bulk material handling in packaging and processing.",
+  "url": "https://packagingconveyor.com/conveyor-types/bucket-elevators/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Bucket Elevators: Centrifugal, Continuous & Internal Discharge"
+  description="Complete guide to bucket elevators: centrifugal discharge, continuous discharge, internal discharge. Capacity, lift height, belt vs chain, and selection for bulk material handling."
+  canonical="https://packagingconveyor.com/conveyor-types/bucket-elevators/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Bucket Elevators</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Bucket Elevators</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Bucket Elevators
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A bucket elevator lifts bulk materials vertically using a series of buckets attached to a belt or chain that loops around head (top) and boot (bottom) pulleys inside an enclosed casing. Bucket elevators are the most efficient method for vertical bulk material transport, lifting grain, cement, ore, chemicals, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food ingredients</a> from 20 to 200+ feet. The three discharge types — centrifugal, continuous, and internal — handle different material characteristics and throughput requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centrifugal Discharge -->
+  <article class="py-20 bg-surface" aria-labelledby="centrifugal-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Centrifugal Discharge</div>
+      <h2 id="centrifugal-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Centrifugal Discharge <span class="text-accent">Elevators</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Centrifugal discharge bucket elevators run at high speed (200-500 FPM belt speed). Buckets are spaced apart on the belt, with gaps between buckets. As each bucket passes over the head pulley, centrifugal force throws the material out of the bucket and into the discharge chute. The material trajectory follows a parabolic path from the bucket lip to the discharge opening.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Operating Principle</h3>
+        <p>At the boot (bottom), buckets scoop material from the boot pit or receive material from an infeed chute. The loaded buckets travel up the vertical leg. At the head (top), the high belt speed generates enough centrifugal force to overcome gravity as the bucket inverts around the head pulley. The material releases from the bucket and flies into the discharge throat. Proper discharge depends on the relationship between belt speed, head pulley diameter, and material characteristics.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Best Applications</h3>
+        <p>Centrifugal discharge suits free-flowing, non-fragile materials: grain, dry sand, cement, sugar, salt, and plastic pellets. The high speed and centrifugal discharge generate some material impact and degradation, making this type less suitable for fragile products. Centrifugal elevators deliver the highest capacity per belt width: 10-1,000+ tons per hour depending on belt width and speed. They dominate grain elevator and cement plant applications.</p>
+        <p>Maxi-Lift, Tapco, 4B Components, and Continental/Contitech supply centrifugal discharge elevator buckets and belting. System integrators including Sweet Manufacturing, Warrior Manufacturing, and Universal Industries build complete centrifugal discharge elevator systems.</p>
+        <!-- VERIFY: Maxi-Lift, Tapco, 4B, Sweet, Warrior, Universal current product offerings -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt vs Chain</h3>
+        <p>Centrifugal discharge elevators use either rubber/PVC belting or roller chain to carry the buckets. Belt elevators are quieter, lighter, and less expensive. Chain elevators handle higher temperatures, heavier materials, and more abrasive conditions. Belt elevators dominate grain and food applications. Chain elevators serve cement, mining, and heavy industrial applications.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Continuous Discharge -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="continuous-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Continuous Discharge</div>
+      <h2 id="continuous-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Continuous Discharge <span class="text-accent">Elevators</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Continuous discharge (also called positive discharge) bucket elevators run at lower speed (100-200 FPM) with buckets mounted back-to-back without gaps. Material discharges by gravity as each bucket inverts over the head pulley. The front lip of each bucket acts as a guide for the material sliding out of the bucket above it, creating a continuous flow of material from the buckets into the discharge chute.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gentle Handling</h3>
+        <p>The lower speed and gravity discharge minimize material impact and degradation. Continuous discharge elevators handle fragile materials: breakfast cereals, snack foods, pet food kibble, pharmaceutical tablets, and decorative coatings. Material breakage is significantly lower than centrifugal discharge elevators. For the gentlest vertical lift, continuous discharge bucket elevators outperform <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vertical screw conveyors</a> and most pneumatic systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sluggish Materials</h3>
+        <p>Continuous discharge also handles materials that do not release cleanly from buckets under centrifugal force: damp powders, sticky materials, and materials with high angle of repose. The slow inversion and gravity pour provide more time for complete bucket emptying. Bucket design variations (round-bottom, V-shaped, flared) optimize discharge for specific material characteristics.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Capacity</h3>
+        <p>Continuous discharge elevators handle lower capacity per belt width than centrifugal types because the lower belt speed means fewer bucket loads per minute. Compensate by using wider belts, deeper buckets, or running two elevators in parallel. Typical capacity: 5-200 tons per hour. For applications where material quality matters more than throughput rate, continuous discharge is the standard choice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Discharge -->
+  <section class="py-20 bg-surface" aria-labelledby="internal-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Internal Discharge</div>
+      <h2 id="internal-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Internal Discharge <span class="text-accent">Elevators</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Internal discharge (also called perfect discharge) bucket elevators use special bucket mounting that allows buckets to tip completely upside down over the head pulley, pouring material into a trough or chute inside the elevator casing. The buckets mount on two chains (dual-chain configuration) with snug pivots that allow controlled tipping. Material empties into an internal discharge trough that routes it out through the side of the elevator casing.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Complete Discharge</h3>
+        <p>Internal discharge provides the most complete bucket emptying of any elevator type. The full inversion and slow pour leave virtually no residual material in the bucket. This matters for high-value materials, materials that build up on bucket walls, and operations requiring minimal cross-contamination between batches. Pharmaceutical, chemical, and specialty food operations use internal discharge elevators.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Limitations</h3>
+        <p>Internal discharge elevators use dual-chain construction, which costs more than single-belt or single-chain designs. The internal discharge trough adds complexity to the head section. Capacity is moderate: similar to continuous discharge types. Internal discharge elevators are specified when discharge completeness justifies the added cost — typically in batch operations where residual material between batches is unacceptable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Bucket Elevator <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Centrifugal</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Continuous</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Internal</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Belt Speed</td>
+              <td class="py-3 pr-4 font-mono text-sm">200-500 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">100-200 FPM</td>
+              <td class="py-3 font-mono text-sm">100-150 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Capacity</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-1,000+ TPH</td>
+              <td class="py-3 pr-4 font-mono text-sm">5-200 TPH</td>
+              <td class="py-3 font-mono text-sm">5-100 TPH</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Material Handling</td>
+              <td class="py-3 pr-4">Free-flowing, non-fragile</td>
+              <td class="py-3 pr-4">Fragile, sluggish, damp</td>
+              <td class="py-3">High-value, sticky, batch</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Discharge Completeness</td>
+              <td class="py-3 pr-4">Good</td>
+              <td class="py-3 pr-4">Very good</td>
+              <td class="py-3">Excellent</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Lift Height</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-200+ ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-150 ft</td>
+              <td class="py-3 font-mono text-sm">20-100 ft</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Capacities depend on bucket size, belt width, and material bulk density. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Bucket Elevator <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Grain handling:</strong> Centrifugal discharge bucket elevators are the standard for grain elevator operations. They lift grain from receiving pits to storage bins, from bins to dryers, from dryers to cleaners, and from cleaners to loadout. A single grain terminal may have 10+ bucket elevators handling different process stages. Elevator capacity ranges from 50 to 5,000+ bushels per hour.</p>
+
+        <p><strong class="text-ink">Cement manufacturing:</strong> Heavy-duty chain bucket elevators lift cement clinker, raw meal, and finished cement between grinding, kiln, cooling, and storage stages. Operating temperatures reach 400&deg;F for hot clinker. Abrasion-resistant buckets and chains handle the extremely abrasive cement materials. Lift heights commonly reach 100-200 feet in cement plants.</p>
+
+        <p><strong class="text-ink">Food ingredient processing:</strong> Continuous discharge bucket elevators gently lift fragile food products — cereals, snack foods, pet food, coffee beans, and nuts — from processing to <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging</a>. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary stainless steel construction</a> meets food safety requirements. The gentle continuous discharge minimizes product breakage. Bucket elevators feed weigh scales, baggers, and case packers from overhead positions.</p>
+
+        <p><strong class="text-ink">Chemical and mineral processing:</strong> Bucket elevators lift chemical powders, fertilizers, and minerals between reactors, dryers, classifiers, and storage. Material-specific bucket materials (stainless steel, polymer, AR plate) handle corrosive and abrasive conditions. Explosion venting and inerting systems address combustible dust hazards. Bucket elevators feed <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw conveyors</a> and <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyors</a> at elevation for distribution to downstream processes.</p>
+
+        <p><strong class="text-ink">Recycling and waste processing:</strong> Bucket elevators lift shredded material, sorted recyclables, and processed waste products between processing stages. Heavy-duty designs handle the variable, unpredictable material characteristics common in waste streams. <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Chain-type</a> bucket elevators handle the heavy, abrasive materials in recycling operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Bucket Elevator</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Material characteristics determine discharge type.</strong> Free-flowing, non-fragile: centrifugal discharge. Fragile, sluggish, or damp: continuous discharge. High-value with zero residual tolerance: internal discharge. Test material behavior in sample buckets if material characteristics are uncertain.</p>
+
+        <p><strong class="text-ink">Capacity and lift height size the elevator.</strong> Calculate required tons per hour. Select bucket size (width, projection, spacing) and belt speed to achieve the capacity. Belt width and casing size scale with bucket size. Lift height determines belt length, casing height, and structural support requirements. CEMA standards provide capacity calculation methods based on bucket geometry and material bulk density.</p>
+
+        <p><strong class="text-ink">Belt vs chain depends on environment.</strong> Belt: clean, moderate-temperature, non-abrasive (grain, food, light chemicals). Chain: high-temperature, abrasive, heavy-duty (cement, mining, hot materials). Belt elevators cost less, run quieter, and need less maintenance. Chain elevators last longer in harsh conditions. Hybrid designs use chain with belt-type buckets for moderate applications.</p>
+
+        <p><strong class="text-ink">Safety systems are mandatory.</strong> Bucket elevators require: speed monitoring (detecting belt slip or chain breakage), bearing temperature monitoring (detecting imminent bearing failure), belt alignment monitoring (preventing belt tracking off the pulley), and explosion protection for combustible dusts (venting, suppression, or inerting). NFPA 61 (grain) and NFPA 652 (combustible dust) govern bucket elevator safety design.</p>
+        <!-- VERIFY: NFPA 61 and 652 applicability to bucket elevator safety design -->
+
+        <p><strong class="text-ink">Compared to alternatives:</strong> Bucket elevators beat <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vertical screw conveyors</a> on capacity, gentleness, and lift height. They beat incline belt conveyors on footprint (vertical vs angled). They beat pneumatic systems on energy efficiency and material preservation. <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Spiral conveyors</a> serve unit loads (cases, cartons); bucket elevators serve bulk materials. Choose bucket elevators for vertical bulk transport unless a specific constraint disqualifies them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a bucket elevator?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Buckets on a belt or chain loop inside an enclosed casing, lifting bulk material vertically 20-200+ feet. Discharge types: centrifugal (high speed, free-flowing), continuous (gentle, fragile), internal (complete emptying). See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types guide</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Centrifugal vs continuous discharge — which is better?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Centrifugal for free-flowing, non-fragile materials at high capacity. Continuous for fragile, sluggish, or damp materials needing gentle handling. Centrifugal costs less and delivers higher TPH. Continuous preserves material quality. Match to your material requirements.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How high can a bucket elevator lift?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Standard: 20-150 feet. Large industrial: 200+ feet. Belt elevators to 150 ft. Chain elevators to 200+ ft. Lift height determines belt length, casing size, structural support, and drive horsepower. Grain terminals and cement plants use the tallest elevators.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/screw-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Screw Conveyors</div>
+          <p class="text-sm text-white/60">Horizontal bulk material feed</p>
+        </a>
+        <a href="/conveyor-types/drag-chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Drag Chain</div>
+          <p class="text-sm text-white/60">Enclosed horizontal/incline bulk</p>
+        </a>
+        <a href="/conveyor-types/spiral-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Spiral Conveyors</div>
+          <p class="text-sm text-white/60">Vertical unit load transport</p>
+        </a>
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">Chain-driven heavy-duty systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

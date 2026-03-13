@@ -1,0 +1,438 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Flighted & Scoop Conveyors", "item": "https://packagingconveyor.com/conveyor-types/flighted-scoop-conveyors/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Flighted & Scoop Conveyors for Incline Bulk Handling",
+  "description": "Complete guide to flighted and scoop conveyors — incline conveying of bulk, granular, and small-product materials using cleated belts, scoops, and bucket attachments in packaging lines.",
+  "url": "https://packagingconveyor.com/conveyor-types/flighted-scoop-conveyors/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a flighted conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A flighted conveyor is a belt conveyor with raised cleats, flights, or partitions attached to the belt surface at regular intervals. The flights prevent product from sliding backward on inclines and declines, allowing the conveyor to move bulk, granular, or small discrete items at steep angles — typically 30 to 90 degrees. Flighted conveyors handle products that standard flat belt conveyors cannot convey on inclines, including loose snack foods, granular chemicals, hardware, and small parts." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a flighted conveyor and a scoop conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A flighted conveyor uses flat or angled cleats welded or bonded to a belt to prevent product rollback on inclines. A scoop conveyor uses curved bucket-like attachments that fully enclose product during vertical or steep-angle transport. Flighted conveyors handle inclines up to about 45-60 degrees. Scoop conveyors handle steeper angles up to 90 degrees (fully vertical) because the enclosed scoop retains product regardless of angle. Scoop conveyors cost more but handle steeper inclines and more fragile products." }
+    },
+    {
+      "@type": "Question",
+      "name": "What incline angle can a flighted conveyor handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard cleated belt conveyors handle 30-45 degree inclines. Deep-flight conveyors with tall cleats and sidewalls handle 45-60 degrees. Scoop and bucket conveyors handle 60-90 degrees (fully vertical). The maximum angle depends on product characteristics — free-flowing granular material requires taller flights and lower angles, while sticky or cohesive products can handle steeper angles with shorter flights. Belt speed decreases as incline angle increases to prevent product spillage." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are flighted conveyors available in food-grade designs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Food-grade flighted conveyors use FDA-compliant polyurethane or silicone belts with integrally molded flights (no fasteners or seams that trap bacteria). Stainless steel frames (304 or 316), IP69K washdown motors, and tool-free belt removal for cleaning are standard features. Manufacturers including Dorner, Nercon, and UniTrak offer food-grade flighted and scoop conveyors for snack food, bakery, confectionery, and frozen food applications." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Flighted & Scoop Conveyors: Incline Conveying for Bulk & Granular Products"
+  description="Complete guide to flighted and scoop conveyors — cleated belt incline handling for bulk, granular, and small-product packaging applications. Flight types, incline angles, and food-grade options."
+  canonical="https://packagingconveyor.com/conveyor-types/flighted-scoop-conveyors/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-types/" class="hover:text-white/70">Types</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Flighted & Scoop Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Type</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Flighted & <span class="text-accent-bright">Scoop</span> Conveyors
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A flighted conveyor uses raised cleats, flights, or scoop-shaped attachments bonded to a belt surface to move bulk, granular, and small discrete products up inclines and vertical elevations that flat belt conveyors cannot handle. Flights prevent product rollback on inclines from 30 to 90 degrees, making these conveyors essential for elevation changes in packaging lines handling snack foods, granular chemicals, hardware, and loose components. Dorner, Nercon, UniTrak, and Ryson manufacture flighted and scoop conveyors for food, pharmaceutical, and industrial packaging applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY FLIGHTED CONVEYORS -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">The Problem</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why Standard Belts <span class="text-accent">Fail on Inclines</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Standard flat belt conveyors lose grip on products at incline angles above 15-20 degrees. Gravity pulls product backward, causing rollback, tumbling, and accumulation at the bottom of the incline. Loose, granular, and round products fail at even lower angles. A bag of snack chips slides backward at 12 degrees on a smooth belt. A ball bearing rolls back at any positive angle.
+          </p>
+          <p>
+            Textured and rough-top belts extend the usable incline range to 25-30 degrees for some products, but this is still insufficient for many packaging line layouts that require steeper elevation changes. When floor space is limited, the conveyor must climb steeply over short horizontal distances. A 10-foot elevation change at 15 degrees requires 37 feet of horizontal run. The same elevation change at 45 degrees requires only 10 feet.
+          </p>
+          <p>
+            Flighted conveyors solve this by adding physical barriers — cleats, flights, sidewalls, or scoops — that trap product between flights and prevent backward movement regardless of incline angle. The flight height, spacing, and profile determine the maximum product size and incline angle the conveyor can handle. For applications requiring vertical elevation without any incline run at all, <a href="/conveyor-types/vertical-lift/" class="text-accent hover:text-accent-hover font-semibold">vertical lift conveyors</a> provide a dedicated solution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLIGHT TYPES -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Flight Configurations</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Flight & Cleat <span class="text-accent">Types</span>
+        </h2>
+        <div class="space-y-12">
+
+          <!-- Standard Cleats -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Standard Cleats (Straight Flights)</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Straight cleats are vertical fins bonded perpendicular to the belt surface, spanning the full belt width. Cleat heights range from 0.5 inches to 6 inches. Spacing between cleats depends on product size — closer spacing for small granular products, wider spacing for larger items. Standard cleats handle inclines of 30-45 degrees for most bulk and granular products.
+              </p>
+              <p>
+                The cleat profile is typically rectangular or T-shaped. T-shaped cleats provide a wider contact surface at the top, creating a larger pocket between cleats. Straight cleats are the simplest and lowest-cost flight option. They work well for uniform granular products (pellets, kibble, hardware) but struggle with irregular shapes that bridge between cleats or roll over them.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chevron Cleats -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Chevron (V-Pattern) Cleats</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Chevron cleats form a V-shape or herringbone pattern on the belt surface. The V-pattern channels product toward the belt center during incline operation, preventing material from sliding off the belt edges. Chevron cleats handle 25-40 degree inclines and excel at conveying fine granular materials (sand, sugar, salt, powder) that migrate sideways on standard cleated belts.
+              </p>
+              <p>
+                The V-angle and cleat height determine the maximum particle size and incline angle. Steeper V-angles provide stronger centering force but reduce the effective belt carrying capacity. Chevron belts are common in aggregate, mining, and agricultural applications but see use in packaging for bulk ingredient handling — moving sugar, flour, or salt from storage to packaging equipment hoppers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Sidewall Cleated Belts -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Sidewall Cleated Belts</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Sidewall belts combine corrugated flexible sidewalls along the belt edges with transverse cleats between the sidewalls. The sidewalls form a continuous trough that prevents material from falling off the belt edges. The cross-cleats prevent rollback. This combination handles inclines of 45-90 degrees — including fully vertical lifts — with bulk materials.
+              </p>
+              <p>
+                Continental ContiTech, Fenner Dunlop, and Bando manufacture corrugated sidewall belts in widths from 12 to 60 inches. The corrugated sidewall flexes around pulleys at the top and bottom of the conveyor, then springs back to full height on the carrying side. Sidewall height ranges from 2 to 12 inches, determining the maximum material volume per linear foot. These belts are critical for moving bulk ingredients — grain, nuts, seeds, powders — to elevated packaging machine hoppers in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging lines</a>.
+              </p>
+              <!-- VERIFY: Continental ContiTech corrugated sidewall belt current product line and width range -->
+            </div>
+          </div>
+
+          <!-- Scoop/Bucket Attachments -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Scoop & Bucket Attachments</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Scoop conveyors use curved, bucket-shaped containers attached to a belt or chain at regular intervals. Each scoop picks up product at the bottom, carries it through the vertical or steep-angle section fully enclosed, and dumps it at the top by inverting over the head pulley or by centrifugal discharge. Scoop conveyors handle 60-90 degree inclines and fully vertical lifts.
+              </p>
+              <p>
+                UniTrak and Cablevey manufacture scoop elevators for food and pharmaceutical packaging. The scoops are injection-molded from FDA-compliant polymers (polyethylene, polypropylene) or fabricated from stainless steel. Scoop capacity ranges from a few ounces to several pounds per scoop. Throughput depends on scoop size, spacing, and belt speed — typical ranges are 500 to 5,000 pounds per hour for packaging applications.
+              </p>
+              <p>
+                Scoop conveyors protect fragile products better than open cleated belts because the product rides inside an enclosed container rather than pressing against a flat cleat. This makes scoop conveyors preferred for delicate snack foods (chips, crackers), confectionery, and coated products that break or lose coating on cleated belt surfaces.
+              </p>
+              <!-- VERIFY: UniTrak scoop elevator throughput range and scoop material options -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INCLINE ANGLE TABLE -->
+    <section class="py-20 bg-surface" aria-labelledby="angle-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="angle-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Incline Angle <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt / Flight Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Max Incline</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Limitations</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Smooth flat belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-20&deg;</td>
+                <td class="py-4 pr-4">Flat-bottom cartons, cases</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">No loose or round products</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Rough-top belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">25-30&deg;</td>
+                <td class="py-4 pr-4">Bags, pouches, cartons</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">No granular or rolling products</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Standard cleats</td>
+                <td class="py-4 pr-4 font-mono text-sm">30-45&deg;</td>
+                <td class="py-4 pr-4">Granular, pellets, small items</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Edge spillage on fine materials</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Chevron cleats</td>
+                <td class="py-4 pr-4 font-mono text-sm">25-40&deg;</td>
+                <td class="py-4 pr-4">Fine granular, powder</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Reduced capacity vs. straight cleats</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Sidewall + cleats</td>
+                <td class="py-4 pr-4 font-mono text-sm">45-90&deg;</td>
+                <td class="py-4 pr-4">Bulk, granular, fine powder</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Complex belt tracking, cleaning</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Scoop / bucket</td>
+                <td class="py-4 pr-4 font-mono text-sm">60-90&deg;</td>
+                <td class="py-4 pr-4">Fragile, coated, delicate items</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$-$$$$</td>
+                <td class="py-4">Lower throughput, higher maintenance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">Relative cost: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+      </div>
+    </section>
+
+    <!-- DESIGN CONSIDERATIONS -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="design-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Engineering</div>
+        <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Design <span class="text-accent">Considerations</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Flight Height & Spacing</h3>
+          <p>
+            Flight height must exceed the largest product dimension that faces the cleat. For granular materials, flight height determines the depth of each pocket — and therefore the volume the conveyor carries per linear foot. Spacing between flights depends on product size: granular materials need closely spaced flights (4-8 inches) to prevent material from cascading over the cleat at steep angles. Larger discrete items need wider spacing (12-24 inches) to fit between flights.
+          </p>
+          <p>
+            Too-tall flights on too-steep inclines create dead zones where product packs against the flight face and does not discharge cleanly at the top. The optimal flight height-to-spacing ratio depends on the product's angle of repose — the steepest angle at which the material rests without sliding. Products with low angles of repose (free-flowing powders, ball bearings) need taller flights and closer spacing than cohesive materials (wet granules, sticky candy).
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Belt Speed on Inclines</h3>
+          <p>
+            Belt speed decreases as incline angle increases. At steep angles, product sits in the pocket between flights with less gravitational stability. Higher belt speeds generate centrifugal force at the head pulley that can throw product past the discharge point. Typical belt speeds for flighted incline conveyors range from 30 to 100 FPM — significantly slower than flat belt transport conveyors that run at 100-400 FPM. Reducing speed decreases throughput, so the belt width and flight spacing must compensate.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Motor Sizing for Inclines</h3>
+          <p>
+            Incline conveyors require more motor power than horizontal conveyors of the same length because the motor must lift product against gravity. Motor horsepower increases with incline angle, belt speed, and product weight per foot. A 20-foot incline conveyor at 45 degrees carrying 50 lbs/ft requires roughly 3-4 times the motor horsepower of a 20-foot horizontal conveyor carrying the same load. VFD control is standard for flighted incline conveyors to allow speed adjustment for different products and to provide controlled soft starts that prevent product surge at startup.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Infeed & Discharge Design</h3>
+          <p>
+            The infeed section of a flighted conveyor is typically horizontal or slightly inclined to allow product to load evenly between flights. A hopper, vibratory feeder, or upstream conveyor meters product onto the belt at a controlled rate. Overloading causes product to cascade over flight tops and spill. The discharge section at the top uses a nose-over (small-diameter head pulley) to dump product cleanly off the belt. A scraper or brush at the head pulley removes product residue from the belt surface and flight faces before the return run.
+          </p>
+          <p>
+            For applications feeding product into weighers, <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating systems</a>, or packaging machine hoppers, the discharge must deliver product at a consistent, controllable rate. A vibratory tray or metering conveyor at the discharge point converts the pulsed delivery (one flight at a time) into a continuous stream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD-GRADE & SANITARY -->
+    <section class="py-20 bg-surface" aria-labelledby="sanitary-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Food-Grade</div>
+        <h2 id="sanitary-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Food-Grade & <span class="text-accent">Sanitary Designs</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Food-grade flighted conveyors require specific design features that prevent bacterial harborage and allow thorough cleaning. The flights must be integrally molded into the belt — not mechanically fastened with screws, rivets, or clips that create crevices for bacteria and allergens. Integrally molded flights eliminate the seam between the flight and belt surface.
+          </p>
+          <p>
+            Belt materials for <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary food applications</a> include FDA-compliant polyurethane (most common), silicone (high-temperature bakery applications), and antimicrobial formulations that inhibit bacterial growth on the belt surface. Blue or white belt colors provide visual contrast for detecting product contamination — a blue belt fragment in white flour is immediately visible.
+          </p>
+          <p>
+            Frame construction uses 304 or 316 stainless steel with fully welded joints, rounded corners (no sharp edges that trap debris), and open-frame designs that allow spray-through cleaning. Motors carry IP69K ratings for high-pressure, high-temperature washdown. Dorner's AquaPruf series and Nercon's sanitary flighted conveyors meet USDA and 3-A Sanitary Standards for direct food contact applications.
+          </p>
+          <!-- VERIFIED: Nercon is independent (family-owned). Not part of nVenia/Duravant or ProMach. -->
+          <p>
+            Tool-free belt removal is a critical sanitary feature. The belt must lift off the conveyor for cleaning, inspection, and replacement without tools. Quick-release tensioners and removable tail pulleys allow one operator to remove and reinstall the belt in under 5 minutes. This encourages thorough daily cleaning and reduces the temptation to skip belt removal during sanitation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Packaging Line <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <strong class="text-ink">Snack food elevation:</strong> Chips, pretzels, crackers, and popcorn move from processing equipment at floor level to elevated packaging machine hoppers using scoop conveyors. The enclosed scoop protects fragile snack products from breakage during the elevation change. Throughput rates of 1,000-3,000 lbs/hr are typical for snack food scoop elevators.
+          </p>
+          <p>
+            <strong class="text-ink">Granular ingredient feeding:</strong> Sugar, salt, spices, and powdered ingredients elevate from bulk storage bins to weigh-fill packaging machines using sidewall cleated belt conveyors. The continuous sidewall prevents spillage, and the belt delivers a steady flow to the hopper. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing control</a> on the flighted conveyor meters exact volumes to the weigher.
+          </p>
+          <p>
+            <strong class="text-ink">Hardware and small parts:</strong> Fasteners, caps, closures, and small components elevate from vibratory bowls or bulk bins to packaging stations. Standard cleated belt conveyors handle these applications at 30-45 degree inclines. The cleats prevent small round items from rolling back down the incline.
+          </p>
+          <p>
+            <strong class="text-ink">Pharmaceutical capsules and tablets:</strong> Scoop conveyors gently elevate finished capsules and tablets from tablet presses to bottle-filling machines. The enclosed scoop prevents dust generation and cross-contamination. Stainless steel scoops and enclosed conveyor housings meet pharmaceutical cGMP requirements.
+          </p>
+          <p>
+            <strong class="text-ink">Reclaim and recycling:</strong> Flighted conveyors reclaim trim scrap, offcuts, and waste material from packaging operations and elevate it to recycling bins or regrind equipment. The flights handle irregular shapes and mixed materials that flat belt conveyors cannot grip on inclines.
+          </p>
+          <p>
+            For vertical elevation without any incline run, see <a href="/conveyor-types/vertical-lift/" class="text-accent hover:text-accent-hover font-semibold">vertical lift conveyors</a>. For accumulating product before or after elevation changes, see <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTION GUIDE -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting a Flighted <span class="text-accent">Conveyor</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>Match the flight type to five parameters:</p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Incline angle required.</strong> Calculate the angle from the available floor space and elevation change. Angles under 30 degrees may not need flights at all — a rough-top belt may suffice. Angles above 60 degrees point toward scoop or sidewall conveyors.</li>
+            <li><strong class="text-ink">Product characteristics.</strong> Free-flowing granular products need tall flights with close spacing. Fragile products need enclosed scoops. Sticky products need flights with non-stick coatings or release agents. Round products need flights tall enough to prevent rolling over the top.</li>
+            <li><strong class="text-ink">Throughput requirement.</strong> Higher throughput requires wider belts, taller flights, or faster speeds. Speed is limited by the incline angle, so width and flight height are the primary throughput levers on steep inclines.</li>
+            <li><strong class="text-ink">Sanitary requirements.</strong> <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and pharmaceutical applications</a> require integrally molded flights, FDA-compliant materials, stainless steel construction, and tool-free belt removal. These features add cost but are non-negotiable for regulated products.</li>
+            <li><strong class="text-ink">Discharge method.</strong> Products feeding into hoppers need a controlled discharge rate. Products feeding onto downstream conveyors need clean separation from the flight at the head pulley. The head pulley diameter, scraper design, and discharge chute geometry must match the product and the downstream equipment.</li>
+          </ol>
+          <p>
+            For cost planning, flighted conveyors sit in the $$-$$$ range, with scoop conveyors at $$$-$$$$. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed pricing factors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Types & Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-types/vertical-lift/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Vertical Lift Conveyors</h3>
+            <p class="text-base text-white/60">Fully vertical product elevation</p>
+          </a>
+          <a href="/conveyor-types/accumulation-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Accumulation Conveyors</h3>
+            <p class="text-base text-white/60">Buffer before/after elevation changes</p>
+          </a>
+          <a href="/resources/conveyor-belting/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Belt Types & Materials</h3>
+            <p class="text-base text-white/60">PVC, PU, silicone, modular options</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a flighted conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A flighted conveyor is a belt conveyor with raised cleats, flights, or partitions bonded to the belt surface at regular intervals. The flights prevent product from sliding backward on inclines, allowing the conveyor to move bulk, granular, and small items at angles from 30 to 90 degrees.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between flighted and scoop conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Flighted conveyors use flat or angled cleats to prevent rollback on inclines up to 45-60 degrees. Scoop conveyors use enclosed bucket-shaped containers that fully retain product at angles up to 90 degrees (vertical). Scoops protect fragile products better but cost more and have lower throughput than cleated belts.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What incline angle can a flighted conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Standard cleats handle 30-45 degrees. Sidewall cleated belts handle 45-90 degrees. Scoop and bucket conveyors handle 60-90 degrees. The maximum angle depends on product characteristics — free-flowing products need taller flights and lower angles, while cohesive products tolerate steeper angles with shorter flights.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Are flighted conveyors available in food-grade designs?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Yes. Food-grade versions use FDA-compliant polyurethane or silicone belts with integrally molded flights, stainless steel frames, IP69K motors, and tool-free belt removal for cleaning. Dorner, Nercon, and UniTrak offer <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary flighted conveyors</a> meeting USDA requirements.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

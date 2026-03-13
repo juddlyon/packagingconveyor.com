@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Activated Roller Belt (ARB)", "item": "https://packagingconveyor.com/conveyor-types/activated-roller-belt/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an activated roller belt (ARB)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An activated roller belt (ARB) is a conveyor technology that embeds small angled rollers into a modular belt surface. When the rollers activate (contact a drive surface beneath the belt), they spin and push products diagonally off the belt at controlled angles. ARB conveyors divert, singulate, align, and orient products without mechanical diverters, pusher plates, or pop-up wheels. Intralox developed and patented the ARB technology." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ARB technology work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The ARB belt surface contains small cylindrical rollers oriented at a fixed angle (typically 30 or 45 degrees relative to the belt travel direction). The rollers are passive until they pass over an activation zone — a raised pad or drive surface beneath the belt. When a roller contacts the activation pad, friction spins the roller, generating a lateral force on any product resting on that roller. The combined belt forward motion and roller lateral motion diverts the product diagonally off the belt. Products not over an activation zone ride the belt normally without diversion." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the advantages of ARB over traditional diverters?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ARB advantages over traditional diverters: 1) No moving mechanical parts above the belt surface — no pusher arms, pop-up wheels, or pneumatic actuators to maintain. 2) Gentle handling — products ride smoothly instead of being shoved or deflected. 3) Multiple divert points on one belt — activation zones can be placed anywhere along the belt. 4) No product gap requirements — ARB diverts products from a continuous stream without spacing. 5) Lower maintenance — fewer moving parts means less wear and less downtime." }
+    },
+    {
+      "@type": "Question",
+      "name": "What products can ARB conveyors handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ARB conveyors handle a wide range of flat-bottom products: corrugated cases, cartons, poly-wrapped trays, totes, polybags, padded mailers, and irregular packages. They are particularly effective in parcel distribution where product sizes vary widely. ARB handles products from small mailers (6 inches) to large cases (36+ inches). Products must have a flat bottom surface for the rollers to engage. Very heavy products (over 100 lbs) or products with very soft bottoms may not divert reliably." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Activated Roller Belt (ARB): Intralox Technology for Diverting, Singulation & Alignment",
+  "description": "Complete guide to Activated Roller Belt (ARB) technology: Intralox ARB for 30-degree and 45-degree diverting, singulation, alignment, and merge. Parcel, case, and package handling applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/activated-roller-belt/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Activated Roller Belt (ARB): Intralox Technology for Diverting & Singulation"
+  description="Complete guide to Activated Roller Belt (ARB) technology by Intralox: 30 and 45 degree diverting, singulation, alignment, and merge. Parcel, case, and package handling applications."
+  canonical="https://packagingconveyor.com/conveyor-types/activated-roller-belt/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Activated Roller Belt (ARB)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Activated Roller Belt (ARB)</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Activated Roller Belt (ARB)
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>An Activated Roller Belt (ARB) embeds small angled rollers into a modular belt surface that spin on demand to divert, singulate, align, and orient products without mechanical diverters, pusher plates, or pop-up transfer wheels. Developed and patented by Intralox, ARB technology uses friction-activated rollers beneath the belt to generate lateral forces that move products diagonally off the main conveyor path. ARB has transformed <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">diverting and sorting</a> in parcel distribution, e-commerce fulfillment, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a> by eliminating the moving parts and maintenance demands of traditional mechanical diverters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technology</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How ARB <span class="text-accent">Works</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">The Roller Mechanism</h3>
+        <p>Each ARB belt module contains small cylindrical rollers set at a fixed diagonal angle &mdash; either 30 degrees or 45 degrees relative to the belt travel direction. The rollers are molded into the belt module and rotate freely on their axes. When the belt runs normally (no activation), the rollers are passive. Products ride on the flat tops of the modules and travel straight ahead with the belt.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Activation Zones</h3>
+        <p>Beneath the belt, raised pads or friction strips form activation zones. When an ARB belt module passes over an activation zone, the bottom of the roller contacts the pad. Friction between the pad and roller bottom causes the roller to spin. The spinning roller exerts a lateral force on any product resting on it, pushing the product diagonally in the direction of the roller angle. Products not over an activation zone continue straight ahead.</p>
+
+        <p>Activation zones can be placed at any point along the belt and across any portion of the belt width. A wide ARB belt can have activation zones on the left side, right side, center, or full width. This flexibility allows a single ARB conveyor to divert products to multiple destinations by placing activation zones at different positions along the belt length.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">30-Degree vs. 45-Degree Divert</h3>
+        <p>The roller angle determines the divert angle. A 30-degree ARB belt diverts products at a gentler angle, producing smoother transitions and higher throughput for larger products. A 45-degree ARB belt diverts at a steeper angle, requiring less belt length to complete the divert but generating more lateral force on the product. Intralox offers both configurations. The choice depends on product characteristics, available belt length, and required throughput rate.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">No Product Gap Required</h3>
+        <p>Traditional mechanical diverters (pusher plates, pop-up wheels, sliding shoe sorters) require gaps between products to operate. The diverter mechanism must retract before the next product arrives. ARB requires no gap because activation is continuous &mdash; every product that passes over an active zone diverts regardless of spacing. This makes ARB ideal for singulation (separating products from a mass flow) and merge (combining streams) where products arrive touching each other.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        ARB <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Diverting & Sorting</h3>
+        <p>ARB replaces mechanical diverters for routing products to multiple destinations. A single ARB belt with activation zones at different positions can divert products to 2, 3, or more takeaway lanes. Upstream scanners read barcodes and trigger activation zones based on destination. This application dominates in parcel distribution (UPS, FedEx, DHL), e-commerce fulfillment centers, and <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject systems</a> in packaging lines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Singulation</h3>
+        <p>Singulation separates products from a mass flow (random, overlapping, touching) into a single-file stream with gaps between products. ARB singulation uses a wide belt with diagonal activation zones that spread products apart and align them into a single lane. This replaces complex multi-stage singulation systems that use retractable walls, speed differentials, and multiple conveyor sections. Intralox's ARB singulation solutions handle up to 60-70+ packages per minute from randomly loaded induction points.</p>
+        <!-- VERIFY: Singulation throughput rates against Intralox published case studies -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Alignment</h3>
+        <p>ARB alignment uses angled rollers to push products against a side guide, squaring them to the belt edge. Products that arrive at random orientations on a wide belt are steered against the guide and exit aligned. This feeds downstream equipment (scanners, labelers, case sealers) that requires products in a consistent position. Alignment eliminates the mechanical side-squeeze aligners and powered guide rails used in traditional systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Merge</h3>
+        <p>ARB merge combines two or more incoming streams into a single outbound stream. Products from side-feed conveyors enter the ARB belt, and diagonal roller activation steers them onto the main flow. Because ARB handles products without gaps, merge operations achieve higher density than mechanical merge systems. This reduces the required merge conveyor length and eliminates the pneumatic gates and photo-eye timing systems of traditional merges.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Orientation (90-Degree Rotation)</h3>
+        <p>ARB can rotate products 90 degrees by using activation zones that engage one end of the product while the belt forward motion pivots the other end. This rotates cases and cartons from long-side-leading to short-side-leading (or vice versa) without mechanical turntables. Product rotation is needed before case sealers, stretch wrappers, <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning stations</a>, and palletizers that require a specific product orientation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARB vs Traditional Diverters -->
+  <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        ARB vs Traditional <span class="text-accent">Diverters</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">ARB</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pusher Diverter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Wheel</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Sliding Shoe</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Moving Parts</td>
+              <td class="py-3 pr-4">Passive rollers only</td>
+              <td class="py-3 pr-4">Pneumatic arm</td>
+              <td class="py-3 pr-4">Pop-up wheel assemblies</td>
+              <td class="py-3">Sliding shoes on slats</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Gap Needed</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">Yes (arm retract time)</td>
+              <td class="py-3 pr-4">Yes (wheel retract time)</td>
+              <td class="py-3">Minimal</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Maintenance</td>
+              <td class="py-3 pr-4">Very low</td>
+              <td class="py-3 pr-4">High (pneumatics)</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3">Moderate-High</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Gentleness</td>
+              <td class="py-3 pr-4">High (smooth divert)</td>
+              <td class="py-3 pr-4">Low (impact)</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3">High</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Divert Points per Belt</td>
+              <td class="py-3 pr-4">Multiple (unlimited)</td>
+              <td class="py-3 pr-4">One per unit</td>
+              <td class="py-3 pr-4">One per unit</td>
+              <td class="py-3">Multiple</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">ARB initial cost is higher but lifetime maintenance cost is significantly lower. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Design Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Width & Length</h3>
+        <p>ARB belt width must accommodate the widest product plus the divert path. The product must travel diagonally from its starting position to the takeaway point within the belt length. Wider belts and steeper divert angles (45 degrees) require more belt length for the product to clear the belt edge. Intralox provides layout engineering tools that calculate the required belt dimensions for specific product sizes and divert angles.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Product Bottom Surface</h3>
+        <p>ARB rollers engage the product bottom surface to generate lateral force. Products must have a relatively flat, rigid bottom. Soft-bottom products (like poly bags with loose fill) may deform around the rollers instead of being pushed. Very smooth, hard bottoms (like glass) work well. Very rough or uneven bottoms may not engage the rollers consistently. Intralox recommends product testing for unfamiliar product types.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Activation Zone Control</h3>
+        <p>Activation zones can be fixed (always active) or switchable (activated by pneumatic or electric actuators). Fixed zones suit applications where every product diverts (like a dedicated lane split). Switchable zones suit sorting applications where only selected products divert based on barcode scans or other criteria. Switchable activation adds complexity and cost but provides selective diverting capability.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Speed & Throughput</h3>
+        <p>ARB conveyor speeds typically range from 150 to 400+ FPM depending on product size and divert angle. Higher belt speeds increase throughput but reduce the time available for the roller force to complete the divert. Larger, heavier products require more time (slower belt speed or longer activation zone) to complete the divert. Intralox publishes throughput specifications for standard product categories.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Integration with Existing Systems</h3>
+        <p>ARB conveyors integrate with upstream barcode scanners, vision systems, and conveyor controls for intelligent sorting. They interface with downstream <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a>, chutes, and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zones</a>. Intralox and its integration partners (system integrators like Dematic, Intelligrated, and Bastian Solutions) design complete ARB sorting systems with controls and software.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="py-20 bg-surface" aria-labelledby="industries-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Industries</div>
+      <h2 id="industries-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Industry <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Parcel distribution:</strong> ARB is widely deployed in parcel carrier sort centers (UPS, FedEx, DHL, national post services). The technology handles the enormous variety of parcel sizes, shapes, and weights that flow through distribution hubs. ARB singulation converts randomly loaded induction streams into scannable single-file flows. ARB diverting routes packages to destination chutes at rates exceeding 60 packages per minute per divert point.</p>
+
+        <p><strong class="text-ink">E-commerce fulfillment:</strong> E-commerce warehouses use ARB to sort outbound orders to shipping lanes by carrier, service level, or geographic zone. The mix of polybags, padded mailers, small boxes, and large cases that characterizes e-commerce order streams suits ARB's ability to handle diverse product sizes without adjustment.</p>
+
+        <p><strong class="text-ink">Food and beverage packaging:</strong> ARB conveyors sort cases of food and beverage products to palletizing lanes by SKU, flavor, or size. The gentle divert action prevents case damage that mechanical pushers cause. <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food-grade</a> ARB belt materials meet FDA requirements for incidental contact.</p>
+
+        <p><strong class="text-ink">Retail distribution:</strong> Retail distribution centers use ARB to sort cases and cartons to store-specific lanes. A single ARB sorter replaces multiple mechanical diverters along a trunk line, reducing equipment count, maintenance, and floor space.</p>
+
+        <p><strong class="text-ink">Airport baggage handling:</strong> Airport baggage systems use ARB for bag sorting and diverting to makeup carousels. The gentle handling reduces bag damage claims. The no-gap capability handles the dense bag flows that occur during peak travel periods.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an activated roller belt (ARB)?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A modular belt with embedded angled rollers that spin on demand to divert products diagonally. Developed by Intralox. The rollers activate when they pass over raised pads beneath the belt. No mechanical diverters, pusher plates, or pop-up wheels above the belt surface. Handles diverting, singulation, alignment, and merge.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does ARB technology work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Small rollers at 30 or 45 degrees are molded into belt modules. When a module passes over an activation pad beneath the belt, friction spins the roller, pushing the product diagonally. Products not over active zones travel straight. Activation zones can be fixed (always on) or switchable (selective diverting).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            ARB advantages over traditional diverters?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>No moving mechanical parts above the belt. No product gap requirements. Multiple divert points per belt. Gentle handling (no impact). Very low maintenance. Higher reliability. Handles mixed product sizes without adjustment. Trade-off: higher initial belt cost than simple mechanical diverters.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What products can ARB handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Flat-bottom products: cases, cartons, trays, totes, polybags, mailers, parcels. Sizes from 6 inches to 36+ inches. Handles wide product variety without changeover. Products must have a flat, relatively rigid bottom for roller engagement. Very heavy products (over 100 lbs) or soft-bottom items may not divert reliably.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Traditional diverting systems</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Zone-controlled trunk lines</p>
+        </a>
+        <a href="/conveyor-types/tabletop-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Tabletop Chain</div>
+          <p class="text-sm text-white/60">Modular belt alternative</p>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Automated Systems</div>
+          <p class="text-sm text-white/60">Full system integration</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

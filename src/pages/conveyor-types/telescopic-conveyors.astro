@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Telescopic Conveyors", "item": "https://packagingconveyor.com/conveyor-types/telescopic-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a telescopic conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A telescopic conveyor (also called an extendable conveyor) is a belt or roller conveyor that extends and retracts in length to reach into truck trailers, shipping containers, and railcars from the dock door. Nested conveyor sections slide inside one another, extending the conveying surface from the dock deep into the trailer without requiring workers to carry products the full trailer length. Telescopic conveyors reduce loading/unloading time by 30-50% compared to manual handling." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far can a telescopic conveyor extend?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most telescopic conveyors extend from 20 to 60 feet, enough to reach from a dock door to the nose (front wall) of a standard 53-foot trailer. Retracted length is typically 10-15 feet, allowing the conveyor to nest compactly at the dock when not in use. Extension range depends on the number of nested sections (typically 2-4 sections). Longer extension requires more sections and heavier construction." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a telescopic belt conveyor and a telescopic roller conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A telescopic belt conveyor uses a continuous belt surface that stretches and retracts with the extending frame. It handles individual items (boxes, packages, bags) that would jam between rollers. A telescopic roller conveyor uses gravity or powered rollers that nest inside one another. Roller versions suit uniform flat-bottom loads (cases, totes) and cost less. Belt versions handle a wider range of product shapes and sizes." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a telescopic conveyor improve loading efficiency?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Telescopic conveyors reduce truck loading and unloading time by 30-50% compared to manual handling. They also reduce worker fatigue, injury rates, and product damage from throwing and dropping. A typical dock operation loading cases by hand takes 45-90 minutes per trailer. A telescopic conveyor reduces this to 20-45 minutes. The productivity improvement depends on product weight, trailer length, and whether the conveyor is used for loading, unloading, or both." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Telescopic & Extendable Conveyors: Truck Loading & Dock-to-Trailer Systems",
+  "description": "Complete guide to telescopic and extendable conveyors for truck loading and unloading: belt and roller types, dock integration, extension ranges, and productivity improvements.",
+  "url": "https://packagingconveyor.com/conveyor-types/telescopic-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Telescopic & Extendable Conveyors: Truck Loading & Dock-to-Trailer Systems"
+  description="Complete guide to telescopic and extendable conveyors: belt and roller types for truck loading/unloading, dock integration, extension ranges up to 60 feet, and productivity improvements."
+  canonical="https://packagingconveyor.com/conveyor-types/telescopic-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Telescopic Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Telescopic & Extendable Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Telescopic & Extendable Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A telescopic conveyor extends and retracts to reach from a loading dock deep into truck trailers, shipping containers, and railcars. Nested conveyor sections slide inside one another, stretching the conveying surface from 10-15 feet (retracted) to 40-60 feet (extended) to match the trailer depth. Telescopic conveyors reduce loading and unloading time by 30-50% compared to manual handling, cut worker fatigue and injury rates, and enable a single dock door to handle high volumes of cases, packages, and bags without requiring workers to walk the full trailer length.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types -->
+  <article class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Equipment Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Telescopic Conveyor <span class="text-accent">Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Telescopic Belt Conveyors</h3>
+        <p>Telescopic belt conveyors use a continuous belt that extends with the conveyor frame. The belt loops through all nested sections, with belt take-up mechanisms compensating for length changes as the conveyor extends and retracts. Belt versions handle the widest range of product types: cartons, poly bags, mailer packages, irregularly shaped items, and products that would jam between rollers. Caljan, Beumer Group, and Stewart-Glapat manufacture telescopic belt conveyors for dock operations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Telescopic Roller Conveyors</h3>
+        <p>Telescopic roller conveyors use nested sections of gravity or powered rollers. As the conveyor extends, roller sections slide out to cover the additional length. Gravity versions rely on a slight incline for product flow. Powered versions use motorized rollers or belt-under-roller drives for positive product transport. Roller telescopic conveyors suit uniform, flat-bottom products like corrugated cases and plastic totes. They cost less than belt versions but cannot handle bags, polybags, or irregularly shaped products.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Boom Conveyors (Extendable Belt Loaders)</h3>
+        <p>Boom conveyors are simpler extendable belt conveyors that raise and lower the discharge end (boom) to stack products at different heights within the trailer. They extend horizontally and the boom end articulates vertically, allowing workers to load or unload at waist height throughout the trailer. Boom conveyors are common at parcel carrier hubs (UPS, FedEx) for loading and unloading package trailers. FMH Conveyors (now Caljan) and Automotion are major boom conveyor manufacturers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mobile Telescopic Conveyors</h3>
+        <p>Mobile telescopic conveyors mount on casters or wheels and move between dock doors as needed. A facility with 20 dock doors but only 5 active loading operations at a time uses 5-6 mobile telescopic conveyors that move to whichever doors are active. This is more cost-effective than installing a fixed conveyor at every dock door. Mobile units include onboard power (typically 480V three-phase) and connect to dock-level power outlets.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- How It Works -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Operation</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Telescopic <span class="text-accent">Conveyors Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Extension Mechanism</h3>
+        <p>Nested conveyor sections slide on linear bearings or roller guide rails. An electric or hydraulic drive powers the extension and retraction. Two-section designs extend to approximately 2x the retracted length. Three-section designs extend to approximately 3x. A standard configuration: retracted length 12 feet, extended length 45 feet (3 sections, each adding approximately 11 feet). Extension speed is typically 10-30 feet per minute, allowing the operator to advance the conveyor as the trailer fills.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Loading Operation</h3>
+        <p>For truck loading, the telescopic conveyor starts fully extended, with the discharge end at the trailer nose. Workers or automated systems place products on the dock-end infeed. Products travel the belt to the trailer end where a worker stacks them. As the trailer fills from nose to tail, the operator retracts the conveyor progressively to keep the discharge point near the stacking face. This eliminates the need for workers to carry products deep into the trailer.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Unloading Operation</h3>
+        <p>For truck unloading, the conveyor starts retracted. Workers at the trailer nose place products onto the belt, which transports them back to the dock. As the trailer empties from tail to nose, the operator extends the conveyor deeper into the trailer. This eliminates the long carry distance from trailer nose to dock that causes worker fatigue and injury in manual unloading operations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Height Adjustment</h3>
+        <p>Most telescopic conveyors include height adjustment at the dock end and/or trailer end. Hydraulic or electric actuators raise or lower the conveyor surface to match the trailer floor height, which varies by trailer type (dry van, reefer, container chassis). Some units also tilt the conveyor to maintain a slight decline toward the dock during unloading for gravity assist.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-20 bg-surface" aria-labelledby="benefits-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Benefits</div>
+      <h2 id="benefits-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Productivity <span class="text-accent">Benefits</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Metric</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Manual Handling</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">With Telescopic Conveyor</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Loading Time (53' trailer)</td>
+              <td class="py-3 pr-4">45-90 min</td>
+              <td class="py-3">20-45 min</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Workers Required</td>
+              <td class="py-3 pr-4">3-5 workers</td>
+              <td class="py-3">1-2 workers</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Walk Distance per Trailer</td>
+              <td class="py-3 pr-4">2-4 miles</td>
+              <td class="py-3">Under 0.5 miles</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Damage Rate</td>
+              <td class="py-3 pr-4">2-5%</td>
+              <td class="py-3">Under 1%</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Ergonomic Injury Risk</td>
+              <td class="py-3 pr-4">High (lifting, carrying)</td>
+              <td class="py-3">Low (belt does the carrying)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VERIFY: Loading time and worker reduction figures against Caljan, FMH published case studies -->
+      <p class="text-sm text-ink-muted mt-4">Figures represent typical ranges. Actual results depend on product weight, trailer configuration, and workforce. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Telescopic Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Distribution center outbound shipping:</strong> Telescopic conveyors load filled cases from <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a> into trailers at shipping docks. Cases arrive on a conveyor trunk line from the pack-out area, transfer onto the telescopic conveyor, and travel into the trailer where a worker stacks them. This is the most common telescopic conveyor application.</p>
+
+        <p><strong class="text-ink">Parcel carrier hubs:</strong> UPS, FedEx, and USPS facilities use boom and telescopic conveyors at every inbound and outbound dock door. Parcel carriers process thousands of packages per hour. Telescopic conveyors handle the high-volume, mixed-product stream of packages, polybags, and envelopes that flow through sort centers.</p>
+
+        <p><strong class="text-ink">Manufacturing inbound receiving:</strong> Telescopic conveyors unload incoming raw materials, components, and packaging supplies from delivery trucks. Workers at the trailer nose place cases onto the belt, and the conveyor transports them to the dock for palletizing or direct transport to production. Inbound receiving is often overlooked for automation but offers significant labor savings.</p>
+
+        <p><strong class="text-ink">Container unloading:</strong> Shipping containers (20' and 40') unload at port facilities, intermodal yards, and destination warehouses. Telescopic conveyors extend into the container through the doors. The tight width of a shipping container (7'8" inside) requires narrow-frame telescopic conveyors. Some units mount on tracks alongside the container for precise positioning.</p>
+
+        <p><strong class="text-ink">Postal and e-commerce fulfillment:</strong> E-commerce fulfillment centers use telescopic conveyors to load mixed-size parcels into delivery trailers. The variety of package sizes (small envelopes to large boxes) favors belt telescopic conveyors over roller versions because belts handle all sizes without jamming.</p>
+
+        <p><strong class="text-ink">Agricultural and food loading:</strong> Telescopic conveyors load bags of grain, feed, fertilizer, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food products</a> into trailers. Bagged products weighing 25-100 lbs cause worker fatigue and injury when manually carried into trailers. The telescopic conveyor eliminates the carry distance, and workers simply place bags on the belt at the trailer end.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specification -->
+  <section class="py-20 bg-surface" aria-labelledby="spec-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specification</div>
+      <h2 id="spec-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Specifying Telescopic <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Extension Range</h3>
+        <p>Match the extension range to the longest trailer type the dock handles. A 53-foot trailer requires approximately 45-50 feet of conveyor extension to reach the nose. A 48-foot trailer requires approximately 40-45 feet. Shipping containers require 20-40 feet depending on size. Over-specifying extension adds cost and weight without benefit. Under-specifying forces workers to carry products for the remaining distance.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Width</h3>
+        <p>Belt width must accommodate the largest product while fitting inside the trailer. Standard widths: 18", 24", and 30". Narrow belts (18") fit tight container and trailer interiors. Wide belts (30") handle large cases and reduce the chance of products falling off the belt edges. Belt speed typically ranges from 60 to 120 FPM for manual stacking operations and up to 200 FPM for automated loading systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Fixed vs. Mobile</h3>
+        <p>Fixed installations bolt to the dock floor at a dedicated door. They suit high-volume doors that load/unload continuously throughout the shift. Mobile units roll between doors on casters. They suit facilities with intermittent dock activity across many doors. Mobile units require more setup time per trailer (5-10 minutes to position and connect power) but serve multiple doors with a single investment.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Integration with Dock Systems</h3>
+        <p>Telescopic conveyors integrate with dock levelers, dock shelters, truck restraints, and facility conveyor systems. The conveyor infeed connects to the facility's takeaway conveyor or direct from <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller</a> or <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor</a> trunk lines. Controls interface with warehouse management systems (WMS) for load tracking and door assignment. Safety interlocks prevent conveyor operation while dock doors are closed or truck restraints are disengaged.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a telescopic conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A belt or roller conveyor that extends and retracts to reach into truck trailers, containers, and railcars from the dock. Nested sections slide inside one another, extending from 10-15 feet (retracted) to 40-60 feet (extended). Reduces loading time by 30-50%.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How far can a telescopic conveyor extend?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Most extend 20-60 feet from a retracted length of 10-15 feet. This covers the full depth of a standard 53-foot trailer. Extension range depends on the number of nested sections (2-4 sections). Longer extension needs more sections and heavier construction.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Belt vs. roller telescopic conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt: handles all product shapes (bags, polybags, irregular items), costs more. Roller: handles flat-bottom cases and totes, costs less. Belt versions dominate because dock operations handle mixed product streams. Roller versions suit facilities shipping only uniform cases.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much time does a telescopic conveyor save?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>30-50% reduction in loading/unloading time. Manual loading a 53' trailer: 45-90 minutes. With telescopic conveyor: 20-45 minutes. Also reduces worker count from 3-5 to 1-2 per door and cuts walking distance from 2-4 miles to under 0.5 miles per trailer.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Gravity and powered rollers</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Motor-driven trunk lines</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Buffer before dock loading</p>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Automated Systems</div>
+          <p class="text-sm text-white/60">Full system integration</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

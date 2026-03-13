@@ -1,0 +1,581 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Parts & Replacement", "item": "https://packagingconveyor.com/resources/conveyor-parts/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Parts & Replacement Guide",
+  "description": "Guide to conveyor wear parts and replacement components — rollers, bearings, belts, motors, drives, guards, and sensors. Covers identification, sourcing, replacement intervals, and OEM vs. aftermarket decisions.",
+  "url": "https://packagingconveyor.com/resources/conveyor-parts/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the most common conveyor parts that need replacement?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most frequently replaced conveyor parts are belts (fabric, modular plastic, wire mesh), rollers (gravity, powered, return), bearings (pillow block, flange mount, sealed), and wear strips (UHMW guides and bed plates). These components experience direct product contact, friction, and load stress that cause gradual wear. Motors, drives (VFDs), sensors, and controls components fail less frequently but are more expensive and disruptive to replace. A well-maintained conveyor typically needs belt replacement every 1-5 years, roller and bearing replacement every 3-7 years, and motor replacement every 7-15 years, depending on operating conditions and duty cycle." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy OEM or aftermarket conveyor parts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For standard components like bearings, motors, VFDs, and chain, aftermarket (third-party) parts are typically equivalent to OEM and cost 20-50% less. Major bearing brands (SKF, Timken, NSK), motor manufacturers (Baldor/ABB, WEG, Leeson), and VFD makers (Allen-Bradley, Siemens, ABB) sell the same parts regardless of which conveyor they go into. For proprietary components — custom frame sections, proprietary belt types, specialized rollers, and OEM-specific controllers — buy from the conveyor manufacturer or their authorized parts distributor. Using non-OEM proprietary parts can void warranties and cause fit or performance issues." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I identify the correct replacement part for my conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start with the conveyor's documentation: the parts manual, bill of materials, or maintenance manual should list part numbers for all wear components. If documentation is unavailable, identify the conveyor manufacturer and model from the nameplate, then contact the manufacturer's parts department. For standard components (bearings, motors, belts), measure the physical dimensions and match them to catalog specifications. Take photos of the part, including any stampings, labels, or markings. For belting, note the belt type, width, material, surface pattern, and pitch (for modular plastic or timing belts)." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should conveyor belts be replaced?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt replacement intervals vary widely by belt type, product load, speed, environment, and maintenance quality. Fabric conveyor belts in standard packaging applications typically last 2-5 years. Modular plastic belts last 5-10 years in clean, ambient environments. Wire mesh belts in high-temperature applications (ovens, coolers) may last 1-3 years depending on temperature and chemical exposure. Replace belts proactively when you observe: belt tracking problems that adjustment cannot correct, visible surface wear exposing underlayment or carcass, edge fraying beyond repair, excessive stretch requiring take-up beyond its adjustment range, or cracks and hardening from chemical or UV exposure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy conveyor replacement parts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor parts are available from several channels: the conveyor manufacturer (OEM) for proprietary and standard parts, industrial distributors (Grainger, MSC Industrial, Motion Industries, Applied Industrial Technologies) for standard components, belting specialists (Habasit, Intralox, Gates, Continental) for belt-specific parts, bearing distributors (Motion Industries, Applied, Kaman) for bearings and power transmission, and online marketplaces for common components. For critical or specialized parts, maintain a relationship with your conveyor manufacturer's parts department — they can cross-reference part numbers and suggest alternatives when original parts are discontinued." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Parts & Replacement Guide | PackagingConveyor.com"
+  description="Guide to conveyor parts — rollers, bearings, belts, motors, drives, guards, and sensors. Covers identification, sourcing, replacement intervals, and OEM vs. aftermarket decisions."
+  canonical="https://packagingconveyor.com/resources/conveyor-parts/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Parts & Replacement</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor Parts & <span class="text-accent-bright">Replacement</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Every conveyor has parts that wear out — belts, rollers, bearings, wear strips, motors, and drives all have finite service lives that depend on load, speed, environment, and maintenance. Understanding which parts wear fastest, how to identify correct replacements, where to source them, and when to replace proactively versus reactively reduces unplanned downtime and maintenance cost. This guide covers the major conveyor wear part categories, typical replacement intervals, OEM versus aftermarket sourcing decisions, and how to build a spare parts inventory that balances cost against downtime risk. For information on <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">overall conveyor costs</a> or finding <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">service companies</a> near you, see our related guides.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ BELTING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="belt-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Wear Part #1</div>
+        <h2 id="belt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Conveyor <span class="text-accent">Belting</span>
+        </h2>
+
+        <div class="max-w-4xl mb-10">
+          <p class="text-lg text-ink-muted leading-relaxed mb-6">
+            The belt is the most visible and often the most frequently replaced component of a belt conveyor. Belt type, material, and construction determine its service life, load capacity, and suitability for specific environments. Choosing the correct replacement belt requires matching the original specification — or upgrading to a belt better suited to your current operating conditions.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Applications</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Life</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Wear Indicators</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">PVC/PU Fabric</td>
+                <td class="py-4 pr-4">General packaging, light-duty <a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">product handling</a></td>
+                <td class="py-4 pr-4">2&ndash;5 years</td>
+                <td class="py-4 pr-4">Surface wear, edge fraying, tracking drift, stretch beyond take-up range</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Modular Plastic</td>
+                <td class="py-4 pr-4">Food, beverage, <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery</a>, wet environments</td>
+                <td class="py-4 pr-4">5&ndash;10 years</td>
+                <td class="py-4 pr-4">Broken hinge pins, cracked modules, pitch elongation</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Wire Mesh</td>
+                <td class="py-4 pr-4"><a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">Cooling</a>, baking, frying, high-temp applications</td>
+                <td class="py-4 pr-4">1&ndash;3 years</td>
+                <td class="py-4 pr-4">Wire breakage, edge unraveling, sag between supports, corrosion</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Timing / Positive Drive</td>
+                <td class="py-4 pr-4"><a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyors</a>, precise positioning</td>
+                <td class="py-4 pr-4">3&ndash;7 years</td>
+                <td class="py-4 pr-4">Tooth wear, pitch elongation, belt climbing off sprocket</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Rubber (Heavy-Duty)</td>
+                <td class="py-4 pr-4">Bulk materials, heavy loads, inclined conveyors</td>
+                <td class="py-4 pr-4">3&ndash;10 years</td>
+                <td class="py-4 pr-4">Cover wear, splice failure, carcass damage, hardening/cracking</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Table-Top Chain</td>
+                <td class="py-4 pr-4">Bottling, canning, consumer goods packaging</td>
+                <td class="py-4 pr-4">3&ndash;8 years</td>
+                <td class="py-4 pr-4">Pin wear, link cracking, side-flex joint looseness, chain stretch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="max-w-4xl mt-8">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Belt Sourcing</h3>
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Conveyor belting is one area where aftermarket options are plentiful. Major belting manufacturers — Habasit, Intralox, Forbo-Siegling, Gates, Continental, Volta — sell replacement belts that fit most standard conveyor frames regardless of the conveyor manufacturer. When replacing a belt, measure the exact width, determine the belt type and material, note the surface finish (smooth, rough-top, cleated), and check the splice type (finger, overlap, pin, clipper). For modular plastic belts, match the exact pitch, module width, and hinge rod diameter — modules from different manufacturers are generally not interchangeable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ROLLERS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="roller-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Wear Part #2</div>
+        <h2 id="roller-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Conveyor <span class="text-accent">Rollers</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-6">
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Rollers are the second most commonly replaced conveyor component. They appear in gravity roller conveyors, belt conveyor return and carry idlers, powered roller conveyors (lineshaft, MDR, chain-driven), and accumulation systems. Roller failure typically presents as increased noise, vibration, seizure, or visible flat spots.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Gravity Rollers</h3>
+              <p class="text-ink-muted leading-relaxed mb-2">Steel or aluminum tubes with pressed-in bearings and hex-shaft or spring-loaded axles. Standard diameters: 1.375", 1.9", 2.5", 3.5". Replacement is straightforward — match diameter, between-frame width, axle type, and bearing size. Many suppliers stock standard gravity rollers for same-day or next-day shipment.</p>
+              <p class="text-ink-muted leading-relaxed text-sm">Typical life: 5&ndash;10+ years at moderate loads</p>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Motorized Rollers (MDR)</h3>
+              <p class="text-ink-muted leading-relaxed mb-2">Self-contained motor-in-roller drives used in MDR (motor-driven roller) conveyors. Brands include Interroll, Itoh Denki, TECO, and Dematic. MDR rollers are typically manufacturer-specific — an Interroll MDR roller will not substitute for an Itoh Denki unit. Stock at least one spare MDR per zone to minimize downtime.</p>
+              <p class="text-ink-muted leading-relaxed text-sm">Typical life: 5&ndash;10 years (50,000+ hours rated)</p>
+              <!-- VERIFY: MDR roller rated life — 50,000 hours is commonly cited but varies by manufacturer -->
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Belt Idler Rollers</h3>
+              <p class="text-ink-muted leading-relaxed mb-2">Carry and return idlers support the belt between the head and tail pulleys. They are standard items available from multiple suppliers (Precision Castparts, Superior Industries, Martin Engineering). Match the roller diameter, face width, shaft diameter, and bearing class (CEMA B, C, D, E rating).</p>
+              <p class="text-ink-muted leading-relaxed text-sm">Typical life: 3&ndash;7 years depending on load and speed</p>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Powered Roller (Lineshaft)</h3>
+              <p class="text-ink-muted leading-relaxed mb-2">Rollers driven by a common lineshaft through O-ring or poly-V belts. The rollers themselves are standard, but the spool (drive element) may be manufacturer-specific. O-rings and spool bands are consumables that need replacement every 1&ndash;3 years. Keep a stock of O-rings in the correct size — they are inexpensive and eliminate a common cause of roller stoppage.</p>
+              <p class="text-ink-muted leading-relaxed text-sm">Typical life: 5&ndash;10 years for rollers; 1&ndash;3 years for O-rings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BEARINGS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="bearing-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Wear Part #3</div>
+        <h2 id="bearing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Bearings & <span class="text-accent">Bushings</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-6">
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Bearings support every rotating shaft in a conveyor — head pulleys, tail pulleys, snub rollers, drive shafts, and tensioner shafts. Bearing failure is one of the most common causes of unplanned conveyor downtime. Early signs include increased noise (rumbling, grinding), elevated temperature, vibration, and shaft play. Bearings are almost entirely interchangeable between manufacturers — a 1-inch bore pillow block bearing from SKF, Timken, NTN, or NSK will fit the same mounting position.
+          </p>
+
+          <div class="overflow-x-auto -mx-4 px-4">
+            <table class="w-full text-left border-collapse min-w-[800px]">
+              <thead>
+                <tr class="border-b-2 border-ink">
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Bearing Type</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Common Location</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Life</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Notes</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-muted">
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Pillow Block</td>
+                  <td class="py-4 pr-4">Head/tail pulleys, drive shafts</td>
+                  <td class="py-4 pr-4">3&ndash;7 years</td>
+                  <td class="py-4 pr-4">Most common conveyor bearing; match bore, bolt spacing, and seal type</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Flange Mount</td>
+                  <td class="py-4 pr-4">Tight-space applications, vertical mounting</td>
+                  <td class="py-4 pr-4">3&ndash;7 years</td>
+                  <td class="py-4 pr-4">2-bolt or 4-bolt patterns; used where pillow blocks do not fit</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Take-Up (Slide)</td>
+                  <td class="py-4 pr-4">Belt tensioning positions</td>
+                  <td class="py-4 pr-4">3&ndash;7 years</td>
+                  <td class="py-4 pr-4">Adjustable position for belt tension; match slide rail dimensions</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Sealed (Roller Insert)</td>
+                  <td class="py-4 pr-4">Inside gravity and powered rollers</td>
+                  <td class="py-4 pr-4">5&ndash;10 years</td>
+                  <td class="py-4 pr-4">Pressed into roller tube; replacement usually means replacing the entire roller</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-4 pr-4 font-semibold text-ink">Stainless / Food-Grade</td>
+                  <td class="py-4 pr-4"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food</a> and washdown conveyors</td>
+                  <td class="py-4 pr-4">2&ndash;5 years</td>
+                  <td class="py-4 pr-4">316SS housings, food-grade grease, IP69K sealing; shorter life due to washdown exposure</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-lg text-ink-muted leading-relaxed">
+            <strong class="text-ink">Lubrication is the primary factor in bearing life.</strong> Most conveyor bearing failures result from inadequate or missed lubrication rather than overloading. Establish a lubrication schedule based on the manufacturer's recommendations and operating conditions. Sealed (2RS or 2Z) bearings are pre-lubricated and do not require re-greasing — they are preferred in food and <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a> environments where grease contamination is a concern.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MOTORS & DRIVES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="motor-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Power Components</div>
+        <h2 id="motor-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Motors, Gearmotors & <span class="text-accent">Drives</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Gearmotors</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Most conveyors are driven by AC gearmotors — a standard NEMA or IEC motor coupled to a gear reducer. When a gearmotor fails, you have three options: replace the complete gearmotor unit (fastest), replace just the motor or just the reducer (if one component failed and the other is serviceable), or source an equivalent from a different manufacturer. For direct replacement, match the output shaft size and orientation, mounting dimensions, gear ratio, output speed, and torque rating. Common gearmotor brands in conveyor applications include SEW-Eurodrive, Nord, Bonfiglioli, Baldor/Dodge (ABB), and Sumitomo.
+            </p>
+            <!-- VERIFY: Baldor/Dodge brand status under ABB — confirm current branding -->
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Variable Frequency Drives (VFDs)</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              VFDs control motor speed and are standard on most powered conveyors. VFD failure symptoms include fault codes, erratic speed control, overheating, and failure to start. VFDs are not universal — they must be sized for the motor (HP and voltage) and programmed for the application. However, a VFD from one manufacturer (Allen-Bradley, Siemens, ABB, Yaskawa, Mitsubishi) can generally replace a VFD from another manufacturer if the ratings match, though the programming will need to be reconfigured. Keep the original VFD parameter list on file so a replacement unit can be programmed quickly.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Gear Reducers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Gear reducers (worm, helical, bevel) fail less frequently than motors but are more expensive to replace. Worm gear reducers, common in packaging conveyors for their compact size, have lower efficiency and shorter life than helical reducers. When replacing a gear reducer, match the output shaft size, gear ratio, mounting configuration (foot, flange, shaft-mount), and service factor. If upgrading, consider switching from worm to helical-bevel for improved efficiency and longer life — the energy savings often justify the higher initial cost.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Servo Motors & Drives</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Servo-driven conveyors — common in <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing</a> and <a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">product handling</a> applications — use matched motor-drive pairs that are generally not interchangeable between manufacturers. An Allen-Bradley servo motor requires an Allen-Bradley drive and vice versa. Stock a spare servo motor and drive for each unique size in your system, as lead times for servo equipment can exceed the lead time for standard AC motors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WEAR STRIPS, GUIDES & GUARDS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="wear-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Wear Components</div>
+        <h2 id="wear-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Wear Strips, Guides & <span class="text-accent">Guards</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">UHMW Wear Strips</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Ultra-high molecular weight polyethylene (UHMW) wear strips support the belt on slider-bed conveyors and line the edges of side guides. They are low-cost consumables that should be inspected regularly and replaced when worn below their minimum thickness (typically when the surface groove pattern is no longer visible). UHMW is a commodity material available from multiple plastic suppliers — it does not need to come from the conveyor manufacturer. Cut to size from sheet stock or order pre-cut strips from suppliers like Curbell Plastics, Interstate Plastics, or Professional Plastics.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Side Guides & Lane Dividers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Side guides keep products positioned on the belt and channel them into lanes. Guide rails are typically UHMW, stainless steel, or aluminum with UHMW contact surfaces. Adjustable guides use clamp brackets that slide on cross-bars — when guides become loose or misaligned, check the bracket hardware before assuming the guide itself needs replacement. <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">Spreader conveyors</a> and lane dividers use specialized guide configurations that may be manufacturer-specific.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Safety Guards & Covers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              OSHA requires guarding on conveyor pinch points — nip points between the belt and pulleys, between rollers and the frame, and at drive components. Guards are typically fabricated from perforated metal, expanded metal, or polycarbonate sheet. Replace guards that are damaged, missing, or have been modified with openings that exceed the maximum permissible gap sizes per ANSI/ASME B20.1 (the conveyor safety standard). Guards are not wear parts in the traditional sense, but they are frequently damaged during maintenance access and product jams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SENSORS & CONTROLS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="sensor-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Controls Components</div>
+        <h2 id="sensor-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Sensors & <span class="text-accent">Controls Parts</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-6">
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Sensors and controls components fail less frequently than mechanical wear parts but cause immediate downtime when they do. Common sensor types on conveyors include photoelectric sensors (through-beam, retro-reflective, diffuse), proximity sensors (inductive for metal detection), and encoders (for speed and position feedback on <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a>).
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Photoelectric Sensors</h3>
+              <p class="text-ink-muted leading-relaxed">Common brands: Banner, SICK, Omron, Allen-Bradley, Keyence. Most photoelectric sensors can be cross-referenced between manufacturers by matching sensing mode, range, output type (NPN/PNP, NO/NC), voltage, and connector type. Stock 2&ndash;3 spares of your most common sensor type. Typical life: 5&ndash;10+ years, but they are vulnerable to damage from product impacts and cleaning chemicals.</p>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Proximity Sensors</h3>
+              <p class="text-ink-muted leading-relaxed">Inductive proximity sensors detect metal targets (jam detection, position confirmation). Key specifications: sensing distance, target size, flush/non-flush mounting, output type. Highly interchangeable between manufacturers. Same stocking recommendation as photoelectric sensors. Typical life: 10+ years — they have no moving parts or optics to degrade.</p>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Encoders</h3>
+              <p class="text-ink-muted leading-relaxed">Incremental and absolute encoders provide speed and position feedback. They are less interchangeable than other sensors — match the pulse count (PPR), output type, voltage, shaft size, and mounting configuration. For servo systems, the encoder is matched to the drive and is not cross-manufacturer interchangeable. Stock a spare for each unique encoder type.</p>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">E-Stops & Safety Devices</h3>
+              <p class="text-ink-muted leading-relaxed">Emergency stop buttons, pull-cord switches, safety relays, and light curtains are safety-critical components that must be replaced with equivalent or better-rated devices. Do not substitute a standard relay for a safety relay, or a lower-rated e-stop for a higher-rated one. Safety device replacements should be verified against the original risk assessment documentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ OEM VS AFTERMARKET ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="oem-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Sourcing Strategy</div>
+        <h2 id="oem-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          OEM vs. <span class="text-accent-bright">Aftermarket</span> Parts
+        </h2>
+
+        <div class="max-w-4xl space-y-6">
+          <p class="text-lg text-white/60 leading-relaxed">
+            The OEM vs. aftermarket decision depends on whether the part is proprietary or standard. Most conveyor wear parts are standard industrial components that happen to be installed on a specific brand of conveyor. A few are proprietary to the conveyor manufacturer.
+          </p>
+
+          <div class="overflow-x-auto -mx-4 px-4">
+            <table class="w-full text-left border-collapse min-w-[800px]">
+              <thead>
+                <tr class="border-b-2 border-white/20">
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Part Category</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">OEM Required?</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Aftermarket Available?</th>
+                  <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Recommendation</th>
+                </tr>
+              </thead>
+              <tbody class="text-white/60">
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Bearings</td>
+                  <td class="py-4 pr-4">No</td>
+                  <td class="py-4 pr-4">Yes — SKF, Timken, NTN, NSK all interchangeable</td>
+                  <td class="py-4 pr-4">Aftermarket — match size and type</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Motors</td>
+                  <td class="py-4 pr-4">No</td>
+                  <td class="py-4 pr-4">Yes — match frame, HP, RPM, voltage</td>
+                  <td class="py-4 pr-4">Aftermarket — NEMA frame sizes are standardized</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">VFDs</td>
+                  <td class="py-4 pr-4">No</td>
+                  <td class="py-4 pr-4">Yes — requires reprogramming</td>
+                  <td class="py-4 pr-4">Aftermarket acceptable; keep parameter backup</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Fabric Belting</td>
+                  <td class="py-4 pr-4">No</td>
+                  <td class="py-4 pr-4">Yes — multiple belt manufacturers</td>
+                  <td class="py-4 pr-4">Aftermarket — match material, width, surface</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Modular Plastic Belt</td>
+                  <td class="py-4 pr-4">Usually yes</td>
+                  <td class="py-4 pr-4">Limited — pitch and module must match exactly</td>
+                  <td class="py-4 pr-4">OEM belt manufacturer (Intralox, Habasit, Rexnord)</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">MDR Rollers</td>
+                  <td class="py-4 pr-4">Yes</td>
+                  <td class="py-4 pr-4">No — manufacturer-specific</td>
+                  <td class="py-4 pr-4">OEM only (Interroll, Itoh Denki, etc.)</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Frame Sections</td>
+                  <td class="py-4 pr-4">Yes</td>
+                  <td class="py-4 pr-4">No — proprietary profiles</td>
+                  <td class="py-4 pr-4">OEM only</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 pr-4 font-semibold text-white">Servo Motor/Drive</td>
+                  <td class="py-4 pr-4">Yes (matched pair)</td>
+                  <td class="py-4 pr-4">No — motor-drive pairing is proprietary</td>
+                  <td class="py-4 pr-4">OEM only (same manufacturer and series)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPARE PARTS STRATEGY ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="spares-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Inventory Planning</div>
+        <h2 id="spares-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Spare Parts <span class="text-accent">Strategy</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Critical Spares (Stock On-Site)</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Parts that will shut down the conveyor (and therefore the line) when they fail, and that cannot be sourced locally within a few hours, should be stocked on-site. This typically includes: MDR rollers (one per unique type), servo motors and drives, specialty belting (one roll or set of modules), the PLC CPU and any specialty I/O modules, and any proprietary OEM components with lead times exceeding 48 hours. The investment in critical spares is insurance against downtime — calculate the cost of downtime per hour to justify the inventory value.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Standard Spares (Stock Locally or Regionally)</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Parts that are standard industrial items available from local distributors within 24 hours do not need to be stocked on-site in large quantities. This includes standard bearings, gravity rollers, motors, VFDs, sensors, contactors, and UHMW wear strips. Establish accounts with local industrial distributors (Grainger, Motion Industries, MSC Industrial, Applied Industrial Technologies) and confirm they stock your common sizes. Keep 1&ndash;2 of each common sensor and a few spare bearings on-site for convenience, but do not over-invest in standard parts inventory.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Documentation and Labeling</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Spare parts are only useful if your maintenance team can identify and install them quickly. Label every spare part with the conveyor manufacturer part number, the OEM component part number (bearing model, motor catalog number), the conveyor location where it is used, and the date it was placed in inventory. Maintain a spare parts list — either a spreadsheet or CMMS entry — that cross-references part numbers to conveyor locations and includes the supplier name and reorder information. When a <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">manufacturer</a> discontinues a part, update the cross-reference with the replacement part number.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">FAQ</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Frequently Asked <span class="text-accent">Questions</span>
+        </h2>
+
+        <div class="space-y-4">
+          <details open class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What are the most common conveyor parts that need replacement?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">The most frequently replaced conveyor parts are belts (fabric, modular plastic, wire mesh), rollers (gravity, powered, return), bearings (pillow block, flange mount, sealed), and wear strips (UHMW guides and bed plates). These components experience direct product contact, friction, and load stress. Motors, drives, sensors, and controls components fail less frequently but are more expensive and disruptive to replace. A well-maintained conveyor typically needs belt replacement every 1&ndash;5 years, roller and bearing replacement every 3&ndash;7 years, and motor replacement every 7&ndash;15 years.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              Should I buy OEM or aftermarket conveyor parts?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">For standard components like bearings, motors, VFDs, and chain, aftermarket parts are typically equivalent to OEM and cost 20&ndash;50% less. Major bearing brands (SKF, Timken, NSK), motor manufacturers (Baldor/ABB, WEG), and VFD makers (Allen-Bradley, Siemens, ABB) sell the same parts regardless of which conveyor they go into. For proprietary components — custom frame sections, proprietary belt types, MDR rollers, and OEM-specific controllers — buy from the conveyor manufacturer or their authorized distributor.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How do I identify the correct replacement part for my conveyor?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Start with the conveyor's documentation: the parts manual, bill of materials, or maintenance manual should list part numbers for all wear components. If documentation is unavailable, identify the conveyor manufacturer and model from the nameplate, then contact the manufacturer's parts department. For standard components, measure the physical dimensions and match them to catalog specifications. Take photos of the part, including any stampings, labels, or markings. For belting, note the belt type, width, material, surface pattern, and pitch.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How often should conveyor belts be replaced?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Belt replacement intervals vary by belt type, product load, speed, environment, and maintenance quality. Fabric belts in standard packaging applications last 2&ndash;5 years. Modular plastic belts last 5&ndash;10 years in clean, ambient environments. Wire mesh belts in high-temperature applications may last 1&ndash;3 years. Replace belts proactively when you observe tracking problems, visible surface wear, edge fraying, excessive stretch, or cracks and hardening from chemical or UV exposure.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              Where can I buy conveyor replacement parts?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Conveyor parts are available from the conveyor manufacturer (OEM) for proprietary and standard parts, industrial distributors (Grainger, MSC Industrial, Motion Industries, Applied Industrial Technologies) for standard components, belting specialists (Habasit, Intralox, Gates, Continental) for belt-specific parts, bearing distributors for bearings and power transmission, and online marketplaces for common components. For critical or specialized parts, maintain a relationship with your conveyor manufacturer's parts department.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED RESOURCES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Explore</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Related <span class="text-accent">Resources</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/resources/conveyor-manufacturers/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Manufacturer Directory</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Browse conveyor manufacturers by type — belt, roller, modular plastic, sanitary, and specialty builders.</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Cost Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Seven cost factors that drive conveyor pricing — type, materials, controls, environment, and installation.</p>
+          </a>
+          <a href="/resources/conveyor-companies/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Companies Near You</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">How to find and evaluate conveyor companies and integrators in your region.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</BaseLayout>

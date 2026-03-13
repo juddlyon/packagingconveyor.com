@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Transfer Conveyors", "item": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Pivot Conveyors", "item": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/pivot/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a pivot conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A pivot conveyor changes the direction of product flow by rotating the conveying surface or using multi-directional elements that redirect products without relying on forward momentum. Pivot conveyors include pivot wheel sections, ball transfer tables, and turntable pivots. They handle direction changes from 0 to 360 degrees and can maintain or intentionally change product orientation depending on the type." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a pivot wheel and a ball transfer table?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pivot wheel sections use rows of small wheels that can be rotated to different angles, providing directional conveying along the set wheel angle. Ball transfer tables use omnidirectional ball bearings that allow product movement in any direction simultaneously. Pivot wheels provide more positive directional control. Ball transfers provide more routing flexibility but less positive drive force." }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a turntable pivot instead of a transfer conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use a turntable pivot when the product must be physically rotated (not just redirected), when loads exceed 500 lbs, when direction change angles vary and cannot be fixed, or when the product must exit at angles other than 90 degrees. Turntable pivots are the heaviest-duty pivot option, handling pallet loads up to 10,000 lbs, but have the slowest cycle time (6-12 seconds)." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pivot Conveyors: Pivot Wheel, Ball Transfer & Turntable Systems",
+  "description": "Complete guide to pivot conveyors including pivot wheel sections, ball transfer tables, and turntable pivot systems for multi-directional product routing in packaging.",
+  "url": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/pivot/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Pivot Conveyors: Pivot Wheel, Ball Transfer & Turntable Systems"
+  description="Complete guide to pivot conveyors: pivot wheel sections, ball transfer tables, turntable pivots. Multi-directional routing, load capacity, and selection criteria for packaging."
+  canonical="https://packagingconveyor.com/conveyor-types/transfer-conveyors/pivot/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/transfer-conveyors/" class="hover:text-accent transition-colors">Transfer Conveyors</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Pivot Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Pivot Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Pivot Conveyors: Wheel, Ball Transfer & Turntable
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A pivot conveyor changes product flow direction by rotating the conveying surface or using multi-directional elements that redirect products at any angle. Pivot conveyors include pivot wheel sections, ball transfer tables, and turntable pivots. These systems route products between <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> lines, <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyors</a>, and processing stations in packaging, assembly, and distribution environments where fixed-angle transfers cannot meet routing flexibility requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pivot Wheel Sections -->
+  <article class="py-20 bg-surface" aria-labelledby="pivot-wheel-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Pivot Wheels</div>
+      <h2 id="pivot-wheel-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Pivot Wheel <span class="text-accent">Sections</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Pivot wheel sections use rows of small polyurethane or steel wheels mounted on pivoting axle assemblies. The wheels rotate freely on their axles (providing low-friction conveying), and the axle assemblies pivot to steer product direction. Pivot wheels can be set to a fixed angle for continuous directional conveying or actuated to change angle on command for programmable routing.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Fixed-Angle Pivot Wheels</h3>
+        <p>Fixed-angle pivot wheels are set during installation to the required routing angle (typically 30, 45, or 90 degrees). The wheels remain at that angle permanently. Products arriving on the pivot wheel section follow the wheel angle to the discharge point. Fixed-angle pivot wheels serve the same function as <a href="/conveyor-types/transfer-conveyors/bump-turn/" class="text-accent hover:text-accent-hover font-semibold">bump turns</a> but with lower friction and better small-product handling because the wheels actively guide the product rather than relying on a deflection impact.</p>
+        <p>Fixed pivot wheel sections handle 1-50 lbs per product. They suit light products like cartons, trays, and small cases. The wheels require no power when used in gravity or momentum-fed applications. Powered versions use a belt or drive mechanism beneath the wheels for positive propulsion.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Actuated Pivot Wheels (Pop-Up Wheel Sorters)</h3>
+        <p>Actuated pivot wheels rise above and retract below a roller conveyor surface on command. When retracted, the rollers convey the product straight. When activated, the angled wheels pop up above the rollers and divert the product at the set angle. Pop-up wheel sorters are a high-speed divert mechanism used in <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a> handling 150-300 products per minute.</p>
+        <p>Pop-up wheel sorters handle products from 1 to 75 lbs at line speeds up to 600 FPM. Dematic, Intelligrated (Honeywell), and Bastian Solutions integrate pop-up wheel diverters into their distribution center sortation platforms. The wheels are angled at 30-45 degrees to create a gentle divert trajectory that minimizes product rotation. Multiple pop-up wheel sections along a trunk line each serve a dedicated sort lane.</p>
+        <!-- VERIFY: Pop-up wheel sorter max speed 600 FPM and 150-300 PPM throughput -->
+      </div>
+    </div>
+  </article>
+
+  <!-- Ball Transfer Tables -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="ball-transfer-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Ball Transfer Tables</div>
+      <h2 id="ball-transfer-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Ball Transfer <span class="text-accent">Tables</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Ball transfer tables use a grid of omnidirectional ball bearings (ball transfer units) mounted flush in a flat table surface. Each ball unit contains a large load-bearing ball sitting on a hemispherical cup of smaller support balls. The load ball rotates freely in any direction, allowing products placed on the table to slide in any direction with minimal friction.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Passive Ball Transfer Tables</h3>
+        <p>Passive ball transfer tables rely on manual pushing, gravity tilt, or external conveyors to move products across the ball field. Workers push packages across the table to reorient them, rotate them, or redirect them to different conveyor spurs. Gravity-tilted ball tables use a slight incline (1-3 degrees) to move products from a high side to a low side, with guide rails to control the path.</p>
+        <p>Passive ball transfer tables handle 10-500 lbs per product depending on ball unit capacity. Standard ball transfer units are rated 30-75 lbs each, and the product must span at least 3-4 balls for stable support. Heavy-duty ball units rated 150-500 lbs each handle pallet loads. Omni Metalcraft, Hytrol, and Ashland Conveyor supply ball transfer table sections and individual ball units.</p>
+        <!-- VERIFY: Omni Metalcraft and Ashland Conveyor ball transfer product offerings -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pop-Up Ball Transfers</h3>
+        <p>Pop-up ball transfers mount between <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> rollers and rise above the roller surface when activated. The balls engage the product bottom and allow multi-directional movement. External pushers, guide rails, or downstream conveyors pull the product in the desired direction across the ball field. When deactivated, the balls retract and the rollers convey the product straight.</p>
+        <p>Pop-up ball transfers suit applications where products must route to one of several directions from a single decision point. They handle light loads (under 75 lbs) and provide the most routing flexibility of any <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyor</a> type. However, they lack positive drive — the balls reduce friction but do not propel the product. An external force must move the product across the ball field.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Powered Ball Transfer Modules</h3>
+        <p>Powered ball transfer modules use driven balls that rotate in a controlled direction, providing positive propulsion across the table surface. Interroll and other component manufacturers produce powered ball transfer modules with individually driven balls or zones of balls driven by a common mechanism. Powered ball transfers eliminate the need for external pushers and handle higher throughput than passive ball tables.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Turntable Pivots -->
+  <section class="py-20 bg-surface" aria-labelledby="turntable-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Turntable Pivots</div>
+      <h2 id="turntable-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Turntable <span class="text-accent">Pivot Systems</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A turntable pivot rotates the entire conveyor section (and the product on it) to any desired angle. The product enters the turntable on the onboard conveyor, the turntable rotates to align with the target discharge direction, and the onboard conveyor drives the product off. Turntables handle the heaviest loads and the widest range of rotation angles of any pivot type.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Case-Handling Turntables</h3>
+        <p>Case-handling turntables support 10-500 lbs and rotate in 2-4 seconds for 90-degree turns. The onboard conveyor is typically a short <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller</a> or belt section. A servo motor or gearmotor drives the rotation through a slewing bearing or ring gear. Position sensors and encoders provide angle feedback for precise alignment with discharge conveyors.</p>
+        <p>Case turntables serve applications where the product must physically rotate (barcode to a different side, label face to a scanner) and where the exit direction varies (one of 3-4 discharge paths at different angles). Dorner and mk North America offer compact turntable modules for small-product packaging lines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pallet-Handling Turntables</h3>
+        <p>Pallet turntables support 2,000-10,000 lbs and handle loaded pallets. The onboard conveyor is a <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR (chain-driven live roller)</a> or chain conveyor section. The turntable rotates on a heavy-duty slewing bearing driven by a gearmotor. Rotation time is 4-8 seconds for 90 degrees, longer for 180 or 270 degrees.</p>
+        <p>Pallet turntables serve two functions: direction change and pallet rotation. Direction change routes the pallet to a different conveyor line. Pallet rotation orients the pallet for stretch wrapping (spinning the pallet under a wrap head), label application on a specific face, or pallet pattern orientation for automated storage. Hytrol, Intelligrated, and Dematic integrate pallet turntables into their <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyor systems</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Continuous-Rotation Turntables</h3>
+        <p>Some turntable applications require continuous rotation rather than indexed positioning. Stretch wrap turntables spin the pallet continuously (8-15 RPM) while the stretch film carriage rises and lowers. Inspection turntables rotate the product slowly past fixed cameras or sensors for 360-degree surface inspection. These are not directional routing devices but product processing stations built on turntable platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Pivot Type <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Fixed Pivot Wheel</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Wheel Sorter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Ball Transfer Table</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Case Turntable</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Pallet Turntable</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">50 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">500 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">500 lbs</td>
+              <td class="py-3 font-mono text-sm">10,000 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Angle Range</td>
+              <td class="py-3 pr-4">Fixed (30-90&deg;)</td>
+              <td class="py-3 pr-4">Fixed (30-45&deg;)</td>
+              <td class="py-3 pr-4">Any (0-360&deg;)</td>
+              <td class="py-3 pr-4">Any (0-360&deg;)</td>
+              <td class="py-3">Any (0-360&deg;)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Cycle Time</td>
+              <td class="py-3 pr-4">Continuous</td>
+              <td class="py-3 pr-4 font-mono text-sm">0.5-1 sec</td>
+              <td class="py-3 pr-4 font-mono text-sm">2-5 sec</td>
+              <td class="py-3 pr-4 font-mono text-sm">2-4 sec</td>
+              <td class="py-3 font-mono text-sm">4-12 sec</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Orientation</td>
+              <td class="py-3 pr-4">Rotates</td>
+              <td class="py-3 pr-4">Slight rotation</td>
+              <td class="py-3 pr-4">Maintained</td>
+              <td class="py-3 pr-4">Rotated by table</td>
+              <td class="py-3">Rotated by table</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Light product curves</td>
+              <td class="py-3 pr-4">High-speed sortation</td>
+              <td class="py-3 pr-4">Multi-dir manual routing</td>
+              <td class="py-3 pr-4">Case rotation/routing</td>
+              <td class="py-3">Heavy pallet routing</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Load and speed ratings represent typical ranges. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Pivot Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Manual workstation routing:</strong> Ball transfer tables at manual pack stations allow workers to receive products from one direction, rotate or reposition them for inspection or packing, and push them onto one of several discharge conveyors. The omnidirectional ball surface lets workers handle products freely without lifting. Ergonomic workstations in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a> use ball transfer tables between process steps.</p>
+
+        <p><strong class="text-ink">High-speed sortation diverting:</strong> Pop-up wheel sorters in <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a> divert packages from trunk lines to sort lanes at 150-300 diverts per minute. The wheels pop up, redirect the package at a 30-45 degree angle onto the sort spur, and retract before the next package arrives. Pop-up wheel sorters are a core technology in e-commerce distribution centers handling parcel and small-package sorting.</p>
+
+        <p><strong class="text-ink">Pallet direction change and rotation:</strong> Pallet turntables in <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet handling systems</a> rotate loaded pallets for stretch wrapping, reorient pallets for label application, and route pallets between multiple conveyor lines. A turntable at a conveyor intersection serves 2-4 discharge directions from a single mechanism.</p>
+
+        <p><strong class="text-ink">Assembly line indexing:</strong> Turntable pivots in assembly lines rotate workpieces to present different faces to sequential assembly stations. The turntable indexes 90 or 180 degrees between stations, allowing fastening, welding, or inspection on multiple product faces without manual repositioning.</p>
+
+        <p><strong class="text-ink">Multi-directional <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> release:</strong> Ball transfer sections at the end of accumulation lanes allow products to release in any direction. Products accumulated in queue release onto the ball section and get pushed or guided to the next available downstream conveyor. This provides flexible routing when downstream conditions change dynamically.</p>
+
+        <p><strong class="text-ink">Shipping and receiving staging:</strong> Ball transfer tables in shipping areas allow workers to slide packages from one position to another for manifesting, labeling, and loading. Packages arrive on a conveyor, transfer onto the ball table, get processed, and slide onto the outbound conveyor or directly into a truck.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Pivot Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Routing flexibility requirements define the type.</strong> Fixed direction changes (always 90 degrees to the same lane) use pivot wheels or <a href="/conveyor-types/transfer-conveyors/bump-turn/" class="text-accent hover:text-accent-hover font-semibold">bump turns</a>. Variable direction changes (different angles, different lanes each time) use ball transfers or turntables. High-speed automated diverting uses pop-up wheel sorters.</p>
+
+        <p><strong class="text-ink">Load weight narrows options quickly.</strong> Under 75 lbs: any pivot type works. 75-500 lbs: ball transfer tables or case turntables. Over 500 lbs: pallet turntables with heavy-duty slewing bearings and CDLR onboard conveyors.</p>
+
+        <p><strong class="text-ink">Throughput drives the speed requirement.</strong> Pop-up wheel sorters handle the highest throughput (150-300 per minute). Pivot wheel sections handle continuous flow at 60-200 FPM. Ball transfer tables suit low-throughput manual operations. Turntables are the throughput bottleneck (6-15 cycles per minute for cases, 4-8 for pallets).</p>
+
+        <p><strong class="text-ink">Automation level sets the control complexity.</strong> Passive ball tables and fixed pivot wheels need no controls. Pop-up wheel sorters require PLC integration, barcode scanning, and real-time routing logic. Turntables need servo or VFD position control with encoder feedback. Match the control complexity to your existing <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automation infrastructure</a>.</p>
+
+        <p><strong class="text-ink">Product orientation behavior matters.</strong> Pivot wheels and bump turns rotate the product. Ball transfers maintain orientation (the product slides without rotating). Turntables rotate the product by the table rotation angle. Select based on whether orientation change is acceptable, desired, or prohibited for downstream operations like <a href="/conveyor-types/diverting-merging/" class="text-accent hover:text-accent-hover font-semibold">merging and sorting</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a pivot conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A pivot conveyor changes product direction using multi-directional elements or a rotating conveyor surface. Types include pivot wheels, ball transfer tables, and turntable pivots. See our <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyor guide</a> for all direction-change methods.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a pivot wheel and a ball transfer?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Pivot wheels are angled wheels that guide products in a set direction. Ball transfers are omnidirectional ball bearings that allow movement in any direction. Pivot wheels give more directional control. Ball transfers give more routing flexibility but need external force to move the product.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            When should I use a turntable instead of a transfer?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Use a turntable when the product must physically rotate, loads exceed 500 lbs, direction angles vary, or exits are at angles other than 90 degrees. Turntables handle up to 10,000 lbs but cycle slower (6-12 seconds). Pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain transfers</a> are faster for fixed 90-degree routing.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">All direction-change methods</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/bump-turn/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Bump Turns</div>
+          <p class="text-sm text-white/60">Simpler passive direction changes</p>
+        </a>
+        <a href="/conveyor-types/diverting-merging/sortation/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Sortation Systems</div>
+          <p class="text-sm text-white/60">Pop-up wheel sorter details</p>
+        </a>
+        <a href="/conveyor-types/cdlr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">CDLR Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty turntable onboard</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

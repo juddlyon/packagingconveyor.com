@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Tabletop Chain Conveyors", "item": "https://packagingconveyor.com/conveyor-types/tabletop-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a tabletop chain conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A tabletop chain conveyor uses a flat-top plastic or stainless steel chain as the conveying surface instead of a belt or rollers. The chain consists of interlocking links that form a smooth, rigid surface. Tabletop chains run on wear strips inside an aluminum or stainless steel frame. They excel at handling bottles, cans, cartons, and containers through curves, straight runs, and multi-level layouts. Tabletop conveyors are the dominant technology in beverage, dairy, pharmaceutical, and personal care packaging lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between straight-running and side-flexing tabletop chain?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Straight-running tabletop chain only travels in straight lines. Side-flexing tabletop chain has articulating links that allow the chain to navigate horizontal curves. Side-flexing chains turn corners as tight as 2x the chain width radius. This eliminates the need for separate transfer points at every direction change, reducing cost and product handling. Side-flexing chains are standard in beverage and dairy lines where layouts require multiple turns." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a mat top conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A mat top conveyor uses a modular plastic belt made of interlocking molded modules connected by hinge rods. Mat top belts are wider than tabletop chains and provide a continuous surface similar to a belt conveyor but with the positive-drive advantages of a chain. Mat top conveyors handle heavier loads (cases, trays, totes) than tabletop chains and suit applications where a wide, flat conveying surface is needed. Intralox, Rexnord, and Habasit manufacture mat top belt systems." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you choose between tabletop chain and belt conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose tabletop chain when the layout requires horizontal curves, when you need positive chain drive (no belt slip), when conveying bottles or cans through filling and packaging lines, or when you need easy chain replacement. Choose belt conveyors when the layout is straight only, when product needs a soft or cushioned surface, when conveying flat or irregular items that ride better on a continuous belt, or when cost is the primary concern. Tabletop chain costs more per foot but eliminates transfers at curves." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tabletop Chain & Mat Top Conveyors: Side-Flexing, Straight-Run & Multi-Flex",
+  "description": "Complete guide to tabletop chain and mat top conveyors: straight-running, side-flexing, and multi-flex configurations. Bottle, can, and carton handling for beverage, dairy, and pharmaceutical lines.",
+  "url": "https://packagingconveyor.com/conveyor-types/tabletop-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Tabletop Chain & Mat Top Conveyors: Side-Flexing, Straight-Run & Multi-Flex"
+  description="Complete guide to tabletop chain and mat top conveyors: straight-running, side-flexing, multi-flex. Bottle, can, carton handling for beverage, dairy, and pharmaceutical packaging lines."
+  canonical="https://packagingconveyor.com/conveyor-types/tabletop-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Tabletop Chain Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Tabletop Chain & Mat Top Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Tabletop Chain & Mat Top Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A tabletop chain conveyor uses interlocking flat-top links &mdash; plastic or stainless steel &mdash; to form a smooth, rigid conveying surface that navigates straight runs and horizontal curves without transfers. Side-flexing tabletop chains make tight turns, eliminating the transfer points that cause jams and product damage in bottle, can, and carton handling. Tabletop chain and mat top conveyors dominate beverage, dairy, pharmaceutical, and personal care <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a> where products must travel complex layouts through fillers, cappers, labelers, and case packers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chain Types -->
+  <article class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Chain Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Tabletop Chain <span class="text-accent">Configurations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Straight-Running Chain</h3>
+        <p>Straight-running tabletop chain travels in straight lines only. The links interlock rigidly and do not articulate laterally. Straight-running chains cost less than side-flexing chains and suit layouts with only straight conveyor sections. Direction changes require right-angle <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyors</a> or dead plates between separate straight sections. Straight-running chain widths range from 3.25" to over 24" in single-strand and multi-strand configurations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Side-Flexing Chain</h3>
+        <p>Side-flexing tabletop chain articulates laterally, allowing the chain to navigate horizontal curves. The link design includes a pivot feature that permits each link to angle relative to adjacent links. Minimum curve radius depends on chain width &mdash; typically 1.5x to 2.5x the chain width. A 4.5"-wide side-flexing chain turns a 9" inside radius. This eliminates transfers at corners, reducing jams, product damage, and floor space. Rexnord (Rex), Regal Rexnord, and Intralox manufacture side-flexing tabletop chains.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Multi-Flex Chain</h3>
+        <p>Multi-flex chain flexes both horizontally (side-flex) and vertically, allowing the chain to navigate curves, inclines, and declines in a single continuous run. This eliminates separate incline and curve sections. Multi-flex chains suit compact multi-level layouts where products must travel up, around, and down through processing equipment. Rexnord's MatTop and Intralox's Series configurations include multi-flex options.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mat Top (Modular Belt)</h3>
+        <p>Mat top conveyors use wider modular plastic belts made of interlocking injection-molded modules connected by hinge rods. Mat top belts range from 6" to over 60" wide, providing a flat surface for cases, trays, totes, and larger products. Mat top belts offer positive sprocket drive (no slip), easy module replacement (swap individual damaged modules), and surface options including flat, raised-rib, non-slip, and perforated. Intralox, Habasit, and Rexnord are leading mat top belt manufacturers.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Material Options -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="material-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Materials</div>
+      <h2 id="material-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Chain Material <span class="text-accent">Options</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Temperature Range</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Limitations</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Acetal (POM)</td>
+              <td class="py-3 pr-4">-40&deg;F to 180&deg;F</td>
+              <td class="py-3 pr-4">General packaging, dry environments</td>
+              <td class="py-3 pr-4">Not FDA for direct food contact</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Polypropylene (PP)</td>
+              <td class="py-3 pr-4">32&deg;F to 200&deg;F</td>
+              <td class="py-3 pr-4">Chemical resistance, food contact</td>
+              <td class="py-3 pr-4">Lower strength than acetal</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Polyethylene (PE)</td>
+              <td class="py-3 pr-4">-60&deg;F to 160&deg;F</td>
+              <td class="py-3 pr-4">Low-friction, FDA food contact</td>
+              <td class="py-3 pr-4">Lower wear resistance</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Stainless Steel</td>
+              <td class="py-3 pr-4">-100&deg;F to 800&deg;F+</td>
+              <td class="py-3 pr-4">Ovens, pasteurizers, washdown</td>
+              <td class="py-3 pr-4">Heavier, higher cost</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Nylon (PA)</td>
+              <td class="py-3 pr-4">-40&deg;F to 220&deg;F</td>
+              <td class="py-3 pr-4">High-strength, wear-resistant</td>
+              <td class="py-3 pr-4">Absorbs moisture, swells</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">See <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel conveyor guide</a> for alloy details. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Tabletop Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Beverage bottling lines:</strong> Tabletop chains are the standard conveyor between fillers, cappers, labelers, and case packers in beverage plants. Side-flexing chains route bottles through complex floor plans with multiple turns. Stainless steel chains handle pasteurizer tunnel heat. Low-friction plastic chains reduce noise in high-speed bottle lines running 500-2,000 bottles per minute.</p>
+
+        <p><strong class="text-ink">Dairy and juice:</strong> Tabletop chains transport milk cartons, juice bottles, and yogurt cups through filling, sealing, coding, and case packing. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary chain designs</a> with flush surfaces and open hinge areas allow thorough CIP cleaning. PP and PE chain materials resist the acidic and alkaline cleaning chemicals used in dairy sanitation.</p>
+
+        <p><strong class="text-ink">Pharmaceutical packaging:</strong> Tabletop chains convey bottles, vials, blisters, and cartons through pharmaceutical packaging lines. The smooth, stable surface prevents container tipping. Controlled accumulation zones use <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure</a> principles on tabletop chains by controlling motor zones independently. Cleanroom-compatible chain materials support cGMP environments.</p>
+
+        <p><strong class="text-ink">Can handling:</strong> Empty and filled aluminum and steel cans ride tabletop chains through filling, seaming, coding, and packing operations. The flat chain surface provides stable support for tall, light empty cans that tip easily on roller conveyors. Magnetic inserts in the chain hold steel cans during incline transport.</p>
+
+        <p><strong class="text-ink">Carton and case handling:</strong> Mat top conveyors transport folded cartons, filled cases, and trays between forming, filling, sealing, and palletizing equipment. The wider mat top surface handles cartons up to 24"+ wide. Raised-rib surfaces prevent carton sliding on inclines. <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating and laning</a> operations use multiple parallel mat top lanes to organize products before case packing.</p>
+
+        <p><strong class="text-ink">Personal care and cosmetics:</strong> Tabletop chains handle bottles, tubes, jars, and compacts through filling, capping, labeling, and cartoning. The layouts typically involve many direction changes in compact floor plans, making side-flexing chain essential. Multi-flex chains handle elevation changes between equipment platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain Pull & Length Limits</h3>
+        <p>Every tabletop chain has a maximum allowable chain pull (tension) that limits the total conveyor length per drive. Longer runs, heavier loads, and tighter curves increase chain pull. Exceeding maximum chain pull causes chain stretch, premature wear, and drive overload. Typical maximum conveyor lengths per drive range from 50 feet (heavily loaded, multiple curves) to 200+ feet (lightly loaded, straight). Chain manufacturers publish chain pull calculation tools.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Curve Design</h3>
+        <p>Side-flexing curves increase chain pull significantly compared to straight runs. The chain must overcome additional friction from the inside-edge guide and the differential speed between the inner and outer chain edges. Larger radius curves generate less friction than tight curves. Curve wear strips should be low-friction UHMW-PE material. Multiple tight curves in sequence may require intermediate drives to keep chain pull within limits.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Lubrication & Wear</h3>
+        <p>Tabletop chains ride on UHMW or HDPE wear strips. The chain-to-wear-strip interface generates friction that determines chain pull, wear rate, and noise level. Dry-running chains use self-lubricating chain materials (typically acetal with internal lubricant additives). Wet-running chains use spray lubrication (food-grade silicone or soap solution) to reduce friction and noise in high-speed beverage lines. Over-lubrication causes product contamination and floor hazards. Under-lubrication accelerates chain and wear strip life.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Noise Reduction</h3>
+        <p>Tabletop chain conveyors in bottling plants generate significant noise (85-100+ dBA) from chain-on-wear-strip friction, product-on-chain contact, and container-to-container contact. Noise reduction strategies include: low-noise chain designs with built-in dampening, proper lubrication, slower belt speeds through <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> zones, noise-dampening guide rail materials, and acoustic enclosures around high-noise sections.</p>
+        <!-- VERIFY: Noise level range 85-100+ dBA for bottling line tabletop chains -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface" aria-labelledby="maint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Maintenance <span class="text-accent">Guide</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Chain tension:</strong> Check chain tension weekly. Tabletop chains stretch over time from wear at hinge points. Excess slack causes chain ride-up on sprockets, tracking problems, and jamming at curves. Adjust take-up to maintain proper catenary on the return side. Replace the chain when elongation exceeds manufacturer specifications (typically 2-3% of total length).</p>
+
+        <p><strong class="text-ink">Wear strip replacement:</strong> UHMW wear strips under the chain wear down, increasing friction, chain pull, and noise. Replace wear strips when grooves exceed 1/8" depth or when chain pull increases noticeably. Curve wear strips wear faster than straight-section strips and require more frequent replacement.</p>
+
+        <p><strong class="text-ink">Sprocket inspection:</strong> Worn sprockets cause poor chain engagement, increased noise, and chain jump. Inspect sprocket teeth monthly for wear, chipping, and uneven patterns. Replace sprockets in pairs (drive and idler) to prevent mismatched engagement. Drive sprockets wear faster than idler sprockets.</p>
+
+        <p><strong class="text-ink">Cleaning (food applications):</strong> Tabletop chains in food and beverage plants require daily CIP or manual cleaning. The hinge areas and wear strip channels collect product residue. Hinged side-frames that swing open provide access for cleaning both sides of the chain and the return path. Rexnord and Intralox offer flush-grid and easy-clean chain designs that minimize bacterial harborage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a tabletop chain conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor using flat-top interlocking chain links (plastic or stainless steel) as the conveying surface. Tabletop chains navigate horizontal curves and straight runs without transfers. The dominant technology for bottles, cans, and cartons in beverage, dairy, and pharmaceutical packaging.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Straight-running vs. side-flexing chain?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Straight-running chain travels in straight lines only; direction changes require transfers. Side-flexing chain articulates to navigate horizontal curves with minimum radius of 1.5-2.5x chain width. Side-flexing eliminates transfers at corners, reducing jams and cost. Standard in beverage and dairy lines.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a mat top conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A modular plastic belt made of interlocking molded modules connected by hinge rods. Wider than tabletop chain (up to 60"+). Handles heavier loads like cases, trays, and totes. Positive sprocket drive with swappable modules. Intralox, Habasit, and Rexnord are leading manufacturers.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Tabletop chain vs. belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Choose tabletop chain for curved layouts, positive drive (no slip), and bottle/can handling. Choose belt for straight-only layouts, soft product surfaces, irregular items, and lower cost. Tabletop chain costs more per foot but eliminates transfers and excels at navigating complex packaging line layouts.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Zero-pressure buffering</p>
+        </a>
+        <a href="/conveyor-types/slat-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Slat Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty chain surfaces</p>
+        </a>
+        <a href="/conveyor-types/activated-roller-belt/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Activated Roller Belt</div>
+          <p class="text-sm text-white/60">Diverting and singulation</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary chain systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

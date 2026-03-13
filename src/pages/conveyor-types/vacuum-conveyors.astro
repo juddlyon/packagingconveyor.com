@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Vacuum Conveyors", "item": "https://packagingconveyor.com/conveyor-types/vacuum-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a vacuum conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum conveyor uses suction (negative air pressure) to hold, lift, or transport materials. Two distinct types exist: vacuum belt conveyors that use suction through a perforated belt to hold flat, thin, or lightweight items against the belt surface during transport; and vacuum tube conveyors (pneumatic vacuum systems) that draw bulk powders and granules through enclosed tubes from source to destination. Both types use vacuum as the holding or motive force." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a vacuum belt conveyor and a vacuum tube conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum belt conveyor has a perforated belt over a vacuum plenum. Suction pulls through the belt perforations to hold flat products (sheets, labels, film, pouches) against the belt surface during transport, especially on inclines and declines where gravity would cause slipping. A vacuum tube conveyor is a pneumatic system that draws bulk materials (powders, granules, pellets) through sealed tubes using a vacuum pump at the destination. They serve completely different applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What products suit vacuum belt conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vacuum belt conveyors handle flat, thin, flexible, and lightweight products that standard conveyors cannot grip reliably. Common products include paper sheets, cardboard blanks, plastic film, labels, foil, fabric, veneer, printed sheets, pouches, sachets, and thin gaskets. They also handle products that must remain flat during transport — anything that would curl, flutter, or fly off a standard belt at speed." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a vacuum tube conveyor work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum pump creates negative pressure at the destination (filter receiver). This pressure differential draws material from the pickup point through sealed tubing to the receiver. Material separates from the airstream in the receiver, falling into the hopper below while air passes through filters and returns to the vacuum pump. Batch-style vacuum conveyors use a timed cycle: vacuum-on draws material, vacuum-off drops material from the receiver into the process equipment below." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vacuum Conveyors: Vacuum Belt & Vacuum Tube Systems",
+  "description": "Complete guide to vacuum conveyors: vacuum belt conveyors for flat/thin product handling and vacuum tube conveyors for bulk powder and granule transport. Sheet, label, film, and powder applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/vacuum-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Vacuum Conveyors: Vacuum Belt & Vacuum Tube Systems"
+  description="Complete guide to vacuum conveyors: vacuum belt for flat/thin products (sheets, labels, film) and vacuum tube for bulk powders and granules. Applications, sizing, and system design."
+  canonical="https://packagingconveyor.com/conveyor-types/vacuum-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Vacuum Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Vacuum Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Vacuum Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A vacuum conveyor uses negative air pressure to hold flat products against a perforated belt surface or to draw bulk materials through enclosed tubing. Vacuum belt conveyors grip sheets, labels, film, and pouches that standard conveyors cannot handle reliably. Vacuum tube conveyors transport powders, granules, and pellets through sealed pipelines to <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging equipment</a>, mixers, and process hoppers. Both types leverage suction as either a holding force or a motive force, solving product handling problems that no other conveyor technology addresses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vacuum Belt Conveyors -->
+  <article class="py-20 bg-surface" aria-labelledby="belt-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Vacuum Belt</div>
+      <h2 id="belt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Vacuum Belt <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">How Vacuum Belt Conveyors Work</h3>
+        <p>A vacuum belt conveyor consists of a perforated belt running over a vacuum plenum (suction box). A blower or vacuum pump removes air from the plenum, creating negative pressure beneath the belt. Atmospheric pressure above the belt pushes products down against the belt surface through the perforations. This suction force holds products firmly against the belt during horizontal transport, incline/decline travel, and even inverted (upside-down) conveying.</p>
+
+        <p>The belt perforation pattern and plenum zone layout control where suction is active. Zones can be turned on and off to grip or release products at specific locations. Variable vacuum levels adjust holding force for different product weights and porosities. Heavier or more porous products require stronger vacuum; lighter or non-porous products need less.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vacuum Belt Applications</h3>
+        <p><strong class="text-ink">Sheet feeding and transport:</strong> Paper sheets, cardboard blanks, corrugated flats, and plastic sheets ride vacuum belt conveyors from cutting stations to printing, folding, and converting machines. The vacuum holds sheets flat, preventing curling, wrinkling, and flutter at high speeds.</p>
+
+        <p><strong class="text-ink">Label and film handling:</strong> Die-cut labels, shrink sleeves, and packaging film segments travel on vacuum belts between cutting, printing, and application stations. The vacuum grips these thin, lightweight materials that would blow off a standard belt. Dorner and mk North America offer vacuum belt conveyors sized for label and film applications.</p>
+
+        <p><strong class="text-ink">Pouch and sachet transport:</strong> Flexible pouches and sachets ride vacuum belts from filling machines to cartoning or case packing. The vacuum prevents pouches from shifting, overlapping, or flying off the belt during transport and accumulation.</p>
+
+        <p><strong class="text-ink">Incline and decline transport:</strong> Vacuum holding lets flat products travel up or down inclines without sliding or tumbling. This replaces <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleated belts</a> for flat products where cleats would damage the product surface.</p>
+
+        <p><strong class="text-ink">Inverted conveying:</strong> Vacuum belts carry products upside-down beneath the belt for underside printing, labeling, inspection, or transferring products over obstacles. The vacuum force overcomes gravity to hold products against the inverted belt surface.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Vacuum Tube Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="tube-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Vacuum Tube</div>
+      <h2 id="tube-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Vacuum Tube <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">How Vacuum Tube Conveyors Work</h3>
+        <p>A vacuum tube conveyor is a <a href="/conveyor-types/pneumatic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pneumatic conveying</a> system that uses vacuum (negative pressure) as the motive force. A vacuum pump at the destination creates suction that draws material from the pickup point through sealed tubing. Material enters the system through a suction nozzle, wand, or hopper adapter with no mechanical feed device required at the source. At the destination, a filter receiver separates material from air. Piab, Volkmann, and Coperion manufacture vacuum tube conveying systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Batch vs. Continuous Operation</h3>
+        <p>Most vacuum tube conveyors operate in batch (cycle) mode. The vacuum pump runs for a set time (5-30 seconds), drawing material into the receiver. Then the vacuum stops, and a discharge valve opens, dropping the collected material into the process hopper below. The cycle repeats. This batch operation provides accurate material metering and prevents material from entering the vacuum pump. Continuous vacuum conveying (used in larger pneumatic systems) uses rotary airlock valves for continuous discharge.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vacuum Tube Applications</h3>
+        <p><strong class="text-ink">Feeding packaging machines:</strong> Vacuum tube conveyors feed powders and granules from bulk storage to filling machines, multi-head weighers, and bagging equipment. The compact receiver mounts directly on the machine hopper, minimizing floor space. Throughputs range from a few hundred pounds to several tons per hour.</p>
+
+        <p><strong class="text-ink">Drum, bag, and bulk bag unloading:</strong> Suction wands draw material from open drums, sacks, and bulk bags (FIBCs) without dust exposure. The operator inserts the wand into the container, and vacuum transfers the material to the destination. This eliminates manual scooping, pouring, and dust-cloud exposure.</p>
+
+        <p><strong class="text-ink">Tablet and capsule transfer:</strong> Pharmaceutical vacuum conveyors gently move finished tablets and capsules between process steps (coating, inspection, bottle filling) with minimal breakage. The low conveying velocity and short distance of vacuum tube systems minimize tablet chipping and dust generation.</p>
+
+        <p><strong class="text-ink">Multi-floor ingredient transfer:</strong> Vacuum tube systems lift ingredients vertically through floors using small-diameter tubes that penetrate walls and floors with minimal construction impact. One vacuum receiver per floor serves multiple machines. This replaces elevators, vertical screws, and bucket elevators in multi-story <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a> and pharmaceutical plants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specification -->
+  <section class="py-20 bg-surface" aria-labelledby="spec-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specification</div>
+      <h2 id="spec-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Specifying Vacuum <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vacuum Belt Sizing</h3>
+        <p>Vacuum belt conveyor sizing depends on product dimensions, weight, porosity, speed, and whether the conveyor runs horizontal, inclined, or inverted. Key specifications include: belt width (must exceed product width by 1-2" per side), belt perforation size and pattern (must not mark the product), vacuum level (typically 2-15" WC for flat products), and blower capacity (CFM must maintain vacuum at the required belt speed).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vacuum Tube Sizing</h3>
+        <p>Vacuum tube conveyor sizing depends on material properties (bulk density, particle size, flowability), required throughput (lbs/hr), conveying distance (horizontal and vertical), and number of bends. Tube diameters range from 1.5" to 4" for common packaging applications. Larger diameters increase throughput but require more powerful vacuum pumps. Manufacturers provide sizing software that calculates tube diameter, pump size, and cycle time for specific material and layout combinations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vacuum Generation</h3>
+        <p>Vacuum belt conveyors use regenerative blowers, side-channel blowers, or dedicated vacuum fans. Vacuum tube conveyors use multi-stage ejector pumps (powered by compressed air), regenerative blowers, or rotary claw pumps. Compressed-air ejectors are simple and maintenance-free but consume plant air. Electric vacuum pumps are more energy-efficient for continuous operation. Piab pioneered multi-stage ejector technology for vacuum conveying.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Material Compatibility</h3>
+        <p>Vacuum belt conveyors suit non-porous or low-porosity flat products. Highly porous products (like corrugated board) require more vacuum to compensate for air leakage through the product. Vacuum tube conveyors suit free-flowing dry bulk solids. Sticky, hygroscopic, or high-moisture materials may bridge in receivers or coat tube walls. Material testing with the conveyor manufacturer is recommended for unfamiliar materials.</p>
+        <!-- VERIFY: Vacuum level range 2-15" WC for vacuum belt conveyors against Dorner/mk published specs -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages & Limitations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="pros-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Evaluation</div>
+      <h2 id="pros-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Advantages & <span class="text-accent">Limitations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Vacuum belt advantages:</strong> Positive grip on flat/thin products. Handles incline, decline, and inverted transport. Prevents flutter and shifting at high speeds. Precise product placement for downstream registration. Adjustable vacuum zones for different product sizes on the same conveyor.</p>
+
+        <p><strong class="text-ink">Vacuum belt limitations:</strong> Higher cost than standard belt conveyors. Blower noise requires acoustic management. Perforated belt replacement is more expensive than standard belt. Not suited for heavy, three-dimensional products where side support is needed. Belt perforations can mark soft products if vacuum is too high.</p>
+
+        <p><strong class="text-ink">Vacuum tube advantages:</strong> Dust-free enclosed transport. Compact footprint &mdash; tubes fit through tight spaces. No mechanical feed device needed at source. Simple, clean design with few moving parts. Inherently safe (leaks draw air in, not blow material out).</p>
+
+        <p><strong class="text-ink">Vacuum tube limitations:</strong> Limited to about 200-300 feet conveying distance. Lower throughput than pressure pneumatic systems. Batch cycling reduces average continuous capacity. Higher energy cost per ton than mechanical conveyors. Material must be free-flowing and dry. Abrasive materials wear tubes and elbows at pickup velocity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vacuum conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Two distinct types: vacuum belt conveyors use suction through a perforated belt to hold flat/thin products (sheets, labels, film); vacuum tube conveyors draw bulk materials (powders, granules) through sealed tubes using a vacuum pump. Both use negative air pressure as the holding or transport force.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Vacuum belt vs. vacuum tube conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Vacuum belt: perforated belt holds flat items against the surface for transport (sheets, labels, pouches). Vacuum tube: sealed pipeline draws bulk powders and granules from source to destination. Completely different applications despite sharing the "vacuum" name.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What products suit vacuum belt conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Flat, thin, flexible, and lightweight products: paper sheets, cardboard blanks, plastic film, labels, foil, fabric, pouches, sachets, and thin gaskets. Products that must remain flat during transport or would blow off a standard belt at speed.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does a vacuum tube conveyor work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A vacuum pump at the destination creates suction that draws material from the pickup point through sealed tubing. Material separates from air in a filter receiver and drops into the process hopper. Most operate in batch cycles: vacuum-on draws material, vacuum-off discharges. See our <a href="/conveyor-types/pneumatic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pneumatic conveyor guide</a> for full system details.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/pneumatic-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pneumatic Conveyors</div>
+          <p class="text-sm text-white/60">Dilute and dense phase systems</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Alternative incline solution</p>
+        </a>
+        <a href="/conveyor-types/vibratory-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Vibratory Conveyors</div>
+          <p class="text-sm text-white/60">Bulk feeding and metering</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">FDA-compliant systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

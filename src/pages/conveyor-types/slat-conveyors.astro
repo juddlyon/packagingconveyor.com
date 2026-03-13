@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Slat Conveyors", "item": "https://packagingconveyor.com/conveyor-types/slat-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a slat conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A slat conveyor uses individual slats (flat plates or bars) attached to two parallel chains to form a moving platform. Unlike a continuous belt, slat conveyors use rigid, discrete slat elements that can be metal, wood, or plastic. The chains ride on tracks and sprockets, pulling the slats in a continuous loop. Slat conveyors handle heavy loads (500-10,000+ lbs per pallet position), resist damage from hot or sharp products, and provide a stable, flat surface for assembly operations, heavy product transport, and pallet handling." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a slat conveyor and a belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Slat conveyors use rigid individual slats attached to chains, while belt conveyors use a continuous flexible belt. Slat conveyors handle heavier loads, resist puncture and heat damage, and provide a rigid surface for assembly fixturing. Belt conveyors cost less, run quieter, handle a wider speed range, and suit lighter products. Slat conveyors are used for pallets, heavy equipment, assembly lines, and hot products. Belt conveyors are used for packages, parts, and bulk materials." }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials are slat conveyors made from?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Slat materials include steel (carbon or stainless for heavy loads and hot products), wood (hardwood for pallets and heavy items, less expensive than steel), aluminum (lightweight, corrosion-resistant for cleanroom and food applications), and UHMW-PE plastic (for gentle product handling, FDA food contact, and noise reduction). The chain and frame are typically steel or stainless steel regardless of slat material." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use slat conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automotive assembly (vehicle body transport, engine/transmission lines), appliance manufacturing (washer, dryer, refrigerator assembly), pallet handling (palletizers, stretch wrappers, storage), food processing (can and bottle handling lines, oven discharge), packaging (heavy case and tray handling), and furniture manufacturing (assembly and finishing lines). Any industry that needs a rigid, heavy-duty conveying surface for large, heavy, or hot products." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Slat Conveyors: Steel, Wood & Hinged Slat Systems",
+  "description": "Complete guide to slat conveyors: steel slat, wood slat, hinged slat, and apron conveyors. Assembly line, heavy product, and pallet handling applications in manufacturing and packaging.",
+  "url": "https://packagingconveyor.com/conveyor-types/slat-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Slat Conveyors: Steel, Wood & Hinged Slat Systems"
+  description="Complete guide to slat conveyors: steel slat, wood slat, hinged slat, and apron types. Assembly line, heavy product, and pallet handling for manufacturing and packaging applications."
+  canonical="https://packagingconveyor.com/conveyor-types/slat-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Slat Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Slat Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Slat Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A slat conveyor uses individual rigid slats attached to two parallel roller chains to form a moving platform that transports heavy products, pallets, and assembled goods. The slats &mdash; steel, wood, aluminum, or plastic &mdash; provide a flat, stable surface that handles loads from 500 to over 10,000 lbs per pallet position. Slat conveyors serve automotive assembly lines, appliance manufacturing, pallet handling, and any application requiring a rigid conveying surface that resists damage from heat, sharp edges, and heavy impact that would destroy a belt conveyor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slat Types -->
+  <article class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Slat Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Slat Conveyor <span class="text-accent">Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Steel Slat Conveyors</h3>
+        <p>Steel slat conveyors use carbon steel or <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel</a> slats bolted to precision roller chains. Steel slats handle the heaviest loads (up to 10,000+ lbs per position), resist hot products (up to 500&deg;F for carbon steel, 800&deg;F for stainless), and withstand impact and abrasion from rough industrial products. Steel slat conveyors serve automotive assembly (chassis, body-in-white transport), appliance manufacturing, and heavy industrial operations. Richards-Wilcox, Pacline, and Webb-Stiles manufacture steel slat conveyor systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Wood Slat Conveyors</h3>
+        <p>Wood slat conveyors use hardwood boards (typically oak or maple) attached to roller chains. Wood slats provide a non-marring surface for finished products, cost less than steel slats, and are easily replaced when damaged. Wood slat conveyors handle pallets, heavy cases, and furniture in manufacturing and warehousing operations. The wood surface grips pallets better than steel, reducing pallet sliding on inclines. Wood slats suit loads up to 2,000-3,000 lbs per position.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Hinged Slat (Apron) Conveyors</h3>
+        <p>Hinged slat conveyors (also called apron conveyors) use overlapping steel plates that hinge at the chain connection points. The overlap prevents material from falling through the gaps between slats. Apron conveyors suit bulk material handling where a rugged, solid surface is needed: hot castings from foundry shakeout, heavy forgings, scrap metal, and demolition debris. They differ from <a href="/conveyor-types/hinged-steel-belt/" class="text-accent hover:text-accent-hover font-semibold">hinged steel belt conveyors</a> by using heavier plates, larger chains, and handling substantially heavier loads per foot.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Plastic / UHMW Slat Conveyors</h3>
+        <p>Plastic slat conveyors use UHMW-PE (ultra-high molecular weight polyethylene) or other engineering plastic slats. Plastic slats provide a gentle, low-friction, non-marring surface for products with finished surfaces. They suit <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> (FDA-approved materials), cleanroom manufacturing, and applications where metal contamination is a concern. Plastic slats are lighter than steel, reduce noise, and resist corrosion from chemicals and washdown.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="compare-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Slat Material <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Steel</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Wood</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Hinged (Apron)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Plastic / UHMW</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Load Capacity</td>
+              <td class="py-3 pr-4">Up to 10,000+ lbs</td>
+              <td class="py-3 pr-4">Up to 3,000 lbs</td>
+              <td class="py-3 pr-4">Up to 5,000+ lbs</td>
+              <td class="py-3">Up to 1,000 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Temperature</td>
+              <td class="py-3 pr-4">Up to 800&deg;F (SS)</td>
+              <td class="py-3 pr-4">Ambient only</td>
+              <td class="py-3 pr-4">Up to 800&deg;F</td>
+              <td class="py-3">Up to 180&deg;F</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Surface</td>
+              <td class="py-3 pr-4">Hard, durable</td>
+              <td class="py-3 pr-4">Soft, non-marring</td>
+              <td class="py-3 pr-4">Overlapping, solid</td>
+              <td class="py-3">Smooth, FDA-safe</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Automotive, assembly</td>
+              <td class="py-3 pr-4">Pallets, furniture</td>
+              <td class="py-3 pr-4">Bulk, foundry, scrap</td>
+              <td class="py-3">Food, cleanroom</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Costs are relative within slat conveyor category. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Slat Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Automotive assembly:</strong> Floor-level slat conveyors transport vehicle bodies through assembly stations where workers install components. The rigid, flat slat surface supports vehicle weight (3,000-6,000 lbs) without deflection. Slat speed synchronizes with the assembly takt time. Inverted power-and-free or overhead monorail systems handle the vertical transport while slat conveyors handle floor-level workstations.</p>
+
+        <p><strong class="text-ink">Appliance manufacturing:</strong> Washers, dryers, refrigerators, and ovens ride slat conveyors through assembly, testing, and packaging stations. The rigid slat surface provides a stable work platform for heavy appliances (150-400 lbs). Workers stand alongside the conveyor and perform assembly tasks as the appliance moves past at walking pace (2-6 FPM).</p>
+
+        <p><strong class="text-ink">Pallet handling:</strong> Slat conveyors transport loaded pallets (up to 3,000-4,000 lbs) between <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizers</a>, stretch wrappers, and dock staging areas. Wood slats grip pallet bottoms to prevent sliding. Slat conveyors handle pallets that are too heavy or too irregular for <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>.</p>
+
+        <p><strong class="text-ink">Beverage can and bottle lines:</strong> Narrow stainless steel slat conveyors (<a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">tabletop chains</a> are closely related) transport cans and bottles through filling, sealing, and pasteurization. The rigid slat surface prevents container tipping compared to rollers. Stainless steel construction handles pasteurizer temperatures and washdown environments.</p>
+
+        <p><strong class="text-ink">Heavy case and tray handling:</strong> Slat conveyors transport heavy cases (50-200 lbs), filled totes, and loaded trays between <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading</a>, wrapping, and palletizing operations. The flat slat surface prevents case snagging and tipping that occur on roller conveyors with heavy, irregularly shaped loads.</p>
+
+        <p><strong class="text-ink">Oven and kiln discharge:</strong> Steel or stainless steel slat conveyors receive hot products from oven and kiln exits. The metal slats withstand temperatures that would melt plastic belts or chains. Slat conveyors transport hot ceramics, baked goods, metal parts, and glass from thermal processing to cooling and inspection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain Selection</h3>
+        <p>The roller chain determines the slat conveyor's load capacity, speed, and service life. Standard precision roller chains (ANSI 60, 80, 100, 120, 140, 160) suit most industrial slat conveyors. Heavy-duty applications use forged-link chains or engineered steel chains with greater ultimate strength. Chain pitch affects slat spacing and conveyor speed. Larger chain pitch allows heavier loads but produces coarser speed increments.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Slat Spacing & Gap</h3>
+        <p>The gap between adjacent slats determines what products the conveyor can carry. Tight gaps (1/8"-1/4") prevent small parts from falling through. Wider gaps (1/2"-1") reduce slat cost and conveyor weight but limit the smallest product size. Overlapping slats (hinged/apron style) eliminate gaps entirely for bulk material handling. Slat spacing must also clear the sprocket wrap at the head and tail ends.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Speed & Indexing</h3>
+        <p>Slat conveyors typically operate at low speeds: 2-30 FPM for assembly applications, 10-60 FPM for material transport. Variable frequency drives (VFDs) provide adjustable speed. For assembly operations, slat conveyors often run in index mode: the conveyor advances one station length, stops for a set work time, then advances again. Index conveyors require precise positioning using encoders and PLC control. See our <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor guide</a> for details.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Return Run</h3>
+        <p>The return run (underside) of a slat conveyor must clear the floor or support structure. Slat conveyors require more vertical space than belt conveyors because the rigid slats do not flex around small-diameter pulleys. Minimum sprocket diameters depend on chain pitch and slat attachment geometry. Floor-mounted (in-floor) slat conveyors use pit-mounted return runs so the top slat surface is flush with the factory floor for ergonomic loading.</p>
+        <!-- VERIFY: Typical speed ranges for assembly slat conveyors against Richards-Wilcox and Pacline published data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface" aria-labelledby="maint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Maintenance <span class="text-accent">Guide</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Chain lubrication:</strong> Roller chains require regular lubrication to prevent pin and bushing wear. Automatic chain lubrication systems apply metered oil or grease to the chain at set intervals. Manual lubrication works for short, accessible conveyors but is inconsistent and labor-intensive. Food-grade applications use H1 food-grade lubricants per NSF/USDA standards.</p>
+
+        <p><strong class="text-ink">Chain elongation:</strong> Chains stretch (elongate) as pins and bushings wear. Measure chain pitch at regular intervals. Replace the chain when elongation exceeds 3% of the original pitch. Excessive elongation causes poor sprocket engagement, chain jump, and uneven slat spacing. Always replace both strands simultaneously to maintain synchronization.</p>
+
+        <p><strong class="text-ink">Slat inspection:</strong> Check slats weekly for damage, warping, loose bolts, and excessive wear. Replace individual damaged slats without removing the entire chain. Wood slats require checking for splitting, moisture damage, and fastener pull-out. Steel slats require checking for bending, weld cracks, and corrosion.</p>
+
+        <p><strong class="text-ink">Track and sprocket wear:</strong> Chain track rails wear from continuous chain contact. Worn tracks cause chain sag, noise, and misalignment. Replaceable wear strips on track rails extend frame life. Sprocket teeth wear from chain engagement. Replace sprockets when tooth profiles show visible wear or the chain no longer seats fully in the tooth pocket.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a slat conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor using individual rigid slats (steel, wood, or plastic) attached to two parallel roller chains. The slats form a flat, stable platform for heavy loads (500-10,000+ lbs). Used in automotive assembly, appliance manufacturing, pallet handling, and any application needing a rigid conveying surface.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Slat conveyor vs. belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Slat conveyors use rigid slats on chains for heavy loads, heat resistance, and assembly fixturing. Belt conveyors use a flexible belt for lighter loads at lower cost. Choose slat for pallets, heavy products, and assembly lines. Choose belt for packages, parts, and general material handling.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What materials are slat conveyors made from?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Steel (carbon or stainless) for heavy loads and heat. Wood (hardwood) for pallets and finished products. Aluminum for cleanroom and lightweight applications. UHMW-PE plastic for food-grade and non-marring applications. Chain and frame are typically steel regardless of slat material.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use slat conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Automotive assembly, appliance manufacturing, pallet handling, food processing, furniture manufacturing, and heavy industrial applications. Any industry needing a rigid, heavy-duty surface for large, heavy, or hot products.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/tabletop-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Tabletop Chain</div>
+          <p class="text-sm text-white/60">Flat-top chain conveyors</p>
+        </a>
+        <a href="/conveyor-types/hinged-steel-belt/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Hinged Steel Belt</div>
+          <p class="text-sm text-white/60">Heavy-duty chip handling</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Alternative for unit loads</p>
+        </a>
+        <a href="/conveyor-functions/indexing-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Indexing Conveyors</div>
+          <p class="text-sm text-white/60">Stop-and-go assembly</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

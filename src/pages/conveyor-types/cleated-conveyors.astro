@@ -1,0 +1,374 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Cleated Belt Conveyors", "item": "https://packagingconveyor.com/conveyor-types/cleated-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a cleated belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A cleated belt conveyor is a belt conveyor with raised profiles (cleats) vulcanized or welded to the belt surface at regular intervals. Cleats prevent products from sliding backward on incline and decline conveyors and compartmentalize bulk materials for metered feeding. Cleat profiles include T-cleats, L-cleats, chevron/V-patterns, and bucket-style cleats. Cleat heights range from 1 inch to over 6 inches depending on the material being conveyed and the incline angle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What angle can a cleated belt conveyor handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cleated belt conveyors handle inclines from 30 degrees up to 90 degrees (vertical) depending on cleat profile and belt design. Standard T-cleats handle 30-45 degree inclines. Chevron and herringbone patterns handle 35-50 degrees. Bucket-style and sidewall cleated belts handle 60-90 degrees. A standard flat belt without cleats begins losing product at inclines above 15-18 degrees." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are cleated belt conveyors food-safe?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Food-grade cleated belt conveyors use FDA-compliant belt materials (polyurethane or silicone), welded cleats (not glued), and stainless steel frames. Leading manufacturers like Dorner, Sparks Belting, and Continental offer FDA/USDA-accepted cleated belts for direct food contact. Welded cleats eliminate crevices that trap bacteria. Blue-colored belts provide visual foreign-body detection in food processing environments." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between cleated and sidewall belt conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cleated belts have raised profiles across the belt width to prevent product backsliding. Sidewall belts add corrugated flexible walls along both belt edges to contain loose materials at steep inclines. A combined sidewall-and-cleat belt handles vertical (90-degree) lifts of bulk materials like grains, powders, and granules. Sidewall belts cost more than simple cleated belts but eliminate spillage at extreme angles." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cleated Belt Conveyors: Cleat Profiles, Incline Handling & Food-Grade Options",
+  "description": "Complete guide to cleated belt conveyors: T-cleat, L-cleat, chevron profiles, incline angle capabilities, food-grade materials, and sidewall belt options for packaging and bulk handling.",
+  "url": "https://packagingconveyor.com/conveyor-types/cleated-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Cleated Belt Conveyors: Cleat Profiles, Incline Handling & Food-Grade Options"
+  description="Complete guide to cleated belt conveyors: T-cleat, L-cleat, chevron profiles. Incline angles up to 90 degrees, food-grade FDA belts, and sidewall configurations for packaging and bulk handling."
+  canonical="https://packagingconveyor.com/conveyor-types/cleated-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Cleated Belt Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Cleated Belt Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Cleated Belt Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A cleated belt conveyor uses raised profiles molded, vulcanized, or welded onto a flat belt to prevent products from sliding backward on inclines and to compartmentalize bulk materials for controlled feeding. Cleat profiles include T-cleats, L-cleats, chevron/V-patterns, and bucket-style formations that handle incline angles from 30 degrees to full vertical. Cleated belts serve industries from <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> to mining, carrying everything from small parts and packaged goods to grain, aggregate, and recycled materials.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Cleats -->
+  <article class="py-20 bg-surface" aria-labelledby="why-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">The Problem</div>
+      <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Why Conveyors Need <span class="text-accent">Cleats</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A standard flat belt conveyor loses traction at incline angles above 15-18 degrees. Products slide, tumble, or roll backward under gravity. Bulk materials cascade down the belt surface. The maximum practical incline for a smooth belt depends on friction between the product and belt surface, but even rough-top belts fail above 25-30 degrees for most products.</p>
+
+        <p>Cleats solve this by creating physical barriers that support products against gravitational pullback. Each cleat acts as a shelf, ledge, or pocket that holds material in place regardless of belt angle. This makes cleated belt conveyors the standard solution for elevation changes in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>, bulk material handling systems, agricultural processing, and recycling operations.</p>
+
+        <p>Beyond incline handling, cleats serve a second function: metering. Evenly spaced cleats create uniform compartments that deliver consistent material volumes to downstream processes. This metering capability makes cleated belts useful as feeders for weighers, fillers, counters, and batching systems, even on horizontal runs.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Cleat Profiles -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="profiles-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Cleat Types</div>
+      <h2 id="profiles-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleat Profile <span class="text-accent">Guide</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">T-Cleats</h3>
+        <p>T-cleats are straight, perpendicular bars that run across the belt width. They form a "T" cross-section when viewed from the side. T-cleats are the most common profile for conveying packaged goods, boxes, bags, and bundles on inclines up to 45 degrees. Heights range from 1 inch to 4 inches. Spacing depends on product size &mdash; typically set so each product rests against one cleat. Dorner, Hytrol, and mk North America offer standard T-cleat belt configurations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">L-Cleats</h3>
+        <p>L-cleats have an angled leading face that creates a scoop or ledge. The angled profile retains loose materials better than straight T-cleats and helps products self-center against the cleat face. L-cleats handle inclines up to 50 degrees for bulk granular materials and work well for round products (bottles, cans, cylindrical containers) that would roll over a flat T-cleat. Sparks Belting and Fenner Dunlop manufacture L-cleat belt configurations for food and industrial applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chevron / V-Cleats</h3>
+        <p>Chevron (herringbone) cleats form V-shaped patterns across the belt surface. The V-pattern channels bulk materials toward the belt center, preventing edge spillage on inclines. Chevron cleats handle 35-50 degree inclines for materials like grain, sand, fertilizer, and wood chips. The V-pattern also provides superior grip for wet or oily materials where straight cleats might allow slippage. Continental and Bridgestone manufacture heavy-duty chevron belts for mining and agricultural applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bucket / Scoop Cleats</h3>
+        <p>Bucket-style cleats form deep pockets or scoops that fully contain material at steep angles. Combined with corrugated sidewalls, bucket cleats handle inclines from 60 to 90 degrees (full vertical). Each pocket acts as an open-top bucket that fills at the bottom, carries material up the incline, and dumps at the top as the belt wraps around the head pulley. This configuration is called a sidewall belt conveyor and serves applications from grain elevators to foundry chip handling.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Custom Profiles</h3>
+        <p>Manufacturers produce custom cleat profiles for specialized applications. Examples include cupped cleats for carrying liquids on inclines, perforated cleats for drainage applications, and ribbed cleats for friction-sensitive products. Custom profiles require minimum order quantities and longer lead times than standard T, L, and chevron options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Incline Angle Table -->
+  <section class="py-20 bg-surface" aria-labelledby="angle-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="angle-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Incline Angle <span class="text-accent">Capabilities</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Type</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Max Incline</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Smooth Flat Belt</td>
+              <td class="py-3 pr-4">15-18&deg;</td>
+              <td class="py-3 pr-4">Flat-bottom packages, cases</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Rough-Top Belt</td>
+              <td class="py-3 pr-4">25-30&deg;</td>
+              <td class="py-3 pr-4">Bags, pouches, textured items</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">T-Cleat Belt</td>
+              <td class="py-3 pr-4">30-45&deg;</td>
+              <td class="py-3 pr-4">Boxes, packages, bundled goods</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">L-Cleat Belt</td>
+              <td class="py-3 pr-4">35-50&deg;</td>
+              <td class="py-3 pr-4">Round products, bulk granules</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Chevron Belt</td>
+              <td class="py-3 pr-4">35-50&deg;</td>
+              <td class="py-3 pr-4">Grain, sand, bulk solids</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Sidewall + Bucket Cleat</td>
+              <td class="py-3 pr-4">60-90&deg;</td>
+              <td class="py-3 pr-4">Vertical lifts, fine materials</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VERIFY: Max incline angles against specific manufacturer spec sheets from Dorner, Continental, Fenner Dunlop -->
+      <p class="text-sm text-ink-muted mt-4">Actual angles depend on material properties, belt speed, and cleat height. Consult manufacturer specifications for your application. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Food-Grade -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="food-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Food & Sanitary</div>
+      <h2 id="food-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Food-Grade Cleated <span class="text-accent">Belts</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Food processing requires cleated belts that meet FDA 21 CFR 177 and USDA standards for direct food contact. Food-grade cleated belts use polyurethane (PU) or silicone belt materials instead of rubber. These materials resist oils, acids, and cleaning chemicals while remaining non-toxic and non-absorbent.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Welded vs. Glued Cleats</h3>
+        <p>Food-grade cleats are thermally welded (heat-sealed) to the belt surface, not glued. Welded cleats create a monolithic bond with no crevice between the cleat base and belt. Glued cleats create a seam where bacteria, moisture, and food particles accumulate. Every major <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary conveyor</a> specification requires welded cleats. Dorner, Intralox, and Volta Belting produce thermally welded food-grade cleated belts.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Detection-Friendly Materials</h3>
+        <p>Blue-pigmented belts are standard in food processing because blue is rare in natural foods, making belt fragments visually detectable if a belt degrades. Metal-detectable belt compounds contain ferrous particles that trigger <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">metal detection and reject systems</a> downstream. X-ray-detectable compounds provide an alternative for facilities using X-ray inspection instead of metal detectors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sanitary Frame Design</h3>
+        <p>The belt is only part of the sanitary equation. Food-grade cleated conveyors need <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel frames</a> (304 or 316 grade), tool-less belt removal for cleaning, sealed bearings, and open-frame construction that eliminates ledges where debris collects. Quick-release belt tensioners allow operators to remove the belt for cleaning in under five minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidewall Belt Conveyors -->
+  <section class="py-20 bg-surface" aria-labelledby="sidewall-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Steep Incline</div>
+      <h2 id="sidewall-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sidewall Belt <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Sidewall belt conveyors combine corrugated flexible sidewalls with cross-cleats to carry bulk materials at angles from 60 to 90 degrees. The sidewalls prevent edge spillage. The cross-cleats create pockets that contain material against gravity. Together, they form a continuous elevator that replaces bucket elevators in many applications.</p>
+
+        <p>Sidewall belts use a base belt with corrugated rubber or polyurethane walls bonded along both edges. The walls flex as the belt wraps around pulleys, then spring back to full height on the carrying run. Cleat spacing and height determine pocket volume and capacity. Continental, Fenner Dunlop, and Bando manufacture sidewall belt systems for applications from grain handling to cement production.</p>
+
+        <p>Compared to <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors</a>, sidewall belt conveyors provide continuous flow rather than batch lifting. Compared to traditional bucket elevators, sidewall belts handle a wider range of material sizes and are easier to clean. The tradeoff is higher belt cost and more complex belt tracking requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Selection -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specification</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Specifying a <span class="text-accent">Cleated Belt</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cleat Height</h3>
+        <p>Cleat height must exceed the product height for individual items, or contain the required material depth for bulk handling. Standard cleat heights: 1", 1.5", 2", 3", 4", and 6". Taller cleats increase belt stiffness, require larger pulley diameters to maintain belt life, and reduce the belt's ability to wrap tightly around end pulleys.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cleat Spacing</h3>
+        <p>For discrete products (boxes, bags, bottles), set cleat spacing to product length plus 1-2 inches clearance. For bulk materials, spacing determines pocket volume. Closer spacing increases volumetric capacity per belt foot. Wider spacing reduces belt cost and allows easier cleaning. Typical bulk handling spacing: 4" to 12" for fine materials, 12" to 24" for coarse materials.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Speed</h3>
+        <p>Cleated belt speeds are generally lower than flat belt speeds because of the impact loading at the feed point and the potential for product bouncing or shifting at high speeds. Typical speeds range from 30 to 150 FPM. Bulk materials on steep inclines run at 50-100 FPM. Packaged goods on moderate inclines run at 80-150 FPM. Higher speeds require smoother transitions and longer infeed zones.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Transition Zones</h3>
+        <p>Every cleated incline conveyor needs horizontal transition zones at the bottom (infeed) and top (discharge). The infeed zone lets products settle against the cleat before the incline begins. The discharge zone levels out before products leave the belt. Without adequate transitions, products shift, tumble, or fail to discharge cleanly. Standard transition length: 2-4 times the product length.</p>
+        <!-- VERIFY: Transition zone length guidelines against Hytrol/Dorner engineering manuals -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleated Belt <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Packaging line elevation changes:</strong> Cleated belt conveyors move packages between floor levels, over equipment, and between mezzanines. A <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> with a filler on the ground floor and a case packer on a mezzanine uses a cleated incline to bridge the height difference without an elevator.</p>
+
+        <p><strong class="text-ink">Agricultural products:</strong> Cleated belts convey fruits, vegetables, grains, and nuts on wash lines, grading lines, and packing lines. Chevron cleats prevent round produce from rolling backward. Food-grade polyurethane belts withstand the water, acids, and sanitizers used in produce processing.</p>
+
+        <p><strong class="text-ink">Recycling and waste handling:</strong> Cleated belts elevate mixed recyclables, shredded materials, and sorted fractions from ground-level collection to elevated sorting platforms. High-durability rubber belts with heavy-duty cleats resist abrasion from glass, metal, and aggregate.</p>
+
+        <p><strong class="text-ink">Parts feeding:</strong> Small manufactured parts (fasteners, stampings, molded components) ride in cleat pockets to orientation stations, counters, and assembly machines. Cleated belt feeders replace <a href="/conveyor-types/vibratory-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vibratory bowl feeders</a> for parts that are too large, too heavy, or too fragile for vibratory feeding.</p>
+
+        <p><strong class="text-ink">Bulk material elevating:</strong> Sidewall cleated belts replace bucket elevators for sand, gravel, cement, grain, and animal feed. They handle higher throughput than bucket elevators and accommodate larger particle sizes. Discharge occurs at any point along the belt route, not just at the top.</p>
+
+        <p><strong class="text-ink">Chip and scrap handling:</strong> Metal chips, turnings, and stamping scrap ride cleated belts from machining centers to chip bins. For heavier metalworking scrap, <a href="/conveyor-types/hinged-steel-belt/" class="text-accent hover:text-accent-hover font-semibold">hinged steel belt conveyors</a> provide greater durability than rubber cleated belts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="maint-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Maintenance</div>
+      <h2 id="maint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleated Belt <span class="text-accent">Maintenance</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Cleated belts require more maintenance attention than flat belts because of the cleats themselves. Key maintenance considerations:</p>
+
+        <p><strong class="text-ink">Cleat wear and damage:</strong> Cleats wear from abrasion, impact, and chemical exposure. Inspect cleats weekly for tears, delamination from the belt surface, and excessive height loss. A cleat that has lost more than 25% of its original height no longer retains product reliably at the design incline angle.</p>
+
+        <p><strong class="text-ink">Belt tracking:</strong> Cleated belts are stiffer than flat belts and resist tracking adjustment. Improper tracking causes edge wear, cleat damage, and belt drift. V-guided belts use a V-shaped profile on the belt underside that rides in a corresponding groove on the slider bed, providing positive tracking without adjustment.</p>
+
+        <p><strong class="text-ink">Cleaning:</strong> Material lodges between cleats and in cleat-to-belt joints. In food applications, cleaning between and behind cleats is critical for sanitation compliance. Tool-less belt removal systems allow operators to pull the belt off the conveyor for full cleaning and inspection. Dorner's AquaPruf and mk North America's CleanLine series feature tool-less belt removal.</p>
+
+        <p><strong class="text-ink">Belt replacement:</strong> Cleated belts are typically endless (spliced into a loop) or joined with mechanical fasteners. Vulcanized splices are strongest but require field vulcanizing equipment. Mechanical fasteners allow faster field replacement but create a bump at the splice that affects product stability. Food-grade applications require welded or hot-press splices with no mechanical fasteners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a cleated belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A cleated belt conveyor has raised profiles (cleats) attached to the belt surface at regular intervals. Cleats prevent products from sliding backward on inclines and compartmentalize bulk materials for metered feeding. Profiles include T-cleats, L-cleats, chevron patterns, and bucket-style formations for angles from 30 to 90 degrees.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What angle can a cleated belt conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Standard T-cleats handle 30-45 degrees. Chevron and L-cleats handle 35-50 degrees. Sidewall belts with bucket cleats handle 60-90 degrees (full vertical). A smooth flat belt loses traction above 15-18 degrees. Actual capability depends on product characteristics, belt speed, and cleat height.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Are cleated belt conveyors food-safe?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Yes. Food-grade cleated belts use FDA-compliant polyurethane or silicone with thermally welded cleats (not glued). Welded cleats eliminate bacterial harborage crevices. Blue belts enable visual fragment detection. Dorner, Intralox, and Volta Belting produce food-grade cleated belts meeting FDA 21 CFR 177 and USDA requirements.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between cleated and sidewall belts?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Cleated belts have raised profiles across the width to prevent backsliding. Sidewall belts add corrugated walls along both edges to contain loose materials at steep angles. Combined sidewall-and-cleat belts handle vertical lifts of bulk materials. Sidewall belts cost more but eliminate spillage at extreme incline angles.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/wire-mesh-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Wire Mesh Conveyors</div>
+          <p class="text-sm text-white/60">Oven, freezer, wash belts</p>
+        </a>
+        <a href="/conveyor-types/hinged-steel-belt/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Hinged Steel Belt</div>
+          <p class="text-sm text-white/60">Heavy-duty scrap handling</p>
+        </a>
+        <a href="/conveyor-types/vibratory-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Vibratory Conveyors</div>
+          <p class="text-sm text-white/60">Parts feeding alternative</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary and FDA-compliant</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

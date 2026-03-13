@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Product Handling", "item": "https://packagingconveyor.com/conveyor-functions/product-handling/" },
+    { "@type": "ListItem", "position": 4, "name": "Spreader Conveyors", "item": "https://packagingconveyor.com/conveyor-functions/product-handling/spreader/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a spreader conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A spreader conveyor distributes products evenly across the belt width from a concentrated infeed stream. Products arriving in a narrow lane or clumped mass spread uniformly across the full belt width for even processing. Spreader conveyors are critical before freezing tunnels, drying conveyors, coating lines, and cooling conveyors where uneven product distribution causes inconsistent treatment — some products over-processed, others under-processed." }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of spreader conveyors are there?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three main types: vibratory spreaders (use oscillation to distribute product laterally), diverging belt spreaders (angled belts push product outward from center), and mechanical plow spreaders (angled deflectors redistribute product across the belt). Vibratory spreaders suit small, loose products (nuts, candies, IQF items). Diverging belt spreaders suit larger products. Plow spreaders suit bulk granular materials." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is even product distribution important for freezing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Freezing tunnels and IQF (individually quick frozen) freezers blow cold air across the belt. Product clumps freeze unevenly — the center of the clump freezes slowly while edges freeze quickly. Uneven freezing causes quality problems: inconsistent texture, partial thawing during the slow-freeze period, and products frozen together (clumping). A spreader conveyor before the freezer ensures single-layer, evenly spaced product for consistent freezing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a vibratory spreader?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vibratory spreader uses controlled oscillation (vibration) to move and distribute products laterally across the belt. An electromagnetic or eccentric-drive vibrator applies tuned frequency and amplitude to the conveyor surface. Product migrates from concentrated infeed toward the edges, spreading evenly across the belt width. Vibratory spreaders handle small, free-flowing products like nuts, candies, shrimp, diced vegetables, and cereal pieces." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Spreader Conveyors: Even Distribution for Freezing, Drying & Coating",
+  "description": "Technical guide to spreader conveyors — vibratory spreaders, diverging belt spreaders, and plow systems for even product distribution before freezing, drying, coating, and cooling.",
+  "url": "https://packagingconveyor.com/conveyor-functions/product-handling/spreader/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Spreader Conveyors: Even Distribution for Freezing, Drying & Coating | PackagingConveyor.com"
+  description="Technical guide to spreader conveyors — vibratory, diverging belt, and plow spreaders for even product distribution before freezing tunnels, drying conveyors, coating lines, and cooling."
+  canonical="https://packagingconveyor.com/conveyor-functions/product-handling/spreader/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/product-handling/" class="hover:text-white/70">Product Handling</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Spreader Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Product Handling</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Spreader <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A spreader conveyor distributes products evenly across the full belt width from a concentrated infeed stream for uniform downstream processing. Products arriving in narrow lanes, clumps, or piles spread into a single, even layer before entering freezing tunnels, drying conveyors, coating lines, or <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling conveyors</a>. Spreader types include vibratory spreaders (oscillation-driven lateral distribution), diverging belt spreaders (angled belt sections push product outward), and mechanical plow spreaders (angled deflectors redistribute flow). Manufacturers like Key Technology, Heat and Control, JBT FoodTech, and Intralox supply spreader conveyor systems for food processing, pharmaceutical, and industrial applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHY SPREADING MATTERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Fundamentals</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why Even Distribution <span class="text-accent">Matters</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Processing equipment — freezers, dryers, coaters, and coolers — applies treatment uniformly across the belt width. If product distribution is uneven (concentrated in the center, thin on the edges), the treatment is uneven: center products receive insufficient treatment (under-frozen, under-dried), edge products receive excessive treatment (over-frozen, over-dried). This creates quality variation, waste, and food safety risks.
+          </p>
+          <p>
+            Specific consequences of uneven distribution:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Freezing:</strong> Clumped products freeze slowly in the center. Partial freezing allows bacterial growth during the slow-freeze period. Products frozen together (clumping) require mechanical separation before packaging, causing breakage. IQF (Individually Quick Frozen) quality requires single-layer, evenly spaced product.</li>
+            <li><strong class="text-ink">Drying:</strong> Over-loaded belt sections dry slowly. Under-loaded sections over-dry. Moisture content variation causes shelf-life variation in the same production batch.</li>
+            <li><strong class="text-ink">Coating:</strong> Chocolate enrobing, seasoning application, and breading systems deposit coating evenly across the belt. Product clumps receive coating only on exposed surfaces — the sides touching other products remain uncoated.</li>
+            <li><strong class="text-ink">Cooling:</strong> <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">Cooling conveyor</a> airflow distributes uniformly. Dense product sections block airflow and cool slowly. Thin sections waste cooling capacity.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPREADER TYPES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Spreader Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Spreader Conveyor <span class="text-accent">Types</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Vibratory Spreaders</h3>
+          <p>
+            Vibratory spreaders use controlled oscillation to move and distribute products laterally across the belt or tray surface. An electromagnetic or eccentric-weight drive applies tuned frequency (typically 20-60 Hz) and amplitude (1-5 mm) to the conveyor surface. Product migrates from concentrated infeed areas toward the edges, spreading across the full width.
+          </p>
+          <p>
+            Vibratory spreaders handle small, free-flowing products: nuts, candies, shrimp, diced vegetables, cereal pieces, and IQF fruits. Key Technology's vibratory conveyors and Eriez vibratory feeders are common in food processing applications. Amplitude and frequency adjustment through VFD control allows operators to tune spreading behavior for different products. <!-- VERIFY: Key Technology and Eriez current product lines for vibratory spreaders -->
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Diverging Belt Spreaders</h3>
+          <p>
+            Diverging belt spreaders use two or more belt sections angled outward from the center. Product arriving at the center of the infeed rides onto the angled belts, which carry it laterally toward the edges. The angle and belt speed determine the rate of spreading. Multiple diverging stages achieve progressively wider distribution.
+          </p>
+          <p>
+            Intralox's Activated Roller Belt (ARB) technology uses angled rollers embedded in a modular belt surface to push product laterally without separate belt sections. The roller angle determines the divert direction and speed. ARB spreaders handle a wider range of product sizes than vibratory spreaders — from small IQF items to larger products like chicken breasts and fish fillets.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Mechanical Plow Spreaders</h3>
+          <p>
+            Plow spreaders use angled deflector plates (plows) mounted above or on the conveyor surface. Product flow contacts the plow surface and redirects laterally. Multiple plows at progressively wider angles achieve full-width distribution. Plows are simple, low-cost, and suitable for robust products that tolerate contact with the deflector surface. Not suitable for fragile products that break on impact.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Oscillating Conveyors</h3>
+          <p>
+            Oscillating (reciprocating) conveyors use a belt or tray that sweeps back and forth laterally while product feeds continuously from above. The sweeping motion distributes product in a uniform layer across the downstream belt. Common at the discharge point of bucket elevators, screw conveyors, and hoppers that deliver product in a concentrated stream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Spreader Technology <span class="text-accent">Comparison</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Technology</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Distribution Quality</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Adjustability</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Vibratory</td>
+                <td class="py-4 pr-4">Small, free-flowing (nuts, diced, IQF)</td>
+                <td class="py-4 pr-4">Excellent</td>
+                <td class="py-4 pr-4">Frequency + amplitude via VFD</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Diverging belt</td>
+                <td class="py-4 pr-4">Small to medium (fillets, breasts, pouches)</td>
+                <td class="py-4 pr-4">Good to excellent</td>
+                <td class="py-4 pr-4">Belt speed + angle</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Mechanical plow</td>
+                <td class="py-4 pr-4">Robust, bulk (not fragile)</td>
+                <td class="py-4 pr-4">Moderate</td>
+                <td class="py-4 pr-4">Plow angle (manual)</td>
+                <td class="py-4 font-mono text-sm">$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Oscillating</td>
+                <td class="py-4 pr-4">Any (from point-source infeed)</td>
+                <td class="py-4 pr-4">Good</td>
+                <td class="py-4 pr-4">Sweep speed + width</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Spreader Conveyor <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <ul class="list-disc list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">IQF freezing:</strong> Spreader conveyors before IQF tunnels ensure single-layer product distribution. JBT FoodTech and GEA supply integrated spreader-freezer systems. Even distribution prevents product clumping and ensures consistent freezing rates.</li>
+            <li><strong class="text-ink">Drying:</strong> Dehydrators and industrial dryers process product evenly across the belt width. Spreaders upstream of the dryer equalize product depth for consistent moisture removal.</li>
+            <li><strong class="text-ink">Coating and seasoning:</strong> Enrobers, breading machines, and seasoning applicators apply coatings uniformly. Spreaders ensure single-layer product presentation for full coating coverage.</li>
+            <li><strong class="text-ink"><a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">Cooling</a>:</strong> <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">Bakery</a> and confectionery cooling conveyors achieve uniform cooling when product distributes evenly across the mesh belt.</li>
+            <li><strong class="text-ink">Optical sorting:</strong> Vision-based sorters (Key Technology VERYX, TOMRA) require single-layer product on the inspection belt. Spreaders upstream achieve the single-layer requirement. <!-- VERIFY: Key Technology VERYX and TOMRA current product names --></li>
+            <li><strong class="text-ink">Inspection:</strong> X-ray and metal detection systems perform best with single-layer product. Clumped or stacked product creates false rejects or missed contaminants. See <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject systems</a> for more on inspection conveyors.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting a <span class="text-accent">Spreader Conveyor</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Spreader selection depends on product characteristics, throughput, and distribution quality requirements:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Product size and fragility:</strong> Small, robust products (nuts, candies) suit vibratory spreaders. Larger or fragile products (fillets, baked goods) need diverging belt or oscillating spreaders. Fragile products cannot tolerate mechanical plow contact.</li>
+            <li><strong class="text-ink">Throughput:</strong> High-throughput lines (tons per hour) need wider belts and more aggressive spreading. Vibratory spreaders scale with belt width. Diverging belt spreaders handle higher volume per foot of width.</li>
+            <li><strong class="text-ink">Distribution uniformity:</strong> IQF freezing and optical sorting demand near-perfect single-layer distribution. Drying and cooling tolerate moderate variation. Match spreader quality to downstream process sensitivity.</li>
+            <li><strong class="text-ink">Sanitary requirements:</strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Food-grade spreaders</a> use stainless steel construction, FDA-compliant belt materials, and designs that facilitate washdown cleaning.</li>
+            <li><strong class="text-ink">Infeed pattern:</strong> Single-lane infeed requires more lateral spreading than wide-lane infeed. Point-source discharge (from a hopper or elevator) needs the most aggressive spreading.</li>
+          </ol>
+          <p>
+            For budgeting, spreader conveyors range from $ (simple plow deflectors) to $$$ (vibratory and diverging belt systems with sanitary construction). See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for general cost factors.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a spreader conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Distributes products evenly across belt width from a concentrated infeed stream. Critical before freezing, drying, coating, and <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling</a> where uneven distribution causes inconsistent processing.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What types of spreader conveyors exist?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Vibratory (oscillation-driven, best for small free-flowing products), diverging belt (angled belts push outward, for larger products), mechanical plow (angled deflectors, low cost), and oscillating (sweeping motion from point-source infeed).</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Why is even distribution important for freezing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Clumped products freeze unevenly — slow freezing in the center allows bacterial growth and causes products to freeze together. IQF quality requires single-layer, evenly spaced product for consistent freeze rates.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vibratory spreader?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Uses controlled oscillation (20-60 Hz) to migrate product laterally from concentrated infeed toward the edges. VFD-adjustable frequency and amplitude. Handles nuts, candies, shrimp, diced vegetables, and IQF items.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

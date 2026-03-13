@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Vibratory Conveyors & Feeders", "item": "https://packagingconveyor.com/conveyor-types/vibratory-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a vibratory conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vibratory conveyor moves material along a trough or tube using controlled vibration instead of a belt, chain, or roller. An electromagnetic, electromechanical, or pneumatic drive generates rapid oscillations (typically 1,800-3,600 cycles per minute) that propel material in micro-hops along the conveying surface. Vibratory conveyors handle bulk solids including powders, granules, pellets, and small parts with gentle, consistent material flow and zero moving parts in the product zone." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a vibratory conveyor and a vibratory feeder?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vibratory conveyor moves material over a distance (typically 3-30 feet). A vibratory feeder meters material at a controlled rate from a hopper or bin onto a conveyor, scale, or process machine. Feeders prioritize volumetric or gravimetric accuracy. Conveyors prioritize throughput and distance. Many systems combine both: a vibratory feeder meters material from a hopper onto a vibratory conveyor that transports it to the next process." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a vibratory bowl feeder?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vibratory bowl feeder is a circular vibratory device that orients and feeds small discrete parts (fasteners, caps, electronic components) single-file to an assembly machine or packaging line. Parts dump into the bowl, and vibration drives them up a helical track inside the bowl. Tooling along the track rejects misoriented parts back into the bowl. Correctly oriented parts exit through a linear track to the downstream machine. Bowl feeders are essential in automated assembly and packaging." }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials can vibratory conveyors handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vibratory conveyors handle a wide range of dry bulk solids including powders, granules, pellets, flakes, crystals, and small discrete parts. They suit food ingredients (sugar, flour, spices, nuts, snack foods), chemicals (pigments, resins, catalysts), pharmaceuticals (tablets, capsules), metal parts (fasteners, stampings), and recycled materials. Materials that are very sticky, wet, or highly cohesive may not flow well on vibratory conveyors without specialized trough treatments." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vibratory Conveyors & Feeders: Electromagnetic, Electromechanical & Bowl Feeders",
+  "description": "Complete guide to vibratory conveyors and feeders: electromagnetic, electromechanical, and natural frequency drives. Bowl feeders, linear feeders, and hopper integration for packaging and bulk handling.",
+  "url": "https://packagingconveyor.com/conveyor-types/vibratory-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Vibratory Conveyors & Feeders: Electromagnetic, Electromechanical & Bowl Feeders"
+  description="Complete guide to vibratory conveyors and feeders: electromagnetic, electromechanical, natural frequency drives. Bowl feeders, linear feeders, hopper systems for packaging and bulk handling."
+  canonical="https://packagingconveyor.com/conveyor-types/vibratory-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Vibratory Conveyors & Feeders</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Vibratory Conveyors & Feeders</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Vibratory Conveyors & Feeders
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A vibratory conveyor moves material along a trough using controlled vibration &mdash; no belt, chain, or rollers contact the product. Electromagnetic, electromechanical, or pneumatic drives generate rapid oscillations (typically 1,800-3,600 cycles per minute) that propel bulk solids in micro-hops along the conveying surface. Vibratory feeders meter material from hoppers at precise rates, while vibratory bowl feeders orient and singulate small parts for automated assembly and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>. Together, vibratory conveyors and feeders handle everything from fine powders to heavy castings across food, pharmaceutical, chemical, and metalworking industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drive Types -->
+  <article class="py-20 bg-surface" aria-labelledby="drive-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Drive Technology</div>
+      <h2 id="drive-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Vibratory Drive <span class="text-accent">Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Electromagnetic Drives</h3>
+        <p>Electromagnetic vibratory drives use an AC-powered electromagnet that attracts and releases a spring-loaded armature at line frequency (3,600 CPM at 60 Hz). The rapid cycling creates high-frequency, low-amplitude vibration. Electromagnetic drives offer instant start/stop, precise amplitude control via voltage adjustment, and no rotating parts. They excel in precision feeding applications where feed rate accuracy within 1-2% is required. Eriez, Syntron (Kadant), and FMC Technologies manufacture electromagnetic vibratory feeders and conveyors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Electromechanical Drives</h3>
+        <p>Electromechanical vibratory drives use rotating eccentric weights on motor shafts to generate vibration. Single-shaft units produce circular vibration. Dual-shaft units with counter-rotating weights produce linear (directional) vibration. Electromechanical drives produce higher amplitudes and greater force output than electromagnetic drives, making them suitable for heavier loads and longer conveying distances. Typical frequencies: 900-1,800 RPM. General Kinematics, Carrier Vibrating Equipment, and JOST manufacture electromechanical vibratory systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Natural Frequency (Tuned) Drives</h3>
+        <p>Natural frequency vibratory conveyors operate at the system's resonant frequency, where spring energy stores and releases with minimal input power. A small drive force sustains large oscillation amplitudes because the system resonates. Natural frequency drives consume 60-80% less energy than brute-force electromechanical drives for the same throughput. They suit long-distance vibratory conveying (10-30+ feet) where energy efficiency matters. Adjusting the spring system tunes the natural frequency to match the drive frequency. General Kinematics' VIBRA-DRUM and Key Technology's Iso-Flo are natural frequency designs.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pneumatic Drives</h3>
+        <p>Pneumatic vibratory drives use compressed air to power a piston or turbine that generates vibration. They suit hazardous environments where electric motors pose ignition risks (grain dust, solvent vapors, combustible powder). Pneumatic drives are also used where washdown requirements make electrical drives impractical. They require compressed air infrastructure and consume more energy than electric drives, so they serve niche applications rather than general-purpose conveying.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Equipment Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="equipment-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Equipment Types</div>
+      <h2 id="equipment-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Vibratory Equipment <span class="text-accent">Categories</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vibratory Bowl Feeders</h3>
+        <p>Bowl feeders orient and singulate small discrete parts for automated assembly and packaging. Parts dump into a round bowl. Vibration drives them up a helical track machined or cast inside the bowl. Tooling along the track (wiper blades, air jets, profile cutouts) rejects misoriented parts back into the bowl. Correctly oriented parts exit through a linear inline track to the downstream machine. Bowl feeders handle fasteners, caps, closures, electronic components, medical device parts, and pharmaceutical capsules. RNA Automation, Performance Feeders, and Hoosier Feeder Company build custom bowl feeders.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Linear Vibratory Feeders</h3>
+        <p>Linear feeders move material in a straight line from a hopper or bin outlet to a conveyor, scale, or process machine. An electromagnetic or electromechanical drive vibrates a trough at a controlled angle that propels material forward. Feed rate adjusts by changing vibration amplitude. Linear feeders meter powders, granules, and small parts with accuracy from 0.5-5% of setpoint. They serve as the interface between bulk storage and downstream processes in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a>, pharmaceutical, and chemical packaging.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vibratory Conveying Troughs</h3>
+        <p>Vibratory troughs transport bulk materials over distances from 3 to 30+ feet. They replace belt conveyors where sanitation, product gentleness, or the need to perform screening/sorting during conveying justifies the higher cost. Troughs come in open and enclosed (tubular) configurations. Stainless steel troughs serve food and pharmaceutical applications. Carbon steel troughs serve mining, aggregate, and recycling. Key Technology, Eriez, and Carrier Vibrating Equipment manufacture vibratory conveying troughs.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vibratory Screeners & Separators</h3>
+        <p>Vibratory screeners combine conveying with size separation. Material travels across a vibrating screen deck, and undersize particles fall through the mesh while oversize particles continue along the deck. Single-deck screeners make one size cut. Multi-deck screeners make multiple cuts simultaneously. Vibratory screeners serve quality control in <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject and inspection</a> operations, removing oversized, undersized, and foreign materials from bulk product streams.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vibratory Hoppers & Bin Activators</h3>
+        <p>Vibratory hoppers and bin activators mount on storage bins and silos to promote material flow from the bin outlet. Many bulk materials (flour, sugar, powders, granules) bridge, rathole, or arch inside bins, stopping flow. Vibratory bin activators break these flow obstructions by vibrating the bin cone or outlet section. They work with vibratory feeders below the bin to create a reliable flow path from storage to process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Drive Type <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Electromagnetic</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Electromechanical</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Natural Frequency</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Frequency</td>
+              <td class="py-3 pr-4">3,600 CPM (60 Hz)</td>
+              <td class="py-3 pr-4">900-1,800 RPM</td>
+              <td class="py-3">System-tuned</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Amplitude</td>
+              <td class="py-3 pr-4">Low (precision)</td>
+              <td class="py-3 pr-4">High (heavy duty)</td>
+              <td class="py-3">High (energy-efficient)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Feed Rate Control</td>
+              <td class="py-3 pr-4">Excellent (&pm;1-2%)</td>
+              <td class="py-3 pr-4">Good (&pm;3-5%)</td>
+              <td class="py-3">Good (&pm;3-5%)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Conveying Distance</td>
+              <td class="py-3 pr-4">Short (1-6 ft)</td>
+              <td class="py-3 pr-4">Medium (3-20 ft)</td>
+              <td class="py-3">Long (10-30+ ft)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Energy Efficiency</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Lower</td>
+              <td class="py-3">Highest</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Cost is relative within vibratory equipment category. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Vibratory Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Food processing and packaging:</strong> Vibratory conveyors distribute snack foods, candy, nuts, cereal, and frozen foods from processing to weighing and packaging machines. The gentle vibration prevents product breakage. Stainless steel troughs meet <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary requirements</a>. Vibratory distribution systems spread product evenly across multi-head combination weighers for accurate fill weights. Key Technology, Heat and Control, and Eriez supply vibratory distribution and conveying systems for food packaging.</p>
+
+        <p><strong class="text-ink">Pharmaceutical tablet handling:</strong> Vibratory feeders meter tablets and capsules from bulk containers to counting machines, bottle fillers, and blister packaging lines. The gentle conveying action minimizes tablet chipping and dust generation. Enclosed vibratory tubes contain dust and prevent cross-contamination between products. Electromagnetic drives provide the precise feed rate control required for pharmaceutical accuracy.</p>
+
+        <p><strong class="text-ink">Parts feeding for assembly:</strong> Bowl feeders orient and singulate caps, closures, fasteners, springs, O-rings, and electronic components for automated assembly machines. Each bowl feeder is custom-tooled for the specific part geometry. A typical automated assembly machine uses multiple bowl feeders &mdash; one for each component type. <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Cleated belt elevators</a> often feed bulk parts into bowl feeder hoppers.</p>
+
+        <p><strong class="text-ink">Mining and aggregate screening:</strong> Vibratory screeners classify crushed stone, sand, gravel, and mineral ore by particle size. Multi-deck vibrating screens produce multiple size fractions in a single pass. Vibratory conveyors feed material to screens and transport separated fractions to stockpiles or downstream processing. General Kinematics, Carrier, and Metso manufacture mining-grade vibratory screening equipment.</p>
+
+        <p><strong class="text-ink">Recycling and waste:</strong> Vibratory conveyors and screeners sort recycled materials by size and density. Vibratory flat-deck separators remove fines (dirt, glass fragments) from mixed recyclables before manual or optical sorting. Vibratory feeders meter shredded material onto sorting conveyors at controlled rates for consistent sorting quality.</p>
+
+        <p><strong class="text-ink">Foundry and metalworking:</strong> Vibratory conveyors transport hot castings, forgings, and stampings from production to cooling and cleaning operations. The vibration action helps remove sand from castings (shakeout). Vibratory troughs can handle temperatures up to 1,000&deg;F with heat-resistant steel construction. General Kinematics manufactures vibratory shakeout and cooling systems for foundries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design & Specification -->
+  <section class="py-20 bg-surface" aria-labelledby="spec-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specification</div>
+      <h2 id="spec-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Material Flow Characteristics</h3>
+        <p>Material bulk density, particle size distribution, moisture content, and angle of repose determine vibratory conveyor sizing and drive selection. Free-flowing materials (dry sand, pellets, sugar) convey easily. Cohesive materials (wet powder, sticky granules) require higher amplitude, steeper trough angles, or anti-stick coatings. Extremely fine powders may aerosolize and require enclosed tubular designs.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Trough Design</h3>
+        <p>Trough cross-sections include flat-bottom, round-bottom, V-bottom, and tubular. Flat-bottom troughs suit general conveying. Round-bottom troughs promote material flow and resist buildup. V-bottom troughs center material flow for discharge to a centered point. Tubular designs enclose the material completely, preventing dust emissions and contamination. Trough width determines volumetric capacity. Standard widths: 4" to 48".</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Isolation & Mounting</h3>
+        <p>Vibratory equipment generates dynamic forces that transmit to the supporting structure if not properly isolated. Spring mounts (coil springs, rubber springs, or air springs) isolate the vibrating trough from the building structure. Isolation efficiency should exceed 90% to prevent building vibration, structural fatigue, and noise. Vibratory conveyors should not be hard-mounted to mezzanines, platforms, or building steel without engineering review of the dynamic loading.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Noise</h3>
+        <p>Vibratory equipment generates 80-95 dBA noise levels depending on frequency, amplitude, material type, and trough construction. Noise-sensitive environments require sound enclosures, dampening trough liners, or lower-frequency natural frequency drives (which produce less noise than high-frequency electromagnetic drives). OSHA requires hearing protection above 85 dBA for 8-hour time-weighted average exposure.</p>
+        <!-- VERIFY: Noise levels 80-95 dBA against Eriez, Syntron, and General Kinematics published specifications -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vibratory conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A vibratory conveyor moves material through controlled vibration instead of belts, chains, or rollers. Electromagnetic, electromechanical, or pneumatic drives generate oscillations that propel bulk solids in micro-hops along a trough. Zero moving parts contact the product, making vibratory conveyors ideal for sanitary and gentle-handling applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Vibratory conveyor vs. vibratory feeder?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor transports material over distance (3-30+ ft). A feeder meters material at a controlled rate from a hopper or bin. Feeders prioritize rate accuracy. Conveyors prioritize throughput and distance. Many systems combine both: a feeder meters from storage, and a conveyor transports to the next process.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vibratory bowl feeder?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A round vibratory device with a helical track inside. Parts dump into the bowl, vibration drives them up the track, and tooling along the track rejects misoriented parts. Correctly oriented parts exit single-file to the downstream machine. Essential for automated assembly of caps, fasteners, and electronic components.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What materials can vibratory conveyors handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Most dry bulk solids: powders, granules, pellets, flakes, crystals, and small parts. Food ingredients, chemicals, pharmaceuticals, metal parts, and recyclables. Very sticky, wet, or highly cohesive materials may require specialized trough coatings or higher-amplitude drives.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/pneumatic-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pneumatic Conveyors</div>
+          <p class="text-sm text-white/60">Enclosed powder transport</p>
+        </a>
+        <a href="/conveyor-types/trough-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Trough Conveyors</div>
+          <p class="text-sm text-white/60">Troughed belt bulk handling</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Incline bulk belt handling</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary food handling</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

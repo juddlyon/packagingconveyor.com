@@ -1,0 +1,435 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Maintenance", "item": "https://packagingconveyor.com/resources/conveyor-maintenance/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Maintenance & Troubleshooting Guide",
+  "description": "Complete conveyor maintenance guide — preventive maintenance schedules, belt tracking, belt tensioning, roller and bearing inspection, lubrication, and troubleshooting for packaging conveyor systems.",
+  "url": "https://packagingconveyor.com/resources/conveyor-maintenance/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should conveyor preventive maintenance be performed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor PM frequency depends on operating hours and environment. General guidelines: Daily — visual inspection, belt tracking check, debris removal. Weekly — belt tension check, roller spin test, sensor function test. Monthly — bearing lubrication (if applicable), motor temperature check, chain/belt wear measurement, guard condition inspection. Quarterly — drive component inspection (gearbox oil, belt/chain tension, sprocket wear), electrical connection tightening. Annually — full system inspection, belt replacement assessment, motor insulation test, control system backup. High-speed and food-grade lines need more frequent PM than low-speed distribution conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I track a conveyor belt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt tracking centers the belt on the conveyor by adjusting the tail pulley, snub rollers, or tracking idlers. Step 1: Run the belt empty. If the belt drifts to one side, adjust the tail pulley on the side the belt is moving toward — tighten that side or loosen the opposite side by 1/4 turn. Step 2: Wait for 3-5 belt revolutions to see the effect. Step 3: Repeat small adjustments until the belt runs centered. Step 4: Load product and verify tracking holds under load. Never make large adjustments — small 1/4-turn changes prevent overcorrection. If tracking does not respond to adjustment, check for belt damage, splice failure, material buildup on pulleys, or conveyor frame misalignment." }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes a conveyor belt to slip?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt slip occurs when the drive pulley cannot transmit enough friction force to move the belt. Five common causes: (1) Insufficient belt tension — the belt does not press firmly against the drive pulley. Increase tension. (2) Wet or contaminated drive pulley — moisture, oil, or product residue on the pulley surface reduces friction. Clean the pulley. (3) Worn drive pulley lagging — the rubber coating on the drive pulley is worn smooth. Replace the lagging. (4) Overloaded belt — the product load exceeds the motor and drive capacity. Reduce load or increase motor size. (5) Seized or dragging roller — a failed roller underneath the belt creates drag that exceeds drive force. Replace the roller." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know when to replace a conveyor belt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Replace a conveyor belt when you observe: (1) Edge fraying extending more than 1/2 inch from the belt edge. (2) Surface cracks or delamination where the cover separates from the carcass. (3) Visible carcass (fabric) through worn cover material. (4) Belt stretch exceeding the tensioner's adjustment range — the take-up is maxed out and the belt still slips. (5) Splice failure — the belt splice opens or delaminates. (6) Hardening or brittleness — the belt surface is no longer flexible. For food-grade belts, also replace when the belt surface cannot be cleaned to sanitary standards or when the belt color has degraded to the point where contamination visibility is compromised." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Maintenance & Troubleshooting Guide | PackagingConveyor.com"
+  description="Complete conveyor maintenance guide — PM schedules, belt tracking, tensioning, roller inspection, lubrication, and troubleshooting for packaging conveyor systems."
+  canonical="https://packagingconveyor.com/resources/conveyor-maintenance/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Maintenance Guide</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Maintenance & <span class="text-accent-bright">Troubleshooting</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor preventive maintenance (PM) extends equipment life, prevents unplanned downtime, and maintains product quality on packaging lines. A structured PM program covers belt tracking, belt tensioning, roller and bearing inspection, lubrication, motor and drive checks, sensor verification, and safety device testing. Neglecting conveyor maintenance causes belt failures, motor burnouts, product contamination, and line stops that cost far more than the PM labor and parts they prevent.
+        </p>
+      </div>
+    </section>
+
+    <!-- PM SCHEDULE -->
+    <section class="py-20 bg-surface" aria-labelledby="schedule-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">PM Schedule</div>
+        <h2 id="schedule-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Preventive Maintenance <span class="text-accent">Schedule</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Daily (Each Shift Start)</h3>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Visual belt inspection — check for cuts, tears, fraying, delamination, and product buildup.</li>
+            <li>Belt tracking check — observe the belt running and verify it stays centered. Correct minor drift immediately.</li>
+            <li>Listen for unusual sounds — grinding, squealing, clicking, or rhythmic thumping indicates bearing failure, belt splice issues, or roller problems.</li>
+            <li>Remove debris from the conveyor frame, belt edges, and underside. Product buildup causes tracking problems and bacterial growth in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food environments</a>.</li>
+            <li>Verify E-stop function — press each E-stop button and confirm the conveyor stops immediately. Release and confirm restart.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Weekly</h3>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Belt tension check — verify 1% sag between supports (push down on the belt; it should deflect about 1% of the center-to-center distance between supports). Adjust tension if necessary.</li>
+            <li>Roller spin test — manually spin each roller (on roller conveyors). Rollers should spin freely with no grinding, wobbling, or stiffness. Replace any roller that does not spin freely.</li>
+            <li>Sensor function test — block each photoeye and proximity sensor and verify the correct PLC response (conveyor stop, zone control, counting).</li>
+            <li>Guide rail alignment — verify guide rails are parallel to the belt and positioned at the correct width for the product. Misaligned guides cause jams and product damage.</li>
+            <li>Clean belt (food environments) — remove the belt (if tool-free) and clean both surfaces. Clean the conveyor frame, pulleys, and slider bed while the belt is removed.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Monthly</h3>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Bearing lubrication — grease bearings per manufacturer's schedule (typically 1-3 pumps of NLGI #2 grease). Over-greasing forces grease into the belt contact area and contaminates product. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> use sealed bearings — no lubrication needed.</li>
+            <li>Motor temperature check — use an infrared thermometer to measure motor housing temperature. Compare to baseline. A motor running significantly hotter than baseline indicates overload, ventilation blockage, or bearing failure inside the motor.</li>
+            <li>Belt/chain wear measurement — measure belt thickness at multiple points and compare to new belt thickness. Replace belt when thickness loss exceeds 30% or when carcass is visible. For chain conveyors, measure chain pitch elongation — replace when elongation exceeds 2-3%.</li>
+            <li>Guard condition — inspect all safety guards and covers. Replace damaged guards immediately. Missing guards are OSHA violations and serious safety hazards.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Quarterly</h3>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Drive inspection — check gearbox oil level and condition (if applicable). Inspect drive belt or chain tension and alignment. Check sprocket and pulley wear (tooth profile should be symmetrical, not hooked).</li>
+            <li>Electrical connections — tighten all terminal connections in the conveyor junction box and motor connections. Vibration loosens connections over time, causing intermittent faults and arcing.</li>
+            <li>VFD parameter verification — compare VFD settings to the commissioning baseline. Unauthorized parameter changes cause speed errors and motor overheating.</li>
+            <li>Conveyor frame alignment — check frame straightness with a string line or laser. Frame deflection causes belt tracking problems that no amount of pulley adjustment can fix.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Annual</h3>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Full system inspection — every component from motor to tail pulley. Document condition with photos. Create a replacement plan for components approaching end-of-life.</li>
+            <li>Belt replacement assessment — evaluate whether the belt will last another year. Schedule proactive replacement during planned downtime rather than waiting for in-service failure.</li>
+            <li>Motor insulation test (megger test) — measures motor winding insulation resistance. Low readings predict motor failure months before it occurs. Replace motors with declining insulation readings.</li>
+            <li>Controls system backup — back up PLC programs, HMI configurations, VFD parameters, and sensor settings. Store backups off-site. A PLC failure without a backup can take days to recover.</li>
+            <li>Safety system audit — verify all E-stops, guard interlocks, light curtains, and safety relays function correctly. Document results per OSHA requirements.</li>
+          </ul>
+          <!-- VERIFY: OSHA safety device inspection documentation requirements for conveyor systems -->
+        </div>
+      </div>
+    </section>
+
+    <!-- BELT TRACKING -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="tracking-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Tracking</div>
+        <h2 id="tracking-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt <span class="text-accent">Tracking</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Belt tracking is the most critical and most frequently needed conveyor maintenance task. A mistracking belt grinds against the conveyor frame, shredding the belt edge, contaminating product with belt material, and eventually destroying the belt. Mistracking also jams product, misaligns product for downstream equipment, and can trigger <a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">inspection system</a> false rejects.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Tracking Procedure</h3>
+          <ol class="list-decimal list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Run the belt empty.</strong> Remove all product from the conveyor. Tracking adjustments must be made with the belt running but unloaded first.</li>
+            <li><strong class="text-ink">Observe the belt for 3-5 full revolutions.</strong> Note which direction the belt drifts and where along the conveyor the drift is worst (near the head, tail, or middle).</li>
+            <li><strong class="text-ink">Adjust the tail pulley.</strong> If the belt drifts to the right, tighten the right-side tail pulley adjusting bolt by 1/4 turn (or loosen the left side by 1/4 turn). The belt moves toward the side with more tension.</li>
+            <li><strong class="text-ink">Wait 3-5 revolutions.</strong> The belt takes multiple revolutions to respond to an adjustment. Do not make additional adjustments until the belt stabilizes.</li>
+            <li><strong class="text-ink">Repeat.</strong> Make small adjustments (1/4 turn maximum) until the belt runs centered. Large adjustments overcorrect and create oscillating tracking problems.</li>
+            <li><strong class="text-ink">Load product.</strong> After the belt tracks centered when empty, add product and verify tracking holds under load. Off-center product loading pulls the belt toward the loaded side — product infeed alignment may need adjustment.</li>
+          </ol>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Tracking Does Not Respond to Adjustment</h3>
+          <p>If the belt does not respond to tail pulley adjustment, investigate these root causes:</p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li><strong class="text-ink">Material buildup on pulleys or rollers:</strong> Product, adhesive, or debris stuck to the drive pulley or return rollers creates a high spot that pushes the belt off-center. Clean all pulleys and rollers.</li>
+            <li><strong class="text-ink">Damaged or cupped belt:</strong> A belt that has taken a permanent curve (cupping) will not track straight regardless of adjustment. Replace the belt.</li>
+            <li><strong class="text-ink">Failed splice:</strong> A belt splice that is not straight or has begun separating pulls the belt off-track at the splice location. Re-splice or replace.</li>
+            <li><strong class="text-ink">Frame misalignment:</strong> The conveyor frame is not straight or the pulleys are not perpendicular to the frame. Check with a string line and correct frame alignment before attempting belt tracking.</li>
+            <li><strong class="text-ink">Crowned pulley worn flat:</strong> Crowned (barrel-shaped) pulleys self-center the belt. If the crown wears flat, the belt loses its self-centering tendency. Replace the pulley.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELT TENSIONING -->
+    <section class="py-20 bg-surface" aria-labelledby="tension-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Tensioning</div>
+        <h2 id="tension-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt <span class="text-accent">Tensioning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Correct belt tension provides enough friction between the belt and drive pulley to transmit motor power without the belt slipping — and no more. Over-tensioning stresses bearings, stretches the belt, increases motor load, and accelerates wear on the slider bed and belt bottom. Under-tensioning causes belt slip, which generates heat, glazes the drive pulley and belt underside, and eventually melts or burns the belt.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Tension Check Method</h3>
+          <p>
+            The most practical tension check for packaging conveyors uses the sag test. With the conveyor stopped and unloaded, push down on the belt at the midpoint between the two most distant supports (typically the center of the conveyor between the head and tail pulleys for short conveyors, or between the slider bed supports for long conveyors). The belt should deflect approximately 1% of the unsupported span. For a 10-foot span, the belt should deflect about 1.2 inches. More sag indicates under-tension. Less sag indicates over-tension.
+          </p>
+          <p>
+            Belt manufacturers publish specific tension recommendations per <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">belt type</a> and width. Habasit, Forbo Siegling, and Ammeraal Beltech provide tension calculation tools that account for belt type, width, conveyor length, incline angle, and product weight. Use these tools for initial setup. Use the sag test for ongoing verification.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Adjusting Tension</h3>
+          <p>
+            Tension adjusts by moving the tail pulley away from the head pulley (to increase tension) or toward the head pulley (to decrease tension). Most packaging conveyors use screw-type take-up bolts on both sides of the tail pulley. Turn both bolts equally to change tension without affecting tracking. Turning one side more than the other changes both tension and tracking simultaneously — a common mistake that creates two problems from one adjustment. Always adjust tension first, then track separately.
+          </p>
+          <p>
+            <strong class="text-ink">New belt stretch:</strong> New belts stretch during the first 24-48 hours of operation. Re-tension after the first 8 hours of running, again at 24 hours, and once more at 48 hours. After the initial stretch-in period, the belt stabilizes and tension checks revert to the weekly schedule.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROLLER & BEARING MAINTENANCE -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="roller-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Rollers & Bearings</div>
+        <h2 id="roller-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Roller & Bearing <span class="text-accent">Maintenance</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Rollers and bearings are the highest-wear components in <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>, <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyors</a>, and <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a>. A failed roller creates a dead spot that jams product, damages the belt (in belt-driven systems), and can contaminate product if bearing grease or metal fragments enter the product stream.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Roller Spin Test</h3>
+          <p>
+            The roller spin test is the simplest and most effective roller check. With the conveyor stopped and locked out, manually spin each roller. A healthy roller spins freely for 2-5 seconds and coasts to a smooth stop. Replace any roller that:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Does not spin at all (seized bearing).</li>
+            <li>Spins with grinding or crunching sound (bearing failure in progress).</li>
+            <li>Wobbles visibly (bent shaft or loose bearing).</li>
+            <li>Has a worn, grooved, or damaged surface (causes belt tracking issues and product damage).</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Bearing Lubrication</h3>
+          <p>
+            Pillow block and flange bearings on conveyor drive shafts, tail pulleys, and idler rollers require periodic grease lubrication. Use the grease type and quantity specified by the bearing manufacturer — typically NLGI #2 lithium-based grease, 1-3 pump strokes per zerk fitting. For <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">food-grade applications</a>, use NSF H1-registered grease.
+          </p>
+          <p>
+            <strong class="text-ink">Over-greasing is a common and costly mistake.</strong> Excess grease forces past the bearing seal, contaminating the belt and product. In food environments, grease contamination causes product rejects, customer complaints, and potential recalls. Apply the manufacturer-specified quantity — no more.
+          </p>
+          <p>
+            MDR conveyors and many modern roller conveyors use sealed-for-life bearings that require no lubrication. This eliminates the over-greasing risk and reduces PM labor. When specifying new conveyors, sealed bearings reduce long-term maintenance cost and contamination risk.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TROUBLESHOOTING GUIDE -->
+    <section class="py-20 bg-surface" aria-labelledby="trouble-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Troubleshooting</div>
+        <h2 id="trouble-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Common Problems & <span class="text-accent">Solutions</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Problem</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Likely Causes</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Corrective Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Belt drifts to one side</td>
+                <td class="py-4 pr-4">Tail pulley misalignment, material buildup on pulley, frame not straight, damaged belt</td>
+                <td class="py-4">Adjust tail pulley 1/4 turn. Clean pulleys. Check frame alignment. Inspect belt for damage.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Belt slips on drive pulley</td>
+                <td class="py-4 pr-4">Insufficient tension, wet/contaminated pulley, worn lagging, overloaded belt</td>
+                <td class="py-4">Increase tension. Clean drive pulley. Replace lagging. Reduce product load or increase motor HP.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Squealing noise</td>
+                <td class="py-4 pr-4">Belt slipping on drive pulley, dry bearing, belt rubbing frame</td>
+                <td class="py-4">Increase tension (if slipping). Lubricate bearing. Correct tracking (if rubbing).</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Grinding or clicking</td>
+                <td class="py-4 pr-4">Bearing failure, roller damage, chain link issue, foreign object</td>
+                <td class="py-4">Identify the specific roller/bearing/chain link. Replace damaged component. Remove foreign object.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Motor trips on overload</td>
+                <td class="py-4 pr-4">Belt too tight, seized roller/bearing, product jam, undersized motor</td>
+                <td class="py-4">Reduce belt tension. Spin-test all rollers. Clear jam. Verify motor HP matches load requirement.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Motor overheating</td>
+                <td class="py-4 pr-4">Blocked ventilation, overload, high ambient temperature, VFD low-speed operation</td>
+                <td class="py-4">Clear ventilation. Check load vs. motor rating. Add forced-air cooling for VFD low-speed duty.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Product jams at transfer point</td>
+                <td class="py-4 pr-4">Speed mismatch, gap too wide, guide rail misalignment, product orientation</td>
+                <td class="py-4">Match conveyor speeds. Reduce dead plate gap. Align guides. Check upstream product orientation.</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Belt edge fraying</td>
+                <td class="py-4 pr-4">Belt rubbing frame, mistracking, guide rail contact, belt too wide</td>
+                <td class="py-4">Correct tracking. Adjust guide rail clearance. Verify belt width matches conveyor width specification.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTOR & DRIVE MAINTENANCE -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="motor-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Motors & Drives</div>
+        <h2 id="motor-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Motor & Drive <span class="text-accent">Maintenance</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Conveyor motors fail from three causes: overheating (insulation degradation), bearing failure (lubrication or contamination), and electrical failure (winding shorts, connection faults). A structured motor maintenance program addresses all three.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Temperature monitoring:</strong> Record motor housing temperature monthly with an infrared thermometer. Establish a baseline during commissioning. A 20&deg;F increase above baseline warrants investigation — check ventilation, load, ambient temperature, and VFD parameters. Motors running above their nameplate temperature rating suffer accelerated insulation degradation (each 18&deg;F above rating halves insulation life).</li>
+            <li><strong class="text-ink">Motor bearing lubrication:</strong> Motor bearings require regreasing on a schedule based on motor size and speed — typically every 6-12 months for standard TEFC motors. Over-greasing motor bearings forces grease into the motor windings, causing insulation failure. Follow the motor manufacturer's grease type and quantity specifications exactly.</li>
+            <li><strong class="text-ink">VFD maintenance:</strong> Keep VFD cooling fans clean and air filters clear. Dust accumulation causes VFD overheating and premature capacitor failure. Inspect DC bus capacitors annually (on drives older than 7 years) — capacitor failure is the most common VFD failure mode. Back up all VFD parameters after commissioning and after any changes.</li>
+            <li><strong class="text-ink">Gearbox oil:</strong> Gear reducers require oil level checks monthly and oil changes per manufacturer schedule (typically annually or every 2,500 hours). Use the specified oil type and viscosity. Contaminated or low oil levels destroy gear teeth and bearings. Synthetic gear oils extend change intervals and improve efficiency in cold environments.</li>
+          </ul>
+          <p>
+            For conveyor motor and drive cost factors, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>. For <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>, PLC and controls maintenance adds another layer — program backups, I/O testing, and network diagnostics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPARE PARTS -->
+    <section class="py-20 bg-surface" aria-labelledby="spares-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Spare Parts</div>
+        <h2 id="spares-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Recommended <span class="text-accent">Spare Parts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Stocking the right spare parts prevents extended downtime when a component fails. The cost of carrying spare parts is a fraction of the production loss during a multi-day wait for an emergency shipment. Recommended spares for packaging conveyor systems:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Belts:</strong> One spare belt per conveyor type and size. For <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">modular belts</a>, stock replacement modules (10-20 modules per belt type) rather than complete belts.</li>
+            <li><strong class="text-ink">Rollers:</strong> Stock 5-10% of the installed roller count as spares, matching diameter, length, and bearing type. For MDR conveyors, stock motorized rollers and slave rollers separately.</li>
+            <li><strong class="text-ink">Bearings:</strong> Stock pillow block and flange bearings matching every shaft size in the system. Bearings are commodity items with long shelf life.</li>
+            <li><strong class="text-ink">Motors:</strong> Stock one spare motor per motor size used in the system. Motors have long lead times (4-12 weeks for non-standard ratings). A spare motor on the shelf converts a potential week-long outage into a same-day repair.</li>
+            <li><strong class="text-ink">Sensors:</strong> Stock spare photoeyes, proximity switches, and encoders — one per type used. Sensor failure is the most common electronic fault on conveyors.</li>
+            <li><strong class="text-ink">Drive components:</strong> Spare drive belts, chains, sprockets, and pulleys. One set per conveyor drive type.</li>
+            <li><strong class="text-ink">Pneumatic components:</strong> Spare solenoid valves, air cylinders (for <a href="/conveyor-functions/pusher-diverter/" class="text-accent hover:text-accent-hover font-semibold">pushers and diverters</a>), and filter/regulator elements.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Guides</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/resources/conveyor-belting/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Belt Types & Materials</h3>
+            <p class="text-base text-white/60">Selecting the right belt material</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Cost Guide</h3>
+            <p class="text-base text-white/60">Total cost of ownership factors</p>
+          </a>
+          <a href="/resources/automated-conveyor-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Automated Systems</h3>
+            <p class="text-base text-white/60">Controls and PLC maintenance</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How often should conveyor PM be performed?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Daily: visual inspection, tracking check, debris removal. Weekly: tension check, roller spin test, sensor test. Monthly: bearing lubrication, motor temperature. Quarterly: drive inspection, electrical connections. Annually: full inspection, motor insulation test, controls backup. Food-grade and high-speed lines need more frequent PM.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I track a conveyor belt?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Run the belt empty. If it drifts right, tighten the right-side tail pulley bolt by 1/4 turn. Wait 3-5 revolutions. Repeat with small adjustments until centered. Then load product and verify. If tracking does not respond, check for material buildup on pulleys, belt damage, splice failure, or frame misalignment.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What causes a conveyor belt to slip?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Five causes: insufficient belt tension (increase tension), wet or contaminated drive pulley (clean it), worn pulley lagging (replace it), overloaded belt (reduce load or increase motor), or seized roller creating drag (replace roller). Check each in order — tension is the most common cause.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            When should I replace a conveyor belt?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Replace when you see: edge fraying over 1/2 inch, surface cracks or delamination, visible carcass through the cover, belt stretch beyond tensioner range, splice failure, or hardening/brittleness. For <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food belts</a>, also replace when the surface cannot be cleaned to sanitary standards. See <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">belt types guide</a> for material-specific life ranges.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

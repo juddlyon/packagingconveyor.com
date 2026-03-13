@@ -1,0 +1,313 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Flat Belt Conveyors", "item": "https://packagingconveyor.com/conveyor-types/flat-belt-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a flat belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A flat belt conveyor uses a continuous flat belt stretched between two pulleys (head and tail) to carry products on its upper surface. The belt rides on either a flat slider bed (sheet metal pan) or a roller bed (support rollers beneath the belt). Flat belt conveyors handle products of any size, shape, and bottom surface — including items too small, too soft, or too irregularly shaped for roller conveyors. They are the most versatile general-purpose conveyor type." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a slider bed and roller bed belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A slider bed belt conveyor supports the belt on a smooth metal pan. The belt slides across the pan surface. Slider beds suit light to moderate loads (under 75 lbs per linear foot) and short to medium lengths (under 50 feet). A roller bed belt conveyor supports the belt on closely spaced rollers. The rollers reduce friction, allowing longer runs, heavier loads, and lower power consumption. Roller beds handle loads up to 200+ lbs per linear foot and lengths over 100 feet." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you track and tension a belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt tracking (keeping the belt centered) uses adjustment screws on the tail pulley that angle the pulley axis slightly to steer the belt. A misaligned tail pulley causes the belt to drift to one side. Belt tensioning uses screw take-ups (manual adjustment) or spring/gravity take-ups (automatic) to maintain proper belt tension. Under-tensioned belts slip on the drive pulley. Over-tensioned belts accelerate bearing and belt wear. Proper tracking and tension are the two most critical belt conveyor maintenance tasks." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Flat Belt & Slider Bed Conveyors: Belt Tracking, Tensioning & Selection",
+  "description": "Complete guide to flat belt and slider bed conveyors including slider bed vs roller bed, belt tracking, tensioning, belt selection, and applications for packaging and material handling.",
+  "url": "https://packagingconveyor.com/conveyor-types/flat-belt-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Flat Belt & Slider Bed Conveyors: Tracking, Tensioning & Selection"
+  description="Complete guide to flat belt and slider bed conveyors: slider bed vs roller bed, belt tracking, tensioning, belt types, and applications for packaging and material handling."
+  canonical="https://packagingconveyor.com/conveyor-types/flat-belt-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Flat Belt Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Flat Belt Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Flat Belt & Slider Bed Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A flat belt conveyor uses a continuous flat belt stretched between head and tail pulleys to carry products on its upper surface. The belt rides on either a smooth slider bed (sheet metal pan) or a roller bed (support rollers beneath the belt). Flat belt conveyors handle products of any size, shape, and bottom surface — including items too small, soft, or irregularly shaped for <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>. They are the most versatile general-purpose conveyor type in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging</a> and material handling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Bed vs Roller Bed -->
+  <article class="py-20 bg-surface" aria-labelledby="bed-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Bed Types</div>
+      <h2 id="bed-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Slider Bed vs. <span class="text-accent">Roller Bed</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Slider Bed Conveyors</h3>
+        <p>Slider bed conveyors support the belt on a smooth metal pan (the slider bed or wear strip). The belt slides across the pan surface, driven by friction between the belt bottom and the drive pulley. The pan provides continuous support across the entire belt width, making slider beds ideal for small products that would fall between rollers and for applications requiring a flat, stable conveying surface.</p>
+        <p>Slider bed conveyors handle light to moderate loads: typically under 75 lbs per linear foot of belt. Belt-to-pan friction limits practical length to approximately 50 feet for standard constructions. Longer runs require more drive power to overcome the sliding friction. UHMW polyethylene strips or stainless steel pans reduce friction and extend practical length. Dorner, mk North America, and QC Industries specialize in precision slider bed conveyors for packaging applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Bed Conveyors</h3>
+        <p>Roller bed conveyors support the belt on closely spaced carry rollers (typically 4-6 inch spacing). The rollers spin freely as the belt moves over them, reducing friction compared to slider beds. Lower friction means longer runs (100+ feet), heavier loads (200+ lbs per linear foot), and lower power consumption. Roller bed belt conveyors handle heavier products and longer distances than slider beds.</p>
+        <p>Roller bed belt conveyors serve heavy packaging applications: cases, totes, and containers that are too heavy for slider beds. They also serve long transport runs between processes where the belt's continuous surface handles products that rollers cannot (irregular shapes, small items). Hytrol, Dematic, and Intelligrated offer roller bed belt conveyors for distribution and packaging applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Knife-Edge Transfer</h3>
+        <p>Slider bed conveyors can be designed with a knife-edge (thin-nose) transfer at the discharge end. The drive pulley diameter is minimized to create a sharp belt edge that transfers small products with minimal gap to the next conveyor. Knife-edge transfers handle products as small as 0.5 inches. Standard roller bed conveyors cannot achieve knife-edge transfers due to the larger drive pulley required for belt wrap. Dorner and mk North America offer knife-edge transfer belt conveyors for small-product packaging lines.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Belt Tracking -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="tracking-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Tracking</div>
+      <h2 id="tracking-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt <span class="text-accent">Tracking</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Belt tracking keeps the belt centered on the pulleys and bed. A mistracking belt drifts to one side, rubbing against the frame, damaging the belt edge, and potentially dumping products off the side. Proper tracking is the single most important belt conveyor maintenance task.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tracking Methods</h3>
+        <p><strong class="text-ink">Tail pulley adjustment:</strong> The primary tracking method. Screw adjusters at each end of the tail pulley shaft allow the operator to angle the tail pulley axis slightly. The belt tracks toward the tight (higher-tension) side. Small adjustments (1/8 turn of the adjustment screw) move the belt. Adjust in small increments and allow the belt to stabilize (3-5 full belt revolutions) before adjusting again.</p>
+        <p><strong class="text-ink">V-guide tracking:</strong> A V-shaped guide strip on the belt underside rides in a V-groove on the pulley or slider bed. The guide physically constrains the belt to center. V-guide tracking is common on precision slider bed conveyors (Dorner, QC Industries) where belt mistracking would disrupt product positioning for labeling, inspection, or packaging operations.</p>
+        <p><strong class="text-ink">Crowned pulleys:</strong> Crowned (barrel-shaped) pulleys naturally center the belt. The belt climbs toward the highest point of the crown. Light-duty conveyors use crowned pulleys as the primary tracking mechanism. Heavy-duty conveyors use crowned pulleys combined with tail-pulley adjustment for robust tracking.</p>
+        <p><strong class="text-ink">Training idlers:</strong> Roller bed conveyors use self-aligning training idlers that tilt automatically when the belt drifts, steering it back to center. Training idlers mount at strategic positions along the conveyor length and provide automatic tracking correction without manual adjustment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Tensioning -->
+  <section class="py-20 bg-surface" aria-labelledby="tension-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Tensioning</div>
+      <h2 id="tension-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt <span class="text-accent">Tensioning</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Proper belt tension ensures the belt grips the drive pulley without slipping while minimizing wear on bearings, belt, and pulleys. Under-tensioned belts slip on the drive pulley, causing erratic speed, heat buildup, and belt wear. Over-tensioned belts overload bearings, stretch the belt, and accelerate component wear.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Screw Take-Up</h3>
+        <p>Screw take-ups use threaded rods at the tail pulley to slide the pulley shaft forward or backward, adjusting belt tension. The operator turns the take-up screws to increase or decrease the distance between the head and tail pulleys. Screw take-ups are the most common tensioning method on conveyor lengths under 50 feet. Adjustment is manual and periodic — check belt tension during routine maintenance.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spring and Gravity Take-Up</h3>
+        <p>Spring take-ups use compression springs to maintain constant belt tension automatically. As the belt stretches with use, the springs compensate by pushing the tail pulley outward. Gravity take-ups use a weighted carriage that maintains tension through gravity force. Both methods provide automatic tensioning that reduces maintenance frequency. They suit longer conveyors and applications where consistent tension matters for product handling precision.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tension Indicators</h3>
+        <p>Belt slip is the primary indicator of under-tension: the belt moves slower than the drive pulley, products accumulate at the infeed, and the drive pulley may generate heat and noise. Belt sag between carry rollers (roller bed) or belt camber (bowing to one side) indicates tension issues. Excessive bearing temperature indicates over-tension. A properly tensioned belt has just enough tension to prevent slipping under maximum load — no more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="belt-types-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Types</div>
+      <h2 id="belt-types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt Material <span class="text-accent">Selection</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">PVC belting:</strong> The most common belt material for general packaging. PVC belts handle temperatures from -10 to 180&deg;F, resist moisture and mild chemicals, and come in smooth, textured, or grip-top surfaces. Standard PVC belts suit case handling, carton transport, and general <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> applications.</p>
+
+        <p><strong class="text-ink">Polyurethane belting:</strong> Polyurethane belts provide higher abrasion resistance, better cut resistance, and wider chemical compatibility than PVC. They suit rough products, sharp-edged items, and environments with chemical exposure. Polyurethane costs more than PVC but lasts longer under demanding conditions.</p>
+
+        <p><strong class="text-ink">Silicone belting:</strong> Silicone belts handle high temperatures (up to 500&deg;F) and FDA-compliant food contact. They serve bakery conveyors, oven discharge, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging</a> where direct product contact requires food-grade material at elevated temperatures.</p>
+
+        <p><strong class="text-ink">Modular plastic belting:</strong> Modular belts use interlocking plastic segments instead of a continuous flat belt. Modular belts handle curves, inclines, and harsh washdown environments. Individual damaged segments replace without replacing the entire belt. Intralox, Rexnord, and Habasit supply modular belt components. See our <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain conveyor guide</a> for table-top chain (a form of modular belting).</p>
+
+        <p><strong class="text-ink">Incline belting:</strong> Incline belt conveyors use belts with textured surfaces (rough-top, chevron, cleated) to prevent products from sliding backward on inclines. Rough-top belts handle inclines up to 25 degrees for flat-bottom products. Cleated belts handle inclines up to 45 degrees for loose products. Incline belt conveyors connect floor-level operations to elevated <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a>, mezzanines, and overhead conveyors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Belt Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Slider Bed</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Roller Bed</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Modular Belt</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Load Capacity</td>
+              <td class="py-3 pr-4 font-mono text-sm">&lt;75 lbs/ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">&lt;200 lbs/ft</td>
+              <td class="py-3 font-mono text-sm">&lt;150 lbs/ft</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Length</td>
+              <td class="py-3 pr-4 font-mono text-sm">~50 ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">100+ ft</td>
+              <td class="py-3 font-mono text-sm">100+ ft</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-400 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-300 FPM</td>
+              <td class="py-3 font-mono text-sm">10-200 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Small Products</td>
+              <td class="py-3 pr-4">Excellent (continuous surface)</td>
+              <td class="py-3 pr-4">Good (continuous surface)</td>
+              <td class="py-3">Good (small gaps)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Curves</td>
+              <td class="py-3 pr-4">Straight only</td>
+              <td class="py-3 pr-4">Straight only</td>
+              <td class="py-3">Curves and inclines</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Load ratings represent typical ranges. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Small product packaging:</strong> Slider bed belt conveyors with knife-edge transfers handle small products — bottles, pouches, cartons, blister packs — between filling, labeling, and case packing. The continuous belt surface supports products too small for <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>. Dorner and mk North America specialize in precision slider bed systems for small-product packaging.</p>
+
+        <p><strong class="text-ink">Inspection and scanning:</strong> Belt conveyors provide a stable, flat surface for machine vision inspection, barcode scanning, and checkweighing. Products travel at consistent speed on the belt without vibration or rotation. The belt surface color (white, black, blue) contrasts with the product for vision system accuracy. Belt speed synchronizes with camera frame rates for sharp image capture.</p>
+
+        <p><strong class="text-ink">Incline and decline transport:</strong> Belt conveyors handle inclines that roller conveyors cannot (products slide backward on inclined rollers). Rough-top belts carry cases up 15-25 degree inclines between floor levels. Cleated belts carry loose items up steeper inclines. Incline belt conveyors connect ground-level processes to mezzanines, <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">spiral conveyors</a>, and <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation system</a> infeeds.</p>
+
+        <p><strong class="text-ink">Sortation induction:</strong> Belt conveyors with servo drives create precise product spacing (gapping) for sortation system induction. The belt accelerates each product to create a programmed gap between consecutive items. This gap ensures the <a href="/conveyor-types/diverting-merging/" class="text-accent hover:text-accent-hover font-semibold">sort mechanism</a> has time to reset between diverts. Induction belt conveyors run at 200-400 FPM for high-speed sortation.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food processing and packaging:</a></strong> FDA-compliant belt conveyors handle direct food contact in bakery, confectionery, meat, and produce packaging. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary belt conveyors</a> use stainless steel frames, food-grade belting (polyurethane, silicone, or modular plastic), and tool-free belt release for cleaning and inspection.</p>
+
+        <p><strong class="text-ink"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Zone accumulation:</a></strong> Servo-driven zone belt conveyors provide accumulation for products that cannot ride on rollers. Each belt zone operates independently with its own drive, providing zero-pressure accumulation for irregular shapes, polybags, and flexible packaging. Belt zone conveyors serve as an alternative to <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR roller conveyors</a> when the product demands a flat surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a flat belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A continuous flat belt on head and tail pulleys carrying products on its upper surface. Slider bed (belt on a pan) for light loads and short runs. Roller bed (belt on rollers) for heavier loads and longer runs. The most versatile conveyor type. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types guide</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Slider bed vs roller bed — which do I need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Slider bed for light loads (under 75 lbs/ft), short runs (under 50 ft), small products, and knife-edge transfers. Roller bed for heavier loads (up to 200+ lbs/ft), longer runs (100+ ft), and lower power consumption. Most packaging applications use slider bed for small products and roller bed for case handling.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I track and tension a belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Tracking: adjust tail pulley screws in small increments (1/8 turn), wait 3-5 belt revolutions between adjustments. V-guides and crowned pulleys provide automatic centering. Tensioning: screw take-ups for manual adjustment, spring/gravity take-ups for automatic. Proper tension prevents slipping without overloading bearings.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Alternative for flat-bottom products</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Motorized roller zones</p>
+        </a>
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">Modular belt and table-top chain</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary belt applications</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

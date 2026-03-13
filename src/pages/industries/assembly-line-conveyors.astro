@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Assembly Line Conveyors", "item": "https://packagingconveyor.com/industries/assembly-line-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an assembly line conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An assembly line conveyor transports workpieces between sequential assembly stations where operators or robots add components, fasten, inspect, or test. Assembly conveyors run at slow, controlled speeds (5-30 FPM for manual stations) or index between stations for automated operations. Common types include belt conveyors, pallet transfer (workpiece carrier) systems, and chain-on-edge conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a pallet transfer system for assembly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A pallet transfer system carries workpieces on machined pallets (workpiece carriers) that circulate in a loop through assembly stations. Each pallet has precision fixtures — locating pins, nests, or clamps — that hold the workpiece in a known position. The conveyor indexes pallets to each station where assembly, fastening, inspection, or testing occurs. Positioning accuracy of ±0.05mm supports robotic assembly and vision inspection." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between continuous and indexing assembly conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Continuous assembly conveyors run at constant speed — operators walk alongside or work on the product as it moves. Used for large products (vehicles, appliances) where operators have enough time at each station. Indexing assembly conveyors advance product a fixed distance and stop — stations operate during the dwell time. Used for small-to-medium products requiring precise positioning for automated operations." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyor speed is used for manual assembly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Manual assembly conveyors typically run at 5-30 FPM (feet per minute), depending on the assembly task duration and workstation length. Slower speeds give operators more time per station. Variable-speed drives allow speed adjustment for different products or staffing levels. Ergonomic height is 30-36 inches for seated work and 36-42 inches for standing work." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Assembly Line Conveyors: Workstation, Pallet Transfer & Indexing Systems",
+  "description": "Technical guide to assembly line conveyor systems — workstation conveyors, pallet transfer systems, indexing conveyors, and ergonomic design for manual and automated assembly operations.",
+  "url": "https://packagingconveyor.com/industries/assembly-line-conveyors/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Assembly Line Conveyors: Workstation, Pallet Transfer & Indexing | PackagingConveyor.com"
+  description="Technical guide to assembly line conveyors — workstation conveyors, pallet transfer systems, indexing, and ergonomic design for manual and automated assembly operations."
+  canonical="https://packagingconveyor.com/industries/assembly-line-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Assembly Line Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Industry</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Assembly Line <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Assembly line conveyors transport workpieces through sequential stations where operators or robots perform assembly, fastening, inspection, and testing operations. These systems range from simple flat belt conveyors for manual assembly to precision pallet transfer systems with ±0.05mm positioning for robotic stations. Conveyor types include workstation belt conveyors, pallet transfer (workpiece carrier) systems, chain-on-edge conveyors, and <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a>. Manufacturers like mk North America, Bosch Rexroth, Dorner, FlexLink, and Montech supply modular assembly conveyor platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ CONVEYOR TYPES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveyor Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Assembly Conveyor <span class="text-accent">Types</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Workstation Belt Conveyors</h3>
+          <p>
+            Flat belt conveyors run at slow, constant speed (5-30 FPM) through a series of manual workstations. Operators stand or sit alongside the conveyor and perform assembly tasks as product moves past. VFD speed control adjusts belt speed to match operator pace and staffing levels. Belt width typically matches the workpiece width plus clearance — 12 to 36 inches for most small-to-medium assembly operations.
+          </p>
+          <p>
+            Workstation conveyors integrate with ergonomic accessories: tilting work surfaces, tool balancers, parts bins, task lighting, and ESD (electrostatic discharge) grounding for electronics assembly. Dorner's 2200 series and mk North America's GUF-P series are standard workstation conveyor platforms.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Pallet Transfer Systems</h3>
+          <p>
+            Pallet transfer (workpiece carrier) systems carry products on machined pallets that circulate in a closed loop. Each pallet has precision fixtures — locating pins, nests, or clamps — that hold the workpiece in a repeatable position at every station. The conveyor transports pallets between stations; pop-up locating pins at each station register the pallet to ±0.05mm for robotic operations.
+          </p>
+          <p>
+            mk North America's VersaMove, Bosch Rexroth's TS 2plus, and Montech's modular transfer platforms serve electronics, medical device, automotive component, and consumer product assembly. Pallet transfer supports both manual and automated stations on the same line — operators load components at manual stations, and robots perform fastening or inspection at automated stations.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Chain-on-Edge Conveyors</h3>
+          <p>
+            Chain-on-edge conveyors use a precision chain running in a vertical plane (on its edge) with workpiece-carrying fixtures attached at regular intervals. Parts hang from or mount on fixtures that travel through assembly, painting, curing, and inspection stations. Common in <a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover font-semibold">automotive component assembly</a>, appliance manufacturing, and any operation where parts need 360-degree access for processing.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Overhead Conveyors</h3>
+          <p>
+            Overhead (power-and-free) conveyors carry product above the work floor on trolleys suspended from an overhead track. The power chain runs continuously; individual trolleys can stop at stations while others continue moving. Overhead conveyors maximize floor space for operators and equipment. Used in appliance assembly, vehicle assembly, and heavy equipment production.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTINUOUS VS. INDEXING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="motion-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Motion Modes</div>
+        <h2 id="motion-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Continuous vs. <span class="text-accent">Indexing Motion</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Continuous Motion</h3>
+          <p>
+            Continuous assembly conveyors run at constant speed. Operators perform tasks while the product moves. The station length and belt speed determine the available work time per station: work time (seconds) = station length (feet) / belt speed (FPM) × 60. A 6-foot station at 10 FPM gives each operator 36 seconds.
+          </p>
+          <p>
+            Continuous motion suits large products (vehicles, appliances, furniture) where the work content per station is long and operators walk alongside the product. It also suits high-volume, simple operations (labeling, stickering, visual inspection) where operators need only seconds per piece.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Indexing Motion</h3>
+          <p>
+            <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing assembly conveyors</a> advance product one station pitch, stop, and hold during the dwell time while stations operate. All stations operate simultaneously during the dwell, then all advance together. Cycle time = index time + dwell time. Throughput = 60 / cycle time.
+          </p>
+          <p>
+            Indexing suits small-to-medium products requiring precise positioning for automated operations (robotic assembly, screw driving, press fitting, vision inspection). Servo-driven indexing provides recipe-based pitch changes for different product sizes. The slowest station determines the dwell time — and therefore the line's maximum throughput.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ERGONOMICS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="ergo-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Ergonomics</div>
+        <h2 id="ergo-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Ergonomic Conveyor <span class="text-accent">Design</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Assembly conveyor ergonomics directly affect operator productivity, quality, and injury rates. Key ergonomic parameters:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Working height:</strong> 30-36 inches for seated assembly. 36-42 inches for standing assembly. Adjustable-height conveyor supports accommodate different operators and products.</li>
+            <li><strong class="text-ink">Reach distance:</strong> Parts bins and tools within 16-20 inches of the operator's normal working position. Conveyor width sized so the far edge remains within comfortable reach (24 inches maximum one-sided reach).</li>
+            <li><strong class="text-ink">Lighting:</strong> 50-100 foot-candles at the work surface for general assembly. 100-200 foot-candles for precision or inspection tasks. Task lights mounted on the conveyor frame provide supplemental lighting.</li>
+            <li><strong class="text-ink">Anti-fatigue:</strong> Anti-fatigue mats at standing stations. Ergonomic chairs at seated stations. Conveyor belt surface at a height that minimizes shoulder elevation and wrist deviation.</li>
+            <li><strong class="text-ink">ESD protection:</strong> For electronics assembly, the conveyor belt, frame, and work surfaces must dissipate static electricity. ESD-safe belt materials, grounded frames, and operator wrist straps prevent electrostatic damage to sensitive components.</li>
+          </ul>
+          <p>
+            For a comprehensive view of how conveyors connect with <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated systems</a>, PLCs, and Industry 4.0 data collection, see our automation guide. For cost considerations, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Assembly Conveyor <span class="text-accent">Comparison</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Motion</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Positioning</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Workstation belt</td>
+                <td class="py-4 pr-4">Continuous</td>
+                <td class="py-4 pr-4 font-mono text-sm">N/A (moving)</td>
+                <td class="py-4 pr-4">Manual assembly, kitting</td>
+                <td class="py-4 font-mono text-sm">$-$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Pallet transfer</td>
+                <td class="py-4 pr-4">Indexing</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;0.05 mm</td>
+                <td class="py-4 pr-4">Robotic assembly, precision</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Chain-on-edge</td>
+                <td class="py-4 pr-4">Continuous/indexing</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;1-2 mm</td>
+                <td class="py-4 pr-4">Painting, coating, 360° access</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Overhead (P&F)</td>
+                <td class="py-4 pr-4">Power-and-free</td>
+                <td class="py-4 pr-4 font-mono text-sm">&plusmn;5 mm</td>
+                <td class="py-4 pr-4">Large products, floor space savings</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLICATIONS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Industry <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Electronics:</strong> PCB assembly, device assembly, testing, and packaging. ESD-safe belt conveyors and pallet transfer systems. <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Cleanroom-compatible</a> for semiconductor handling.</li>
+            <li><strong class="text-ink">Medical devices:</strong> Precision assembly of syringes, inhalers, diagnostic devices. Pallet transfer with validated positioning. cGMP documentation requirements.</li>
+            <li><strong class="text-ink"><a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Automotive</a>:</strong> Component assembly for modules, battery packs, electronic control units. Chain-on-edge and overhead conveyors for body shop and paint operations.</li>
+            <li><strong class="text-ink">Consumer products:</strong> Appliance assembly, toy assembly, cosmetics kitting. Workstation belt conveyors with ergonomic accessories.</li>
+            <li><strong class="text-ink">Aerospace:</strong> Component assembly and inspection. Low-volume, high-precision pallet transfer systems with full traceability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an assembly line conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An assembly line conveyor transports workpieces through sequential stations for assembly, fastening, inspection, and testing. Runs at slow controlled speed (5-30 FPM) for manual stations or indexes between stations for automated operations.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a pallet transfer system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Carries workpieces on machined pallets with precision fixtures. Circulates in a loop through assembly stations. Locating pins register pallets to ±0.05mm for robotic operations. mk North America VersaMove and Bosch Rexroth TS 2plus are common platforms.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Continuous vs. indexing assembly conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Continuous: constant speed, operators work while product moves. Suits large products. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing</a>: advance-stop-dwell cycles, precise positioning. Suits automated stations. The slowest station sets the line throughput.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What speed for manual assembly conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>5-30 FPM typical. VFD speed control adjusts for different products or staffing. Ergonomic height: 30-36 inches (seated), 36-42 inches (standing).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

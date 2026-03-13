@@ -1,0 +1,513 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Manufacturers", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/" },
+    { "@type": "ListItem", "position": 4, "name": "Custom Conveyor Design", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/custom/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Custom Conveyor Design: When to Go Custom vs. Catalog",
+  "description": "Guide to custom conveyor design — when custom engineering is worth the cost, what the design process looks like, typical lead times, and how to work with manufacturers on custom builds.",
+  "url": "https://packagingconveyor.com/resources/conveyor-manufacturers/custom/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much more does a custom conveyor cost compared to a catalog model?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Custom conveyors typically cost 30-100% more than comparable catalog models, depending on the degree of customization. Minor modifications — non-standard width, length, or motor size — add 10-30%. Full custom designs with unique frame geometry, specialized materials, or integrated automation add 50-100% or more. The cost premium comes from engineering time, custom fabrication, longer lead times, and one-off testing and commissioning. However, forcing a catalog conveyor into an application it was not designed for can cost more in the long run through reduced throughput, higher maintenance, and workaround engineering." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical lead time for a custom conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Custom conveyor lead times typically range from 8-20 weeks depending on complexity, materials, and the manufacturer's backlog. Simple modifications to standard platforms take 8-12 weeks. Fully custom designs with engineering approval, custom fabrication, and factory acceptance testing take 14-20 weeks or longer. Lead times increase for stainless steel construction, specialty coatings, imported components, or complex controls integration. Always confirm lead time before placing an order, as it can vary significantly by manufacturer and time of year." }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I choose a custom conveyor over a standard model?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Custom conveyors are justified when standard models cannot meet your requirements for: unusual product dimensions or weights, non-standard speeds or indexing patterns, tight space constraints requiring specific geometries, extreme environments (high temperature, corrosive chemicals, explosive atmospheres), regulatory requirements that standard models do not meet (pharmaceutical cleanroom, USDA Dairy), integration with existing equipment at specific heights and positions, or throughput demands that exceed standard model capabilities. If a catalog conveyor meets 90%+ of your needs, a modified standard model is usually more cost-effective than a full custom design." }
+    },
+    {
+      "@type": "Question",
+      "name": "What information do manufacturers need for a custom conveyor quote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Manufacturers need: product description (dimensions, weight, material, temperature, fragility), throughput requirements (units per minute, pounds per hour), conveyor geometry (length, width, height, incline angle, curves), environment (indoor/outdoor, temperature range, washdown frequency, chemical exposure), material of construction preference (carbon steel, 304SS, 316SS, aluminum, HDPE), controls requirements (standalone, PLC integration, VFD, servo), interface points (infeed/outfeed heights, upstream/downstream equipment), applicable standards (FDA, USDA, ATEX, Class 100), and facility constraints (doorway dimensions, ceiling height, floor loading, power availability)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a custom conveyor be expanded or modified later?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the original design. Custom conveyors built on modular frame systems (aluminum extrusion or welded steel with standard bolt patterns) can usually be extended, shortened, or reconfigured. Fully welded one-piece designs are harder to modify. When specifying a custom conveyor, ask the manufacturer about future expandability: can sections be added? Can the drive be upgraded? Can the speed range be increased? Building in modularity upfront costs slightly more but avoids replacing the entire conveyor if your requirements change within a few years." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Custom Conveyor Design: When to Go Custom vs. Catalog | PackagingConveyor.com"
+  description="When to choose a custom conveyor over a catalog model — the design process, cost premiums, lead times, and what manufacturers need to quote a custom build."
+  canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/custom/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/conveyor-manufacturers/" class="hover:text-white/70">Manufacturers</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Custom Design</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Custom Conveyor <span class="text-accent-bright">Design</span> Guide
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Custom conveyor design makes sense when catalog conveyors cannot meet your requirements for product geometry, environment, throughput, or integration constraints. Custom builds cost 30&ndash;100% more than standard models and take 8&ndash;20 weeks to deliver, but they eliminate the compromises and workaround engineering that come from forcing a standard product into a non-standard application. This guide explains when custom is justified, what the design process looks like from inquiry to commissioning, what information <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">manufacturers</a> need to provide an accurate quote, and how to manage <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost</a> and risk on custom projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ CUSTOM VS CATALOG ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="vs-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Decision Framework</div>
+        <h2 id="vs-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Custom vs. <span class="text-accent">Catalog</span>: When Each Makes Sense
+        </h2>
+
+        <div class="max-w-4xl mb-10">
+          <p class="text-lg text-ink-muted leading-relaxed mb-6">
+            Most conveyor manufacturers offer three tiers of product: catalog (standard), modified standard, and full custom. Understanding where your application falls saves time in the quoting process and sets realistic expectations for cost and lead time.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Factor</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Catalog (Standard)</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Modified Standard</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Full Custom</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Relative Cost</td>
+                <td class="py-4 pr-4">$ (baseline)</td>
+                <td class="py-4 pr-4">$$ (1.1&ndash;1.3&times;)</td>
+                <td class="py-4 pr-4">$$$ (1.5&ndash;2&times;+)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Lead Time</td>
+                <td class="py-4 pr-4">2&ndash;6 weeks</td>
+                <td class="py-4 pr-4">6&ndash;12 weeks</td>
+                <td class="py-4 pr-4">12&ndash;20+ weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Engineering</td>
+                <td class="py-4 pr-4">None — select from options</td>
+                <td class="py-4 pr-4">Minor engineering for mods</td>
+                <td class="py-4 pr-4">Full design engineering, drawings, approval cycle</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">When to Choose</td>
+                <td class="py-4 pr-4">Standard product fits 90%+ of needs</td>
+                <td class="py-4 pr-4">Need non-standard width, length, speed, or mounting</td>
+                <td class="py-4 pr-4">Unique geometry, extreme environment, or tight integration</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Parts Availability</td>
+                <td class="py-4 pr-4">Standard catalog parts, fast delivery</td>
+                <td class="py-4 pr-4">Mostly standard parts, some custom</td>
+                <td class="py-4 pr-4">Mix of standard and proprietary — plan spares</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Risk Level</td>
+                <td class="py-4 pr-4">Low — proven design</td>
+                <td class="py-4 pr-4">Low to moderate</td>
+                <td class="py-4 pr-4">Moderate — first-article testing recommended</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHEN CUSTOM IS JUSTIFIED ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="justified-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Decision Criteria</div>
+        <h2 id="justified-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          When Custom <span class="text-accent">Is Justified</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Non-Standard Product Geometry</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Products that are extremely long, heavy, irregularly shaped, or fragile may not work on standard conveyor widths and belt types. Custom conveyors can accommodate unusual product profiles — very flat items that need vacuum hold-down, cylindrical products that need V-shaped troughs, or heavy items that exceed standard roller load ratings. A <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">spreader conveyor</a> that handles a specific product width range, for example, may require custom lane guides and belt tensioning.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Extreme Environments</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Standard conveyors are designed for indoor, ambient-temperature, non-corrosive environments. Applications that fall outside these parameters often require custom engineering: freezer environments (&minus;40&deg;F), high-temperature ovens (500&deg;F+), <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleanrooms</a> (ISO Class 5&ndash;7), explosive atmospheres (ATEX Zone 1/2), outdoor installations with UV exposure and weather sealing, or highly corrosive environments with chemical splash. Each of these constraints affects material selection, lubrication, sealing, motor rating, and belt material.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Space Constraints</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Retrofit installations in existing facilities often face space constraints that catalog conveyors cannot accommodate: low ceiling heights requiring ultra-low-profile designs, narrow aisles requiring compact widths, specific elevation changes at precise locations, or curved paths around existing equipment. Custom conveyors can be designed to fit the available space exactly, whereas catalog conveyors require the space to be adapted to the equipment — which is often more expensive or impossible.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Tight Integration Requirements</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              When a conveyor must interface with specific upstream or downstream equipment — a robotic <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">case packer</a>, a <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">stacking machine</a>, or a labeling system — the conveyor's height, speed, <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed/outfeed</a> position, and controls must match exactly. Custom conveyors designed around the integration points eliminate the transition brackets, height shims, and speed-matching workarounds that result from using standard models.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Regulatory Compliance</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Some regulatory environments require design features that go beyond standard catalog options. USDA Dairy conveyors, for example, must meet 3-A Sanitary Standards with continuous-weld stainless steel construction, specific surface finish requirements (32 Ra or better), and self-draining geometry. ATEX-rated conveyors for explosive atmospheres need specific motor certifications, grounding provisions, and anti-static belt materials. These requirements typically push a project into custom territory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ THE DESIGN PROCESS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="process-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Process</div>
+        <h2 id="process-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          The Custom Conveyor <span class="text-accent">Design Process</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-10">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">1</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Inquiry & Requirements Definition</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                The process starts with a detailed requirements document or request for quote (RFQ). The more complete your specification, the more accurate the initial quote. Include product data, throughput requirements, environment conditions, space constraints with facility drawings or photos, interface equipment details, and applicable standards. Most manufacturers have a standard questionnaire — ask for it.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">2</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Concept Design & Budgetary Quote</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                The manufacturer develops a concept layout — typically a 2D drawing showing general arrangement, overall dimensions, and major components. This comes with a budgetary quote (typically &pm;15&ndash;20% accuracy). At this stage, you are evaluating whether the concept meets your needs and whether the budget is viable. Request concepts from 2&ndash;3 manufacturers to compare approaches.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">3</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Detailed Engineering & Firm Quote</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                After selecting a manufacturer, detailed engineering begins: 3D CAD modeling, structural analysis (FEA for heavy loads), component selection (motors, drives, bearings, belting), and controls design. The manufacturer produces detailed drawings for your approval — general arrangement, assembly, electrical schematics, and a bill of materials. The firm quote (&pm;5% accuracy) is issued after engineering is substantially complete.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">4</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Fabrication & Assembly</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                Once drawings are approved and the purchase order is issued, fabrication begins. This includes cutting, welding, machining, surface finishing (painting, powder coating, or passivation for stainless), mechanical assembly, electrical wiring, and motor/drive installation. Fabrication is typically the longest phase — 6&ndash;12 weeks depending on complexity and material availability.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">5</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Factory Acceptance Test (FAT)</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                For critical or high-value custom conveyors, a factory acceptance test allows you to see the conveyor running at the manufacturer's facility before shipment. The FAT typically verifies speed range, load capacity, alignment, noise levels, and basic controls functionality. Bring your actual product (or representative samples) for testing. Any issues found during FAT are resolved before shipment — far less expensive than fixing problems after installation.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-accent/10 border border-accent flex items-center justify-center font-display font-bold text-accent text-xl">6</div>
+            <div>
+              <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Installation & Commissioning</h3>
+              <p class="text-lg text-ink-muted leading-relaxed">
+                Installation includes rigging, leveling, anchoring, utility connections (power, air, network), and integration with adjacent equipment. Commissioning covers startup, speed and alignment adjustments, controls integration testing, operator training, and documentation handoff. Clarify upfront who is responsible for installation — the manufacturer, your internal team, or a third-party contractor. Mixed responsibility (mechanical by one party, electrical by another) requires clear scope boundaries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT MANUFACTURERS NEED ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="spec-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Specification Checklist</div>
+        <h2 id="spec-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          What <span class="text-accent">Manufacturers Need</span> for a Custom Quote
+        </h2>
+
+        <div class="max-w-4xl">
+          <p class="text-lg text-ink-muted leading-relaxed mb-8">
+            Incomplete specifications are the leading cause of inaccurate quotes, scope creep, and project delays. The checklist below covers the minimum information a manufacturer needs to provide a meaningful custom conveyor quote.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-4">Product Information</h3>
+              <ul class="space-y-2 text-ink-muted">
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product dimensions (L &times; W &times; H) — min, max, and typical</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product weight — min, max, and typical per unit</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product material (glass, plastic, cardboard, metal, food)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product temperature at point of conveyance</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product fragility and surface sensitivity</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Product orientation requirements (label up, cap forward)</li>
+              </ul>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-4">Performance Requirements</h3>
+              <ul class="space-y-2 text-ink-muted">
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Throughput rate (units/min, cases/hr, lbs/hr)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Conveyor speed range (ft/min or m/min)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Accumulation requirements (minutes of buffer needed)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Indexing or continuous motion</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Operating schedule (shifts per day, days per week)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Required uptime / availability percentage</li>
+              </ul>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-4">Environment & Facility</h3>
+              <ul class="space-y-2 text-ink-muted">
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Indoor / outdoor / both</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Temperature range (ambient and extremes)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Washdown requirements (daily, per shift, CIP)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Chemical exposure (acids, caustics, solvents)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Available utilities (voltage, air pressure, network)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Floor condition and loading capacity</li>
+              </ul>
+            </div>
+            <div class="border border-border p-6">
+              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-4">Controls & Integration</h3>
+              <ul class="space-y-2 text-ink-muted">
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Standalone or integrated with existing PLC/SCADA</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>PLC platform preference (Allen-Bradley, Siemens, etc.)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Network protocol (EtherNet/IP, PROFINET, Modbus)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Upstream/downstream equipment and interface details</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>Safety requirements (e-stops, guarding, light curtains)</li>
+                <li class="flex gap-2"><span class="text-accent font-bold">&bull;</span>HMI requirements and operator interface needs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COST MANAGEMENT ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="cost-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Cost Control</div>
+        <h2 id="cost-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Managing Custom <span class="text-accent">Conveyor Costs</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Freeze the Scope Early</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Change orders are the primary driver of custom conveyor cost overruns. Every design change after engineering approval triggers re-engineering, potentially re-fabrication of components already in production, and schedule delays. Invest time in the requirements phase to get the specification right. If changes are unavoidable, make them before fabrication starts — changes during engineering cost a fraction of changes during fabrication.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Use Standard Components Where Possible</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              A custom conveyor does not mean every component must be custom. Specify standard motors, VFDs, bearings, <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">rollers</a>, and belting wherever possible. Custom components have longer lead times, higher costs, and create sole-source dependencies for spare parts. Tell the manufacturer you prefer standard catalog components and ask them to identify any proprietary items in their bill of materials.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Consider Modified Standard Over Full Custom</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Many manufacturers can modify their standard platforms to meet 80&ndash;90% of custom requirements at a fraction of full custom cost. Non-standard widths, lengths, and heights are straightforward modifications. Adding or relocating drive positions, changing belt materials, and adding custom side guides are also common modifications. Ask manufacturers whether your requirements can be met with a modified standard product before assuming full custom is necessary.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Order Spare Parts with the Conveyor</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Custom components manufactured as part of the original production run cost less than one-off replacement parts ordered later. Request a recommended spare parts list from the manufacturer and order critical spares — especially any proprietary items — with the initial purchase order. This is particularly important for custom belting, specialty rollers, and unique wear strips that may have long lead times when reordered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RISK MANAGEMENT ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="risk-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Risk Management</div>
+        <h2 id="risk-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Managing <span class="text-accent-bright">Risk</span> on Custom Projects
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Manufacturer Selection</h3>
+            <p class="text-white/60 leading-relaxed">
+              Choose a <a href="/resources/conveyor-manufacturers/" class="text-accent-bright hover:text-accent-bright/80 font-semibold">manufacturer</a> with documented experience in your industry and conveyor type. Ask for references from similar custom projects — not just testimonials, but contact information for customers who operate similar equipment. A manufacturer's willingness to provide references speaks to their confidence in their work.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Performance Guarantees</h3>
+            <p class="text-white/60 leading-relaxed">
+              Include measurable performance criteria in the purchase contract: throughput rate, speed range, noise level, power consumption, and uptime during the warranty period. Define how performance will be verified (what test protocol, what products, what conditions) and what happens if the conveyor does not meet the guaranteed performance. A manufacturer confident in their design will accept performance guarantees; one who hedges on guarantees may lack experience with your application.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Factory Acceptance Testing</h3>
+            <p class="text-white/60 leading-relaxed">
+              For any custom conveyor with a purchase price above $$ range, a factory acceptance test (FAT) is strongly recommended. The cost of travel to the manufacturer's facility is negligible compared to the cost of discovering problems after installation. Bring actual product samples for testing and verify all performance criteria during the FAT. Document any deficiencies and require resolution before authorizing shipment.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Documentation Requirements</h3>
+            <p class="text-white/60 leading-relaxed">
+              Specify documentation deliverables in the purchase order: as-built drawings (not just design drawings), electrical schematics, PLC program (if applicable), operating and maintenance manual, spare parts list with part numbers and suppliers, and material certifications (for food-contact or pharmaceutical applications). Documentation is often an afterthought — make it a contractual requirement with a delivery schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">FAQ</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Frequently Asked <span class="text-accent">Questions</span>
+        </h2>
+
+        <div class="space-y-4">
+          <details open class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How much more does a custom conveyor cost compared to a catalog model?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Custom conveyors typically cost 30&ndash;100% more than comparable catalog models, depending on the degree of customization. Minor modifications — non-standard width, length, or motor size — add 10&ndash;30%. Full custom designs with unique frame geometry, specialized materials, or integrated automation add 50&ndash;100% or more. The cost premium comes from engineering time, custom fabrication, longer lead times, and one-off testing. However, forcing a catalog conveyor into a non-standard application can cost more long-term through reduced throughput, higher maintenance, and workaround engineering.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What is the typical lead time for a custom conveyor?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Custom conveyor lead times typically range from 8&ndash;20 weeks depending on complexity, materials, and the manufacturer's backlog. Simple modifications to standard platforms take 8&ndash;12 weeks. Fully custom designs with engineering approval, custom fabrication, and factory acceptance testing take 14&ndash;20 weeks or longer. Lead times increase for stainless steel construction, specialty coatings, imported components, or complex controls integration.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              When should I choose a custom conveyor over a standard model?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Custom conveyors are justified when standard models cannot meet your requirements for unusual product dimensions or weights, non-standard speeds or indexing patterns, tight space constraints, extreme environments (high temperature, corrosive chemicals, explosive atmospheres), regulatory requirements that standard models do not meet, integration with existing equipment at specific heights and positions, or throughput demands that exceed standard model capabilities. If a catalog conveyor meets 90%+ of your needs, a modified standard model is usually more cost-effective.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What information do manufacturers need for a custom conveyor quote?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Manufacturers need: product description (dimensions, weight, material, temperature, fragility), throughput requirements (units per minute, pounds per hour), conveyor geometry (length, width, height, incline angle, curves), environment (indoor/outdoor, temperature range, washdown frequency, chemical exposure), material of construction preference (carbon steel, 304SS, 316SS, aluminum, HDPE), controls requirements (standalone, PLC integration, VFD, servo), interface points (infeed/outfeed heights, upstream/downstream equipment), applicable standards (FDA, USDA, ATEX, Class 100), and facility constraints (doorway dimensions, ceiling height, floor loading, power availability).</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              Can a custom conveyor be expanded or modified later?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">It depends on the original design. Custom conveyors built on modular frame systems (aluminum extrusion or welded steel with standard bolt patterns) can usually be extended, shortened, or reconfigured. Fully welded one-piece designs are harder to modify. When specifying a custom conveyor, ask the manufacturer about future expandability: can sections be added? Can the drive be upgraded? Can the speed range be increased? Building in modularity upfront costs slightly more but avoids replacing the entire conveyor if requirements change.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED RESOURCES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Explore</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Related <span class="text-accent">Resources</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/resources/conveyor-manufacturers/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Manufacturer Directory</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Browse conveyor manufacturers by type — belt, roller, modular plastic, sanitary, and specialty builders.</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Cost Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Seven cost factors that drive conveyor pricing — type, materials, controls, environment, and installation.</p>
+          </a>
+          <a href="/resources/conveyor-parts/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Parts & Replacement</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Guide to conveyor wear parts, replacement schedules, and sourcing strategies.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</BaseLayout>

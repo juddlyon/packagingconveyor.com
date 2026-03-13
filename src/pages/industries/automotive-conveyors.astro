@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Automotive Conveyors", "item": "https://packagingconveyor.com/industries/automotive-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What conveyors are used in automotive manufacturing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automotive manufacturing uses overhead conveyors (power-and-free, monorail) for body-in-white and paint shop transport, floor conveyors (slat, chain, roller) for final assembly, skid conveyors for body transport through paint systems, pallet transfer conveyors for component assembly, and automated guided vehicles (AGVs) for flexible routing. Each shop — stamping, body, paint, and assembly — uses different conveyor types optimized for its specific requirements." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a power-and-free conveyor in automotive?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A power-and-free conveyor uses two tracks — a power track with a continuously moving chain and a free track with independent trolleys. Trolleys engage the power chain for transport and disengage at stations for accumulation or variable dwell times. This allows individual vehicle bodies to stop at stations while others continue moving, enabling different model variants to have different process times on the same line." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are conveyors used in EV battery assembly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "EV battery assembly uses pallet transfer conveyors for cell module assembly, AGVs for heavy battery pack transport (300-800 kg), and specialized conveyors with ESD protection, thermal monitoring, and fire suppression integration. Battery assembly lines require cleanroom or controlled environments, precise indexing for robotic cell insertion, and conveyor designs rated for the weight of large-format battery packs." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a skid conveyor in a paint shop?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A skid conveyor carries vehicle bodies on metal skids (frames) through paint shop processes — pretreatment, electrocoat (e-coat), primer, basecoat, clearcoat, and oven curing. Skid conveyors use chain-driven or friction-driven roller beds. The skid provides a universal interface between the body and the conveyor, allowing different body styles to use the same conveyor system. Skids must withstand paint oven temperatures (300-400°F)." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Automotive Conveyors: Paint Lines, Body Shop, Assembly & EV Battery",
+  "description": "Technical guide to automotive conveyor systems — paint shop skid conveyors, body shop overhead conveyors, final assembly floor conveyors, and EV battery assembly conveyors.",
+  "url": "https://packagingconveyor.com/industries/automotive-conveyors/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Automotive Conveyors: Paint Lines, Body Shop, Assembly & EV Battery | PackagingConveyor.com"
+  description="Technical guide to automotive conveyors — paint shop skid conveyors, body shop overhead systems, final assembly floor conveyors, AGVs, and EV battery assembly conveyors."
+  canonical="https://packagingconveyor.com/industries/automotive-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Automotive Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Industry</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Automotive <span class="text-accent-bright">Conveyors</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Automotive conveyors transport vehicle bodies, components, and assemblies through stamping, body shop welding, paint systems, and final assembly at production rates of 30-60+ vehicles per hour. Conveyor types include overhead power-and-free systems for body-in-white transport, skid conveyors for paint shop processing, slat and chain floor conveyors for final assembly, and pallet transfer systems for component sub-assembly. The shift to electric vehicles adds specialized conveyor requirements for battery module and pack assembly. Manufacturers like Daifuku, Dürr, Eisenmann (now KION), and JBT (formerly Jervis B. Webb) supply automotive conveyor systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ BODY SHOP ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="body-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Body Shop</div>
+        <h2 id="body-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Body Shop <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Body shop conveyors transport vehicle bodies through robotic welding, riveting, and adhesive bonding stations. The conveyor must position the body precisely for robotic access while handling the weight of a partially assembled body-in-white (BIW) — typically 300-500 kg.
+          </p>
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Overhead Power-and-Free</h3>
+          <p>
+            Power-and-free conveyors are the backbone of body shop transport. The power chain runs continuously on the upper track. Body carriers (trolleys on the free track below) engage and disengage the power chain at stations. This allows individual bodies to accumulate at stations while others continue moving — critical for mixed-model production where different body styles require different weld programs and dwell times.
+          </p>
+          <p>
+            Power-and-free systems handle vertical and horizontal routing, curves, inclines, and switches. A single system can route bodies through multiple parallel welding cells and converge them back to a single line. Daifuku, Dürr, and JBT are primary suppliers of automotive power-and-free systems.
+          </p>
+          <!-- VERIFY: JBT (Jervis B. Webb) current branding and product line -->
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Skillet Conveyors</h3>
+          <p>
+            Skillet conveyors use large, flat platforms (skillets) that carry the vehicle body at floor level through welding and assembly stations. Operators and robots access the body from all sides without overhead obstructions. Friction-driven roller beds or linear motor systems advance skillets. Skillet systems provide flexible routing — skillets can be diverted to parallel stations or bypass stations for model-specific processes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PAINT SHOP ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="paint-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Paint Shop</div>
+        <h2 id="paint-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Paint Shop <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Paint shop conveyors transport vehicle bodies through pretreatment (cleaning, phosphate coating), electrocoat (e-coat), primer spray, basecoat spray, clearcoat spray, and oven curing. The conveyor must handle immersion processes (bodies dip into treatment tanks), high-temperature ovens (300-400 F), and cleanroom-level paint booth conditions.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Skid Conveyor Systems</h3>
+          <p>
+            Skid conveyors carry bodies on metal skid frames through paint processes. The skid provides a universal mounting interface — different body styles mount on the same skid design using adjustable fixtures. Skid conveyors run on chain-driven or friction-driven roller beds. The skid must withstand paint oven temperatures (300-400 F) without warping or degrading.
+          </p>
+          <p>
+            In immersion processes (pretreatment and e-coat), the skid conveyor system includes pendulum or rotation mechanisms that tilt or rotate the body as it enters and exits the treatment tank. Rotation ensures complete surface coverage and drainage of treatment chemicals from body cavities. Dürr's RoDip system rotates bodies 360 degrees through the dip tank — eliminating the air pockets and drainage issues of older pendulum designs. <!-- VERIFY: Dürr RoDip current product name and availability -->
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Paint Booth Conveyors</h3>
+          <p>
+            Conveyors through paint spray booths run at precise, constant speed — typically 3-6 meters per minute. Speed accuracy affects paint film thickness uniformity. Belt speed variation of more than ±0.5% creates visible paint defects (banding, uneven thickness). The conveyor must also operate cleanly — no particulate generation that would cause paint defects. Enclosed, sealed drives and clean-lubrication bearings are mandatory.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FINAL ASSEMBLY ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="assembly-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Final Assembly</div>
+        <h2 id="assembly-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Final Assembly <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Final assembly conveyors move painted bodies through 100-200+ stations where operators install wiring, trim, glass, seats, powertrain, wheels, and fluids. Final assembly is the most labor-intensive shop — conveyor design directly affects operator ergonomics and line balance.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Slat Conveyors</h3>
+          <p>
+            Slat conveyors use interlocking metal or composite slats forming a continuous flat surface. Operators stand on or walk alongside the slat surface while performing assembly tasks on the vehicle. Slat conveyors run at 1-3 meters per minute for final assembly — slow enough for operators to complete multi-minute tasks at each station.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Inverted Power-and-Free</h3>
+          <p>
+            Inverted power-and-free conveyors run on floor-level tracks with the vehicle carrier rising from below. This provides full 360-degree access to the vehicle without overhead obstructions. Operators work at natural standing height. The vehicle can be raised or lowered hydraulically at different stations to optimize ergonomic access — raised for underbody work, lowered for roof and interior work.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">AGVs in Assembly</h3>
+          <p>
+            Automated Guided Vehicles (AGVs) increasingly replace fixed conveyors in flexible <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly operations</a>. Each AGV carries one vehicle body on a platform and follows programmable routes between stations. AGVs enable model-specific routing (different models visit different stations), easy line reconfiguration (no fixed infrastructure to move), and variable pacing (each AGV moves independently). The trade-off is higher per-unit cost and more complex traffic management versus fixed conveyors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EV BATTERY ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="ev-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">EV Manufacturing</div>
+        <h2 id="ev-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          EV Battery Assembly <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Electric vehicle battery manufacturing introduces conveyor requirements not found in traditional automotive production. Battery module and pack assembly lines handle heavy components (pack weight: 300-800 kg), require electrostatic discharge (ESD) protection, need thermal monitoring integration, and must interface with fire suppression systems.
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Cell-to-module assembly:</strong> Pallet transfer conveyors carry fixtures holding individual battery cells through stacking, welding (laser or ultrasonic), and testing stations. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Servo indexing</a> provides precise positioning for robotic cell insertion.</li>
+            <li><strong class="text-ink">Module-to-pack assembly:</strong> Heavy-duty conveyors or AGVs transport battery packs (300-800 kg) through module insertion, fastening, thermal interface application, and electrical connection stations. Conveyor capacity must handle the full pack weight plus tooling.</li>
+            <li><strong class="text-ink">ESD protection:</strong> All conveyor surfaces, belts, and pallets dissipate static to prevent cell damage or thermal runaway. ESD-safe belt materials and grounded frame construction are mandatory.</li>
+            <li><strong class="text-ink">Thermal safety:</strong> Thermal sensors integrated with the conveyor system monitor cell and module temperatures. Conveyors include emergency stop zones and fire suppression integration (typically water mist or inert gas) in case of thermal runaway events during assembly.</li>
+          </ul>
+          <!-- VERIFY: Typical EV battery pack weight ranges for current production vehicles -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPONENT CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="component-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Component Supply</div>
+        <h2 id="component-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Component & Sub-Assembly <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Tier 1 and Tier 2 automotive suppliers use conveyors for component sub-assembly: dashboard modules, door panels, instrument clusters, exhaust systems, and transmission components. These lines typically use modular <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly conveyors</a> from mk North America, Bosch Rexroth, or FlexLink.
+          </p>
+          <p>
+            Just-in-sequence (JIS) delivery requires sub-assemblies to arrive at the vehicle assembly line in the exact order matching the vehicle build sequence. Conveyor systems at supplier facilities sort and sequence sub-assemblies using <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">diverter conveyors</a> and accumulation zones that buffer and release components in sequence. Barcode or RFID tracking on the conveyor system verifies sequence order before shipping.
+          </p>
+          <p>
+            For information on conveyor vendors serving automotive applications, see our <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">manufacturer directory</a>. For custom engineering requirements, see our <a href="/resources/conveyor-manufacturers/custom/" class="text-accent hover:text-accent-hover font-semibold">custom conveyor design guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Pages</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/industries/assembly-line-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Assembly Lines</h3>
+            <p class="text-base text-white/60">Workstation, pallet transfer, indexing</p>
+          </a>
+          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
+            <p class="text-base text-white/60">Precision positioning for automated stations</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Cost Guide</h3>
+            <p class="text-base text-white/60">Industrial conveyor pricing factors</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyors are used in automotive manufacturing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Overhead power-and-free for body shop, skid conveyors for paint shop, slat/chain floor conveyors for final assembly, pallet transfer for component sub-assembly, and AGVs for flexible routing. Each shop uses conveyors optimized for its specific process.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a power-and-free conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Uses two tracks: a power track with a continuous chain and a free track with independent trolleys. Trolleys engage/disengage the power chain to stop at stations while others continue. Enables mixed-model production with different dwell times.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How are conveyors used for EV battery assembly?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Pallet transfer for cell module assembly, heavy-duty conveyors/AGVs for pack assembly (300-800 kg), ESD-safe belt surfaces, thermal monitoring, and fire suppression integration. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Servo indexing</a> for robotic cell insertion.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a skid conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Carries vehicle bodies on metal skid frames through paint shop processes. Chain-driven or friction-driven roller beds advance skids. The skid provides a universal interface for different body styles. Must withstand paint oven temperatures (300-400 F).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

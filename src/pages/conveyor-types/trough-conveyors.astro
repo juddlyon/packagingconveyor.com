@@ -1,0 +1,331 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Trough Conveyors", "item": "https://packagingconveyor.com/conveyor-types/trough-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a trough conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A trough conveyor is a belt conveyor where the belt is shaped into a concave trough by angled idler rollers instead of running flat. The troughed shape increases belt carrying capacity by 2-3 times compared to a flat belt of the same width and prevents bulk materials from spilling off the belt edges. Trough conveyors are the standard bulk material handling conveyor for mining, aggregate, grain, cement, and similar industries." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a troughing idler?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A troughing idler is a set of rollers arranged in a V or U shape that supports and shapes the belt into a trough. A standard three-roll troughing idler has one flat center roller and two angled wing rollers. Common troughing angles are 20, 35, and 45 degrees. Higher angles create a deeper trough with more carrying capacity but require more flexible belts. Five-roll idlers create a deeper trough for very wide belts." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a trough conveyor and a flat belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A trough conveyor shapes the belt into a concave cross-section using angled idler rollers, while a flat belt conveyor keeps the belt flat on a slider bed or flat rollers. Trough conveyors carry 2-3 times more bulk material per belt width than flat belts. Flat belts suit packaged goods, boxes, and unit loads. Trough conveyors suit loose bulk materials like ore, grain, sand, coal, and aggregate." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far can a trough conveyor transport material?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trough conveyors transport bulk materials over distances from a few hundred feet to over 10 miles in a single flight. Long-distance overland conveyors use high-tension steel-cord reinforced belts and can replace haul trucks in mining operations. The world's longest single-flight conveyor systems exceed 20 miles. Practical length depends on belt tension, drive power, material weight, and terrain." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Trough Conveyors: Troughed Belt Idlers & Bulk Material Handling",
+  "description": "Complete guide to trough conveyors: troughing idler types, belt selection, bulk material capacity calculations, and applications in mining, aggregate, grain, and cement handling.",
+  "url": "https://packagingconveyor.com/conveyor-types/trough-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Trough Conveyors: Troughed Belt Idlers & Bulk Material Handling"
+  description="Complete guide to trough conveyors: troughing idler configurations, belt capacity calculations, bulk material handling for mining, aggregate, grain, and cement. CEMA standards and sizing."
+  canonical="https://packagingconveyor.com/conveyor-types/trough-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Trough Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Trough Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Trough Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A trough conveyor shapes a flat belt into a concave trough using angled idler rollers, increasing carrying capacity 2-3 times compared to a flat belt of the same width. The troughed profile contains bulk materials within the belt cross-section, preventing edge spillage on horizontal and inclined runs. Trough conveyors are the dominant bulk material handling technology for mining, aggregate, grain, cement, and power generation, transporting millions of tons per day worldwide over distances from a few hundred feet to over 10 miles in a single flight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Troughing Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Fundamentals</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Troughing <span class="text-accent">Works</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A standard belt conveyor runs flat, supporting material only on its horizontal surface. Material piles in a ridge whose height depends on the material's angle of repose. At the belt edges, material spills over. The solution is troughing: angled idler rollers push the belt edges upward, forming a U-shaped channel that contains material within the belt cross-section.</p>
+
+        <p>The carrying-side idlers (troughing idlers) consist of a center roller and two or more wing rollers mounted at an angle. The wing rollers lift the belt edges. The center roller supports the belt bottom. As the belt travels, it conforms to the idler shape, creating a continuous trough that moves with the belt. The return run uses flat rollers or V-return idlers because the belt carries no material on the return side.</p>
+
+        <p>Troughing angle is the single most important parameter. Steeper angles create deeper troughs with more cross-sectional area, but require more flexible belts. Standard angles are 20&deg;, 35&deg;, and 45&deg;. The Conveyor Equipment Manufacturers Association (CEMA) publishes standardized capacity tables for each troughing angle and belt width combination.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Idler Types -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="idler-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Components</div>
+      <h2 id="idler-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Troughing Idler <span class="text-accent">Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Three-Roll Troughing Idlers</h3>
+        <p>The standard configuration uses one flat center roller and two angled wing rollers. Three-roll idlers suit belt widths from 18" to 72" and handle the majority of bulk conveying applications. The center roller is typically equal-length or longer than the wing rollers. CEMA classes B through E cover three-roll idlers for light through heavy-duty service. Martin Engineering, Precision Castparts (PCI), and Superior Industries manufacture three-roll troughing idlers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Five-Roll Troughing Idlers</h3>
+        <p>Five-roll idlers use one center roller and four wing rollers (two per side at increasing angles) to create a deeper, more rounded trough. They suit very wide belts (60" to 96"+) where three-roll idlers cannot achieve sufficient trough depth without excessive belt stress at the wing-to-center transition. Five-roll idlers distribute belt stress more evenly and reduce the belt's minimum required transverse flexibility.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Impact Idlers</h3>
+        <p>Impact idlers mount at loading points where material drops onto the belt. They use rubber-cushioned rollers or rubber disc assemblies that absorb impact energy, protecting the belt from puncture and the idler bearings from shock loading. Impact idler spacing is tighter than standard carrying idlers &mdash; typically 12" apart versus 36-48" for standard idlers. CEMA recommends impact idlers for drop heights exceeding 3 feet.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Training (Self-Aligning) Idlers</h3>
+        <p>Training idlers pivot on a central swivel to correct belt mistracking. When the belt drifts to one side, the idler tilts, creating a corrective force that steers the belt back to center. Training idlers install every 50-100 feet along the conveyor length on both carrying and return runs. They supplement proper belt alignment but do not substitute for correct conveyor installation and tensioning.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Return Idlers</h3>
+        <p>Return idlers support the belt on its return run (bottom side). Standard return idlers are flat single rollers or V-shaped two-roller sets. Rubber-disc return idlers clean carry-back material from the belt underside. Self-cleaning spiral return idlers use a helical rubber pattern that sheds sticky materials. Return idler spacing is wider than carrying idlers &mdash; typically 10 feet apart.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capacity & Sizing -->
+  <section class="py-20 bg-surface" aria-labelledby="capacity-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="capacity-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Capacity & <span class="text-accent">Sizing</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Width</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">20&deg; Trough (ft&sup3;/hr)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">35&deg; Trough (ft&sup3;/hr)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">45&deg; Trough (ft&sup3;/hr)</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">24"</td>
+              <td class="py-3 pr-4">1,530</td>
+              <td class="py-3 pr-4">2,190</td>
+              <td class="py-3">2,640</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">36"</td>
+              <td class="py-3 pr-4">3,870</td>
+              <td class="py-3 pr-4">5,520</td>
+              <td class="py-3">6,660</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">48"</td>
+              <td class="py-3 pr-4">7,440</td>
+              <td class="py-3 pr-4">10,620</td>
+              <td class="py-3">12,810</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">60"</td>
+              <td class="py-3 pr-4">12,240</td>
+              <td class="py-3 pr-4">17,460</td>
+              <td class="py-3">21,060</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">72"</td>
+              <td class="py-3 pr-4">18,270</td>
+              <td class="py-3 pr-4">26,040</td>
+              <td class="py-3">31,410</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VERIFY: CEMA capacity figures for 100 FPM belt speed, surcharge angle 20 degrees -->
+      <p class="text-sm text-ink-muted mt-4">Capacities shown at 100 FPM belt speed with 20&deg; material surcharge angle. Multiply by (actual speed / 100) for other speeds. Based on CEMA 7th Edition methodology. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Belt Selection -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="belt-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Selection</div>
+      <h2 id="belt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Trough Conveyor <span class="text-accent">Belt Types</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Fabric-Reinforced Belts</h3>
+        <p>Multi-ply fabric belts use layers of polyester (EP), nylon (NN), or polyester-nylon (EP/NN) fabric for tensile reinforcement. Standard belt ratings range from 150 to 800 PIW (pounds per inch of width). Fabric belts suit conveyor lengths up to approximately 3,000 feet depending on load and incline. They cost less than steel-cord belts and are easier to splice in the field. Continental, Fenner Dunlop, and Goodyear (now Veyance) manufacture fabric conveyor belts.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Steel-Cord Reinforced Belts</h3>
+        <p>Steel-cord belts embed parallel steel cables in the belt carcass for extreme tensile strength. Ratings range from 1,000 to over 7,000 PIW. Steel-cord belts serve long-distance overland conveyors, high-tonnage mining conveyors, and applications where belt stretch must be minimized. They require vulcanized splicing with specialized equipment. Bridgestone, Continental, and Fenner Dunlop manufacture steel-cord conveyor belts.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cover Grades</h3>
+        <p>The belt cover (top and bottom rubber layers) protects the reinforcement from abrasion, impact, heat, oil, and chemical attack. CEMA/RMA grades include: Grade I for severely abrasive conditions (mining, aggregate), Grade II for moderately abrasive conditions (grain, fertilizer, cement), and specialty grades for oil-resistant, fire-resistant, and heat-resistant applications. Cover thickness ranges from 1/16" to 1/2" depending on application severity.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Flexibility</h3>
+        <p>Troughing requires the belt to flex transversely. Stiffer belts resist troughing and do not conform well to the idler profile, reducing effective carrying capacity and causing edge spillage. The belt must be flexible enough for the specified troughing angle. Higher troughing angles (45&deg;) require more flexible belts than lower angles (20&deg;). Belt manufacturers publish minimum recommended troughing angles for each belt construction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Trough Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Mining and aggregate:</strong> Trough conveyors move ore, overburden, crushed stone, sand, and gravel from extraction points to processing plants. Belt widths from 36" to 96" handle throughputs from hundreds to thousands of tons per hour. Overland conveyors replace haul trucks for distances exceeding one mile, reducing fuel, tire, and road maintenance costs.</p>
+
+        <p><strong class="text-ink">Grain and agriculture:</strong> Troughed belts transport grain from receiving pits to storage silos and from silos to processing or loadout. The enclosed trough reduces grain loss from wind and edge spillage. Food-grade belt covers prevent contamination. Inclined trough conveyors use <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleated belts</a> or chevron-patterned covers for steep angles.</p>
+
+        <p><strong class="text-ink">Cement and concrete:</strong> Trough conveyors move limestone, clinker, sand, and finished cement from quarry to kiln to silo to loadout. High-temperature belt covers handle hot clinker from the kiln. Dust-control hoods and enclosed galleries minimize fugitive dust emissions. Martin Engineering and Flexco provide belt cleaning and dust-suppression accessories for cement trough conveyors.</p>
+
+        <p><strong class="text-ink">Power generation:</strong> Coal-fired power plants use trough conveyors to transport coal from rail unloading facilities or barge docks to boiler feed silos. Typical capacities: 500-5,000 tons per hour on 48" to 72" wide belts. Fire-resistant belt covers and fire detection systems are required for coal handling per NFPA standards.</p>
+
+        <p><strong class="text-ink">Packaging bulk materials:</strong> In <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> applications, smaller trough conveyors (18"-36" wide) transport bulk ingredients from storage to filling machines. Sugar, salt, flour, pet food, fertilizer, and chemical powders move through troughed belt systems that feed weighing and bagging equipment.</p>
+
+        <p><strong class="text-ink">Waste and recycling:</strong> Trough conveyors transport municipal solid waste, construction debris, and recyclables from tipping floors to sorting stations. Wide belts (48"-72") handle the variable density and size of waste streams. Impact idlers at loading points absorb the shock of heavy items dropped from loaders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Design</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Loading & Transfer Points</h3>
+        <p>Material loading is the highest-stress point on a trough conveyor. Proper chute design directs material onto the belt center at a velocity matching the belt speed. Impact idlers absorb drop energy. Skirt boards contain material during the settling zone. Poor loading causes belt mistracking, premature wear, and fugitive material spillage. CEMA's belt conveyor design manual (7th Edition) provides detailed loading point engineering guidance.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Cleaning</h3>
+        <p>Material carry-back on the belt return side causes buildup on return idlers, tracking problems, and housekeeping issues. Primary belt cleaners mount at the head pulley discharge point. Secondary cleaners mount behind the head pulley. Martin Engineering, Flexco, and Brelko manufacture belt cleaner systems. Effective belt cleaning is especially critical for sticky materials like wet clay, damp coal, and processed foods.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Conveyor Structure</h3>
+        <p>Trough conveyor support structures include ground-level stringers, elevated gallery frames, and pipe trusses. Structural design must account for belt tension, material weight, wind loading (for outdoor installations), seismic requirements, and maintenance access. Walkways and access platforms along the conveyor length are required for idler replacement, belt inspection, and safety per MSHA and OSHA standards.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Systems</h3>
+        <p>Trough conveyors use head-end, tail-end, or dual-pulley drive configurations depending on conveyor length and load. Short conveyors (under 500 ft) typically use a single head-end drive. Long conveyors use dual drives or intermediate booster drives. Variable frequency drives (VFDs) enable soft starting, speed control, and energy savings at partial loads. Regenerative braking recovers energy on decline conveyors carrying heavy loads downhill.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a trough conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A trough conveyor shapes a flat belt into a concave U-shape using angled idler rollers. This troughed profile increases carrying capacity 2-3x over a flat belt and prevents bulk material from spilling off the edges. It is the standard conveyor for mining, aggregate, grain, and cement handling.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a troughing idler?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A troughing idler is a set of rollers arranged in a V or U shape. Standard three-roll idlers have one flat center roller and two angled wing rollers at 20&deg;, 35&deg;, or 45&deg;. Five-roll idlers add extra wing rollers for deeper troughs on wide belts. Impact, training, and return idlers serve specialized support functions.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Trough conveyor vs. flat belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Trough conveyors shape the belt into a U-profile for 2-3x more bulk material capacity. Flat belts stay horizontal on a slider bed for packaged goods, boxes, and unit loads. Trough conveyors dominate bulk handling (ore, grain, sand). Flat belts dominate <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging</a> and distribution.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How far can a trough conveyor transport material?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>From a few hundred feet to over 10 miles in a single flight. Long-distance overland conveyors use steel-cord reinforced belts and can replace haul trucks in mining. Practical length depends on belt tension rating, drive power, material weight, terrain, and whether horizontal curves are required.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Incline belt profiles</p>
+        </a>
+        <a href="/conveyor-types/vibratory-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Vibratory Conveyors</div>
+          <p class="text-sm text-white/60">Bulk feeding alternative</p>
+        </a>
+        <a href="/conveyor-types/pneumatic-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pneumatic Conveyors</div>
+          <p class="text-sm text-white/60">Enclosed bulk transport</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Unit load handling</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

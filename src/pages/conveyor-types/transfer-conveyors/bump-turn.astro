@@ -1,0 +1,327 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Transfer Conveyors", "item": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Bump Turn Conveyors", "item": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/bump-turn/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a bump turn conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A bump turn conveyor uses angled rollers, skate wheels, or guide rails at a conveyor junction to redirect products around a curve — typically 30, 45, or 90 degrees — without a powered transfer mechanism. The product's forward momentum carries it into the angled surface, which 'bumps' (deflects) it onto the new path. Passive bump turns use no motors at the turn point, relying on gravity and inertia. Powered bump turns add driven rollers to maintain speed through the turn." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a passive and powered bump turn?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A passive bump turn uses angled dead rollers or skate wheels and relies entirely on the product's incoming momentum to carry it through the turn. A powered bump turn adds motorized tapered rollers or angled driven rollers that actively propel the product through the curve. Passive turns cost less but require higher infeed speeds and can stall heavy products. Powered turns handle heavier loads and maintain consistent speed regardless of product weight." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bump turn change product orientation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, bump turns rotate the product's orientation relative to the conveyor line. A 90-degree bump turn rotates the product 90 degrees — the leading edge becomes a side edge. This orientation change can be intentional (rotating cases for labeling or palletizing) or undesirable (misaligning barcodes for scanning). If orientation must be maintained through a direction change, use a pop-up transfer or turntable instead." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bump Turn Conveyors: Passive & Powered Case Turning Systems",
+  "description": "Complete guide to bump turn conveyors including passive bump turns, powered bump turns, case orientation effects, and selection criteria for packaging line direction changes.",
+  "url": "https://packagingconveyor.com/conveyor-types/transfer-conveyors/bump-turn/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Bump Turn Conveyors: Passive & Powered Case Turning Systems"
+  description="Complete guide to bump turn conveyors: passive vs powered bump turns, case orientation effects, speed requirements, and packaging line direction change solutions."
+  canonical="https://packagingconveyor.com/conveyor-types/transfer-conveyors/bump-turn/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/transfer-conveyors/" class="hover:text-accent transition-colors">Transfer Conveyors</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Bump Turn</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Bump Turn Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Bump Turn Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A bump turn conveyor uses angled rollers, skate wheels, or guide rails at a conveyor junction to redirect products around a curve without a powered transfer mechanism. The product's forward momentum carries it into the angled surface, which deflects it onto the new travel path. Bump turns handle direction changes of 30, 45, or 90 degrees and are the simplest, lowest-cost method for changing conveyor direction in <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging and distribution systems</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Passive Bump Turns -->
+  <article class="py-20 bg-surface" aria-labelledby="passive-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Passive Systems</div>
+      <h2 id="passive-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Passive Bump <span class="text-accent">Turns</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Passive bump turns contain no motors at the turn point. The product arrives on a powered infeed conveyor at sufficient speed, contacts the angled deflection surface, and redirects onto the discharge conveyor. The only energy source is the product's forward momentum from the infeed conveyor.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Angled Skate Wheel Bump Turn</h3>
+        <p>The most common passive bump turn uses skate wheels mounted on axles angled toward the discharge direction. As the product contacts the angled wheels, the wheels spin and guide the product through the turn. Skate wheel bump turns handle light to moderate loads (1-75 lbs) and work best with flat-bottomed products that span multiple wheel rows. Hytrol and Intelligrated offer skate wheel curve sections that integrate with their <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> platforms.</p>
+        <p>Skate wheel bump turns require a minimum infeed speed of 60-80 FPM for reliable product tracking through the curve. Slower speeds risk products stalling in the turn. Heavier products need higher infeed speeds to maintain momentum through friction losses at the skate wheels.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dead Roller Bump Turn</h3>
+        <p>Dead (non-powered) rollers mounted at an angle provide a bump turn surface for heavier products. The product slides across the angled rollers, which spin freely to reduce friction. Dead roller bump turns handle 10-200 lbs and suit products with rigid, flat bottoms. The roller diameter and spacing must support the product's bottom surface without the product dropping between rollers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Guide Rail Deflection</h3>
+        <p>The simplest bump turn is a curved guide rail positioned at the outside of a conveyor curve. The product's leading edge contacts the rail, and the rail redirects the product along the curve. Guide rail deflection works on <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller conveyors</a> and belt conveyors where the conveying surface provides the driving force and the rail provides directional guidance. Guide rail curves cost the least but generate the most product impact force and are unsuitable for fragile goods.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Powered Bump Turns -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="powered-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Powered Systems</div>
+      <h2 id="powered-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Powered Bump <span class="text-accent">Turns</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Powered bump turns add motorized rollers or driven wheels to the turn section. The powered elements actively drive the product through the curve, eliminating dependence on infeed momentum. Powered turns handle heavier products, lower infeed speeds, and provide consistent transit time through the curve.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tapered Roller Curve</h3>
+        <p>Tapered roller curves use conical rollers that are wider at the outside radius and narrower at the inside. The taper differential drives the product around the curve. A single motor and chain or belt drives all rollers. Tapered roller curves handle 10-500 lbs and maintain consistent product speed from infeed to discharge. Hytrol, Dematic, and mk North America manufacture tapered roller curve sections in 30, 45, 60, and 90-degree configurations.</p>
+        <p>Tapered rollers provide the best product control through curves for case-sized products on <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">live roller conveyor</a> systems. The taper prevents the product from drifting to the outside of the curve, a common problem with straight-roller curves driven by friction contact.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt-Over-Roller Curve</h3>
+        <p>Belt-over-roller curves use a flat belt riding over a curved roller bed. The belt provides a continuous driven surface that carries the product through the turn. Belt curves handle irregular product shapes, small items, and polybags that cannot ride on rollers. Dorner and mk North America offer precision belt curve modules for small-product packaging applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Powered Wheel Curve</h3>
+        <p>Powered wheel curves use individually driven wheels mounted at angles within the curve. Each wheel has a small motor or is driven by a common drive through differential gearing. Powered wheel curves provide omnidirectional drive forces that guide the product through complex curve profiles. They suit distribution center applications where <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor</a> systems need powered curves between straight sections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Orientation Effects -->
+  <section class="py-20 bg-surface" aria-labelledby="orientation-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Orientation</div>
+      <h2 id="orientation-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Case Orientation <span class="text-accent">Effects</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Bump turns rotate product orientation. A 90-degree bump turn rotates the product 90 degrees relative to the conveyor center line. The leading edge becomes a side edge. A 12x18-inch case traveling long-side-first (18" leading) through a 90-degree bump turn exits with the short side leading (12" leading). This rotation affects downstream operations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Intentional Orientation Change</h3>
+        <p>Some applications intentionally use bump turns for case rotation. Rotating a case 90 degrees before a label applicator exposes a different face for labeling. Rotating before a <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating station</a> changes the packing orientation for case loading. Rotating before palletizing changes the layer pattern. Bump turns provide a zero-cost orientation change compared to dedicated case turners.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Undesirable Orientation Change</h3>
+        <p>Barcode readers, vision systems, and print-and-apply labelers require consistent product orientation. A bump turn before a barcode scanner moves the barcode from the leading face to the side, requiring scanner repositioning or additional scanners. If orientation must stay constant through a direction change, use a <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pop-up chain transfer or turntable</a> that moves the product sideways without rotation.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Predictable vs. Unpredictable Rotation</h3>
+        <p>Rectangular products with flat bottoms rotate predictably through bump turns: the rotation angle equals the turn angle. Round products (bottles, cans, drums) may spin unpredictably on bump turn surfaces, especially on skate wheels. Irregularly shaped products may tip, jam, or rotate inconsistently. Test product behavior on bump turn samples before committing to a layout design. Powered belt curves provide the most predictable rotation for non-rectangular products.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Bump Turn Type <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Skate Wheel (Passive)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Dead Roller (Passive)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Tapered Roller (Powered)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Belt Curve (Powered)</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">200 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">500 lbs</td>
+              <td class="py-3 font-mono text-sm">100 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Min Infeed Speed</td>
+              <td class="py-3 pr-4 font-mono text-sm">60-80 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">80-100 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">No minimum</td>
+              <td class="py-3 font-mono text-sm">No minimum</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Types</td>
+              <td class="py-3 pr-4">Flat-bottom cases</td>
+              <td class="py-3 pr-4">Rigid flat-bottom</td>
+              <td class="py-3 pr-4">Cases, totes, cartons</td>
+              <td class="py-3">Any shape, polybags</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Orientation Change</td>
+              <td class="py-3 pr-4">Yes (equals turn angle)</td>
+              <td class="py-3 pr-4">Yes (equals turn angle)</td>
+              <td class="py-3 pr-4">Yes (equals turn angle)</td>
+              <td class="py-3">Yes (equals turn angle)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Power Required</td>
+              <td class="py-3 pr-4">None</td>
+              <td class="py-3 pr-4">None</td>
+              <td class="py-3 pr-4">Motor + chain/belt</td>
+              <td class="py-3">Motor + belt</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Load ratings represent typical values. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Bump Turn <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Packaging line direction changes:</strong> Bump turns redirect conveyor flow around building columns, walls, and equipment obstructions. A 90-degree powered tapered roller curve fits into an L-shaped <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line layout</a> and maintains line speed through the turn. Multiple 30-degree turns create gentle S-curves that route conveyors around obstacles with less orientation change per turn.</p>
+
+        <p><strong class="text-ink">Gravity conveyor systems:</strong> Passive skate wheel and dead roller bump turns redirect products on <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller conveyor</a> systems. The gravity decline provides the momentum to carry products through the turn. Shipping and receiving areas commonly use gravity conveyors with bump turns to route packages from truck doors to staging areas without power requirements.</p>
+
+        <p><strong class="text-ink">Case rotation for labeling:</strong> A 90-degree bump turn before a label applicator rotates the case to expose the target labeling face. This eliminates the need for a dedicated case turner. Two sequential 90-degree bump turns rotate a case 180 degrees (end-for-end). Layout designers use bump turns as no-cost case orientation tools.</p>
+
+        <p><strong class="text-ink">Distribution center conveyor networks:</strong> Large distribution centers route conveyors through multi-level pick modules with numerous direction changes. Powered tapered roller curves and belt curves handle the heavy, continuous traffic at 100-200 FPM. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR systems</a> from TGW, Dematic, and Bastian Solutions include powered curve modules designed to integrate seamlessly with straight MDR sections.</p>
+
+        <p><strong class="text-ink"><a href="/conveyor-types/flexible-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Flexible conveyor</a> alternatives:</strong> Expandable skate wheel conveyors inherently provide bump turn capability at any angle along their length. Workers position the flexible conveyor in curves to route products from truck unloading to staging areas. The skate wheels serve as built-in bump turn surfaces at every curve point.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Bump Turn</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Passive vs. powered is the first decision.</strong> Use passive bump turns when infeed speed exceeds 60 FPM, products weigh under 75 lbs, and products have flat bottoms. Use powered bump turns when infeed speed is variable or slow, products weigh over 75 lbs, or products require consistent speed through the curve.</p>
+
+        <p><strong class="text-ink">Product bottom surface determines the mechanism.</strong> Flat, rigid bottoms work on skate wheels and rollers. Flexible bottoms (polybags, pouches) require belt curves. Small products that fall between rollers require belt curves or closely spaced skate wheels. Products with protruding features on the bottom may catch on roller or wheel gaps.</p>
+
+        <p><strong class="text-ink">Consider the orientation change.</strong> Every bump turn rotates the product by the turn angle. If this rotation is unacceptable, use a <a href="/conveyor-types/transfer-conveyors/pivot/" class="text-accent hover:text-accent-hover font-semibold">pivot conveyor</a> or pop-up transfer instead. If the rotation is acceptable or desirable, bump turns provide the lowest-cost direction change. Plan the barcode position and label orientation around the bump turn rotation.</p>
+
+        <p><strong class="text-ink">Radius affects footprint and product behavior.</strong> Tighter radii (inside radius 12-24 inches) handle small products but generate more product rotation stress. Wider radii (inside radius 36-60 inches) provide smoother product flow but consume more floor space. Standard tapered roller curves from Hytrol and Dematic come in 12, 18, 24, 36, and 48-inch inside radii.</p>
+        <!-- VERIFY: Standard tapered roller curve radii from Hytrol and Dematic -->
+
+        <p><strong class="text-ink"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> should not include bump turns.</strong> Products accumulating in a curve experience uneven backpressure and may jam, tip, or rotate unpredictably. Place accumulation sections on straight conveyor runs before or after the bump turn, not within the curve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a bump turn conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A bump turn uses angled rollers, skate wheels, or guide rails to redirect products around a curve. The product's forward momentum carries it into the angled surface, deflecting it onto the new path. See our <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyor guide</a> for all direction-change methods.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between passive and powered bump turns?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Passive bump turns have no motors and rely on product momentum. Powered bump turns use motorized tapered rollers or belts to drive products through the curve. Passive turns cost less but need higher infeed speeds and lighter products. Powered turns handle heavier loads at any speed.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Does a bump turn change product orientation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Yes. The product rotates by the turn angle. A 90-degree bump turn rotates the product 90 degrees. If orientation must stay constant, use a <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pop-up transfer or turntable</a> that moves the product laterally without rotation.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">All direction-change methods</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/pivot/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pivot Conveyors</div>
+          <p class="text-sm text-white/60">Orientation-preserving alternatives</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/gravity/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Gravity Rollers</div>
+          <p class="text-sm text-white/60">Passive bump turn feed systems</p>
+        </a>
+        <a href="/conveyor-types/flexible-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Flexible Conveyors</div>
+          <p class="text-sm text-white/60">Built-in curve capability</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

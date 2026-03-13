@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Chain Conveyors", "item": "https://packagingconveyor.com/conveyor-types/chain-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Overhead Conveyor Systems", "item": "https://packagingconveyor.com/conveyor-types/chain-conveyors/overhead/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an overhead conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An overhead conveyor system uses an elevated track mounted from the ceiling or structural steel to transport products suspended from trolleys or carriers. A chain drives the trolleys along the track, moving products through production processes while keeping the floor clear for workers, equipment, and other material handling. The three main types are monorail, power-and-free, and enclosed track." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between monorail and power-and-free overhead conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Monorail conveyors use a single track with all trolleys connected to one chain moving at constant speed. Power-and-free conveyors use two tracks — a powered chain track and a free trolley track — allowing individual trolleys to stop, accumulate, change speed, and switch paths independently. Power-and-free systems cost more but handle complex routing, multiple process times, and inline accumulation." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use overhead conveyor systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Automotive (paint lines, assembly), aerospace (large part finishing), appliance manufacturing (paint and assembly), garment and textile (sorting and distribution), food processing (meat and poultry), powder coating and finishing shops, and heavy equipment manufacturing. Any industry that needs to move products through process zones while keeping the floor clear benefits from overhead conveyors." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much weight can an overhead conveyor carry?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Monorail systems typically carry 10-2,000 lbs per trolley. Power-and-free systems carry 50-4,000 lbs per carrier. Enclosed track systems carry 10-600 lbs per trolley. The track cross-section, trolley wheel size, chain strength, and structural support determine the maximum load. Heavy automotive and aerospace applications use I-beam track with large-diameter trolley wheels for maximum capacity." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Overhead Conveyor Systems: Monorail, Power-and-Free & Enclosed Track",
+  "description": "Complete guide to overhead conveyor systems including monorail, power-and-free, and enclosed track systems for paint lines, assembly, garment handling, and manufacturing.",
+  "url": "https://packagingconveyor.com/conveyor-types/chain-conveyors/overhead/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Overhead Conveyor Systems: Monorail, Power-and-Free & Enclosed Track"
+  description="Complete guide to overhead conveyor systems: monorail, power-and-free, enclosed track. Paint lines, assembly, garment handling. Load ratings, track types, and selection criteria."
+  canonical="https://packagingconveyor.com/conveyor-types/chain-conveyors/overhead/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/chain-conveyors/" class="hover:text-accent transition-colors">Chain Conveyors</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Overhead Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Overhead Conveyor Systems</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Overhead Conveyor Systems
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>An overhead conveyor system uses an elevated track mounted from the ceiling or structural steel to transport products suspended from trolleys or carriers through production processes. Overhead conveyors keep the floor clear for workers and equipment while moving products through paint lines, assembly stations, ovens, wash systems, and distribution operations. The three main types are monorail (constant speed), power-and-free (independent trolley control), and enclosed track (clean, quiet operation for light loads).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monorail -->
+  <article class="py-20 bg-surface" aria-labelledby="monorail-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Monorail</div>
+      <h2 id="monorail-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Monorail Overhead <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Monorail overhead conveyors use a single I-beam or enclosed track with a continuous chain that drives all trolleys at the same constant speed. Products hang from the trolleys and move through the process at a uniform pace. The simplicity of monorail systems makes them the most reliable and lowest-maintenance overhead conveyor type.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">I-Beam Track Monorail</h3>
+        <p>I-beam monorail uses standard or custom I-beam profiles as the track. Trolley wheels ride on the bottom flange of the I-beam. The conveyor chain runs inside or alongside the beam, connecting to trolleys through pusher dogs or attachments. I-beam track handles the heaviest loads (500-2,000 lbs per trolley) and longest spans between supports.</p>
+        <p>I-beam monorail conveyors serve automotive paint lines, appliance finishing, and heavy manufacturing where large, heavy parts move through wash, paint, and bake processes. Jervis B. Webb (Daifuku), Richards-Wilcox, and PACLINE manufacture I-beam monorail systems. Track profiles range from 3-inch to 8-inch I-beam depending on load and span requirements.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Enclosed Track Monorail</h3>
+        <p>Enclosed track monorail uses a tubular or box-section track that encloses the trolley wheels and chain. The enclosed design keeps debris, paint overspray, and contaminants off the trolley wheels and chain, reducing maintenance and preventing contamination of products below. Enclosed track handles lighter loads (10-600 lbs) and suits cleaner environments.</p>
+        <p>Enclosed track monorail conveyors serve garment handling, light assembly, electronic component transport, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> where contamination from overhead conveyor components is unacceptable. PACLINE, Rapid Industries, and Ultimation offer enclosed track monorail systems.</p>
+        <!-- VERIFY: PACLINE, Rapid Industries, Ultimation current enclosed track product lines -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Monorail Limitations</h3>
+        <p>All trolleys move at the same speed and cannot stop independently. If one product needs more time at a process station, all products slow down or the process must adapt to the conveyor speed. Monorail systems cannot accumulate products — every position on the chain moves continuously. For applications requiring variable dwell times, independent stops, or accumulation, power-and-free systems are necessary.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Power-and-Free -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="pf-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Power-and-Free</div>
+      <h2 id="pf-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Power-and-Free <span class="text-accent">Systems</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Power-and-free overhead conveyors use a dual-track design. The upper "power" track carries a continuously moving chain. The lower "free" track carries trolleys that can engage and disengage from the power chain independently. When a trolley engages the chain (via a pusher dog mechanism), the chain drives the trolley forward. When the trolley disengages (triggered by a stop, diverter, or accumulation zone), the chain continues while the trolley stays in place.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Independent Trolley Control</h3>
+        <p>Each trolley operates independently. One trolley may be moving at chain speed through a paint booth while another trolley stops at an assembly station and a third trolley accumulates in a buffer zone. This independence allows complex production scheduling where different products require different process times at different stations. A product needing 5 minutes of paint cure stops in the oven while a product needing 3 minutes releases earlier.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Track Switching and Routing</h3>
+        <p>Power-and-free systems include track switches that route trolleys onto spur lines, bypass loops, and alternate paths. A trolley approaching a switch point receives a routing command (from RFID tag, barcode, or PLC logic) that activates the switch to direct the trolley left, right, or straight. This routing capability creates complex flow networks: a single main loop with multiple process spurs, rework loops, storage banks, and shipping lanes.</p>
+        <p>Daifuku (Jervis B. Webb), Dematic, and Richards-Wilcox engineer power-and-free systems with dozens of switches and hundreds of trolleys managed by plant-wide control systems. The control software tracks every trolley position, manages routing logic, and optimizes throughput.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Accumulation Zones</h3>
+        <p>Power-and-free accumulation zones queue trolleys on the free track while the power chain runs continuously above. Each trolley's pusher dog disengages from the chain as it contacts the trolley ahead of it. Trolleys stack up in the accumulation zone without chain tension or drive force. When the lead trolley releases, the next trolley re-engages the chain and advances. This is conceptually similar to <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a> on floor-level conveyors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Elevation Changes</h3>
+        <p>Power-and-free conveyors handle vertical inclines and declines, carrying products up to mezzanine levels, over equipment, through floor openings, and into elevated ovens or wash tanks. The free track trolleys maintain their load orientation (hanging vertically) through elevation changes up to 45-degree inclines. Vertical drops use controlled-descent track sections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Overhead Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Paint and finishing lines:</strong> The dominant application for overhead conveyors. Products hang from carriers and travel through multi-stage finishing processes: alkaline wash, rinse, phosphate pretreatment, e-coat, primer spray, topcoat spray, flash-off, and bake cure. Monorail systems serve simple finishing lines with uniform process times. Power-and-free systems serve complex lines where products need different colors, cure times, or process paths.</p>
+
+        <p><strong class="text-ink">Powder coating operations:</strong> Overhead conveyors carry metal parts through powder coating booths and cure ovens at 350-450&deg;F. The parts hang vertically for full coverage. Chain and trolley components must withstand oven temperatures. Enclosed track systems keep powder contamination off the conveyor mechanism. Small job shops use monorail; large operations use power-and-free for color change flexibility.</p>
+
+        <p><strong class="text-ink">Automotive assembly:</strong> Power-and-free overhead conveyors carry car bodies, doors, hoods, and trim through assembly stations. Workers access the suspended body from all sides without floor conveyors blocking access. The power-and-free design allows each station to hold the body for variable assembly time, critical for mixed-model lines where different vehicle configurations require different work content at each station.</p>
+
+        <p><strong class="text-ink">Garment-on-hanger (GOH) systems:</strong> Enclosed track monorail conveyors transport garments on hangers through sorting, quality inspection, pressing, and shipping operations. The garments hang freely, preventing wrinkles. Automated sorting systems read garment RFID tags and route hangers to correct destination lanes. GOH systems serve apparel distribution centers, dry cleaners, and uniform rental operations. Dematic and TGW offer garment sorting conveyor solutions.</p>
+
+        <p><strong class="text-ink">Meat and poultry processing:</strong> Overhead monorail conveyors carry carcasses through slaughter, evisceration, inspection, chilling, cutting, and packaging operations. Stainless steel track and trolleys meet <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary requirements</a>. The overhead design keeps product above floor-level contamination sources. Mepaco (now Provisur) and Jarvis Products supply food-grade overhead conveyor systems.</p>
+        <!-- VERIFY: Mepaco/Provisur and Jarvis Products current product offerings -->
+
+        <p><strong class="text-ink">Heavy equipment and aerospace:</strong> Power-and-free conveyors carry large, heavy components (engine assemblies, wing sections, heavy equipment frames) through manufacturing processes. Load capacities up to 4,000 lbs per carrier handle the largest workpieces. The power-and-free design accommodates variable assembly times at each station. Aerospace applications require paint booth, anodizing, and surface treatment transport.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Overhead System <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Monorail (I-Beam)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Power-and-Free</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Enclosed Track</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load/Trolley</td>
+              <td class="py-3 pr-4 font-mono text-sm">2,000 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">4,000 lbs</td>
+              <td class="py-3 font-mono text-sm">600 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Control</td>
+              <td class="py-3 pr-4">Constant (all same)</td>
+              <td class="py-3 pr-4">Variable (per trolley)</td>
+              <td class="py-3">Constant (all same)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Accumulation</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">Yes (independent)</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Track Switching</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 pr-4">Full (spurs, bypasses)</td>
+              <td class="py-3">Limited</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Noise Level</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Moderate-High</td>
+              <td class="py-3">Low</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Continuous paint/finish</td>
+              <td class="py-3 pr-4">Complex assembly/finish</td>
+              <td class="py-3">Garment, light assembly</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Load ratings represent typical maximum values. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Design Considerations -->
+  <section class="py-20 bg-surface" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Engineering</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Structural support loading:</strong> Overhead conveyors transfer product weight plus conveyor weight to the building structure through hangers and support brackets. Calculate point loads at each hanger (product + trolley + chain + track weight) and verify building structural capacity. Existing buildings may require structural reinforcement. New construction should design overhead conveyor loads into the building steel from the start.</p>
+
+        <p><strong class="text-ink">Carrier and fixture design:</strong> The carrier (load bar, hook, fixture) connects the product to the trolley. Carrier design affects product accessibility during processing, loading/unloading ergonomics, and product security during transport. Custom carriers for automotive bodies, appliance shells, and aerospace parts represent significant engineering effort. Carriers must withstand paint chemicals, oven temperatures, and mechanical handling forces.</p>
+
+        <p><strong class="text-ink">Chain selection and tensioning:</strong> Overhead conveyor chains run under tension from the product load, friction, elevation changes, and curves. Chain pull calculation accounts for total suspended load, coefficient of friction, track inclines, and speed. Chain material must handle the operating temperature: standard carbon steel to 250&deg;F, heat-treated alloy steel to 500&deg;F, stainless steel for corrosive environments. Take-up mechanisms (screw, spring, or gravity) maintain proper chain tension.</p>
+
+        <p><strong class="text-ink">Integration with process equipment:</strong> Overhead conveyors must interface with spray booths (product positioning, booth openings, airflow management), ovens (temperature ratings, door openings, dwell time control), wash systems (spray coverage, drainage, chemical resistance), and loading/unloading stations (<a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical lifts</a>, ergonomic work heights, automation interface).</p>
+
+        <p><strong class="text-ink">Safety systems:</strong> Overhead conveyors require emergency stops along the entire route, load-drop protection (catch pans, guards), pinch-point guarding at drive and take-up locations, and anti-backup devices on inclines. Power-and-free systems add zone-level stop controls and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zone</a> sensing for collision prevention.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is an overhead conveyor system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>An overhead conveyor uses elevated track to transport suspended products through production processes. Types include monorail (constant speed), power-and-free (independent trolley control), and enclosed track (clean, quiet). See our <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain conveyor hub</a> for the full chain conveyor family.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Monorail vs power-and-free — which do I need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Monorail for simple continuous flow at constant speed (single paint color, uniform cure time). Power-and-free for complex routing, variable dwell times, accumulation, and multi-path production. Power-and-free costs substantially more but handles mixed-model production and process variability.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use overhead conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Automotive paint and assembly, powder coating, appliance finishing, garment handling, <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">meat processing</a>, aerospace manufacturing, and heavy equipment assembly. Any operation that benefits from floor-clear transport and overhead process routing.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much weight can an overhead conveyor carry?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Monorail: 10-2,000 lbs per trolley. Power-and-free: 50-4,000 lbs per carrier. Enclosed track: 10-600 lbs. Load capacity depends on track profile, trolley wheels, chain strength, and structural support. Heavier loads require larger I-beam track and reinforced building structure.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">All chain conveyor types</p>
+        </a>
+        <a href="/conveyor-types/drag-chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Drag Chain</div>
+          <p class="text-sm text-white/60">Bulk material chain systems</p>
+        </a>
+        <a href="/conveyor-types/spiral-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Spiral Conveyors</div>
+          <p class="text-sm text-white/60">Vertical transport alternatives</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Floor-level buffer systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

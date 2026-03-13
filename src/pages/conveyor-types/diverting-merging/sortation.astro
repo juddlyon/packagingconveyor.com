@@ -1,0 +1,353 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Diverting & Merging", "item": "https://packagingconveyor.com/conveyor-types/diverting-merging/" },
+    { "@type": "ListItem", "position": 4, "name": "Sortation Systems", "item": "https://packagingconveyor.com/conveyor-types/diverting-merging/sortation/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a sortation system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A sortation system is an integrated conveyor solution that automatically routes products to many destinations (10-200+) at high speed based on scanning data (barcode, RFID, vision). Sortation systems combine induct conveyors, scanning stations, sort conveyor mechanisms, and destination lanes with warehouse control software. Common sorter types include shoe sorters, pop-up wheel sorters, crossbelt sorters, tilt tray sorters, and bomb bay sorters." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a shoe sorter and a crossbelt sorter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A shoe sorter (sliding shoe) uses small divert shoes on a flat conveyor surface that slide sideways to push products off at an angle. Products ride directly on the sorter surface. A crossbelt sorter uses individual carrier units, each with a small belt that runs perpendicular to travel direction to push products off into destination chutes. Shoe sorters handle larger, flatter products at lower cost per destination. Crossbelt sorters handle wider product variety (including small, light, and irregular items) at higher cost." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many sorts per hour can a sortation system handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Throughput depends on sorter type. Pop-up wheel sorters: 5,000-15,000 per hour. Shoe sorters: 10,000-20,000 per hour. Crossbelt sorters: 10,000-25,000 per hour. Tilt tray sorters: 8,000-15,000 per hour. Bomb bay sorters: 5,000-12,000 per hour. Actual throughput depends on product mix, destination count, sort accuracy requirements, and induct rate." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Sortation Systems: Shoe, Crossbelt, Tilt Tray & Pop-Up Wheel Sorters",
+  "description": "Complete guide to sortation systems including shoe sorters, crossbelt sorters, tilt tray sorters, pop-up wheel sorters, and bomb bay sorters for distribution and e-commerce.",
+  "url": "https://packagingconveyor.com/conveyor-types/diverting-merging/sortation/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Sortation Systems: Shoe, Crossbelt, Tilt Tray & Pop-Up Wheel Sorters"
+  description="Complete guide to sortation systems: shoe sorters, crossbelt, tilt tray, pop-up wheel, bomb bay. Throughput, accuracy, product handling, and selection for distribution and e-commerce."
+  canonical="https://packagingconveyor.com/conveyor-types/diverting-merging/sortation/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/diverting-merging/" class="hover:text-accent transition-colors">Diverting & Merging</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Sortation Systems</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sortation Systems</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Sortation Systems
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A sortation system automatically routes products to many destinations at high speed using scanning data, routing logic, and mechanical sort mechanisms. Sortation systems combine induct conveyors, barcode/RFID scanners, sort conveyors, and destination lanes — managed by warehouse control software — to process 5,000-25,000+ items per hour. The five major sorter types are shoe sorters, pop-up wheel sorters, crossbelt sorters, tilt tray sorters, and bomb bay sorters, each optimized for different product characteristics and throughput requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shoe Sorters -->
+  <article class="py-20 bg-surface" aria-labelledby="shoe-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Shoe Sorters</div>
+      <h2 id="shoe-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Shoe Sorters <span class="text-accent">(Sliding Shoe)</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Shoe sorters (also called sliding shoe sorters) use a flat conveying surface with rows of small divert shoes mounted on slats. The shoes normally align with the direction of travel, forming a smooth surface. When a divert is commanded, actuators beneath the surface slide selected shoes at a 30-45 degree angle, gently pushing the product off the side of the sorter onto the destination lane.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">How Shoe Sorters Work</h3>
+        <p>Products ride directly on the shoe surface. A scanner upstream reads the product barcode. The warehouse control system (WCS) determines the destination and calculates when the product will reach the correct sort point. At the right moment, the shoes in that zone activate, creating a diagonal divert path. The shoes contact the product and guide it smoothly off the side at the programmed angle. The product slides down a chute or onto a take-away conveyor at the destination lane.</p>
+        <p>Shoe sorters handle flat-bottomed products from 1 to 100 lbs. Typical line speeds: 300-500 FPM. Throughput: 10,000-20,000 sorts per hour. Sort accuracy exceeds 99.5% for properly inducted products. Dematic, Intelligrated (Honeywell), Beumer Group, and KION (Dematic) supply shoe sorter systems.</p>
+        <!-- VERIFY: Current shoe sorter manufacturer brand relationships (Dematic/KION, Intelligrated/Honeywell) -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Shoe Sorter Advantages</h3>
+        <p>Shoe sorters provide gentle divert action with minimal product impact. They handle a wide range of product sizes on a common platform. Destination lanes can be on both sides of the sorter (bi-directional sort). No individual carriers are needed — products ride directly on the surface, maximizing sort density. Shoe sorters handle the highest throughput per dollar for flat-bottomed case and carton sorting.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Shoe Sorter Limitations</h3>
+        <p>Products must have flat, rigid bottoms to ride on the shoe surface. Polybags, soft packs, and irregularly shaped items may snag on shoe gaps. Very small items (under 6 inches) may slip between shoes. Very light items (under 0.5 lbs) may not respond to shoe contact. For these product types, crossbelt or tilt tray sorters are more reliable.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Pop-Up Wheel Sorters -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="popup-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Pop-Up Wheel Sorters</div>
+      <h2 id="popup-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Pop-Up Wheel <span class="text-accent">Sorters</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Pop-up wheel sorters use banks of small, angled wheels mounted between <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> rollers. When a divert is needed, the wheels pop up above the roller surface and contact the product's bottom. The spinning wheels redirect the product at a 30-45 degree angle onto the destination spur. When not diverting, the wheels retract below the rollers and the product travels straight on the roller surface.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Performance</h3>
+        <p>Pop-up wheel sorters handle line speeds up to 600 FPM with products from 1 to 75 lbs. Each pop-up wheel zone serves one destination. Multiple zones along the trunk line each serve a different lane. Throughput: 5,000-15,000 sorts per hour depending on product spacing and number of destinations. Pop-up wheels provide fast activation (0.3-0.5 seconds) for high-speed diverting.</p>
+        <p>Pop-up wheel sorters are the most common sortation technology in mid-size distribution centers and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging facilities</a>. They integrate with standard roller conveyor platforms from Dematic, Intelligrated, Bastian Solutions, and TGW. See our <a href="/conveyor-types/transfer-conveyors/pivot/" class="text-accent hover:text-accent-hover font-semibold">pivot conveyor guide</a> for more on pop-up wheel mechanism details.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crossbelt Sorters -->
+  <section class="py-20 bg-surface" aria-labelledby="crossbelt-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Crossbelt Sorters</div>
+      <h2 id="crossbelt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Crossbelt <span class="text-accent">Sorters</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Crossbelt sorters use a loop of individual carrier units, each equipped with a short belt conveyor that runs perpendicular (cross) to the main travel direction. Each carrier circulates around the loop at constant speed. Products are inducted onto carriers at induct stations. When a carrier reaches its destination chute, the crossbelt activates and pushes the product off the side into the chute.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Product Versatility</h3>
+        <p>Crossbelt sorters handle the widest product range of any sorter type. Small items, polybags, soft packs, tubes, cylinders, irregularly shaped products, and flat items all ride securely on the crossbelt carrier surface. The belt provides positive containment during transport and positive discharge force during sort. Products from 0.1 to 75 lbs and from 3 inches to 36 inches work on standard crossbelt carriers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">High Throughput</h3>
+        <p>Crossbelt sorters achieve 10,000-25,000 sorts per hour. The loop runs at 300-600 FPM. Multiple induct points around the loop maximize carrier utilization. Sort accuracy exceeds 99.9% because each product is positively contained on its carrier — no sliding, no interaction with adjacent products. Beumer Group, Interroll, Dematic, and KNAPP manufacture crossbelt sorter systems.</p>
+        <!-- VERIFY: KNAPP crossbelt sorter product offering -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Crossbelt Sorter Cost</h3>
+        <p>Crossbelt sorters represent the highest capital investment among sorter types. Each carrier is an independent unit with its own belt, motor, and controller. A typical crossbelt loop has 200-1,000 carriers. The per-carrier cost plus the loop infrastructure, induct stations, and controls make crossbelt sorters $$$$ investments. They justify cost in high-volume e-commerce and parcel operations where product variety and sort accuracy requirements are highest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tilt Tray and Bomb Bay -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="tilt-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Tilt Tray & Bomb Bay</div>
+      <h2 id="tilt-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Tilt Tray & <span class="text-accent">Bomb Bay Sorters</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tilt Tray Sorters</h3>
+        <p>Tilt tray sorters use a loop of individual tray carriers that tilt to one side (left or right) to dump products into destination chutes. Each tray is a flat platform mounted on a pivot. The tray tilts at the destination point, and gravity slides the product off into the chute below. Tilt trays handle products from 0.5 to 50 lbs and suit flat, stable items that stay on the tray during transport without containment.</p>
+        <p>Tilt tray sorters provide 8,000-15,000 sorts per hour. They cost less per carrier than crossbelt sorters because the tilt mechanism is simpler than a motorized belt. Tilt trays excel in apparel distribution (folded garments), small parts (cosmetics, electronics), and pharmaceutical order fulfillment. Beumer Group, Dematic, and Crisplant (Beumer) supply tilt tray sorter systems.</p>
+        <!-- VERIFY: Crisplant/Beumer relationship and current product line -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bomb Bay Sorters</h3>
+        <p>Bomb bay sorters (also called trap door sorters) use carriers with a hinged bottom that opens downward to drop products into destination chutes directly below. The carrier travels over the destination position, the doors open, and the product falls into the chute. The doors close and the carrier continues to the induct station for the next product.</p>
+        <p>Bomb bay sorters handle products from 0.5 to 30 lbs. They require products that can tolerate a short free-fall drop (6-12 inches). They suit small, durable items: pharmaceutical cartons, cosmetic packages, small electronics, and books. Bomb bay sorters provide 5,000-12,000 sorts per hour and offer compact destination spacing because chutes are directly below the sorter rather than beside it.</p>
+        <p>Bomb bay sorters save floor space by stacking destinations vertically (below the sorter loop) rather than spreading them horizontally (alongside the sorter). This makes them the preferred choice in space-constrained facilities with many sort destinations. Dematic and SDI Industries produce bomb bay sorter systems.</p>
+        <!-- VERIFY: SDI Industries bomb bay sorter product line -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Sorter Type <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[900px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Shoe Sorter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Wheel</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Crossbelt</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Tilt Tray</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Bomb Bay</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Throughput/Hr</td>
+              <td class="py-3 pr-4 font-mono text-sm">10K-20K</td>
+              <td class="py-3 pr-4 font-mono text-sm">5K-15K</td>
+              <td class="py-3 pr-4 font-mono text-sm">10K-25K</td>
+              <td class="py-3 pr-4 font-mono text-sm">8K-15K</td>
+              <td class="py-3 font-mono text-sm">5K-12K</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Types</td>
+              <td class="py-3 pr-4">Flat-bottom cases</td>
+              <td class="py-3 pr-4">Flat-bottom cases</td>
+              <td class="py-3 pr-4">Any shape/size</td>
+              <td class="py-3 pr-4">Flat, stable items</td>
+              <td class="py-3">Small, durable items</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Weight Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">1-100 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">1-75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">0.1-75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">0.5-50 lbs</td>
+              <td class="py-3 font-mono text-sm">0.5-30 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Sort Accuracy</td>
+              <td class="py-3 pr-4 font-mono text-sm">>99.5%</td>
+              <td class="py-3 pr-4 font-mono text-sm">>99%</td>
+              <td class="py-3 pr-4 font-mono text-sm">>99.9%</td>
+              <td class="py-3 pr-4 font-mono text-sm">>99.5%</td>
+              <td class="py-3 font-mono text-sm">>99.5%</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Destinations</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-200</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-50</td>
+              <td class="py-3 pr-4 font-mono text-sm">50-500+</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-200</td>
+              <td class="py-3 font-mono text-sm">30-200</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Throughput depends on product mix, destination count, and induct rate. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- System Components -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="components-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">System Architecture</div>
+      <h2 id="components-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sortation System <span class="text-accent">Components</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Induct system:</strong> The induct system feeds products onto the sorter at controlled spacing and timing. Induct conveyors use <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyors</a> with gap-creating acceleration zones that singulate products and create uniform spacing. For carrier-based sorters (crossbelt, tilt tray), the induct station loads individual products onto empty carriers. Induct rate limits overall sort throughput — multiple induct points maximize carrier utilization.</p>
+
+        <p><strong class="text-ink">Scanning station:</strong> Barcode scanners (laser or camera-based), RFID readers, or vision systems identify each product as it passes the scanning station. The scan provides the routing data (destination) that the control system uses to trigger the sort. Multi-sided scanning arrays (top, side, bottom) read barcodes regardless of label position. Scan rate must match or exceed the sort rate — a missed scan sends the product to a recirculation loop or exception lane.</p>
+
+        <p><strong class="text-ink">Sort mechanism:</strong> The sort conveyor itself — the shoe deck, wheel zones, crossbelt loop, or tilt tray loop. The mechanism receives divert commands from the control system and activates at the precise moment the product reaches the destination position.</p>
+
+        <p><strong class="text-ink">Destination lanes:</strong> Chutes, take-away conveyors, or accumulation lanes that receive sorted products. Chute destinations use gravity to collect products in bins or gaylords. Conveyor destinations use <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller</a> or <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor</a> lanes for further processing. Destination lane design must handle the peak sort rate without backup — a full destination lane causes sort exceptions.</p>
+
+        <p><strong class="text-ink">Recirculation:</strong> Products that cannot sort (full destination, no scan read, exception condition) recirculate back to the scanning station for another attempt. The recirculation loop adds 30-60 seconds per recirculation cycle. High recirc rates reduce effective throughput. System design minimizes recirculation through reliable scanning, adequate destination capacity, and robust routing logic.</p>
+
+        <p><strong class="text-ink">Warehouse control software (WCS):</strong> The WCS manages the entire sortation operation: product identification, routing decisions, sort commands, destination management, and exception handling. The WCS interfaces with the warehouse management system (WMS) for order data, carrier data, and shipping information. Dematic, Intelligrated, TGW, and Bastian Solutions provide WCS platforms integrated with their sortation hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sortation <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">E-commerce order fulfillment:</strong> Crossbelt and tilt tray sorters handle the wide product variety in e-commerce operations. Items picked from storage sort to shipping lanes by carrier, shipping method, or geographic zone. The sort handles polybags, mailers, small boxes, and irregularly shaped products that shoe sorters and pop-up wheels cannot.</p>
+
+        <p><strong class="text-ink">Parcel and courier distribution:</strong> Shoe sorters and crossbelt sorters handle parcel sorting for last-mile delivery. Parcels sort to destination chutes representing delivery zones, routes, or truck loading positions. Major parcel carriers operate sorters processing 20,000+ parcels per hour. Multiple sorters in a hub handle inbound, outbound, and transfer parcels.</p>
+
+        <p><strong class="text-ink">Case sortation for retail distribution:</strong> Shoe sorters and pop-up wheel sorters route cases from receiving to store-specific shipping lanes. Each case scans, and the sorter routes it to the lane assigned to its destination store. Pop-up wheel sorters handle mid-volume retail DCs. Shoe sorters handle high-volume operations with 100+ store lanes.</p>
+
+        <p><strong class="text-ink">Pharmaceutical distribution:</strong> Bomb bay and tilt tray sorters handle small pharmaceutical cartons with high accuracy requirements. The positive carrier containment and precise sort accuracy (>99.9%) prevent misdirected medications. Pharmaceutical sortation systems include additional verification scanning at destination lanes.</p>
+
+        <p><strong class="text-ink">Packaging line SKU routing:</strong> <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Packaging facilities</a> with many SKUs use pop-up wheel sorters to route finished products to SKU-specific palletizing lanes. Each product scans after case packing, and the sorter routes it to the correct palletizer lane. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> before sorter induction meter product flow for reliable sorting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a sortation system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>An integrated system that routes products to many destinations (10-200+) at high speed using scanning, routing logic, and mechanical sort mechanisms. Types: shoe sorter, pop-up wheel, crossbelt, tilt tray, bomb bay. See our <a href="/conveyor-types/diverting-merging/" class="text-accent hover:text-accent-hover font-semibold">diverting & merging hub</a> for simpler divert methods.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Shoe sorter vs crossbelt — which do I need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Shoe sorter for flat-bottom cases and cartons at lower cost per destination. Crossbelt for wide product variety (polybags, small items, irregular shapes) at highest accuracy. Shoe sorters cost $$$ vs crossbelt $$$$. Choose based on your product mix diversity and accuracy requirements.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How many sorts per hour can a sortation system handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Pop-up wheel: 5K-15K/hr. Shoe sorter: 10K-20K/hr. Crossbelt: 10K-25K/hr. Tilt tray: 8K-15K/hr. Bomb bay: 5K-12K/hr. Actual throughput depends on product mix, destination count, induct rate, and recirculation rate.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/diverting-merging/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Diverting & Merging</div>
+          <p class="text-sm text-white/60">All divert and merge methods</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Pop-up, turntable, push</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Zone control for sort systems</p>
+        </a>
+        <a href="/resources/automated-conveyor-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Automated Systems</div>
+          <p class="text-sm text-white/60">Controls and integration</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

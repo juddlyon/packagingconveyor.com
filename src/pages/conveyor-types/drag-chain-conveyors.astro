@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Drag Chain Conveyors", "item": "https://packagingconveyor.com/conveyor-types/drag-chain-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a drag chain conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A drag chain conveyor uses one or more endless chains with attached flights, paddles, or discs to pull bulk material through an enclosed trough or tube. The chain travels along the trough bottom, dragging material from inlet to discharge. Types include en-masse drag conveyors (rectangular trough, bulk column movement), tubular drag conveyors (chain with discs in a sealed tube), and chain-in-tube systems. Drag chain conveyors handle dry bulk materials like grain, cement, chemicals, and food ingredients." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between en-masse and tubular drag conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En-masse drag conveyors use a rectangular trough where the material moves as a bulk column with flights occupying only 10-15% of the cross-section. Tubular drag conveyors use a sealed round tube with disc-shaped flights that push material between them. En-masse handles higher capacities (up to 500+ TPH). Tubular drag handles fragile materials more gently, routes through 3D paths, and provides total dust containment. En-masse costs less per ton of capacity." }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials can a drag chain conveyor handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Drag chain conveyors handle most dry and semi-dry bulk materials: grain, flour, sugar, cement, fly ash, chemical powders, plastic pellets, wood chips, pet food, and animal feed. They are not suitable for highly abrasive materials (which accelerate chain and trough wear), very sticky or wet materials (which clog flights and troughs), or materials with large particle sizes (which jam between flights and trough walls)." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Drag Chain & Tubular Drag Conveyors: En-Masse, Tubular & Chain-in-Tube",
+  "description": "Complete guide to drag chain conveyors including en-masse, tubular drag, and chain-in-tube systems for bulk material handling in food, chemical, and industrial packaging.",
+  "url": "https://packagingconveyor.com/conveyor-types/drag-chain-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Drag Chain & Tubular Drag Conveyors: En-Masse & Chain-in-Tube Systems"
+  description="Complete guide to drag chain conveyors: en-masse, tubular drag, chain-in-tube. Bulk material handling for food, chemical, and industrial packaging. Capacity, selection, maintenance."
+  canonical="https://packagingconveyor.com/conveyor-types/drag-chain-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Drag Chain Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Drag Chain Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Drag Chain & Tubular Drag Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A drag chain conveyor uses endless chains with attached flights, paddles, or discs to pull bulk material through an enclosed trough or tube. Drag chain conveyors handle dry bulk materials — grain, flour, cement, chemical powders, plastic pellets — in totally enclosed paths that contain dust and prevent contamination. The three main types are en-masse drag (rectangular trough, high capacity), tubular drag (sealed tube, gentle handling), and chain-in-tube (hybrid designs for specialty materials).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- En-Masse -->
+  <article class="py-20 bg-surface" aria-labelledby="enmasse-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">En-Masse</div>
+      <h2 id="enmasse-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        En-Masse Drag <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>En-masse drag conveyors move bulk material as a continuous column within a rectangular steel trough. The chain and flights occupy only 10-15% of the trough cross-section. The remaining 85-90% is filled with material that moves as a slug. Internal friction between particles transmits the drag force from the flights throughout the material column, carrying the bulk load with lower chain tension than conventional scraper conveyors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Operating Principle</h3>
+        <p>The en-masse principle works because cohesive bulk materials develop internal shear strength. The flights push against the material immediately in front of them. That material pushes the material ahead, and so on, creating a moving column. The trough walls contain the column. The result: the chain carries only the drag force, not the material weight. This reduces chain wear, power consumption, and component stress compared to flight conveyors where each flight supports the full material weight above it.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Capacity and Performance</h3>
+        <p>En-masse drag conveyors handle 10-500 tons per hour depending on trough cross-section and chain speed. Trough widths range from 6 to 36 inches. Chain speeds typically run 20-80 FPM — slower than belt conveyors but adequate for bulk material transfer between storage, processing, and packaging equipment. The enclosed trough provides total dust containment and prevents material contamination from external sources.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Path Configurations</h3>
+        <p>En-masse conveyors operate in horizontal, inclined (up to 45 degrees for most materials), and combination paths. A single en-masse conveyor can run horizontal, transition to an incline, and return to horizontal — eliminating transfer points between separate horizontal and inclined conveyors. Multiple inlets along the trough accept material from different sources. Multiple discharge gates along the trough deliver material to different destinations.</p>
+        <p>CDM Systems, Hapman, and KWS Manufacturing engineer en-masse drag conveyors for food, chemical, mineral, and power generation applications. The food-grade versions use stainless steel troughs and USDA-accepted chain materials for handling grain, flour, sugar, and animal feed.</p>
+        <!-- VERIFY: CDM Systems, Hapman, KWS Manufacturing current en-masse product lines -->
+      </div>
+    </div>
+  </article>
+
+  <!-- Tubular Drag -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="tubular-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Tubular Drag</div>
+      <h2 id="tubular-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Tubular Drag <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Tubular drag conveyors use a chain with evenly spaced circular discs (flights) that travel through a sealed tube. Each disc fits closely within the tube bore (typically 2-8 inch diameter tubes). Material fills the space between consecutive discs and moves as a plug as the chain advances. The sealed tube provides complete dust containment and material protection.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gentle Material Handling</h3>
+        <p>Tubular drag conveyors move material at low speed (typically 15-45 FPM) with minimal agitation. The material sits between discs without tumbling, dropping, or air exposure. This gentle handling preserves fragile materials: whole nuts, snack foods, breakfast cereals, pet food kibble, coffee beans, and pharmaceutical tablets. Material degradation (broken pieces, fines generation, dust creation) is significantly lower than <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a>, <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw conveyors</a>, or pneumatic systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">3D Routing Flexibility</h3>
+        <p>Tubular drag conveyors route through horizontal runs, vertical lifts, and sweeping curves within a single continuous chain loop. A single tubular drag system can pick up material at floor level, lift it 30 feet to a mezzanine, run horizontally to a processing point, and discharge — all without transfer points. This 3D routing eliminates the multiple conveyors and transfer points that conventional systems require for complex paths.</p>
+        <p>Cablevey Conveyors specializes in tubular cable drag systems (using cable instead of chain) for food applications. Hapman offers chain-based tubular drag systems. Flexicon produces tubular cable conveyors for chemical and pharmaceutical powder handling. The cable-based systems use a stainless steel cable with molded UHMW polymer discs; chain-based systems use roller chain with steel or polymer discs.</p>
+        <!-- VERIFY: Cablevey, Hapman, Flexicon current tubular drag product offerings -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Capacity Limitations</h3>
+        <p>Tubular drag conveyors handle lower capacities than en-masse systems: typically 1-40 tons per hour depending on tube diameter and material bulk density. The small tube diameter that provides gentle handling also limits throughput. Large-volume applications (over 50 TPH) require multiple parallel tubular drag systems or a switch to en-masse drag or belt conveyors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chain-in-Tube -->
+  <section class="py-20 bg-surface" aria-labelledby="chainintube-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Chain-in-Tube</div>
+      <h2 id="chainintube-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Chain-in-Tube <span class="text-accent">Systems</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Chain-in-tube conveyors are a hybrid category that includes any drag conveyor using a chain within a tubular housing. This encompasses both tubular drag conveyors (disc-type) and specialized designs with scraper blades, paddles, or bucket attachments within tubes. The tube provides total enclosure while the chain type and attachment style vary by application.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Scraper Chain-in-Tube</h3>
+        <p>Scraper-type chain-in-tube conveyors use flat blades or paddles attached to the chain that scrape material along the tube bottom. They handle materials too heavy or too sticky for disc-type tubular drag: wet grain, damp sawdust, and semi-dry sludge. The scraper action generates more friction and material degradation than disc-type systems but handles a wider range of material conditions.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bucket Chain-in-Tube</h3>
+        <p>Some chain-in-tube systems use small buckets attached to the chain within a tube. These combine the total enclosure of tubular systems with the carrying capacity and clean discharge of bucket systems. They handle materials that flow poorly (bridging, ratholing) and need positive containment during vertical lifts. This design overlaps with <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevator</a> functionality but in a tubular housing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Drag Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">En-Masse Drag</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Tubular Drag (Disc)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Scraper Chain-in-Tube</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Capacity</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-500+ TPH</td>
+              <td class="py-3 pr-4 font-mono text-sm">1-40 TPH</td>
+              <td class="py-3 font-mono text-sm">5-100 TPH</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Material Gentleness</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Highest</td>
+              <td class="py-3">Low</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">3D Routing</td>
+              <td class="py-3 pr-4">Limited curves</td>
+              <td class="py-3 pr-4">Full 3D paths</td>
+              <td class="py-3">Moderate</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Dust Containment</td>
+              <td class="py-3 pr-4">Enclosed trough</td>
+              <td class="py-3 pr-4">Sealed tube (best)</td>
+              <td class="py-3">Sealed tube</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best Materials</td>
+              <td class="py-3 pr-4">Grain, cement, powder</td>
+              <td class="py-3 pr-4">Fragile food, pharma</td>
+              <td class="py-3">Wet, sticky materials</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Capacities depend on material bulk density and trough/tube size. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Drag Chain Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Grain and feed handling:</strong> En-masse drag conveyors transfer grain between storage bins, dryers, cleaners, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging equipment</a>. The enclosed trough prevents grain contamination and dust emission. Multiple inlet and discharge gates along the trough serve multiple bins from a single conveyor run. Feed mills use drag chain conveyors to move ingredients between mixers, pelletizers, and bagging stations.</p>
+
+        <p><strong class="text-ink">Snack food and cereal:</strong> Tubular drag conveyors move fragile finished products — chips, crackers, cereals, nuts — from processing to packaging with minimal breakage. The gentle plug-flow movement preserves product integrity. A single tubular drag system replaces multiple belt conveyors and bucket elevators that would break fragile products at each transfer point.</p>
+
+        <p><strong class="text-ink">Chemical powder transfer:</strong> En-masse and tubular drag conveyors move chemical powders, catalysts, and additives between reactors, dryers, classifiers, and packaging. The enclosed design prevents operator exposure to hazardous dusts and prevents product contamination. Stainless steel construction handles corrosive chemicals. Explosion-proof drives and inerting systems address combustible dust hazards.</p>
+
+        <p><strong class="text-ink">Cement and mineral processing:</strong> Heavy-duty en-masse drag conveyors move cement, fly ash, calcium carbonate, and mineral powders at high capacity. The <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain conveyor</a> construction handles abrasive materials better than belt conveyors in enclosed applications. Drag chain conveyors feed <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a>, silos, and packaging lines.</p>
+
+        <p><strong class="text-ink">Pet food manufacturing:</strong> Tubular drag conveyors handle finished pet food kibble from extruders and coaters to packaging. The gentle handling preserves kibble shape and coating integrity. The sealed tube prevents cross-contamination between flavors and recipes. Quick-clean features (split tube sections, removable discs) facilitate sanitation between product changeovers.</p>
+
+        <p><strong class="text-ink">Pharmaceutical ingredients:</strong> Tubular drag conveyors in stainless steel construction move pharmaceutical powders, granules, and tablets in contained environments. The sealed tube meets containment requirements for active pharmaceutical ingredients (APIs). Clean-in-place (CIP) capability allows thorough cleaning between batches. The gentle handling preserves tablet coatings and reduces fines generation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection and Maintenance -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection & Maintenance</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Selection & <span class="text-accent">Maintenance</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Capacity determines the type.</strong> Under 40 TPH with fragile material: tubular drag. Over 40 TPH: en-masse drag. The capacity crossover depends on material bulk density and allowable degradation levels. High-value fragile products justify the lower capacity of tubular drag. Commodity bulk materials use higher-capacity en-masse systems.</p>
+
+        <p><strong class="text-ink">Material characteristics define the chain and trough.</strong> Abrasive materials need hardened chain pins, hardened flight edges, and AR (abrasion-resistant) plate troughs. Corrosive materials need stainless steel chain and trough. High-temperature materials (up to 500&deg;F) need alloy steel chain. Sticky materials need flights with UHMW faces or Teflon coatings to prevent buildup.</p>
+
+        <p><strong class="text-ink">Chain tension is the critical maintenance parameter.</strong> Over-tensioned chain accelerates pin and bushing wear. Under-tensioned chain sags, catches on trough edges, and increases wear. Monitor chain elongation as an indicator of wear — most manufacturers recommend chain replacement at 3% elongation. Automatic take-up mechanisms (screw, hydraulic, or gravity) maintain proper tension between adjustments.</p>
+        <!-- VERIFY: 3% elongation chain replacement threshold -->
+
+        <p><strong class="text-ink">Cleanout and changeover frequency matter.</strong> <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food</a> and pharmaceutical applications require frequent cleanout between products. Tubular drag systems with split tubes, quick-disconnect fittings, and CIP capability clean faster than en-masse troughs with bolted covers. Factor cleanout time and frequency into system selection — a tubular drag system that cleans in 30 minutes versus an en-masse trough that takes 2 hours may justify the higher capital cost.</p>
+
+        <p><strong class="text-ink">Compared to alternatives:</strong> Drag chain conveyors compete with <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw conveyors</a> (simpler, cheaper, but more material degradation and limited path flexibility), pneumatic conveyors (highest flexibility but highest energy cost and most material degradation), and belt conveyors (highest capacity but not enclosed). Drag chain provides the best balance of enclosure, material protection, and path flexibility for moderate-capacity applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a drag chain conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A drag chain conveyor pulls bulk material through an enclosed trough or tube using chains with flights or discs. Types include en-masse (high capacity), tubular drag (gentle handling), and chain-in-tube (hybrid). See our <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain conveyor hub</a> for all chain-based systems.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            En-masse vs tubular drag — which is better?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>En-masse for high capacity (10-500+ TPH) commodity materials. Tubular drag for fragile materials (1-40 TPH) needing gentle handling and 3D routing. En-masse costs less per ton of capacity. Tubular drag preserves product quality and provides total dust containment in a sealed tube.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What materials can a drag chain conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Most dry and semi-dry bulk materials: grain, flour, sugar, cement, chemical powders, plastic pellets, pet food, coffee beans, pharmaceutical powders. Not suitable for highly abrasive, very sticky/wet, or very large particle materials. Material testing by the manufacturer determines suitability.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">All chain conveyor types</p>
+        </a>
+        <a href="/conveyor-types/screw-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Screw Conveyors</div>
+          <p class="text-sm text-white/60">Alternative bulk handling</p>
+        </a>
+        <a href="/conveyor-types/bucket-elevators/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Bucket Elevators</div>
+          <p class="text-sm text-white/60">Vertical bulk material lift</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary bulk handling</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

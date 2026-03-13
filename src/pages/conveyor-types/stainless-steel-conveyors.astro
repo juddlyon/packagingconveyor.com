@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Stainless Steel Conveyors", "item": "https://packagingconveyor.com/conveyor-types/stainless-steel-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a stainless steel conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A stainless steel conveyor uses stainless steel for its frame, side rails, legs, and hardware instead of painted carbon steel or aluminum. Stainless steel conveyors resist corrosion from water, chemicals, acids, and alkaline cleaners used in food processing, pharmaceutical manufacturing, and chemical handling environments. They meet FDA, USDA, and 3-A sanitary standards for direct and indirect food contact applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 304 and 316 stainless steel for conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "304 stainless steel (18-8: 18% chromium, 8% nickel) is the standard grade for most food and pharmaceutical conveyor applications. It resists corrosion from water, mild chemicals, and standard cleaning agents. 316 stainless steel adds 2-3% molybdenum for superior resistance to chlorides, acids, and salt solutions. 316 is required in seafood processing, coastal facilities, pharmaceutical cleanrooms, and chemical environments with chloride or acid exposure. 316 costs 20-30% more than 304." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is electropolished stainless steel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Electropolishing is an electrochemical finishing process that removes a thin layer of surface metal from stainless steel, creating an ultra-smooth, mirror-like surface. Electropolished surfaces have fewer micro-crevices where bacteria, moisture, and contaminants can hide. This makes cleaning faster and more effective. Electropolished stainless steel is specified for pharmaceutical, biotech, and high-hygiene food applications where surface smoothness directly affects sanitation compliance." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much more does a stainless steel conveyor cost compared to carbon steel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Stainless steel conveyors typically cost 40-80% more than equivalent carbon steel conveyors. The premium depends on the stainless grade (304 vs. 316), the extent of stainless steel usage (full stainless vs. stainless contact surfaces only), and the finishing requirements (standard mill finish, #4 brushed, or electropolished). However, stainless steel eliminates repainting, reduces corrosion-related downtime, and extends conveyor service life in wet and corrosive environments." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Stainless Steel Conveyors: 304 vs 316, Electropolish & Sanitary Frame Design",
+  "description": "Complete guide to stainless steel conveyors: 304 vs 316 alloy selection, electropolished finishes, sanitary frame design, FDA/USDA compliance for food, pharmaceutical, and chemical applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/stainless-steel-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Stainless Steel Conveyors: 304 vs 316, Electropolish & Sanitary Frame Design"
+  description="Complete guide to stainless steel conveyors: 304 vs 316 alloy selection, electropolished finishes, sanitary frame design. FDA/USDA compliance for food, pharmaceutical, and chemical applications."
+  canonical="https://packagingconveyor.com/conveyor-types/stainless-steel-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Stainless Steel Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Stainless Steel Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Stainless Steel Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A stainless steel conveyor uses corrosion-resistant stainless steel alloys for its frame, side rails, legs, guards, and hardware instead of painted carbon steel. The two dominant alloys are 304 stainless (general-purpose food and pharmaceutical) and 316 stainless (chloride-resistant for seafood, chemical, and coastal environments). Stainless steel conveyors meet FDA, USDA, 3-A, and EHEDG sanitary standards for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a>, pharmaceutical manufacturing, and chemical handling where corrosion, contamination, and cleaning compliance drive equipment specification.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 304 vs 316 -->
+  <article class="py-20 bg-surface" aria-labelledby="alloy-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Alloy Selection</div>
+      <h2 id="alloy-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        304 vs 316 <span class="text-accent">Stainless Steel</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">304 Stainless Steel (18-8)</h3>
+        <p>304 stainless steel contains 18% chromium and 8% nickel. It is the most widely used stainless steel grade in the food and beverage industry. 304 resists corrosion from water, steam, mild acids (fruit juices, vinegar), and most cleaning chemicals (alkaline detergents, quaternary sanitizers). It handles continuous washdown environments with standard CIP chemicals. 304 is the default specification for food, dairy, beverage, pharmaceutical, and personal care conveyor applications unless the environment contains chlorides or strong acids.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">316 Stainless Steel</h3>
+        <p>316 stainless steel adds 2-3% molybdenum to the 304 composition, providing superior resistance to chloride pitting and crevice corrosion. 316 is required in environments with salt, brine, chlorinated water, or acid exposure. Specific applications: seafood processing (saltwater and brine contact), coastal manufacturing (salt air), pharmaceutical manufacturing (acid and solvent exposure), chemical processing (chloride-bearing chemicals), and outdoor installations in marine environments. 316 costs approximately 20-30% more than 304.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">316L (Low Carbon)</h3>
+        <p>316L is a low-carbon variant of 316 that resists sensitization (grain boundary carbide precipitation) during welding. Sensitization weakens the corrosion resistance of the weld heat-affected zone. 316L is specified whenever extensive welding is required, which includes most conveyor fabrication. In practice, many manufacturers use 316L as their standard 316 offering. The mechanical properties and corrosion resistance are virtually identical to 316 for conveyor applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Other Alloys</h3>
+        <p>Duplex stainless steels (2205, 2507) offer higher strength and corrosion resistance than 316 for extreme chemical environments. AL-6XN (super-austenitic) handles concentrated chloride solutions. These specialty alloys cost significantly more and are used only in severe chemical processing applications, not standard food or pharmaceutical conveying. For high-temperature applications, see our <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">wire mesh belt guide</a> for Inconel and Nichrome alloy details.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="compare-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Alloy <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Property</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">304</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">316 / 316L</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Carbon Steel (Painted)</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Chloride Resistance</td>
+              <td class="py-3 pr-4">Moderate</td>
+              <td class="py-3 pr-4">Excellent</td>
+              <td class="py-3">None</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Acid Resistance</td>
+              <td class="py-3 pr-4">Good (mild acids)</td>
+              <td class="py-3 pr-4">Excellent (strong acids)</td>
+              <td class="py-3">Poor</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Washdown</td>
+              <td class="py-3 pr-4">Yes (standard CIP)</td>
+              <td class="py-3 pr-4">Yes (aggressive CIP)</td>
+              <td class="py-3">Limited (paint damage)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">FDA/USDA</td>
+              <td class="py-3 pr-4">Yes</td>
+              <td class="py-3 pr-4">Yes</td>
+              <td class="py-3">With epoxy coating only</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Food, dairy, pharma</td>
+              <td class="py-3 pr-4">Seafood, chemical, coastal</td>
+              <td class="py-3">Dry, non-corrosive</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Surface Finish -->
+  <section class="py-20 bg-surface" aria-labelledby="finish-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Surface Finish</div>
+      <h2 id="finish-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Surface Finish <span class="text-accent">Options</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mill Finish (2B)</h3>
+        <p>Mill finish is the default surface condition from the steel mill. It has a smooth, slightly reflective appearance. Mill finish is acceptable for most food conveyor applications where the frame does not directly contact the product. It costs the least because no additional finishing is required after fabrication. Most food-grade conveyors use mill-finish frames with sanitary welds and design features for cleanability.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">#4 Brushed Finish</h3>
+        <p>#4 finish is a directional brushed (satin) finish produced by polishing with progressively finer abrasives. It produces a uniform, matte appearance with visible grain lines. #4 finish is the most common specified finish for food and pharmaceutical equipment because it provides a smoother surface than mill finish (reducing bacterial attachment) while being less expensive than electropolish. Surface roughness: approximately 25-35 Ra (microinches).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Electropolished Finish</h3>
+        <p>Electropolishing removes 0.0002"-0.001" of surface metal through an electrochemical process, dissolving peaks and smoothing micro-crevices. The result is an ultra-smooth, highly reflective surface with roughness below 15-20 Ra (microinches). Electropolished surfaces resist bacterial adhesion, clean faster, and require less aggressive cleaning chemicals. Electropolishing is specified in pharmaceutical cleanrooms, biotech manufacturing, and high-hygiene food applications (dairy, infant formula, ready-to-eat). The process adds significant cost to the conveyor frame.</p>
+        <!-- VERIFY: Surface roughness Ra values for #4 and electropolished finishes against ASME BPE standards -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bead-Blasted Finish</h3>
+        <p>Bead blasting creates a uniform matte texture by bombarding the surface with glass or ceramic beads. It produces a non-directional, low-reflectivity surface that hides minor scratches and handling marks. Bead-blasted surfaces are specified in pharmaceutical and medical device environments where glare from reflective surfaces is undesirable. Surface roughness is typically higher than #4 finish, so bead blasting is not preferred for ultra-sanitary applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanitary Design -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="sanitary-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Design</div>
+      <h2 id="sanitary-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sanitary Frame <span class="text-accent">Design Principles</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A stainless steel frame alone does not make a sanitary conveyor. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary conveyor design</a> requires specific construction principles that eliminate bacterial harborage, facilitate cleaning, and prevent contamination:</p>
+
+        <p><strong class="text-ink">Continuous welds (no gaps):</strong> All frame joints must be continuously welded and ground smooth. Skip welds (intermittent welds) create crevices where bacteria, moisture, and product residue accumulate. Weld quality inspection (visual and, for critical applications, radiographic) verifies complete penetration and smooth surfaces.</p>
+
+        <p><strong class="text-ink">Sloped surfaces:</strong> All horizontal surfaces should slope at least 3-5 degrees to drain water and cleaning solutions. Standing water harbors bacteria. Flat ledges, brackets, and gussets that trap water must be eliminated or sloped. Frame cross-members use tubular profiles instead of angle iron to eliminate flat water-trapping surfaces.</p>
+
+        <p><strong class="text-ink">Open frame construction:</strong> Enclosed channels (C-channel, box tube) trap debris and are difficult to inspect and clean. Sanitary frames use open profiles that allow visual inspection and access for cleaning all surfaces. Stand-offs and spacers create gaps between components for water drainage and air drying.</p>
+
+        <p><strong class="text-ink">Sealed bearings and fasteners:</strong> Bearings use sealed housings that prevent grease migration into the product zone. Fasteners use smooth-head bolts instead of hex-head bolts (fewer crevices). All fasteners are stainless steel to prevent rust contamination. Captured (captive) fasteners prevent hardware from falling into the product stream.</p>
+
+        <p><strong class="text-ink">Tool-less belt access:</strong> Quick-release mechanisms allow operators to remove the belt for cleaning without tools. Hinged side frames swing open for full access to the belt underside, return run, and frame interior. Dorner, mk North America, and Nercon manufacture sanitary stainless conveyors with tool-less belt removal.</p>
+
+        <p><strong class="text-ink">Rounded corners and radii:</strong> Sharp internal corners trap debris and are impossible to clean effectively. Sanitary design specifies minimum internal radii (typically 1/4" or larger) at all frame corner transitions. External corners are rounded to prevent injury and product damage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Stainless Steel Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Food processing:</strong> Every conveyor in the product zone of a food processing facility should be stainless steel. Meat, poultry, dairy, bakery, produce, snack food, and prepared food lines all require stainless frames that withstand daily washdown. 304 stainless is standard for most food applications. 316 is required for seafood, brine, and acidic food environments.</p>
+
+        <p><strong class="text-ink">Beverage packaging:</strong> <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop chain conveyors</a> in beverage plants use stainless steel chains and frames to handle pasteurizer heat and daily washdown. Stainless steel resists the acidity of fruit juices, carbonated beverages, and dairy products. Wet sections (fill rooms, pasteurizer tunnels) require 316 stainless in high-chloride water areas.</p>
+
+        <p><strong class="text-ink">Pharmaceutical manufacturing:</strong> cGMP (current Good Manufacturing Practice) facilities require stainless steel conveyors in all production, packaging, and warehousing areas. Electropolished 316L stainless is standard in cleanroom and aseptic processing areas. <a href="/conveyor-types/vacuum-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Vacuum conveyors</a> and <a href="/conveyor-types/pneumatic-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pneumatic systems</a> use stainless steel tubing and receivers for powder transfer between process steps.</p>
+
+        <p><strong class="text-ink">Chemical processing:</strong> Conveyors handling chemical products, intermediates, and raw materials in chemical plants use 316 or higher-grade stainless to resist chemical attack. Alloy selection depends on specific chemicals, concentrations, and temperatures. Chemical compatibility charts from steel suppliers (Outokumpu, Sandvik) guide alloy selection.</p>
+
+        <p><strong class="text-ink">Outdoor and washdown environments:</strong> Any conveyor in a wet or outdoor environment benefits from stainless steel construction. Car washes, outdoor bottling lines, water treatment plants, and dock areas that see rain and humidity corrode carbon steel rapidly. Stainless steel eliminates the ongoing repainting and rust maintenance that carbon steel requires in these environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="cost-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Cost</div>
+      <h2 id="cost-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cost <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Stainless steel conveyors cost 40-80% more than equivalent carbon steel conveyors. The premium varies by alloy grade, amount of stainless used, and surface finish requirements. However, the total cost of ownership often favors stainless in corrosive environments:</p>
+
+        <p><strong class="text-ink">Material cost:</strong> 304 stainless steel costs roughly 2-3x carbon steel per pound. 316 adds another 20-30% over 304. These are material costs &mdash; the fabricated conveyor price increase is smaller because labor, motors, belts, and controls cost the same regardless of frame material.</p>
+
+        <p><strong class="text-ink">Elimination of painting:</strong> Carbon steel conveyors require primer and topcoat. In corrosive environments, paint systems fail, requiring touch-up and repainting every 1-3 years. Stainless steel never needs painting, eliminating ongoing coating maintenance.</p>
+
+        <p><strong class="text-ink">Longer service life:</strong> In wet environments, carbon steel conveyors corrode from within, weakening the frame structure. A painted carbon steel conveyor in a washdown food plant may last 5-8 years before structural corrosion requires replacement. A stainless steel conveyor in the same environment lasts 15-25+ years. The lifecycle cost advantage of stainless is substantial in corrosive environments.</p>
+
+        <p><strong class="text-ink">Hybrid construction:</strong> To reduce cost, some manufacturers offer hybrid conveyors with stainless steel product-contact surfaces and carbon steel structural members. The product zone uses stainless, while non-contact areas (legs, drive housing, support gussets) use painted carbon steel. This reduces material cost by 30-50% compared to all-stainless construction while maintaining sanitary compliance in the product zone.</p>
+        <!-- VERIFY: Cost premium 40-80% and lifecycle 15-25+ years against Dorner, mk, Nercon published data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a stainless steel conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor using stainless steel alloys for its frame, rails, legs, and hardware. Resists corrosion from washdown, chemicals, and acids. Meets FDA, USDA, and 3-A sanitary standards. Available in 304 (general food/pharma) and 316 (chloride/acid-resistant) grades.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            304 vs 316 stainless steel?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>304: standard for most food/pharma. 18% chromium, 8% nickel. Handles water, mild chemicals, standard CIP. 316: adds 2-3% molybdenum for chloride and acid resistance. Required for seafood, brine, coastal, and chemical environments. 316 costs 20-30% more than 304.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is electropolished stainless steel?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>An electrochemical process that removes a thin surface layer, creating an ultra-smooth, mirror-like finish. Fewer micro-crevices for bacteria. Easier and faster to clean. Specified for pharmaceutical cleanrooms, biotech, and high-hygiene food (dairy, infant formula). Adds significant cost over #4 brushed finish.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Stainless vs. carbon steel conveyor cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Stainless costs 40-80% more upfront. However, stainless eliminates repainting, resists corrosion-related failures, and lasts 15-25+ years in washdown environments vs. 5-8 years for painted carbon steel. Lifecycle cost often favors stainless in wet or corrosive environments. Hybrid construction (stainless contact surfaces, carbon steel structure) saves 30-50%.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/industries/food-conveyors/sanitary/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Sanitary Conveyors</div>
+          <p class="text-sm text-white/60">FDA/USDA design standards</p>
+        </a>
+        <a href="/conveyor-types/wire-mesh-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Wire Mesh Conveyors</div>
+          <p class="text-sm text-white/60">Stainless mesh for ovens</p>
+        </a>
+        <a href="/conveyor-types/tabletop-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Tabletop Chain</div>
+          <p class="text-sm text-white/60">Stainless chain for beverage</p>
+        </a>
+        <a href="/conveyor-types/cleated-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleated Conveyors</div>
+          <p class="text-sm text-white/60">Food-grade cleated belts</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Diverting & Merging", "item": "https://packagingconveyor.com/conveyor-types/diverting-merging/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a divert and merge conveyor system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A divert and merge conveyor system routes products from one conveyor line to another — splitting a single line into multiple destination lanes (diverting) or combining multiple infeed lanes into a single outbound line (merging). Divert mechanisms include push diverters, pop-up transfers, pop-up wheel sorters, shoe sorters, and sliding shoe diverters. Merge mechanisms include powered merge conveyors, gap-creating merge zones, and zipper merges." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between diverting and sortation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Diverting typically refers to a single decision point that routes a product to one of 2-4 destinations. Sortation refers to a system that routes products to many destinations (10-200+) at high speed (100-600+ FPM). Sortation systems use specialized technologies like shoe sorters, crossbelt sorters, tilt tray sorters, and bomb bay sorters. A diverter is a component; a sortation system is an integrated solution with scanning, controls, and multiple divert points." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do merge conveyors prevent product collisions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Merge conveyors use sensors, zone controls, and gap creation to prevent collisions. Sensors detect products on both the main line and the merging spur. The merge controller creates gaps in the main line traffic by slowing or stopping upstream zones. Products from the spur conveyor merge into the created gaps. MDR zone conveyors and servo-controlled belt sections provide the precise speed control needed for collision-free merging." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Diverting & Merging Conveyors: Divert, Merge & Sort Methods",
+  "description": "Complete guide to diverting and merging conveyor systems including push diverters, pop-up transfers, merge zones, sortation overview, and selection criteria for packaging and distribution.",
+  "url": "https://packagingconveyor.com/conveyor-types/diverting-merging/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Diverting & Merging Conveyors: Divert, Merge & Sortation Systems"
+  description="Complete guide to diverting and merging conveyors: push diverters, pop-up transfers, merge zones, sortation methods. Selection criteria for packaging and distribution."
+  canonical="https://packagingconveyor.com/conveyor-types/diverting-merging/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Diverting & Merging</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Diverting & Merging</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Diverting & Merging Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Diverting and merging conveyor systems route products between conveyor lines — splitting a single line into multiple destination lanes (diverting) or combining multiple infeed lanes into a single outbound line (merging). These systems are the traffic management layer of every <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line</a> and distribution center, controlling product flow between processes, sort lanes, shipping destinations, and storage areas. Divert methods range from simple pneumatic pushers to high-speed <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a> handling 300+ products per minute.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divert Methods -->
+  <article class="py-20 bg-surface" aria-labelledby="divert-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Divert Methods</div>
+      <h2 id="divert-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Divert <span class="text-accent">Methods</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Push Diverters</h3>
+        <p>Push diverters use pneumatic or electric actuators to push products off the main conveyor onto a perpendicular spur. Pneumatic pushers are the simplest and cheapest divert mechanism: a cylinder fires, a plate pushes the product, and the cylinder retracts. Cycle time is 1-2 seconds. Push diverters handle 1-100 lbs at line speeds up to 200 FPM. They suit <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject systems</a>, simple two-way diverting, and low-speed applications. Push diverters may rotate product orientation during the push.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pop-Up Chain Transfers</h3>
+        <p>Pop-up chain transfers lift parallel chains above the <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> surface to drive products perpendicular to the original direction. The chains engage the product bottom and carry it to the spur conveyor. Pop-up chains maintain product orientation, handle 10-300 lbs, and cycle in 2-4 seconds. They are the standard medium-speed divert mechanism in packaging and distribution. See our <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyor guide</a> for detailed pop-up chain coverage.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pop-Up Wheel Sorters</h3>
+        <p>Pop-up wheel sorters use angled wheels that rise above the roller surface to redirect products at 30-45 degrees. The wheels provide a gentle divert angle that minimizes product rotation. Pop-up wheel diverters handle 1-75 lbs at line speeds up to 600 FPM, making them the go-to high-speed divert mechanism for case and carton sorting. Dematic, Intelligrated, and Bastian Solutions integrate pop-up wheel diverters into their <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation platforms</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sliding Shoe Diverters</h3>
+        <p>Sliding shoe sorters use a flat conveying surface with rows of small shoes (sliders) that can be activated to slide diagonally across the belt, gently pushing products off at an angle. The shoes create a smooth, controlled divert without impact or sudden directional change. Sliding shoe sorters handle 200-500 FPM with high accuracy. They are a core technology in e-commerce and parcel <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sweep Arm and Blade Diverters</h3>
+        <p>Sweep arm diverters use a pivoting arm or blade that swings across the conveyor to guide products onto a spur at a controlled angle. The arm sweeps smoothly rather than pushing abruptly, reducing product impact and rotation. Sweep diverters handle moderate speeds (60-200 FPM) and moderate loads (5-100 lbs). They are common in packaging lines where gentle product handling matters more than maximum speed. Hytrol offers sweep diverter modules for integration with their conveyor platforms.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tilt Tray and Crossbelt Diverters</h3>
+        <p>Tilt tray and crossbelt sorters are specialized high-speed divert systems where each product rides on an individual carrier. Tilt trays tilt to dump the product into the destination chute. Crossbelt carriers use a small belt that runs perpendicular to travel direction, pushing the product off the side. These systems handle the highest throughput and sort accuracy. See our <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems page</a> for complete coverage.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Merge Methods -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="merge-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Merge Methods</div>
+      <h2 id="merge-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Merge <span class="text-accent">Methods</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Merging combines products from two or more conveyor lines into a single outbound line without collisions, jams, or product damage. Merging is technically harder than diverting because two independent product streams must interleave precisely onto a shared line.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gap-Creation Merge</h3>
+        <p>The most common merge method creates gaps in the main line traffic to accept products from a spur. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyor zones</a> on the main line slow or stop to create gaps. Products from the spur line enter the gaps. Photo-eye sensors detect products on both lines and PLC logic coordinates the gap creation and merge timing. Gap-creation merge handles 20-60 merges per minute depending on product spacing and conveyor speed.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zipper Merge</h3>
+        <p>Zipper merging alternates products from two infeed lines onto a single outbound line: one from line A, one from line B, one from line A, and so on. Each infeed line uses independently controlled zones that release products in alternating sequence. Zipper merges provide the highest merge throughput (up to 120 per minute) because every gap on the outbound is filled. Zipper merges require equal or near-equal product flow from both infeed lines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Powered Merge Conveyor</h3>
+        <p>Powered merge conveyors use tapered or angled roller sections where the spur conveyor joins the main line at an angle (typically 30-45 degrees). The angled merge section uses powered rollers running at a speed calculated to slot spur products into main line gaps. The merge angle and roller speed differential create a smooth entry without impact. Intelligrated, Dematic, and TGW offer powered merge conveyor sections integrated with their sortation and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation systems</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gravity Merge (Wye Merge)</h3>
+        <p>Gravity wye merges use two declining <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">gravity roller conveyor</a> spurs that converge into a single outbound line in a Y-shape. Products from both spurs roll by gravity into the common outbound lane. Gravity merges have no collision control — products from both spurs may arrive simultaneously and jam. They suit low-volume manual operations where operators control the flow. Automated systems should avoid uncontrolled gravity merges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Divert Method <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Push Diverter</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Chain</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pop-Up Wheel</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Sliding Shoe</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Sweep Arm</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Line Speed</td>
+              <td class="py-3 pr-4 font-mono text-sm">200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">120 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">600 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">500 FPM</td>
+              <td class="py-3 font-mono text-sm">200 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">100 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">300 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 font-mono text-sm">100 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Orientation</td>
+              <td class="py-3 pr-4">May rotate</td>
+              <td class="py-3 pr-4">Maintained</td>
+              <td class="py-3 pr-4">Slight rotation</td>
+              <td class="py-3 pr-4">Slight rotation</td>
+              <td class="py-3">Controlled</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Destinations</td>
+              <td class="py-3 pr-4 font-mono text-sm">1-2</td>
+              <td class="py-3 pr-4 font-mono text-sm">1 per unit</td>
+              <td class="py-3 pr-4 font-mono text-sm">1 per unit</td>
+              <td class="py-3 pr-4 font-mono text-sm">2 sides</td>
+              <td class="py-3 font-mono text-sm">1-2</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">For multi-destination sortation, see our <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems guide</a>. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Diverting & Merging <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Packaging line product routing:</strong> Diverters route products from a main transport conveyor to one of several packaging machines (case packers, labelers, sealers). Pop-up chain transfers or sweep diverters at each machine infeed activate based on PLC routing logic. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation zones</a> upstream of each divert point buffer products for reliable divert timing.</p>
+
+        <p><strong class="text-ink">Quality reject systems:</strong> Push diverters at <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject stations</a> push failed products off the main line. Checkweighers, metal detectors, and vision systems trigger the divert. Push diverters provide the fastest cycle time and lowest cost for binary (pass/fail) reject decisions.</p>
+
+        <p><strong class="text-ink">Distribution center sortation:</strong> High-speed divert systems route packages from induct conveyors to sort lanes based on destination data from barcode or RFID scanning. Pop-up wheel sorters and sliding shoe diverters handle 100-300+ sorts per minute. See our <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems page</a> for complete high-speed sortation coverage.</p>
+
+        <p><strong class="text-ink">Order fulfillment merging:</strong> Products picked from multiple zones merge onto a single pack-out conveyor. Each pick zone feeds a spur conveyor that merges with the main line through gap-creation merge zones. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR zone conveyors</a> provide precise merge control. Dematic, Intelligrated, and TGW engineer merge solutions for fulfillment operations.</p>
+
+        <p><strong class="text-ink"><a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating and laning:</a></strong> Diverters distribute products from a single infeed across multiple parallel lanes for case packing, tray loading, or palletizer infeed. <a href="/conveyor-types/transfer-conveyors/shuttle/" class="text-accent hover:text-accent-hover font-semibold">Shuttle conveyors</a> and reciprocating pushers handle multi-lane distribution at moderate throughput.</p>
+
+        <p><strong class="text-ink">Multi-line palletizer feed:</strong> Divert systems route cases from a common trunk line to one of several palletizer infeed lanes. Each palletizer builds a specific SKU pallet. The divert system reads case barcodes and activates the correct divert to route each case to its assigned palletizer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Divert/Merge System</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Speed and throughput are the primary selection drivers.</strong> Under 30 diverts/minute: push diverter or sweep arm. 30-60 diverts/minute: pop-up chain transfer. Over 60 diverts/minute: pop-up wheel sorter, sliding shoe, or <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation system</a>.</p>
+
+        <p><strong class="text-ink">Number of destinations determines system architecture.</strong> 1-2 destinations: single divert point. 3-6 destinations: multiple divert points along a trunk line. 7+ destinations: dedicated sortation system with scanning, routing logic, and integrated divert array.</p>
+
+        <p><strong class="text-ink">Product characteristics affect divert method.</strong> Heavy products (over 100 lbs) need pop-up chain transfers or <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">turntable transfers</a>. Light, flat-bottom products suit pop-up wheels and sliding shoes. Orientation-sensitive products require pop-up chains (no rotation) and prohibit push diverters (rotation risk).</p>
+
+        <p><strong class="text-ink">Merge design depends on infeed rates.</strong> Single spur merging into a low-traffic main line: simple gap-creation merge. Multiple spurs merging into a busy main line: zipper merge with coordinated zone controls. High-speed merge after sortation: powered merge conveyors with servo speed matching. Always provide enough <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> before merge points to buffer products during merge gaps.</p>
+
+        <p><strong class="text-ink">Scanning and controls integration.</strong> Automated diverting requires product identification (barcode, RFID, vision) and routing logic (PLC, WCS, or WMS). The scanning station must be far enough upstream of the divert point to allow processing time and product travel time. Controls latency, scanner read rate, and divert actuation time all affect the minimum distance between scan and divert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a divert and merge system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A system that routes products between conveyor lines — splitting one line into multiple lanes (diverting) or combining multiple lanes into one (merging). Methods include push diverters, pop-up transfers, pop-up wheels, shoe sorters, and controlled merge zones. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types guide</a> for the full picture.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Diverting vs sortation — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Diverting routes products to 2-4 destinations at a single decision point. <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">Sortation</a> routes to 10-200+ destinations at high speed with scanning, routing logic, and multiple divert points. A diverter is a component; a sortation system is an integrated solution.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do merge conveyors prevent collisions?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Sensors detect products on both lines. The merge controller creates gaps in main line traffic by slowing upstream <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR zones</a>. Spur products enter the gaps. Zipper merges alternate products from each line for maximum throughput. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation</a> before merge points buffers products during merge timing gaps.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Child Pages + Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Explore Further</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/diverting-merging/sortation/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Sortation Systems</div>
+          <p class="text-sm text-white/60">High-speed multi-destination sorting</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
+          <p class="text-sm text-white/60">Pop-up, turntable, push transfers</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
+          <p class="text-sm text-white/60">Buffer before divert/merge points</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Zone control for merge precision</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

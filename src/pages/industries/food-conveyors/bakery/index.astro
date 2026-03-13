@@ -1,0 +1,412 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Food-Grade Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Bakery Conveyor Systems", "item": "https://packagingconveyor.com/industries/food-conveyors/bakery/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of conveyors are used in bakeries?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bakeries use cooling spiral conveyors, oven band conveyors, proofing conveyors, depositor infeed belts, pan conveyors, and packaging line conveyors. Cooling spirals handle post-oven cooling in a compact vertical footprint. Oven band conveyors use wire mesh or steel belts rated for continuous high-temperature operation. Manufacturers like Ashworth, Wire Belt Company, and Rexnord supply bakery-specific conveyor systems." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a cooling spiral conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A cooling spiral conveyor is a continuous belt system that moves baked products through a helical path inside a tower, providing extended cooling time in a small floor footprint. Spirals can be ambient (natural convection), forced-air (fans circulate air across the belt tiers), or refrigerated. A single spiral can replace 200+ feet of straight-line cooling conveyor in as little as 100 square feet of floor space." }
+    },
+    {
+      "@type": "Question",
+      "name": "What belt materials work for bakery conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bakery conveyors use wire mesh belts (stainless steel for oven bands, carbon steel for cooling), modular plastic belts (acetal or polypropylene for ambient handling), polyurethane belts (FDA-compliant for direct food contact), and silicone belts (non-stick for sticky doughs). Belt selection depends on temperature, product type, and whether the belt contacts food directly." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do bakery conveyors meet food safety standards?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bakery conveyors meet food safety standards through BISSC (Baking Industry Sanitary Standards Committee) certification, FDA-compliant contact materials, open-frame construction for cleaning access, and tool-free belt removal for COP (Clean-out-of-Place) washing. BISSC standards are the bakery industry equivalent of 3-A dairy standards and address cleanability, material selection, and hygienic design." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a proofing conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A proofing conveyor transports dough through a temperature- and humidity-controlled enclosure where yeast fermentation occurs. Proofing conveyors maintain 80-110°F and 70-85% relative humidity. They use slow belt speeds (0.5-5 FPM) to provide 30-90 minutes of dwell time. Spiral proofers maximize floor space; straight-line proofers suit smaller operations." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bakery Conveyor Systems: Cooling Spirals, Oven Bands & Packaging Lines",
+  "description": "Complete guide to bakery conveyor systems covering cooling spirals, oven band conveyors, proofing conveyors, pan handling, and packaging line integration for bread, cookies, pastry, and snack production.",
+  "url": "https://packagingconveyor.com/industries/food-conveyors/bakery/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Bakery Conveyor Systems: Cooling Spirals, Oven Bands & Packaging | PackagingConveyor.com"
+  description="Complete guide to bakery conveyor systems — cooling spirals, oven band conveyors, proofing conveyors, pan handling, and packaging line integration for bread, cookies, pastry, and snack production."
+  canonical="https://packagingconveyor.com/industries/food-conveyors/bakery/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/food-conveyors/" class="hover:text-white/70">Food Conveyors</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Bakery</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Food Conveyors</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Bakery <span class="text-accent-bright">Conveyor Systems</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Bakery conveyor systems transport bread, cookies, pastries, and snack products through every production stage — mixing and depositing, proofing, baking, cooling, and packaging. These systems include oven band conveyors rated for continuous operation at 500 F+, cooling spiral conveyors that reduce product temperature in a compact vertical footprint, proofing conveyors with controlled temperature and humidity, and packaging line conveyors that feed wrappers, baggers, and <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loaders</a>. Manufacturers like Ashworth, Wire Belt Company, Rexnord, and Intralox supply bakery-specific belt and conveyor solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ OVEN BAND CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="oven-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Baking Stage</div>
+        <h2 id="oven-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Oven Band <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Oven band conveyors carry product through tunnel ovens, direct-fired ovens, and radiant heat ovens. The belt operates continuously at temperatures from 300 F to 700 F depending on the product and oven type. Belt selection defines oven performance — the wrong belt material causes product sticking, uneven baking, or premature belt failure.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Belt Types for Oven Conveyors</h3>
+          <p>
+            Three belt constructions dominate bakery oven applications:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Solid steel band:</strong> Carbon steel or stainless steel continuous sheets, typically 0.035 to 0.060 inches thick. Solid bands provide uniform heat transfer and a flat baking surface. Used for cookies, crackers, pizza crusts, and flatbreads. Ashworth and Sandvik supply solid oven bands.</li>
+            <li><strong class="text-ink">Wire mesh belt:</strong> Woven or welded wire mesh in stainless steel (304 or 316). Mesh allows air circulation through the belt for even baking and moisture removal. Common for bread, rolls, and products requiring bottom airflow. Wire Belt Company and Cambridge Engineered Solutions manufacture bakery mesh belts. <!-- VERIFY: Cambridge Engineered Solutions current branding --></li>
+            <li><strong class="text-ink">Chain-edge mesh belt:</strong> Wire mesh with roller chain edges for positive drive. Eliminates belt tracking issues in long oven runs. Required for ovens exceeding 100 feet in length where friction-drive belts cannot maintain tracking.</li>
+          </ul>
+          <p>
+            Belt width ranges from 32 inches for small artisan ovens to 72+ inches for high-volume production ovens. Industrial bakeries running bread at 200+ loaves per minute use multiple oven lanes, each with its own belt and independent speed control.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Oven Conveyor Speed and Control</h3>
+          <p>
+            Bake time determines belt speed. A cookie oven baking at 350 F for 10 minutes with a 60-foot heated zone runs the belt at 6 FPM. A bread oven baking at 425 F for 25 minutes with a 100-foot zone runs at 4 FPM. VFD-controlled motors allow operators to adjust belt speed through the HMI to fine-tune bake time without mechanical changes. Speed accuracy of ±0.1 FPM prevents overbaking on one end and underbaking on the other. For more on motor control, see the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COOLING CONVEYORS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="cooling-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Post-Oven Stage</div>
+        <h2 id="cooling-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Cooling <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Baked products must cool to a target temperature before packaging — typically 95-100 F for bread and 80-90 F for cookies. Packaging warm product traps moisture inside the bag, causing mold growth and shortened shelf life. Cooling conveyor design balances cooling time, floor space, and product quality. For a deeper dive into cooling technologies, see our <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling conveyors guide</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Spiral Cooling Conveyors</h3>
+          <p>
+            Spiral coolers stack a continuous belt in a helical path inside a tower enclosure. Product enters at the top (hot) and exits at the bottom (cool), or vice versa. A single spiral tower 10 feet in diameter and 15 feet tall can provide 30-45 minutes of cooling time — equivalent to 300+ feet of straight-line cooling conveyor. This 10:1 floor space advantage makes spirals the standard cooling solution for medium- and high-volume bakeries.
+          </p>
+          <p>
+            Ashworth's Omni-Grid and Intralox's spiral solutions are widely used in bakery cooling. Spirals use self-stacking belts (the belt layers support each other without intermediate structure) or drum-driven belts (a central drum drives the belt through friction). Self-stacking spirals handle heavier loads; drum-driven spirals provide smoother product handling for fragile items like decorated cakes.
+          </p>
+          <!-- VERIFY: Ashworth Omni-Grid product name current branding -->
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Ambient vs. Forced-Air Cooling</h3>
+          <p>
+            Ambient cooling relies on natural convection — room-temperature air passively removes heat from the product surface. Forced-air cooling uses fans or blowers to push air across the belt tiers, accelerating heat transfer by 2-3x. Forced-air cooling cuts required conveyor length (and floor space) but risks drying the product surface if airflow is excessive. Bread bakeries typically use ambient spirals to preserve crust moisture. Cookie and cracker lines use forced-air cooling because surface drying improves crispness.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Straight-Line Cooling</h3>
+          <p>
+            Small bakeries and artisan operations use straight-line cooling conveyors — long runs of mesh belt conveyor at slow speed. These are simpler and less expensive than spirals but consume significant floor space. A typical straight-line cooler for bread runs 150-300 feet at 3-8 FPM. Straight-line coolers also serve as inspection conveyors where operators visually check product before packaging.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROOFING CONVEYORS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="proofing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Pre-Oven Stage</div>
+        <h2 id="proofing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Proofing <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Proofing conveyors transport dough through a controlled environment where yeast fermentation raises the dough to its final volume before baking. The proofer maintains temperature (80-110 F), relative humidity (70-85%), and dwell time (30-90 minutes depending on dough type and desired volume).
+          </p>
+          <p>
+            Spiral proofers use the same tower concept as spiral coolers but with an enclosed, insulated cabinet and steam injection for humidity control. The belt runs slowly — 0.5 to 5 FPM — to provide the required dwell time. Overhead proofers suspend pans or trays from an overhead chain conveyor that travels through the proofing chamber. Overhead systems maximize floor space utilization because the production floor remains clear.
+          </p>
+          <p>
+            Proofer conveyor belts must resist moisture and heat without harboring bacteria. Modular plastic belts in polypropylene or acetal resist the warm, humid environment and allow COP cleaning. Wire mesh belts in stainless steel also serve well but cost more. Belt cleaning between production runs prevents cross-contamination and yeast buildup that alters fermentation rates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PAN HANDLING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="pan-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Pan Systems</div>
+        <h2 id="pan-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Pan Conveying & <span class="text-accent">Depanning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Many bakery products — bread loaves, muffins, rolls, cakes — bake in pans that travel through the oven on conveyors. Pan handling systems include pan loading conveyors (feeding empty pans to depositors), pan transport conveyors (moving loaded pans through proofers and ovens), depanning stations (removing baked product from pans), and pan return conveyors (cycling empty pans back to the loading station).
+          </p>
+          <p>
+            Depanning uses vacuum cups, mechanical fingers, or gravity inversion to extract product from pans. Vacuum depanners lift product vertically from the pan and place it on a downstream <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling conveyor</a>. Inversion depanners flip the pan upside down and release product onto a belt below. The choice depends on product fragility — vacuum depanning handles delicate products like cakes; inversion works for robust products like bread loaves.
+          </p>
+          <p>
+            Pan conveyors use chain-driven roller or flat-top chain designs to handle the weight and rigidity of loaded baking pans. <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Chain-driven live roller (CDLR) conveyors</a> handle heavy pan loads at moderate speeds. Pan return loops typically include a pan washer and greaser station to prepare pans for the next production cycle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PACKAGING LINE INTEGRATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="packaging-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Packaging Stage</div>
+        <h2 id="packaging-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Bakery Packaging <span class="text-accent">Line Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            After cooling, bakery products move through packaging operations: singulation, orientation, wrapping or bagging, <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating</a>, cartoning, <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>, and palletizing. Each operation requires a conveyor section with specific speed, width, and product handling characteristics.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Singulation and Orientation</h3>
+          <p>
+            Products exit the cooling conveyor in random orientation and spacing. Singulation conveyors separate products into single file using speed differentials, guide rails, or <a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">product handling devices</a>. Orientation conveyors position products label-side-up or in a specific direction for wrapping. For round products like buns and rolls, <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">timing screws</a> establish consistent pitch before wrapper infeed.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Wrapper and Bagger Infeed</h3>
+          <p>
+            Flow wrappers (horizontal form-fill-seal machines) require products at precise spacing and speed. The infeed conveyor accelerates products to match wrapper film speed, typically 50-200 FPM. Servo-driven <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a> provide the precision spacing needed for high-speed wrapping. Bread baggers use a different approach — a bucket elevator or conveyor feeds loaves into open bags held by bag clamps.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Cookie and Cracker Lines</h3>
+          <p>
+            <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">Cookie and cracker packaging</a> presents unique challenges: fragile products that break under pressure, high-speed production rates (800+ cookies per minute per lane), and multi-lane stacking before wrapping. These lines use gentle handling conveyors with Shuttleworth slip-torque technology or air-cushion belts to prevent product damage during accumulation and laning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOD SAFETY ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="safety-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Food Safety</div>
+        <h2 id="safety-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          BISSC Standards & <span class="text-accent">Hygienic Design</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The Baking Industry Sanitary Standards Committee (BISSC) publishes sanitary design standards specific to bakery equipment. BISSC standards address cleanability, material selection, surface finish, and construction methods for conveyors and other baking equipment. BISSC certification is voluntary but provides a defensible standard during SQF, BRC, and FSSC 22000 audits. <!-- VERIFY: BISSC certification process and current standard version -->
+          </p>
+          <p>
+            Key BISSC requirements for bakery conveyors include:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Open-frame construction:</strong> All surfaces accessible for inspection and cleaning. No hollow tubes or enclosed cavities that trap debris.</li>
+            <li><strong class="text-ink">Smooth welds:</strong> Continuous, ground-flush welds on product-contact surfaces. No skip welds or crevices.</li>
+            <li><strong class="text-ink">FDA-compliant materials:</strong> Belt materials, lubricants, and food-contact surfaces must comply with FDA 21 CFR regulations.</li>
+            <li><strong class="text-ink">Tool-free belt removal:</strong> Belts must be removable for COP cleaning without tools. Quick-release tensioners and tip-up tail designs facilitate fast belt changes.</li>
+            <li><strong class="text-ink">Allergen control:</strong> Bakeries handling wheat, nuts, dairy, eggs, and soy need conveyor designs that allow thorough cleaning between allergen changeovers. Smooth, non-porous belt surfaces and crevice-free frames prevent allergen residue accumulation.</li>
+          </ul>
+          <p>
+            For a comprehensive look at <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary and washdown conveyor design</a>, including IP ratings, CIP/COP cleaning, and USDA standards, see our dedicated guide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MANUFACTURER COMPARISON ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="mfg-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Manufacturers</div>
+        <h2 id="mfg-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-8">
+          Bakery Conveyor <span class="text-accent-bright">Manufacturers</span>
+        </h2>
+        <div class="text-lg text-white/60 leading-relaxed space-y-4">
+          <p>
+            The bakery conveyor market includes belt manufacturers, OEM system builders, and full-line bakery equipment integrators. Each serves different needs depending on whether you are replacing a belt, upgrading a section, or building a complete bakery line.
+          </p>
+        </div>
+        <div class="overflow-x-auto -mx-4 px-4 mt-10">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="border-b-2 border-white/30">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Manufacturer</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Specialty</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Belt Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4">Application</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-white/60">
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Ashworth</td>
+                <td class="py-4 pr-4">Spiral systems, oven bands</td>
+                <td class="py-4 pr-4">Wire mesh, metal</td>
+                <td class="py-4">Cooling, baking, freezing</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Intralox</td>
+                <td class="py-4 pr-4">Modular plastic belts</td>
+                <td class="py-4 pr-4">Modular plastic</td>
+                <td class="py-4">Spirals, transfers, packaging</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Wire Belt Co.</td>
+                <td class="py-4 pr-4">Metal belting</td>
+                <td class="py-4 pr-4">Flat wire, compound</td>
+                <td class="py-4">Ovens, coolers, fryers</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Rexnord</td>
+                <td class="py-4 pr-4">Modular and flat-top chain</td>
+                <td class="py-4 pr-4">Modular plastic, metal</td>
+                <td class="py-4">Pan handling, packaging</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-white">Dorner</td>
+                <td class="py-4 pr-4">Packaging conveyors</td>
+                <td class="py-4 pr-4">Polyurethane, modular</td>
+                <td class="py-4">Wrapper infeed, accumulation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- VERIFY: Current product offerings and branding for all manufacturers listed -->
+        <p class="text-sm text-white/60 mt-4">Manufacturer data from publicly available product information. Contact manufacturers directly for current specifications. See our <a href="/resources/conveyor-manufacturers/" class="text-accent-bright hover:text-white font-semibold">manufacturer directory</a> for a complete list.</p>
+      </div>
+    </section>
+
+    <!-- ═══ SELECTION GUIDE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting Bakery <span class="text-accent">Conveyors</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Specify bakery conveyors by answering these questions for each production stage:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">What is the product?</strong> Bread, cookies, crackers, pastries, or snacks? Each has different fragility, temperature, and handling requirements.</li>
+            <li><strong class="text-ink">What is the throughput?</strong> Products per minute, lane count, and line speed determine conveyor width, speed, and motor sizing.</li>
+            <li><strong class="text-ink">What is the temperature range?</strong> Oven bands need high-temp metal belts. Cooling conveyors need airflow-permeable mesh. Packaging conveyors run at ambient.</li>
+            <li><strong class="text-ink">What floor space is available?</strong> Limited floor space drives spiral solutions over straight-line conveyors.</li>
+            <li><strong class="text-ink">What cleaning method is required?</strong> Allergen-critical lines need tool-free belt removal and COP capability. Non-allergen lines may use dry brush cleaning.</li>
+            <li><strong class="text-ink">What packaging equipment connects downstream?</strong> Wrapper infeed speed, bagger loading method, and <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packer</a> requirements determine conveyor output specifications.</li>
+          </ol>
+          <p>
+            For budgeting guidance, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>. Bakery conveyors range from $$ for simple ambient belt sections to $$$$ for spiral cooling systems with environmental controls.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What types of conveyors are used in bakeries?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Bakeries use cooling spiral conveyors, oven band conveyors, proofing conveyors, depositor infeed belts, pan conveyors, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging line conveyors</a>. Each production stage requires different belt materials, temperature ratings, and speed controls.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a cooling spiral conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A cooling spiral conveyor moves baked products through a helical path inside a tower, providing extended <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling</a> time in a small floor footprint. A single spiral replaces 200+ feet of straight-line cooling conveyor in as little as 100 square feet. Spirals can be ambient, forced-air, or refrigerated.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt materials work for bakery conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Wire mesh belts (stainless for ovens, carbon steel for cooling), modular plastic (acetal or polypropylene for ambient handling), polyurethane (FDA-compliant direct food contact), and silicone (non-stick for sticky doughs). Selection depends on temperature, product type, and food contact requirements.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do bakery conveyors meet food safety standards?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Bakery conveyors meet food safety through BISSC certification, FDA-compliant contact materials, open-frame construction for cleaning access, and tool-free belt removal. BISSC standards address cleanability, material selection, and hygienic design specific to baking equipment. See <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary conveyor standards</a> for more detail.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a proofing conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A proofing conveyor transports dough through a temperature- and humidity-controlled enclosure (80-110 F, 70-85% RH) where yeast fermentation occurs. Spiral proofers maximize floor space; straight-line proofers suit smaller operations. Dwell times range from 30 to 90 minutes depending on dough type.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

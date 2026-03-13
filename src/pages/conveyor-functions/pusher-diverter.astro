@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Pusher & Diverter Mechanisms", "item": "https://packagingconveyor.com/conveyor-functions/pusher-diverter/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pusher & Diverter Mechanisms for Conveyor Systems",
+  "description": "Complete guide to conveyor pusher and diverter mechanisms — pneumatic pushers, servo pushers, blade diverters, pop-up transfers, and activated roller belt diverters for packaging line routing.",
+  "url": "https://packagingconveyor.com/conveyor-functions/pusher-diverter/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a conveyor pusher?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor pusher is a mechanism that pushes product off the side of a conveyor onto a spur line, into a lane, or into a reject bin. Pushers use pneumatic cylinders, servo linear actuators, or electric cylinders to extend a push plate or blade across the conveyor width. The pusher fires when a sensor detects a product in position and a PLC signal triggers the push. Pushers handle individual products or groups and are used for lane diverting, reject systems, and product routing in packaging lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a blade diverter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A blade diverter uses a pivoting arm or blade that swings into the product path on a conveyor, deflecting product off the main line onto a spur conveyor at an angle (typically 30 or 45 degrees). The blade remains in the diverted position to guide product onto the spur, then returns to the inline position. Blade diverters handle medium to heavy products (cases, totes, cartons) and operate at speeds up to 300+ FPM. They are gentler than pushers because they redirect product momentum rather than applying a lateral force." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a pusher and a diverter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A pusher applies a lateral force perpendicular to the conveyor direction, pushing product off the side. A diverter redirects product at an angle, using the product's existing forward momentum to guide it onto a spur line. Pushers are faster (50-150ms cycle) and handle lighter products. Diverters handle heavier products more gently but take more conveyor length. Use pushers for lightweight individual items and reject applications. Use diverters for cases, totes, and routing to multiple spur lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can a conveyor pusher or diverter operate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic pushers cycle in 50-200ms (extend + retract). Servo pushers cycle in 30-100ms. Blade diverters pivot in 100-500ms depending on blade length and product weight. Activated roller belt (ARB) diverters operate continuously at conveyor speed with no cycle time limitation. The required cycle time depends on conveyor speed and product spacing — the mechanism must complete its cycle before the next product arrives. At 200 FPM with 12-inch product spacing, each product arrives every 300ms." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Pusher & Diverter Mechanisms for Conveyors | PackagingConveyor.com"
+  description="Complete guide to conveyor pushers and diverters — pneumatic pushers, servo pushers, blade diverters, pop-up transfers, and ARB diverters for packaging line product routing."
+  canonical="https://packagingconveyor.com/conveyor-functions/pusher-diverter/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Pusher & Diverter</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Pusher & <span class="text-accent-bright">Diverter</span> Mechanisms
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor pushers and diverters route products off a main conveyor line onto spur conveyors, into lanes, or into reject bins. Pushers apply a lateral force perpendicular to the conveyor direction using pneumatic cylinders or servo actuators. Diverters redirect product at an angle using pivoting blades, pop-up wheels, or activated roller belts. Hytrol, Intralox, Dorner, and Intelligrated (Honeywell) manufacture pusher and diverter mechanisms integrated into conveyor systems for packaging, distribution, and end-of-line routing applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- PUSHER vs DIVERTER -->
+    <section class="py-20 bg-surface" aria-labelledby="diff-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Key Distinction</div>
+        <h2 id="diff-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Pushers vs. <span class="text-accent">Diverters</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <strong class="text-ink">Pushers</strong> move product sideways — perpendicular to the conveyor travel direction. A push plate or blade extends from one side of the conveyor, contacts the product, and pushes it across the belt to the opposite side where a spur conveyor, chute, or bin receives it. The product's forward motion on the conveyor combines with the lateral push force, creating a diagonal trajectory. Pushers are fast (50-200ms cycle), compact, and handle lightweight to medium products.
+          </p>
+          <p>
+            <strong class="text-ink">Diverters</strong> redirect product at an angle without applying a perpendicular force. A pivoting blade, set of angled pop-up wheels, or activated roller belt surface changes the product's direction using the product's existing forward momentum. The product follows a smooth, angled path from the main line to the spur line. Diverters handle heavier products more gently than pushers because they redirect rather than shove.
+          </p>
+          <p>
+            The choice between pusher and diverter depends on product weight, fragility, line speed, and the number of divert destinations. For <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject applications</a>, pushers are standard because reject products do not require gentle handling. For routing products to multiple packing stations or lane destinations, diverters provide gentler handling and support more spur lines per mechanism.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUSHER TYPES -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="pusher-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Pusher Types</div>
+        <h2 id="pusher-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Pusher <span class="text-accent">Mechanisms</span>
+        </h2>
+        <div class="space-y-12">
+
+          <!-- Pneumatic Pusher -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Pneumatic Pushers</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Pneumatic pushers use compressed air cylinders to extend and retract a push plate. The cylinder fires on a PLC signal, the push plate contacts the product, pushes it across the conveyor, and retracts. Cycle time (extend + retract) is 50-200ms depending on stroke length and air pressure. Stroke lengths range from 6 inches to 36 inches — the stroke must exceed the conveyor width plus the product width to clear the product completely off the belt.
+              </p>
+              <p>
+                Pneumatic pushers require compressed air supply (80-100 PSI typical) and a solenoid valve. Air consumption increases with cycle rate and stroke length. A high-speed reject application cycling 60 times per minute at 18-inch stroke consumes significant air volume. Flow control valves on the cylinder adjust push speed — too fast damages product, too slow misses the timing window.
+              </p>
+              <p>
+                Pneumatic pushers suit most <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject system</a> applications, lane diverting for cases and cartons, and product routing at moderate speeds (up to 150 FPM). They are the lowest-cost pusher option and the simplest to maintain. Replacement cylinders and seals are commodity items.
+              </p>
+            </div>
+          </div>
+
+          <!-- Servo Pusher -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Servo Pushers</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Servo pushers use an electric servo motor driving a linear actuator (ball screw, belt drive, or rack-and-pinion) to extend and retract the push plate. Servo control provides programmable stroke length, push speed, acceleration profile, and position accuracy. Cycle times as fast as 30-100ms are achievable, and the servo can adjust stroke length on the fly for different product sizes without mechanical changes.
+              </p>
+              <p>
+                Servo pushers cost 3-5 times more than pneumatic pushers but eliminate compressed air requirements and provide superior control for high-speed, high-precision applications. The programmable stroke length allows one pusher to handle multiple product sizes by selecting a recipe in the PLC — no manual adjustment between product changeovers.
+              </p>
+              <p>
+                Servo pushers are preferred for high-speed <a href="/conveyor-functions/slug-loading/" class="text-accent hover:text-accent-hover font-semibold">slug loading</a> applications where the pusher must position product precisely for case packer infeed, and for multi-product lines where changeover time matters. The servo drive also provides diagnostic data (motor current, position error) that aids predictive <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">maintenance</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVERTER TYPES -->
+    <section class="py-20 bg-surface" aria-labelledby="diverter-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Diverter Types</div>
+        <h2 id="diverter-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Diverter <span class="text-accent">Mechanisms</span>
+        </h2>
+        <div class="space-y-12">
+
+          <!-- Blade Diverter -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Blade Diverters</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Blade diverters use a pivoting arm (blade) that swings into the product path at a 30 or 45 degree angle. The blade redirects product off the main conveyor onto a spur conveyor. When not diverting, the blade parks flush with the conveyor side rail, allowing product to pass straight. Blade diverters handle medium to heavy products (cases, totes, bundles) at speeds up to 300+ FPM.
+              </p>
+              <p>
+                The blade pivot point is upstream, and the blade tip reaches across the conveyor at the divert angle. Product contacts the blade face and slides along it onto the spur line. The blade surface is typically UHMW polyethylene or stainless steel — low friction to prevent product stalling against the blade. Hytrol's QUIK DIVERT and Intralox's ARB technology offer blade-style diverting integrated into roller and belt conveyor platforms.
+              </p>
+              <!-- VERIFY: Hytrol QUIK DIVERT current product name -->
+              <p>
+                Blade diverters require more conveyor length than pushers because the blade extends at an angle across the belt — a 45-degree blade on a 24-inch-wide conveyor extends 24 inches along the conveyor length. Product must clear the blade before the next product arrives. At high speeds with tight product spacing, the blade must cycle quickly or multiple consecutive products divert together.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pop-Up Wheel Diverter -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Pop-Up Wheel & Roller Diverters</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Pop-up wheel diverters use rows of angled wheels or rollers that rise through the conveyor surface (between rollers or through belt slots) to redirect product. When retracted, wheels sit below the conveyor surface and product travels straight. When activated, wheels pop up above the surface, contact the product bottom, and steer it at the wheel angle (30 or 45 degrees) onto the spur line.
+              </p>
+              <p>
+                Pop-up diverters provide smooth, gentle diverting with no lateral impact force. They suit flat-bottom products — cases, cartons, trays, totes — that ride stably on the angled wheels. They cannot handle products with irregular bottoms or products too light to engage the wheel friction. <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer conveyors</a> use pop-up roller and wheel mechanisms for right-angle product routing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Activated Roller Belt -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Activated Roller Belt (ARB)</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Activated roller belt (ARB) technology, pioneered by Intralox, embeds small angled rollers within a modular belt surface. When the belt rollers pass over an activation zone (a raised surface beneath the belt), the rollers engage and steer product at a 30-degree angle off the belt. Outside the activation zone, rollers are inactive and product travels straight.
+              </p>
+              <p>
+                ARB diverters operate at full conveyor speed with no mechanical cycling — the activation zone is always active. Product selection (divert vs. straight) is controlled by lane position. Products in the activation lane divert; products outside the activation lane pass straight. This allows very high throughput (100+ diverts per minute) with no speed reduction. ARB diverters handle lightweight to medium products (pouches, cartons, small cases) and excel in high-speed <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning applications</a>.
+              </p>
+              <!-- VERIFY: Intralox ARB throughput capability and maximum product weight -->
+            </div>
+          </div>
+
+          <!-- Sliding Shoe Sorter -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Sliding Shoe Sorter</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Sliding shoe sorters use an array of small sliding shoes mounted on a slat conveyor surface. Individual shoes shift diagonally to push product off the side at specific divert points. Each shoe is independently controlled, allowing products to divert to different spur lines along the sorter length. Sliding shoe sorters handle the highest sort rates — 200+ diverts per minute — and route to 20 or more spur destinations.
+              </p>
+              <p>
+                Sliding shoe sorters are primarily used in distribution and fulfillment rather than packaging lines, but they appear in high-volume packaging operations that route finished cases to multiple palletizing stations or shipping lanes. Dematic, Intelligrated, and Beumer manufacture sliding shoe sortation systems. See the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a> for sortation system architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Pusher & Diverter <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Mechanism</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Cycle Time</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Weight</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Handling</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Pneumatic pusher</td>
+                <td class="py-4 pr-4 font-mono text-sm">50-200 ms</td>
+                <td class="py-4 pr-4 font-mono text-sm">50g-25 kg</td>
+                <td class="py-4 pr-4">Lateral impact</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">Reject, simple divert</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Servo pusher</td>
+                <td class="py-4 pr-4 font-mono text-sm">30-100 ms</td>
+                <td class="py-4 pr-4 font-mono text-sm">50g-25 kg</td>
+                <td class="py-4 pr-4">Controlled impact</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Multi-product, high speed</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Blade diverter</td>
+                <td class="py-4 pr-4 font-mono text-sm">100-500 ms</td>
+                <td class="py-4 pr-4 font-mono text-sm">1-50 kg</td>
+                <td class="py-4 pr-4">Angled redirect</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Cases, totes, routing</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Pop-up wheel</td>
+                <td class="py-4 pr-4 font-mono text-sm">150-400 ms</td>
+                <td class="py-4 pr-4 font-mono text-sm">1-75 kg</td>
+                <td class="py-4 pr-4">Smooth redirect</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Right-angle transfers</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">ARB</td>
+                <td class="py-4 pr-4 font-mono text-sm">Continuous</td>
+                <td class="py-4 pr-4 font-mono text-sm">100g-15 kg</td>
+                <td class="py-4 pr-4">No-impact steer</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">High-speed laning, sorting</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Sliding shoe</td>
+                <td class="py-4 pr-4 font-mono text-sm">Continuous</td>
+                <td class="py-4 pr-4 font-mono text-sm">100g-35 kg</td>
+                <td class="py-4 pr-4">Gentle slide</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">Multi-destination sorting</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">Relative cost: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- SELECTION -->
+    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting a Pusher or <span class="text-accent">Diverter</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>Match the mechanism to these parameters:</p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Product weight and fragility.</strong> Lightweight, durable products (cartons, pouches) tolerate pusher impact. Heavy or fragile products (glass bottles, trays) need diverters that redirect without impact. Products over 25 kg require blade or pop-up diverters rather than pushers.</li>
+            <li><strong class="text-ink">Line speed and product spacing.</strong> Calculate the available time between products: Time (ms) = (Product gap in inches / Belt speed in inches per second) x 1000. The mechanism cycle time must be shorter than this window. At 200 FPM with 6-inch gaps, each window is 150ms — only pneumatic and servo pushers are fast enough.</li>
+            <li><strong class="text-ink">Number of divert destinations.</strong> Single-destination diverting uses pushers or blade diverters. Multi-destination routing (3+ spurs) uses sliding shoe sorters or sequential blade diverters. ARB technology handles 2-3 angled divert lanes.</li>
+            <li><strong class="text-ink">Compressed air availability.</strong> Pneumatic pushers and some blade diverters require compressed air. Servo pushers, ARB, and pop-up wheels use electric power only. Facilities without compressed air infrastructure should specify electric mechanisms.</li>
+            <li><strong class="text-ink">Changeover frequency.</strong> Lines running multiple product sizes benefit from servo pushers with programmable stroke length. Pneumatic pushers require manual stroke adjustment between product sizes. Blade diverters and ARB mechanisms handle multiple product sizes without adjustment.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions & Types</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Pushers for defect removal</p>
+          </a>
+          <a href="/conveyor-types/transfer-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Transfer Conveyors</h3>
+            <p class="text-base text-white/60">Right-angle pop-up transfers</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Multi-lane product routing</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a conveyor pusher?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor pusher pushes product off the side of a conveyor using a pneumatic cylinder or servo actuator. Pushers fire when a sensor detects product in position and a PLC triggers the push. Used for lane diverting, <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject systems</a>, and product routing.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a blade diverter?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A blade diverter uses a pivoting arm that swings into the product path at a 30 or 45 degree angle, deflecting product onto a spur conveyor. Blades handle cases, totes, and cartons at speeds up to 300+ FPM. Gentler than pushers because they redirect product momentum rather than applying lateral force.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Pusher vs. diverter — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A pusher applies lateral force perpendicular to the belt — fast but impactful. A diverter redirects product at an angle using existing forward momentum — gentler but requires more conveyor length. Use pushers for lightweight items and rejects. Use diverters for heavy products and gentle routing to multiple spur lines.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast can pushers and diverters operate?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Pneumatic pushers: 50-200ms. Servo pushers: 30-100ms. Blade diverters: 100-500ms. ARB and sliding shoe sorters operate continuously with no cycle time limitation. The mechanism must complete its cycle before the next product arrives — at 200 FPM with 12-inch spacing, each product arrives every 300ms.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

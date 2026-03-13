@@ -1,0 +1,426 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Belting", "item": "https://packagingconveyor.com/resources/conveyor-belting/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Belt Types & Material Selection Guide",
+  "description": "Complete guide to conveyor belt types and materials — rubber, PVC, polyurethane, silicone, modular plastic, and metal belts. FDA/USDA options, temperature ratings, and selection criteria for packaging lines.",
+  "url": "https://packagingconveyor.com/resources/conveyor-belting/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of conveyor belts are used in packaging?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Packaging conveyors use six primary belt types: (1) PVC — general-purpose, lowest cost, dry applications. (2) Polyurethane (PU) — FDA-compliant, food-grade, abrasion-resistant. (3) Silicone — high-temperature bakery and oven discharge. (4) Rubber — heavy-duty, high-friction incline and aggregate handling. (5) Modular plastic — interlocking modules, easy repair, food-grade options. (6) Metal (wire mesh, flat wire, chain) — high-temperature, heavy-load, freezer, and oven applications. Selection depends on product type, environment, temperature, FDA requirements, and budget." }
+    },
+    {
+      "@type": "Question",
+      "name": "What belt material is FDA-approved for food contact?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Polyurethane (PU), silicone, certain PVC formulations, acetal (Delrin) modular plastic, and polypropylene modular plastic are available in FDA 21 CFR 177-compliant formulations for direct food contact. Polyurethane is the most widely specified food-grade belt material because it combines FDA compliance, abrasion resistance, cut resistance, and easy cleaning. USDA acceptance requires additional criteria beyond FDA material compliance — including smooth, cleanable surfaces and belt construction that prevents bacterial harborage." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a conveyor belt last?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor belt life depends on belt material, product abrasion, operating speed, tension, environmental conditions, and maintenance quality. General ranges: PVC belts last 1-3 years in dry applications. PU food-grade belts last 2-5 years with proper tensioning and cleaning. Modular plastic belts last 5-10+ years because damaged modules are individually replaceable. Metal mesh belts last 3-7 years in high-temperature applications. Proper belt tracking, tensioning, and cleaning extend belt life significantly. Improper tracking can destroy a new belt in weeks." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a modular conveyor belt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A modular conveyor belt consists of interlocking plastic modules connected by hinge rods. Unlike continuous flat belts, modular belts can be repaired by replacing individual damaged modules without removing the entire belt. Modular belts are available in food-grade materials (acetal, polypropylene), handle inclines and curves, and resist chemicals and moisture. Intralox, Rexnord, and Habasit manufacture modular belt systems. Modular belts cost more upfront than flat belts but offer lower long-term maintenance cost and less downtime for repairs." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Belt Types & Material Selection Guide | PackagingConveyor.com"
+  description="Complete guide to conveyor belt types — rubber, PVC, PU, silicone, modular plastic, and metal. FDA/USDA food-grade options, temperature ratings, and belt selection for packaging lines."
+  canonical="https://packagingconveyor.com/resources/conveyor-belting/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Conveyor Belting</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Belt Types & <span class="text-accent-bright">Material</span> Selection
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Conveyor belt material determines product grip, temperature tolerance, chemical resistance, food safety compliance, and belt life — making it one of the most consequential decisions in conveyor system design. Packaging lines use six primary belt types: PVC (general-purpose), polyurethane (food-grade workhorse), silicone (high-temperature bakery), rubber (heavy-duty incline), modular plastic (interlocking, repairable), and metal mesh/wire (oven, freezer, heavy loads). Habasit, Forbo Siegling, Intralox, Rexnord, and Ammeraal Beltech manufacture conveyor belting for packaging, food processing, pharmaceutical, and industrial applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- PVC -->
+    <section class="py-20 bg-surface" aria-labelledby="pvc-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="pvc-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          PVC <span class="text-accent">Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            PVC (polyvinyl chloride) belts are the lowest-cost conveyor belt option for dry, room-temperature applications. PVC belts handle cartons, cases, bags, and packaged goods in distribution, fulfillment, and non-food packaging environments. Standard PVC belts are not FDA-compliant for direct food contact in most formulations, limiting their use in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging</a> to conveying packaged (not exposed) food products.
+          </p>
+          <p>
+            PVC belts offer good chemical resistance to oils, greases, and mild solvents. They are available in smooth, rough-top, and fabric-textured surfaces. Rough-top PVC provides additional grip for incline applications up to 25-30 degrees. Temperature range is typically -10&deg;F to 180&deg;F (-23&deg;C to 82&deg;C). PVC belts become stiff and brittle at low temperatures and soften at high temperatures — unsuitable for freezer or oven applications.
+          </p>
+          <p>
+            PVC belt construction uses one to four plies of polyester or cotton fabric with PVC coating on both sides. The fabric provides tensile strength. The PVC coating provides the carrying surface. Belt thickness ranges from 0.05 inches (1-ply lightweight) to 0.25 inches (4-ply heavy-duty). Habasit, Forbo Siegling, and Ammeraal Beltech supply PVC belting in widths up to 60 inches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLYURETHANE -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="pu-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="pu-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Polyurethane <span class="text-accent">(PU) Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Polyurethane is the standard belt material for food-grade packaging conveyors. FDA 21 CFR 177.2600 compliant PU formulations allow direct contact with food products including meat, dairy, baked goods, confectionery, and produce. PU belts resist abrasion, cutting, and chemical attack from food acids, fats, and cleaning agents better than PVC. They are the default choice for <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary conveyor</a> applications.
+          </p>
+          <p>
+            PU belts are available in white and blue — colors chosen for visual contamination detection. A blue belt fragment in white flour or sugar is immediately visible. White belts reveal dark contaminants (hair, insects, foreign material). FDA-compliant PU belts use metal-detectable formulations that allow <a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">metal detector systems</a> to find belt fragments if a piece breaks off — a food safety requirement on many lines.
+          </p>
+          <p>
+            Temperature range for PU belts is -22&deg;F to 212&deg;F (-30&deg;C to 100&deg;C) for most formulations. Specialty high-temperature PU extends to 250&deg;F (120&deg;C). PU belts maintain flexibility at freezer temperatures, making them suitable for frozen food packaging applications where PVC becomes too stiff. Habasit's Cleanline series and Forbo Siegling's Transilon PU belts are widely specified on food packaging conveyors.
+          </p>
+          <!-- VERIFY: Habasit Cleanline series current product designation -->
+          <p>
+            PU belt surfaces are available in smooth, positive-drive (perforated for sprocket drive), and textured (diamond, waffle, nub patterns for grip). Positive-drive PU belts eliminate belt slippage and tracking issues — the sprocket engages perforations in the belt, ensuring precise belt position. Dorner and mk North America use positive-drive PU belts on their precision conveyor platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SILICONE -->
+    <section class="py-20 bg-surface" aria-labelledby="silicone-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="silicone-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Silicone <span class="text-accent">Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Silicone belts handle the highest temperatures of any elastomeric belt material — up to 500&deg;F (260&deg;C) for standard silicone and 550&deg;F (288&deg;C) for specialty formulations. Silicone belts are FDA-compliant and serve bakery applications: oven discharge conveyors, cooling conveyors after baking, and transfer conveyors handling hot bread, cookies, crackers, and pastries.
+          </p>
+          <p>
+            Silicone provides excellent release properties — sticky products (dough, candy, cheese) release cleanly from silicone surfaces without sticking. This non-stick characteristic reduces product buildup on the belt and simplifies cleaning. However, silicone belts are significantly less durable than PU — they cut more easily, abrade faster, and cost 3-5 times more per linear foot than equivalent PU belts.
+          </p>
+          <p>
+            Silicone belts are a specialty product, not a general-purpose belt material. Use silicone only when the application requires high-temperature tolerance, non-stick release, or both. For applications under 212&deg;F with sticky products, consider PU belts with release coatings or PTFE (Teflon) top coats as a lower-cost alternative. For non-food high-temperature applications, metal mesh belts provide superior durability at lower cost per operating hour.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUBBER -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="rubber-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="rubber-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Rubber <span class="text-accent">Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Rubber conveyor belts provide the highest friction, abrasion resistance, and impact absorption of any belt material. Natural rubber and synthetic rubber (SBR, nitrile, neoprene, EPDM) formulations serve different environments. Rubber belts dominate heavy-duty applications — aggregate, mining, lumber — but appear in packaging for <a href="/conveyor-types/flighted-scoop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyors</a> handling heavy cases, rough-surface bags, and bulk raw materials.
+          </p>
+          <p>
+            Rough-top rubber belts provide the highest coefficient of friction for incline applications. A rough-top rubber belt carries bags of flour, sugar, or grain up inclines that PVC and PU belts cannot handle. Rubber belts absorb impact from falling products — useful at conveyor load points where product drops from hoppers or upstream equipment onto the belt.
+          </p>
+          <p>
+            Rubber belts are not FDA-compliant for direct food contact in most formulations (except specialty white nitrile rubber). For food applications requiring rubber's grip and durability, consider PU belts with textured surfaces or rubber-covered rollers on roller conveyors. Continental ContiTech, Fenner Dunlop, and Bando manufacture rubber conveyor belting for industrial and packaging applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULAR PLASTIC -->
+    <section class="py-20 bg-surface" aria-labelledby="modular-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="modular-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Modular Plastic <span class="text-accent">Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Modular plastic belts consist of interlocking injection-molded modules connected by cross rods (hinge pins). Unlike continuous flat belts, modular belts allow individual module replacement without removing the entire belt — a damaged section pops out and a new module snaps in. This repairability makes modular belts the lowest-maintenance belt option for lines with frequent belt damage from sharp products, heavy loads, or processing equipment.
+          </p>
+          <p>
+            Intralox, Rexnord (Rex), and Habasit manufacture modular belt systems. Module materials include acetal (Delrin), polypropylene, polyethylene, and nylon. FDA-compliant formulations are standard for food applications. Modular belts are available in flat, raised-rib, perforated, friction-top, and nub-top surfaces. Perforated modules allow drainage, airflow, and vacuum holding.
+          </p>
+          <p>
+            Modular belts run on sprockets rather than friction drive — the sprocket teeth engage the belt's hinge pins or module features, providing positive drive without belt slip. This eliminates tracking issues (the belt cannot drift side-to-side) and ensures precise belt position for <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing applications</a>. Sprocket drive also handles inclines and declines without belt slippage, making modular belts suitable for <a href="/conveyor-types/flighted-scoop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyors</a>.
+          </p>
+          <p>
+            Modular belt conveyors handle curves (radius turns) without special belt designs. The hinge-point construction allows the belt to articulate through curves, and Intralox's modular belt geometry is specifically designed for tight radius turns in spiral and serpentine <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">storage conveyor</a> applications.
+          </p>
+          <p>
+            The primary downside is cost — modular belts cost $$-$$$ per linear foot compared to $ for PVC and $$ for PU flat belts. The cost premium is offset by longer belt life (5-10+ years), lower maintenance labor, and less downtime for belt changes. For lines running 16+ hours per day with high belt wear, modular belts deliver lower total cost of ownership despite higher upfront cost.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METAL BELTS -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="metal-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Belt Material</div>
+        <h2 id="metal-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Metal <span class="text-accent">Belts</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Metal conveyor belts handle the most extreme environments — high temperatures (up to 1,800&deg;F / 982&deg;C), heavy loads, corrosive chemicals, and abrasive products. Three metal belt constructions serve packaging-adjacent applications:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Wire mesh:</strong> Woven or welded wire in grid patterns. Open mesh allows airflow, drainage, and heat transfer. Standard for baking ovens, cooling tunnels, and freezer conveyors. Stainless steel 304 or 316 mesh is food-grade.</li>
+            <li><strong class="text-ink">Flat wire (compound balanced weave):</strong> Alternating left and right spirals connected by cross rods. Provides a flatter carrying surface than wire mesh. Used for delicate products in ovens and freezers where mesh marks on the product are unacceptable.</li>
+            <li><strong class="text-ink">Solid metal (steel belt):</strong> Continuous stainless steel strip. The flattest, most hygienic metal belt. Used for chocolate tempering, candy making, and pharmaceutical drying. Very expensive — $$$$ relative cost.</li>
+          </ul>
+          <p>
+            Wire Belt Company, Cambridge Engineered Solutions, and Ashworth Bros manufacture metal conveyor belts for food processing and packaging. Metal belts integrate with oven, freezer, and cooling tunnel equipment from packaging line manufacturers. The metal belt spans the full length of the thermal zone (oven, freezer) and often extends onto infeed and outfeed conveyors.
+          </p>
+          <!-- VERIFY: Cambridge Engineered Solutions current company name -->
+          <p>
+            Metal belts require different conveyor drive systems than polymer belts. Sprocket drive (for wire mesh and flat wire) or friction drive over stainless steel slide beds (for solid metal belts) replace the standard flat belt pulleys. Metal belt conveyors also need lubrication — food-grade lubricants (H1 registered) for food applications — applied to the belt edges and drive sprockets to reduce wear and friction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Belt Material <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[950px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Temp Range</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">FDA</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Life</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">PVC</td>
+                <td class="py-4 pr-4 font-mono text-sm">-10 to 180&deg;F</td>
+                <td class="py-4 pr-4">Limited</td>
+                <td class="py-4 pr-4 font-mono text-sm">1-3 yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">Dry, packaged goods, distribution</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Polyurethane</td>
+                <td class="py-4 pr-4 font-mono text-sm">-22 to 212&deg;F</td>
+                <td class="py-4 pr-4">Yes</td>
+                <td class="py-4 pr-4 font-mono text-sm">2-5 yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Food packaging, sanitary</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Silicone</td>
+                <td class="py-4 pr-4 font-mono text-sm">-75 to 500&deg;F</td>
+                <td class="py-4 pr-4">Yes</td>
+                <td class="py-4 pr-4 font-mono text-sm">1-3 yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$</td>
+                <td class="py-4">Bakery, oven discharge, sticky</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Rubber</td>
+                <td class="py-4 pr-4 font-mono text-sm">-20 to 300&deg;F</td>
+                <td class="py-4 pr-4">Specialty only</td>
+                <td class="py-4 pr-4 font-mono text-sm">3-7 yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Heavy-duty, incline, impact</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Modular plastic</td>
+                <td class="py-4 pr-4 font-mono text-sm">-40 to 250&deg;F</td>
+                <td class="py-4 pr-4">Yes (acetal, PP)</td>
+                <td class="py-4 pr-4 font-mono text-sm">5-10+ yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Food processing, curves, repair</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Metal mesh</td>
+                <td class="py-4 pr-4 font-mono text-sm">-100 to 1800&deg;F</td>
+                <td class="py-4 pr-4">Yes (SS)</td>
+                <td class="py-4 pr-4 font-mono text-sm">3-7 yrs</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$-$$$$</td>
+                <td class="py-4">Ovens, freezers, heavy loads</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">Cost per linear foot: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>. Life estimates assume proper <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">maintenance</a>.</p>
+      </div>
+    </section>
+
+    <!-- SELECTION GUIDE -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt <span class="text-accent">Selection Criteria</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>Select belt material by answering these questions in order:</p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Does the product contact the belt directly?</strong> If yes, and the product is food or pharmaceutical, the belt must be FDA-compliant (PU, silicone, FDA-grade modular, or metal). If the product is packaged (sealed case, wrapped pallet), any belt material works.</li>
+            <li><strong class="text-ink">What is the operating temperature?</strong> Ambient room temperature: PVC, PU, modular. Freezer (-40&deg;F): PU, modular, metal. Hot (above 212&deg;F): silicone, metal. Oven (above 300&deg;F): metal only.</li>
+            <li><strong class="text-ink">What chemicals contact the belt?</strong> Cleaning chemicals (chlorine, quaternary ammonium, peracetic acid) degrade PVC faster than PU. Oils and fats require oil-resistant formulations. Metal belts resist virtually all chemicals.</li>
+            <li><strong class="text-ink">Is the application incline or flat?</strong> Inclines above 15 degrees need textured belts — rough-top PU, nub-top modular, or cleated belts. Steeper inclines need <a href="/conveyor-types/flighted-scoop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flighted belts</a>.</li>
+            <li><strong class="text-ink">How critical is uptime?</strong> High-uptime lines benefit from modular belts (quick module replacement) or positive-drive belts (no tracking adjustment). Lines tolerating occasional belt changes can use lower-cost flat belts.</li>
+            <li><strong class="text-ink">What is the budget priority?</strong> Lowest upfront cost: PVC. Lowest total cost of ownership: modular plastic (despite higher upfront cost). Best food-grade value: PU.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELT MAINTENANCE PREVIEW -->
+    <section class="py-20 bg-surface" aria-labelledby="maintain-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Maintenance</div>
+        <h2 id="maintain-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Belt <span class="text-accent">Maintenance Essentials</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Belt life depends more on maintenance quality than belt material. Three maintenance tasks determine whether a belt reaches its expected life or fails prematurely:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Tracking:</strong> A mistracking belt rides against the conveyor frame, grinding the belt edge and causing accelerated wear, fraying, and eventual belt destruction. Tracking adjustment aligns the belt so it runs centered on the conveyor. Check tracking weekly — or daily on high-speed lines.</li>
+            <li><strong class="text-ink">Tensioning:</strong> Over-tensioned belts overload bearings, stretch permanently, and wear belt surfaces against the slider bed. Under-tensioned belts slip on the drive pulley, generating heat and glazing the belt bottom. Correct tension produces about 1% belt sag between supports.</li>
+            <li><strong class="text-ink">Cleaning:</strong> Product buildup on the belt surface and underside causes tracking issues, bacteria growth, and belt delamination. Clean belts daily in food applications. Use cleaning methods compatible with the belt material — PU tolerates most food-grade sanitizers; silicone tolerates alkaline cleaners but not strong solvents.</li>
+          </ul>
+          <p>
+            For complete maintenance schedules and troubleshooting procedures, see the <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">conveyor maintenance and troubleshooting guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Guides</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/resources/conveyor-maintenance/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Maintenance Guide</h3>
+            <p class="text-base text-white/60">PM schedules and troubleshooting</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Cost Guide</h3>
+            <p class="text-base text-white/60">Belt material pricing factors</p>
+          </a>
+          <a href="/conveyor-types/flighted-scoop-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Flighted Conveyors</h3>
+            <p class="text-base text-white/60">Cleated and scoop belt options</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt types are used in packaging?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Six primary types: PVC (general-purpose, lowest cost), polyurethane (FDA food-grade), silicone (high-temperature bakery), rubber (heavy-duty incline), modular plastic (repairable, food-grade), and metal mesh (ovens, freezers). Selection depends on product, temperature, FDA requirements, and budget.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt material is FDA-approved for food?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Polyurethane, silicone, acetal and polypropylene modular plastics, and stainless steel are available in FDA 21 CFR 177-compliant formulations. Polyurethane is the most widely specified because it combines FDA compliance, abrasion resistance, and easy cleaning. Blue and white colors aid visual <a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">contamination detection</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How long does a conveyor belt last?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>PVC: 1-3 years. PU: 2-5 years. Modular plastic: 5-10+ years (modules individually replaceable). Metal mesh: 3-7 years. Proper tracking, tensioning, and cleaning extend belt life. Improper tracking can destroy a new belt in weeks. See the <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">maintenance guide</a> for procedures.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a modular conveyor belt?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Interlocking plastic modules connected by hinge rods. Damaged modules pop out and replacements snap in — no belt removal needed. Sprocket-driven (no tracking issues). Available in FDA-compliant materials. Higher upfront cost than flat belts but 5-10+ year life and lower maintenance cost. Intralox, Rexnord, and Habasit are the primary manufacturers.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Flexible Conveyors", "item": "https://packagingconveyor.com/conveyor-types/flexible-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a flexible conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A flexible conveyor (also called an expandable or accordion conveyor) is a portable conveying unit that extends, retracts, and curves to adapt to changing loading/unloading positions. Flexible conveyors use skate wheels or small rollers mounted on a scissor-action (pantograph) frame that stretches from a compact storage length to a fully extended working length. They are the standard conveyor for truck loading/unloading, trailer staging, and temporary conveying operations." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a skatewheel and powered flexible conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Skatewheel flexible conveyors use unpowered wheels and rely on gravity (slight decline) or manual pushing to move products. Powered flexible conveyors have motorized rollers that actively drive products along the conveyor surface. Skatewheel conveyors cost less and are lighter. Powered flex conveyors handle heavier loads, inclines, and automated operation without manual assistance. Powered flex conveyors cost 3-5x more than gravity skatewheel versions." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can a flexible conveyor extend?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard flexible conveyors extend from a compressed length of 6-12 feet to an extended length of 24-60 feet, depending on the model. The extension ratio is typically 3:1 to 5:1 (compressed to extended). Longer extensions require wider scissor frames and heavier construction. The most common sizes extend to 24, 36, or 48 feet to reach the back of standard shipping trailers (53 feet)." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Flexible & Expandable Conveyors: Accordion, Skatewheel & Powered Flex",
+  "description": "Complete guide to flexible and expandable conveyors including accordion-style, skatewheel flex, powered flex, and best-flex configurations for truck loading and temporary operations.",
+  "url": "https://packagingconveyor.com/conveyor-types/flexible-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Flexible & Expandable Conveyors: Accordion, Skatewheel & Powered Flex"
+  description="Complete guide to flexible and expandable conveyors: accordion-style, skatewheel, powered flex. Truck loading, trailer staging, temporary conveying. Extension ranges and selection."
+  canonical="https://packagingconveyor.com/conveyor-types/flexible-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Flexible Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Flexible & Expandable Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Flexible & Expandable Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A flexible conveyor is a portable conveying unit on a scissor-action (pantograph) frame that extends, retracts, and curves to adapt to changing positions. Flexible conveyors stretch from a compact 6-12 foot storage length to 24-60 feet of working length, reaching into truck trailers, connecting temporary processing stations, and bridging gaps between fixed conveyor runs. They use gravity skate wheels, gravity rollers, or powered rollers on the expandable frame and are the standard conveyor for <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">shipping, receiving, and truck loading</a> operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion-Style Flexible -->
+  <article class="py-20 bg-surface" aria-labelledby="accordion-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Accordion-Style</div>
+      <h2 id="accordion-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Accordion-Style <span class="text-accent">Flexible Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>All flexible conveyors use the accordion (scissor/pantograph) frame design. The frame consists of interconnected X-shaped linkages that expand and compress like an accordion or lazy-tongs mechanism. Skate wheels, rollers, or belt modules mount on the linkage pivot points. As the frame extends, the spacing between wheels or rollers increases. As it compresses, the spacing decreases.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Construction</h3>
+        <p>Standard flexible conveyor frames use zinc-plated or powder-coated steel linkages with nylon bushings at each pivot point. Heavy-duty frames use larger linkage members with greaseable bronze bushings. The frame mounts on swivel casters (typically 4-8 casters depending on length) for portability. Locking casters stabilize the conveyor during operation. Frame width ranges from 18 to 30 inches for standard models.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Extension Ratios</h3>
+        <p>Standard extension ratios range from 3:1 to 5:1 (compressed to extended). A conveyor that compresses to 8 feet extends to 24-40 feet. At full extension, the wheel or roller spacing is at maximum, and the conveying surface has the widest gaps between elements. Products must bridge these gaps — minimum product dimension must exceed the maximum element spacing at full extension. Typical maximum roller spacing at full extension: 4-6 inches.</p>
+        <p>NestaFlex, BestFlex (BestConnect), and Unex Manufacturing are the primary flexible conveyor brands. NestaFlex (a Uline and distribution brand) dominates the skatewheel flex market. BestFlex focuses on powered flex models. Hytrol and other conveyor manufacturers offer flex conveyors as part of their broader product lines.</p>
+        <!-- VERIFY: NestaFlex brand ownership and BestFlex/BestConnect relationship -->
+      </div>
+    </div>
+  </article>
+
+  <!-- Skatewheel Flex -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="skatewheel-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Skatewheel Flex</div>
+      <h2 id="skatewheel-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Skatewheel <span class="text-accent">Flexible Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Skatewheel flexible conveyors use rows of small plastic or steel skate wheels mounted on axles at each frame pivot point. The wheels spin freely — no motors, no power. Products move by gravity (slight downhill pitch) or manual push. Skatewheel flex conveyors are the most common and lowest-cost flexible conveyor type.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gravity Operation</h3>
+        <p>Gravity skatewheel flex conveyors operate on a slight decline (typically 1/4 to 1/2 inch drop per foot of conveyor length). The truck end sits higher than the warehouse end. Products placed on the high end roll by gravity toward the low end. Workers unloading a truck place packages on the conveyor at the trailer end, and the packages roll out of the trailer to the staging area. The pitch angle must be enough for product movement but not so steep that products accelerate out of control.</p>
+        <p>Gravity operation handles products from 1 to 75 lbs with flat, rigid bottoms. Heavier products need less pitch. Lighter products need more pitch. Soft-bottom products (polybags, padded envelopes) may not roll on skate wheels at any pitch. These products need manual pushing or powered flex conveyors.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Curving Capability</h3>
+        <p>Flexible conveyors curve naturally around obstacles by positioning the casters in a curved path. The scissor frame bends laterally to follow the curve. Products follow the curve because the skate wheels at the outer edge of the curve travel faster than those at the inner edge, gently guiding the product through the turn. This built-in <a href="/conveyor-types/transfer-conveyors/bump-turn/" class="text-accent hover:text-accent-hover font-semibold">bump-turn effect</a> eliminates the need for separate curve sections.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Product Limitations</h3>
+        <p>Skatewheel flex conveyors struggle with: products smaller than the wheel spacing at full extension (products fall through), round products (bottles, cans roll off the sides), soft-bottom products (polybags, flexible pouches), and very heavy products (over 75 lbs). For these products, use powered flex conveyors or gravity <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> with larger-diameter rollers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Powered Flex -->
+  <section class="py-20 bg-surface" aria-labelledby="powered-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Powered Flex</div>
+      <h2 id="powered-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Powered Flexible <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Powered flexible conveyors add motorized rollers to the expandable frame. A drive motor powers the rollers through O-ring bands, belts, or individual motorized roller units. Products move under power regardless of incline or decline. Powered flex conveyors handle level, uphill, and downhill operation without gravity assist.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Systems</h3>
+        <p>Most powered flex conveyors use a single motor at one end driving rollers through polyurethane O-ring bands. As the frame extends, belt tension changes — the drive system must accommodate the variable center distances. Some powered flex models use <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">motorized drive rollers (MDR)</a> at intervals along the frame, providing distributed power that maintains consistent speed regardless of extension length.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Performance Advantages</h3>
+        <p>Powered flex conveyors handle heavier products (up to 150 lbs), operate at consistent speeds (30-120 FPM), and work at any pitch angle including level and uphill. Workers do not need to push products manually. Powered operation reduces worker fatigue and increases throughput during long loading/unloading shifts. Powered flex conveyors integrate with fixed <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyor</a> lines through speed-matched transitions.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Cost Comparison</h3>
+        <p>Powered flex conveyors cost 3-5x more than gravity skatewheel models of the same length. The motor, drive components, electrical controls, and heavier frame construction account for the difference. Operations with high daily throughput (100+ trucks per day), heavy products, or long unloading shifts justify the powered investment through reduced labor and increased productivity. Low-volume operations (under 20 trucks per day) typically use gravity skatewheel flex.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Flexible Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Skatewheel Flex</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Gravity Roller Flex</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Powered Roller Flex</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">75 lbs</td>
+              <td class="py-3 pr-4 font-mono text-sm">100 lbs</td>
+              <td class="py-3 font-mono text-sm">150 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Power Required</td>
+              <td class="py-3 pr-4">None (gravity)</td>
+              <td class="py-3 pr-4">None (gravity)</td>
+              <td class="py-3">Electric motor</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Incline Capable</td>
+              <td class="py-3 pr-4">Decline only</td>
+              <td class="py-3 pr-4">Decline only</td>
+              <td class="py-3">Any direction</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Extension Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">24-60 ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">24-50 ft</td>
+              <td class="py-3 font-mono text-sm">24-60 ft</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Product Types</td>
+              <td class="py-3 pr-4">Flat-bottom cases</td>
+              <td class="py-3 pr-4">Flat-bottom, wider range</td>
+              <td class="py-3">Most case/carton types</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Extension ranges represent standard models. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Flexible Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Truck loading and unloading:</strong> The primary application. Flexible conveyors extend from the warehouse dock into the truck trailer. Workers at the trailer end place packages on the conveyor, and products travel to the dock for palletizing, scanning, or transfer to fixed <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyor</a> lines. As the worker moves deeper into the trailer, the flexible conveyor extends to maintain reach. When the trailer is empty, the conveyor compresses for storage.</p>
+
+        <p><strong class="text-ink">Shipping staging:</strong> Outbound operations extend flexible conveyors from pack stations to truck trailers. Packed orders travel from the packing area to the truck loading position. Multiple flexible conveyors serve multiple dock doors simultaneously. After loading is complete, the conveyors compress and move to other dock doors as needed.</p>
+
+        <p><strong class="text-ink">Temporary process connections:</strong> Flexible conveyors bridge gaps between fixed conveyor runs during reconfiguration, seasonal peaks, or temporary operations. A flexible conveyor connects a new <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation system</a> infeed to an existing warehouse conveyor while permanent connections are built. Seasonal operations add flexible conveyors during holiday peak to extend sort lanes or add pack station connections.</p>
+
+        <p><strong class="text-ink">Cross-docking:</strong> Cross-dock operations use flexible conveyors to connect receiving dock doors directly to shipping dock doors. Inbound products flow across the building on temporary conveyor paths that change as trailer assignments change throughout the day. The portable, flexible nature of these conveyors allows rapid reconfiguration.</p>
+
+        <p><strong class="text-ink">Returns processing:</strong> Returns operations use flexible conveyors to feed received returns from unloading areas to sorting and inspection stations. The variable volume of returns makes permanent conveyors impractical. Flexible conveyors scale capacity by extending more units during high-return periods and compressing them during low-volume periods.</p>
+
+        <p><strong class="text-ink">Event and trade show logistics:</strong> Trade show setups, event staging, and temporary distribution operations use flexible conveyors for quick setup and teardown. The conveyors roll into position on casters, extend to the needed length, and begin operation within minutes. After the event, they compress and roll to storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Flexible Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Gravity vs powered is the primary decision.</strong> Gravity skatewheel for light products (under 75 lbs) going downhill from truck to dock. Powered for heavy products, level or uphill operation, and operations needing consistent speed without manual pushing. Powered flex justifies its cost at high daily throughput.</p>
+
+        <p><strong class="text-ink">Extension length must reach the trailer back wall.</strong> Standard 53-foot trailers need 40-50 feet of effective reach. Account for the distance from the dock to the trailer nose. Select a model that reaches the furthest point at full extension with the worker standing at the conveyor end. Leave 4-6 feet at the trailer end for the worker's working space.</p>
+
+        <p><strong class="text-ink">Product size determines minimum element spacing.</strong> The smallest product dimension must exceed the maximum spacing between skate wheels or rollers at full extension. If small products fall through at full extension, choose a model with closer element spacing (which means a shorter maximum extension for the same compressed length) or use gravity roller flex instead of skatewheel.</p>
+
+        <p><strong class="text-ink">Portability matters if the conveyor moves between dock doors.</strong> Lightweight skatewheel flex conveyors weigh 200-400 lbs and roll easily on casters. Powered flex conveyors weigh 500-1,200 lbs and require more effort to move. Floor condition (smooth concrete, dock leveler gaps, threshold bumps) affects portability. Consider dedicated flex conveyors at each dock door for high-traffic operations instead of moving units between doors.</p>
+
+        <p><strong class="text-ink">Integration with fixed conveyor systems.</strong> The flex conveyor discharge end should align with the fixed <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> or <a href="/conveyor-types/diverting-merging/" class="text-accent hover:text-accent-hover font-semibold">sorting conveyor</a> infeed. Height-adjustable legs or ramp transitions match the flex conveyor height to the fixed system. Speed matching between powered flex and downstream powered conveyors prevents product pileup or gaps at the transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a flexible conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A portable conveyor on a scissor (accordion) frame that extends, retracts, and curves. Types include gravity skatewheel, gravity roller, and powered roller. They extend from 6-12 feet to 24-60 feet for truck loading, staging, and temporary operations. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types guide</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Skatewheel vs powered flex — which is better?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Skatewheel for light products (under 75 lbs) with gravity assist. Powered for heavy products, level/uphill use, and high daily throughput. Powered costs 3-5x more but reduces labor and increases speed. Low-volume operations use gravity; high-volume operations justify powered.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How long can a flexible conveyor extend?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Standard models extend to 24-60 feet from a compressed 6-12 feet (3:1 to 5:1 ratio). Common sizes reach 24, 36, or 48 feet to service standard 53-foot trailers. Longer models require heavier frames and wider scissor linkages.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/roller-conveyors/gravity/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Gravity Rollers</div>
+          <p class="text-sm text-white/60">Fixed gravity alternatives</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">All roller types compared</p>
+        </a>
+        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">Powered flat surface option</p>
+        </a>
+        <a href="/conveyor-types/transfer-conveyors/bump-turn/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Bump Turns</div>
+          <p class="text-sm text-white/60">Built-in flex conveyor curve effect</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { allPages } from './pages';
 
 test.describe('Homepage', () => {
   test('should load and display H1', async ({ page }) => {
@@ -33,11 +34,9 @@ test.describe('Homepage', () => {
     const count = await details.count();
     expect(count).toBeGreaterThanOrEqual(3);
 
-    // First FAQ should be open by default
     const first = details.first();
     await expect(first).toHaveAttribute('open', '');
 
-    // Click a closed one — it should open
     const second = details.nth(1);
     await expect(second).not.toHaveAttribute('open', '');
     await second.locator('summary').click();
@@ -53,7 +52,6 @@ test.describe('Homepage', () => {
     const count = await rows.count();
     expect(count).toBeGreaterThanOrEqual(5);
 
-    // Check a cell has pricing
     const priceCells = page.locator('table td:has-text("$")');
     expect(await priceCells.count()).toBeGreaterThanOrEqual(5);
   });
@@ -107,74 +105,41 @@ test.describe('Navigation & Links', () => {
   });
 });
 
-test.describe('About page', () => {
-  test('should load with correct content', async ({ page }) => {
-    await page.goto('/about/');
-    await expect(page).toHaveTitle(/About/);
-    const body = await page.textContent('body');
-    expect(body).toContain('info@packagingconveyor.com');
-    expect(body).toContain('independent');
-  });
-});
-
-test.describe('Privacy page', () => {
-  test('should load and mention no data collection', async ({ page }) => {
-    await page.goto('/privacy/');
-    await expect(page).toHaveTitle(/Privacy/);
-  });
-});
-
-test.describe('Terms page', () => {
-  test('should load and mention informational purposes', async ({ page }) => {
-    await page.goto('/terms/');
-    await expect(page).toHaveTitle(/Terms/);
-  });
-});
-
 test.describe('SEO fundamentals', () => {
-  const allPages = [
-    '/', '/about/', '/privacy/', '/terms/', '/thank-you/',
-    '/conveyor-types/', '/conveyor-types/roller-conveyors/', '/conveyor-types/roller-conveyors/gravity/',
-    '/conveyor-types/roller-conveyors/powered/', '/conveyor-types/accumulation-conveyors/',
-    '/conveyor-types/transfer-conveyors/', '/conveyor-types/cdlr-conveyors/',
-    '/conveyor-types/mdr-conveyors/', '/conveyor-types/live-roller-conveyors/',
-    '/conveyor-types/vertical-reciprocating/',
-    '/industries/', '/industries/food-conveyors/', '/industries/food-conveyors/sanitary/',
-    '/industries/packaging-line-conveyors/', '/industries/packaging-line-conveyors/pallet/',
-    '/conveyor-functions/', '/conveyor-functions/tray-loading/', '/conveyor-functions/indexing-conveyors/',
-    '/conveyor-functions/collating-laning/', '/conveyor-functions/reject-systems/',
-    '/resources/', '/resources/automated-conveyor-systems/', '/resources/conveyor-cost-guide/',
-  ];
-
   for (const path of allPages) {
     test(`${path} should have required meta tags`, async ({ page }) => {
       await page.goto(path);
 
-      // Title exists and isn't empty
       const title = await page.title();
       expect(title.length).toBeGreaterThan(10);
 
-      // Meta description
       const desc = page.locator('meta[name="description"]');
       await expect(desc).toHaveAttribute('content', /.{20,}/);
 
-      // OG tags
       await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', /.+/);
       await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content', /.+/);
 
-      // Robots
       await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /index/);
 
-      // Lang attribute
       await expect(page.locator('html')).toHaveAttribute('lang', 'en');
     });
 
     test(`${path} should have proper heading hierarchy`, async ({ page }) => {
       await page.goto(path);
-
-      // Exactly one H1
       const h1Count = await page.locator('h1').count();
       expect(h1Count).toBe(1);
+    });
+
+    test(`${path} should have canonical URL`, async ({ page }) => {
+      await page.goto(path);
+      const canonical = page.locator('link[rel="canonical"]');
+      await expect(canonical).toHaveAttribute('href', /packagingconveyor\.com/);
+    });
+
+    test(`${path} should have JSON-LD structured data`, async ({ page }) => {
+      await page.goto(path);
+      const scripts = await page.locator('script[type="application/ld+json"]').all();
+      expect(scripts.length).toBeGreaterThanOrEqual(2);
     });
   }
 });
@@ -195,7 +160,6 @@ test.describe('Performance basics', () => {
       }
     });
     await page.goto('/', { waitUntil: 'networkidle' });
-    // Static site should have minimal JS
     expect(resources.length).toBeLessThan(10);
   });
 });

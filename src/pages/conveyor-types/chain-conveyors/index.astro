@@ -1,0 +1,367 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Chain Conveyors", "item": "https://packagingconveyor.com/conveyor-types/chain-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a chain conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A chain conveyor uses one or more endless chains as the primary conveying medium to move products along a fixed path. The chains ride in tracks or guides and carry products directly on chain surfaces, on attachments mounted to the chains, or on slats or aprons connected between parallel chains. Chain conveyors handle heavy loads, high temperatures, and harsh environments where belt and roller conveyors cannot operate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main types of chain conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The main types are: drag chain conveyors (bulk material handling in troughs), overhead chain conveyors (monorail and power-and-free systems for suspended loads), slat chain conveyors (flat slat surfaces on parallel chains for pallets and heavy items), and apron chain conveyors (overlapping pans for bulk or unit loads). Each type uses different chain configurations, track systems, and load-carrying methods." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a chain conveyor and a belt conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Chain conveyors use metal chains as the conveying element; belt conveyors use a continuous flexible belt. Chain conveyors handle heavier loads (up to 50,000+ lbs), higher temperatures (up to 500°F+), and harsher environments (abrasive materials, chemicals). Belt conveyors handle lighter loads at higher speeds with less noise and lower maintenance. Chain conveyors cost more per foot but last longer in demanding applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do chain conveyors cost compared to other types?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Chain conveyors generally cost more than belt or roller conveyors due to heavier construction, precision chain components, and more robust drive systems. Simple drag chain conveyors start at moderate cost levels. Overhead power-and-free systems represent significant capital investment. Cost depends on chain type, load capacity, length, environment (corrosion resistance, high temp), and automation level." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chain Conveyors: Drag, Overhead, Slat & Apron Chain Systems",
+  "description": "Complete guide to chain conveyors including drag chain, overhead monorail and power-and-free, slat chain, and apron chain conveyor systems for heavy-duty industrial and packaging applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/chain-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Chain Conveyors: Drag, Overhead, Slat & Apron Chain Systems"
+  description="Complete guide to chain conveyors: drag chain, overhead monorail, power-and-free, slat chain, apron. Load ratings, applications, and selection criteria for industrial packaging."
+  canonical="https://packagingconveyor.com/conveyor-types/chain-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Chain Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Chain Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Chain Conveyors: Drag, Overhead, Slat & Apron
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A chain conveyor uses one or more endless chains as the primary conveying medium to move products along a fixed path. Chain conveyors handle heavy loads, high temperatures, and harsh environments where <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyors</a> and <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> cannot operate. The four main categories are drag chain (bulk material in troughs), <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">overhead chain</a> (suspended loads on monorail or power-and-free tracks), slat chain (flat surfaces on parallel chains), and apron chain (overlapping pans for bulk or unit loads).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drag Chain Conveyors -->
+  <article class="py-20 bg-surface" aria-labelledby="drag-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Drag Chain</div>
+      <h2 id="drag-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Drag Chain <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A drag chain conveyor pulls bulk material through an enclosed trough using one or more chains with attached flights, paddles, or scrapers. The chain travels along the trough bottom, dragging material from the inlet to the discharge point. The enclosed design contains dust, prevents contamination, and allows horizontal, inclined, and combination path configurations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">En-Masse Drag Conveyors</h3>
+        <p>En-masse drag conveyors move bulk material as a continuous column (en masse) within a rectangular or round trough. The chain and flights occupy only 10-15% of the trough cross-section. The material column moves as a slug, with internal friction between particles carrying the load rather than the flights alone. This reduces chain loading and wear compared to conventional scraper conveyors. En-masse conveyors handle 10-500 tons per hour of dry bulk materials like grain, cement, ash, and chemical powders.</p>
+        <p>CDM Systems, Hapman, and KWS Manufacturing produce en-masse drag conveyors for food, chemical, and mineral processing applications. For detailed specifications, see our <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyor guide</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tubular Drag Conveyors</h3>
+        <p>Tubular drag conveyors use a chain with evenly spaced circular discs that pull material through a sealed tube. The discs fit closely within the tube bore and push material ahead of each disc as the chain moves. Tubular drag systems handle fragile materials (nuts, snack foods, pet food) with minimal product degradation because the material moves gently as a plug between discs rather than being scraped or scooped.</p>
+        <p>Tubular drag conveyors route through 3D paths — horizontal runs, vertical lifts, and multiple direction changes within a single continuous loop. Cablevey Conveyors (now Cablevey by WAMGROUP) and Hapman specialize in tubular drag systems for food and pharmaceutical applications. See our <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyor page</a> for detailed tubular drag coverage.</p>
+        <!-- VERIFY: Cablevey is now part of WAMGROUP -->
+      </div>
+    </div>
+  </article>
+
+  <!-- Overhead Chain Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="overhead-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Overhead Chain</div>
+      <h2 id="overhead-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Overhead Chain <span class="text-accent">Conveyor Systems</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Overhead chain conveyors suspend products from trolleys that ride on an elevated track, carrying loads through production processes while keeping the floor clear. The chain drives the trolleys along the track at controlled speeds. Two main types serve different application needs: monorail (continuous-speed) and power-and-free (variable-speed with accumulation).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Monorail Overhead Conveyors</h3>
+        <p>Monorail systems use a single track with chain-driven trolleys moving at constant speed. All trolleys travel at the same speed in the same direction. Monorail conveyors suit continuous-flow processes like paint lines, powder coating, and drying ovens where products need uniform exposure time. They handle loads from 10 to 2,000 lbs per trolley. Jervis B. Webb (Daifuku), Richards-Wilcox, and Pacline manufacture monorail overhead systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Power-and-Free Overhead Conveyors</h3>
+        <p>Power-and-free systems use two tracks: a powered track with a continuously moving chain, and a free track where trolleys can be engaged or disengaged from the chain independently. This allows individual trolleys to stop, accumulate, switch tracks, and travel at different speeds. Power-and-free conveyors serve complex assembly lines where products require different dwell times at different stations.</p>
+        <p>Power-and-free systems handle the most complex routing in manufacturing: multiple speed zones, accumulation buffers, spurs for offline processing, elevation changes, and merging from multiple lines. They are the backbone of automotive assembly, heavy equipment manufacturing, and complex finishing operations. See our <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">overhead conveyor systems guide</a> for complete coverage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slat Chain Conveyors -->
+  <section class="py-20 bg-surface" aria-labelledby="slat-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Slat Chain</div>
+      <h2 id="slat-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Slat Chain <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A slat chain conveyor uses flat metal, wood, or plastic slats attached between two parallel chains. The chains ride in guides on either side of the conveyor frame, and the slats form a continuous flat surface between the chains. Products ride on the slat surface. The chain drive pulls the slats and products from the tail (loading) end to the head (discharge) end.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Metal Slat Conveyors</h3>
+        <p>Steel slat conveyors handle the heaviest loads: pallets (2,000-10,000 lbs), engine blocks, castings, and heavy assemblies. The steel slats provide a rigid, flat surface that supports concentrated point loads without deflection. Slat width ranges from 6 to 60 inches. Chain pitch and slat thickness scale with load capacity. Metal slat conveyors operate at 10-60 FPM in assembly lines, paint systems, and heavy manufacturing.</p>
+        <p>Metal slat conveyors withstand high temperatures (oven curing, paint bake), heavy impacts (part loading by crane or robot), and chemical exposure (wash systems, coating lines). They last decades in demanding environments with regular chain lubrication and slat replacement as the primary maintenance items.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Plastic Modular Chain (Table-Top Chain)</h3>
+        <p>Plastic modular chain conveyors use interlocking plastic links that form a flat conveying surface. The chain runs in a plastic or stainless steel frame without separate slats — the chain itself is the surface. Table-top chain conveyors handle light to moderate loads (1-100 lbs per product) at speeds of 10-200 FPM. They serve <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging lines</a>, pharmaceutical packaging, and consumer goods packaging where sanitary design, low noise, and gentle product handling matter.</p>
+        <p>Rexnord, Intralox, Habasit, and Uni-Chain (Ammeraal Beltech) supply table-top chain components. System integrators including Dorner and mk North America build complete table-top chain conveyor systems. The modular design allows curves, inclines, and declines within a single chain run without transfer points.</p>
+        <!-- VERIFY: Current brand ownership of Uni-Chain and Ammeraal Beltech -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Hinged Steel Belt (Chip Conveyor)</h3>
+        <p>Hinged steel belt conveyors use overlapping steel slats hinged at the edges, forming a continuous belt-like surface. They handle hot chips, scrap metal, and debris from machining operations. The hinged construction allows the belt to conform to the conveyor path including inclines. Chip conveyors are specialized slat chain variants common in metalworking but occasionally used in packaging for handling sharp, hot, or abrasive waste materials.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apron Chain Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apron-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Apron Chain</div>
+      <h2 id="apron-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Apron Chain <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Apron chain conveyors (also called pan conveyors) use overlapping metal pans attached to parallel chains. The pans overlap to form a continuous trough that carries bulk materials or heavy unit loads. The overlap prevents material leakage between pans. Apron conveyors handle the most demanding bulk material conditions: hot clinker, sharp rock, heavy castings, and abrasive ores.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Heavy-Duty Apron Feeders</h3>
+        <p>Apron feeders use extra-heavy chain and thick manganese steel pans to receive material from hoppers, bins, and crushers. They meter material from storage onto downstream conveyors at controlled rates. Apron feeders handle 100-5,000 tons per hour of rock, ore, coal, and aggregate. Pan widths range from 24 to 96 inches. Metso, FLSmidth, and thyssenkrupp manufacture mining and aggregate apron feeders.</p>
+        <!-- VERIFY: Metso, FLSmidth, thyssenkrupp current apron feeder product lines -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Light-Duty Apron Conveyors</h3>
+        <p>Light-duty apron conveyors handle lighter bulk materials and unit loads in manufacturing and packaging. They feed <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a>, <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw conveyors</a>, and processing equipment. Light apron conveyors also serve as assembly line conveyors where the flat pan surface carries workpieces through manual or automated assembly stations at 5-20 FPM.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Chain Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Drag Chain</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Overhead Monorail</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Power-and-Free</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Slat Chain</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Apron Chain</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Load Type</td>
+              <td class="py-3 pr-4">Bulk material</td>
+              <td class="py-3 pr-4">Suspended unit</td>
+              <td class="py-3 pr-4">Suspended unit</td>
+              <td class="py-3 pr-4">Heavy unit loads</td>
+              <td class="py-3">Bulk / heavy unit</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load</td>
+              <td class="py-3 pr-4 font-mono text-sm">500 TPH</td>
+              <td class="py-3 pr-4 font-mono text-sm">2,000 lbs/trolley</td>
+              <td class="py-3 pr-4 font-mono text-sm">4,000 lbs/trolley</td>
+              <td class="py-3 pr-4 font-mono text-sm">10,000 lbs</td>
+              <td class="py-3 font-mono text-sm">5,000 TPH</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-100 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-60 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">5-40 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-60 FPM</td>
+              <td class="py-3 font-mono text-sm">5-30 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Accumulation</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 pr-4">Yes (independent)</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3">No</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Environment</td>
+              <td class="py-3 pr-4">Enclosed, dusty</td>
+              <td class="py-3 pr-4">Paint, coat, dry</td>
+              <td class="py-3 pr-4">Assembly, finish</td>
+              <td class="py-3 pr-4">Heavy mfg, assembly</td>
+              <td class="py-3">Mining, aggregate</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Ratings represent typical ranges across manufacturers. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Chain Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Automotive paint and assembly:</strong> <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">Overhead power-and-free conveyors</a> carry car bodies through paint prep, e-coat, primer, topcoat, and bake oven processes. The power-and-free design allows bodies to accumulate at different stages, switch to spur lines for rework, and travel at different speeds through different zones. This is the highest-value chain conveyor application in manufacturing.</p>
+
+        <p><strong class="text-ink">Bulk material transport:</strong> <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Drag chain conveyors</a> move grain, cement, ash, and chemical powders between storage, processing, and packaging equipment. The enclosed trough contains dust and prevents contamination. Drag chain conveyors feed <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a>, mixers, and packaging machines in food and chemical plants.</p>
+
+        <p><strong class="text-ink">Pallet and heavy-load transport:</strong> Slat chain conveyors carry pallets, engine blocks, and heavy assemblies through manufacturing processes. The rigid slat surface supports concentrated point loads that would damage belts and derail rollers. Slat chain conveyors feed welding stations, machining cells, and <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet wrapping stations</a>.</p>
+
+        <p><strong class="text-ink">Garment and textile handling:</strong> Overhead monorail conveyors carry garments on hangers through sorting, pressing, and shipping operations. The garments hang freely, preventing wrinkles and allowing visual inspection during transport. Garment-on-hanger (GOH) conveyors are specialized overhead chain systems used in apparel distribution centers and dry cleaning plants.</p>
+
+        <p><strong class="text-ink">Food packaging lines:</strong> Plastic table-top chain conveyors carry bottles, cans, and cartons through <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging lines</a>. The sanitary plastic chain withstands washdown, and the modular design handles curves and elevation changes without transfer points that could cause jams or contamination. Beverage filling and packaging lines use table-top chain as the primary transport between filler, capper, labeler, and case packer.</p>
+
+        <p><strong class="text-ink">Mining and aggregate:</strong> Apron chain feeders and conveyors handle the heaviest, most abrasive materials: crushed rock, ore, coal, and clinker. They receive material from primary crushers and feed secondary processing at controlled rates. Apron conveyors also handle <a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw conveyor</a> and <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevator</a> feed in heavy industrial plants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Chain Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Material type drives the category.</strong> Bulk materials need drag chain or apron chain. Suspended unit loads need overhead chain. Floor-level unit loads need slat chain. Lightweight packaged goods need table-top chain. Each category uses fundamentally different chain configurations and frame designs.</p>
+
+        <p><strong class="text-ink">Load weight and size determine chain specification.</strong> Chain pitch (distance between links), pin diameter, plate thickness, and material grade scale with the load. Standard conveyor chains (ANSI or ISO rated) cover most applications. Custom-engineered chains handle extreme loads and environments. Always specify chain with a safety factor of 6-10x the calculated chain pull.</p>
+        <!-- VERIFY: Standard chain safety factor recommendation 6-10x -->
+
+        <p><strong class="text-ink">Environment dictates material and lubrication.</strong> Standard carbon steel chain works in clean, dry environments. Stainless steel chain serves food, pharmaceutical, and corrosive environments. High-temperature alloy chain handles oven and furnace applications. Self-lubricating chains (sintered bronze bushings) eliminate external lubrication in clean or food-grade environments.</p>
+
+        <p><strong class="text-ink">Routing complexity determines overhead system type.</strong> Simple continuous loops use monorail. Complex routing with accumulation, spurs, speed changes, and merging requires power-and-free. The cost difference between monorail and power-and-free is substantial, so match the system capability to the actual routing requirements.</p>
+
+        <p><strong class="text-ink">Maintenance commitment matters.</strong> Chain conveyors require regular lubrication, chain tension adjustment, and wear inspection. Budget for chain replacement at 5-15 year intervals depending on load and speed. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> and <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyors</a> require less maintenance for lighter loads. Use chain conveyors only where the application demands it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a chain conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A chain conveyor uses endless chains as the conveying medium. Main types: drag chain (bulk material in troughs), <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">overhead chain</a> (suspended loads), slat chain (flat surfaces for heavy units), and apron chain (overlapping pans). See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">complete conveyor type guide</a> for all categories.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the main types of chain conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p><a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Drag chain</a> (bulk material), overhead monorail and <a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">power-and-free</a> (suspended loads), slat chain (heavy unit loads), and apron chain (bulk/heavy units with overlapping pans).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Chain conveyor vs belt conveyor — which is better?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Chain conveyors handle heavier loads, higher temperatures, and harsher environments. <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt conveyors</a> are lighter, faster, quieter, and lower maintenance. Use chain when the application demands it — heavy loads, high heat, abrasive materials. Use belt for everything else.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much do chain conveyors cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Chain conveyors cost more than belt or roller due to heavier construction and precision chain components. Cost ranges from $$ for simple drag chain to $$$$ for overhead power-and-free systems. Key cost factors: chain type, load capacity, length, environment rating, and automation level. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Child Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="children-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Explore Chain Conveyors</div>
+      <h2 id="children-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Chain Conveyor <span class="text-accent-bright">Sub-Types</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/chain-conveyors/overhead/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Overhead Conveyors</div>
+          <p class="text-sm text-white/60">Monorail & power-and-free systems</p>
+        </a>
+        <a href="/conveyor-types/drag-chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Drag Chain</div>
+          <p class="text-sm text-white/60">En-masse & tubular drag systems</p>
+        </a>
+        <a href="/conveyor-types/spiral-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Spiral Conveyors</div>
+          <p class="text-sm text-white/60">Vertical transport alternatives</p>
+        </a>
+        <a href="/conveyor-types/bucket-elevators/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Bucket Elevators</div>
+          <p class="text-sm text-white/60">Chain-driven vertical bulk lift</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Stacking Machines & Stackers", "item": "https://packagingconveyor.com/conveyor-functions/stacking-machines/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a stacking machine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A stacking machine collects individual products from a conveyor and forms them into organized stacks — vertical piles, horizontal slugs, or layer groups — for downstream wrapping, case packing, or palletizing. Stacking machines include counter stackers (count and stack individual items), layer formers (arrange products into pallet layers), and case stackers (stack cases for palletizing). They operate between production and packaging at speeds from 50 to 1,200+ pieces per minute." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a counter stacker?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A counter stacker counts individual products (cookies, crackers, napkins, sheets, labels) on a high-speed conveyor, groups them into a set count, and stacks the group vertically or horizontally. Photoeye or laser sensors count products at the infeed. A servo-driven diverter separates counted groups. A stacking mechanism forms the group into a stack for wrapping or cartoning. Speeds range from 200 to 1,200+ pieces per minute per lane." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a stacker and a palletizer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A stacker forms product groups — stacking individual items into counted groups or forming products into layers. A palletizer places those groups or layers onto a pallet in a specific stacking pattern. The stacker operates upstream of the palletizer. A layer former (a type of stacker) creates complete pallet layers from individual cases, and the palletizer stacks those layers onto the pallet." }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries use stacking machines?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bakery (cookie and cracker stacking for wrapping), printing (sheet and label stacking), tissue and napkin (folded product stacking), corrugated (blank stacking), pharmaceutical (blister pack stacking for cartoning), and end-of-line packaging (case stacking for palletizing). Any operation that needs counted, organized groups from a continuous product stream uses stacking machines." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Stacking Machines & Stackers: Counter Stackers, Layer Formers & Case Stackers",
+  "description": "Technical guide to stacking machines — counter stackers, layer formers, case stackers, and conveyor integration for packaging and palletizing operations.",
+  "url": "https://packagingconveyor.com/conveyor-functions/stacking-machines/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Stacking Machines & Stackers: Counter Stackers & Layer Formers | PackagingConveyor.com"
+  description="Technical guide to stacking machines — counter stackers, layer formers, case stackers, and conveyor integration for bakery, printing, tissue, and end-of-line packaging."
+  canonical="https://packagingconveyor.com/conveyor-functions/stacking-machines/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Stacking Machines</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Stacking Machines & <span class="text-accent-bright">Stackers</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A stacking machine collects individual products from a conveyor and forms them into organized stacks, slugs, or layers for downstream wrapping, cartoning, <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>, or palletizing. Types include counter stackers (count and stack individual items at 200-1,200+ pieces per minute), layer formers (arrange cases or products into pallet-layer patterns), and case stackers (stack sealed cases for palletizer infeed). Manufacturers like Syntegon (formerly Bosch), IMA, LoeschPack, Brenton, and Columbia Machine supply stacking systems for bakery, printing, tissue, pharmaceutical, and end-of-line packaging applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ COUNTER STACKERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="counter-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Count-and-Stack</div>
+        <h2 id="counter-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Counter <span class="text-accent">Stackers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Counter stackers count individual products on a high-speed conveyor belt, separate counted groups from the continuous stream, and form each group into a stack for wrapping or cartoning. The counting, separating, and stacking operations happen in sequence at the production line's full speed — any speed mismatch causes miscounts, jams, or product damage.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Counting Methods</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Photoeye counting:</strong> Through-beam or retro-reflective photoeyes detect product edges. Each leading-edge triggers a count. Works for opaque products with consistent shape. Standard for <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">cookie and cracker lines</a>.</li>
+            <li><strong class="text-ink">Laser profiling:</strong> Laser sensors measure product height profile. Distinguishes overlapping products, counts products of varying size, and detects missing or broken products. Higher cost but higher accuracy for difficult products.</li>
+            <li><strong class="text-ink">Vision counting:</strong> Camera systems count and inspect products simultaneously. Detect orientation, color, shape defects, and count in a single operation. Highest cost but most capable for complex products.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Stacking Formats</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Vertical stacking:</strong> Products stack on top of each other in a vertical pile. Standard for cookies, crackers, napkins, and sheets. Stack height = count × product thickness.</li>
+            <li><strong class="text-ink">On-edge (slug) stacking:</strong> Products stand on edge in a horizontal row, forming a slug. Standard for sandwich cookies, wafers, and products packaged in sleeve format. See the <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">cookie packaging guide</a> for slug-wrap details.</li>
+            <li><strong class="text-ink">Shingled stacking:</strong> Products overlap in a cascading pattern (like roof shingles). Used when products are too fragile to stack directly or when the packaging format requires overlapping presentation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LAYER FORMERS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="layer-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Layer Forming</div>
+        <h2 id="layer-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Layer <span class="text-accent">Formers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Layer formers arrange individual cases, bundles, or bags into a complete pallet layer pattern before palletizing. The layer former is the bridge between the packaging line (producing individual units in single file) and the palletizer (stacking complete layers onto the pallet).
+          </p>
+          <p>
+            Layer forming methods:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Row-forming and sweeping:</strong> Cases accumulate into a row on a conveyor. When the row is complete, a sweep mechanism (pusher bar) pushes the entire row onto a layer-building table. Multiple rows build the complete layer pattern. The full layer then transfers to the palletizer. This is the most common method for conventional palletizing.</li>
+            <li><strong class="text-ink">Robotic layer forming:</strong> An articulated arm or gantry robot picks individual cases and places them into the layer pattern on a staging conveyor. Handles any case orientation (flat, on-side, on-end) and complex patterns. Recipe-based changeover for different layer patterns. Higher cost but maximum flexibility.</li>
+            <li><strong class="text-ink"><a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">Turn and orient</a> layer forming:</strong> Cases travel on a conveyor through turning stations that rotate selected cases 90 degrees to create interlocking patterns. Alternating row orientations create a stable, interlocked pallet load that resists shifting during transport.</li>
+          </ul>
+          <p>
+            Layer former speed must match or exceed the case packer output. A 25 CPM case packer with 5 cases per row and 5 rows per layer forms one complete layer every 60 seconds. The layer former and palletizer must cycle within that time. Columbia Machine and Schneider Packaging supply integrated layer forming and palletizing systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CASE STACKERS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="case-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Case Stacking</div>
+        <h2 id="case-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Case <span class="text-accent">Stackers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Case stackers receive sealed cases from a <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case sealer conveyor</a> and stack them vertically in groups of 2-5 cases for downstream handling. Stacked cases take less conveyor space and can be picked as a group by palletizer grippers — improving palletizer cycle efficiency.
+          </p>
+          <p>
+            Case stackers use a lift-and-place or drop mechanism. The first case stops on a platform. The next case arrives, and the mechanism lifts the first case and places the second case underneath (bottom stacking) or stacks the second case on top (top stacking). Top stacking risks crushing lower cases if case strength is marginal. Bottom stacking preserves case integrity by never placing weight on sealed product.
+          </p>
+          <p>
+            Case weight determines stacker type. Light cases (under 25 lb) use pneumatic lift mechanisms. Heavy cases (25-60+ lb) use servo-driven lifts. Case stacker speed must match the upstream sealer output — typically 15-40 CPM. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/" class="text-accent hover:text-accent-hover font-semibold">Pallet dispensers</a> feed empty pallets to the palletizer downstream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONVEYOR INTEGRATION ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Integration</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Stacking machines integrate with upstream and downstream conveyors through speed synchronization, sensor coordination, and PLC communication. Key integration points:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Infeed conveyor:</strong> Delivers products at controlled spacing. <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">Infeed systems</a> use timing screws, speed-differential belts, or servo phasing to establish the correct product pitch for the stacker's counting cycle.</li>
+            <li><strong class="text-ink">Outfeed conveyor:</strong> Carries completed stacks to the next operation (wrapper, cartoner, case packer). Outfeed speed must match the stacker's output rate to prevent stack accumulation or starvation.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation</a>:</strong> Buffer conveyors between the stacker and downstream equipment absorb speed mismatches. Critical when the wrapper or case packer stops for film splices, jam clearing, or changeover.</li>
+            <li><strong class="text-ink"><a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">Reject conveyor</a>:</strong> Removes miscounted stacks, broken products, or out-of-spec groups before they reach the wrapper. Vision or weight verification triggers the reject.</li>
+          </ul>
+          <p>
+            For a complete view of conveyor automation and controls architecture, see the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a>. For cost considerations, see the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Stacking Machine <span class="text-accent">Comparison</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Output</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Counter stacker</td>
+                <td class="py-4 pr-4 font-mono text-sm">200-1,200+ PPM</td>
+                <td class="py-4 pr-4">Cookies, crackers, napkins, sheets</td>
+                <td class="py-4 pr-4">Counted stacks/slugs</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Layer former</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-60 CPM</td>
+                <td class="py-4 pr-4">Cases, bundles, bags</td>
+                <td class="py-4 pr-4">Complete pallet layers</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Case stacker</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-40 CPM</td>
+                <td class="py-4 pr-4">Sealed cases</td>
+                <td class="py-4 pr-4">Vertical case stacks (2-5)</td>
+                <td class="py-4 font-mono text-sm">$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">PPM = pieces per minute. CPM = cases per minute.</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a stacking machine?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A stacking machine collects individual products from a conveyor and forms organized stacks, slugs, or layers for wrapping, <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>, or palletizing. Types include counter stackers, layer formers, and case stackers.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a counter stacker?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Counts individual products on a high-speed belt, groups them into a set count, and stacks them vertically or on-edge. Speeds: 200-1,200+ pieces per minute per lane. Common in <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">cookie/cracker</a>, printing, and tissue packaging.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Stacker vs. palletizer?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A stacker forms product groups (stacks, slugs, layers). A <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizer</a> places those groups onto a pallet. The stacker operates upstream — it feeds the palletizer.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What industries use stacking machines?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Bakery, printing, tissue/napkin, corrugated, pharmaceutical, and end-of-line packaging. Any operation needing counted, organized groups from a continuous product stream.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

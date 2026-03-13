@@ -1,0 +1,420 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Vertical Lift Conveyors", "item": "https://packagingconveyor.com/conveyor-types/vertical-lift/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vertical Lift Conveyors & Box Elevators",
+  "description": "Complete guide to vertical lift conveyors — continuous vertical lifts, C-frame elevators, Z-frame conveyors, and box elevators for packaging line elevation changes.",
+  "url": "https://packagingconveyor.com/conveyor-types/vertical-lift/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a vertical lift conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A vertical lift conveyor moves products straight up or down between different elevations in a packaging or distribution facility. Unlike incline conveyors that use a sloped belt, vertical lifts transport products on platforms, carriages, or between opposing belts/chains in a true vertical path. This minimizes the floor space required for elevation changes. Common types include continuous vertical lifts (CVLs), C-frame lifts, Z-frame conveyors, and reciprocating vertical conveyors (VRCs)." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a continuous vertical lift and a VRC?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A continuous vertical lift (CVL) moves multiple platforms in a continuous loop — platforms ascend on one side and descend on the other simultaneously, providing high throughput without stopping. A vertical reciprocating conveyor (VRC) uses a single platform that moves up and down, stopping at each level to load and unload. CVLs handle higher throughput (30-60+ cases per minute) but cost more. VRCs handle lower throughput (5-15 cycles per minute) at lower cost and are simpler to install." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much floor space does a vertical lift conveyor require?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vertical lift conveyors require 4x4 to 6x6 feet of floor space for most packaging applications handling cases and cartons. A comparable incline conveyor covering the same elevation change requires 15-40 feet of floor space depending on the incline angle. Vertical lifts save 60-90% of the floor space compared to incline conveyors for the same elevation change. The exact footprint depends on the product size, throughput, and lift type." }
+    },
+    {
+      "@type": "Question",
+      "name": "What products can vertical lift conveyors handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vertical lift conveyors handle cases, cartons, totes, trays, bundles, and pallets depending on the lift type and capacity. Most packaging-line vertical lifts handle products from 1 lb to 150 lbs and sizes from small cartons (6x6x4 inches) to full cases (24x16x12 inches). Pallet-rated VRCs handle loads up to 6,000 lbs. Products must have a stable flat bottom to ride on the lift platform. Loose, granular, or bulk products require flighted or scoop conveyors instead." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Vertical Lift Conveyors & Box Elevators | PackagingConveyor.com"
+  description="Complete guide to vertical lift conveyors — continuous vertical lifts, C-frame, Z-frame, and box elevators for packaging line elevation changes. Floor space savings, throughput, and selection."
+  canonical="https://packagingconveyor.com/conveyor-types/vertical-lift/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- HERO -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-types/" class="hover:text-white/70">Types</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Vertical Lift Conveyors</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Type</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Vertical Lift & <span class="text-accent-bright">Box Elevators</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIO DEFINITION -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          A vertical lift conveyor moves cases, cartons, totes, and other discrete products straight up or down between different floor levels or equipment elevations, using a fraction of the floor space that incline conveyors require. Continuous vertical lifts (CVLs) circulate multiple platforms in a loop for high-throughput applications, while reciprocating lifts (VRCs) shuttle a single platform between levels for lower-volume needs. Ryson, Ambaflex, Verticon, and TKF manufacture vertical lift conveyors and box elevators for packaging, distribution, and end-of-line applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY VERTICAL LIFT -->
+    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Floor Space</div>
+        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Why <span class="text-accent">Vertical Lift</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Packaging lines frequently need to move product between mezzanine levels, over obstructions, or from processing equipment at one height to packaging equipment at another. Incline belt conveyors solve this but consume significant floor space. A 10-foot elevation change at a 20-degree incline requires 27 feet of horizontal run. At a 30-degree incline, it still requires 17 feet. In tight production facilities, that floor space does not exist.
+          </p>
+          <p>
+            Vertical lift conveyors eliminate the horizontal run entirely. The product moves straight up within a 4x4 to 6x6 foot footprint regardless of the elevation change — whether 5 feet or 30 feet. This saves 60-90% of the floor space compared to incline conveyors. The floor space savings often justify the higher equipment cost of vertical lifts, especially in facilities where every square foot of production floor has value.
+          </p>
+          <p>
+            Vertical lifts also maintain product orientation. Incline conveyors can shift, tilt, or rotate products during the climb. Vertical lifts carry products on flat platforms that keep the product level and oriented correctly for downstream equipment — critical for <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading</a>, <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating</a>, and case packing operations where product orientation matters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIFT TYPES -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Lift Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vertical Lift <span class="text-accent">Types</span>
+        </h2>
+        <div class="space-y-12">
+
+          <!-- Continuous Vertical Lift -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Continuous Vertical Lift (CVL)</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                A continuous vertical lift circulates multiple platforms attached to two parallel chains in a continuous loop. Platforms ascend on one side of the machine and descend on the other — simultaneously. Product loads onto a platform at the bottom (or top for lowering), rides the platform up, and transfers off at the discharge level. The next platform arrives immediately, so there is no waiting for a return cycle.
+              </p>
+              <p>
+                CVLs deliver the highest throughput of any vertical conveyor type — 30 to 60+ cases per minute depending on platform spacing and chain speed. Verticon and Ryson manufacture CVLs for packaging and distribution applications. Platform sizes range from 12x12 inches (small cartons) to 48x48 inches (full pallet loads on heavy-duty models). The platforms remain level throughout the loop, keeping product stable and oriented.
+              </p>
+              <p>
+                CVLs require infeed and outfeed conveyors that synchronize with the moving platforms. The product must transfer onto the platform during the brief window as the platform passes the load point. Timing conveyors or <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a> at the infeed meter products to match the platform arrival rate. Misaligned timing causes product jams or missed platforms.
+              </p>
+              <!-- VERIFY: Verticon CVL throughput range and maximum platform size -->
+            </div>
+          </div>
+
+          <!-- C-Frame Lift -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">C-Frame Elevator</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                A C-frame elevator uses platforms attached to a chain loop that follows a C-shaped path — ascending vertically, traversing horizontally at the top, and descending vertically on the other side. The C-path allows the elevator to load on one side and discharge on the opposite side at a different elevation, creating a pass-through configuration. This is useful when the infeed and outfeed conveyors approach from opposite directions.
+              </p>
+              <p>
+                C-frame elevators share the continuous operation advantage of CVLs — platforms circulate without stopping. Throughput ranges from 20 to 50 units per minute. The horizontal traverse at the top of the C-path adds width to the machine footprint compared to a straight vertical CVL, but the pass-through layout simplifies conveyor routing in facilities where conveyors approach from opposite sides of the elevation change.
+              </p>
+            </div>
+          </div>
+
+          <!-- Z-Frame Conveyor -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Z-Frame Conveyor</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                A Z-frame conveyor follows a Z-shaped path: horizontal infeed, steep incline (60-80 degrees), and horizontal outfeed at the elevated level. The Z-path uses a single continuous belt with cleats or grippers that hold product during the steep climb. Z-frame conveyors bridge the gap between incline conveyors and true vertical lifts — steeper than a standard incline but with horizontal sections for easy loading and unloading.
+              </p>
+              <p>
+                Z-frame conveyors handle cases, cartons, bags, and pouches. The product rides on the belt surface between cleats during the incline section. Belt speed through the incline section is typically 50-150 FPM. Z-frame conveyors cost less than CVLs and C-frame elevators because they use a single belt drive rather than a chain-and-platform system. Dorner, mk North America, and QC Industries offer Z-frame configurations in their belt conveyor product lines.
+              </p>
+              <p>
+                The horizontal infeed and outfeed sections of the Z-frame simplify integration with upstream and downstream conveyors. Product transfers onto the flat infeed section at normal belt speed, then the belt carries it through the steep section without requiring platform synchronization. This makes Z-frames easier to integrate than CVLs for moderate-throughput applications (10-30 cases per minute).
+              </p>
+            </div>
+          </div>
+
+          <!-- VRC -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Vertical Reciprocating Conveyor (VRC)</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                A VRC uses a single platform that shuttles up and down between two or more levels. The platform loads at one level, travels to the target level, stops, unloads, and returns. Unlike CVLs, VRCs stop at each level — cycle time includes travel time plus load/unload time. Throughput is lower (5-15 cycles per minute) but the mechanical simplicity and lower cost make VRCs suitable for lower-volume applications.
+              </p>
+              <p>
+                VRCs are classified as conveyors, not elevators, under ASME B20.1 — provided they carry only materials, not people. This distinction matters because conveyors face different code requirements than elevators (no pit, no hoistway enclosure in many jurisdictions). PFlow, Wildeck, and Autoquip manufacture VRCs for packaging and distribution facilities. Platform capacities range from 500 lbs to 6,000 lbs, handling everything from single cartons to full pallets.
+              </p>
+              <p>
+                For <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">detailed VRC specifications</a>, including code requirements and load capacity ratings, see the dedicated VRC page. VRCs are the most common vertical conveyor type for low-to-moderate throughput packaging lines because of their lower cost, simpler controls, and straightforward maintenance.
+              </p>
+              <!-- VERIFY: PFlow and Wildeck VRC load capacity range -->
+            </div>
+          </div>
+
+          <!-- Spiral Conveyors -->
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Spiral Conveyors</h3>
+            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+              <p>
+                Spiral conveyors wrap a continuous belt or slat chain in a helical path around a central drum, moving product up or down at a controlled rate. Spirals combine continuous operation (no stopping) with gentle handling — product rides on a flat surface with no platform transfers. Ryson and Ambaflex dominate the packaging spiral conveyor market.
+              </p>
+              <p>
+                Spirals handle 20 to 200+ units per minute depending on product size and spiral diameter. Elevation changes from 5 to 30+ feet are common. Spiral conveyors use more floor space than CVLs (the spiral diameter is 5-10 feet) but less than incline conveyors. They excel at <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation during elevation changes</a> — product can queue on the spiral without backpressure if the downstream line stops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Vertical Lift <span class="text-accent">Comparison</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Lift Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Operation</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Throughput</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Footprint</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">CVL</td>
+                <td class="py-4 pr-4">Continuous loop</td>
+                <td class="py-4 pr-4 font-mono text-sm">30-60+ UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">4x4-6x6 ft</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">High-speed case handling</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">C-Frame</td>
+                <td class="py-4 pr-4">Continuous loop</td>
+                <td class="py-4 pr-4 font-mono text-sm">20-50 UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">5x5-7x7 ft</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
+                <td class="py-4">Pass-through layouts</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Z-Frame</td>
+                <td class="py-4 pr-4">Continuous belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">10-30 UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">3x6-5x10 ft</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Moderate volume, simple integration</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">VRC</td>
+                <td class="py-4 pr-4">Reciprocating</td>
+                <td class="py-4 pr-4 font-mono text-sm">5-15 cycles/min</td>
+                <td class="py-4 pr-4 font-mono text-sm">4x4-8x8 ft</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$-$$$</td>
+                <td class="py-4">Low volume, heavy loads, pallets</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Spiral</td>
+                <td class="py-4 pr-4">Continuous belt</td>
+                <td class="py-4 pr-4 font-mono text-sm">20-200+ UPM</td>
+                <td class="py-4 pr-4 font-mono text-sm">5-10 ft dia.</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$$-$$$$</td>
+                <td class="py-4">High volume, accumulation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-muted mt-4">UPM = units per minute. Relative cost: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- INTEGRATION -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="integration-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Integration</div>
+        <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Packaging Line <span class="text-accent">Integration</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Infeed Conveyor Requirements</h3>
+          <p>
+            Continuous vertical lifts (CVLs and C-frames) require precise product timing at the infeed. Product must arrive at the load point exactly when an empty platform passes. A timing conveyor or servo-driven <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> upstream of the lift creates the required product spacing and timing. Photoeye sensors detect platform position and signal the infeed conveyor to release the next product.
+          </p>
+          <p>
+            VRCs have simpler infeed requirements because the platform stops at the load level. A standard transport conveyor pushes product onto the stopped platform. A sensor confirms product presence, and the lift begins its travel. No synchronization is needed.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Outfeed and Downstream Handling</h3>
+          <p>
+            Product discharging from a vertical lift must transfer smoothly onto the outfeed conveyor. CVLs and spirals deliver product continuously — the outfeed conveyor must run at matching speed to prevent product accumulation at the discharge point. VRCs deliver product in batches (one platform load at a time) — the outfeed conveyor clears the platform before the lift can return. An <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyor</a> downstream of a VRC absorbs the intermittent delivery pattern.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Controls Integration</h3>
+          <p>
+            Vertical lift controls must communicate with the overall line PLC to coordinate start/stop, speed changes, and fault handling. Most lift manufacturers supply the lift with its own control panel that interfaces to the line PLC via discrete I/O (start, stop, fault, platform-at-level signals) or Ethernet/IP for more detailed data exchange. The lift controller handles platform positioning, chain speed, and safety interlocks internally. The line PLC handles product flow logic, infeed timing, and outfeed coordination.
+          </p>
+          <p>
+            Safety interlocks include platform position sensors, overtravel limits, chain break detectors, and access door switches. Opening an access door stops the lift. A chain break detector stops the drive immediately if chain tension drops — preventing a platform from falling. ASME B20.1 and local building codes dictate the required safety devices for vertical conveyors in packaging facilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Applications</div>
+        <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vertical Lift <span class="text-accent">Applications</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <strong class="text-ink">Mezzanine level changes:</strong> Moving cases from ground-floor packaging to mezzanine-level palletizing, or from mezzanine production to ground-floor shipping. CVLs and spirals handle the continuous flow at 30-60+ cases per minute. VRCs handle lower-volume mezzanine transfers.
+          </p>
+          <p>
+            <strong class="text-ink">Over-conveyor bridges:</strong> Lifting product over a perpendicular conveyor line, walkway, or forklift aisle, then lowering it on the other side. A pair of vertical lifts (up and down) with a horizontal conveyor bridge creates an overhead pass-through that maintains floor-level traffic flow.
+          </p>
+          <p>
+            <strong class="text-ink">End-of-line case elevation:</strong> Sealed cases from a <a href="/conveyor-functions/slug-loading/" class="text-accent hover:text-accent-hover font-semibold">case packer</a> elevate to palletizer infeed height. The palletizer may sit on a raised platform to allow pallet removal by forklift at floor level. A CVL or spiral provides continuous case flow to the palletizer without the long incline run that an incline conveyor requires.
+          </p>
+          <p>
+            <strong class="text-ink">Multi-level distribution:</strong> Distribution centers with pick modules on multiple mezzanine levels use vertical lifts to move totes and cases between levels. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> on each level feed product to the lift, which delivers it to the main shipping sortation level.
+          </p>
+          <p>
+            <strong class="text-ink">Bulk product elevation:</strong> For granular, loose, and bulk products that cannot ride on a lift platform, <a href="/conveyor-types/flighted-scoop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flighted and scoop conveyors</a> provide the vertical elevation function with enclosed product retention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTION CRITERIA -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Selecting a <span class="text-accent">Vertical Lift</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>Match the lift type to these parameters:</p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Throughput.</strong> CVLs and spirals for 30+ UPM. Z-frames for 10-30 UPM. VRCs for under 15 cycles per minute. Throughput is the primary selection driver.</li>
+            <li><strong class="text-ink">Elevation change.</strong> All types handle 5-30+ feet. VRCs handle the highest elevations (up to 50+ feet) because the single-platform design scales vertically without adding complexity. Spirals become very tall and expensive beyond 30 feet.</li>
+            <li><strong class="text-ink">Product weight and size.</strong> CVLs and spirals handle individual cases and cartons (typically under 100 lbs). VRCs handle pallets and heavy loads (up to 6,000 lbs). Z-frames handle individual cases and cartons (under 50 lbs).</li>
+            <li><strong class="text-ink">Floor space.</strong> CVLs use the least floor space for vertical-only elevation. Z-frames use more because of the horizontal infeed/outfeed sections. Spirals use the most floor space because of the helix diameter.</li>
+            <li><strong class="text-ink">Budget.</strong> VRCs and Z-frames cost $$ to $$$. CVLs, C-frames, and spirals cost $$$ to $$$$. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for factors that move projects up and down the cost scale.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Types & Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-types/flighted-scoop-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Flighted & Scoop Conveyors</h3>
+            <p class="text-base text-white/60">Incline handling for bulk products</p>
+          </a>
+          <a href="/conveyor-types/vertical-reciprocating/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">VRC Conveyors</h3>
+            <p class="text-base text-white/60">Reciprocating lift details</p>
+          </a>
+          <a href="/conveyor-types/accumulation-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Accumulation Conveyors</h3>
+            <p class="text-base text-white/60">Buffer before/after lifts</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a vertical lift conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A vertical lift conveyor moves products straight up or down between elevations using platforms, carriages, or opposing belts in a true vertical path. Types include continuous vertical lifts (CVLs), C-frame elevators, Z-frame conveyors, VRCs, and spirals. They save 60-90% of floor space compared to incline conveyors.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            CVL vs. VRC — what is the difference?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>CVLs circulate multiple platforms continuously for high throughput (30-60+ UPM). VRCs shuttle a single platform up and down with stops at each level for lower throughput (5-15 cycles/min). CVLs cost more but handle higher volumes. VRCs are simpler, cheaper, and handle heavier loads including full pallets.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much floor space does a vertical lift require?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Most packaging-line vertical lifts need 4x4 to 6x6 feet of floor space. A comparable incline conveyor needs 15-40 feet. Spirals need 5-10 feet in diameter. The vertical lift footprint stays constant regardless of elevation change height.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What products can vertical lifts handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Cases, cartons, totes, trays, bundles, and pallets. Products need a stable flat bottom. Weight ranges from 1 lb (small cartons on CVLs) to 6,000 lbs (pallets on heavy-duty VRCs). Loose, granular, or bulk products need <a href="/conveyor-types/flighted-scoop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flighted or scoop conveyors</a> instead.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

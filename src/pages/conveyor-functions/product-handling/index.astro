@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Product Handling: Turn, Flip, Orient, Invert", "item": "https://packagingconveyor.com/conveyor-functions/product-handling/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is product handling on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Product handling refers to turning, flipping, orienting, inverting, rotating, or repositioning products on a conveyor to achieve the correct position and orientation for downstream operations. Examples include rotating bottles label-forward for inspection, flipping cartons upside-down for bottom labeling, turning cases 90 degrees for side-loading into case packers, and inverting trays for drainage. Product handling devices operate inline on the conveyor without stopping product flow." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a product turner on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A product turner rotates products around a vertical axis (yaw rotation) as they travel on a conveyor. Common turner types include: angled belt transfers that use speed differentials to spin product, servo-driven turntable sections, guide rail deflectors that redirect product orientation, and right-angle transfer modules. Turners rotate products 90 or 180 degrees for label positioning, case pattern formation, or scanner access." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is product inversion on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Product inversion flips product 180 degrees around a horizontal axis — turning it upside-down or right-side-up. Inversion conveyors use twist sections (belt gradually twists 180 degrees), clamping rollers that grip and flip product, or overhead flipper mechanisms. Applications include bottle inversion for air-rinse cleaning, carton inversion for bottom coding, tray inversion for depanning, and container inversion for drainage." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you orient products on a conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Product orientation ensures products face a specific direction — label forward, cap up, barcode accessible. Orientation methods include vision-guided robotic reorientation, mechanical cam-follower rotators, servo-driven twist belts, and passive guide rails that redirect asymmetric products. Vision systems identify product orientation and trigger correction mechanisms for products that arrive misoriented." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Product Handling on Conveyors: Turn, Flip, Orient & Invert",
+  "description": "Technical guide to product handling on conveyors — turning, flipping, orienting, inverting, and repositioning products inline for packaging, labeling, inspection, and case packing.",
+  "url": "https://packagingconveyor.com/conveyor-functions/product-handling/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Product Handling: Turn, Flip, Orient & Invert on Conveyors | PackagingConveyor.com"
+  description="Technical guide to product handling on conveyors — turning, flipping, orienting, inverting, and repositioning products inline for packaging, labeling, inspection, and case packing operations."
+  canonical="https://packagingconveyor.com/conveyor-functions/product-handling/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Product Handling</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Product Handling: <span class="text-accent-bright">Turn, Flip, Orient, Invert</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Product handling on conveyors encompasses turning, flipping, orienting, inverting, and repositioning products inline — without stopping production flow — to achieve the correct position for downstream operations like labeling, inspection, wrapping, <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>, and palletizing. Handling devices include angled belt turners, twist-belt inverters, servo-driven rotators, guide rail deflectors, and robotic reorientation systems. Manufacturers like Intralox, Dorner, mk North America, and Shuttleworth build conveyor systems with integrated product handling capabilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ TURNING ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="turn-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Turning</div>
+        <h2 id="turn-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product <span class="text-accent">Turning</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Product turning rotates items around a vertical axis (yaw) — 90 or 180 degrees — while they travel on the conveyor. Turning changes the product's leading edge without flipping it. Common reasons to turn product: aligning labels for inspection, forming interlocking case patterns for palletizing, positioning barcodes for scanner access, or reorienting packages for side-loading into <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packers</a>.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Turning Methods</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Angled belt transfer:</strong> Two belt conveyors meet at an angle. Speed differentials between the belts spin the product as it crosses. Intralox's Activated Roller Belt (ARB) technology provides precise 90-degree turns without guide rails. <!-- VERIFY: Intralox ARB current product branding --></li>
+            <li><strong class="text-ink">Guide rail deflection:</strong> Angled guide rails redirect product orientation as it contacts the rail. Simple and low cost. Works for rigid products with consistent shape. Not suitable for fragile or irregularly shaped items.</li>
+            <li><strong class="text-ink">Servo turntable:</strong> A rotating platform section in the conveyor turns product a programmable number of degrees. Servo control allows recipe-based rotation angles. Higher cost but precise and flexible.</li>
+            <li><strong class="text-ink"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Right-angle transfer</a>:</strong> Pop-up belts or wheels redirect product 90 degrees from one conveyor lane to a perpendicular lane. Used for both turning and routing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FLIPPING & INVERTING ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="flip-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Flipping & Inverting</div>
+        <h2 id="flip-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product Flipping & <span class="text-accent">Inversion</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Flipping and inverting rotate product 180 degrees around a horizontal axis — turning it upside-down or right-side-up. This differs from turning (vertical axis rotation). Inversion is required for bottom labeling, bottom coding (inkjet date codes on container bottoms), air-rinse bottle cleaning, tray depanning, and container drainage.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Inversion Methods</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Twist belt:</strong> The belt gradually twists 180 degrees over a short conveyor section, rolling the product over. Works for rigid products that can ride the twist without shifting. Limited to products with sufficient width-to-height ratio for stability during the twist.</li>
+            <li><strong class="text-ink">Clamping inverter:</strong> Two parallel belt surfaces clamp the product, then the entire assembly rotates 180 degrees. The product is securely held throughout the flip. Handles irregularly shaped and fragile products. Higher cost than passive methods.</li>
+            <li><strong class="text-ink">Overhead flipper:</strong> A mechanical arm grabs the product from above, lifts and rotates it 180 degrees, and places it back on the belt inverted. Used for heavy products that passive methods cannot handle.</li>
+            <li><strong class="text-ink">Gravity inversion:</strong> Product rides over a curved ramp and falls inverted onto a receiving belt below. Low cost. Suits robust products (empty bottles, cans, rigid trays) that tolerate the impact. Common in bottle rinser infeed.</li>
+          </ul>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Applications</h3>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Bottle air-rinse:</strong> Bottles invert, receive an ionized air blast that dislodges particulate, then re-invert before filling. Standard on <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a> and beverage filling lines.</li>
+            <li><strong class="text-ink">Bottom labeling/coding:</strong> Containers invert for bottom surface access, receive labels or inkjet codes, then re-invert to continue right-side-up.</li>
+            <li><strong class="text-ink">Depanning:</strong> Baked products invert from pans onto a <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling conveyor</a>. The pan flips upside-down, releasing the product by gravity.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ORIENTATION ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="orient-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Orientation</div>
+        <h2 id="orient-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product <span class="text-accent">Orientation</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Product orientation ensures every product on the conveyor faces the same direction — label forward, cap up, opening facing left, or any other specified position. Orientation is required before labeling (label applicator needs consistent product position), vision inspection (camera expects consistent product presentation), and wrapping (wrapper registration depends on product orientation).
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Passive Orientation</h3>
+          <p>
+            Passive methods use the product's own geometry to enforce orientation. Asymmetric products (bottles with handles, cartons with tabs, bags with seals on one side) can be oriented by guide rails, chutes, or vibratory feeders that only allow passage in one orientation. Bowl feeders and centrifugal feeders used in <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly lines</a> are examples of passive orientation for small parts.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Active Orientation</h3>
+          <p>
+            Active orientation uses sensors to detect product position and actuators to correct misoriented products. A vision camera identifies orientation. Products in the wrong orientation are rotated by a servo turntable, flipped by an inverter, or picked and reoriented by a robot. Active orientation handles any product shape but costs more than passive methods.
+          </p>
+          <p>
+            Vision-guided robotic orientation provides the highest flexibility — delta robots pick products in any orientation and place them in the correct orientation at rates of 60-120+ picks per minute. See <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">robotic case packing</a> for more on vision-guided pick-and-place.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SPREADER LINK ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="spread-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Distribution</div>
+        <h2 id="spread-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Product <span class="text-accent">Spreading & Distribution</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">Spreader conveyors</a> distribute products evenly across the belt width for uniform processing — freezing, drying, coating, or cooling. Products arriving in clumps or single-file from upstream equipment need even distribution to achieve consistent treatment across the belt. See our dedicated <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">spreader conveyor guide</a> for detailed coverage including vibratory spreaders, diverging belt spreaders, and plowing systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Product Handling <span class="text-accent">Methods</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Function</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Axis</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Methods</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Applications</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Cost Range</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Turn (90/180°)</td>
+                <td class="py-4 pr-4">Vertical (yaw)</td>
+                <td class="py-4 pr-4">Angled belt, guide rail, servo table</td>
+                <td class="py-4 pr-4">Case patterns, label access</td>
+                <td class="py-4 font-mono text-sm">$-$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Flip/Invert (180°)</td>
+                <td class="py-4 pr-4">Horizontal (pitch)</td>
+                <td class="py-4 pr-4">Twist belt, clamp, gravity</td>
+                <td class="py-4 pr-4">Bottom labeling, air-rinse, depan</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Orient</td>
+                <td class="py-4 pr-4">Any</td>
+                <td class="py-4 pr-4">Passive guide, vision + servo, robot</td>
+                <td class="py-4 pr-4">Labeling, inspection, wrapping</td>
+                <td class="py-4 font-mono text-sm">$-$$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Spread/Distribute</td>
+                <td class="py-4 pr-4">Lateral</td>
+                <td class="py-4 pr-4">Vibratory, diverging belt, plow</td>
+                <td class="py-4 pr-4">Freezing, drying, coating</td>
+                <td class="py-4 font-mono text-sm">$$-$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Related</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Related <span class="text-accent-bright">Functions</span>
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/conveyor-functions/product-handling/spreader/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Spreader Conveyors</h3>
+            <p class="text-base text-white/60">Even distribution for freezing, drying, coating</p>
+          </a>
+          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating & Laning</h3>
+            <p class="text-base text-white/60">Singulate and group products</p>
+          </a>
+          <a href="/conveyor-functions/reject-systems/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Reject Systems</h3>
+            <p class="text-base text-white/60">Remove misoriented or defective product</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is product handling on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Turning, flipping, orienting, inverting, or repositioning products on a conveyor to achieve correct position for downstream operations. Devices operate inline without stopping flow.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a product turner?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Rotates products around a vertical axis (90 or 180 degrees) using angled belts, guide rails, servo turntables, or <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">right-angle transfers</a>. Used for label positioning, case pattern formation, and scanner access.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is product inversion?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Flips product 180 degrees around a horizontal axis. Uses twist belts, clamping inverters, overhead flippers, or gravity inversion. Applications: bottle air-rinse, bottom labeling/coding, tray depanning, and drainage.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do you orient products on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Passive methods use product geometry and guide rails. Active methods use vision cameras to detect orientation and servo turntables or robots to correct misoriented products. Vision-guided robots handle any shape at 60-120+ picks/min.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Screw Conveyors", "item": "https://packagingconveyor.com/conveyor-types/screw-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a screw conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A screw conveyor uses a rotating helical screw blade (auger or flighting) inside a trough or tube to move bulk granular or semi-solid materials. The screw rotation pushes material along the trough from the inlet to the discharge point. Screw conveyors handle horizontal, inclined (up to 45 degrees), and vertical transport of dry bulk materials like grain, flour, cement, chemical powders, and food ingredients." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between shafted and shaftless screw conveyors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Shafted screw conveyors have a center pipe shaft supporting the screw flights, with hanger bearings supporting the shaft at intervals. Shaftless screw conveyors use a thicker, self-supporting spiral without a center shaft. Shaftless designs handle sticky, fibrous, and wrapping materials that would clog around a center shaft and hanger bearings. Shafted conveyors cost less and handle longer spans. Shaftless conveyors handle more difficult materials at higher cost." }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials can a screw conveyor handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Screw conveyors handle most dry and semi-dry bulk materials: grain, flour, sugar, cement, calcium carbonate, plastic pellets, wood chips, sawdust, coal, animal feed, chemicals, and food ingredients. They also handle semi-solid materials like municipal sludge, wet grain, and dewatered biosolids (shaftless models). They are not suitable for very large particle sizes, extremely abrasive materials at high volumes, or materials requiring zero degradation." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Screw Conveyors: Shafted, Shaftless, Horizontal & Inclined Augers",
+  "description": "Complete guide to screw conveyors including shafted vs shaftless, horizontal vs inclined, trough vs tubular designs for bulk material handling in packaging and processing.",
+  "url": "https://packagingconveyor.com/conveyor-types/screw-conveyors/",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Screw Conveyors: Shafted, Shaftless, Horizontal & Inclined Augers"
+  description="Complete guide to screw conveyors: shafted vs shaftless, horizontal vs inclined, trough vs tubular. Capacity, material handling, and selection for bulk packaging and processing."
+  canonical="https://packagingconveyor.com/conveyor-types/screw-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Screw Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- AIO -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Screw Conveyors</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Screw Conveyors: Shafted, Shaftless & Inclined
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A screw conveyor uses a rotating helical screw blade (auger) inside a trough or tube to move bulk materials from an inlet to a discharge point. Screw conveyors are the workhorses of bulk material handling — simple, reliable, enclosed, and capable of horizontal, inclined, and vertical transport. They move grain, flour, cement, chemical powders, plastic pellets, and <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food ingredients</a> through packaging plants, processing facilities, and industrial operations worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shafted vs Shaftless -->
+  <article class="py-20 bg-surface" aria-labelledby="shaft-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Shaft Types</div>
+      <h2 id="shaft-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Shafted vs. <span class="text-accent">Shaftless</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Shafted Screw Conveyors</h3>
+        <p>Shafted screw conveyors have helical flights welded to a center pipe shaft. The shaft rotates in end bearings at the drive and tail ends, with intermediate hanger bearings supporting the shaft at 10-12 foot intervals for long conveyors. The shaft provides structural rigidity and allows long spans. Shafted conveyors handle most free-flowing bulk materials: grain, sugar, flour, cement, plastic pellets, and chemical powders.</p>
+        <p>Standard shafted conveyors range from 4 to 24-inch screw diameter. Capacity scales with diameter: a 9-inch conveyor handles approximately 30 cubic feet per hour at 1 RPM; a 24-inch conveyor handles approximately 600 cubic feet per hour at 1 RPM. Actual capacity is RPM x capacity factor x trough loading percentage. KWS Manufacturing, Continental Screw, and Martin Sprocket publish detailed capacity tables based on CEMA (Conveyor Equipment Manufacturers Association) standards.</p>
+        <!-- VERIFY: KWS, Continental Screw, Martin Sprocket current product lines and CEMA reference -->
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Shaftless Screw Conveyors</h3>
+        <p>Shaftless screw conveyors use a thicker, self-supporting spiral flight without a center shaft. The spiral rests on a wear liner (UHMW polyethylene or steel) at the trough bottom and is driven from one end. Without a center shaft and hanger bearings, shaftless conveyors handle materials that would wrap around shafts or clog between flights and bearings: fibrous materials (rags, paper pulp), sticky materials (wet sludge, clay), stringy materials (hair, grass), and materials with large irregular particles.</p>
+        <p>Shaftless conveyors handle municipal sludge, dewatered biosolids, food waste, screening debris, and industrial slurries that shafted designs cannot. Martin Sprocket, Spirac, and KWS Manufacturing produce shaftless screw conveyor systems. Shaftless designs cost 30-50% more than shafted for the same capacity due to the thicker spiral, wear liner system, and heavier trough construction.</p>
+        <!-- VERIFY: Shaftless cost premium 30-50% over shafted -->
+      </div>
+    </div>
+  </article>
+
+  <!-- Horizontal vs Inclined -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="orientation-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Orientation</div>
+      <h2 id="orientation-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Horizontal vs. <span class="text-accent">Inclined</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Horizontal Screw Conveyors</h3>
+        <p>Horizontal screw conveyors are the most common configuration. They move material at level or slight inclines (up to 10 degrees) from inlet to discharge. Trough loading (the percentage of trough cross-section filled with material) ranges from 15% for abrasive materials to 45% for light, free-flowing materials. Higher loading increases capacity but also increases power consumption and wear.</p>
+        <p>Horizontal screw conveyors serve as feeders (metering material from bins and hoppers), transfer conveyors (moving material between processes), and mixing conveyors (blending materials during transport with ribbon or paddle flights). They feed <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a>, <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyors</a>, and packaging machines in food, chemical, and mineral processing.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Inclined Screw Conveyors</h3>
+        <p>Inclined screw conveyors elevate material at angles from 10 to 45 degrees. As inclination increases, effective capacity decreases because material falls back between screw flights. At 15 degrees, capacity is about 70% of horizontal. At 30 degrees, capacity drops to about 45%. At 45 degrees, capacity is about 30% of horizontal. To compensate, inclined screws use higher RPM, shorter pitch flights, or tubular housings that contain the material between flights.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Vertical Screw Conveyors (Screw Elevators)</h3>
+        <p>Vertical screw conveyors lift material straight up. The screw rotates inside a tubular housing, and centrifugal force plus the flight geometry push material upward. Vertical screws handle elevation changes of 5-40 feet for materials like grain, cement, and powders. They have a smaller footprint than inclined conveyors or <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a> but handle lower capacities and generate more material degradation than bucket elevators for the same elevation change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trough vs Tubular -->
+  <section class="py-20 bg-surface" aria-labelledby="housing-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Housing Types</div>
+      <h2 id="housing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Trough vs. <span class="text-accent">Tubular Housing</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">U-Trough (Open Top)</h3>
+        <p>Standard screw conveyors use a U-shaped trough with a removable cover. The U-trough provides easy access for cleaning, inspection, and maintenance. Covers bolt on (standard) or clamp on (quick-release for frequent cleaning). U-trough construction suits horizontal and slight-incline applications. Trough material: carbon steel (standard), stainless steel (<a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">food and sanitary</a>), or abrasion-resistant plate (abrasive materials).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tubular Housing</h3>
+        <p>Tubular screw conveyors enclose the screw in a round pipe. The pipe fully contains the material, preventing dust emission and material spillage. Tubular housing is required for inclined and vertical screw conveyors to prevent material fallback. It is also used for horizontal conveyors handling hazardous, dusty, or contamination-sensitive materials. Tubular construction costs more than U-trough and is harder to clean and inspect.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Jacketed Troughs and Tubes</h3>
+        <p>Jacketed screw conveyors have a double-wall trough or tube with a cavity for heating or cooling fluid. Hot water, steam, or thermal oil circulates in the jacket to heat material during transport (drying, preheating, melting). Chilled water cools material (crystallization, solidification). Jacketed screws combine transport and thermal processing in a single unit, eliminating separate heating/cooling equipment. Chemical and food processing plants use jacketed screw conveyors for temperature-controlled material transport.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Screw Conveyor <span class="text-accent">Comparison</span>
+      </h2>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Shafted (Trough)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Shaftless (Trough)</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Vertical (Tubular)</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Diameter Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">4-24 in</td>
+              <td class="py-3 pr-4 font-mono text-sm">6-24 in</td>
+              <td class="py-3 font-mono text-sm">6-16 in</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Length</td>
+              <td class="py-3 pr-4 font-mono text-sm">100+ ft</td>
+              <td class="py-3 pr-4 font-mono text-sm">60 ft</td>
+              <td class="py-3 font-mono text-sm">40 ft</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best Materials</td>
+              <td class="py-3 pr-4">Free-flowing dry bulk</td>
+              <td class="py-3 pr-4">Sticky, fibrous, sludge</td>
+              <td class="py-3">Free-flowing dry bulk</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Cleaning Ease</td>
+              <td class="py-3 pr-4">Moderate (cover removal)</td>
+              <td class="py-3 pr-4">Easy (no shaft/bearings)</td>
+              <td class="py-3">Difficult (enclosed tube)</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Inclination</td>
+              <td class="py-3 pr-4">0-10&deg; typical</td>
+              <td class="py-3 pr-4">0-15&deg; typical</td>
+              <td class="py-3">90&deg; (vertical)</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Capacity and length depend on screw diameter, RPM, and material properties. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Screw Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Food ingredient handling:</strong> Stainless steel screw conveyors move flour, sugar, spices, and dry ingredients from storage to mixers, blenders, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging machines</a>. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary screw conveyors</a> use polished stainless steel, tool-free disassembly, and CIP-capable construction. Screw feeders meter precise quantities of ingredients into batch mixers and continuous blenders.</p>
+
+        <p><strong class="text-ink">Cement and concrete batching:</strong> Screw conveyors transfer cement from silos to weigh hoppers and batch mixers. The enclosed screw contains cement dust and provides controlled feed rates. Cement handling requires abrasion-resistant flights and trough liners due to the material's abrasive nature. Screw diameter typically 9-16 inches for concrete plant applications.</p>
+
+        <p><strong class="text-ink">Chemical processing:</strong> Screw conveyors handle chemical powders, catalysts, carbon black, and mineral fillers between reactors, dryers, and packaging. Jacketed screws provide heating or cooling during transport. Enclosed tubular designs contain hazardous dusts. Material compatibility (corrosion, chemical attack) dictates construction materials: 304 SS, 316 SS, Hastelloy, or polymer-lined carbon steel.</p>
+
+        <p><strong class="text-ink">Wastewater treatment:</strong> Shaftless screw conveyors move screening debris, grit, dewatered sludge, and biosolids in wastewater treatment plants. The shaftless design prevents wrapping by rags, hair, and fibrous debris that jam shafted conveyors. Stainless steel or coated carbon steel construction resists the corrosive wastewater environment.</p>
+
+        <p><strong class="text-ink">Grain and feed milling:</strong> Screw conveyors move grain, ground meal, and feed between storage, grinding, mixing, pelleting, and bagging. They feed <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">bucket elevators</a> for vertical transport and <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyors</a> for long horizontal runs. Screw feeders meter ingredient flow into mixers and extruders.</p>
+
+        <p><strong class="text-ink">Plastics processing:</strong> Screw conveyors feed plastic pellets, regrind, and additives from storage hoppers to extruders, injection molders, and compounding equipment. The metering accuracy of screw feeders provides consistent feed rates critical for process control. <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Chain conveyor</a> and pneumatic alternatives handle longer distances but screw conveyors dominate short-run feeding applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How to Select a <span class="text-accent">Screw Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">Material characteristics are the starting point.</strong> Free-flowing dry powders and granules: shafted screw in U-trough. Sticky, fibrous, or stringy materials: shaftless screw. Hazardous or dust-sensitive materials: tubular housing. CEMA classifies bulk materials into groups (A through E) based on density, abrasiveness, and flowability. The CEMA classification drives screw component selection.</p>
+
+        <p><strong class="text-ink">Capacity determines screw diameter and RPM.</strong> Calculate required volumetric capacity (cubic feet per hour). Select screw diameter from CEMA capacity tables based on material classification and desired trough loading percentage. Calculate RPM to achieve the target capacity. Higher RPM increases capacity but also increases wear and power consumption. CEMA recommends maximum RPM limits based on screw diameter.</p>
+
+        <p><strong class="text-ink">Length and inclination affect power and component sizing.</strong> Longer conveyors need more horsepower, more hanger bearings, and larger shaft diameters to handle the cumulative material load. Inclined conveyors need more power per foot and may need modified flight pitch or tubular housing. Vertical screw conveyors need the most power per ton and special inlet hopper designs to feed material into the upward-moving screw.</p>
+
+        <p><strong class="text-ink">Environment and sanitary requirements set the materials.</strong> Standard industrial: carbon steel with paint. <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food grade</a>: 304 or 316 stainless steel with polished welds and sanitary flange connections. Corrosive chemical: stainless steel, Hastelloy, or polymer-lined. High temperature: alloy steel with high-temp bearings and seals.</p>
+
+        <p><strong class="text-ink">Compared to alternatives:</strong> Screw conveyors are simpler and cheaper than <a href="/conveyor-types/drag-chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain conveyors</a> for short runs but degrade material more. Screw conveyors cost less than pneumatic systems but handle shorter distances. <a href="/conveyor-types/bucket-elevators/" class="text-accent hover:text-accent-hover font-semibold">Bucket elevators</a> beat vertical screw conveyors on capacity and gentleness for vertical lifts. Choose based on distance, capacity, material sensitivity, and budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a screw conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A rotating helical screw blade (auger) inside a trough or tube that moves bulk materials from inlet to discharge. Shafted for free-flowing materials, shaftless for sticky/fibrous materials. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor types guide</a> for all bulk handling options.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Shafted vs shaftless — which do I need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Shafted for free-flowing dry bulk materials (grain, powder, pellets). Shaftless for sticky, fibrous, stringy, or wrapping materials (sludge, rags, wet grain). Shaftless costs 30-50% more but prevents clogging. Use shafted unless the material demands shaftless.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What materials can a screw conveyor handle?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Most dry and semi-dry bulk materials: grain, flour, sugar, cement, chemicals, plastic pellets, wood chips, animal feed. Shaftless models handle sludge, biosolids, and fibrous materials. Not suitable for very large particles, highly abrasive materials at volume, or products needing zero degradation.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">Continue <span class="text-accent-bright">Researching</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/bucket-elevators/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Bucket Elevators</div>
+          <p class="text-sm text-white/60">Vertical bulk material lift</p>
+        </a>
+        <a href="/conveyor-types/drag-chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Drag Chain</div>
+          <p class="text-sm text-white/60">Enclosed bulk material transport</p>
+        </a>
+        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
+          <p class="text-sm text-white/60">Heavy-duty chain systems</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Sanitary screw conveyor applications</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

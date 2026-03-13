@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Packaging Line Conveyors", "item": "https://packagingconveyor.com/industries/packaging-line-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Case Packing", "item": "https://packagingconveyor.com/industries/packaging-line-conveyors/case/" },
+    { "@type": "ListItem", "position": 5, "name": "Robotic Case Packing", "item": "https://packagingconveyor.com/industries/packaging-line-conveyors/case/robotic-case-packing/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is robotic case packing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Robotic case packing uses industrial robots — delta (spider), articulated arm, or gantry — to pick products from a conveyor and place them into corrugated cases. The robot uses vision systems to locate product, vacuum or mechanical grippers to pick, and programmed motion paths to place product into the case pattern. Robotic case packers handle the widest range of product types and case patterns with recipe-based changeover." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between delta and articulated arm robots for case packing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Delta (spider) robots excel at high-speed picking of lightweight products (under 5 lb) from a moving conveyor — 60-120+ picks per minute. Articulated arm robots handle heavier products (5-50+ lb) with greater reach and 6-axis flexibility but at lower speeds (15-40 picks per minute). Delta robots suit food packaging; articulated arms suit heavy industrial products and mixed-case palletizing." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can robotic case packers run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Single delta robots achieve 60-120+ picks per minute. Single articulated arms achieve 15-40 picks per minute. Multi-robot cells with 2-4 robots working the same conveyor multiply throughput proportionally. A typical 2-robot delta cell packs 20-40 cases per minute depending on products per case and pattern complexity." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conveyors are needed for robotic case packing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Robotic case packing requires a product infeed conveyor (belt conveyor feeding product to the robot pick zone), a case conveyor (indexing or continuous conveyor positioning empty cases under the robot), and a case discharge conveyor (transporting loaded cases to sealing). Vision-guided systems also need a vision conveyor section with proper lighting and encoder feedback." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Robotic Case Packing: Delta, Articulated Arm & Gantry Systems",
+  "description": "Technical guide to robotic case packing systems — delta robots, articulated arms, gantry packers, vision systems, gripper design, and conveyor integration for automated case packing.",
+  "url": "https://packagingconveyor.com/industries/packaging-line-conveyors/case/robotic-case-packing/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Robotic Case Packing: Delta, Articulated & Gantry Robots | PackagingConveyor.com"
+  description="Technical guide to robotic case packing — delta robots, articulated arms, gantry systems, vision integration, gripper design, and conveyor requirements for automated case packing lines."
+  canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/case/robotic-case-packing/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/" class="hover:text-white/70">Industries</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/packaging-line-conveyors/" class="hover:text-white/70">Packaging Lines</a>
+        <span class="mx-2">/</span>
+        <a href="/industries/packaging-line-conveyors/case/" class="hover:text-white/70">Case Packing</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Robotic</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Case Packing</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Robotic <span class="text-accent-bright">Case Packing</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Robotic case packing uses delta (spider), articulated arm, or gantry robots to pick products from a conveyor and place them into corrugated cases. Vision systems locate products on the infeed belt, vacuum or mechanical grippers pick single or multiple items, and programmed motion paths place product into precise case patterns. Robotic case packers from FANUC, ABB, KUKA, Yaskawa, and packaging OEMs like Brenton (ProMach), BluePrint Automation (BPA), and JLS Automation handle 15 to 120+ picks per minute with recipe-based changeover for multiple product sizes and case configurations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ ROBOT TYPES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="types-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Robot Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Delta, Articulated & <span class="text-accent">Gantry Robots</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-4">Delta (Spider) Robots</h3>
+          <p>
+            Delta robots use three or four parallel-link arms attached to a fixed overhead frame. The lightweight arm structure enables high-speed pick-and-place — 60 to 120+ picks per minute per robot. Delta robots pick from a moving conveyor belt using vision-guided tracking. The robot controller receives product position data from an upstream camera, calculates the pick trajectory, and synchronizes with the belt encoder to pick product in motion.
+          </p>
+          <p>
+            Delta robots suit lightweight products (under 2-5 lb depending on model): flow-wrapped snacks, pouches, bags, small cartons, and individual <a href="/industries/food-conveyors/bakery/cookie-cracker/" class="text-accent hover:text-accent-hover font-semibold">cookie packages</a>. FANUC M-1iA/M-3iA, ABB FlexPicker IRB 360, and Yaskawa MPP3 are common delta robot models in packaging. <!-- VERIFY: Current delta robot model numbers -->
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Articulated Arm Robots</h3>
+          <p>
+            Articulated arm (6-axis) robots provide greater reach, payload, and flexibility than delta robots. Six joints allow the robot to approach the product from any angle, rotate it during placement, and reach into deep cases. Payload ranges from 5 to 250+ kg depending on model. Speeds are lower than delta — typically 15-40 picks per minute — because the heavier arm structure limits acceleration.
+          </p>
+          <p>
+            Articulated arms suit heavier products (cases, trays, multipacks weighing 5-50+ lb), mixed-case packing (multiple SKUs into one case), and applications requiring product reorientation during placement. FANUC M-10/M-20, ABB IRB 2600, and KUKA KR AGILUS are widely used for case packing. These robots also handle palletizing — a single robot can pack cases and palletize them in lower-volume applications.
+          </p>
+
+          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-10 mb-4">Gantry (Cartesian) Robots</h3>
+          <p>
+            Gantry robots use linear axes (X, Y, Z) mounted on an overhead frame. The pick head travels along rails above the product conveyor and case conveyor. Gantry systems handle very heavy loads (100+ lb) and provide a large work envelope. They pick entire product layers (a complete row or partial case pattern) in a single motion, then place the layer into the case.
+          </p>
+          <p>
+            Gantry packers suit high-volume lines packing heavy products — beverage multipacks, canned goods trays, and bulk-packaged industrial products. Speeds are moderate (10-25 CPM) but each cycle places multiple products. Schneider Packaging (Pactiv Evergreen) and Pearson Packaging supply gantry-style case packers. <!-- VERIFY: Schneider Packaging current ownership/branding -->
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Comparison</div>
+        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Robot Type <span class="text-accent">Comparison</span>
+        </h2>
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[850px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Robot Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed (Picks/Min)</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Payload</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
+              </tr>
+            </thead>
+            <tbody class="text-base text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Delta (spider)</td>
+                <td class="py-4 pr-4 font-mono text-sm">60-120+</td>
+                <td class="py-4 pr-4 font-mono text-sm">0.5-5 lb</td>
+                <td class="py-4 pr-4">Light products, high speed, food</td>
+                <td class="py-4 font-mono text-sm">$$$</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Articulated arm</td>
+                <td class="py-4 pr-4 font-mono text-sm">15-40</td>
+                <td class="py-4 pr-4 font-mono text-sm">5-250+ lb</td>
+                <td class="py-4 pr-4">Heavy products, mixed case, flexibility</td>
+                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Gantry (Cartesian)</td>
+                <td class="py-4 pr-4 font-mono text-sm">10-25 (layer picks)</td>
+                <td class="py-4 pr-4 font-mono text-sm">50-300+ lb</td>
+                <td class="py-4 pr-4">Heavy, high-volume, full-layer</td>
+                <td class="py-4 font-mono text-sm">$$$$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VISION SYSTEMS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="vision-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Vision Integration</div>
+        <h2 id="vision-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Vision Systems & <span class="text-accent">Conveyor Tracking</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Vision-guided robotic case packing uses cameras above the product infeed conveyor to locate, identify, and determine the orientation of each product. The vision system sends product coordinates and rotation angle to the robot controller, which calculates a pick trajectory synchronized to the belt's motion via encoder feedback.
+          </p>
+          <p>
+            The product infeed conveyor for vision-guided picking requires specific design features:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Consistent belt color:</strong> White or light-colored belts provide contrast against most products. Dark belts suit light-colored products.</li>
+            <li><strong class="text-ink">Controlled lighting:</strong> Overhead LED bar lights or diffuse dome lights eliminate shadows and reflections. The conveyor section under the camera often has a light enclosure to block ambient light variation.</li>
+            <li><strong class="text-ink">Encoder feedback:</strong> A belt-mounted encoder or motor encoder provides precise belt position to the robot controller. Encoder resolution of 0.1mm or better ensures accurate product tracking at speed.</li>
+            <li><strong class="text-ink">Single-layer product:</strong> Products must arrive in a single layer, not stacked. A <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">spreader conveyor</a> or singulation conveyor upstream ensures single-layer presentation.</li>
+          </ul>
+          <p>
+            Cognex, Keyence, and SICK supply vision systems for robotic packaging applications. FANUC's iRVision and ABB's integrated vision are robot-native vision solutions that simplify integration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GRIPPER DESIGN ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="gripper-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">End-of-Arm Tooling</div>
+        <h2 id="gripper-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Gripper <span class="text-accent">Design</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            The gripper (end-of-arm tool, EOAT) determines what products the robot can pick and how gently it handles them. Gripper design is the most application-specific element of a robotic case packing system. Common gripper types:
+          </p>
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><strong class="text-ink">Vacuum grippers:</strong> Suction cups pick products with flat or slightly curved surfaces — bags, pouches, cartons, flow-wrapped packages. Single or multi-cup configurations pick one or multiple products per cycle. Foam or bellows cups conform to irregular surfaces. Vacuum is generated by venturi (compressed air) or electric vacuum pump.</li>
+            <li><strong class="text-ink">Mechanical grippers:</strong> Fingers or jaws clamp around the product. Suited for rigid items (bottles, cans, tubes) that vacuum cups cannot grip reliably. Servo-controlled fingers adjust grip force for different product sizes.</li>
+            <li><strong class="text-ink">Fork/shovel grippers:</strong> Thin forks slide under the product (from the belt surface) and lift. Used for fragile products that cannot tolerate top-surface pressure — decorated <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery products</a>, open containers, and delicate trays.</li>
+            <li><strong class="text-ink">Multi-pick grippers:</strong> Gripper with multiple independent pick heads picks 2-8 products per cycle. Reduces required robot speed — a 4-pick gripper at 30 cycles/minute achieves 120 picks/minute. Common with delta robots on high-speed lines.</li>
+          </ul>
+          <p>
+            Gripper changeover for different products takes 5-30 minutes for a manual tool change or 15-30 seconds with an automatic tool changer (ATC). Automatic tool changers from Schunk, ATI, and Applied Robotics enable tool-free recipe changes. The robot stores multiple grippers on a rack and swaps automatically when the operator selects a new product recipe.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONVEYOR REQUIREMENTS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="conveyor-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Conveyor Integration</div>
+        <h2 id="conveyor-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Conveyor Requirements for <span class="text-accent">Robotic Packing</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            A robotic case packing cell requires three conveyor subsystems working in coordination:
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Product infeed conveyor:</strong> Delivers products to the robot pick zone. Belt conveyor running at constant speed (20-100 FPM typical). Servo-controlled belt with encoder feedback for vision tracking. Width sized for single-file or multi-lane product presentation. <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">Infeed system</a> upstream meters product spacing.</li>
+            <li><strong class="text-ink">Case conveyor:</strong> Positions empty cases under the robot place zone. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyor</a> for stop-and-go placement, or continuous conveyor with tracking for place-on-the-fly operation. Case erector feeds empty cases from upstream.</li>
+            <li><strong class="text-ink">Case discharge conveyor:</strong> Transports loaded cases from the robot cell to case sealing and palletizing. Roller or belt conveyor with <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> to buffer cases when the sealer stops.</li>
+          </ol>
+          <p>
+            All three conveyors communicate through the cell PLC or robot controller. The product infeed encoder feeds the vision tracking system. The case conveyor indexes in sync with the robot cycle. The discharge conveyor receives a "case full" signal and advances the loaded case. For more on controls integration, see the <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SAFETY ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="safety-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Safety</div>
+        <h2 id="safety-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Safety Guarding & <span class="text-accent">Conveyor Access</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Robotic case packing cells require safety guarding per ANSI/RIA 15.06 and OSHA standards. The robot work envelope must be enclosed by safety fencing, light curtains, or area scanners. Conveyor entry and exit points through the safety perimeter use safety-rated muting sensors that allow product to pass while detecting human intrusion.
+          </p>
+          <p>
+            Collaborative robots (cobots) from Universal Robots, FANUC (CRX series), and ABB (GoFa/SWIFTI) operate without full safety fencing in some case packing applications. Cobots limit speed and force to safe levels when humans are nearby. However, cobot speed limitations (typically 250mm/s or less in collaborative mode) reduce throughput compared to industrial robots. Cobots suit lower-volume, high-mix applications where operators frequently interact with the cell. <!-- VERIFY: Current cobot speed limits in collaborative mode per ISO/TS 15066 -->
+          </p>
+          <p>
+            For budgeting, robotic case packing cells cost $$$-$$$$ depending on robot type, vision system, gripper complexity, and conveyor requirements. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for cost factors.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is robotic case packing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Robotic case packing uses industrial robots to pick products from a conveyor and place them into cases. Delta robots handle lightweight products at high speed; articulated arms handle heavier products with greater flexibility. Vision systems guide picking from moving belts.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Delta vs. articulated arm for case packing?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Delta: 60-120+ picks/min, under 5 lb payload, ideal for food packaging. Articulated arm: 15-40 picks/min, 5-250+ lb payload, suits heavy products and mixed-case applications. See also: <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing overview</a>.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast can robotic case packers run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Single delta robot: 60-120+ picks/min. Single articulated arm: 15-40 picks/min. Multi-robot cells multiply throughput. A 2-robot delta cell typically packs 20-40 cases/min depending on products per case.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What conveyors does robotic case packing need?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Three conveyors: product infeed (belt with encoder for vision tracking), case conveyor (<a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing</a> or continuous for case positioning), and case discharge (roller or belt to sealing/palletizing). All coordinate through the cell PLC.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

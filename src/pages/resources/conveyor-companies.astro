@@ -1,0 +1,467 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Companies Near You", "item": "https://packagingconveyor.com/resources/conveyor-companies/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Companies Near You: How to Find & Evaluate Local Suppliers",
+  "description": "Guide to finding conveyor companies in your region — where to search, what to evaluate, and how to compare local manufacturers, integrators, and service providers.",
+  "url": "https://packagingconveyor.com/resources/conveyor-companies/",
+  "datePublished": "2026-03-12",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find conveyor companies near me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start with industry-specific directories: CEMA (Conveyor Equipment Manufacturers Association), MHI (Material Handling Industry), and Thomasnet all maintain searchable directories filterable by location and conveyor type. Trade show exhibitor lists from PACK EXPO, ProMat, and MODEX are another source. Manufacturer websites often have dealer locators or integration partner maps. Finally, a targeted web search combining your conveyor type with your city or region name surfaces local companies that may not appear in national directories." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy from a local conveyor company or a national manufacturer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both have advantages. Local companies offer faster response time for service calls, lower travel costs for installation and maintenance, easier communication during design, and the ability to visit their facility. National manufacturers offer broader product lines, more engineering resources, and often more competitive pricing on standard products. For simple conveyor purchases, national manufacturers with quick-ship programs may be faster and less expensive. For complex systems requiring custom engineering, installation, and ongoing service, a regional integrator with strong manufacturer relationships often provides better total value." }
+    },
+    {
+      "@type": "Question",
+      "name": "What questions should I ask a conveyor company before hiring them?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Key evaluation questions include: How many similar projects have you completed in the last 3 years? Can you provide references I can contact? What conveyor brands do you represent or prefer? Do you do your own controls engineering or subcontract it? What is your service territory and typical response time for emergency calls? Do you stock spare parts locally? What is your warranty coverage? Do you provide preventive maintenance contracts? Are your electricians and controls engineers on staff or contracted? What is your typical project timeline from order to commissioning?" }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a conveyor dealer, distributor, and integrator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A dealer represents one or a few conveyor brands and sells their products, sometimes with installation services. A distributor stocks and sells conveyor components — belting, rollers, motors, drives — from multiple manufacturers. An integrator designs complete conveyor systems, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies combine these roles. For a single conveyor purchase, a dealer or manufacturer direct may be sufficient. For a multi-conveyor system with controls integration, an integrator provides the engineering and project management that dealers typically do not." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far will a conveyor company travel for installation and service?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most regional conveyor companies and integrators service a territory within 200-500 miles of their facility, though many will travel nationally for larger projects. Service response time depends on distance — companies within 50 miles can often respond same-day for emergencies, while those 200+ miles away may need 1-2 days. For remote locations, ask about the company's remote diagnostics capabilities and whether they can guide your maintenance staff through troubleshooting over phone or video. Some manufacturers maintain multiple service centers to provide faster regional coverage." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Companies Near You: Find Local Manufacturers & Integrators | PackagingConveyor.com"
+  description="How to find and evaluate conveyor companies in your region — search strategies, evaluation criteria, and the differences between dealers, distributors, and integrators."
+  canonical="https://packagingconveyor.com/resources/conveyor-companies/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Companies Near You</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor Companies <span class="text-accent-bright">Near You</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Finding the right conveyor company depends on what you need: a single conveyor purchase, a complete system design, or ongoing service and maintenance. Local and regional companies offer faster response times and lower travel costs, while national manufacturers and integrators bring broader product lines and deeper engineering resources. This guide covers where to search for conveyor companies by region, how to evaluate them based on capability and experience, and what questions to ask before committing to a project. For a directory of manufacturers organized by conveyor type, see our <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">manufacturer directory</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHERE TO SEARCH ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="search-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Finding Companies</div>
+        <h2 id="search-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Where to <span class="text-accent">Search</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Industry Directories</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              The most efficient starting point is industry-specific directories that let you filter by location, conveyor type, and capability. CEMA (Conveyor Equipment Manufacturers Association) maintains a member directory of North American conveyor manufacturers. MHI (Material Handling Industry) covers a broader scope including conveyors, AGVs, robotics, and warehouse automation. Thomasnet provides detailed company profiles with certifications, capabilities, and revenue ranges. PMMI's member directory covers packaging machinery manufacturers, many of whom build or integrate conveyors.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Manufacturer Dealer Locators</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              If you already know the conveyor brand you want, check the manufacturer's website for a dealer or integration partner locator. Hytrol, for example, sells through a network of integration partners with regional territories — their partner locator maps companies by location. Dorner, mk North America, and Interroll maintain similar dealer networks. These partners have direct manufacturer support, trained technicians, and typically stock common spare parts.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Trade Show Exhibitor Lists</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              PACK EXPO (held annually, alternating between Las Vegas and Chicago), ProMat (Chicago, odd years), and MODEX (Atlanta, even years) are the largest trade shows covering conveyor equipment in North America. Exhibitor lists are published online months before each show. Even if you do not attend, the exhibitor directory is a curated list of active conveyor companies — searchable by product category and often including company descriptions and booth sizes that indicate relative market presence.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Targeted Web Search</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              For local companies that may not appear in national directories, search for specific terms: "conveyor integrator [city/state]", "packaging conveyor [region]", "belt conveyor manufacturer [state]", or "material handling company [metro area]". Local industrial contractors, machine builders, and automation companies sometimes build or integrate conveyors as part of a broader service offering — they may not appear in conveyor-specific directories but can be strong regional partners.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Referrals From Adjacent Suppliers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Your existing equipment suppliers — packaging machine OEMs, robot integrators, controls panel shops, and industrial electricians — often know the best conveyor companies in your region. They work alongside conveyor builders on projects and can recommend companies based on firsthand experience with their quality, reliability, and service. Similarly, your industry peers at competitor or non-competitor facilities in the same region can share their conveyor supplier experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TYPES OF COMPANIES ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Company Types</div>
+        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Types of Conveyor <span class="text-accent">Companies</span>
+        </h2>
+
+        <div class="max-w-4xl mb-10">
+          <p class="text-lg text-ink-muted leading-relaxed mb-6">
+            The term "conveyor company" covers several distinct business models. Understanding the differences helps you contact the right type of company for your needs.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Company Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">What They Do</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Limitations</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Manufacturer (OEM)</td>
+                <td class="py-4 pr-4">Design and build conveyor equipment in their own facility</td>
+                <td class="py-4 pr-4">Single conveyor purchases, standard products, <a href="/resources/conveyor-manufacturers/custom/" class="text-accent hover:text-accent-hover font-semibold">custom builds</a></td>
+                <td class="py-4 pr-4">May not handle installation, controls integration, or multi-vendor systems</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">System Integrator</td>
+                <td class="py-4 pr-4">Design complete systems, select equipment, manage controls, install, and commission</td>
+                <td class="py-4 pr-4">Multi-conveyor systems, complex automation, turnkey projects</td>
+                <td class="py-4 pr-4">Higher project cost due to engineering and PM overhead; may favor certain brands</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Dealer / Rep</td>
+                <td class="py-4 pr-4">Represent one or a few brands, provide sales and sometimes installation</td>
+                <td class="py-4 pr-4">Buying a specific brand, local sales support, warranty coordination</td>
+                <td class="py-4 pr-4">Limited to the brands they represent; may not do controls or custom engineering</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Distributor</td>
+                <td class="py-4 pr-4">Stock and sell conveyor components — belting, rollers, motors, drives, <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">parts</a></td>
+                <td class="py-4 pr-4">Replacement parts, belting, components for in-house builds</td>
+                <td class="py-4 pr-4">Do not design or build conveyor systems; sell components only</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Service Company</td>
+                <td class="py-4 pr-4">Maintain, repair, and rebuild existing conveyor systems</td>
+                <td class="py-4 pr-4">Preventive maintenance contracts, emergency repairs, belt replacement</td>
+                <td class="py-4 pr-4">Do not design or build new systems; focus on maintenance and repair</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EVALUATION CRITERIA ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="eval-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Evaluation</div>
+        <h2 id="eval-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          How to <span class="text-accent">Evaluate</span> a Conveyor Company
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Industry Experience</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              A company that has completed multiple projects in your industry understands the application-specific challenges that a general-purpose builder may overlook. <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food industry</a> conveyors require sanitary design knowledge. <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical</a> applications require cleanroom protocols. <a href="/industries/automotive-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Automotive</a> plants need heavy-duty construction and precise timing. Ask for a project list or case studies in your industry, not just a general portfolio.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">References You Can Contact</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Testimonials on a website are marketing. References you can call are data. Ask for 3&ndash;5 references from projects similar to yours — same industry, similar scope, completed in the last 2&ndash;3 years. When you call references, ask about: Did the project meet the original timeline and budget? How was communication during the project? Were there issues, and how were they resolved? How is the equipment performing now? Would you hire them again? The willingness to provide references is itself informative — a company that hesitates may have reasons.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">In-House Capabilities</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Determine what the company does in-house versus what they subcontract. Key capabilities to assess: mechanical design and CAD, fabrication (welding, machining, assembly), controls engineering (PLC programming, HMI development, VFD/servo setup), electrical panel building, installation crews, and commissioning. Companies that subcontract heavily may deliver good results, but coordination complexity increases and accountability can become diffuse when problems arise.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Service and Support</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Evaluate post-installation support: What is the warranty period and coverage? Do they offer preventive maintenance contracts? What is their typical response time for emergency service calls? Do they stock spare parts locally? Can they provide remote diagnostics (phone, video, remote PLC access) for initial troubleshooting before dispatching a technician? A company that builds conveyors but does not support them after installation leaves you dependent on third-party service providers or your own maintenance team.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Financial Stability</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Conveyor projects can span months from order to commissioning, and warranty periods extend 1&ndash;2 years beyond that. A company's financial stability affects their ability to complete your project, honor their warranty, and provide parts and service for years to come. For larger projects, request a D&B report or check for any recent ownership changes, acquisitions, or restructuring. Companies that have been in business for 10+ years and have stable ownership tend to provide more consistent long-term support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REGIONAL LANDSCAPE ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="regional-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Regional Guide</div>
+        <h2 id="regional-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Regional Conveyor <span class="text-accent">Landscape</span>
+        </h2>
+
+        <div class="max-w-4xl mb-10">
+          <p class="text-lg text-ink-muted leading-relaxed mb-8">
+            Conveyor manufacturing and integration companies cluster in regions with strong manufacturing bases. The concentration of companies in your region affects availability, competition, and pricing.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Midwest (OH, MI, IN, WI, IL, MN)</h3>
+            <p class="text-ink-muted leading-relaxed">
+              The highest concentration of conveyor manufacturers and integrators in North America. Strong in food processing, <a href="/industries/assembly-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">assembly line</a>, automotive, and general manufacturing conveyors. Companies include Dorner (WI), Nercon (WI), Bastian Solutions (IN), and dozens of regional integrators. Competitive market with multiple options for most conveyor types.
+            </p>
+          </div>
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Southeast (GA, TN, NC, SC, AL, AR)</h3>
+            <p class="text-ink-muted leading-relaxed">
+              Growing manufacturing base with strong logistics and distribution sector. Hytrol (AR) is headquartered here, and their integration partner network covers the region extensively. Atlanta serves as a hub for <a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">warehouse</a> and distribution conveyor companies. Automotive manufacturing growth in the Southeast has brought conveyor companies to support new plants.
+            </p>
+          </div>
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Northeast (PA, NJ, NY, CT, MA)</h3>
+            <p class="text-ink-muted leading-relaxed">
+              Dense manufacturing corridor with established conveyor companies. mk North America (CT) is headquartered here. Strong in pharmaceutical, food, and consumer goods conveyors. Higher labor costs are reflected in project pricing, but proximity to major markets and skilled labor pool are advantages. Several companies specialize in pharmaceutical and cleanroom conveyors for the region's biotech and pharma clusters.
+            </p>
+          </div>
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">West Coast (CA, OR, WA)</h3>
+            <p class="text-ink-muted leading-relaxed">
+              Fewer conveyor manufacturers compared to the Midwest, but a strong base of integrators serving food processing (Central Valley), tech/e-commerce distribution (Pacific NW), and aerospace. Heat and Control (CA) serves the food processing sector. Higher cost of business is reflected in pricing. Some companies import from Midwest manufacturers and provide local installation and service.
+            </p>
+          </div>
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Texas & Southwest</h3>
+            <p class="text-ink-muted leading-relaxed">
+              Rapidly growing manufacturing and distribution market. Dallas-Fort Worth and Houston metro areas have multiple conveyor companies serving food, beverage, distribution, and oil/gas industries. Lower cost of living and business-friendly environment have attracted both manufacturers and integrators. Strong in heavy-duty and outdoor conveyor applications for energy and mining sectors.
+            </p>
+          </div>
+          <div class="border border-border p-6">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Canada</h3>
+            <p class="text-ink-muted leading-relaxed">
+              Ontario and Quebec have the highest concentration of conveyor companies, serving automotive (Ontario), food processing, and mining. Western Canada has conveyor companies focused on mining, oil sands, and agriculture. Cross-border purchasing from US manufacturers is common, though duty, freight, and CSA/UL certification requirements add cost and complexity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LOCAL VS NATIONAL ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="local-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Decision Guide</div>
+        <h2 id="local-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Local vs. <span class="text-accent-bright">National</span> Companies
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Choose Local When...</h3>
+            <ul class="space-y-3 text-white/60">
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>The project requires frequent on-site visits during design and installation</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You need fast emergency service response (same-day or next-day)</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>The project involves integration with existing equipment that requires site surveys</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You want to visit the fabrication shop during manufacturing</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You need ongoing preventive maintenance support</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>The local company has specific expertise in your industry and application</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white mb-3">Choose National When...</h3>
+            <ul class="space-y-3 text-white/60">
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You need a specific conveyor type or technology that local companies do not offer</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You are buying a standard catalog conveyor with minimal customization</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>You need multiple conveyor systems across facilities in different regions</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>The project requires engineering depth (FEA, simulation, advanced controls) that local companies cannot provide</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>Your maintenance team can handle routine service without vendor support</li>
+              <li class="flex gap-3"><span class="text-accent-bright font-bold">&bull;</span>No qualified local company exists for your conveyor type or industry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REQUEST FOR QUOTE PROCESS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="rfq-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Getting Quotes</div>
+        <h2 id="rfq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          The <span class="text-accent">RFQ Process</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Prepare a Consistent Specification</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Send the same specification document to every vendor. This is the single most important step in getting comparable quotes. Without a consistent spec, each vendor will quote a different scope, making comparison impossible. Include product data, throughput requirements, environment conditions, controls scope, installation scope, and timeline requirements. Our <a href="/resources/conveyor-manufacturers/custom/" class="text-accent hover:text-accent-hover font-semibold">custom design guide</a> includes a detailed specification checklist.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Request 2&ndash;3 Quotes Minimum</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Two quotes tell you there is a range. Three quotes tell you where the market center is and which vendor is an outlier. More than four quotes creates evaluation fatigue and provides diminishing returns. Choose vendors that represent different approaches — one manufacturer, one integrator, one local company — to see how different business models price the same scope.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Compare Scope, Not Just Price</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              The lowest price is not always the best value. When comparing quotes, check what is included and excluded: Is installation included, and what does "installation" mean (mechanical only, or electrical and commissioning too)? Are controls included, or quoted separately? What is the warranty coverage and duration? Are startup and operator training included? Are <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed/outfeed</a> transitions included, or are they your responsibility? A detailed scope comparison often reveals that the apparent low-price quote is missing significant scope items.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Negotiate on Value, Not Just Price</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Beyond the purchase price, negotiable items include: extended warranty, spare parts included in the order, preventive maintenance contract pricing, payment terms (milestone-based vs. upfront), documentation deliverables, performance guarantees with penalties, and future expansion pricing. A vendor who provides a comprehensive spare parts package and a two-year warranty at a slightly higher price may deliver better total value than the lowest bidder with a one-year warranty and no spares. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for factors that drive conveyor pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">FAQ</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Frequently Asked <span class="text-accent">Questions</span>
+        </h2>
+
+        <div class="space-y-4">
+          <details open class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How do I find conveyor companies near me?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Start with industry-specific directories: CEMA, MHI, and Thomasnet all maintain searchable directories filterable by location and conveyor type. Trade show exhibitor lists from PACK EXPO, ProMat, and MODEX are another source. Manufacturer websites often have dealer locators or integration partner maps. A targeted web search combining your conveyor type with your city or region name surfaces local companies that may not appear in national directories.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              Should I buy from a local conveyor company or a national manufacturer?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Both have advantages. Local companies offer faster response time for service calls, lower travel costs for installation and maintenance, easier communication during design, and the ability to visit their facility. National manufacturers offer broader product lines, more engineering resources, and often more competitive pricing on standard products. For simple conveyor purchases, national manufacturers with quick-ship programs may be faster and less expensive. For complex systems requiring custom engineering, installation, and ongoing service, a regional integrator with strong manufacturer relationships often provides better total value.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What questions should I ask a conveyor company before hiring them?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Key evaluation questions include: How many similar projects have you completed in the last 3 years? Can you provide references I can contact? What conveyor brands do you represent or prefer? Do you do your own controls engineering or subcontract it? What is your service territory and typical response time for emergency calls? Do you stock spare parts locally? What is your warranty coverage? Do you provide preventive maintenance contracts? Are your electricians and controls engineers on staff or contracted? What is your typical project timeline from order to commissioning?</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What is the difference between a conveyor dealer, distributor, and integrator?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">A dealer represents one or a few conveyor brands and sells their products, sometimes with installation services. A distributor stocks and sells conveyor components from multiple manufacturers. An integrator designs complete conveyor systems, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. For a single conveyor purchase, a dealer or manufacturer direct may be sufficient. For a multi-conveyor system with controls integration, an integrator provides the engineering and project management that dealers typically do not.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How far will a conveyor company travel for installation and service?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Most regional conveyor companies service a territory within 200&ndash;500 miles of their facility, though many will travel nationally for larger projects. Service response time depends on distance — companies within 50 miles can often respond same-day for emergencies, while those 200+ miles away may need 1&ndash;2 days. For remote locations, ask about remote diagnostics capabilities and whether they can guide your maintenance staff through troubleshooting over phone or video.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED RESOURCES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Explore</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Related <span class="text-accent">Resources</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/resources/conveyor-manufacturers/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Manufacturer Directory</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Browse conveyor manufacturers by type — belt, roller, modular plastic, sanitary, and specialty builders.</p>
+          </a>
+          <a href="/resources/conveyor-manufacturers/custom/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Custom Conveyor Design</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">When to go custom vs. catalog — process, costs, and lead times for custom-engineered systems.</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Cost Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Seven cost factors that drive conveyor pricing — type, materials, controls, environment, and installation.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</BaseLayout>
