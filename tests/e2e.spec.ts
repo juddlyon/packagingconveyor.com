@@ -30,7 +30,8 @@ test.describe('Homepage', () => {
 
   test('should have FAQ section with working accordions', async ({ page }) => {
     await page.goto('/');
-    const details = page.locator('details');
+    const faqSection = page.locator('section', { has: page.locator('h2:has-text("Frequently Asked")') });
+    const details = faqSection.locator('details');
     const count = await details.count();
     expect(count).toBeGreaterThanOrEqual(3);
 

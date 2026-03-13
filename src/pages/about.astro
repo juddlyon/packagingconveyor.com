@@ -1,105 +1,152 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://packagingconveyor.com/about/" }
+  ]
+};
 ---
 
 <BaseLayout
-  title="About PackagingConveyor.com | The Packaging Conveyor Resource"
-  description="PackagingConveyor.com is an independent technical resource for packaging conveyor systems. Learn about our editorial approach and how we research our guides."
+  title="About PackagingConveyor.com | Independent Conveyor Technical Resource"
+  description="PackagingConveyor.com is an independent technical resource for packaging conveyor systems. Vendor-neutral guides, engineering data, and selection criteria for plant engineers and packaging managers."
   canonical="https://packagingconveyor.com/about/"
+  schema={[breadcrumbSchema]}
 >
 
   <!-- Hero -->
-  <section class="py-24 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">The Resource</div>
-      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-6">
-        About This Resource
-      </h1>
-      <p class="text-xl text-ink-muted leading-relaxed max-w-2xl">
-        An independent technical reference for engineers and managers who specify packaging conveyor systems.
-      </p>
-    </div>
-  </section>
-
-  <!-- What is PackagingConveyor.com -->
-  <section class="py-24 bg-surface">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">What This Site Is</div>
-      <h2 class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
-        What is PackagingConveyor.com?
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          <strong class="text-ink">PackagingConveyor.com is not a manufacturer. It is not a distributor.</strong> We do not sell equipment, take commissions, or represent any conveyor brand.
-        </p>
-        <p>
-          This is an independent editorial resource — vendor-neutral technical guides built for plant engineers, packaging managers, and capital project teams who need real data to spec conveyor systems.
-        </p>
-        <p>
-          We cover <strong class="text-ink">30+ conveyor types</strong> across food and beverage, pharmaceutical, automotive, and warehouse applications. Every guide includes real pricing ranges, engineering specifications, and honest selection criteria — the kind of information you need before you issue an RFQ.
-        </p>
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">About</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">About</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          About This <span class="text-accent-bright">Resource</span>
+        </h1>
       </div>
     </div>
   </section>
 
-  <!-- Editorial Approach -->
-  <section class="py-24 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">How We Work</div>
-      <h2 class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
-        Our Editorial Approach
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Content on this site is researched from manufacturer specification sheets, CEMA (Conveyor Equipment Manufacturers Association) standards, industry trade publications, and direct industry experience in packaging line design.
-        </p>
-        <p>
-          Pricing ranges are verified across multiple vendors and configurations. We update data when market conditions shift. We do not rely on a single manufacturer's published list price.
-        </p>
-        <p>
-          <strong class="text-ink">We do not accept payment for coverage, rankings, or recommendations.</strong> If a conveyor type is covered here, it's because it's relevant — not because a manufacturer paid to be included.
-        </p>
+  <article>
+    <!-- What This Site Is -->
+    <section class="py-20 bg-surface" aria-labelledby="what-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">What This Site Is</div>
+        <h2 id="what-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Independent. <span class="text-accent">Vendor-Neutral.</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            <strong class="text-ink">PackagingConveyor.com is not a manufacturer. It is not a distributor.</strong> We do not sell equipment, take commissions, or represent any conveyor brand.
+          </p>
+          <p>
+            This is an independent editorial resource: vendor-neutral technical guides for plant engineers, packaging managers, and capital project teams who need reliable data to specify conveyor systems.
+          </p>
+          <p>
+            We cover <strong class="text-ink">30+ conveyor types</strong> across food and beverage, pharmaceutical, automotive, and warehouse applications. Every guide includes engineering specifications, selection criteria, and comparison data.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why This Site Exists -->
-  <section class="py-24 bg-surface">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">The Problem We Solve</div>
-      <h2 class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
-        Why This Site Exists
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Manufacturer websites show you their products. Distributor catalogs lack engineering context. Most of the remaining web content on conveyor systems is thin SEO filler with no real specifications.
-        </p>
-        <p>
-          If you've ever tried to build a conveyor budget or write a spec sheet from scratch, you already know the problem. The information you need — actual price ranges, throughput formulas, comparison criteria between types — isn't easy to find in one place.
-        </p>
-        <p>
-          <strong class="text-ink">We built the resource that plant engineers and packaging managers actually need to spec a system.</strong> Use it to build your shortlist, define your requirements, and write an RFQ you can send to any vendor.
-        </p>
+    <!-- Who This Is For -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="audience-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Who This Is For</div>
+        <h2 id="audience-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Built for <span class="text-accent">Engineers</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            This site is built for people who design, specify, purchase, or maintain conveyor systems in packaging operations:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li><strong class="text-ink">Plant engineers</strong> evaluating conveyor types for new lines or retrofits</li>
+            <li><strong class="text-ink">Packaging managers</strong> comparing system options across vendors</li>
+            <li><strong class="text-ink">Capital project teams</strong> building specifications and RFQ packages</li>
+            <li><strong class="text-ink">Maintenance engineers</strong> troubleshooting or planning replacements</li>
+            <li><strong class="text-ink">Procurement teams</strong> who need to understand what they are buying</li>
+          </ul>
+          <p>
+            The content assumes you have working knowledge of packaging operations. We explain conveyor technology, not what a conveyor is.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="py-24 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Contact</div>
-      <h2 class="font-display text-4xl font-800 text-ink tracking-wide mb-8">
-        Get in Touch
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          For editorial inquiries, corrections, or content feedback, contact us at <a href="mailto:info@packagingconveyor.com" class="text-accent font-semibold hover:text-accent-hover">info@packagingconveyor.com</a>.
-        </p>
-        <p>
-          We do not field quote requests or supplier referrals through this address.
-        </p>
+    <!-- Editorial Approach -->
+    <section class="py-20 bg-surface" aria-labelledby="editorial-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Editorial Standards</div>
+        <h2 id="editorial-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          How We <span class="text-accent">Research</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            Content on this site draws from manufacturer specification sheets, CEMA (Conveyor Equipment Manufacturers Association) standards, ANSI/ASME B20.1 safety standards, FDA and USDA regulatory guidance, and direct industry experience in packaging line design and integration.
+          </p>
+          <p>
+            <strong class="text-ink">Our editorial rules:</strong>
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>We do not publish specific dollar pricing. Cost factors and relative comparisons only.</li>
+            <li>We do not accept payment for coverage, rankings, or recommendations.</li>
+            <li>We do not claim to test or certify equipment. We aggregate publicly available technical data.</li>
+            <li>We verify manufacturer names, parent companies, and product claims before publishing.</li>
+            <li>When data is uncertain, we flag it internally and use qualified language.</li>
+          </ul>
+          <p>
+            If a conveyor type is covered here, it is because it is relevant to packaging operations, not because a manufacturer paid to be included.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- What You Can Do Here -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="use-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">How to Use This Site</div>
+        <h2 id="use-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          What You Can <span class="text-accent">Do Here</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <ul class="list-disc list-inside space-y-3 ml-2">
+            <li><a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">Compare conveyor types</a> with technical specifications and selection criteria</li>
+            <li><a href="/industries/" class="text-accent hover:text-accent-hover font-semibold">Find industry-specific guides</a> for food, pharma, automotive, and warehouse conveyors</li>
+            <li><a href="/conveyor-functions/" class="text-accent hover:text-accent-hover font-semibold">Understand conveyor functions</a> like accumulation, singulation, indexing, and reject systems</li>
+            <li><a href="/resources/conveyor-design-guide/" class="text-accent hover:text-accent-hover font-semibold">Use engineering references</a> for belt pull calculations, motor sizing, and throughput formulas</li>
+            <li><a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">Understand cost factors</a> that drive conveyor system budgets</li>
+            <li><a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">Research manufacturers</a> by conveyor type and capability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-20 bg-surface" aria-labelledby="contact-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Contact</div>
+        <h2 id="contact-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
+          Get in <span class="text-accent">Touch</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            For editorial inquiries, corrections, or content feedback: <a href="mailto:info@packagingconveyor.com" class="text-accent font-semibold hover:text-accent-hover">info@packagingconveyor.com</a>.
+          </p>
+          <p>
+            We welcome corrections from industry professionals. If you see inaccurate technical data, outdated manufacturer information, or missing conveyor types, let us know.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
 
 </BaseLayout>

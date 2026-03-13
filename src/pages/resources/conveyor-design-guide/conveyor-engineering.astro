@@ -15,7 +15,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Conveyor Engineering Calculations — Belt Pull, Motor Sizing, Speed & Throughput",
+  "headline": "Conveyor Engineering Calculations , Belt Pull, Motor Sizing, Speed & Throughput",
   "description": "Engineering calculations for conveyor system design: belt pull, motor horsepower sizing, speed calculations, throughput formulas, accumulation zone sizing, incline angle limits, and transfer point design.",
   "url": "https://packagingconveyor.com/resources/conveyor-design-guide/conveyor-engineering/",
   "datePublished": "2026-03-12",
@@ -39,7 +39,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the maximum incline angle for a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Maximum incline angle depends on the product and belt surface. Smooth belt with cartons: 15-18 degrees maximum. Rough-top belt with cartons: 22-25 degrees. Cleated belt: up to 45 degrees. Cleated belt with sidewalls: up to 90 degrees (vertical). Bottles and round containers require lower angles — typically 5-10 degrees maximum before tipping. Factors include product center of gravity, surface friction between product and belt, and vibration from the conveyor drive." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Maximum incline angle depends on the product and belt surface. Smooth belt with cartons: 15-18 degrees maximum. Rough-top belt with cartons: 22-25 degrees. Cleated belt: up to 45 degrees. Cleated belt with sidewalls: up to 90 degrees (vertical). Bottles and round containers require lower angles , typically 5-10 degrees maximum before tipping. Factors include product center of gravity, surface friction between product and belt, and vibration from the conveyor drive." }
     },
     {
       "@type": "Question",
@@ -51,7 +51,7 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Conveyor Engineering Calculations — Belt Pull, Motor Sizing, Speed & Throughput | PackagingConveyor.com"
+  title="Conveyor Engineering Calculations , Belt Pull, Motor Sizing, Speed & Throughput | PackagingConveyor.com"
   description="Engineering formulas for conveyor design: belt pull calculations, motor HP sizing, speed and throughput formulas, accumulation zone sizing, incline angle limits, and transfer point engineering."
   canonical="https://packagingconveyor.com/resources/conveyor-design-guide/conveyor-engineering/"
   schema={[breadcrumbSchema, articleSchema, faqSchema]}
@@ -97,7 +97,7 @@ const faqSchema = {
         </h2>
         <div class="text-lg text-ink-muted leading-relaxed space-y-5">
           <p>
-            Belt pull — also called effective tension (Te) — is the force the drive must exert on the belt to move the loaded conveyor at a constant speed. Belt pull determines motor horsepower, belt tensile strength requirement, and shaft loading on pulleys and bearings. Every conveyor design starts with a belt pull calculation.
+            Belt pull , also called effective tension (Te) , is the force the drive must exert on the belt to move the loaded conveyor at a constant speed. Belt pull determines motor horsepower, belt tensile strength requirement, and shaft loading on pulleys and bearings. Every conveyor design starts with a belt pull calculation.
           </p>
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Slider Bed Belt Pull Formula</h3>
@@ -127,7 +127,7 @@ const faqSchema = {
             Te = 0.05 &times; 50 &times; (1.5 + 15) + 0 = 0.05 &times; 50 &times; 16.5 = 41.25 lbs
           </div>
           <p>
-            The drive must produce 41.25 pounds of belt pull to move this conveyor at any constant speed. Belt pull is independent of speed — it takes the same force to move the conveyor at 20 FPM or 200 FPM (ignoring acceleration forces). Speed enters the calculation in the next step: motor sizing.
+            The drive must produce 41.25 pounds of belt pull to move this conveyor at any constant speed. Belt pull is independent of speed , it takes the same force to move the conveyor at 20 FPM or 200 FPM (ignoring acceleration forces). Speed enters the calculation in the next step: motor sizing.
           </p>
         </div>
       </div>
@@ -163,7 +163,7 @@ const faqSchema = {
             <li>Severe duty (indexing, high inertia loads, reversing): service factor 2.5&ndash;3.0</li>
           </ul>
           <p>
-            Multiply the calculated HP by the service factor, then round up to the next standard motor size. Standard NEMA motor sizes are: 0.25, 0.33, 0.5, 0.75, 1, 1.5, 2, 3, 5, 7.5, 10, 15, 20, 25 HP. Do not interpolate — always round up. An undersized motor overheats, trips on overload, and fails prematurely. The <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">motors and drives guide</a> covers motor types, efficiency classes, and VFD selection in detail.
+            Multiply the calculated HP by the service factor, then round up to the next standard motor size. Standard NEMA motor sizes are: 0.25, 0.33, 0.5, 0.75, 1, 1.5, 2, 3, 5, 7.5, 10, 15, 20, 25 HP. Do not interpolate , always round up. An undersized motor overheats, trips on overload, and fails prematurely. The <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">motors and drives guide</a> covers motor types, efficiency classes, and VFD selection in detail.
           </p>
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Motor Sizing Example</h3>
@@ -202,7 +202,7 @@ const faqSchema = {
             Where: <strong>V</strong> = belt speed in feet per minute. <strong>D</strong> = drive pulley diameter in inches. <strong>RPM</strong> = drive pulley rotational speed (motor RPM / gear ratio). The division by 12 converts inches to feet.
           </p>
           <p>
-            A 4-inch diameter drive pulley driven at 95 RPM produces: V = 3.1416 &times; 4 &times; 95 / 12 = 99.5 FPM — essentially 100 FPM. Changing belt speed requires changing the gear ratio (mechanical), changing the motor speed via VFD (electrical), or changing the drive pulley diameter (mechanical). VFDs provide the easiest speed adjustment — the operator changes belt speed from the HMI or the PLC adjusts speed automatically.
+            A 4-inch diameter drive pulley driven at 95 RPM produces: V = 3.1416 &times; 4 &times; 95 / 12 = 99.5 FPM , essentially 100 FPM. Changing belt speed requires changing the gear ratio (mechanical), changing the motor speed via VFD (electrical), or changing the drive pulley diameter (mechanical). VFDs provide the easiest speed adjustment , the operator changes belt speed from the HMI or the PLC adjusts speed automatically.
           </p>
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Typical Packaging Conveyor Speeds</h3>
@@ -230,7 +230,7 @@ const faqSchema = {
             Products/min = V / P
           </div>
           <p>
-            Where: <strong>V</strong> = belt speed in feet per minute. <strong>P</strong> = product pitch in feet (center-to-center distance = product length + gap). The gap between products depends on the application — touching products have zero gap; sensor-triggered accumulation zones require 1-3 inches of gap for photoeye detection.
+            Where: <strong>V</strong> = belt speed in feet per minute. <strong>P</strong> = product pitch in feet (center-to-center distance = product length + gap). The gap between products depends on the application , touching products have zero gap; sensor-triggered accumulation zones require 1-3 inches of gap for photoeye detection.
           </p>
           <p>
             Example: belt speed = 80 FPM, product length = 10 inches, gap = 2 inches. Product pitch = 12 inches = 1 foot. Throughput = 80 / 1 = 80 products per minute.
@@ -241,7 +241,7 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Throughput Limitations</h3>
           <p>
-            Theoretical throughput assumes perfect product spacing with no gaps, jams, or stoppages. Real throughput is lower. Apply an Overall Equipment Effectiveness (OEE) factor to estimate actual throughput. Typical packaging line OEE ranges from 60% to 85%. A conveyor designed for 100 products per minute at 75% OEE delivers approximately 75 products per minute in sustained production. Design conveyor capacity for the required actual throughput divided by the expected OEE — not the nameplate throughput.
+            Theoretical throughput assumes perfect product spacing with no gaps, jams, or stoppages. Real throughput is lower. Apply an Overall Equipment Effectiveness (OEE) factor to estimate actual throughput. Typical packaging line OEE ranges from 60% to 85%. A conveyor designed for 100 products per minute at 75% OEE delivers approximately 75 products per minute in sustained production. Design conveyor capacity for the required actual throughput divided by the expected OEE , not the nameplate throughput.
           </p>
         </div>
       </div>
@@ -272,7 +272,7 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Buffer Time Guidelines</h3>
           <p>
-            Minimum buffer time depends on the type and frequency of downstream interruptions. Minor jams cleared in under a minute require 1-2 minutes of buffer. Changeovers that take 3-5 minutes require 3-5 minutes of buffer (or the upstream machine also stops for changeover). Unplanned downtime events are harder to predict — 2-3 minutes of buffer handles most short stoppages. For longer planned stops, it is more practical to stop the upstream machine than to build 10+ minutes of accumulation.
+            Minimum buffer time depends on the type and frequency of downstream interruptions. Minor jams cleared in under a minute require 1-2 minutes of buffer. Changeovers that take 3-5 minutes require 3-5 minutes of buffer (or the upstream machine also stops for changeover). Unplanned downtime events are harder to predict , 2-3 minutes of buffer handles most short stoppages. For longer planned stops, it is more practical to stop the upstream machine than to build 10+ minutes of accumulation.
           </p>
         </div>
       </div>
@@ -360,7 +360,7 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Roller Load Capacity</h3>
           <p>
-            Each roller has a maximum load capacity determined by the tube wall thickness, shaft diameter, and bearing type. The load per roller equals the product weight divided by the number of rollers under the product. A 50-lb case on four rollers puts 12.5 lbs per roller. Roller manufacturers publish load ratings per roller at specified speeds — verify that the selected roller handles the calculated per-roller load with margin.
+            Each roller has a maximum load capacity determined by the tube wall thickness, shaft diameter, and bearing type. The load per roller equals the product weight divided by the number of rollers under the product. A 50-lb case on four rollers puts 12.5 lbs per roller. Roller manufacturers publish load ratings per roller at specified speeds , verify that the selected roller handles the calculated per-roller load with margin.
           </p>
           <!-- VERIFY: specific roller load ratings vary widely by manufacturer and should be confirmed from manufacturer catalogs -->
 

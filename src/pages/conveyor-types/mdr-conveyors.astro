@@ -46,7 +46,7 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "MDR: Motor Driven Roller Conveyors — Technology, Zone Control & Selection",
+  "headline": "MDR: Motor Driven Roller Conveyors , Technology, Zone Control & Selection",
   "description": "Complete guide to MDR (Motor Driven Roller) conveyors: 24VDC technology, zone control, zero-pressure accumulation, energy savings, and comparison to belt-driven and line-shaft systems.",
   "url": "https://packagingconveyor.com/conveyor-types/mdr-conveyors/",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
@@ -96,20 +96,20 @@ const articleSchema = {
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">The Motorized Roller</h3>
-        <p>An MDR roller looks identical to a standard conveyor roller from the outside — a steel or aluminum tube with bearings and axles. Inside, a compact brushless DC (BLDC) motor and planetary gearbox convert 24VDC power into roller rotation. The motor stator mounts to the fixed axle. The rotor drives the outer roller tube. No external gearmotor, belt, or chain exists. The entire drive system fits inside a standard 1.9" or 2.0" diameter roller tube.</p>
-        <p>Interroll's RollerDrive EC5000 series, Itoh Denki's PM600 series, and Rulmeca's RDR series are the three leading MDR roller platforms. These rollers deliver 0.3-2.5 Nm of torque at speeds from 0.1 to 1.2 m/s (approximately 20-230 FPM). Power consumption per roller is typically 10-50 watts — a fraction of the power consumed by a conventional gearmotor driving an entire conveyor section.</p>
+        <p>An MDR roller looks identical to a standard conveyor roller from the outside , a steel or aluminum tube with bearings and axles. Inside, a compact brushless DC (BLDC) motor and planetary gearbox convert 24VDC power into roller rotation. The motor stator mounts to the fixed axle. The rotor drives the outer roller tube. No external gearmotor, belt, or chain exists. The entire drive system fits inside a standard 1.9" or 2.0" diameter roller tube.</p>
+        <p>Interroll's RollerDrive EC5000 series, Itoh Denki's PM600 series, and Rulmeca's RDR series are the three leading MDR roller platforms. These rollers deliver 0.3-2.5 Nm of torque at speeds from 0.1 to 1.2 m/s (approximately 20-230 FPM). Power consumption per roller is typically 10-50 watts , a fraction of the power consumed by a conventional gearmotor driving an entire conveyor section.</p>
         <!-- VERIFY: Interroll EC5000 torque and speed range specs -->
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zone Architecture</h3>
         <p>Each MDR zone consists of four components: one motorized roller, 2-4 slave rollers (connected to the motor roller by polyurethane O-ring bands), one photo-eye sensor, and one zone controller card. The zone controller reads the sensor, communicates with adjacent zone controllers via a simple signal wire, and controls the motor roller's speed and direction.</p>
-        <p>Zone length matches the product length plus a gap. A zone for 24" cases is typically 30" long (24" case + 6" gap). A zone for 12" cartons is typically 18" long. Each zone operates independently — running, stopped, or reversing — regardless of what adjacent zones are doing. This independent zone control is the foundation of <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
+        <p>Zone length matches the product length plus a gap. A zone for 24" cases is typically 30" long (24" case + 6" gap). A zone for 12" cartons is typically 18" long. Each zone operates independently , running, stopped, or reversing , regardless of what adjacent zones are doing. This independent zone control is the foundation of <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zero-Pressure Accumulation Logic</h3>
         <p>MDR ZPA uses a cascading signal protocol between zones. Each zone has three states: empty (no product detected), occupied-and-running (product present, downstream clear), and occupied-and-stopped (product present, downstream occupied). When a zone detects "downstream occupied," it stops its motor. The product stops in that zone with a controlled gap to the product ahead. This signal cascades upstream, filling zones back-to-front with gaps between every product.</p>
-        <p>When the downstream blockage clears, the leading zone starts first, creating a gap. The next zone starts, and the release cascades upstream. This provides smooth, sequential product release — sometimes called "first-in, first-out" (FIFO) accumulation.</p>
+        <p>When the downstream blockage clears, the leading zone starts first, creating a gap. The next zone starts, and the release cascades upstream. This provides smooth, sequential product release , sometimes called "first-in, first-out" (FIFO) accumulation.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">24VDC Power Distribution</h3>
-        <p>MDR systems use 24VDC power, distributed from a central power supply to each zone controller. The low voltage (24VDC is Class 2 / SELV) simplifies wiring — no conduit is required in most jurisdictions. Zone controllers draw 1-3 amps each. A single 24VDC power supply (typically 10-40 amps) serves 10-30 zones depending on load. The 24VDC architecture eliminates 480V/240V wiring to individual conveyor sections, reducing electrical installation cost significantly.</p>
+        <p>MDR systems use 24VDC power, distributed from a central power supply to each zone controller. The low voltage (24VDC is Class 2 / SELV) simplifies wiring , no conduit is required in most jurisdictions. Zone controllers draw 1-3 amps each. A single 24VDC power supply (typically 10-40 amps) serves 10-30 zones depending on load. The 24VDC architecture eliminates 480V/240V wiring to individual conveyor sections, reducing electrical installation cost significantly.</p>
         <!-- VERIFY: NEC Class 2 wiring exemptions for 24VDC MDR installations -->
       </div>
     </div>
@@ -263,18 +263,18 @@ const articleSchema = {
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">MDR Roller Manufacturers</h3>
         <ul class="list-disc list-inside space-y-2 ml-2">
-          <li><strong class="text-ink">Interroll</strong> — RollerDrive EC5000 series. Swiss-based global leader. Supplies motorized rollers to most major conveyor integrators.</li>
-          <li><strong class="text-ink">Itoh Denki</strong> — PM600/PM500 series. Japanese manufacturer with strong presence in Asia and North America.</li>
-          <li><strong class="text-ink">Rulmeca</strong> — RDR (RollerDrive) series. Italian manufacturer with global distribution.</li>
+          <li><strong class="text-ink">Interroll</strong> , RollerDrive EC5000 series. Swiss-based global leader. Supplies motorized rollers to most major conveyor integrators.</li>
+          <li><strong class="text-ink">Itoh Denki</strong> , PM600/PM500 series. Japanese manufacturer with strong presence in Asia and North America.</li>
+          <li><strong class="text-ink">Rulmeca</strong> , RDR (RollerDrive) series. Italian manufacturer with global distribution.</li>
         </ul>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">System Integrators Using MDR</h3>
         <ul class="list-disc list-inside space-y-2 ml-2">
-          <li><strong class="text-ink">Hytrol</strong> — EZLogic MDR platform with proprietary zone control logic.</li>
-          <li><strong class="text-ink">Dematic</strong> — Integrated MDR conveyor systems for distribution and fulfillment.</li>
-          <li><strong class="text-ink">Intelligrated (Honeywell)</strong> — MDR accumulation and transport in IntelliSort systems.</li>
-          <li><strong class="text-ink">TGW</strong> — KingDrive MDR platform for e-commerce and retail distribution.</li>
-          <li><strong class="text-ink">Bastian Solutions (Toyota)</strong> — MDR conveyor design and integration for fulfillment centers.</li>
+          <li><strong class="text-ink">Hytrol</strong> , EZLogic MDR platform with proprietary zone control logic.</li>
+          <li><strong class="text-ink">Dematic</strong> , Integrated MDR conveyor systems for distribution and fulfillment.</li>
+          <li><strong class="text-ink">Intelligrated (Honeywell)</strong> , MDR accumulation and transport in IntelliSort systems.</li>
+          <li><strong class="text-ink">TGW</strong> , KingDrive MDR platform for e-commerce and retail distribution.</li>
+          <li><strong class="text-ink">Bastian Solutions (Toyota)</strong> , MDR conveyor design and integration for fulfillment centers.</li>
         </ul>
         <!-- VERIFY: TGW KingDrive platform name and current product branding -->
       </div>
@@ -321,7 +321,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
-            <p>Each zone has one motorized roller, 2-4 slave rollers, a photo-eye sensor, and a zone controller card. The controller reads the sensor and communicates with adjacent zones. When downstream is occupied, the upstream zone holds its product with a gap — creating <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
+            <p>Each zone has one motorized roller, 2-4 slave rollers, a photo-eye sensor, and a zone controller card. The controller reads the sensor and communicates with adjacent zones. When downstream is occupied, the upstream zone holds its product with a gap , creating <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>.</p>
           </div>
         </details>
         <details class="group border border-border bg-surface p-6 open:pb-8">
