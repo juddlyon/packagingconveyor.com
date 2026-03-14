@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Components", "item": "https://packagingconveyor.com/components/" },
+    { "@type": "ListItem", "position": 3, "name": "Cleaning Systems", "item": "https://packagingconveyor.com/components/cleaning-systems/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a conveyor belt cleaning system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A conveyor belt cleaning system removes product residue, debris, and carryback from the belt surface to maintain sanitary conditions, prevent contamination, reduce belt wear, and keep return rollers clean. Belt cleaners include primary scrapers (mounted at the head pulley), secondary scrapers (mounted behind the primary), brush cleaners, air knives, and washdown systems. Food and pharmaceutical applications require FDA-compliant materials and designs that can be sanitized."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do washdown conveyors work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washdown conveyors are designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or controls. They feature sealed bearings (IP65 or IP69K rated), stainless steel construction, sloped surfaces that shed water, sealed or washdown-rated motors, NEMA 4X electrical enclosures, and quick-drain features. Washdown is performed manually with hoses and foam or through automated clean-in-place (CIP) systems with spray nozzles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between primary and secondary belt cleaners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Primary belt cleaners mount at the head pulley discharge point and remove the bulk of carryback material from the belt. They use urethane, polyurethane, or tungsten carbide blades depending on the abrasiveness of the material. Secondary belt cleaners mount behind the primary on the return side of the belt and remove finer residue that the primary cleaner missed. Multiple secondary cleaners may be used in series for heavy carryback applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should conveyor belts be cleaned?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt cleaning frequency depends on the product, sanitation requirements, and contamination risk. Food and pharmaceutical conveyors typically require cleaning after each production run, at shift changes, and whenever product changeover occurs. Distribution and manufacturing conveyors may only need weekly or monthly cleaning unless visible buildup occurs. Continuous belt cleaners (scrapers, brushes) operate during normal production to prevent buildup."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Cleaning Systems: Belt Cleaners, Washdown & Sanitation",
+  "description": "Guide to conveyor cleaning systems including belt scrapers, brush cleaners, washdown conveyors, and sanitation equipment for food, beverage, and pharmaceutical applications.",
+  "url": "https://packagingconveyor.com/components/cleaning-systems/",
+  "datePublished": "2026-03-14",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PackagingConveyor.com",
+    "url": "https://packagingconveyor.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Conveyor Cleaning Systems: Belt Cleaners & Washdown | Packaging Conveyor"
+  description="Guide to conveyor cleaning systems: belt scrapers, brush cleaners, washdown conveyors, and sanitation for food, beverage, and pharmaceutical packaging applications."
+  canonical="https://packagingconveyor.com/components/cleaning-systems/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/components/" class="hover:text-accent transition-colors">Components</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Cleaning Systems</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Components</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Conveyor Cleaning Systems: Belt Cleaners & Washdown
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Conveyor cleaning systems maintain sanitary conditions, prevent product contamination, reduce belt wear, and keep return rollers clean. This includes belt scrapers and cleaners for continuous debris removal, washdown-rated conveyor designs for wet cleaning environments, and sanitation systems for food, beverage, and pharmaceutical applications where hygiene is critical.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Cleaner Types -->
+  <section class="py-20 bg-surface" aria-labelledby="cleaners-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Cleaners</div>
+      <h2 id="cleaners-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Conveyor Belt <span class="text-accent">Cleaners</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Primary Scrapers</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Mount at the head pulley discharge point to remove bulk carryback. Blade contacts the belt just after it leaves the pulley. Available in urethane (general purpose), polyurethane (food-grade), tungsten carbide (abrasive materials), and stainless steel (sanitary). Spring or air tensioners maintain blade contact as it wears.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Head Pulley</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Bulk Removal</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Secondary Scrapers</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Mount on the return side behind the primary cleaner for finer cleaning. Multiple secondaries may be used in series for heavy carryback. Blade angles and materials vary based on residue type. Essential for keeping return rollers and idlers clean on bulk conveyors.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Return Side</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Fine Cleaning</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Brush Cleaners</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Rotating or stationary brushes for light debris, dust, and dry residue removal. Nylon bristles for general cleaning, polypropylene for wet environments, stainless steel for heavy buildup. Motorized rotary brushes provide more aggressive cleaning than stationary brushes.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Dust</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Light Debris</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Air Knives</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Compressed air blown across the belt surface to remove loose particles, water, or light debris. Used after washing to dry belts, in dusty environments to prevent buildup, and for non-contact cleaning where scrapers might damage products. Requires compressed air supply.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Non-Contact</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Drying</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">V-Plow Cleaners</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">V-shaped scrapers mounted on the return side to push material off the belt edges before it reaches return rollers. Prevents material from being pinched between the belt and rollers. Common on bulk material conveyors and incline applications.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Edge Cleaning</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Bulk Materials</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Belt Wash Systems</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Spray nozzles apply water, detergent, or sanitizer to the belt surface, followed by scrapers and air knives to remove liquid. Used for heavy contamination, sticky residues, and sanitary applications. May be inline (continuous) or batch (during changeover).</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Wet Cleaning</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Sanitary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Washdown Conveyors -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="washdown-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Washdown Design</div>
+      <h2 id="washdown-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Washdown <span class="text-accent">Conveyors</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Washdown conveyors are designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or controls. They are standard in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage</a>, <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a>, and other sanitary applications where daily wet cleaning is required.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Washdown Design Features</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Sealed bearings:</strong> IP65 (dust-tight, water jet resistant) or IP69K (high-pressure, high-temperature washdown) rated bearings prevent water intrusion.</li>
+          <li><strong class="text-ink">Stainless steel construction:</strong> 304SS for general washdown, 316SS for harsh chemicals or salt environments. All welds ground smooth to prevent bacterial harborage.</li>
+          <li><strong class="text-ink">Sloped surfaces:</strong> Frame surfaces angled to shed water rather than pool. No horizontal surfaces where water can collect.</li>
+          <li><strong class="text-ink">Washdown motors:</strong> Totally enclosed, fan-cooled (TEFC) or totally enclosed, non-ventilated (TENV) motors with epoxy coatings or stainless steel housings.</li>
+          <li><strong class="text-ink">NEMA 4X enclosures:</strong> All electrical enclosures rated for washdown (NEMA 4X or IP66 minimum).</li>
+          <li><strong class="text-ink">Quick-drain features:</strong> Drain holes, open frame designs, and belt lift systems for faster drying.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Washdown Ratings</h3>
+        <p>IP (Ingress Protection) ratings define the level of water and dust protection:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">IP65:</strong> Dust-tight, protected against water jets from any direction. Suitable for hose-down cleaning.</li>
+          <li><strong class="text-ink">IP66:</strong> Dust-tight, protected against powerful water jets. Required for direct spray cleaning.</li>
+          <li><strong class="text-ink">IP67:</strong> Dust-tight, protected against temporary immersion. For conveyors that may be submerged briefly.</li>
+          <li><strong class="text-ink">IP69K:</strong> Dust-tight, protected against high-pressure, high-temperature washdown. Required for USDA/3-A <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary applications</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanitary Cleaning -->
+  <section class="py-20 bg-surface" aria-labelledby="sanitary-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sanitary Applications</div>
+      <h2 id="sanitary-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Sanitary Conveyor <span class="text-accent">Cleaning</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sanitation Protocols</h3>
+        <p><a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary conveyors</a> in food, beverage, and pharmaceutical operations require structured cleaning protocols that typically include:</p>
+        <ol class="list-decimal list-inside space-y-2 ml-2">
+          <li>Pre-rinse to remove loose debris and product residue</li>
+          <li>Foam or detergent application to break down fats, proteins, and soils</li>
+          <li>Contact time for chemical action</li>
+          <li>High-pressure rinse to remove chemicals and suspended debris</li>
+          <li>Sanitizer application to kill bacteria (often quaternary ammonium or chlorine-based)</li>
+          <li>Final rinse if required</li>
+          <li>Drying (air dry, air knife, or towel dry)</li>
+        </ol>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Clean-in-Place (CIP)</h3>
+        <p>Automated clean-in-place systems use fixed spray nozzles to deliver cleaning chemicals without disassembly. CIP is common on <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">modular plastic belt conveyors</a> in dairy, beverage, and pharmaceutical applications. Advantages include repeatable cleaning cycles, reduced labor, and documented sanitation records. CIP systems require careful design to ensure all belt surfaces receive adequate spray coverage.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Lift and Remove Systems</h3>
+        <p>For thorough cleaning, some conveyors feature tool-free belt removal or belt lift systems that raise the belt off the slider bed. This allows cleaning the underside of the belt, the bed plate, and return rollers. Quick-release belt tensioners and lift-out belt supports reduce cleaning time on multi-shift operations.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Material Considerations</h3>
+        <p>FDA-compliant materials for food contact include 304 and 316 stainless steel, UHMW polyethylene, acetal (Delrin), and certain plastics approved under 21 CFR 177. Blue-colored plastics (metal-detectable and visually distinct) are preferred for <a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">guide rails</a> and scrapers in food plants. Avoid painted surfaces, porous materials, and threaded fasteners in product zones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Selecting a <span class="text-accent">Cleaning System</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[900px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Application</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Cleaning Method</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Equipment</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Frequency</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Bulk material carryback</td>
+              <td class="py-4 pr-4">Mechanical scraping</td>
+              <td class="py-4 pr-4">Primary + secondary scrapers, V-plow</td>
+              <td class="py-4 pr-4">Continuous</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Dust and dry debris</td>
+              <td class="py-4 pr-4">Brushing, air</td>
+              <td class="py-4 pr-4">Rotary brush, air knife</td>
+              <td class="py-4 pr-4">Continuous</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Food packaging (dry)</td>
+              <td class="py-4 pr-4">Dry wipe, vacuum</td>
+              <td class="py-4 pr-4">Wipe-down, vacuum system</td>
+              <td class="py-4 pr-4">Shift change, product change</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Food/bev (wet products)</td>
+              <td class="py-4 pr-4">Wet washdown</td>
+              <td class="py-4 pr-4">Foam, rinse, sanitize, air dry</td>
+              <td class="py-4 pr-4">End of run, product change</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Dairy, beverage (raw)</td>
+              <td class="py-4 pr-4">CIP / automated wash</td>
+              <td class="py-4 pr-4">Fixed spray nozzles, CIP system</td>
+              <td class="py-4 pr-4">Every batch / run</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Pharmaceutical</td>
+              <td class="py-4 pr-4">Validated cleaning</td>
+              <td class="py-4 pr-4">Manual + CIP, documented protocol</td>
+              <td class="py-4 pr-4">Per batch, per product change</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Distribution / warehouse</td>
+              <td class="py-4 pr-4">Periodic cleaning</td>
+              <td class="py-4 pr-4">Manual wipe, vacuum, occasional wash</td>
+              <td class="py-4 pr-4">Weekly / monthly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface" aria-labelledby="manufacturers-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Suppliers</div>
+      <h2 id="manufacturers-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleaning System <span class="text-accent">Suppliers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>Belt cleaners and cleaning systems are available from conveyor OEMs, component specialists, and cleaning equipment suppliers:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Martin Engineering</strong> specializes in bulk conveyor belt cleaners, scrapers, and dust suppression systems.</li>
+          <li><strong class="text-ink">Flexco</strong> manufactures belt cleaners, tracking systems, and belt maintenance products.</li>
+          <li><strong class="text-ink">ASGCO</strong> (American Standard Global Company) provides belt cleaners, idlers, and conveyor products for mining and industrial applications.</li>
+          <li><strong class="text-ink">Dorner</strong> and <strong class="text-ink">mk North America</strong> offer washdown conveyor designs with sanitary cleaning features for food and pharmaceutical packaging.</li>
+          <li><strong class="text-ink">Spraying Systems Co.</strong> supplies spray nozzles and wash systems for CIP and manual cleaning applications.</li>
+          <li><strong class="text-ink">Conveyor component distributors</strong> (Motion Industries, Applied Industrial Technologies) stock replacement scraper blades and cleaning accessories.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a conveyor belt cleaning system?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A conveyor belt cleaning system removes product residue, debris, and carryback from the belt surface to maintain sanitary conditions, prevent contamination, reduce belt wear, and keep return rollers clean. Belt cleaners include primary scrapers (mounted at the head pulley), secondary scrapers (mounted behind the primary), brush cleaners, air knives, and washdown systems. <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and pharmaceutical applications</a> require FDA-compliant materials and designs that can be sanitized.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do washdown conveyors work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Washdown conveyors are designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or controls. They feature sealed bearings (IP65 or IP69K rated), <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel construction</a>, sloped surfaces that shed water, sealed or washdown-rated motors, NEMA 4X electrical enclosures, and quick-drain features. Washdown is performed manually with hoses and foam or through automated clean-in-place (CIP) systems with spray nozzles.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between primary and secondary belt cleaners?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Primary belt cleaners mount at the head pulley discharge point and remove the bulk of carryback material from the belt. They use urethane, polyurethane, or tungsten carbide blades depending on the abrasiveness of the material. Secondary belt cleaners mount behind the primary on the return side of the belt and remove finer residue that the primary cleaner missed. Multiple secondary cleaners may be used in series for heavy carryback applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How often should conveyor belts be cleaned?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Food and pharmaceutical conveyors</a> typically require cleaning after each production run, at shift changes, and whenever product changeover occurs. Distribution and manufacturing conveyors may only need weekly or monthly cleaning unless visible buildup occurs. Continuous belt cleaners (scrapers, brushes) operate during normal production to prevent buildup.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/components/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Components</div>
+          <p class="text-sm text-white/60">Browse component categories</p>
+        </a>
+        <a href="/industries/food-conveyors/sanitary/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Sanitary Conveyors</div>
+          <p class="text-sm text-white/60">Hygienic design standards</p>
+        </a>
+        <a href="/conveyor-types/belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">Flat, cleated, and modular</p>
+        </a>
+        <a href="/resources/conveyor-maintenance/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Maintenance Guide</div>
+          <p class="text-sm text-white/60">Preventive maintenance tips</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

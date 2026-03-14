@@ -1,0 +1,470 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const beltTypes = [
+  {
+    name: 'Flat Belt Conveyors',
+    slug: '/conveyor-types/flat-belt-conveyors/',
+    desc: 'General-purpose belt conveyors with smooth, continuous surfaces for cases, cartons, and loose products.',
+    tags: ['General Purpose', 'Smooth Surface'],
+  },
+  {
+    name: 'Cleated Belt Conveyors',
+    slug: '/conveyor-types/cleated-conveyors/',
+    desc: 'Belts with raised cleats or flights for incline transport and product separation.',
+    tags: ['Incline', 'Product Separation'],
+  },
+  {
+    name: 'Modular Plastic Belt',
+    slug: '/conveyor-types/modular-conveyors/',
+    desc: 'Interlocking plastic modules for food, beverage, and washdown applications.',
+    tags: ['Food Grade', 'Washdown'],
+  },
+  {
+    name: 'Activated Roller Belt (ARB)',
+    slug: '/conveyor-types/activated-roller-belt/',
+    desc: 'Belt with embedded rollers for diverting, merging, and right-angle transfers.',
+    tags: ['Diverting', 'Sortation'],
+  },
+  {
+    name: 'Wire Mesh Belt',
+    slug: '/conveyor-types/wire-mesh-conveyors/',
+    desc: 'Open mesh belts for cooling, baking, drying, and high-temperature applications.',
+    tags: ['High-Temp', 'Cooling'],
+  },
+  {
+    name: 'Hinged Steel Belt',
+    slug: '/conveyor-types/hinged-steel-belt/',
+    desc: 'Heavy-duty steel belts for scrap, chips, and hot or sharp materials.',
+    tags: ['Heavy-Duty', 'Metal Scrap'],
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Belt Conveyors", "item": "https://packagingconveyor.com/conveyor-types/belt-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a belt conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A belt conveyor uses a continuous loop of material (the belt) stretched between two or more pulleys to transport products. The belt wraps around a head pulley (driven) and a tail pulley (idler), with the top surface carrying products and the bottom returning empty. Belt conveyors handle products of any shape, size, or bottom condition, including bags, pouches, irregular shapes, and loose items that roller conveyors cannot transport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the different types of conveyor belts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common conveyor belt types include: flat belt (smooth surface for general transport), cleated belt (raised flights for inclines and product separation), modular plastic belt (interlocking modules for food and washdown), timing/positive drive belt (toothed for precise positioning), wire mesh belt (open weave for high temperatures), and specialty belts (vacuum, magnetic, rough-top). Each type suits different products, environments, and application requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a belt conveyor and a roller conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt conveyors use a continuous belt surface and can transport products of any shape or bottom condition. Roller conveyors use cylindrical rollers and require flat, rigid product bottoms spanning at least 3 rollers. Belt conveyors excel at inclines, handling bags and pouches, and transporting small or loose items. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy flat-bottomed loads like cases and pallets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What belt conveyor is best for food applications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modular plastic belt conveyors are the preferred choice for food and beverage applications because they are easy to clean (individual modules can be removed), resistant to water and chemicals, available in FDA-compliant materials, and suitable for washdown environments. For dry food applications, FDA-compliant PU (polyurethane) flat belts are also common. Wire mesh belts are used for baking, cooling, and freezing applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can a belt conveyor run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belt conveyor speeds typically range from 20 to 400 feet per minute (FPM) depending on the application. Light-duty packaging conveyors commonly run at 50-150 FPM. High-speed sortation and distribution conveyors may reach 400-600 FPM. Maximum practical speed depends on belt type, product stability, and the ability to load and unload products at the conveyor ends. Incline conveyors run slower to prevent product slippage."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Belt Conveyors: Types, Applications & Selection Guide",
+  "description": "Complete guide to belt conveyor types including flat belt, cleated, modular plastic, wire mesh, and timing belts. Comparison, specifications, and selection criteria for packaging applications.",
+  "url": "https://packagingconveyor.com/conveyor-types/belt-conveyors/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PackagingConveyor.com",
+    "url": "https://packagingconveyor.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Belt Conveyors: Types, Materials & Selection Guide | Packaging Conveyor"
+  description="Guide to belt conveyor types: flat belt, cleated, modular plastic, wire mesh, and timing belts. Comparison, speed ranges, and selection criteria for packaging applications."
+  canonical="https://packagingconveyor.com/conveyor-types/belt-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Belt Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Types</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Belt Conveyors: Types, Materials & Selection Guide
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A belt conveyor uses a continuous loop of flexible material stretched between pulleys to transport products. Unlike <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> that require flat-bottomed loads, belt conveyors handle products of any shape: bags, pouches, irregular items, small parts, and loose bulk materials. Belt types range from general-purpose flat belts to specialized cleated, modular plastic, and wire mesh designs for specific applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belt Type Navigation -->
+  <section class="py-16 bg-surface" aria-labelledby="subtypes-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Conveyor Types</div>
+      <h2 id="subtypes-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Explore Belt Conveyor <span class="text-accent">Sub-Types</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {beltTypes.map((type) => (
+          <a href={type.slug} class="card group p-6">
+            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">{type.name}</h3>
+            <p class="text-base text-ink-muted">{type.desc}</p>
+            <div class="flex gap-2 mt-3">
+              {type.tags.map((tag: string) => (
+                <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How Belt Conveyors Work -->
+  <article class="py-20 bg-surface-dim bg-dots" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technical Overview</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Belt Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A belt conveyor consists of a continuous belt loop, a drive pulley (head pulley) powered by a motor, an idler pulley (tail pulley) that provides tension, and a support structure that carries the belt and products. The belt wraps around the head and tail pulleys, with the top surface (carry side) transporting products and the bottom surface (return side) traveling back empty.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Support Methods</h3>
+        <p><strong class="text-ink">Slider bed</strong> conveyors support the belt on a flat plate or wear strips (typically UHMW). This provides a solid surface for precise positioning and is common in packaging applications. <strong class="text-ink">Roller bed</strong> conveyors support the belt on a series of small rollers, reducing friction for longer conveyors and heavier loads. <strong class="text-ink">Troughed</strong> configurations use angled idler rollers to form a U-shape for bulk material containment.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Systems</h3>
+        <p>Most belt conveyors use an AC gearmotor driving the head pulley directly or through a chain/belt transmission. Variable frequency drives (VFDs) allow speed adjustment. For precise positioning, servo drives provide accurate stop/start control for <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing applications</a>. <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">Motor sizing</a> depends on belt length, speed, product weight, and incline angle.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Tensioning</h3>
+        <p>Proper belt tension is critical for tracking and drive efficiency. Tensioning methods include screw take-up (manual adjustment via threaded rods), gravity take-up (weighted pulley provides constant tension), and automatic take-up (pneumatic or spring-loaded). Insufficient tension causes belt slippage. Excessive tension accelerates bearing and belt wear.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Tracking</h3>
+        <p>Belt tracking keeps the belt centered on the pulleys and frame. Crowned pulleys (slightly larger diameter at center) naturally guide the belt to center. Tracking adjustments at the tail pulley correct persistent mistracking. Training idlers (self-aligning rollers) automatically correct belt drift. Proper tracking prevents edge wear, spillage, and belt damage.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Comparison</div>
+      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Belt Conveyor Type <span class="text-accent">Comparison</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[900px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Belt Type</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed Range</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Max Incline</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Washdown</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover">Flat Belt (PVC/PU)</a></td>
+              <td class="py-3 pr-4">General packaging, cases, cartons</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-400 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">15-20°</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover">Cleated Belt</a></td>
+              <td class="py-3 pr-4">Inclines, product separation</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">45-90°</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover">Modular Plastic</a></td>
+              <td class="py-3 pr-4">Food, beverage, washdown</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-150 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30-45°</td>
+              <td class="py-3 pr-4">Excellent</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover">Wire Mesh</a></td>
+              <td class="py-3 pr-4">Baking, cooling, high-temp</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-100 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30°</td>
+              <td class="py-3 pr-4">Good</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Timing / Positive Drive</td>
+              <td class="py-3 pr-4">Indexing, precision positioning</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-200 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">30°</td>
+              <td class="py-3 pr-4">Limited</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/activated-roller-belt/" class="text-accent hover:text-accent-hover">Activated Roller Belt</a></td>
+              <td class="py-3 pr-4">Diverting, merging, transfers</td>
+              <td class="py-3 pr-4 font-mono text-sm">100-400 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">0°</td>
+              <td class="py-3 pr-4">No</td>
+              <td class="py-3 font-mono text-sm">$$$$</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/hinged-steel-belt/" class="text-accent hover:text-accent-hover">Hinged Steel Belt</a></td>
+              <td class="py-3 pr-4">Scrap, chips, heavy/hot materials</td>
+              <td class="py-3 pr-4 font-mono text-sm">10-50 FPM</td>
+              <td class="py-3 pr-4 font-mono text-sm">60°</td>
+              <td class="py-3 pr-4">Yes</td>
+              <td class="py-3 font-mono text-sm">$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Speed and incline values are typical ranges. Actual capabilities depend on belt construction, product characteristics, and manufacturer specifications. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for detailed pricing factors.</p>
+    </div>
+  </section>
+
+  <!-- Belt Materials -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="materials-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Belt Materials</div>
+      <h2 id="materials-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Conveyor Belt <span class="text-accent">Materials</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">PVC (Polyvinyl Chloride)</h3>
+        <p>The most common belt material for general-purpose packaging conveyors. PVC belts are economical, available in many surface finishes (smooth, rough-top, pattern-top), and suitable for temperatures from 14°F to 180°F. Standard PVC is not FDA-approved for direct food contact. Food-grade PVC variants are available but are being replaced by PU in food applications.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">PU (Polyurethane)</h3>
+        <p>Preferred for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage applications</a> because PU is FDA-compliant, resistant to oils and fats, and easier to clean than PVC. PU belts offer better abrasion resistance and longer service life than PVC but cost more. Temperature range is similar to PVC. White and blue PU is standard for food lines (blue for visibility in case of belt fragments).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Modular Plastic</h3>
+        <p><a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular plastic belts</a> consist of interlocking plastic modules joined by hinge pins. Materials include polypropylene (PP), acetal (POM), and polyethylene (PE), all available in FDA-compliant grades. Modular belts excel in <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary washdown environments</a> because individual modules can be removed for cleaning or replacement. Intralox and Habasit are leading modular belt manufacturers.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Wire Mesh / Metal</h3>
+        <p><a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Wire mesh belts</a> use woven or welded metal wire for high-temperature applications (baking, cooling, heat treatment) and applications requiring airflow through the belt. Stainless steel mesh handles temperatures to 2000°F+ depending on alloy. Carbon steel is lower cost for non-corrosive, non-food applications. Wire mesh belts are also used for <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling conveyors</a> where airflow is needed.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Specialty Materials</h3>
+        <p>Specialty belt materials include silicone (high-temperature, non-stick), Teflon/PTFE coating (release properties), anti-static formulations, metal-detectable plastics, and reinforced rubber for heavy-duty bulk handling. Material selection depends on product contact requirements, temperature, chemical exposure, and regulatory compliance (FDA, USDA, 3-A).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt Conveyor <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Primary Packaging</h3>
+        <p>Belt conveyors transport products through primary packaging operations: filling, sealing, wrapping, and labeling. Flat belts provide stable, consistent product positioning for accurate filling and labeling. Precision belt conveyors with servo drives support <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing motions</a> for intermittent packaging machines.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Incline and Decline Transport</h3>
+        <p>Belt conveyors handle <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline and decline transport</a> that roller conveyors cannot. Standard flat belts handle up to 15-20° inclines depending on product friction. <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Cleated belts</a> enable steeper inclines up to 90° (vertical). Rough-top and high-grip belt surfaces extend incline capability without cleats.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Food and Beverage</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage plants</a> use belt conveyors for raw ingredient handling, product transport between processing steps, and finished goods packaging. <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular plastic belts</a> dominate wet environments. <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Wire mesh belts</a> carry products through <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery ovens</a>, fryers, and <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling tunnels</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Small Parts and Components</h3>
+        <p>Belt conveyors transport small parts, components, and assemblies that would fall between roller conveyor gaps. Flat belt conveyors with side <a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">guide rails</a> contain small items. Vacuum belt conveyors grip flat, lightweight items (labels, cartons, pouches) that standard friction cannot hold.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Bags, Pouches, and Flexible Packaging</h3>
+        <p>Flexible packaging (bags, pouches, pillow packs) cannot travel on roller conveyors because they conform to roller gaps. Belt conveyors provide the continuous surface these products require. Gentle-handling belts with soft surfaces prevent puncturing or crushing delicate pouches.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Criteria -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Selecting a <span class="text-accent">Belt Conveyor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Belt conveyor selection involves matching belt type, material, width, and speed to your product and application requirements.</p>
+
+        <p><strong class="text-ink">1. Product characteristics.</strong> Consider product weight (determines belt strength and motor sizing), dimensions (determines belt width), bottom surface (smooth, irregular, soft, rigid), temperature (hot products require heat-resistant belts), and sensitivity (fragile products need soft or cushioned belts).</p>
+
+        <p><strong class="text-ink">2. Environmental requirements.</strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Food contact</a> requires FDA-compliant materials. Washdown environments require sealed components and corrosion-resistant construction. High or low temperatures require appropriate belt materials. Chemical exposure requires compatible belt and frame materials.</p>
+
+        <p><strong class="text-ink">3. Incline angle.</strong> Calculate the incline angle from floor rise and horizontal run. Select belt type based on maximum incline capability: flat belt (15-20°), rough-top (25-30°), <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleated</a> (up to 90°). Higher inclines require slower speeds.</p>
+
+        <p><strong class="text-ink">4. Speed and throughput.</strong> Calculate required belt speed from throughput and product spacing. Higher speeds require more robust belt construction, larger motors, and attention to product stability at load/unload points.</p>
+
+        <p><strong class="text-ink">5. Accumulation needs.</strong> Belt conveyors do not accumulate as easily as <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>. If accumulation is needed, consider a belt conveyor with a <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller accumulation section</a>, or a modular plastic belt with low-friction top surface that allows slip accumulation.</p>
+
+        <p><strong class="text-ink">6. Cleaning and maintenance.</strong> Evaluate cleaning requirements and <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">maintenance access</a>. <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular plastic belts</a> are easiest to clean and repair (individual modules replace without removing the entire belt). Fabric belts may require more frequent replacement in abrasive or wet environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface" aria-labelledby="manufacturers-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Manufacturers</div>
+      <h2 id="manufacturers-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Belt Conveyor <span class="text-accent">Manufacturers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>Belt conveyor manufacturers range from conveyor system builders to belting specialists:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Dorner</strong> (Hartland, WI): Precision belt conveyors for packaging, assembly, and food processing. Known for sanitary stainless steel conveyors.</li>
+          <li><strong class="text-ink">mk North America</strong> (Bloomfield, CT): Modular aluminum-frame belt conveyors for automation and packaging.</li>
+          <li><strong class="text-ink">Hytrol</strong> (Jonesboro, AR): Full range of belt, roller, and accumulation conveyors for distribution and manufacturing.</li>
+          <li><strong class="text-ink">Nercon</strong> (Oconto, WI): Sanitary conveyors for food, beverage, and pharmaceutical.</li>
+          <li><strong class="text-ink">Habasit</strong> (Global): Belting manufacturer producing fabric, modular plastic, and timing belts for OEMs and replacement.</li>
+          <li><strong class="text-ink">Intralox</strong> (Harahan, LA): Modular plastic belting specialist, known for DirectDrive and ThermoDrive technologies.</li>
+          <li><strong class="text-ink">Forbo-Siegling</strong> (Global): Fabric and specialty belting for conveyor OEMs.</li>
+        </ul>
+        <p>See the <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">conveyor manufacturers directory</a> for a comprehensive list.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a belt conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A belt conveyor uses a continuous loop of material (the belt) stretched between two or more pulleys to transport products. The belt wraps around a head pulley (driven) and a tail pulley (idler), with the top surface carrying products and the bottom returning empty. Belt conveyors handle products of any shape, size, or bottom condition, including bags, pouches, and irregular shapes that <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> cannot transport.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are the different types of conveyor belts?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Common conveyor belt types include: <a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">flat belt</a> (smooth surface for general transport), <a href="/conveyor-types/cleated-conveyors/" class="text-accent hover:text-accent-hover font-semibold">cleated belt</a> (raised flights for inclines), <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">modular plastic belt</a> (interlocking modules for food and washdown), timing/positive drive belt (toothed for precise positioning), <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">wire mesh belt</a> (open weave for high temperatures), and specialty belts (vacuum, magnetic, rough-top).</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a belt conveyor and a roller conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt conveyors use a continuous belt surface and can transport products of any shape or bottom condition. <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Roller conveyors</a> use cylindrical rollers and require flat, rigid product bottoms spanning at least 3 rollers. Belt conveyors excel at <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">inclines</a>, handling bags and pouches, and transporting small items. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>, and lower friction for heavy flat-bottomed loads.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What belt conveyor is best for food applications?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular plastic belt conveyors</a> are preferred for <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage applications</a> because they are easy to clean, resistant to water and chemicals, available in FDA-compliant materials, and suitable for <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">washdown environments</a>. For dry food, FDA-compliant PU flat belts are also common. <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Wire mesh belts</a> are used for <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">baking</a>, <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling</a>, and freezing.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How fast can a belt conveyor run?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Belt conveyor speeds typically range from 20 to 400 feet per minute (FPM) depending on the application. Light-duty <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging conveyors</a> commonly run at 50-150 FPM. High-speed sortation and distribution conveyors may reach 400-600 FPM. Maximum practical speed depends on belt type, product stability, and the ability to load and unload at the conveyor ends. <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Incline conveyors</a> run slower to prevent product slippage.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Conveyor Types</div>
+          <p class="text-sm text-white/60">Browse 30+ conveyor types</p>
+        </a>
+        <a href="/conveyor-types/roller-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Roller Conveyors</div>
+          <p class="text-sm text-white/60">Gravity, powered, and MDR</p>
+        </a>
+        <a href="/resources/conveyor-belting/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belting Guide</div>
+          <p class="text-sm text-white/60">Belt materials and selection</p>
+        </a>
+        <a href="/resources/conveyor-cost-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cost Guide</div>
+          <p class="text-sm text-white/60">Pricing factors by type</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

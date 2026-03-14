@@ -1,0 +1,502 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Components", "item": "https://packagingconveyor.com/components/" },
+    { "@type": "ListItem", "position": 3, "name": "Guide Rails", "item": "https://packagingconveyor.com/components/guide-rails/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are conveyor guide rails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conveyor guide rails are side-mounted rails that keep products centered on the conveyor belt or roller surface, prevent products from falling off the edges, create lanes for multi-row product flow, and orient products for downstream operations. Guide rails are typically made from UHMW polyethylene (low friction, FDA-compliant), stainless steel (durability, washdown environments), or aluminum with UHMW contact strips. Adjustable guide rails allow quick changeover between product sizes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best material for conveyor guide rails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UHMW polyethylene is the most common guide rail material because it offers low friction, good wear resistance, FDA compliance for food contact, and low cost. For heavy-duty applications or high-speed lines, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (Delrin) provides higher rigidity than UHMW for precision applications. For washdown environments in food and pharmaceutical plants, stainless steel frames with replaceable UHMW or acetal contact surfaces are standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I adjust conveyor guide rails for different product sizes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adjustable guide rail systems use one of three methods: hand-knob clamps that slide on cross-bars and lock in position, hand-wheel or crank adjusters that move both rails simultaneously via threaded rods, or quick-release pin systems for predetermined positions. For frequent changeovers, choose systems with visual scales or detent positions. Motorized adjustment is available for automated changeover on high-volume packaging lines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How wide should the gap be between conveyor guide rails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guide rail gap should be 1/8 to 1/4 inch (3-6mm) wider than the product on each side for standard transport. Tighter gaps (1/16 to 1/8 inch) are used for precision positioning before labelers, printers, or vision systems. Wider gaps (1/2 inch or more) may be needed for products that expand, flex, or have dimensional variation. For accumulation zones, increase the gap slightly to prevent product jamming under back-pressure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are lane dividers on a conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lane dividers are internal guide rails that split a wide conveyor into multiple parallel lanes. They are used to increase throughput by running multiple product streams on a single conveyor, to separate different products or SKUs running simultaneously, and to create staging lanes before case packing or palletizing. Lane dividers are typically adjustable to accommodate different product widths and lane configurations."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Guide Rails: Types, Materials & Adjustment Systems",
+  "description": "Complete guide to conveyor guide rails including adjustable side guides, lane dividers, and product containment systems. UHMW, stainless steel, and aluminum options with selection criteria.",
+  "url": "https://packagingconveyor.com/components/guide-rails/",
+  "datePublished": "2026-03-14",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PackagingConveyor.com",
+    "url": "https://packagingconveyor.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Conveyor Guide Rails: Adjustable Side Guides & Lane Dividers | Packaging Conveyor"
+  description="Guide to conveyor guide rails: adjustable side guides, lane dividers, UHMW and stainless options. Selection criteria, gap settings, and adjustment systems for packaging conveyors."
+  canonical="https://packagingconveyor.com/components/guide-rails/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/components/" class="hover:text-accent transition-colors">Components</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Guide Rails</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Components</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Conveyor Guide Rails: Adjustable Side Guides & Lane Dividers
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Conveyor guide rails are side-mounted rails that keep products centered on the belt or roller surface, prevent edge falloff, create lanes for multi-row product flow, and orient products for downstream operations like labeling, printing, and case packing. Adjustable guide rail systems allow quick changeover between product sizes without tools, reducing downtime on multi-SKU packaging lines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide Rail Types -->
+  <section class="py-20 bg-surface" aria-labelledby="types-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Guide Rail Types</div>
+      <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Types of Conveyor <span class="text-accent">Guide Rails</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Side Guide Rails</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Basic side containment rails mounted to the conveyor frame on both sides of the belt or roller surface. Keep products from falling off the conveyor edges during transport. Standard on most belt and <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a>.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Edge Protection</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Product Centering</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Adjustable Guide Rails</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Guide rails with adjustment mechanisms that allow quick width changes for different product sizes. Essential for multi-SKU operations. Available with hand-knob clamps, hand-wheel cranks, or quick-release pins for different changeover needs.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Quick Changeover</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Multi-SKU</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Lane Dividers</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Internal guide rails that split a wide conveyor into multiple parallel lanes. Used to increase throughput, separate products, or create staging lanes before <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a> and <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizing</a>. Typically adjustable to accommodate different lane widths.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Multi-Lane</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Throughput</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Flexible Guide Rails</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Curved or bendable guide rails for curved conveyor sections, <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">spiral conveyors</a>, and custom layouts. Made from flexible UHMW, spring steel with UHMW covers, or sectional designs that follow the conveyor curve.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Curved</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Spiral</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Top Hold-Down Rails</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Rails mounted above the conveyor surface to prevent light products from tipping, bouncing, or being displaced by air currents. Common on <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyors</a> and high-speed lines. Often combined with side guides for complete containment.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Incline</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">High-Speed</span>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Precision Guide Rails</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">High-accuracy guide systems for positioning products before labelers, printers, vision systems, or <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a>. Tighter tolerances (1/16" gap) and stiffer construction than standard transport guides.</p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Labeling</span>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="materials-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Materials</div>
+      <h2 id="materials-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Guide Rail <span class="text-accent">Materials</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[900px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Material</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Friction</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Durability</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">FDA</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Cost</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">UHMW Polyethylene</td>
+              <td class="py-4 pr-4">General packaging, food, lightweight products</td>
+              <td class="py-4 pr-4 font-mono text-sm">Very Low</td>
+              <td class="py-4 pr-4 font-mono text-sm">Good</td>
+              <td class="py-4 pr-4">Yes</td>
+              <td class="py-4 font-mono text-sm">$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Acetal (Delrin)</td>
+              <td class="py-4 pr-4">Precision positioning, high-speed lines</td>
+              <td class="py-4 pr-4 font-mono text-sm">Low</td>
+              <td class="py-4 pr-4 font-mono text-sm">Very Good</td>
+              <td class="py-4 pr-4">Yes</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Stainless Steel</td>
+              <td class="py-4 pr-4">Washdown, sanitary, high-wear applications</td>
+              <td class="py-4 pr-4 font-mono text-sm">Medium</td>
+              <td class="py-4 pr-4 font-mono text-sm">Excellent</td>
+              <td class="py-4 pr-4">Yes</td>
+              <td class="py-4 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">SS + UHMW Strip</td>
+              <td class="py-4 pr-4">Heavy-duty food/pharma, best of both</td>
+              <td class="py-4 pr-4 font-mono text-sm">Very Low</td>
+              <td class="py-4 pr-4 font-mono text-sm">Excellent</td>
+              <td class="py-4 pr-4">Yes</td>
+              <td class="py-4 font-mono text-sm">$$$</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Aluminum</td>
+              <td class="py-4 pr-4">Lightweight, modular conveyor systems</td>
+              <td class="py-4 pr-4 font-mono text-sm">Medium</td>
+              <td class="py-4 pr-4 font-mono text-sm">Good</td>
+              <td class="py-4 pr-4">No*</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Aluminum + UHMW</td>
+              <td class="py-4 pr-4">Light-duty food, general packaging</td>
+              <td class="py-4 pr-4 font-mono text-sm">Very Low</td>
+              <td class="py-4 pr-4 font-mono text-sm">Good</td>
+              <td class="py-4 pr-4">Yes</td>
+              <td class="py-4 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">*Aluminum itself is not FDA-compliant for direct food contact but is commonly used with UHMW contact surfaces in food applications.</p>
+
+      <div class="max-w-4xl mt-12 space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Material Selection Guidance</h3>
+        <p class="text-lg text-ink-muted leading-relaxed">
+          <strong class="text-ink">UHMW polyethylene</strong> (ultra-high molecular weight polyethylene) is the default choice for most packaging applications. It offers the lowest coefficient of friction of any solid material, resists wear from product sliding, and meets FDA requirements for food contact. UHMW is available in white (standard), black (UV-stabilized for outdoor), blue (metal-detectable for food safety), and anti-static formulations.
+        </p>
+        <p class="text-lg text-ink-muted leading-relaxed">
+          <strong class="text-ink">Stainless steel</strong> is required for <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary and washdown environments</a> where guide rails must withstand daily cleaning with water, caustic chemicals, or steam. For lower friction, stainless steel rails are often fitted with replaceable UHMW wear strips that can be swapped when worn without replacing the entire rail structure.
+        </p>
+        <p class="text-lg text-ink-muted leading-relaxed">
+          <strong class="text-ink">Acetal (Delrin)</strong> provides higher stiffness and dimensional stability than UHMW, making it suitable for precision positioning applications where tight tolerances must be maintained. Acetal is also more resistant to creep under constant load.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adjustment Systems -->
+  <section class="py-20 bg-surface" aria-labelledby="adjustment-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Adjustment Systems</div>
+      <h2 id="adjustment-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Guide Rail <span class="text-accent">Adjustment Methods</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Hand-Knob Clamps</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Star knobs or T-handles that clamp the guide rail bracket to a cross-bar. Loosen, slide to position, retighten. Simple and low-cost but slower for frequent changeovers. Best for operations with few SKU changes per shift.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 2-5 min</p>
+            <p class="text-ink-muted">Tools: None</p>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Hand-Wheel / Crank</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Threaded rod mechanism moves both rails simultaneously when the hand-wheel is turned. Provides consistent, repeatable positioning. Often includes a position indicator or scale. Best for moderate changeover frequency with varying product widths.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 30-60 sec</p>
+            <p class="text-ink-muted">Tools: None</p>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Quick-Release Pin</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Spring-loaded pins lock guide rails at predetermined positions. Pull the pin, slide to the next detent, release. Fastest manual method for operations with a fixed set of product sizes. Requires drilling holes at each position.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 10-20 sec</p>
+            <p class="text-ink-muted">Tools: None</p>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Motorized Adjustment</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Electric actuators or servo motors move guide rails to programmed positions. Controlled via PLC or HMI. Enables recipe-based changeover with no operator intervention. Highest cost but essential for high-frequency automated changeover.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 5-15 sec</p>
+            <p class="text-ink-muted">Tools: PLC program</p>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Tool-Adjusted</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Bolts or set screws require a wrench or Allen key for adjustment. Lowest cost but slowest changeover. Acceptable for fixed installations or infrequent product changes. Not recommended for multi-SKU operations.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 5-10 min</p>
+            <p class="text-ink-muted">Tools: Wrench/Allen key</p>
+          </div>
+        </div>
+
+        <div class="border border-border p-6">
+          <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Spring-Loaded</h3>
+          <p class="text-ink-muted leading-relaxed mb-3">Springs press guide rails inward against the product. Self-adjusts to product width within a range. Used for products with dimensional variation or mixed sizes. May not provide sufficient containment for heavy products.</p>
+          <div class="mt-4 text-sm">
+            <p class="text-ink font-semibold">Changeover time: 0 (auto)</p>
+            <p class="text-ink-muted">Tools: None</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gap Settings -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="gap-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Setup Guide</div>
+      <h2 id="gap-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Guide Rail Gap <span class="text-accent">Settings</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>The gap between guide rails and the product affects transport reliability, product damage, and downstream operation accuracy. Setting the gap correctly is critical for smooth conveyor operation.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Standard Transport Gap</h3>
+        <p>For general transport, set the gap at 1/8" to 1/4" (3-6mm) wider than the product on each side. This allows smooth flow while preventing excessive lateral movement. Products should be able to pass without rubbing but should not be able to rotate significantly.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Precision Positioning Gap</h3>
+        <p>Before labelers, printers, <a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">vision inspection systems</a>, or <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing stations</a>, tighten the gap to 1/16" to 1/8" (1.5-3mm) per side. This ensures consistent product position for accurate label placement or image capture. Use low-friction materials (UHMW or acetal) to prevent product scuffing at tight gaps.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Accumulation Zone Gap</h3>
+        <p>In <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zones</a> where products queue under back-pressure, widen the gap to 1/4" to 1/2" (6-12mm) per side. Tighter gaps can cause products to jam, wedge, or tip when pressure builds. The exact gap depends on product stiffness and accumulation pressure.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Variable Product Gap</h3>
+        <p>For products with significant dimensional variation (such as natural products, pouches, or bags), set the gap to accommodate the largest expected dimension plus 1/8". Consider spring-loaded guides that self-adjust to product width. For products that expand during transport (such as warm products cooling), account for the expansion in the initial gap setting.</p>
+
+        <div class="bg-surface border border-accent/30 p-6 mt-8">
+          <h4 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Gap Setting Checklist</h4>
+          <ul class="text-ink-muted space-y-2 list-disc list-inside">
+            <li>Measure the actual product width at multiple points (top, middle, bottom)</li>
+            <li>Account for product variation within the same SKU</li>
+            <li>Test with the largest and smallest products in the range</li>
+            <li>Verify that products do not rub or scuff at normal conveyor speed</li>
+            <li>Confirm that products cannot rotate more than a few degrees</li>
+            <li>Check for jamming under accumulation back-pressure</li>
+            <li>Document the gap setting for each SKU for repeatable changeover</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Guide Rail <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Packaging Line Integration</h3>
+        <p>Guide rails are essential throughout <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>. On <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed conveyors</a>, guides funnel products into single-file for filling or wrapping machines. Between operations, guides maintain product orientation established by upstream equipment. Before <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packers</a>, lane dividers create the product patterns required for case loading.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Food and Beverage</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food and beverage operations</a> require <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary guide rails</a> that withstand daily washdown. Stainless steel rails with replaceable UHMW wear strips are standard. <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop chain conveyors</a> for bottles and cans use curved guide rails that follow the chain path through turns and transfers. <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">Bakery lines</a> use low-profile guides that do not interfere with overhead depositors or decorators.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pharmaceutical and Medical</h3>
+        <p><a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical conveyors</a> require precision guide rails for accurate product positioning before labeling, serialization, and vision inspection. <a href="/industries/pharmaceutical-conveyors/cleanroom/" class="text-accent hover:text-accent-hover font-semibold">Cleanroom applications</a> use non-shedding materials and smooth surfaces that do not trap particles. Stainless steel and acetal are preferred over UHMW in cleanroom environments.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Distribution and Fulfillment</h3>
+        <p>Distribution center conveyors use guide rails to contain cartons and totes on <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a> and prevent tipover during <a href="/conveyor-types/diverting-merging/" class="text-accent hover:text-accent-hover font-semibold">sortation and merging</a>. Adjustable guides accommodate the wide range of package sizes in e-commerce fulfillment. <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Incline conveyors</a> use top hold-down rails in addition to side guides to prevent product rollback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sourcing -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="sourcing-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Sourcing</div>
+      <h2 id="sourcing-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Guide Rail <span class="text-accent">Sourcing</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Guide rails are available from three primary sources: the conveyor manufacturer (OEM), conveyor component specialists, and plastic/metal distributors for raw material fabrication.</p>
+
+        <p><strong class="text-ink">Conveyor manufacturers</strong> sell complete guide rail systems designed to fit their conveyor frames. These include mounting brackets, adjustment hardware, and rail profiles matched to the conveyor. Advantages: guaranteed fit, single-source warranty. Disadvantage: may cost more than aftermarket options.</p>
+
+        <p><strong class="text-ink">Component specialists</strong> like Flexco, Fenner Dunlop, Volta Belting, and Dorner Accessories sell guide rail systems compatible with multiple conveyor brands. They offer a wider selection of materials and adjustment options. Local industrial distributors (Motion Industries, Applied Industrial Technologies) stock standard guide rail components.</p>
+
+        <p><strong class="text-ink">Raw material fabrication</strong> is common for simple UHMW guide rails. UHMW sheet stock from distributors like Curbell Plastics, Professional Plastics, or Interstate Plastics can be cut to size with standard woodworking tools. Custom stainless steel rails are fabricated by sheet metal shops.</p>
+
+        <p>For replacement guide rails, measure the existing rail profile, mounting hole pattern, and bracket dimensions. Many guide rail profiles are standard across manufacturers, but proprietary mounting systems may require OEM components.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are conveyor guide rails?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Conveyor guide rails are side-mounted rails that keep products centered on the conveyor belt or <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller surface</a>, prevent products from falling off edges, create lanes for multi-row product flow, and orient products for downstream operations. Guide rails are typically made from UHMW polyethylene, stainless steel, or aluminum with UHMW contact strips. Adjustable guide rails allow quick changeover between product sizes.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the best material for conveyor guide rails?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>UHMW polyethylene is the most common guide rail material because it offers very low friction, good wear resistance, FDA compliance for food contact, and low cost. For heavy-duty applications or <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">sanitary washdown environments</a>, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (Delrin) provides higher rigidity for precision positioning applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do I adjust conveyor guide rails for different product sizes?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Adjustable guide rail systems use one of three methods: hand-knob clamps that slide on cross-bars and lock in position, hand-wheel or crank adjusters that move both rails simultaneously via threaded rods, or quick-release pin systems for predetermined positions. For frequent changeovers, choose systems with visual scales or detent positions. Motorized adjustment is available for automated changeover on high-volume <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How wide should the gap be between conveyor guide rails?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>For standard transport, set the gap at 1/8" to 1/4" (3-6mm) wider than the product on each side. For precision positioning before labelers or vision systems, tighten to 1/16" to 1/8" (1.5-3mm) per side. For <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation zones</a>, widen to 1/4" to 1/2" (6-12mm) per side to prevent jamming under back-pressure.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What are lane dividers on a conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Lane dividers are internal guide rails that split a wide conveyor into multiple parallel lanes. They are used to increase throughput by running multiple product streams on a single conveyor, to separate different products or SKUs running simultaneously, and to create staging lanes before <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a> or <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizing</a>. Lane dividers are typically adjustable to accommodate different lane widths.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/components/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">All Components</div>
+          <p class="text-sm text-white/60">Browse component categories</p>
+        </a>
+        <a href="/components/cleaning-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleaning Systems</div>
+          <p class="text-sm text-white/60">Belt cleaners and washdown</p>
+        </a>
+        <a href="/conveyor-types/belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">Flat, cleated, and modular</p>
+        </a>
+        <a href="/resources/conveyor-parts/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Parts Guide</div>
+          <p class="text-sm text-white/60">Replacement parts and sourcing</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

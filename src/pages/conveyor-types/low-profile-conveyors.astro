@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Low-Profile Conveyors", "item": "https://packagingconveyor.com/conveyor-types/low-profile-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a low-profile conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A low-profile conveyor has a minimal overall height, typically 2-4 inches from floor to conveying surface (or less). Low-profile conveyors fit under existing equipment, integrate with workstations at ergonomic heights, and enable product transfers between closely spaced machines. They use thin belt designs, small-diameter nose bars, and compact drive systems to minimize vertical space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How thin can a conveyor be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The thinnest conveyors have overall heights of 1-2 inches, using knife-edge nose bars (as small as 1/4 inch diameter) and thin timing or urethane belts. Standard low-profile conveyors are 2-4 inches tall. The minimum practical height depends on belt type, product weight, speed requirements, and whether the conveyor needs to be flat or can use an end drive configuration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are low-profile conveyors used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Low-profile conveyors are used for: transferring products between closely spaced machines (minimal gap between equipment), integrating under packaging equipment (case packers, wrappers, labelers), workstation integration at ergonomic heights, cleanroom and pharmaceutical applications where space is critical, and any application where vertical clearance is limited."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a knife-edge conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A knife-edge conveyor uses an extremely small diameter nose bar (typically 1/4 to 3/4 inch) at the discharge end, creating a sharp transition that allows products to transfer to downstream equipment with minimal gap. The knife-edge minimizes the dead plate or gap between conveyors, enabling transfer of small products that would fall into larger gaps. Common in pharmaceutical, electronics, and small parts packaging."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Low-Profile Conveyors: Compact & Knife-Edge Designs",
+  "description": "Guide to low-profile conveyors with minimal height for tight spaces. Knife-edge transfers, compact belt conveyors, and integration under packaging equipment.",
+  "url": "https://packagingconveyor.com/conveyor-types/low-profile-conveyors/",
+  "datePublished": "2026-03-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Low-Profile Conveyors: Compact & Knife-Edge Designs | Packaging Conveyor"
+  description="Guide to low-profile conveyors with minimal height for tight spaces. Knife-edge transfers, compact belt conveyors, and integration under packaging equipment."
+  canonical="https://packagingconveyor.com/conveyor-types/low-profile-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Low-Profile Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Types</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Low-Profile Conveyors: Compact & Knife-Edge Designs
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Low-profile conveyors minimize overall height to fit under equipment, integrate at ergonomic workstation heights, and enable transfers between closely spaced machines. With overall heights as low as 1-2 inches, these compact <a href="/conveyor-types/belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyors</a> use thin belt designs, small-diameter nose bars, and compact drives to maximize vertical clearance. Knife-edge versions enable near-zero-gap product transfers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <article class="py-20 bg-surface" aria-labelledby="features-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Design Features</div>
+      <h2 id="features-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Low-Profile <span class="text-accent">Design Elements</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Minimal Frame Height</h3>
+        <p>Low-profile conveyors use thin extruded aluminum or sheet metal frames rather than bulky structural sections. Frame heights of 1-3 inches are typical. The entire conveyor assembly (frame + belt + drive) may be only 2-4 inches tall. Some designs use a "flat" frame that positions the belt flush with the top surface.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Small-Diameter Pulleys</h3>
+        <p>End pulleys (nose bars) as small as 1/4" to 1" diameter reduce the conveyor's end height. Standard conveyors use 2-4" pulleys; low-profile designs use 1/2" to 1" typical. Smaller pulleys require belts designed for tight bend radii (timing belts, thin urethane belts).</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Knife-Edge Transfer</h3>
+        <p>A knife-edge nose bar (1/4" to 3/4" diameter) creates an extremely sharp discharge point, minimizing the gap between the conveyor and downstream equipment. Products transition smoothly with no dead zone where small items could fall. Essential for transferring small bottles, vials, cartons, and blister packs.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">End Drive vs. Center Drive</h3>
+        <p><strong class="text-ink">End drive</strong> places the motor at one end, adding to overall length but keeping the profile thin. <strong class="text-ink">Center/under-belt drive</strong> mounts the motor below the belt, maintaining a flat profile but adding height. Choose based on whether length or height is the critical constraint.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt Selection</h3>
+        <p>Low-profile conveyors require belts that handle tight pulley diameters without damage:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Timing belts:</strong> Positive drive, tight radius capability, precise positioning</li>
+          <li><strong class="text-ink">Thin urethane belts:</strong> 1-2mm thick, flexible, good grip</li>
+          <li><strong class="text-ink">Flat belts:</strong> Thin polyester or nylon carcass</li>
+          <li><strong class="text-ink">Round belts:</strong> Multiple parallel round belts for light loads</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- Specifications -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="specs-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Specifications</div>
+      <h2 id="specs-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Typical <span class="text-accent">Specifications</span>
+      </h2>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Parameter</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Ultra-Low Profile</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Standard Low-Profile</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Compact</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Overall Height</td>
+              <td class="py-4 pr-4 font-mono text-sm">1-2 inches</td>
+              <td class="py-4 pr-4 font-mono text-sm">2-4 inches</td>
+              <td class="py-4 pr-4 font-mono text-sm">4-6 inches</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Nose Bar Diameter</td>
+              <td class="py-4 pr-4 font-mono text-sm">1/4" - 1/2"</td>
+              <td class="py-4 pr-4 font-mono text-sm">1/2" - 1"</td>
+              <td class="py-4 pr-4 font-mono text-sm">1" - 2"</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Load Capacity</td>
+              <td class="py-4 pr-4 font-mono text-sm">Up to 10 lbs</td>
+              <td class="py-4 pr-4 font-mono text-sm">Up to 25 lbs</td>
+              <td class="py-4 pr-4 font-mono text-sm">Up to 50 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Belt Type</td>
+              <td class="py-4 pr-4">Timing, thin urethane</td>
+              <td class="py-4 pr-4">Timing, urethane, flat belt</td>
+              <td class="py-4 pr-4">Any thin belt</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-4 pr-4 font-mono text-sm">10-200 FPM</td>
+              <td class="py-4 pr-4 font-mono text-sm">10-300 FPM</td>
+              <td class="py-4 pr-4 font-mono text-sm">10-400 FPM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-20 bg-surface" aria-labelledby="applications-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Applications</div>
+      <h2 id="applications-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Low-Profile <span class="text-accent">Applications</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Machine Integration</h3>
+        <p>Low-profile conveyors integrate under packaging machines where standard conveyors won't fit. Applications include:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">Infeed and outfeed</a> under labelers, printers, and inspection systems</li>
+          <li>Under case erectors and case packers with limited clearance</li>
+          <li>Between closely spaced equipment with minimal gap</li>
+          <li>Under shrink tunnels and heat sealers</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pharmaceutical and Medical</h3>
+        <p><a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical packaging</a> uses low-profile and knife-edge conveyors for:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>Vial and ampoule transfer between filling and capping</li>
+          <li>Blister pack handling through packaging lines</li>
+          <li>Carton and leaflet transfer to cartoners</li>
+          <li><a href="/industries/pharmaceutical-conveyors/cleanroom/" class="text-accent hover:text-accent-hover font-semibold">Cleanroom applications</a> where compact design aids cleaning</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Food and Beverage</h3>
+        <p><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food packaging</a> applications include:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>Small bottle and jar transfer in tight spaces</li>
+          <li>Pouch and flexible package handling</li>
+          <li>Integration under <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">tabletop chain conveyors</a></li>
+          <li>Snack bag and small carton transfer</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Workstation Integration</h3>
+        <p>Low-profile conveyors integrate with assembly and inspection workstations at ergonomic heights. Products flow through work areas without requiring operators to reach up or down. Common in electronics assembly, medical device manufacturing, and quality inspection stations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturers -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="manufacturers-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Manufacturers</div>
+      <h2 id="manufacturers-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Low-Profile <span class="text-accent">Manufacturers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+        <p>Several conveyor manufacturers specialize in low-profile and compact conveyor designs:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Dorner:</strong> 2200 Series low-profile, 1100 Series ultra-narrow. Known for precision packaging conveyors.</li>
+          <li><strong class="text-ink">mk North America:</strong> VersaMove low-profile timing belt conveyors. Modular aluminum design.</li>
+          <li><strong class="text-ink">QC Industries:</strong> Low-profile belt conveyors with knife-edge options.</li>
+          <li><strong class="text-ink">Smalley Manufacturing:</strong> Custom low-profile designs for pharmaceutical and medical.</li>
+          <li><strong class="text-ink">FlexLink:</strong> Compact conveyor systems with small-radius curves.</li>
+        </ul>
+        <p>See the <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">conveyor manufacturers directory</a> for a comprehensive list.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a low-profile conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A low-profile conveyor has minimal overall height, typically 2-4 inches from floor to conveying surface. Low-profile conveyors fit under equipment, integrate at ergonomic heights, and enable transfers between closely spaced machines using thin <a href="/conveyor-types/belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt designs</a>, small-diameter nose bars, and compact drive systems.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a knife-edge conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A knife-edge conveyor uses an extremely small diameter nose bar (1/4" to 3/4") at the discharge end, creating a sharp transition for minimal-gap product transfers. The knife-edge prevents small products from falling into the gap between conveyors. Common in <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a>, electronics, and small parts packaging.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How thin can a conveyor be?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>The thinnest conveyors have overall heights of 1-2 inches using knife-edge nose bars and thin timing or urethane belts. Standard low-profile conveyors are 2-4 inches tall. Minimum height depends on belt type, product weight, speed, and whether the conveyor uses end-drive or under-belt drive configuration.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
+          <p class="text-sm text-white/60">All belt types compared</p>
+        </a>
+        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Flat Belt</div>
+          <p class="text-sm text-white/60">General-purpose belts</p>
+        </a>
+        <a href="/industries/pharmaceutical-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Pharmaceutical</div>
+          <p class="text-sm text-white/60">Precision handling</p>
+        </a>
+        <a href="/resources/conveyor-manufacturers/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Manufacturers</div>
+          <p class="text-sm text-white/60">Find suppliers</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

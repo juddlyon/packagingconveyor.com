@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Accumulation Conveyors", "item": "https://packagingconveyor.com/conveyor-types/accumulation-conveyors/" },
+    { "@type": "ListItem", "position": 4, "name": "Zero-Pressure Accumulation", "item": "https://packagingconveyor.com/conveyor-types/accumulation-conveyors/zero-pressure/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a zero-pressure accumulation conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A zero-pressure accumulation (ZPA) conveyor stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. Each zone has independent drive control and a sensor to detect product presence. When a downstream zone is occupied, upstream zones hold their products with gaps between them. ZPA prevents product damage, label scuffing, carton crushing, and shifting of contents inside cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does zero-pressure accumulation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZPA conveyors divide the conveyor into zones, each with its own drive mechanism and photo-eye sensor. Zone logic follows a simple rule: if the downstream zone is empty, release and transport; if occupied, stop and hold. This creates a cascading release pattern where products queue with gaps between them. MDR (Motor Driven Roller) conveyors use 24VDC motorized rollers per zone. Belt-driven systems use pneumatic clutches or brakes per zone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What products require zero-pressure accumulation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zero-pressure accumulation is required for fragile products (glass, electronics), pressure-sensitive labels, shrink-wrapped items, open or unsealed containers, products with loose contents that shift under pressure, and premium packaging where scuffing is unacceptable. Products with smooth or glossy surfaces that show contact marks also require ZPA. Standard corrugated cases on stable surfaces can often use minimum-pressure accumulation instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ZPA and minimum-pressure accumulation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact within zones, typically 2-5 lbs of backpressure. ZPA requires more zones and sensors per linear foot, increasing cost by 20-40% over minimum-pressure. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure is acceptable for durable products like corrugated cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should ZPA zones be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZPA zone length should be 2-4 inches longer than the longest product dimension in the direction of travel. Standard zone lengths are 18, 24, 30, 36, and 48 inches. Using zones longer than necessary wastes accumulation density. Using zones shorter than the product causes products to span multiple zones, breaking zone logic. For mixed product lengths, size zones for the longest product or use intelligent zone controllers that adapt to product length."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Zero-Pressure Accumulation Conveyors: ZPA Technology & Applications",
+  "description": "Complete guide to zero-pressure accumulation (ZPA) conveyors: how they work, zone sizing, MDR vs belt-driven systems, and when to specify ZPA over minimum-pressure accumulation.",
+  "url": "https://packagingconveyor.com/conveyor-types/accumulation-conveyors/zero-pressure/",
+  "datePublished": "2026-03-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Zero-Pressure Accumulation Conveyors (ZPA): Technology & Applications"
+  description="Guide to zero-pressure accumulation (ZPA) conveyors: how ZPA works, zone sizing, MDR vs belt-driven systems, and when to specify ZPA over minimum-pressure accumulation."
+  canonical="https://packagingconveyor.com/conveyor-types/accumulation-conveyors/zero-pressure/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/accumulation-conveyors/" class="hover:text-accent transition-colors">Accumulation</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Zero-Pressure</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Accumulation Technology</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Zero-Pressure Accumulation Conveyors
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>Zero-pressure accumulation (ZPA) stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. ZPA is the standard accumulation technology for fragile products, pressure-sensitive labels, and premium packaging where any contact damage is unacceptable. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR (Motor Driven Roller)</a> conveyors are the dominant ZPA technology in new installations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How ZPA Works -->
+  <article class="py-20 bg-surface" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technology</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        How Zero-Pressure Accumulation <span class="text-accent">Works</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>ZPA conveyors divide the conveyor length into discrete zones, each with its own drive mechanism and product sensor. The zone controller follows simple logic:</p>
+
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">If downstream zone is empty:</strong> Run this zone, transport product forward</li>
+          <li><strong class="text-ink">If downstream zone is occupied:</strong> Stop this zone, hold product in place</li>
+          <li><strong class="text-ink">When downstream zone clears:</strong> Release and advance one zone</li>
+        </ul>
+
+        <p>This creates a cascading release pattern. When a downstream machine restarts, the first queued product releases. The second product advances one zone. Each product moves forward one zone at a time, maintaining gaps throughout the queue. Products never touch each other.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zone Components</h3>
+        <p>Each ZPA zone contains:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Drive mechanism:</strong> MDR motorized roller, pneumatic clutch, or belt section</li>
+          <li><strong class="text-ink">Product sensor:</strong> Photo-eye, proximity sensor, or mechanical trip</li>
+          <li><strong class="text-ink">Zone controller:</strong> Logic card, PLC I/O, or distributed controller</li>
+          <li><strong class="text-ink">Slave rollers:</strong> Idler or O-ring driven rollers connected to the drive roller</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zone Sizing</h3>
+        <p>Zone length must exceed the longest product dimension in the direction of travel. Standard zone lengths are 18", 24", 30", 36", and 48". Add 2-4" clearance beyond the product length to ensure the sensor detects the product fully within the zone. For mixed product sizes, size zones for the longest product. Advanced controllers can adapt zone logic to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
+
+        <div class="bg-surface-dim border border-accent/30 p-6 mt-8">
+          <h4 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Zone Length Formula</h4>
+          <p class="text-ink-muted font-mono">Zone Length = Longest Product Length + 2" to 4" clearance</p>
+          <p class="text-ink-muted mt-2 text-sm">Example: 20" long cases require 24" zones (20" + 4" clearance)</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ZPA Technologies -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="tech-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Technologies</div>
+      <h2 id="tech-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        ZPA Conveyor <span class="text-accent">Technologies</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+        <div class="border border-border bg-surface p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">MDR (Motor Driven Roller)</h3>
+          <p class="text-ink-muted leading-relaxed mb-4">Each zone has a 24VDC motorized roller that drives 3-6 slave rollers via O-rings or poly-V belts. Zone cards control each motor independently. MDR is the dominant ZPA technology for new installations due to low energy consumption, quiet operation, easy maintenance, and inherent zone-by-zone control.</p>
+          <div class="text-sm space-y-1">
+            <p class="text-ink"><strong>Pros:</strong> Energy efficient, quiet, low maintenance, easy zone control</p>
+            <p class="text-ink"><strong>Cons:</strong> Higher initial cost, limited to ~75 lbs/zone typical</p>
+            <p class="text-ink"><strong>Best for:</strong> Cases, cartons, totes, e-commerce, distribution</p>
+          </div>
+          <a href="/conveyor-types/mdr-conveyors/" class="inline-block mt-4 text-accent hover:text-accent-hover font-semibold">Learn more about MDR conveyors →</a>
+        </div>
+
+        <div class="border border-border bg-surface p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Belt-Driven Live Roller (BDLR)</h3>
+          <p class="text-ink-muted leading-relaxed mb-4">A continuously running belt under the rollers drives all zones. Pneumatic clutches or brake pads per zone engage or disengage the belt from rollers. Requires compressed air. Legacy technology still common in retrofit and high-speed applications where air is already available.</p>
+          <div class="text-sm space-y-1">
+            <p class="text-ink"><strong>Pros:</strong> Higher speed capability, robust, proven technology</p>
+            <p class="text-ink"><strong>Cons:</strong> Requires compressed air, more maintenance, energy consumption</p>
+            <p class="text-ink"><strong>Best for:</strong> High-speed lines, existing pneumatic infrastructure</p>
+          </div>
+          <a href="/conveyor-types/live-roller-conveyors/" class="inline-block mt-4 text-accent hover:text-accent-hover font-semibold">Learn more about BDLR conveyors →</a>
+        </div>
+
+        <div class="border border-border bg-surface p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Line-Shaft with Clutch Zones</h3>
+          <p class="text-ink-muted leading-relaxed mb-4">A continuously spinning line-shaft drives all rollers via O-rings. Mechanical clutch or brake assemblies per zone disengage the spool from the shaft. Older technology with higher maintenance but lower initial cost than MDR. Being replaced by MDR in most new applications.</p>
+          <div class="text-sm space-y-1">
+            <p class="text-ink"><strong>Pros:</strong> Lower cost than MDR, mechanical simplicity</p>
+            <p class="text-ink"><strong>Cons:</strong> O-ring wear, clutch maintenance, noise</p>
+            <p class="text-ink"><strong>Best for:</strong> Budget projects, simple accumulation needs</p>
+          </div>
+        </div>
+
+        <div class="border border-border bg-surface p-6">
+          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Servo Belt Zones</h3>
+          <p class="text-ink-muted leading-relaxed mb-4">Individual <a href="/conveyor-types/belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt conveyor</a> sections with servo or stepper drive per zone. Used for irregular product shapes that cannot ride on rollers, and for high-precision <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing applications</a>. Highest cost but most flexible for mixed products.</p>
+          <div class="text-sm space-y-1">
+            <p class="text-ink"><strong>Pros:</strong> Handles any product shape, precise positioning</p>
+            <p class="text-ink"><strong>Cons:</strong> Highest cost, complex controls</p>
+            <p class="text-ink"><strong>Best for:</strong> Irregular shapes, pouches, bags, precision indexing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Specify ZPA -->
+  <section class="py-20 bg-surface" aria-labelledby="when-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <h2 id="when-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        When to Specify <span class="text-accent">Zero-Pressure</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Zero-pressure accumulation costs 20-40% more than <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/" class="text-accent hover:text-accent-hover font-semibold">minimum-pressure accumulation</a> due to smaller zones and more sensors. Specify ZPA when product requirements justify the cost:</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">ZPA Required</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>Glass bottles, jars, or containers (breakage risk)</li>
+          <li>Pressure-sensitive labels that scuff under contact</li>
+          <li>Shrink-wrapped products that deform under pressure</li>
+          <li>Open or unsealed containers (contents shift)</li>
+          <li>Premium packaging where visible damage is unacceptable</li>
+          <li>Electronic products sensitive to shock or pressure</li>
+          <li>Products with glossy or coated surfaces that show marks</li>
+          <li><a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical products</a> with regulatory requirements</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Minimum-Pressure Acceptable</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>Sealed corrugated cases on stable surfaces</li>
+          <li>Rigid plastic totes and containers</li>
+          <li>Durable products with no surface finish concerns</li>
+          <li>Products with robust labels (not pressure-sensitive)</li>
+        </ul>
+
+        <div class="bg-surface-dim border border-border p-6 mt-8">
+          <h4 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">Decision Checklist</h4>
+          <p class="text-ink-muted mb-2">Answer YES to any of these → specify ZPA:</p>
+          <ul class="text-ink-muted space-y-1 list-disc list-inside">
+            <li>Will products break, deform, or shift under 5 lbs of contact pressure?</li>
+            <li>Will product surface show visible marks from contact?</li>
+            <li>Are labels pressure-sensitive (could scuff, smear, or peel)?</li>
+            <li>Is the product unsealed with loose contents?</li>
+            <li>Is premium appearance a product requirement?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZPA Design Considerations -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Design</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        ZPA Design <span class="text-accent">Considerations</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Accumulation Density</h3>
+        <p>ZPA accumulation density (products per linear foot) depends on zone length. Shorter zones = higher density = more products accumulated per foot of conveyor. But shorter zones = more motorized rollers and sensors = higher cost. Balance accumulation density against cost by right-sizing zones to product length.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Release Modes</h3>
+        <p>ZPA conveyors support multiple release patterns:</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Singulate (one-at-a-time):</strong> Release one product when downstream clears. Standard ZPA behavior.</li>
+          <li><strong class="text-ink">Slug release:</strong> Release a group of products (slug) together. Used to batch feed downstream equipment.</li>
+          <li><strong class="text-ink">Train release:</strong> Release all accumulated products as a continuous train. Used when downstream is ready for full throughput.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Zone Controller Options</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Card-based:</strong> Distributed logic cards per zone. Simple, self-contained, limited integration.</li>
+          <li><strong class="text-ink">PLC-controlled:</strong> Central PLC with I/O per zone. Full integration with line control, data collection.</li>
+          <li><strong class="text-ink">Network-based:</strong> Ethernet/IP, Profinet, or EtherCAT network to zone cards. Modern approach with diagnostics and configuration.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sensor Options</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Diffuse photo-eye:</strong> Most common. Detects product presence by reflection. Works for most products.</li>
+          <li><strong class="text-ink">Retro-reflective:</strong> Uses reflector strip. More reliable for dark or transparent products.</li>
+          <li><strong class="text-ink">Mechanical trip:</strong> Roller or paddle actuated by product contact. No electronics, simple, legacy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a zero-pressure accumulation conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A zero-pressure accumulation (ZPA) conveyor stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. Each zone has independent drive control and a sensor. When a downstream zone is occupied, upstream zones hold their products with gaps. ZPA prevents product damage, label scuffing, carton crushing, and content shifting. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> are the most common ZPA technology.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How does zero-pressure accumulation work?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>ZPA conveyors divide the conveyor into zones, each with its own drive and photo-eye sensor. Zone logic: if the downstream zone is empty, run and transport; if occupied, stop and hold. This creates cascading release where products queue with gaps. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR systems</a> use 24VDC motorized rollers per zone. <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt-driven systems</a> use pneumatic clutches.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between ZPA and minimum-pressure accumulation?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Zero-pressure accumulation maintains gaps between every product with no contact. <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/" class="text-accent hover:text-accent-hover font-semibold">Minimum-pressure accumulation</a> allows light product-to-product contact (2-5 lbs backpressure) within zones. ZPA costs 20-40% more due to more zones and sensors. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure works for durable products like corrugated cases.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How long should ZPA zones be?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>ZPA zone length should be 2-4 inches longer than the longest product dimension in the direction of travel. Standard zones are 18", 24", 30", 36", and 48". Size zones for the longest product in your mix. Advanced controllers can adapt to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation Overview</div>
+          <p class="text-sm text-white/60">All accumulation types compared</p>
+        </a>
+        <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Minimum-Pressure</div>
+          <p class="text-sm text-white/60">Lower-cost alternative</p>
+        </a>
+        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
+          <p class="text-sm text-white/60">Dominant ZPA technology</p>
+        </a>
+        <a href="/industries/packaging-line-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Packaging Lines</div>
+          <p class="text-sm text-white/60">Line integration guide</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

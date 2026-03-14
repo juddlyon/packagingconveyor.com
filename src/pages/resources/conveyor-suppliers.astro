@@ -1,0 +1,508 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Suppliers", "item": "https://packagingconveyor.com/resources/conveyor-suppliers/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Suppliers: Sourcing Guide for Equipment & Parts",
+  "description": "How to source conveyor systems and parts: understanding the supply chain, choosing between OEMs, distributors, and integrators, and best practices for requesting quotes.",
+  "url": "https://packagingconveyor.com/resources/conveyor-suppliers/",
+  "datePublished": "2026-03-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of conveyor suppliers are there?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor suppliers fall into several categories: OEM manufacturers who design and build equipment, distributors who stock components from multiple brands, dealers/reps who sell specific manufacturer product lines, system integrators who design and install complete conveyor systems, and aftermarket parts suppliers who provide replacement components. Each plays a different role in the supply chain, and the right choice depends on whether you need a complete system, a single conveyor, or replacement parts." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy conveyors from a manufacturer or distributor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For complete conveyor systems requiring custom engineering, buying direct from a manufacturer or through a system integrator typically provides better results. Manufacturers offer deeper application engineering support and can customize designs for your specific requirements. For standard components, replacement parts, and commodity items like belting or rollers, distributors often provide faster delivery from local stock and competitive pricing. Many buyers use both: manufacturers for new conveyor systems and distributors for ongoing parts and consumables." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get quotes from conveyor suppliers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to 2-4 suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical lead time for conveyor equipment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lead times vary widely by conveyor type, customization level, and supplier capacity. Standard catalog conveyors from manufacturers with quick-ship programs can ship in 1-3 weeks. Custom-engineered conveyors typically require 8-16 weeks from order to shipment. Complete conveyor systems with controls integration may require 12-24 weeks including design, fabrication, and FAT (factory acceptance testing). Component suppliers and distributors often stock common parts for same-day or next-day shipping." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find reliable conveyor parts suppliers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start with the OEM manufacturer of your existing conveyor for critical components and proprietary parts. For standard components (rollers, bearings, motors, VFDs, belting), industrial distributors like Motion Industries, Applied Industrial Technologies, and Grainger stock products from multiple manufacturers. Specialty suppliers focus on specific components: belting suppliers stock multiple belt types and can fabricate custom lengths, while roller manufacturers supply replacement rollers in standard and custom sizes. Ask your conveyor manufacturer what percentage of parts are standard catalog items versus proprietary." }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Conveyor Suppliers: Sourcing Guide for Equipment & Parts | PackagingConveyor.com"
+  description="How to source conveyor systems and parts: understanding the supply chain from OEMs to distributors, choosing the right supplier type, and best practices for getting quotes."
+  canonical="https://packagingconveyor.com/resources/conveyor-suppliers/"
+  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-blueprint relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white/70">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/resources/" class="hover:text-white/70">Resources</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/70">Conveyor Suppliers</span>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="section-label text-accent-bright/80 mb-6">Sourcing Guide</div>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
+          Conveyor <span class="text-accent-bright">Suppliers</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AIO DEFINITION ═══ -->
+  <article>
+    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
+          Sourcing conveyor equipment involves navigating a supply chain that includes OEM manufacturers, system integrators, dealers, distributors, and aftermarket parts suppliers. Each channel serves a different purpose: manufacturers design and build equipment, integrators deliver turnkey systems, distributors stock components for quick delivery, and parts suppliers keep existing systems running. This guide explains who supplies what, when to use each type of supplier, and how to get quotes that can be compared. For specific company listings, see our <a href="/resources/conveyor-manufacturers/" class="text-accent hover:text-accent-hover font-semibold">manufacturer directory</a>. For finding suppliers in your region, see <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">conveyor companies near you</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ SUPPLY CHAIN OVERVIEW ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="chain-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Supply Chain</div>
+        <h2 id="chain-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Types of Conveyor <span class="text-accent">Suppliers</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4 mb-12">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="border-b-2 border-ink">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Supplier Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">What They Supply</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Typical Lead Time</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-muted">
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">OEM Manufacturer</td>
+                <td class="py-4 pr-4">Design and build conveyor equipment in their own factory</td>
+                <td class="py-4 pr-4">Complete conveyors, custom engineering, direct factory support</td>
+                <td class="py-4 pr-4">2-16 weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">System Integrator</td>
+                <td class="py-4 pr-4">Turnkey conveyor systems with design, equipment, controls, and installation</td>
+                <td class="py-4 pr-4">Multi-conveyor systems, PLC integration, <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automation</a></td>
+                <td class="py-4 pr-4">12-24 weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Dealer / Rep</td>
+                <td class="py-4 pr-4">Specific manufacturer product lines with local sales support</td>
+                <td class="py-4 pr-4">Purchasing a known brand, warranty coordination, regional service</td>
+                <td class="py-4 pr-4">2-12 weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Industrial Distributor</td>
+                <td class="py-4 pr-4">Components from multiple manufacturers, local inventory</td>
+                <td class="py-4 pr-4"><a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">Parts</a>, motors, drives, bearings, quick delivery</td>
+                <td class="py-4 pr-4">Same-day to 2 weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Belting Supplier</td>
+                <td class="py-4 pr-4">Conveyor belting in standard and custom sizes</td>
+                <td class="py-4 pr-4"><a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">Belt replacement</a>, fabricated belt lengths, custom materials</td>
+                <td class="py-4 pr-4">Same-day to 2 weeks</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Aftermarket Parts</td>
+                <td class="py-4 pr-4">Replacement rollers, bearings, guides, and wear components</td>
+                <td class="py-4 pr-4"><a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">Maintenance</a> supplies, cross-referenced parts, MRO inventory</td>
+                <td class="py-4 pr-4">Same-day to 1 week</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHEN TO USE EACH ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="when-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Selection Guide</div>
+        <h2 id="when-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          When to Use Each <span class="text-accent">Supplier Type</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-10">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Buy Direct from an OEM Manufacturer When...</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You need a single conveyor with custom specifications (non-standard length, width, or features)</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You have in-house engineering to handle controls integration</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You want direct access to the manufacturer's application engineers</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You are standardizing on a single conveyor brand across multiple facilities</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>The manufacturer has a quick-ship program for standard products</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Use a System Integrator When...</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>The project includes multiple conveyor types or zones that must work together</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>PLC controls, sensors, and <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automation</a> are required</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You need installation, commissioning, and startup support</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You lack internal resources for project management and coordination</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>The conveyor system must integrate with robots, packaging machines, or warehouse management systems</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Use a Distributor When...</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You need components quickly and cannot wait for manufacturer lead times</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You are sourcing standard parts (motors, VFDs, bearings, rollers) from multiple brands</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>Your maintenance team builds MRO inventory for in-house repairs</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You want consolidated billing and a single purchasing relationship for multiple products</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>Local inventory and emergency delivery capability matter</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Use a Belting Supplier When...</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You need <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">replacement belts</a> fabricated to specific lengths</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You want to evaluate alternative belt materials (upgrade from PVC to polyurethane, for example)</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>Your existing conveyor manufacturer no longer supports the equipment or has long lead times</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span>You need on-site belt splicing or installation services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SOURCING NEW SYSTEMS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="new-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">New Equipment</div>
+        <h2 id="new-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Sourcing New <span class="text-accent">Conveyor Systems</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">1. Define Requirements Before Contacting Suppliers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Suppliers cannot provide accurate quotes without clear specifications. At minimum, define: product dimensions and weight range, required throughput (units per minute or feet per minute), environment conditions (temperature, humidity, washdown, cleanroom), integration points with upstream and downstream equipment, controls scope (standalone, integrate with existing PLC, or new controls package), and installation scope (equipment only, rigging, full installation). See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for factors that affect pricing.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">2. Request Quotes from Multiple Suppliers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Get quotes from 2-4 suppliers to understand the market. Send the same specification document to each supplier to ensure comparable quotes. Include different supplier types if appropriate: one OEM manufacturer, one integrator, and one regional dealer can show how different business models price the same scope. Allow 1-2 weeks for suppliers to respond with detailed quotes on custom systems; simple catalog products may quote within days.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">3. Compare Scope, Not Just Price</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Quote comparison requires checking what is included: Is the price for equipment FOB factory, or delivered to site? Is installation included, and what does installation mean (mechanical only, or electrical and controls)? What is the warranty duration and coverage? Are startup, commissioning, and operator training included? Are spare parts or maintenance contracts quoted? A lower-priced quote that excludes installation, startup, and warranty may cost more in total than a higher-priced turnkey quote.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">4. Evaluate the Supplier, Not Just the Equipment</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Check supplier capabilities beyond the quoted equipment: Do they have experience in your industry? Can they provide references from similar projects? What is their service territory and response time for emergency calls? Do they stock spare parts? What are their payment terms? How do they handle change orders during the project? A conveyor is a multi-year asset, and the supplier relationship extends well beyond the initial purchase. See our <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">company evaluation guide</a> for detailed criteria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SOURCING PARTS ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="parts-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Parts & Components</div>
+        <h2 id="parts-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Sourcing <span class="text-accent">Parts & Components</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">OEM Parts vs. Aftermarket Alternatives</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              For critical components that affect conveyor performance or safety, OEM parts ensure compatibility and maintain warranty coverage. However, many conveyor components are standard industrial items available from multiple sources. Rollers, bearings, motors, VFDs, and belting are often interchangeable across conveyor brands. Ask your conveyor manufacturer what percentage of parts are proprietary versus standard catalog items. Proprietary parts must come from the OEM; standard parts can be sourced competitively from distributors.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Major Industrial Distributors</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Large industrial distributors stock conveyor components from multiple manufacturers and offer technical support, same-day shipping on stocked items, and consolidated purchasing. Motion Industries, Applied Industrial Technologies, Grainger, and McMaster-Carr carry rollers, bearings, motors, drives, belting, and conveyor accessories. Regional distributors often provide faster local delivery and may specialize in specific industries or product categories. Establish accounts with 1-2 distributors to streamline <a href="/resources/conveyor-maintenance/" class="text-accent hover:text-accent-hover font-semibold">maintenance</a> purchasing.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Specialty Parts Suppliers</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              Some components require specialty suppliers. Belting suppliers fabricate custom belt lengths and can source specialty materials (high-temperature, food-grade, antistatic). Roller manufacturers build replacement rollers to match existing conveyors. Sprocket and chain suppliers provide precision-matched components for chain-driven conveyors. Guide rail and side frame suppliers stock profiles compatible with major conveyor brands. For obsolete or discontinued conveyors, specialty suppliers may reverse-engineer parts that the original manufacturer no longer supports.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Building MRO Inventory</h3>
+            <p class="text-lg text-ink-muted leading-relaxed">
+              For production-critical conveyors, stock essential spare parts to minimize downtime. Typical MRO (maintenance, repair, operations) inventory includes: drive belts, replacement conveyor belts, rollers (sample of each size used), bearings, motors (or motor rebuild kits), VFDs, sensors and photoeyes, chain links and master links, guide rails, and emergency stop switches. Work with your conveyor manufacturer to identify recommended spare parts and their reorder points. See our <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">parts guide</a> for component details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LEAD TIMES ═══ -->
+    <section class="py-20 bg-ink-light" aria-labelledby="lead-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent-bright mb-4">Planning</div>
+        <h2 id="lead-heading" class="font-display text-4xl sm:text-5xl font-800 text-white tracking-wide uppercase mb-10">
+          Lead Time <span class="text-accent-bright">Expectations</span>
+        </h2>
+
+        <div class="overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[800px]">
+            <thead>
+              <tr class="border-b-2 border-white/30">
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Equipment Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Quick-Ship</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Standard</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-white py-4 pr-4">Custom/Complex</th>
+              </tr>
+            </thead>
+            <tbody class="text-white/60">
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Catalog Conveyor</td>
+                <td class="py-4 pr-4">1-3 weeks</td>
+                <td class="py-4 pr-4">4-8 weeks</td>
+                <td class="py-4 pr-4">N/A</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Custom Conveyor</td>
+                <td class="py-4 pr-4">N/A</td>
+                <td class="py-4 pr-4">8-12 weeks</td>
+                <td class="py-4 pr-4">12-20 weeks</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Multi-Conveyor System</td>
+                <td class="py-4 pr-4">N/A</td>
+                <td class="py-4 pr-4">12-16 weeks</td>
+                <td class="py-4 pr-4">16-24+ weeks</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Replacement Belt</td>
+                <td class="py-4 pr-4">Same day</td>
+                <td class="py-4 pr-4">3-7 days</td>
+                <td class="py-4 pr-4">1-3 weeks</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Standard Parts (stocked)</td>
+                <td class="py-4 pr-4">Same day</td>
+                <td class="py-4 pr-4">1-3 days</td>
+                <td class="py-4 pr-4">N/A</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 pr-4 font-semibold text-white">Custom/Fabricated Parts</td>
+                <td class="py-4 pr-4">N/A</td>
+                <td class="py-4 pr-4">1-3 weeks</td>
+                <td class="py-4 pr-4">3-6 weeks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="max-w-4xl mt-10">
+          <p class="text-lg text-white/60 leading-relaxed">
+            Lead times fluctuate with manufacturer capacity, supply chain conditions, and order complexity. The ranges above represent typical conditions; confirm current lead times when requesting quotes. For production-critical projects, consider quick-ship programs from manufacturers like Dorner, mk North America, and Hytrol that maintain inventory of standard products.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RFQ BEST PRACTICES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="rfq-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Procurement</div>
+        <h2 id="rfq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          RFQ <span class="text-accent">Best Practices</span>
+        </h2>
+
+        <div class="max-w-4xl space-y-8">
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">What to Include in Your RFQ</h3>
+            <div class="bg-surface-dim border border-border p-6">
+              <ul class="space-y-3 text-ink-muted">
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Product specifications:</strong> Dimensions (L x W x H), weight range, material, surface finish, bottom surface</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Throughput requirements:</strong> Units per minute, feet per minute, surge capacity</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Layout:</strong> Conveyor length, width, height, curves, inclines, floor plan or CAD if available</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Environment:</strong> Temperature range, humidity, washdown requirements, cleanroom class, outdoor exposure</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Controls:</strong> Standalone, integrate with existing PLC (specify make/model), new controls package</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Power:</strong> Available voltage, phase, amperage at installation location</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Scope:</strong> Equipment only, equipment + installation, turnkey including commissioning</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Timeline:</strong> Required delivery date, installation window, production start date</li>
+                <li class="flex gap-3"><span class="text-accent font-bold">&bull;</span><strong class="text-ink">Documentation:</strong> Required deliverables (drawings, manuals, spare parts lists, training)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Common RFQ Mistakes</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Vague specifications:</strong> "We need a conveyor for boxes" forces suppliers to guess and results in non-comparable quotes</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Unclear scope:</strong> Not specifying whether installation, controls, or commissioning are included</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Unrealistic timeline:</strong> Expecting custom equipment in 2 weeks, then being surprised by the actual lead time</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Price-only evaluation:</strong> Choosing the lowest price without comparing scope, warranty, and supplier capability</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Too many suppliers:</strong> Requesting quotes from 10+ suppliers creates evaluation fatigue and supplier disengagement</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Negotiation Points Beyond Price</h3>
+            <ul class="space-y-3 text-lg text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Extended warranty:</strong> Negotiate from standard 1-year to 2-year coverage, or include wear parts</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Spare parts package:</strong> Include recommended spares in the initial order at a discount</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Maintenance contract:</strong> Lock in preventive maintenance pricing for 2-3 years</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Payment terms:</strong> Milestone-based payments rather than 100% upfront</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Performance guarantee:</strong> Throughput or uptime guarantees with remedies for non-performance</li>
+              <li class="flex gap-3"><span class="text-accent font-bold flex-shrink-0">&bull;</span><strong class="text-ink">Future expansion pricing:</strong> Locked pricing for additional equipment ordered within 12-24 months</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">FAQ</div>
+        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Frequently Asked <span class="text-accent">Questions</span>
+        </h2>
+
+        <div class="space-y-4">
+          <details open class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What types of conveyor suppliers are there?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Conveyor suppliers fall into several categories: OEM manufacturers who design and build equipment, distributors who stock components from multiple brands, dealers/reps who sell specific manufacturer product lines, system integrators who design and install complete conveyor systems, and aftermarket parts suppliers who provide replacement components. Each plays a different role in the supply chain, and the right choice depends on whether you need a complete system, a single conveyor, or replacement parts.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              Should I buy conveyors from a manufacturer or distributor?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">For complete conveyor systems requiring custom engineering, buying direct from a manufacturer or through a system integrator typically provides better results. Manufacturers offer deeper application engineering support and can customize designs for your specific requirements. For standard components, replacement parts, and commodity items like belting or rollers, distributors often provide faster delivery from local stock and competitive pricing. Many buyers use both: manufacturers for new conveyor systems and distributors for ongoing parts and consumables.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How do I get quotes from conveyor suppliers?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to 2-4 suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              What is the typical lead time for conveyor equipment?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Lead times vary widely by conveyor type, customization level, and supplier capacity. Standard catalog conveyors from manufacturers with quick-ship programs can ship in 1-3 weeks. Custom-engineered conveyors typically require 8-16 weeks from order to shipment. Complete conveyor systems with controls integration may require 12-24 weeks including design, fabrication, and FAT (factory acceptance testing). Component suppliers and distributors often stock common parts for same-day or next-day shipping.</p>
+            </div>
+          </details>
+
+          <details class="group border border-border">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
+              How do I find reliable conveyor parts suppliers?
+              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-ink-muted leading-relaxed">Start with the OEM manufacturer of your existing conveyor for critical components and proprietary parts. For standard components (rollers, bearings, motors, VFDs, belting), industrial distributors like Motion Industries, Applied Industrial Technologies, and Grainger stock products from multiple manufacturers. Specialty suppliers focus on specific components: belting suppliers stock multiple belt types and can fabricate custom lengths, while roller manufacturers supply replacement rollers in standard and custom sizes. Ask your conveyor manufacturer what percentage of parts are standard catalog items versus proprietary.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RELATED RESOURCES ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Explore</div>
+        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-10">
+          Related <span class="text-accent">Resources</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/resources/conveyor-manufacturers/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Manufacturer Directory</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Conveyor manufacturers organized by type: belt, roller, modular plastic, sanitary, and specialty builders.</p>
+          </a>
+          <a href="/resources/conveyor-companies/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Companies Near You</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">How to find and evaluate conveyor companies in your region, from manufacturers to integrators.</p>
+          </a>
+          <a href="/resources/conveyor-cost-guide/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Cost & Pricing Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Seven factors that drive conveyor pricing: type, materials, controls, environment, and installation.</p>
+          </a>
+          <a href="/resources/conveyor-parts/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Parts Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Essential conveyor components: rollers, bearings, motors, drives, belting, and wear parts.</p>
+          </a>
+          <a href="/resources/conveyor-belting/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Belt Selection Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Comparison of belt materials: PVC, polyurethane, silicone, modular plastic, and wire mesh.</p>
+          </a>
+          <a href="/resources/conveyor-maintenance/" class="group border border-border p-6 hover:border-accent transition-colors">
+            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Maintenance Guide</h3>
+            <p class="text-ink-muted text-sm leading-relaxed">Preventive maintenance schedules, belt tracking, roller replacement, and lubrication guides.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</BaseLayout>

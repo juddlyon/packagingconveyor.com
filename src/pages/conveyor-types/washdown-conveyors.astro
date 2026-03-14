@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
+    { "@type": "ListItem", "position": 3, "name": "Washdown Conveyors", "item": "https://packagingconveyor.com/conveyor-types/washdown-conveyors/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a washdown conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A washdown conveyor is designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or electrical components. Washdown conveyors feature stainless steel construction, sealed bearings (IP65-IP69K rated), washdown-rated motors, NEMA 4X electrical enclosures, and sloped surfaces that shed water. They are standard in food, beverage, pharmaceutical, and other sanitary applications requiring daily wet cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What IP rating is required for washdown conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IP65 is the minimum rating for hose-down cleaning (protected against water jets). IP66 is required for direct spray cleaning with pressure washers. IP69K is required for high-pressure, high-temperature washdown as specified in USDA and 3-A sanitary standards. Most food and pharmaceutical washdown conveyors specify IP66 or IP69K components for motors, bearings, sensors, and enclosures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials are used in washdown conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washdown conveyor frames are typically 304 stainless steel for general food applications or 316 stainless steel for harsh chemicals, salt, or acidic environments. Belting is FDA-compliant polyurethane (PU), modular plastic (polypropylene, acetal), or stainless steel wire mesh. Bearings use stainless steel housings with food-grade grease. All fasteners are stainless steel. Painted or galvanized steel is not acceptable in washdown environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between washdown and sanitary conveyors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washdown conveyors are designed to survive water and chemical cleaning without damage. Sanitary conveyors go further with hygienic design principles that prevent bacterial harborage: smooth welds, no horizontal surfaces, open frame construction, tool-free belt removal, and compliance with USDA, 3-A, or EHEDG standards. All sanitary conveyors are washdown-rated, but not all washdown conveyors meet full sanitary design standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do washdown conveyors cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washdown conveyors typically cost 40-100% more than equivalent painted steel conveyors due to stainless steel construction, sealed components, and specialized motors. A basic 10-foot washdown belt conveyor ranges from $8,000-$15,000 depending on width, speed, and IP rating. Full sanitary conveyors with USDA acceptance cost more. See the conveyor cost guide for detailed pricing factors."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Washdown Conveyors: IP Ratings, Materials & Sanitary Design",
+  "description": "Complete guide to washdown conveyors for food, beverage, and pharmaceutical applications. IP ratings, stainless steel construction, sanitary design, and cleaning protocols.",
+  "url": "https://packagingconveyor.com/conveyor-types/washdown-conveyors/",
+  "datePublished": "2026-03-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+
+<BaseLayout
+  title="Washdown Conveyors: IP Ratings, Materials & Sanitary Design"
+  description="Guide to washdown conveyors for food, beverage, and pharmaceutical applications. IP ratings (IP65-IP69K), stainless steel construction, sanitary design, and cleaning protocols."
+  canonical="https://packagingconveyor.com/conveyor-types/washdown-conveyors/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-ink-muted">
+        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
+        <li class="text-ink-muted/50">/</li>
+        <li class="text-ink font-semibold">Washdown Conveyors</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveyor Types</div>
+      <h1 class="font-display text-5xl sm:text-6xl font-800 text-ink tracking-wide uppercase leading-tight mb-8">
+        Washdown Conveyors: IP Ratings, Materials & Sanitary Design
+      </h1>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
+        <p>A washdown conveyor is designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or electrical components. Washdown conveyors are standard in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage</a>, <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a>, and other industries requiring daily wet sanitation. Key features include stainless steel construction, sealed components (IP65-IP69K), and sloped surfaces that shed water.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IP Ratings -->
+  <article class="py-20 bg-surface" aria-labelledby="ip-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Protection Ratings</div>
+      <h2 id="ip-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        IP Ratings for <span class="text-accent">Washdown</span>
+      </h2>
+
+      <div class="max-w-4xl mb-10">
+        <p class="text-lg text-ink-muted leading-relaxed">IP (Ingress Protection) ratings define the level of protection against dust and water. The first digit indicates dust protection (6 = dust-tight). The second digit indicates water protection. All washdown conveyor components (motors, bearings, sensors, enclosures) should be rated appropriately for the cleaning method used.</p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Rating</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Water Protection</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Cleaning Method</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Application</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">IP65</td>
+              <td class="py-4 pr-4">Protected against water jets from any direction</td>
+              <td class="py-4 pr-4">Low-pressure hose, hand spray</td>
+              <td class="py-4 pr-4">Light washdown, wipe-down with wet cloths</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">IP66</td>
+              <td class="py-4 pr-4">Protected against powerful water jets</td>
+              <td class="py-4 pr-4">Pressure washer, direct spray</td>
+              <td class="py-4 pr-4">Standard food plant washdown</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">IP67</td>
+              <td class="py-4 pr-4">Protected against temporary immersion (1m, 30min)</td>
+              <td class="py-4 pr-4">Flooding, deep cleaning</td>
+              <td class="py-4 pr-4">Conveyors that may be submerged briefly</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">IP69K</td>
+              <td class="py-4 pr-4">Protected against high-pressure, high-temp (80°C) washdown</td>
+              <td class="py-4 pr-4">High-pressure steam, CIP systems</td>
+              <td class="py-4 pr-4">USDA, 3-A sanitary, dairy, meat processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="max-w-4xl mt-8">
+        <p class="text-lg text-ink-muted leading-relaxed"><strong class="text-ink">Recommendation:</strong> For most <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage applications</a>, specify IP66 minimum for all components. For <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">USDA or 3-A sanitary environments</a>, specify IP69K.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Materials -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="materials-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Construction</div>
+      <h2 id="materials-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Washdown Conveyor <span class="text-accent">Materials</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Frame Materials</h3>
+        <p><strong class="text-ink">304 Stainless Steel</strong> is the standard for most food and pharmaceutical washdown conveyors. It resists corrosion from water, mild detergents, and most food acids. All welds should be ground smooth and passivated to prevent corrosion initiation points.</p>
+        <p><strong class="text-ink">316 Stainless Steel</strong> (or 316L) provides superior corrosion resistance for harsh chemicals, high chloride environments (salt, cheese brine), and acidic products. Required for meat processing, seafood, and chemical washdown applications. Costs 20-30% more than 304SS.</p>
+        <p><strong class="text-ink">Painted or galvanized steel</strong> is not acceptable in washdown environments. Paint chips contaminate products. Galvanizing corrodes under repeated wet/dry cycles and is not food-safe.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belting Materials</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Polyurethane (PU):</strong> FDA-compliant, oil-resistant, easy to clean, good for dry and lightly wet foods</li>
+          <li><strong class="text-ink">Modular plastic:</strong> Polypropylene (PP), acetal (POM), or polyethylene (PE) modules with hinge rods. Excellent for wet environments, tool-free module replacement. See <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">modular conveyors</a></li>
+          <li><strong class="text-ink">Wire mesh:</strong> Stainless steel wire for high-temperature baking, cooling, and frying. Open weave allows water drainage. See <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">wire mesh conveyors</a></li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Component Materials</h3>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Bearings:</strong> Stainless steel housings with food-grade H1 grease. Sealed (2RS) or IP69K-rated units</li>
+          <li><strong class="text-ink">Fasteners:</strong> All stainless steel. No zinc-plated or galvanized hardware</li>
+          <li><strong class="text-ink">Motors:</strong> Washdown-rated (TEFC or TENV), stainless steel or epoxy-coated housing, IP66/IP69K</li>
+          <li><strong class="text-ink">Sensors:</strong> Stainless steel body, IP67 or IP69K rated</li>
+          <li><strong class="text-ink">Enclosures:</strong> NEMA 4X (stainless) for all electrical components</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features -->
+  <section class="py-20 bg-surface" aria-labelledby="design-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Design</div>
+      <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Washdown Design <span class="text-accent">Features</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Sloped Surfaces</h3>
+        <p>All horizontal surfaces should be sloped (minimum 3°, preferably 5-10°) to shed water. Frame tops, motor mounts, sensor brackets, and any surface that could collect water must slope toward drainage. Standing water breeds bacteria and accelerates corrosion.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Open Frame Construction</h3>
+        <p>Open tubular frames allow water to drain and air to circulate for drying. Avoid box-frame designs with enclosed cavities that trap water. All frame members should have drain holes at low points. Round or oval tubing is easier to clean than square tubing.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Smooth Welds</h3>
+        <p>All welds should be ground smooth and passivated (chemically treated to restore the protective oxide layer). Rough welds and crevices harbor bacteria. For <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">full sanitary design</a>, specify continuous welded construction with polished surfaces.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Tool-Free Belt Access</h3>
+        <p>Quick-release belt tensioners and lift-out belt supports allow tool-free belt removal for cleaning. This reduces cleaning time and encourages thorough sanitation. <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Modular plastic belts</a> allow individual module replacement without removing the entire belt.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Component Accessibility</h3>
+        <p>Motors, drives, and electrical components should be accessible for cleaning without disassembly. Mount components away from direct spray zones when possible. Use quick-disconnect electrical connections to simplify cleaning around control panels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Washdown vs Sanitary -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="sanitary-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Terminology</div>
+      <h2 id="sanitary-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Washdown vs. <span class="text-accent">Sanitary</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>The terms "washdown" and "sanitary" are often used interchangeably but have different meanings:</p>
+
+        <p><strong class="text-ink">Washdown conveyors</strong> are designed to survive water and chemical cleaning without damage. The focus is on protecting components (motors, bearings, electronics) from water intrusion. A conveyor can be washdown-rated without being fully sanitary.</p>
+
+        <p><strong class="text-ink"><a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary conveyors</a></strong> go further with hygienic design principles that prevent bacterial harborage: smooth continuous welds, no horizontal surfaces, open frame construction, tool-free belt removal, radius corners instead of sharp angles, and compliance with USDA, 3-A, or EHEDG standards. All sanitary conveyors are washdown-rated, but not all washdown conveyors meet full sanitary standards.</p>
+
+        <div class="bg-surface border border-border p-6 mt-8">
+          <h4 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-3">When to Specify Full Sanitary</h4>
+          <ul class="text-ink-muted space-y-1 list-disc list-inside">
+            <li>Direct food contact (open product exposure)</li>
+            <li>USDA inspection or 3-A certification required</li>
+            <li>Ready-to-eat (RTE) products</li>
+            <li>Dairy, meat, poultry, or seafood processing</li>
+            <li>Pharmaceutical or medical device manufacturing</li>
+          </ul>
+          <p class="text-ink-muted mt-3">For packaged products, cased goods, or post-seal handling, washdown rating without full sanitary design may be acceptable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cleaning Protocols -->
+  <section class="py-20 bg-surface" aria-labelledby="cleaning-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Operations</div>
+      <h2 id="cleaning-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
+        Cleaning <span class="text-accent">Protocols</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Standard Washdown Sequence</h3>
+        <ol class="list-decimal list-inside space-y-2 ml-2">
+          <li><strong class="text-ink">Pre-rinse:</strong> Remove loose debris with low-pressure water</li>
+          <li><strong class="text-ink">Foam application:</strong> Apply foaming detergent, allow contact time (per chemical instructions)</li>
+          <li><strong class="text-ink">Scrub:</strong> Brush or agitate stubborn soils if needed</li>
+          <li><strong class="text-ink">Rinse:</strong> High-pressure rinse to remove detergent and suspended debris</li>
+          <li><strong class="text-ink">Sanitize:</strong> Apply sanitizer (quaternary ammonium, chlorine, or peracetic acid)</li>
+          <li><strong class="text-ink">Final rinse:</strong> Rinse sanitizer if required by chemical type</li>
+          <li><strong class="text-ink">Dry:</strong> Air dry, air knife, or towel dry before production restart</li>
+        </ol>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Clean-in-Place (CIP)</h3>
+        <p>Automated CIP systems use fixed spray nozzles to deliver cleaning chemicals without manual intervention. CIP is common in dairy, beverage, and pharmaceutical applications. Conveyors designed for CIP must ensure all belt surfaces receive adequate spray coverage and that chemicals drain completely after cleaning. See <a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">conveyor cleaning systems</a> for detailed CIP information.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drying</h3>
+        <p>Drying after washdown is critical to prevent bacterial regrowth. Water left on conveyor surfaces supports biofilm formation within hours. Air knives, blowers, or manual drying with clean towels remove residual water. Some operations use conveyor heaters or infrared dryers for faster drying.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
+        Frequently Asked <span class="text-accent">Questions</span>
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a washdown conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A washdown conveyor is designed to withstand direct water, foam, and chemical cleaning without damage to motors, bearings, or electrical components. Features include <a href="/conveyor-types/stainless-steel-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless steel construction</a>, sealed bearings (IP65-IP69K), washdown-rated motors, NEMA 4X enclosures, and sloped surfaces that shed water. Washdown conveyors are standard in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food</a> and <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a> applications.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What IP rating is required for washdown conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>IP65 is minimum for hose-down cleaning. IP66 is required for pressure washer cleaning. IP69K is required for high-pressure, high-temperature washdown per USDA and 3-A sanitary standards. Most <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">food and pharmaceutical washdown conveyors</a> specify IP66 or IP69K for motors, bearings, sensors, and enclosures.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What materials are used in washdown conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Frames are 304 stainless steel (general food) or 316 stainless steel (harsh chemicals, salt). Belting is FDA-compliant PU, <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">modular plastic</a>, or <a href="/conveyor-types/wire-mesh-conveyors/" class="text-accent hover:text-accent-hover font-semibold">stainless wire mesh</a>. Bearings use stainless housings with food-grade grease. All fasteners are stainless steel. Painted or galvanized steel is not acceptable.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between washdown and sanitary conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Washdown conveyors survive water and chemical cleaning. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary conveyors</a> go further with hygienic design: smooth welds, no horizontal surfaces, open frames, tool-free belt removal, and USDA/3-A/EHEDG compliance. All sanitary conveyors are washdown-rated, but not all washdown conveyors meet full sanitary standards.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How much do washdown conveyors cost?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Washdown conveyors cost 40-100% more than equivalent painted steel conveyors due to stainless steel, sealed components, and specialized motors. A basic 10-foot washdown belt conveyor ranges from $8,000-$15,000 depending on width, speed, and IP rating. Full sanitary conveyors with USDA acceptance cost more. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for details.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent-bright mb-4">Related Pages</div>
+      <h2 id="related-heading" class="font-display text-3xl font-800 text-white tracking-wide mb-8">
+        Continue <span class="text-accent-bright">Researching</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/industries/food-conveyors/sanitary/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Sanitary Conveyors</div>
+          <p class="text-sm text-white/60">Hygienic design standards</p>
+        </a>
+        <a href="/components/cleaning-systems/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cleaning Systems</div>
+          <p class="text-sm text-white/60">Belt cleaners and washdown</p>
+        </a>
+        <a href="/conveyor-types/stainless-steel-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Stainless Steel</div>
+          <p class="text-sm text-white/60">304 vs 316 construction</p>
+        </a>
+        <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>
+          <p class="text-sm text-white/60">Industry-specific guide</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
