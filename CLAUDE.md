@@ -200,6 +200,25 @@ Every new page should link:
 - downward where applicable
 - toward at least one commercial-intent or shortlist page when appropriate
 
+Use `internal-linker` (installed globally) to audit internal links, orphan pages, and linking opportunities after adding new pages.
+
+### External linking rule
+
+Link to authoritative external sources to build E-E-A-T trust signals. External links must use `target="_blank" rel="noopener noreferrer"`.
+
+Priority external link targets:
+- Standards bodies: OSHA, ASME, NFPA, CEMA, FDA, USDA, 3-A SSI, BISSC, ISO
+- Trade associations: MHI, PMMI
+- Manufacturer technical/product pages (not homepages) where the manufacturer is already named in substantive technical context
+
+Rules:
+- Link to specific regulation/standard pages, not generic org homepages, when possible
+- Only link the first meaningful mention of each standard or manufacturer per page
+- Only link manufacturers already discussed for editorial reasons, not to pad authority
+- Do not link manufacturer names in simple comparison lists, only in substantive technical context
+- Every major content page should have at least 2-3 external links to authoritative references
+- Use the same link styling as internal links: `class="text-accent hover:text-accent-hover font-semibold"`
+
 ## Monetization Rules
 
 ### Phase 1: Trust and demand capture
