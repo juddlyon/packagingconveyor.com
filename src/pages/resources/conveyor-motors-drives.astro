@@ -49,12 +49,7 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout
-  title="Conveyor Motors & Drive Systems Guide | PackagingConveyor.com"
-  description="Guide to conveyor motors and drives: AC induction, gear motors, servo motors, VFDs, MDR motors, drum motors, motor sizing methodology, and IE3/IE4 energy efficiency standards."
-  canonical="https://packagingconveyor.com/resources/conveyor-motors-drives/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
->
+<baselayout title="Conveyor Motors &#x26; Drive Systems Guide | PackagingConveyor.com" description="Guide to conveyor motors and drives: AC induction, gear motors, servo motors, VFDs, MDR motors, drum motors, motor sizing methodology, and IE3/IE4 energy efficiency standards." canonical="https://packagingconveyor.com/resources/conveyor-motors-drives/" schema="{[breadcrumbSchema," articleschema,="" faqschema]}="">
 
   <!-- ═══ HERO ═══ -->
   <section class="bg-blueprint relative overflow-hidden">
@@ -64,12 +59,12 @@ const faqSchema = {
         <span class="mx-2">/</span>
         <a href="/resources/" class="hover:text-white/70">Resources</a>
         <span class="mx-2">/</span>
-        <span class="text-white/70">Motors &amp; Drives</span>
+        <span class="text-white/70"><a href="/resources/conveyor-cost-guide/">Motors &#x26; Drives</a></span>
       </nav>
       <div class="max-w-3xl">
         <div class="section-label text-accent-bright/80 mb-6">Resource Guide</div>
         <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
-          Conveyor Motors & <span class="text-accent-bright">Drives</span>
+          Conveyor Motors &#x26; <span class="text-accent-bright">Drives</span>
         </h1>
       </div>
     </div>
@@ -166,7 +161,7 @@ const faqSchema = {
             Packaging applications for servo-driven conveyors include: indexing product under filling heads, positioning cartons for labeling or printing, synchronizing conveyor speed to wrapper or shrink tunnel speed via electronic gearing, and registering products to a fixed pitch for robotic pick-and-place. Servo systems are available from all major automation platform vendors, and selecting a servo system that matches the existing PLC platform simplifies integration and programming.
           </p>
           <p>
-            Servo systems cost significantly more than VFD-driven induction motors , the servo motor, servo drive, feedback cables, and programming time all add to the investment. Use servo drives only where the application requires positioning accuracy better than &plusmn;1mm, rapid acceleration/deceleration, or electronic synchronization with other axes. For simple variable-speed transport, a VFD-driven induction motor is more cost-effective. The <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">engineering calculations guide</a> covers motor sizing formulas applicable to both induction and servo motor systems.
+            Servo systems cost significantly more than VFD-driven induction motors , the servo motor, servo drive, feedback cables, and programming time all add to the investment. Use servo drives only where the application requires positioning accuracy better than ±1mm, rapid acceleration/deceleration, or electronic synchronization with other axes. For simple variable-speed transport, a VFD-driven induction motor is more cost-effective. The <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">engineering calculations guide</a> covers motor sizing formulas applicable to both induction and servo motor systems.
           </p>
         </div>
       </div>
@@ -291,7 +286,7 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">HP Formula</h3>
           <div class="bg-surface p-6 border-l-4 border-accent font-mono text-base">
-            HP = (Te &times; V) / 33,000
+            HP = (Te × V) / 33,000
           </div>
           <p>
             Where Te = effective tension (belt pull) in pounds and V = belt speed in feet per minute. This yields the theoretical HP at steady state. Multiply by the service factor (1.5 normal, 2.0 heavy, 2.5+ severe) and round up to the next NEMA standard motor size.
@@ -299,12 +294,12 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Gear Ratio Selection</h3>
           <p>
-            The gear ratio determines the output RPM from the motor RPM. Target the output RPM to produce the desired belt speed on the specified drive pulley diameter. Use the belt speed formula: V = &pi; &times; D &times; RPM / 12. Solve for RPM: RPM = (V &times; 12) / (&pi; &times; D). Then calculate the gear ratio: GR = Motor RPM / Required Output RPM. Select the nearest available gear ratio from the manufacturer's catalog. VFDs compensate for gear ratio mismatch by adjusting motor speed.
+            The gear ratio determines the output RPM from the motor RPM. Target the output RPM to produce the desired belt speed on the specified drive pulley diameter. Use the belt speed formula: V = π × D × RPM / 12. Solve for RPM: RPM = (V × 12) / (π × D). Then calculate the gear ratio: GR = Motor RPM / Required Output RPM. Select the nearest available gear ratio from the manufacturer's catalog. VFDs compensate for gear ratio mismatch by adjusting motor speed.
           </p>
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Torque Verification</h3>
           <p>
-            After selecting the motor and gear reducer, verify that the output torque exceeds the required torque. Required torque (in-lbs) = Te &times; D / 2, where Te is belt pull in pounds and D is drive pulley diameter in inches. The gear motor's rated output torque must exceed this value by the service factor margin. Check the gear reducer's thermal rating as well , continuous operation at or near maximum torque can overheat the gear oil.
+            After selecting the motor and gear reducer, verify that the output torque exceeds the required torque. Required torque (in-lbs) = Te × D / 2, where Te is belt pull in pounds and D is drive pulley diameter in inches. The gear motor's rated output torque must exceed this value by the service factor margin. Check the gear reducer's thermal rating as well , continuous operation at or near maximum torque can overheat the gear oil.
           </p>
         </div>
       </div>
@@ -315,7 +310,7 @@ const faqSchema = {
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Common Questions</div>
         <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-800 text-ink tracking-wide uppercase mb-8">
-          Motors & Drives <span class="text-accent">FAQ</span>
+          Motors &#x26; Drives <span class="text-accent">FAQ</span>
         </h2>
         <div class="space-y-4">
           <details open class="border border-ink/10 bg-surface-dim p-6">
@@ -339,7 +334,7 @@ const faqSchema = {
           <details class="border border-ink/10 bg-surface-dim p-6">
             <summary class="font-display text-lg font-bold uppercase tracking-wider text-ink cursor-pointer">How do you size a motor for a conveyor?</summary>
             <p class="mt-4 text-ink-muted leading-relaxed">
-              Calculate belt pull from conveyor length, load, friction, and elevation. Apply HP = (belt pull &times; belt speed) / 33,000. Multiply by service factor (1.5 normal, 2.0 heavy duty). Round up to the next standard NEMA motor size. Verify output torque exceeds required torque. See the <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">engineering calculations guide</a> for detailed formulas and examples.
+              Calculate belt pull from conveyor length, load, friction, and elevation. Apply HP = (belt pull × belt speed) / 33,000. Multiply by service factor (1.5 normal, 2.0 heavy duty). Round up to the next standard NEMA motor size. Verify output torque exceeds required torque. See the <a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-accent hover:text-accent-hover font-semibold">engineering calculations guide</a> for detailed formulas and examples.
             </p>
           </details>
         </div>
@@ -359,4 +354,4 @@ const faqSchema = {
     </section>
 
   </article>
-</BaseLayout>
+</baselayout>
