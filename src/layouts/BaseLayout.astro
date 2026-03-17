@@ -6,9 +6,10 @@ interface Props {
   description?: string;
   canonical?: string;
   schema?: object[];
+  robots?: string;
 }
 
-const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [] } = Astro.props;
+const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [], robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" } = Astro.props;
 const siteUrl = 'https://packagingconveyor.com';
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const pageUrl = canonical || `${siteUrl}${currentPath}`;
@@ -45,7 +46,7 @@ const allSchema = [...defaultSchema, ...schema];
   <link rel="canonical" href={pageUrl} />
 
   <!-- SEO: robots -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="robots" content={robots} />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -376,6 +377,7 @@ const allSchema = [...defaultSchema, ...schema];
       <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
         <p>&copy; {new Date().getFullYear()} PackagingConveyor.com. All rights reserved.</p>
         <div class="flex gap-6">
+          <a href="/about/" class="hover:text-white transition-colors">About</a>
           <a href="/privacy/" class="hover:text-white transition-colors">Privacy</a>
           <a href="/terms/" class="hover:text-white transition-colors">Terms</a>
         </div>
