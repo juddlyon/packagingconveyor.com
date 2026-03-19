@@ -7,12 +7,14 @@ interface Props {
   canonical?: string;
   schema?: object[];
   robots?: string;
+  ogImage?: string;
 }
 
-const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [], robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" } = Astro.props;
+const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [], robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", ogImage } = Astro.props;
 const siteUrl = 'https://packagingconveyor.com';
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const pageUrl = canonical || `${siteUrl}${currentPath}`;
+const pageOgImage = ogImage || `${siteUrl}/og-image.svg`;
 
 // Default org + website schema on every page
 const defaultSchema = [
@@ -63,11 +65,15 @@ const allSchema = [...defaultSchema, ...schema];
   <meta property="og:url" content={pageUrl} />
   <meta property="og:site_name" content="PackagingConveyor.com" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content={pageOgImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={pageOgImage} />
 
   <!-- Structured Data -->
   {allSchema.map(s => (
