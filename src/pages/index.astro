@@ -1,25 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const conveyorTypes = [
-  { name: 'Roller', slug: 'roller-conveyors', desc: 'Gravity, powered & MDR roller systems', icon: '⊚' },
-  { name: 'Accumulation', slug: 'accumulation-conveyors', desc: 'Zero-pressure zone buffering', icon: '⫸' },
-  { name: 'Belt', slug: 'flat-belt-conveyors', desc: 'Flat, cleated & modular belt', icon: '▬' },
-  { name: 'Transfer', slug: 'transfer-conveyors', desc: 'Right-angle & multi-directional', icon: '⊞' },
-  { name: 'Spiral', slug: 'spiral-conveyors', desc: 'Vertical elevation change', icon: '⟳' },
-  { name: 'Chain', slug: 'chain-conveyors', desc: 'Drag, slat & overhead chain', icon: '⛓' },
-  { name: 'Sortation', slug: 'diverting-merging', desc: 'Diverting & merging systems', icon: '⑂' },
-  { name: 'Pallet', slug: '/industries/packaging-line-conveyors/pallet', desc: 'Heavy-duty pallet handling', icon: '⬚' },
-  { name: 'Screw', slug: 'screw-conveyors', desc: 'Bulk auger conveying', icon: '⏚' },
-  { name: 'Tabletop', slug: 'tabletop-conveyors', desc: 'Bottles, cans & cartons', icon: '⊟' },
-  { name: 'Vibratory', slug: 'vibratory-conveyors', desc: 'Parts feeders & hoppers', icon: '∿' },
-  { name: 'View All 30+ Types', slug: '', desc: 'Complete conveyor guide', icon: '→' },
+  { name: 'Roller', slug: 'roller-conveyors', desc: 'Gravity, powered & MDR roller systems' },
+  { name: 'Accumulation', slug: 'accumulation-conveyors', desc: 'Zero-pressure zone buffering' },
+  { name: 'Belt', slug: 'flat-belt-conveyors', desc: 'Flat, cleated & modular belt' },
+  { name: 'Transfer', slug: 'transfer-conveyors', desc: 'Right-angle & multi-directional' },
+  { name: 'Spiral', slug: 'spiral-conveyors', desc: 'Vertical elevation change' },
+  { name: 'Chain', slug: 'chain-conveyors', desc: 'Drag, slat & overhead chain' },
+  { name: 'Sortation', slug: 'diverting-merging', desc: 'Diverting & merging systems' },
+  { name: 'Pallet', slug: '/industries/packaging-line-conveyors/pallet', desc: 'Heavy-duty pallet handling' },
+  { name: 'Screw', slug: 'screw-conveyors', desc: 'Bulk auger conveying' },
+  { name: 'Tabletop', slug: 'tabletop-conveyors', desc: 'Bottles, cans & cartons' },
+  { name: 'Vibratory', slug: 'vibratory-conveyors', desc: 'Parts feeders & hoppers' },
 ];
 
 const industries = [
-  { name: 'Food & Beverage', slug: 'food-conveyors', desc: 'Sanitary, USDA, washdown-rated conveyor systems for food processing and packaging lines', tags: ['USDA', '3-A', 'IP69K'], color: 'bg-ink/5 text-ink' },
-  { name: 'Packaging Lines', slug: 'packaging-line-conveyors', desc: 'Primary, secondary & tertiary packaging line conveyor integration and layout', tags: ['Case', 'Pallet', 'Wrap'], color: 'bg-ink/5 text-ink' },
-  { name: 'Pharmaceutical', slug: 'pharmaceutical-conveyors', desc: 'Cleanroom and GMP-compliant conveyor systems for pharma manufacturing', tags: ['GMP', 'ISO 5-8', 'HEPA'], color: 'bg-ink/5 text-ink' },
-  { name: 'Automotive', slug: 'automotive-conveyors', desc: 'Assembly line, paint line & lineside delivery conveyor systems', tags: ['Assembly', 'Paint', 'AGV'], color: 'bg-ink/5 text-ink' },
+  { name: 'Food & Beverage', slug: 'food-conveyors', desc: 'Sanitary, USDA, washdown-rated conveyor systems for food processing and packaging lines', tags: ['USDA', '3-A', 'IP69K'] },
+  { name: 'Packaging Lines', slug: 'packaging-line-conveyors', desc: 'Primary, secondary & tertiary packaging line conveyor integration and layout', tags: ['Case', 'Pallet', 'Wrap'] },
+  { name: 'Pharmaceutical', slug: 'pharmaceutical-conveyors', desc: 'Cleanroom and GMP-compliant conveyor systems for pharma manufacturing', tags: ['GMP', 'ISO 5-8', 'HEPA'] },
+  { name: 'Automotive', slug: 'automotive-conveyors', desc: 'Assembly line, paint line & lineside delivery conveyor systems', tags: ['Assembly', 'Paint', 'AGV'] },
 ];
 
 const functions = [
@@ -31,7 +30,6 @@ const functions = [
   { name: 'Turn & Orient', slug: 'product-handling', desc: 'Rotate, flip or invert product on the conveyor' },
 ];
 
-// FAQ schema , real content for Google + LLMs
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -102,174 +100,202 @@ const webPageSchema = {
 >
 
   <!-- ═══ HERO ═══ -->
-  <section class="bg-blueprint relative overflow-hidden">
-    <div class="absolute bottom-0 left-0 right-0 h-12 opacity-20">
-      <div class="flex items-center h-full gap-[18px] px-4">
-        {Array.from({length: 80}).map(() => (
-          <div class="w-3 h-3 rounded-full bg-white/30 flex-shrink-0"></div>
-        ))}
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        <!-- Left: Message -->
-        <div class="animate-fade-in-up">
-          <div class="section-label text-accent-bright/80 mb-6">
-            The Packaging Conveyor Resource
-          </div>
-          <h1 class="font-display text-6xl sm:text-7xl lg:text-8xl font-800 text-white tracking-wide uppercase leading-[0.95] mb-8">
-            Every<br />
-            <span class="text-accent-bright">Conveyor</span><br />
-            Type. Explained.
-          </h1>
-          <p class="text-xl sm:text-2xl text-white/60 max-w-lg mb-10 leading-relaxed">
-            Technical guides and selection criteria for <strong class="text-white/90">30+ packaging conveyor types</strong>. Built for plant engineers and packaging managers.
-          </p>
-          <div class="flex flex-wrap gap-8 text-base text-white/60 font-mono">
-            <span class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-green"></span>
-              30+ conveyor types
-            </span>
-            <span class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-green"></span>
-              Selection guides
-            </span>
-            <span class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-green"></span>
-              100% free
-            </span>
-          </div>
-        </div>
-
-        <!-- Right: Quick-nav cards -->
-        <div class="animate-fade-in-up space-y-4" style="animation-delay: 0.2s">
-          <a href="/conveyor-types/" class="block p-6 bg-white/[0.06] border border-white/10 hover:border-accent/40 hover:bg-white/[0.08] transition-all group">
-            <div class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Browse by Conveyor Type</div>
-            <p class="text-base text-white/60">30+ types with specs and selection guides</p>
-          </a>
-          <a href="/industries/" class="block p-6 bg-white/[0.06] border border-white/10 hover:border-accent-bright/40 hover:bg-white/[0.08] transition-all group">
-            <div class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Browse by Industry</div>
-            <p class="text-base text-white/60">Food, packaging, pharma, automotive: find your fit</p>
-          </a>
-          <a href="/conveyor-functions/" class="block p-6 bg-white/[0.06] border border-white/10 hover:border-accent-bright/40 hover:bg-white/[0.08] transition-all group">
-            <div class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Browse by Function</div>
-            <p class="text-base text-white/60">Accumulate, sort, index, reject: start with what you need</p>
-          </a>
-          <a href="/resources/" class="block p-6 bg-white/[0.06] border border-white/10 hover:border-accent-bright/40 hover:bg-white/[0.08] transition-all group">
-            <div class="font-display text-2xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Resources & Guides</div>
-            <p class="text-base text-white/60">Design guides, maintenance, safety, and cost factors</p>
-          </a>
-        </div>
+  <section class="bg-ink relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white tracking-wide leading-[0.95] mb-6">
+          The Packaging Conveyor Reference
+        </h1>
+        <p class="text-lg sm:text-xl text-white/50 max-w-2xl mb-10 leading-relaxed font-body">
+          Technical guides and selection criteria for <strong class="text-white/80">30+ conveyor types</strong> across food, pharmaceutical, automotive, and warehouse applications. Independent. No vendor bias.
+        </p>
+        <nav class="flex flex-wrap gap-3 font-sans text-sm" aria-label="Quick navigation">
+          <a href="/conveyor-types/" class="px-5 py-2.5 bg-accent text-white font-semibold hover:bg-accent-hover transition-colors">Browse by Type</a>
+          <a href="/industries/" class="px-5 py-2.5 border border-white/20 text-white/80 font-semibold hover:border-white/40 hover:text-white transition-colors">Browse by Industry</a>
+          <a href="/resources/conveyor-cost-guide/" class="px-5 py-2.5 border border-white/20 text-white/80 font-semibold hover:border-white/40 hover:text-white transition-colors">Pricing Guide</a>
+        </nav>
       </div>
     </div>
   </section>
 
-  <!-- ═══ TRUST BAR ═══ -->
-  <section class="bg-ink conveyor-strip relative" aria-label="Site statistics">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <div class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wider">98</div>
-          <div class="text-sm text-white/60 font-mono uppercase tracking-wider">In-Depth Guides</div>
-        </div>
-        <div>
-          <div class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wider">30+</div>
-          <div class="text-sm text-white/60 font-mono uppercase tracking-wider">Conveyor Types</div>
-        </div>
-        <div>
-          <div class="font-display text-3xl sm:text-4xl font-bold text-accent-bright tracking-wider">4</div>
-          <div class="text-sm text-white/60 font-mono uppercase tracking-wider">Industry Verticals</div>
-        </div>
-        <div>
-          <div class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wider">$0</div>
-          <div class="text-sm text-white/60 font-mono uppercase tracking-wider">Always Free</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ WHAT IS THIS SITE ═══ -->
-  <section class="py-24 bg-surface" aria-labelledby="about-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4"><a href="/about/" class="hover:text-accent-hover">About This Resource</a></div>
-      <h2 id="about-heading" class="text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-8">
-        The Conveyor Guide That <span class="text-accent">Should Have Existed</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Manufacturer sites only show <em>their</em> products. Distributor sites are catalogs with no engineering context. Neither helps you compare conveyor types or spec a system.
-        </p>
-        <p>
-          <strong class="text-ink">PackagingConveyor.com is the neutral technical resource.</strong> Speed calculations, throughput formulas, selection criteria, and head-to-head comparisons across <strong class="text-ink">30+ conveyor types</strong> in food & beverage, pharmaceutical, automotive, and warehouse applications.
-        </p>
-        <p>
-          Use this site to spec your system, compare options, and build an RFQ you can send to any vendor.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ CONVEYOR TYPES GRID ═══ -->
-  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="types-heading">
+  <!-- ═══ COMPARISON TABLE ═══ -->
+  <section class="py-16 sm:py-20 bg-surface" aria-labelledby="comparison-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
-          <div class="section-label text-accent mb-4">Conveyor Types</div>
-          <h2 id="types-heading" class="text-5xl sm:text-6xl font-800 text-ink tracking-wide">
-            Browse by <span class="text-accent">Type</span>
+          <h2 id="comparison-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide">
+            Conveyor Type Comparison
           </h2>
+          <p class="text-ink-muted mt-2 max-w-xl">Side-by-side specs for the most common packaging conveyor types.</p>
         </div>
-        <a href="/conveyor-types/" class="text-base font-semibold text-accent hover:text-accent-hover transition-colors flex items-center gap-1">
-          View all 30+ types
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        <a href="/conveyor-types/" class="text-sm font-sans font-semibold text-accent hover:text-accent-hover transition-colors flex items-center gap-1 shrink-0">
+          All 30+ types
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
         </a>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 stagger">
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-sans text-sm font-semibold uppercase tracking-wider text-ink-muted py-3 pr-4">Type</th>
+              <th class="font-sans text-sm font-semibold uppercase tracking-wider text-ink-muted py-3 pr-4">Best For</th>
+              <th class="font-sans text-sm font-semibold uppercase tracking-wider text-ink-muted py-3 pr-4">Speed Range</th>
+              <th class="font-sans text-sm font-semibold uppercase tracking-wider text-ink-muted py-3 pr-4">Relative Cost</th>
+              <th class="font-sans text-sm font-semibold uppercase tracking-wider text-ink-muted py-3">Load</th>
+            </tr>
+          </thead>
+          <tbody class="text-base">
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Belt</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Lightweight, irregular shapes</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">20-400 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 100 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Gravity Roller</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Cases, cartons, totes</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">Gravity</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 200 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Powered Roller</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Continuous flow, cases</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">30-200 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 500 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Accumulation, zone control</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">30-180 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 250 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Spiral</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Elevation change, small footprint</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">50-200 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 75 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3.5 pr-4 font-semibold"><a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop Chain</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Bottles, cans, small cartons</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">20-100 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 50 lbs</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pr-4 font-semibold"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet</a></td>
+              <td class="py-3.5 pr-4 text-ink-muted">Heavy palletized loads</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">20-60 FPM</td>
+              <td class="py-3.5 pr-4 font-mono text-sm text-ink-muted">$$$$</td>
+              <td class="py-3.5 font-mono text-sm text-ink-muted">Up to 4,000 lbs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4 font-sans">$ = lowest relative cost, $$$$ = highest. Actual pricing varies by length, configuration, materials, and manufacturer. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See our cost factors guide</a>.</p>
+    </div>
+  </section>
+
+  <!-- ═══ CONVEYOR TYPES ═══ -->
+  <section class="py-16 sm:py-20 bg-surface-dim" aria-labelledby="types-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+        <h2 id="types-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide">
+          Browse by Conveyor Type
+        </h2>
+        <a href="/conveyor-types/" class="text-sm font-sans font-semibold text-accent hover:text-accent-hover transition-colors flex items-center gap-1 shrink-0">
+          View all 30+ types
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
         {conveyorTypes.map((type) => (
           <a
-            href={type.slug ? (type.slug.startsWith('/') ? `${type.slug}/` : `/conveyor-types/${type.slug}/`) : '/conveyor-types/'}
-            class:list={[
-              "card group flex flex-col p-5",
-              !type.slug && "bg-accent/5 border-accent/20 hover:bg-accent/10"
-            ]}
+            href={type.slug.startsWith('/') ? `${type.slug}/` : `/conveyor-types/${type.slug}/`}
+            class="bg-surface-dim hover:bg-surface p-5 group transition-colors"
           >
-            <div class="text-3xl mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{type.icon}</div>
-            <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{type.name}</div>
-            <div class="text-sm text-ink-muted mt-1">{type.desc}</div>
+            <div class="font-display text-lg font-bold tracking-wide text-ink group-hover:text-accent transition-colors">{type.name}</div>
+            <div class="text-sm text-ink-muted mt-1 font-sans">{type.desc}</div>
           </a>
         ))}
+        <a
+          href="/conveyor-types/"
+          class="bg-accent/5 hover:bg-accent/10 p-5 group transition-colors"
+        >
+          <div class="font-display text-lg font-bold tracking-wide text-accent group-hover:text-accent-hover transition-colors">All 30+ Types</div>
+          <div class="text-sm text-ink-muted mt-1 font-sans">Complete conveyor guide</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT THIS RESOURCE ═══ -->
+  <section class="py-16 sm:py-20 bg-surface" aria-labelledby="about-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+        <div class="lg:col-span-3">
+          <h2 id="about-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide mb-6">
+            The Conveyor Guide That Should Have Existed
+          </h2>
+          <div class="text-lg text-ink-muted leading-relaxed space-y-4">
+            <p>
+              Manufacturer sites only show <em>their</em> products. Distributor sites are catalogs with no engineering context. Neither helps you compare conveyor types or spec a system.
+            </p>
+            <p>
+              <strong class="text-ink">PackagingConveyor.com is the neutral technical resource.</strong> Speed calculations, throughput formulas, selection criteria, and head-to-head comparisons across 30+ conveyor types in food & beverage, pharmaceutical, automotive, and warehouse applications.
+            </p>
+            <p>
+              Use this site to spec your system, compare options, and build an RFQ you can send to any vendor.
+            </p>
+          </div>
+        </div>
+        <aside class="lg:col-span-2 font-sans">
+          <div class="border-l-2 border-accent pl-6 space-y-6">
+            <div>
+              <div class="font-display text-4xl font-bold text-ink tracking-wide">98</div>
+              <div class="text-sm text-ink-muted mt-0.5">In-depth technical guides</div>
+            </div>
+            <div>
+              <div class="font-display text-4xl font-bold text-ink tracking-wide">30+</div>
+              <div class="text-sm text-ink-muted mt-0.5">Conveyor types covered</div>
+            </div>
+            <div>
+              <div class="font-display text-4xl font-bold text-ink tracking-wide">4</div>
+              <div class="text-sm text-ink-muted mt-0.5">Industry verticals</div>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
   <!-- ═══ INDUSTRIES ═══ -->
-  <section class="py-24 bg-surface" aria-labelledby="industries-heading">
+  <section class="py-16 sm:py-20 bg-surface-dim" aria-labelledby="industries-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="section-label justify-center text-accent mb-4">Industries</div>
-        <h2 id="industries-heading" class="text-5xl sm:text-6xl font-800 text-ink tracking-wide">
-          Conveyors for <span class="text-accent">Your Industry</span>
-        </h2>
-        <p class="mt-5 text-ink-muted text-lg max-w-2xl mx-auto">
-          Every industry has unique requirements: material compatibility, sanitation standards, speed ranges, and compliance certifications. Find conveyors that match yours.
-        </p>
-      </div>
+      <h2 id="industries-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide mb-10">
+        Conveyors by Industry
+      </h2>
 
-      <div class="grid md:grid-cols-2 gap-5 stagger">
+      <div class="grid md:grid-cols-2 gap-5">
         {industries.map((ind) => (
-          <a href={`/industries/${ind.slug}/`} class="card group p-7 flex flex-col">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">{ind.name}</h3>
-              <svg class="w-6 h-6 text-ink-muted group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href={`/industries/${ind.slug}/`} class="card group p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-display text-xl font-bold tracking-wide text-ink group-hover:text-accent transition-colors">{ind.name}</h3>
+              <svg class="w-5 h-5 text-ink-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </div>
-            <p class="text-base text-ink-muted mb-5 leading-relaxed">{ind.desc}</p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <p class="text-base text-ink-muted mb-4 leading-relaxed">{ind.desc}</p>
+            <div class="flex flex-wrap gap-2 mt-auto font-sans">
               {ind.tags.map(tag => (
-                <span class:list={["text-sm font-semibold px-3 py-1", ind.color]}>{tag}</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 bg-ink/5 text-ink-muted">{tag}</span>
               ))}
             </div>
           </a>
@@ -279,187 +305,89 @@ const webPageSchema = {
   </section>
 
   <!-- ═══ FUNCTIONS ═══ -->
-  <section class="py-24 bg-ink-light" aria-labelledby="functions-heading">
+  <section class="py-16 sm:py-20 bg-ink-light" aria-labelledby="functions-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="section-label justify-center text-accent-bright mb-4">Conveyor Functions</div>
-        <h2 id="functions-heading" class="text-5xl sm:text-6xl font-800 text-white tracking-wide">
-          What Does Your Conveyor<br />Need to <span class="text-accent-bright">Do?</span>
-        </h2>
-        <p class="mt-5 text-white/60 text-lg max-w-2xl mx-auto">
-          Think by problem, not by equipment. Start with the function and we'll walk you through the right conveyor types for the job.
-        </p>
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+        <div>
+          <h2 id="functions-heading" class="font-display text-3xl sm:text-4xl font-700 text-white tracking-wide">
+            What Does Your Line Need to Do?
+          </h2>
+          <p class="mt-2 text-white/50 max-w-xl">Think by problem, not equipment. Start with the function.</p>
+        </div>
+        <a href="/conveyor-functions/" class="text-sm font-sans font-semibold text-accent-bright hover:text-white transition-colors flex items-center gap-1 shrink-0">
+          All functions
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
         {functions.map((fn) => (
-          <a href={`/conveyor-functions/${fn.slug}/`} class="group p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">{fn.name}</h3>
-            <p class="text-base text-white/60 leading-relaxed">{fn.desc}</p>
+          <a href={`/conveyor-functions/${fn.slug}/`} class="group p-6 bg-ink-light hover:bg-white/[0.04] transition-colors">
+            <h3 class="font-display text-lg font-bold tracking-wide text-white group-hover:text-accent-bright transition-colors mb-1.5">{fn.name}</h3>
+            <p class="text-sm text-white/50 leading-relaxed font-sans">{fn.desc}</p>
           </a>
         ))}
       </div>
-
-      <div class="text-center mt-12">
-        <a href="/conveyor-functions/" class="inline-flex items-center gap-2 text-base font-semibold text-accent-bright hover:text-white transition-colors">
-          View all conveyor functions
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- ═══ QUICK REFERENCE: CONVEYOR COMPARISON ═══ -->
-  <section class="py-24 bg-surface" aria-labelledby="comparison-heading">
+  <!-- ═══ RESOURCES ═══ -->
+  <section class="py-16 sm:py-20 bg-surface" aria-labelledby="resources-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Quick Reference</div>
-      <h2 id="comparison-heading" class="text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
-        Conveyor Type <span class="text-accent">Comparison</span>
+      <h2 id="resources-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide mb-10">
+        Engineering Resources
       </h2>
 
-      <div class="overflow-x-auto -mx-4 px-4">
-        <table class="w-full text-left border-collapse min-w-[700px]">
-          <thead>
-            <tr class="border-b-2 border-ink">
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Type</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed Range</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Load</th>
-            </tr>
-          </thead>
-          <tbody class="text-base text-ink-muted">
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover">Belt</a></td>
-              <td class="py-4 pr-4">Lightweight, irregular shapes</td>
-              <td class="py-4 pr-4 font-mono text-sm">20–400 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$</td>
-              <td class="py-4 font-mono text-sm">Up to 100 lbs</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Gravity Roller</a></td>
-              <td class="py-4 pr-4">Cases, cartons, totes</td>
-              <td class="py-4 pr-4 font-mono text-sm">Gravity</td>
-              <td class="py-4 pr-4 font-mono text-sm">$</td>
-              <td class="py-4 font-mono text-sm">Up to 200 lbs</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Powered Roller</a></td>
-              <td class="py-4 pr-4">Continuous flow, cases</td>
-              <td class="py-4 pr-4 font-mono text-sm">30–200 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$$</td>
-              <td class="py-4 font-mono text-sm">Up to 500 lbs</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a></td>
-              <td class="py-4 pr-4">Accumulation, zone control</td>
-              <td class="py-4 pr-4 font-mono text-sm">30–180 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$$</td>
-              <td class="py-4 font-mono text-sm">Up to 250 lbs</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover">Spiral</a></td>
-              <td class="py-4 pr-4">Elevation change, small footprint</td>
-              <td class="py-4 pr-4 font-mono text-sm">50–200 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
-              <td class="py-4 font-mono text-sm">Up to 75 lbs</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover">Tabletop Chain</a></td>
-              <td class="py-4 pr-4">Bottles, cans, small cartons</td>
-              <td class="py-4 pr-4 font-mono text-sm">20–100 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$</td>
-              <td class="py-4 font-mono text-sm">Up to 50 lbs</td>
-            </tr>
-            <tr>
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet</a></td>
-              <td class="py-4 pr-4">Heavy palletized loads</td>
-              <td class="py-4 pr-4 font-mono text-sm">20–60 FPM</td>
-              <td class="py-4 pr-4 font-mono text-sm">$$$$</td>
-              <td class="py-4 font-mono text-sm">Up to 4,000 lbs</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-sm text-ink-muted mt-4">Relative cost: $ = lowest, $$$$ = highest. Actual pricing varies significantly by length, configuration, materials, and manufacturer. <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">See our cost factors guide</a>.</p>
-    </div>
-  </section>
-
-  <!-- ═══ START HERE ═══ -->
-  <section class="py-24 bg-ink-light" aria-labelledby="start-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="section-label justify-center text-accent-bright mb-4">Start Here</div>
-      <h2 id="start-heading" class="text-5xl sm:text-6xl font-800 text-white tracking-wide mb-6">
-        Not Sure Where to <span class="text-accent-bright">Begin?</span>
-      </h2>
-      <p class="text-lg text-white/60 max-w-2xl mx-auto mb-12">
-        Start with the comparison table above, or jump straight to the most common starting points for packaging engineers.
-      </p>
-      <div class="grid sm:grid-cols-3 gap-4">
-        <a href="/resources/conveyor-cost-guide/" class="p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Pricing Guide</div>
-          <p class="text-base text-white/60">How much does this actually cost?</p>
-        </a>
-        <a href="/conveyor-types/" class="p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent-bright/40 transition-all group">
-          <div class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">All 30+ Types</div>
-          <p class="text-base text-white/60">I know what type I need</p>
-        </a>
-        <a href="/resources/conveyor-design-guide/" class="p-6 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent-bright/40 transition-all group">
-          <div class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Design Guide</div>
-          <p class="text-base text-white/60">I need to size my system</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ RESOURCES TEASER ═══ -->
-  <section class="py-24 bg-surface" aria-labelledby="resources-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Resources</div>
-      <h2 id="resources-heading" class="text-5xl sm:text-6xl font-800 text-ink tracking-wide mb-12">
-        Engineering <span class="text-accent">Resources</span>
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-5 stagger">
-        <a href="/resources/conveyor-manufacturers/" class="card group p-7">
-          <div class="w-12 h-12 bg-blue/10 flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-          </div>
-          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Manufacturer Directory</h3>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a href="/resources/conveyor-manufacturers/" class="card group p-6">
+          <h3 class="font-display text-lg font-bold tracking-wide text-ink group-hover:text-accent transition-colors mb-2">Manufacturer Directory</h3>
           <p class="text-base text-ink-muted">Conveyor manufacturers and integrators filtered by type, industry, and capability.</p>
         </a>
 
-        <a href="/resources/conveyor-cost-guide/" class="card group p-7">
-          <div class="w-12 h-12 bg-green/10 flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          </div>
-          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Cost & Pricing Guide</h3>
+        <a href="/resources/conveyor-cost-guide/" class="card group p-6">
+          <h3 class="font-display text-lg font-bold tracking-wide text-ink group-hover:text-accent transition-colors mb-2">Cost & Pricing Guide</h3>
           <p class="text-base text-ink-muted">Cost factors by conveyor type, with budgeting guidance and how to compare vendor quotes.</p>
         </a>
 
-        <a href="/resources/conveyor-design-guide/" class="card group p-7">
-          <div class="w-12 h-12 bg-amber/10 flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-          </div>
-          <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Design & Sizing Guide</h3>
+        <a href="/resources/conveyor-design-guide/" class="card group p-6">
+          <h3 class="font-display text-lg font-bold tracking-wide text-ink group-hover:text-accent transition-colors mb-2">Design & Sizing Guide</h3>
           <p class="text-base text-ink-muted">Speed calculations, throughput sizing formulas, and conveyor layout planning reference.</p>
+        </a>
+      </div>
+
+      <div class="mt-5 grid sm:grid-cols-2 md:grid-cols-4 gap-3 font-sans text-sm">
+        <a href="/resources/conveyor-belting/" class="flex items-center gap-2 px-4 py-3 border border-border hover:border-accent/30 text-ink-muted hover:text-accent transition-colors">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          Belting Guide
+        </a>
+        <a href="/resources/conveyor-parts/" class="flex items-center gap-2 px-4 py-3 border border-border hover:border-accent/30 text-ink-muted hover:text-accent transition-colors">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          Parts & Components
+        </a>
+        <a href="/resources/conveyor-motors-drives/" class="flex items-center gap-2 px-4 py-3 border border-border hover:border-accent/30 text-ink-muted hover:text-accent transition-colors">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          Motors & Drives
+        </a>
+        <a href="/resources/conveyor-safety/" class="flex items-center gap-2 px-4 py-3 border border-border hover:border-accent/30 text-ink-muted hover:text-accent transition-colors">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          Safety Standards
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FAQ , SEO + LLM content ═══ -->
-  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-16 sm:py-20 bg-surface-dim" aria-labelledby="faq-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="text-4xl sm:text-5xl font-800 text-ink tracking-wide mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
+      <h2 id="faq-heading" class="font-display text-3xl sm:text-4xl font-700 text-ink tracking-wide mb-8">
+        Frequently Asked Questions
       </h2>
 
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+      <div class="space-y-3">
+        <details class="group border border-border bg-surface px-6 py-5 open:pb-6" open>
+          <summary class="font-sans text-lg font-semibold text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-3">
             How much does a packaging conveyor system cost?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            <svg class="w-5 h-5 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
             <p>Conveyor pricing varies widely based on several key factors. There is no single "price" for a conveyor. Costs depend on your specific application.</p>
@@ -476,10 +404,10 @@ const webPageSchema = {
           </div>
         </details>
 
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+        <details class="group border border-border bg-surface px-6 py-5 open:pb-6">
+          <summary class="font-sans text-lg font-semibold text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-3">
             What type of conveyor is best for packaging lines?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            <svg class="w-5 h-5 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
             <p>The right conveyor depends on your product, throughput, and environment:</p>
@@ -494,10 +422,10 @@ const webPageSchema = {
           </div>
         </details>
 
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+        <details class="group border border-border bg-surface px-6 py-5 open:pb-6">
+          <summary class="font-sans text-lg font-semibold text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-3">
             What is zero-pressure accumulation?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            <svg class="w-5 h-5 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
             <p><strong class="text-ink">Zero-pressure accumulation (ZPA)</strong> means products queue on a conveyor without touching each other or building up backpressure. Each zone has its own photo-eye sensor and independent drive. When a downstream zone is occupied, upstream zones stop their products with controlled gaps between them.</p>
@@ -505,32 +433,32 @@ const webPageSchema = {
           </div>
         </details>
 
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+        <details class="group border border-border bg-surface px-6 py-5 open:pb-6">
+          <summary class="font-sans text-lg font-semibold text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-3">
             How do I calculate conveyor speed for my line?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            <svg class="w-5 h-5 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
             <p>The basic conveyor speed formula:</p>
-            <p class="font-mono text-ink bg-surface-dim px-4 py-3 border border-border"><strong>Speed (FPM) = (Products/min &times; Product length in ft) + gap allowance</strong></p>
+            <p class="font-mono text-ink bg-surface-dim px-4 py-3 border border-border text-sm"><strong>Speed (FPM) = (Products/min &times; Product length in ft) + gap allowance</strong></p>
             <p>Common packaging line speeds by application:</p>
             <ul class="list-disc list-inside space-y-1 ml-2">
-              <li><strong class="text-ink">Case conveyors:</strong> 50–200 FPM</li>
-              <li><strong class="text-ink">Bottle lines:</strong> 20–100 FPM</li>
-              <li><strong class="text-ink">Pallet conveyors:</strong> 20–60 FPM</li>
-              <li><strong class="text-ink">High-speed sortation:</strong> 300–600 FPM</li>
+              <li><strong class="text-ink">Case conveyors:</strong> 50-200 FPM</li>
+              <li><strong class="text-ink">Bottle lines:</strong> 20-100 FPM</li>
+              <li><strong class="text-ink">Pallet conveyors:</strong> 20-60 FPM</li>
+              <li><strong class="text-ink">High-speed sortation:</strong> 300-600 FPM</li>
             </ul>
-            <p>Always add <strong class="text-ink">10–15% speed headroom</strong> above peak production rate so the conveyor never becomes your bottleneck. See our <a href="/resources/conveyor-design-guide/" class="text-accent font-semibold hover:text-accent-hover">design guide</a> for throughput sizing formulas.</p>
+            <p>Always add <strong class="text-ink">10-15% speed headroom</strong> above peak production rate so the conveyor never becomes your bottleneck. See our <a href="/resources/conveyor-design-guide/" class="text-accent font-semibold hover:text-accent-hover">design guide</a> for throughput sizing formulas.</p>
           </div>
         </details>
 
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+        <details class="group border border-border bg-surface px-6 py-5 open:pb-6">
+          <summary class="font-sans text-lg font-semibold text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-3">
             What is the difference between MDR and powered roller?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            <svg class="w-5 h-5 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
-            <p><strong class="text-ink">MDR (Motor Driven Roller)</strong> uses small 24VDC brushless motors built inside individual rollers. Each zone (typically 2–5 rollers) operates independently with its own photo-eye and control card. This enables zero-pressure accumulation and zone-by-zone control.</p>
+            <p><strong class="text-ink">MDR (Motor Driven Roller)</strong> uses small 24VDC brushless motors built inside individual rollers. Each zone (typically 2-5 rollers) operates independently with its own photo-eye and control card. This enables zero-pressure accumulation and zone-by-zone control.</p>
             <p><strong class="text-ink">Powered roller (line-shaft or belt-driven)</strong> uses one external motor driving all rollers through a common belt or chain. All rollers spin together, so there's no zone control without additional pneumatic stops or clutches.</p>
             <p><strong class="text-ink">MDR advantages:</strong> 50%+ energy savings (zones only run when needed), quieter (65 dB vs 80+ dB), less maintenance (no belts/chains to replace), better product protection. <strong class="text-ink">Powered roller advantages:</strong> lower upfront cost, simpler for continuous-flow applications with no accumulation requirement.</p>
           </div>
