@@ -1,6 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+const manufacturers = [
+  { name: 'Dorner', website: 'https://www.dornerconveyors.com', knownFor: 'Precision low-profile belt conveyors, AquaGard/AquaPruf sanitary lines, tool-less belt removal, IP69K washdown', hq: 'Hartland, WI', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Pharma', 'Packaging', 'Automation'], type: 'Manufacturer' },
+  { name: 'Hytrol', website: 'https://www.hytrol.com', knownFor: 'Full roller and belt conveyor line, EZLogic zero-pressure accumulation, extensive integration partner network', hq: 'Jonesboro, AR', categories: ['Belt', 'Roller'], industries: ['Distribution', 'E-Commerce', 'Manufacturing'], type: 'Manufacturer' },
+  { name: 'mk North America', website: 'https://www.mknorthamerica.com', knownFor: 'Aluminum-frame belt conveyors, modular design platform, quick-ship standard products', hq: 'Bloomfield, CT', categories: ['Belt'], industries: ['Industrial', 'Packaging', 'Automotive'], type: 'Manufacturer' },
+  { name: 'Nercon', website: 'https://www.nerconconveyors.com', knownFor: 'Packaging line belt conveyors, accumulation tables, product handling and orientation', hq: 'Oshkosh, WI', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Packaging'], type: 'Manufacturer' },
+  { name: 'Shuttleworth (ProMach)', website: 'https://www.shuttleworth.com', knownFor: 'Slip-torque roller belt technology, gentle product handling, zero-pressure accumulation', hq: 'Huntington, IN', categories: ['Belt', 'Roller'], industries: ['Consumer Goods', 'Food', 'Pharma'], type: 'Manufacturer' },
+  { name: 'Span Tech', website: 'https://www.spantech.com', knownFor: 'Modular plastic belt conveyors, spiral conveyors, side-flexing chain, custom curved designs', hq: 'Glasgow, KY', categories: ['Modular/Chain', 'Belt'], industries: ['Food', 'Beverage', 'Packaging'], type: 'Manufacturer' },
+  { name: 'Interroll', website: 'https://www.interroll.com', knownFor: 'Motorized roller drives (RollerDrive), modular conveyor platform, global availability', hq: 'Switzerland (US operations)', categories: ['Roller'], industries: ['Logistics', 'Distribution', 'Airports'], type: 'Manufacturer' },
+  { name: 'Itoh Denki', website: 'https://www.itohdenki.com', knownFor: '24V DC motorized rollers (MDR), Power Moller technology, energy-efficient drives', hq: 'Japan (US in Schaumburg, IL)', categories: ['Roller'], industries: ['Distribution', 'Manufacturing', 'Postal'], type: 'Manufacturer' },
+  { name: 'TGW Logistics', website: 'https://www.tgw-group.com', knownFor: 'High-speed roller and belt conveyors, integrated warehouse automation systems', hq: 'Austria (US in Grand Rapids, MI)', categories: ['Roller'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
+  { name: 'Conveyco', website: 'https://www.conveyco.com', knownFor: 'System integrator specializing in roller-based sortation and fulfillment systems', hq: 'Pittston, PA', categories: ['Roller'], industries: ['Distribution', 'E-Commerce', '3PL'], type: 'Integrator' },
+  { name: 'Wire Belt Company', website: 'https://www.wirebelt.com', knownFor: 'Stainless steel wire mesh and flat-flex belting for cooling, frying, and baking', hq: 'Londonderry, NH', categories: ['Sanitary', 'Belt'], industries: ['Food Processing', 'Bakery', 'Snack'], type: 'Manufacturer' },
+  { name: 'Heat and Control', website: 'https://www.heatandcontrol.com', knownFor: 'Complete food processing conveyor systems, vibratory conveyors, inspection integration', hq: 'Hayward, CA', categories: ['Sanitary', 'Specialty'], industries: ['Snack', 'Bakery', 'Prepared Foods'], type: 'Manufacturer' },
+  { name: 'Key Technology (Duravant)', website: 'https://www.key.net', knownFor: 'Vibratory conveyors, optical sorting, digital sorting platforms for food processing', hq: 'Walla Walla, WA', categories: ['Sanitary', 'Specialty'], industries: ['Food Processing', 'Agriculture'], type: 'Manufacturer' },
+  { name: 'Intralox (Laitram)', website: 'https://www.intralox.com', knownFor: 'Inventor of modular plastic belting, DirectDrive, ARB (activated roller belt), ThermoDrive homogeneous belting', hq: 'Harahan, LA', categories: ['Modular/Chain', 'Sanitary'], industries: ['Food', 'Beverage', 'Bakery', 'Distribution'], type: 'Manufacturer' },
+  { name: 'Eaglestone', knownFor: 'Stainless steel sanitary conveyors, built-to-order for food packaging lines', hq: 'Naperville, IL', categories: ['Sanitary'], industries: ['Food Packaging', 'Bakery', 'Dairy'], type: 'Manufacturer' },
+  { name: 'Regal Rexnord', website: 'https://www.regalrexnord.com', knownFor: 'MatTop modular belting, table-top chain (Rex and Marbett brands), power transmission', hq: 'Milwaukee, WI', categories: ['Modular/Chain'], industries: ['Beverage', 'Food', 'Packaging'], type: 'Manufacturer' },
+  { name: 'Habasit', website: 'https://www.habasit.com', knownFor: 'HabasitLINK modular belting, fabric belting, timing belts, global service network', hq: 'Switzerland (US in Suwanee, GA)', categories: ['Modular/Chain', 'Belt'], industries: ['Food', 'Packaging', 'Logistics'], type: 'Manufacturer' },
+  { name: 'Volta Belting', website: 'https://www.voltabelting.com', knownFor: 'Homogeneous thermoplastic belting, no fabric layers, easy cleaning, welded seams', hq: 'Israel (US in Atlanta, GA)', categories: ['Modular/Chain', 'Sanitary'], industries: ['Food', 'Meat', 'Poultry'], type: 'Manufacturer' },
+  { name: 'UniTrak', website: 'https://www.unitrak.com', knownFor: 'Tubular drag and vacuum conveyors for powders, granules, and bulk materials', hq: 'Port Hope, ON', categories: ['Specialty'], industries: ['Food', 'Pharma', 'Chemical'], type: 'Manufacturer' },
+  { name: 'Piab', website: 'https://www.piab.com', knownFor: 'Vacuum conveying systems for powders and granular materials, explosion-proof designs', hq: 'Sweden (US operations)', categories: ['Specialty'], industries: ['Pharma', 'Food', 'Chemical'], type: 'Manufacturer' },
+  { name: 'Bastian Solutions (Toyota)', website: 'https://www.bastiansolutions.com', knownFor: 'Pallet conveyors, heavy-duty roller conveyors, robotics, AGVs/AMRs, full warehouse automation', hq: 'Indianapolis, IN', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Manufacturing'], type: 'Integrator' },
+  { name: 'Alba Manufacturing', website: 'https://www.albamfg.com', knownFor: 'Heavy-duty pallet and unit-load conveyors, chain-driven live roller, turntables', hq: 'Fairfield, OH', categories: ['Roller', 'Specialty'], industries: ['Manufacturing', 'Distribution', 'Packaging'], type: 'Manufacturer' },
+  { name: 'Eriez', website: 'https://www.eriez.com', knownFor: 'Electromagnetic and mechanical vibratory feeders and conveyors, metal detection', hq: 'Erie, PA', categories: ['Specialty'], industries: ['Food', 'Pharma', 'Recycling'], type: 'Manufacturer' },
+  { name: 'FMH Conveyors', website: 'https://www.fmhconveyors.com', knownFor: 'Telescoping and flexible conveyors for loading docks, parcel handling, and distribution', hq: 'Jonesboro, AR', categories: ['Specialty'], industries: ['Distribution', 'Parcel', 'E-Commerce'], type: 'Manufacturer' },
+  { name: 'Dematic (KION Group)', website: 'https://www.dematic.com', knownFor: 'Warehouse automation, high-speed sortation, goods-to-person systems, global scale', hq: 'Atlanta, GA', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
+  { name: 'Honeywell Intelligrated', website: 'https://www.intelligrated.com', knownFor: 'Sortation systems, palletizing, warehouse execution software, lifecycle services', hq: 'Mason, OH', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
+  { name: 'ProMach', website: 'https://www.promachbuilt.com', knownFor: 'End-of-line packaging (Shuttleworth, Kleenline brands), stacking, case packing, conveying', hq: 'Covington, KY', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Consumer Goods'], type: 'Integrator' },
+];
+
+// Build unique filter values
+const allCategories = [...new Set(manufacturers.flatMap(m => m.categories))].sort();
+const allTypes = [...new Set(manufacturers.map(m => m.type))].sort();
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -28,7 +62,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Who are the largest conveyor manufacturers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry , a company that dominates warehouse sortation may not build sanitary food conveyors." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry, a company that dominates warehouse sortation may not build sanitary food conveyors." }
     },
     {
       "@type": "Question",
@@ -38,7 +72,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between a conveyor manufacturer and an integrator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor manufacturer designs and builds conveyor equipment , they fabricate frames, assemble drives, and ship the physical hardware. An integrator (also called a systems integrator) designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor manufacturer designs and builds conveyor equipment, they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management." }
     },
     {
       "@type": "Question",
@@ -48,13 +82,13 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Can I buy conveyor parts from any manufacturer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Many conveyor components , rollers, bearings, motors, VFDs, belting, and chain , are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Many conveyor components, rollers, bearings, motors, VFDs, belting, and chain, are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability." }
     }
   ]
 };
 ---
 
-<BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Directory of conveyor manufacturers organized by type, industry, and capability. Belt, roller, modular plastic, sanitary, and specialty conveyor builders , with what each company is known for." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Directory of conveyor manufacturers organized by type, industry, and capability. Belt, roller, modular plastic, sanitary, and specialty conveyor builders, with what each company is known for." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
 
   <!-- ═══ HERO ═══ -->
   <section class="bg-blueprint relative overflow-hidden">
@@ -80,383 +114,145 @@ const faqSchema = {
     <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p id="aio-heading" class="text-lg text-ink leading-relaxed">
-          The conveyor industry includes hundreds of manufacturers ranging from global automation companies building warehouse-scale <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a> to regional fabricators specializing in a single conveyor type. This directory organizes conveyor manufacturers and suppliers by equipment category , belt, roller, modular plastic, chain, sanitary, and specialty , so you can identify companies with direct experience in your application. Each listing notes what the company is known for and what industries they primarily serve. For guidance on choosing between manufacturers, see our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> and <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">regional companies guide</a>.
+          The conveyor industry includes hundreds of manufacturers ranging from global automation companies building warehouse-scale <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a> to regional fabricators specializing in a single conveyor type. This directory organizes conveyor manufacturers and suppliers by equipment category, belt, roller, modular plastic, chain, sanitary, and specialty, so you can identify companies with direct experience in your application. For guidance on choosing between manufacturers, see our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> and <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">regional companies guide</a>.
         </p>
       </div>
     </section>
 
     <!-- ═══ HOW TO USE THIS DIRECTORY ═══ -->
-    <section class="py-16 bg-surface" aria-labelledby="how-to-heading">
+    <section class="py-12 bg-surface" aria-labelledby="how-to-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="border-l-4 border-accent p-6 bg-accent/5">
           <h2 id="how-to-heading" class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">How to Use This Directory</h2>
           <p class="text-base text-ink-muted leading-relaxed">
-            This directory lists manufacturers based on publicly available information , company websites, published case studies, trade show participation, and industry association memberships. PackagingConveyor.com is not a manufacturer, distributor, or dealer. We do not sell conveyors or earn commissions from these companies. Listings are organized by equipment category. A company may appear in multiple categories if they build multiple conveyor types. If you need a <a href="/resources/conveyor-manufacturers/custom/" class="text-accent hover:text-accent-hover font-semibold">custom conveyor design</a>, start with manufacturers that specialize in your industry and conveyor type.
+            This directory lists manufacturers based on publicly available information: company websites, published case studies, trade show participation, and industry association memberships. PackagingConveyor.com is not a manufacturer, distributor, or dealer. We do not sell conveyors or earn commissions from these companies. Filter by conveyor category or company type, sort by name or location, and click any company name to visit their website. If you need a <a href="/resources/conveyor-manufacturers/custom/" class="text-accent hover:text-accent-hover font-semibold">custom conveyor design</a>, start with manufacturers that specialize in your industry and conveyor type.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ═══ BELT CONVEYOR MANUFACTURERS ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="belt-heading">
+    <!-- ═══ INTERACTIVE DIRECTORY ═══ -->
+    <section class="py-20 bg-surface-dim" aria-labelledby="directory-heading" id="directory">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Category</div>
-        <h2 id="belt-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          <a href="/conveyor-types/belt-conveyors/" class="hover:text-accent-hover">Belt Conveyor <span class="text-accent">Manufacturers</span></a>
+        <div class="section-label text-accent mb-4">Directory</div>
+        <h2 id="directory-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
+          All <span class="text-accent">Manufacturers</span>
         </h2>
 
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            Belt conveyors are the most widely manufactured conveyor type. Nearly every conveyor company builds some form of belt conveyor, but the differences lie in belt material, frame construction, speed capability, and sanitary design. The companies below are known specifically for belt conveyor expertise in packaging and material handling applications.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[800px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Manufacturer</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Primary Industries</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Headquarters</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Dorner</td>
-                <td class="py-4 pr-4">Precision low-profile belt conveyors, sanitary designs, small-package handling</td>
-                <td class="py-4 pr-4">Food, packaging, automation</td>
-                <td class="py-4 pr-4">Hartland, WI</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Hytrol</td>
-                <td class="py-4 pr-4">High-volume belt and roller conveyors, extensive integration partner network</td>
-                <td class="py-4 pr-4">Distribution, e-commerce, manufacturing</td>
-                <td class="py-4 pr-4">Jonesboro, AR</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">mk North America</td>
-                <td class="py-4 pr-4">Aluminum-frame belt conveyors, modular design, quick-ship standard products</td>
-                <td class="py-4 pr-4">Industrial, packaging, automotive</td>
-                <td class="py-4 pr-4">Bloomfield, CT</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Nercon</td>
-                <td class="py-4 pr-4">Packaging line belt conveyors, accumulation tables, <a href="/conveyor-functions/product-handling/" class="text-accent hover:text-accent-hover font-semibold">product handling</a></td>
-                <td class="py-4 pr-4">Food &#x26; beverage packaging</td>
-                <td class="py-4 pr-4">Oshkosh, WI</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Shuttleworth (ProMach)</td>
-                <td class="py-4 pr-4">Slip-torque roller belt technology, gentle product handling, zero-pressure accumulation</td>
-                <td class="py-4 pr-4">Consumer goods, food, pharmaceutical</td>
-                <td class="py-4 pr-4">Huntington, IN</td>
-              </tr>
-              <!-- VERIFIED: Shuttleworth HQ still Huntington, IN. Owned by ProMach (End of Line Business Unit). -->
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Span Tech</td>
-                <td class="py-4 pr-4">Modular plastic belt conveyors, spiral conveyors, custom curved designs</td>
-                <td class="py-4 pr-4">Food, beverage, packaging</td>
-                <td class="py-4 pr-4">Glasgow, KY</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ ROLLER CONVEYOR MANUFACTURERS ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="roller-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Category</div>
-        <h2 id="roller-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Roller Conveyor <span class="text-accent">Manufacturers</span>
-        </h2>
-
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            Roller conveyors , both gravity and powered (motorized, lineshaft, MDR) , are workhorses in distribution, case handling, and <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a> operations. MDR (motor-driven roller) technology has grown significantly, with several manufacturers building complete zero-pressure accumulation systems around 24V DC motorized rollers.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[800px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Manufacturer</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Primary Industries</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Headquarters</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Hytrol</td>
-                <td class="py-4 pr-4">Full roller conveyor line , gravity, lineshaft, belt-driven, MDR , with EZLogic zero-pressure accumulation</td>
-                <td class="py-4 pr-4">Distribution, e-commerce, manufacturing</td>
-                <td class="py-4 pr-4">Jonesboro, AR</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Interroll</td>
-                <td class="py-4 pr-4">Motorized roller drives (RollerDrive), modular conveyor platform, global availability</td>
-                <td class="py-4 pr-4">Logistics, distribution, airports</td>
-                <td class="py-4 pr-4">Sant'Antonino, Switzerland</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Itoh Denki</td>
-                <td class="py-4 pr-4">24V DC motorized rollers (MDR), power moller technology, energy-efficient drives</td>
-                <td class="py-4 pr-4">Distribution, manufacturing, postal</td>
-                <td class="py-4 pr-4">Kasai, Japan (US ops in Schaumburg, IL)</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">TGW Logistics</td>
-                <td class="py-4 pr-4">High-speed roller and belt conveyors, integrated warehouse automation systems</td>
-                <td class="py-4 pr-4"><a href="/industries/warehouse-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Warehouse</a>, e-commerce, retail</td>
-                <td class="py-4 pr-4">Marchtrenk, Austria (US in Grand Rapids, MI)</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Conveyco</td>
-                <td class="py-4 pr-4">System integrator specializing in roller-based sortation and fulfillment systems</td>
-                <td class="py-4 pr-4">Distribution, e-commerce, 3PL</td>
-                <td class="py-4 pr-4">Pittston, PA</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ SANITARY & FOOD-GRADE MANUFACTURERS ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="sanitary-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Category</div>
-        <h2 id="sanitary-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Sanitary &#x26; <span class="text-accent">Food-Grade</span> Manufacturers
-        </h2>
-
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            Sanitary conveyor manufacturers build equipment specifically for food, beverage, and <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">pharmaceutical</a> environments where washdown capability, material traceability, and hygienic design are non-negotiable. These conveyors typically feature stainless steel frames (304 or 316), FDA-compliant belting, tool-less belt removal, sloped surfaces for drainage, and sealed bearings. The companies below are known for sanitary-first design rather than adapting standard industrial conveyors for food use.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[800px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Manufacturer</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Primary Industries</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Headquarters</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Dorner</td>
-                <td class="py-4 pr-4">AquaGard and AquaPruf sanitary lines, tool-less belt removal, IP69K washdown</td>
-                <td class="py-4 pr-4"><a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Food</a>, pharma, packaging</td>
-                <td class="py-4 pr-4">Hartland, WI</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Wire Belt Company</td>
-                <td class="py-4 pr-4">Stainless steel wire mesh and flat-flex belting for <a href="/industries/food-conveyors/cooling/" class="text-accent hover:text-accent-hover font-semibold">cooling</a>, frying, and baking</td>
-                <td class="py-4 pr-4">Food processing, bakery, snack</td>
-                <td class="py-4 pr-4">Londonderry, NH</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Heat and Control</td>
-                <td class="py-4 pr-4">Complete food processing conveyor systems, vibratory conveyors, inspection integration</td>
-                <td class="py-4 pr-4">Snack, bakery, prepared foods</td>
-                <td class="py-4 pr-4">Hayward, CA</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Key Technology (Duravant)</td>
-                <td class="py-4 pr-4">Vibratory conveyors, optical sorting, digital sorting platforms</td>
-                <td class="py-4 pr-4">Food processing, agriculture</td>
-                <td class="py-4 pr-4">Walla Walla, WA</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Intralox (Laitram)</td>
-                <td class="py-4 pr-4">Modular plastic belting, ThermoDrive homogeneous belting, hygienic design leadership</td>
-                <td class="py-4 pr-4">Food, beverage, <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery</a></td>
-                <td class="py-4 pr-4">Harahan, LA</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Eaglestone</td>
-                <td class="py-4 pr-4">Stainless steel sanitary conveyors, built-to-order for food packaging lines</td>
-                <td class="py-4 pr-4">Food packaging, bakery, dairy</td>
-                <td class="py-4 pr-4">Naperville, IL</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ MODULAR PLASTIC & CHAIN MANUFACTURERS ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="modular-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Category</div>
-        <h2 id="modular-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Modular Plastic &#x26; <span class="text-accent">Chain</span> Conveyor Manufacturers
-        </h2>
-
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            Modular plastic belt and table-top chain conveyors are standard in bottling, canning, and consumer goods packaging. These conveyors handle curves, inclines, and side transfers that flat belt conveyors cannot. The modular belt market is dominated by a few belting manufacturers who also offer conveyor frames, plus conveyor builders who integrate third-party belting.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[800px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Manufacturer</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Primary Industries</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Headquarters</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Intralox (Laitram)</td>
-                <td class="py-4 pr-4">Inventor of modular plastic belting, DirectDrive and ARB (activated roller belt) technology</td>
-                <td class="py-4 pr-4">Food, beverage, distribution</td>
-                <td class="py-4 pr-4">Harahan, LA</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Rexnord (now Regal Rexnord)</td>
-                <td class="py-4 pr-4">MatTop modular belting, table-top chain, Rex and Marbett brands</td>
-                <td class="py-4 pr-4">Beverage, food, packaging</td>
-                <td class="py-4 pr-4">Milwaukee, WI</td>
-              </tr>
-              <!-- VERIFIED: Rexnord PMC (conveyor) division merged with Regal Beloit in Oct 2021 to form Regal Rexnord. Zurn Elkay is the water business only. -->
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Habasit</td>
-                <td class="py-4 pr-4">Modular belting (HabasitLINK), fabric belting, timing belts, global service network</td>
-                <td class="py-4 pr-4">Food, packaging, logistics</td>
-                <td class="py-4 pr-4">Reinach, Switzerland (US in Suwanee, GA)</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Volta Belting</td>
-                <td class="py-4 pr-4">Homogeneous thermoplastic belting, no fabric layers, easy cleaning</td>
-                <td class="py-4 pr-4">Food, meat, poultry</td>
-                <td class="py-4 pr-4">Port Maon, Israel (US in Atlanta, GA)</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Span Tech</td>
-                <td class="py-4 pr-4">Side-flexing chain, spiral conveyors, multi-tier packaging line layouts</td>
-                <td class="py-4 pr-4">Food, beverage, consumer goods</td>
-                <td class="py-4 pr-4">Glasgow, KY</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ SPECIALTY & APPLICATION-SPECIFIC ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="specialty-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Category</div>
-        <h2 id="specialty-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Specialty &#x26; <span class="text-accent">Application-Specific</span> Manufacturers
-        </h2>
-
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            Some conveyor manufacturers focus on a specific conveyor type or application rather than offering a broad product line. These specialists often deliver deeper expertise and more refined designs for their niche than general-purpose conveyor builders.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
-          <div class="border border-border p-6">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3"><a href="/conveyor-types/vacuum-conveyors/" class="hover:text-accent-hover">Vacuum Conveyors</a></h3>
-            <p class="text-ink-muted leading-relaxed mb-2"><strong class="text-ink">UniTrak</strong> , Tubular drag and vacuum conveyors for powders, granules, and bulk materials. Used in food, pharmaceutical, and chemical processing.</p>
-            <p class="text-ink-muted leading-relaxed"><strong class="text-ink">Piab</strong> , Vacuum conveying systems for powders and granular materials, pharmaceutical applications, explosion-proof designs.</p>
+        <!-- Filters & Search -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+          <div class="relative flex-1 max-w-md">
+            <input
+              type="text"
+              id="dir-search"
+              placeholder="Search by name, specialty, or location..."
+              class="w-full pl-10 pr-4 py-3 bg-surface border border-border text-ink text-base font-sans placeholder:text-ink-muted/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
+              autocomplete="off"
+            />
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-muted/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
           </div>
-          <div class="border border-border p-6">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Pallet &#x26; Heavy-Load Conveyors</h3>
-            <p class="text-ink-muted leading-relaxed mb-2"><strong class="text-ink">Bastian Solutions (Toyota)</strong> , Pallet conveyors, heavy-duty roller conveyors, full warehouse automation. Also provides <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/" class="text-accent hover:text-accent-hover font-semibold">pallet dispensing</a> solutions.</p>
-            <p class="text-ink-muted leading-relaxed"><strong class="text-ink">Alba Manufacturing</strong> , Heavy-duty pallet and unit-load conveyors, chain-driven live roller, turntables.</p>
-          </div>
-          <div class="border border-border p-6">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Vibratory Conveyors</h3>
-            <p class="text-ink-muted leading-relaxed mb-2"><strong class="text-ink">Eriez</strong> , Electromagnetic and mechanical vibratory feeders and conveyors for food, pharmaceutical, and recycling.</p>
-            <p class="text-ink-muted leading-relaxed"><strong class="text-ink">Key Technology (Duravant)</strong> , Vibratory conveyors with integrated sorting, de-watering, and distribution for food processing lines.</p>
-          </div>
-          <div class="border border-border p-6">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3"><a href="/conveyor-types/flexible-conveyors/" class="hover:text-accent-hover">Flexible &#x26; Expandable Conveyors</a></h3>
-            <p class="text-ink-muted leading-relaxed mb-2"><strong class="text-ink">BestFlex (BestConnect)</strong> , Flexible gravity and powered roller conveyors for truck loading/unloading and temporary operations.</p>
-            <p class="text-ink-muted leading-relaxed"><strong class="text-ink">FMH Conveyors</strong> , Telescoping and flexible conveyors for loading docks, parcel handling, and distribution centers.</p>
+          <select id="dir-category" class="px-4 py-3 bg-surface border border-border text-ink text-base font-sans focus:outline-none focus:border-accent cursor-pointer min-w-[160px]">
+            <option value="">All Categories</option>
+            {allCategories.map(c => <option value={c}>{c}</option>)}
+          </select>
+          <select id="dir-type" class="px-4 py-3 bg-surface border border-border text-ink text-base font-sans focus:outline-none focus:border-accent cursor-pointer min-w-[160px]">
+            <option value="">All Types</option>
+            {allTypes.map(t => <option value={t}>{t}</option>)}
+          </select>
+        </div>
+
+        <!-- Result count & sort -->
+        <div class="flex items-center justify-between mb-4">
+          <p id="dir-count" class="text-sm font-mono text-ink-muted">{manufacturers.length} companies</p>
+          <div class="flex items-center gap-2 text-sm font-sans text-ink-muted">
+            <span>Sort:</span>
+            <button data-sort="name" class="dir-sort px-2 py-1 font-semibold text-accent border-b-2 border-accent" aria-pressed="true">Name</button>
+            <button data-sort="hq" class="dir-sort px-2 py-1 font-semibold text-ink-muted hover:text-ink border-b-2 border-transparent" aria-pressed="false">Location</button>
+            <button data-sort="type" class="dir-sort px-2 py-1 font-semibold text-ink-muted hover:text-ink border-b-2 border-transparent" aria-pressed="false">Type</button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ═══ SYSTEM INTEGRATORS ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="integrators-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Integrators</div>
-        <h2 id="integrators-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Conveyor System <span class="text-accent">Integrators</span>
-        </h2>
-
-        <div class="max-w-4xl mb-10">
-          <p class="text-lg text-ink-muted leading-relaxed mb-6">
-            System integrators design, build, install, and commission complete conveyor systems. They may manufacture their own conveyors, source equipment from multiple manufacturers, or both. For complex packaging lines with multiple conveyor types, <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed/outfeed</a> connections, and PLC controls, an integrator is typically the right partner. For a single conveyor purchase, buying direct from a manufacturer is often simpler and less expensive.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[800px]">
+        <!-- Directory Table (desktop) -->
+        <div class="hidden md:block overflow-x-auto -mx-4 px-4">
+          <table class="w-full text-left border-collapse min-w-[900px]" id="dir-table">
             <thead>
               <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Integrator</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Focus Areas</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Scale</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Headquarters</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4 w-[200px]">Company</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4 w-[140px]">Category</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4 w-[100px]">Type</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 w-[180px]">Headquarters</th>
               </tr>
             </thead>
-            <tbody class="text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Dematic (KION Group)</td>
-                <td class="py-4 pr-4">Warehouse automation, sortation, goods-to-person systems</td>
-                <td class="py-4 pr-4">Enterprise / global</td>
-                <td class="py-4 pr-4">Atlanta, GA</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Honeywell Intelligrated</td>
-                <td class="py-4 pr-4">Sortation, palletizing, warehouse execution, lifecycle services</td>
-                <td class="py-4 pr-4">Enterprise / global</td>
-                <td class="py-4 pr-4">Mason, OH</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Bastian Solutions (Toyota)</td>
-                <td class="py-4 pr-4">Conveyor systems, robotics, AGVs/AMRs, warehouse automation</td>
-                <td class="py-4 pr-4">Mid-market to enterprise</td>
-                <td class="py-4 pr-4">Indianapolis, IN</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">ProMach</td>
-                <td class="py-4 pr-4">End-of-line packaging, conveying (Shuttleworth, Kleenline brands), <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">stacking</a>, case packing</td>
-                <td class="py-4 pr-4">Mid-market to enterprise</td>
-                <td class="py-4 pr-4">Covington, KY</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">ICA (Industrial Control &#x26; Automation)</td>
-                <td class="py-4 pr-4"><a href="/conveyor-types/vertical-lift/">Packaging line integration</a>, controls engineering, retrofit projects</td>
-                <td class="py-4 pr-4">Regional / mid-market</td>
-                <td class="py-4 pr-4">Various regional</td>
-              </tr>
+            <tbody class="text-ink-muted" id="dir-tbody">
+              {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => (
+                <tr class="border-b border-border dir-row" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
+                  <td class="py-4 pr-4 font-semibold text-ink">
+                    {m.website ? (
+                      <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover inline-flex items-center gap-1.5 group">
+                        {m.name}
+                        <svg class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                      </a>
+                    ) : (
+                      <span>{m.name}</span>
+                    )}
+                  </td>
+                  <td class="py-4 pr-4 text-sm leading-relaxed">{m.knownFor}</td>
+                  <td class="py-4 pr-4">
+                    <div class="flex flex-wrap gap-1">
+                      {m.categories.map(c => (
+                        <span class="text-xs font-mono font-semibold px-2 py-0.5 bg-ink/5 text-ink-muted">{c}</span>
+                      ))}
+                    </div>
+                  </td>
+                  <td class="py-4 pr-4">
+                    <span class={`text-xs font-mono font-semibold px-2 py-0.5 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
+                  </td>
+                  <td class="py-4 text-sm">{m.hq}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
+        </div>
+
+        <!-- Directory Cards (mobile) -->
+        <div class="md:hidden space-y-3" id="dir-cards">
+          {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => (
+            <div class="dir-card border border-border bg-surface p-5" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
+              <div class="flex items-start justify-between mb-2">
+                {m.website ? (
+                  <a href={m.website} target="_blank" rel="noopener noreferrer" class="font-display text-xl font-bold uppercase tracking-wider text-accent hover:text-accent-hover inline-flex items-center gap-1.5 group">
+                    {m.name}
+                    <svg class="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                  </a>
+                ) : (
+                  <span class="font-display text-xl font-bold uppercase tracking-wider text-ink">{m.name}</span>
+                )}
+                <span class={`text-xs font-mono font-semibold px-2 py-0.5 flex-shrink-0 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
+              </div>
+              <p class="text-sm text-ink-muted leading-relaxed mb-3">{m.knownFor}</p>
+              <div class="flex items-center justify-between text-sm">
+                <div class="flex flex-wrap gap-1">
+                  {m.categories.map(c => (
+                    <span class="text-xs font-mono font-semibold px-2 py-0.5 bg-ink/5 text-ink-muted">{c}</span>
+                  ))}
+                </div>
+                <span class="text-ink-muted text-xs">{m.hq}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- No results message -->
+        <div id="dir-empty" class="hidden py-16 text-center">
+          <p class="text-lg text-ink-muted">No manufacturers match your filters.</p>
+          <button id="dir-reset" class="mt-4 text-accent hover:text-accent-hover font-semibold text-base">Clear all filters</button>
         </div>
       </div>
     </section>
 
     <!-- ═══ CHOOSING A MANUFACTURER ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="choosing-heading">
+    <section class="py-20 bg-surface" aria-labelledby="choosing-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Selection Guide</div>
         <h2 id="choosing-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
@@ -474,7 +270,7 @@ const faqSchema = {
           <div>
             <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Evaluate Industry Experience</h3>
             <p class="text-lg text-ink-muted leading-relaxed">
-              A manufacturer that has built 200 <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery conveyors</a> will anticipate problems , flour dust ingress, high-temperature exposure, sanitation protocols , that a general-purpose builder may not. Ask for case studies or references in your specific industry. If the manufacturer cannot provide them, that does not disqualify them, but it means you should scrutinize their design more carefully.
+              A manufacturer that has built 200 <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery conveyors</a> will anticipate problems, flour dust ingress, high-temperature exposure, sanitation protocols, that a general-purpose builder may not. Ask for case studies or references in your specific industry. If the manufacturer cannot provide them, that does not disqualify them, but it means you should scrutinize their design more carefully.
             </p>
           </div>
 
@@ -488,14 +284,14 @@ const faqSchema = {
           <div>
             <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Geographic Proximity Matters</h3>
             <p class="text-lg text-ink-muted leading-relaxed">
-              For installation support, emergency service, and parts delivery, proximity reduces response time and travel costs. This does not mean you must buy local , many manufacturers service nationally , but a company with a service center within a few hours of your facility can respond to breakdowns faster. See our <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">conveyor companies near you</a> guide for regional search strategies.
+              For installation support, emergency service, and parts delivery, proximity reduces response time and travel costs. This does not mean you must buy local, many manufacturers service nationally, but a company with a service center within a few hours of your facility can respond to breakdowns faster. See our <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">conveyor companies near you</a> guide for regional search strategies.
             </p>
           </div>
 
           <div>
             <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Get Multiple Quotes</h3>
             <p class="text-lg text-ink-muted leading-relaxed">
-              Request quotes from at least 2–3 manufacturers. Ensure all vendors are quoting on the same specification , same conveyor type, length, width, speed, load capacity, material of construction, controls scope, and installation scope. Price differences of 20–40% between qualified vendors are common and reflect differences in manufacturing approach, overhead structure, and local market conditions, not necessarily quality differences.
+              Request quotes from at least 2-3 manufacturers. Ensure all vendors are quoting on the same specification: same conveyor type, length, width, speed, load capacity, material of construction, controls scope, and installation scope. Price differences of 20-40% between qualified vendors are common and reflect differences in manufacturing approach, overhead structure, and local market conditions, not necessarily quality differences.
             </p>
           </div>
         </div>
@@ -530,7 +326,7 @@ const faqSchema = {
             </div>
             <div class="border border-white/10 p-6">
               <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white mb-2">Thomas</h3>
-              <p class="text-white/60 leading-relaxed">Thomasnet.com , industrial supplier directory with detailed company profiles, certifications, and capabilities filtering for conveyor manufacturers.</p>
+              <p class="text-white/60 leading-relaxed">Thomasnet.com, industrial supplier directory with detailed company profiles, certifications, and capabilities filtering for conveyor manufacturers.</p>
             </div>
           </div>
         </div>
@@ -552,7 +348,7 @@ const faqSchema = {
               <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
             </summary>
             <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry , a company that dominates warehouse sortation may not build sanitary food conveyors.</p>
+              <p class="text-ink-muted leading-relaxed">Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry, a company that dominates warehouse sortation may not build sanitary food conveyors.</p>
             </div>
           </details>
 
@@ -572,7 +368,7 @@ const faqSchema = {
               <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
             </summary>
             <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">A conveyor manufacturer designs and builds conveyor equipment , they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management.</p>
+              <p class="text-ink-muted leading-relaxed">A conveyor manufacturer designs and builds conveyor equipment, they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management.</p>
             </div>
           </details>
 
@@ -592,7 +388,7 @@ const faqSchema = {
               <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
             </summary>
             <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">Many conveyor components , rollers, bearings, motors, VFDs, belting, and chain , are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability.</p>
+              <p class="text-ink-muted leading-relaxed">Many conveyor components, rollers, bearings, motors, VFDs, belting, and chain, are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability.</p>
             </div>
           </details>
         </div>
@@ -610,7 +406,7 @@ const faqSchema = {
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <a href="/resources/conveyor-manufacturers/custom/" class="group border border-border p-6 hover:border-accent transition-colors">
             <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Custom Conveyor Design</h3>
-            <p class="text-ink-muted text-sm leading-relaxed">When to go custom vs. catalog , process, costs, and lead times for custom-engineered conveyor systems.</p>
+            <p class="text-ink-muted text-sm leading-relaxed">When to go custom vs. catalog: process, costs, and lead times for custom-engineered conveyor systems.</p>
           </a>
           <a href="/resources/conveyor-companies/" class="group border border-border p-6 hover:border-accent transition-colors">
             <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Companies Near You</h3>
@@ -618,11 +414,114 @@ const faqSchema = {
           </a>
           <a href="/resources/conveyor-parts/" class="group border border-border p-6 hover:border-accent transition-colors">
             <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Parts &#x26; Replacement</h3>
-            <p class="text-ink-muted text-sm leading-relaxed">Guide to conveyor wear parts , rollers, bearings, belts, motors, drives, and guards.</p>
+            <p class="text-ink-muted text-sm leading-relaxed">Guide to conveyor wear parts: rollers, bearings, belts, motors, drives, and guards.</p>
           </a>
         </div>
       </div>
     </section>
   </article>
+
+  <script>
+    const search = document.getElementById('dir-search');
+    const catFilter = document.getElementById('dir-category');
+    const typeFilter = document.getElementById('dir-type');
+    const countEl = document.getElementById('dir-count');
+    const emptyEl = document.getElementById('dir-empty');
+    const resetBtn = document.getElementById('dir-reset');
+    const rows = document.querySelectorAll('.dir-row');
+    const cards = document.querySelectorAll('.dir-card');
+    const sortBtns = document.querySelectorAll('.dir-sort');
+    const tbody = document.getElementById('dir-tbody');
+    const cardsContainer = document.getElementById('dir-cards');
+
+    function applyFilters() {
+      const q = (search?.value || '').toLowerCase().trim();
+      const cat = catFilter?.value || '';
+      const type = typeFilter?.value || '';
+      let visible = 0;
+
+      // Filter table rows
+      rows.forEach(row => {
+        const name = row.dataset.name || '';
+        const known = row.dataset.known || '';
+        const hq = row.dataset.hq || '';
+        const industries = row.dataset.industries || '';
+        const categories = JSON.parse(row.dataset.categories || '[]');
+        const rowType = row.dataset.type || '';
+
+        const matchSearch = !q || name.includes(q) || known.includes(q) || hq.includes(q) || industries.includes(q);
+        const matchCat = !cat || categories.includes(cat);
+        const matchType = !type || rowType === type;
+
+        const show = matchSearch && matchCat && matchType;
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      // Filter mobile cards
+      cards.forEach(card => {
+        const name = card.dataset.name || '';
+        const known = card.dataset.known || '';
+        const hq = card.dataset.hq || '';
+        const industries = card.dataset.industries || '';
+        const categories = JSON.parse(card.dataset.categories || '[]');
+        const cardType = card.dataset.type || '';
+
+        const matchSearch = !q || name.includes(q) || known.includes(q) || hq.includes(q) || industries.includes(q);
+        const matchCat = !cat || categories.includes(cat);
+        const matchType = !type || cardType === type;
+
+        card.style.display = matchSearch && matchCat && matchType ? '' : 'none';
+      });
+
+      if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}`;
+      if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
+    }
+
+    function applySorting(field) {
+      if (!tbody || !cardsContainer) return;
+
+      const sortRows = Array.from(rows);
+      const sortCards = Array.from(cards);
+
+      const getVal = (el) => {
+        if (field === 'name') return el.dataset.name || '';
+        if (field === 'hq') return el.dataset.hq || '';
+        if (field === 'type') return el.dataset.type || '';
+        return '';
+      };
+
+      sortRows.sort((a, b) => getVal(a).localeCompare(getVal(b)));
+      sortCards.sort((a, b) => getVal(a).localeCompare(getVal(b)));
+
+      sortRows.forEach(row => tbody.appendChild(row));
+      sortCards.forEach(card => cardsContainer.appendChild(card));
+    }
+
+    search?.addEventListener('input', applyFilters);
+    catFilter?.addEventListener('change', applyFilters);
+    typeFilter?.addEventListener('change', applyFilters);
+
+    sortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sortBtns.forEach(b => {
+          b.classList.remove('text-accent', 'border-accent');
+          b.classList.add('text-ink-muted', 'border-transparent');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.remove('text-ink-muted', 'border-transparent');
+        btn.classList.add('text-accent', 'border-accent');
+        btn.setAttribute('aria-pressed', 'true');
+        applySorting(btn.dataset.sort);
+      });
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      if (search) search.value = '';
+      if (catFilter) catFilter.value = '';
+      if (typeFilter) typeFilter.value = '';
+      applyFilters();
+    });
+  </script>
 
 </BaseLayout>
