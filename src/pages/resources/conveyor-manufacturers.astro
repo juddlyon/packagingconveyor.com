@@ -28,7 +28,8 @@ const manufacturers = [
   { name: 'FMH Conveyors', website: 'https://www.fmhconveyors.com', knownFor: 'Telescoping and flexible conveyors for loading docks, parcel handling, and distribution', hq: 'Jonesboro, AR', categories: ['Specialty'], industries: ['Distribution', 'Parcel', 'E-Commerce'], type: 'Manufacturer' },
   { name: 'Dematic (KION Group)', website: 'https://www.dematic.com', knownFor: 'Warehouse automation, high-speed sortation, goods-to-person systems, global scale', hq: 'Atlanta, GA', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
   { name: 'Honeywell Intelligrated', website: 'https://www.intelligrated.com', knownFor: 'Sortation systems, palletizing, warehouse execution software, lifecycle services', hq: 'Mason, OH', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
-  { name: 'ProMach', website: 'https://www.promachbuilt.com', knownFor: 'End-of-line packaging (Shuttleworth brand), stacking, case packing, conveying', hq: 'Covington, KY', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Consumer Goods'], type: 'Integrator' },
+  { name: 'ProMach', website: 'https://www.promachbuilt.com', knownFor: 'End-of-line packaging (Shuttleworth, Kleenline brands), stacking, case packing, conveying', hq: 'Covington, KY', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Consumer Goods'], type: 'Integrator' },
+  { name: 'Kleenline (ProMach)', website: 'https://www.kleenline.com', knownFor: 'Sanitary stainless steel conveyors for food and pharmaceutical, easy-clean open-frame designs', hq: 'Newburgh, IN', categories: ['Sanitary', 'Belt'], industries: ['Food', 'Pharma', 'Packaging'], type: 'Manufacturer' },
 ];
 
 // Build unique filter values
@@ -52,7 +53,30 @@ const articleSchema = {
   "description": "Directory of conveyor manufacturers and suppliers organized by conveyor type, industry specialty, and service capability. Covers belt, roller, chain, modular plastic, sanitary, and specialty conveyor builders.",
   "url": "https://packagingconveyor.com/resources/conveyor-manufacturers/",
   "datePublished": "2026-03-12",
+  "dateModified": new Date().toISOString().split('T')[0],
+  "author": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" },
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const directorySchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Conveyor Manufacturers & Suppliers Directory",
+  "description": "Directory of conveyor manufacturers, integrators, and suppliers for packaging and material handling applications.",
+  "numberOfItems": manufacturers.length,
+  "itemListElement": manufacturers
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((m, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Organization",
+        "name": m.name,
+        ...(m.website ? { "url": m.website } : {}),
+        "description": m.knownFor,
+        "address": { "@type": "PostalAddress", "addressLocality": m.hq },
+      }
+    }))
 };
 
 const faqSchema = {
@@ -88,7 +112,7 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Directory of conveyor manufacturers organized by type, industry, and capability. Belt, roller, modular plastic, sanitary, and specialty conveyor builders, with what each company is known for." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Directory of conveyor manufacturers organized by type, industry, and capability. Belt, roller, modular plastic, sanitary, and specialty conveyor builders, with what each company is known for." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema, directorySchema]}>
 
   <!-- ═══ HERO + FILTERS (compact) ═══ -->
   <article>
