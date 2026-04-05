@@ -3,8 +3,7 @@ const KEY = '57a4783948be4d888afda70272b9b21f';
 const SITEMAP_URL = `${SITE}/sitemap-0.xml`;
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
-module.exports = {
-  async onSuccess() {
+export const onSuccess = async function () {
     try {
       const res = await fetch(SITEMAP_URL);
       if (!res.ok) {
@@ -42,5 +41,4 @@ module.exports = {
     } catch (err) {
       console.log(`IndexNow: error: ${err.message}`);
     }
-  },
 };
