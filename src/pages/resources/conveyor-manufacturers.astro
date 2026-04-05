@@ -8,9 +8,9 @@ const manufacturers = [
   { name: 'Nercon', website: 'https://www.nerconconveyors.com', knownFor: 'Packaging line belt conveyors, accumulation tables, product handling and orientation', hq: 'Oshkosh, WI', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Packaging'], type: 'Manufacturer' },
   { name: 'Shuttleworth (ProMach)', website: 'https://www.shuttleworth.com', knownFor: 'Slip-torque roller belt technology, gentle product handling, zero-pressure accumulation', hq: 'Huntington, IN', categories: ['Belt', 'Roller'], industries: ['Consumer Goods', 'Food', 'Pharma'], type: 'Manufacturer' },
   { name: 'Span Tech', website: 'https://www.spantech.com', knownFor: 'Modular plastic belt conveyors, spiral conveyors, side-flexing chain, custom curved designs', hq: 'Glasgow, KY', categories: ['Modular/Chain', 'Belt'], industries: ['Food', 'Beverage', 'Packaging'], type: 'Manufacturer' },
-  { name: 'Interroll', website: 'https://www.interroll.com', knownFor: 'Motorized roller drives (RollerDrive), modular conveyor platform, global availability', hq: 'Switzerland (US operations)', categories: ['Roller'], industries: ['Logistics', 'Distribution', 'Airports'], type: 'Manufacturer' },
-  { name: 'Itoh Denki', website: 'https://www.itohdenki.com', knownFor: '24V DC motorized rollers (MDR), Power Moller technology, energy-efficient drives', hq: 'Japan (US in Schaumburg, IL)', categories: ['Roller'], industries: ['Distribution', 'Manufacturing', 'Postal'], type: 'Manufacturer' },
-  { name: 'TGW Logistics', website: 'https://www.tgw-group.com', knownFor: 'High-speed roller and belt conveyors, integrated warehouse automation systems', hq: 'Austria (US in Grand Rapids, MI)', categories: ['Roller'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
+  { name: 'Interroll', website: 'https://www.interroll.com', knownFor: 'Motorized roller drives (RollerDrive), modular conveyor platform, global availability', hq: 'Global', categories: ['Roller'], industries: ['Logistics', 'Distribution', 'Airports'], type: 'Manufacturer' },
+  { name: 'Itoh Denki', website: 'https://www.itohdenki.com', knownFor: '24V DC motorized rollers (MDR), Power Moller technology, energy-efficient drives', hq: 'Schaumburg, IL', categories: ['Roller'], industries: ['Distribution', 'Manufacturing', 'Postal'], type: 'Manufacturer' },
+  { name: 'TGW Logistics', website: 'https://www.tgw-group.com', knownFor: 'High-speed roller and belt conveyors, integrated warehouse automation systems', hq: 'Grand Rapids, MI', categories: ['Roller'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
   { name: 'Conveyco', website: 'https://www.conveyco.com', knownFor: 'System integrator specializing in roller-based sortation and fulfillment systems', hq: 'Pittston, PA', categories: ['Roller'], industries: ['Distribution', 'E-Commerce', '3PL'], type: 'Integrator' },
   { name: 'Wire Belt Company', website: 'https://www.wirebelt.com', knownFor: 'Stainless steel wire mesh and flat-flex belting for cooling, frying, and baking', hq: 'Londonderry, NH', categories: ['Sanitary', 'Belt'], industries: ['Food Processing', 'Bakery', 'Snack'], type: 'Manufacturer' },
   { name: 'Heat and Control', website: 'https://www.heatandcontrol.com', knownFor: 'Complete food processing conveyor systems, vibratory conveyors, inspection integration', hq: 'Hayward, CA', categories: ['Sanitary', 'Specialty'], industries: ['Snack', 'Bakery', 'Prepared Foods'], type: 'Manufacturer' },
@@ -18,17 +18,17 @@ const manufacturers = [
   { name: 'Intralox (Laitram)', website: 'https://www.intralox.com', knownFor: 'Inventor of modular plastic belting, DirectDrive, ARB (activated roller belt), ThermoDrive homogeneous belting', hq: 'Harahan, LA', categories: ['Modular/Chain', 'Sanitary'], industries: ['Food', 'Beverage', 'Bakery', 'Distribution'], type: 'Manufacturer' },
   { name: 'Eaglestone', knownFor: 'Stainless steel sanitary conveyors, built-to-order for food packaging lines', hq: 'Naperville, IL', categories: ['Sanitary'], industries: ['Food Packaging', 'Bakery', 'Dairy'], type: 'Manufacturer' },
   { name: 'Regal Rexnord', website: 'https://www.regalrexnord.com', knownFor: 'MatTop modular belting, table-top chain (Rex and Marbett brands), power transmission', hq: 'Milwaukee, WI', categories: ['Modular/Chain'], industries: ['Beverage', 'Food', 'Packaging'], type: 'Manufacturer' },
-  { name: 'Habasit', website: 'https://www.habasit.com', knownFor: 'HabasitLINK modular belting, fabric belting, timing belts, global service network', hq: 'Switzerland (US in Suwanee, GA)', categories: ['Modular/Chain', 'Belt'], industries: ['Food', 'Packaging', 'Logistics'], type: 'Manufacturer' },
-  { name: 'Volta Belting', website: 'https://www.voltabelting.com', knownFor: 'Homogeneous thermoplastic belting, no fabric layers, easy cleaning, welded seams', hq: 'Israel (US in Atlanta, GA)', categories: ['Modular/Chain', 'Sanitary'], industries: ['Food', 'Meat', 'Poultry'], type: 'Manufacturer' },
+  { name: 'Habasit', website: 'https://www.habasit.com', knownFor: 'HabasitLINK modular belting, fabric belting, timing belts, global service network', hq: 'Suwanee, GA', categories: ['Modular/Chain', 'Belt'], industries: ['Food', 'Packaging', 'Logistics'], type: 'Manufacturer' },
+  { name: 'Volta Belting', website: 'https://www.voltabelting.com', knownFor: 'Homogeneous thermoplastic belting, no fabric layers, easy cleaning, welded seams', hq: 'Atlanta, GA', categories: ['Modular/Chain', 'Sanitary'], industries: ['Food', 'Meat', 'Poultry'], type: 'Manufacturer' },
   { name: 'UniTrak', website: 'https://www.unitrak.com', knownFor: 'Tubular drag and vacuum conveyors for powders, granules, and bulk materials', hq: 'Port Hope, ON', categories: ['Specialty'], industries: ['Food', 'Pharma', 'Chemical'], type: 'Manufacturer' },
-  { name: 'Piab', website: 'https://www.piab.com', knownFor: 'Vacuum conveying systems for powders and granular materials, explosion-proof designs', hq: 'Sweden (US operations)', categories: ['Specialty'], industries: ['Pharma', 'Food', 'Chemical'], type: 'Manufacturer' },
+  { name: 'Piab', website: 'https://www.piab.com', knownFor: 'Vacuum conveying systems for powders and granular materials, explosion-proof designs', hq: 'Global', categories: ['Specialty'], industries: ['Pharma', 'Food', 'Chemical'], type: 'Manufacturer' },
   { name: 'Bastian Solutions (Toyota)', website: 'https://www.bastiansolutions.com', knownFor: 'Pallet conveyors, heavy-duty roller conveyors, robotics, AGVs/AMRs, full warehouse automation', hq: 'Indianapolis, IN', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Manufacturing'], type: 'Integrator' },
   { name: 'Alba Manufacturing', website: 'https://www.albamfg.com', knownFor: 'Heavy-duty pallet and unit-load conveyors, chain-driven live roller, turntables', hq: 'Fairfield, OH', categories: ['Roller', 'Specialty'], industries: ['Manufacturing', 'Distribution', 'Packaging'], type: 'Manufacturer' },
   { name: 'Eriez', website: 'https://www.eriez.com', knownFor: 'Electromagnetic and mechanical vibratory feeders and conveyors, metal detection', hq: 'Erie, PA', categories: ['Specialty'], industries: ['Food', 'Pharma', 'Recycling'], type: 'Manufacturer' },
   { name: 'FMH Conveyors', website: 'https://www.fmhconveyors.com', knownFor: 'Telescoping and flexible conveyors for loading docks, parcel handling, and distribution', hq: 'Jonesboro, AR', categories: ['Specialty'], industries: ['Distribution', 'Parcel', 'E-Commerce'], type: 'Manufacturer' },
   { name: 'Dematic (KION Group)', website: 'https://www.dematic.com', knownFor: 'Warehouse automation, high-speed sortation, goods-to-person systems, global scale', hq: 'Atlanta, GA', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
   { name: 'Honeywell Intelligrated', website: 'https://www.intelligrated.com', knownFor: 'Sortation systems, palletizing, warehouse execution software, lifecycle services', hq: 'Mason, OH', categories: ['Roller', 'Specialty'], industries: ['Warehouse', 'E-Commerce', 'Retail'], type: 'Integrator' },
-  { name: 'ProMach', website: 'https://www.promachbuilt.com', knownFor: 'End-of-line packaging (Shuttleworth, Kleenline brands), stacking, case packing, conveying', hq: 'Covington, KY', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Consumer Goods'], type: 'Integrator' },
+  { name: 'ProMach', website: 'https://www.promachbuilt.com', knownFor: 'End-of-line packaging (Shuttleworth brand), stacking, case packing, conveying', hq: 'Covington, KY', categories: ['Belt', 'Sanitary'], industries: ['Food', 'Beverage', 'Consumer Goods'], type: 'Integrator' },
 ];
 
 // Build unique filter values
@@ -148,7 +148,7 @@ const faqSchema = {
 
         <!-- Directory Table (desktop) -->
         <div class="hidden md:block overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse" id="dir-table">
+          <table class="w-full text-left border-collapse table-fixed" id="dir-table">
             <thead>
               <tr class="border-b-2 border-ink">
                 <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-6" style="width:30%">Company</th>
@@ -164,17 +164,19 @@ const faqSchema = {
                 <tr class="border-b border-border dir-row align-top" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
                   <td class="py-4 pr-6 font-semibold text-ink">
                     <div class="flex items-start gap-3">
-                      {domain && (
+                      {domain ? (
                         <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="20" height="20" class="flex-shrink-0 rounded-sm mt-0.5" loading="lazy" />
+                      ) : (
+                        <div class="w-5 h-5 flex-shrink-0 rounded-sm mt-0.5 bg-ink/10"></div>
                       )}
                       <div>
                         {m.website ? (
-                          <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold inline-flex items-center gap-1.5 group text-base whitespace-nowrap">
+                          <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold inline-flex items-center gap-1.5 group text-base">
                             {m.name}
                             <svg class="w-3.5 h-3.5 opacity-30 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                           </a>
                         ) : (
-                          <span class="whitespace-nowrap">{m.name}</span>
+                          <span>{m.name}</span>
                         )}
                         <div class="mt-1">
                           <span class={`text-xs font-mono font-semibold px-1.5 py-0.5 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
@@ -205,8 +207,10 @@ const faqSchema = {
             return (
             <div class="dir-card border border-border bg-surface p-4" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
               <div class="flex items-center gap-3 mb-2">
-                {domain && (
+                {domain ? (
                   <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="24" height="24" class="flex-shrink-0 rounded-sm" loading="lazy" />
+                ) : (
+                  <div class="w-6 h-6 flex-shrink-0 rounded-sm bg-ink/10"></div>
                 )}
                 <div class="flex-1 min-w-0">
                   {m.website ? (
