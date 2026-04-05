@@ -148,47 +148,49 @@ const faqSchema = {
 
         <!-- Directory Table (desktop) -->
         <div class="hidden md:block overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[900px]" id="dir-table">
+          <table class="w-full text-left border-collapse" id="dir-table">
             <thead>
               <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4 w-[280px]">Company</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4 w-[140px]">Category</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 w-[180px]">Headquarters</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-6" style="width:30%">Company</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4" style="width:40%">Known For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4" style="width:14%">Category</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4" style="width:16%">Headquarters</th>
               </tr>
             </thead>
             <tbody class="text-ink-muted" id="dir-tbody">
               {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => {
                 const domain = m.website ? new URL(m.website).hostname.replace('www.', '') : null;
                 return (
-                <tr class="border-b border-border dir-row" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
-                  <td class="py-4 pr-4 font-semibold text-ink">
-                    <div class="flex items-center gap-3">
+                <tr class="border-b border-border dir-row align-top" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
+                  <td class="py-4 pr-6 font-semibold text-ink">
+                    <div class="flex items-start gap-3">
                       {domain && (
-                        <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="20" height="20" class="flex-shrink-0 rounded-sm" loading="lazy" />
+                        <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="20" height="20" class="flex-shrink-0 rounded-sm mt-0.5" loading="lazy" />
                       )}
-                      <div class="min-w-0">
+                      <div>
                         {m.website ? (
-                          <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold inline-flex items-center gap-1.5 group">
+                          <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold inline-flex items-center gap-1.5 group text-base whitespace-nowrap">
                             {m.name}
                             <svg class="w-3.5 h-3.5 opacity-30 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                           </a>
                         ) : (
-                          <span>{m.name}</span>
+                          <span class="whitespace-nowrap">{m.name}</span>
                         )}
-                        <span class={`ml-2 text-xs font-mono font-semibold px-1.5 py-0.5 align-middle ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
+                        <div class="mt-1">
+                          <span class={`text-xs font-mono font-semibold px-1.5 py-0.5 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
+                        </div>
                       </div>
                     </div>
                   </td>
-                  <td class="py-4 pr-4 text-sm leading-relaxed">{m.knownFor}</td>
-                  <td class="py-4 pr-4">
+                  <td class="py-4 pr-4 text-sm leading-relaxed align-top">{m.knownFor}</td>
+                  <td class="py-4 pr-4 align-top">
                     <div class="flex flex-wrap gap-1">
                       {m.categories.map(c => (
                         <span class="text-xs font-mono font-semibold px-2 py-0.5 bg-ink/5 text-ink-muted">{c}</span>
                       ))}
                     </div>
                   </td>
-                  <td class="py-4 text-sm">{m.hq}</td>
+                  <td class="py-4 text-sm align-top">{m.hq}</td>
                 </tr>
                 );
               })}
