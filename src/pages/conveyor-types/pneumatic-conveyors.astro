@@ -7,7 +7,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
     { "@type": "ListItem", "position": 2, "name": "Conveyor Types", "item": "https://packagingconveyor.com/conveyor-types/" },
-    { "@type": "ListItem", "position": 3, "name": "Pneumatic Conveyor Systems", "item": "https://packagingconveyor.com/conveyor-types/pneumatic-conveyors/" }
+    { "@type": "ListItem", "position": 3, "name": "Pneumatic Conveying Systems", "item": "https://packagingconveyor.com/conveyor-types/pneumatic-conveyors/" }
   ]
 };
 
@@ -17,23 +17,28 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a pneumatic conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A pneumatic conveyor uses air pressure or vacuum to transport dry bulk materials through enclosed pipelines. Powders, granules, pellets, and flakes suspend in the airstream (dilute phase) or move as a dense plug (dense phase) through sealed tubes. Pneumatic conveyors contain dust, route around bends and elevation changes, and move material 50 feet to over 1,000 feet." }
+      "name": "What is a pneumatic conveying system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A pneumatic conveying system uses air pressure or vacuum to move dry bulk materials through a sealed pipeline. Powders, granules, pellets, and flakes either travel suspended in a fast airstream (dilute phase) or move as slow plugs or a dense bed (dense phase). The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment." }
     },
     {
       "@type": "Question",
       "name": "What is the difference between dilute phase and dense phase pneumatic conveying?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Dilute phase conveying suspends material in a high-velocity airstream (3,500-5,000+ FPM) at low material-to-air ratios. Dense phase conveying pushes material as slugs or plugs through the pipeline at lower velocities (500-1,500 FPM) and higher pressures. Dilute phase suits non-abrasive, non-fragile materials and costs less to install. Dense phase suits fragile, abrasive, or high-value materials because lower velocity reduces particle breakage and pipe wear." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Dilute phase conveying keeps air velocity high enough that material stays suspended in the airstream, usually with a blower at low pressure. Dense phase conveying moves material as slow plugs or a dense bed at higher pressure, usually with compressed air and a pressure vessel. Dilute phase costs less to install and suits free-flowing, non-fragile materials. Dense phase suits fragile, abrasive, or blended materials because low velocity reduces particle breakage, segregation, and pipe wear." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a pneumatic conveying system need an air compressor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not always. Dilute phase pressure systems normally use a positive displacement blower, and vacuum systems use a vacuum pump or exhauster. Dense phase pressure systems need compressed air, from either a dedicated compressor or the plant air network. Air for hygroscopic, food, or pharmaceutical materials usually needs drying and oil-free supply or filtration. Size the air supply from conveying rate, route, and material test results, and confirm plant air can meet peak demand without starving other equipment." }
     },
     {
       "@type": "Question",
       "name": "What materials can be pneumatically conveyed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors handle most dry bulk solids: powders (flour, cement, starch, pigments), granules (sugar, salt, resin pellets, coffee), pellets (plastic resin, pet food, animal feed), flakes (cereal, dried herbs), and fibers (wood dust, textile waste). Materials that are very wet, sticky, hygroscopic, or have extremely high bulk density may not convey pneumatically without special system modifications." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors handle most dry bulk solids: powders (flour, cement, starch, pigments), granules (sugar, salt, coffee), pellets (plastic resin, pet food, animal feed), flakes (cereal, dried herbs), and fibers (wood dust, textile waste). Materials that are very wet, sticky, or strongly hygroscopic may not convey pneumatically without special design, and some are better suited to mechanical conveyors." }
     },
     {
       "@type": "Question",
       "name": "Pneumatic conveyor vs. mechanical conveyor: which is better?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors excel at enclosed dust-free transport, complex routing through walls and floors, multiple pickup and delivery points, and handling hazardous or contamination-sensitive materials. Mechanical conveyors (belt, screw, drag chain) use less energy per ton, handle higher capacities, and cost less for short straight-line runs. Pneumatic systems consume 3-10 times more energy than mechanical conveyors for the same throughput, but they eliminate spillage, contamination, and dust exposure." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors excel at enclosed, dust-free transport, complex routing through walls and floors, multiple pickup or delivery points, and contamination-sensitive or hazardous materials. Mechanical conveyors (belt, screw, drag chain) use substantially less energy per ton and usually cost less for short, straight, high-capacity runs. Choose pneumatic when containment or routing matters more than energy cost." }
     }
   ]
 };
@@ -41,16 +46,16 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Pneumatic Conveyor Systems: Dilute Phase, Dense Phase, Vacuum & Pressure",
-  "description": "Pneumatic conveyor systems explained: dilute phase, dense phase, vacuum, and pressure. Powder, granule, and pellet transport for food, chemical, and pharmaceutical lines.",
+  "headline": "Pneumatic Conveying Systems: Dilute vs Dense Phase Guide",
+  "description": "How pneumatic conveying systems work: dilute vs dense phase, vacuum vs pressure, blower vs compressor air supply, components, and a supplier spec checklist.",
   "url": "https://packagingconveyor.com/conveyor-types/pneumatic-conveyors/",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
 
 <BaseLayout
-  title="Pneumatic Conveyor Systems: Dilute Phase, Dense Phase, Vacuum & Pressure"
-  description="Pneumatic conveying explained: dilute phase, dense phase, vacuum, and pressure systems for powders, granules, and pellets across food, chemical, and pharmaceutical lines."
+  title="Pneumatic Conveying Systems: Dilute vs Dense Phase Guide"
+  description="How pneumatic conveying systems work: dilute vs dense phase, vacuum vs pressure, blower vs compressor air supply, key components, and a supplier spec checklist."
   canonical="https://packagingconveyor.com/conveyor-types/pneumatic-conveyors/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
@@ -63,7 +68,7 @@ const articleSchema = {
         <li class="text-ink-muted/50">/</li>
         <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
         <li class="text-ink-muted/50">/</li>
-        <li class="text-ink font-semibold">Pneumatic Conveyor Systems</li>
+        <li class="text-ink font-semibold">Pneumatic Conveying Systems</li>
       </ol>
     </div>
   </nav>
@@ -71,49 +76,26 @@ const articleSchema = {
   <!-- AIO -->
   <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Pneumatic Conveyor Systems</div>
+      <div class="section-label text-accent mb-4">Pneumatic Conveyors</div>
       <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-8">
-        Pneumatic Conveyor Systems
+        Pneumatic Conveying Systems
       </h1>
-      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
-        <p>A pneumatic conveyor moves dry bulk materials, powders, granules, pellets, and flakes, through enclosed pipelines using air pressure or vacuum. The sealed pipe contains dust, prevents product contamination, and stops the spillage that comes with open mechanical conveyors. Pipe bends route around walls, floors, and equipment, carrying material from storage silos and hoppers to <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>, mixers, and process equipment, 50 feet up to over 1,000 feet.</p>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
+        <p>A pneumatic conveying system moves dry bulk material (powders, granules, pellets, and flakes) through a sealed pipeline using air. A blower, compressor, or vacuum pump either pushes material from a pressurized feed point or pulls it toward a vacuum receiver. The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment, carrying material from silos, bulk bags, and hoppers to mixers, process equipment, and <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>.</p>
+        <p>Two choices define every system: the conveying phase (dilute or dense) and the air source (pressure or vacuum). The table below compares the four combinations.</p>
       </div>
     </div>
   </section>
 
-  <!-- Conveying Modes -->
-  <article class="py-20 bg-surface" aria-labelledby="modes-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Conveying Modes</div>
-      <h2 id="modes-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Four Pneumatic <span class="text-accent">Conveying Modes</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dilute Phase Pressure</h3>
-        <p>Dilute phase pressure conveying uses a blower or compressor to push material through the pipeline at high velocity (3,500-5,000+ FPM). Material suspends in the airstream at low solids-to-air ratios (typically 1-10 lbs of material per lb of air). A rotary airlock valve meters material from the hopper into the pressurized pipeline. At the destination, a filter receiver separates material from the transport air. Dilute phase pressure systems handle moderate distances (50-500 feet) and suit materials that are not fragile or highly abrasive. Coperion, Schenck Process, and Flexicon manufacture dilute phase pressure systems.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dilute Phase Vacuum</h3>
-        <p>Dilute phase vacuum conveying uses a vacuum pump at the destination to pull material through the pipeline. Material enters through a simple pickup point (no airlock valve needed at the source). The vacuum system handles multiple pickup points converging to one destination. Vacuum systems suit applications where material must be drawn from open containers, sacks, drums, or bulk bags. They are inherently dust-tight because any leak draws air inward rather than blowing material outward. See our <a href="/conveyor-types/vacuum-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vacuum conveyor guide</a> for additional vacuum system details.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dense Phase Pressure</h3>
-        <p>Dense phase pressure conveying pushes material as slugs or plugs through the pipeline at low velocity (500-1,500 FPM) and high pressure (15-45 PSIG). Material moves in a pulsating flow pattern: alternating plugs of material and air cushions. Dense phase suits fragile materials (coffee beans, snack foods, pharmaceutical tablets) because the low velocity minimizes particle breakage and attrition. It also suits abrasive materials (cement, sand, mineral powders) because low velocity reduces pipe and elbow wear. Dense phase systems cost more than dilute phase due to pressure vessel feed equipment and higher-pressure air supply.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dense Phase Vacuum</h3>
-        <p>Dense phase vacuum conveying uses high-vacuum pumps to move material at low velocity through the pipeline. It handles fragile and abrasive materials over shorter distances (typically under 200 feet). The least common of the four modes, dense phase vacuum shows up mostly in pharmaceutical and specialty chemical lines that need gentle handling and full containment.</p>
-      </div>
-    </div>
-  </article>
-
   <!-- Comparison Table -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="compare-heading">
+  <section class="py-20 bg-surface" aria-labelledby="compare-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Comparison</div>
+      <div class="section-label text-accent mb-4">Quick Comparison</div>
       <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Conveying Mode <span class="text-accent">Comparison</span>
+        Types of Pneumatic <span class="text-accent">Conveying Systems</span>
       </h2>
       <div class="overflow-x-auto -mx-4 px-4">
-        <table class="w-full text-left border-collapse min-w-[700px]">
+        <table class="w-full text-left border-collapse min-w-[800px]">
           <thead>
             <tr class="border-b-2 border-ink">
               <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
@@ -125,39 +107,53 @@ const articleSchema = {
           </thead>
           <tbody class="text-base text-ink-muted">
             <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Air Velocity</td>
-              <td class="py-3 pr-4">3,500-5,000+ FPM</td>
-              <td class="py-3 pr-4">3,500-5,000+ FPM</td>
-              <td class="py-3 pr-4">500-1,500 FPM</td>
-              <td class="py-3">500-1,500 FPM</td>
+              <td class="py-3 pr-4 font-semibold text-ink">How Material Moves</td>
+              <td class="py-3 pr-4">Suspended in fast airstream</td>
+              <td class="py-3 pr-4">Suspended in fast airstream</td>
+              <td class="py-3 pr-4">Slow plugs or dense bed</td>
+              <td class="py-3">Slow plugs or dense bed</td>
             </tr>
             <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Max Distance</td>
-              <td class="py-3 pr-4">500+ ft</td>
-              <td class="py-3 pr-4">300 ft</td>
-              <td class="py-3 pr-4">1,000+ ft</td>
-              <td class="py-3">200 ft</td>
+              <td class="py-3 pr-4 font-semibold text-ink">Usual Air Source</td>
+              <td class="py-3 pr-4">Positive displacement blower</td>
+              <td class="py-3 pr-4">Vacuum pump or exhauster</td>
+              <td class="py-3 pr-4">Compressor (dedicated or plant air)</td>
+              <td class="py-3">High-vacuum pump</td>
             </tr>
             <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Material Gentleness</td>
+              <td class="py-3 pr-4 font-semibold text-ink">Relative Distance</td>
+              <td class="py-3 pr-4">Moderate to long</td>
+              <td class="py-3 pr-4">Short to moderate</td>
+              <td class="py-3 pr-4">Longest</td>
+              <td class="py-3">Short</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Breakage &#x26; Pipe Wear</td>
+              <td class="py-3 pr-4">Higher</td>
+              <td class="py-3 pr-4">Higher</td>
               <td class="py-3 pr-4">Low</td>
-              <td class="py-3 pr-4">Low</td>
-              <td class="py-3 pr-4">High</td>
-              <td class="py-3">High</td>
+              <td class="py-3">Low</td>
             </tr>
             <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Pickup Points</td>
-              <td class="py-3 pr-4">One per line</td>
-              <td class="py-3 pr-4">Multiple</td>
-              <td class="py-3 pr-4">One per line</td>
-              <td class="py-3">Multiple</td>
+              <td class="py-3 pr-4 font-semibold text-ink">Source / Destination</td>
+              <td class="py-3 pr-4">One source to one or more destinations</td>
+              <td class="py-3 pr-4">Several sources to one destination</td>
+              <td class="py-3 pr-4">One vessel to one or more destinations</td>
+              <td class="py-3">Several sources to one destination</td>
             </tr>
             <tr class="border-b border-border">
               <td class="py-3 pr-4 font-semibold text-ink">Feed Device</td>
               <td class="py-3 pr-4">Rotary airlock</td>
-              <td class="py-3 pr-4">Simple pickup</td>
-              <td class="py-3 pr-4">Pressure vessel</td>
-              <td class="py-3">Simple pickup</td>
+              <td class="py-3 pr-4">Pickup wand, hopper, bag station</td>
+              <td class="py-3 pr-4">Pressure vessel (transporter)</td>
+              <td class="py-3">Pickup or hopper</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
+              <td class="py-3 pr-4">Free-flowing, non-fragile materials</td>
+              <td class="py-3 pr-4">Resin loading, bag and drum unloading</td>
+              <td class="py-3 pr-4">Abrasive, fragile, or blended materials</td>
+              <td class="py-3">Toxic or fragile materials needing full containment</td>
             </tr>
             <tr>
               <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
@@ -169,13 +165,67 @@ const articleSchema = {
           </tbody>
         </table>
       </div>
-      <!-- VERIFY: Max conveying distances against Coperion, Schenck Process published system data -->
-      <p class="text-sm text-ink-muted mt-4">Distances are typical maximums; actual system capability depends on material, pipe size, and air supply. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for pricing.</p>
+      <p class="text-sm text-ink-muted mt-4">Actual rate and distance depend on material properties, pipe size, route (bends and vertical lift), and air supply. Suppliers confirm feasibility with material testing. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for cost factors.</p>
+    </div>
+  </section>
+
+  <!-- Conveying Modes -->
+  <article class="py-20 bg-surface-dim bg-dots" aria-labelledby="modes-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Conveying Modes</div>
+      <h2 id="modes-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        How Each <span class="text-accent">Mode Works</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dilute Phase Pressure</h3>
+        <p>A blower pushes air through the line, and a rotary airlock valve meters material from the hopper into the pressurized pipe while holding the air seal. Air velocity stays above the material's saltation velocity, the speed below which particles drop out of the airstream and settle in horizontal pipe. At the destination, a filter receiver or cyclone separates material from the air. Diverter valves let one source feed several destinations. Dilute phase pressure is the default for free-flowing materials that tolerate impact.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dilute Phase Vacuum</h3>
+        <p>A vacuum pump at the destination pulls air and material through the line. Material enters at open pickup points (a wand, a bag or drum station, a hopper) with no airlock at the source, and several pickup points can feed one receiver. Leaks draw air inward, so dust stays inside the system. Rate and distance are limited because the pressure difference a vacuum system can use never exceeds atmospheric pressure. See the <a href="/conveyor-types/vacuum-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vacuum conveyor guide</a> for vacuum belt and tube systems.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dense Phase Pressure</h3>
+        <p>Material loads into a pressure vessel (transporter or blow pot), which is sealed and pressurized with compressed air. Material leaves as slow-moving plugs or a dense moving bed. Low velocity reduces particle breakage, blend segregation, and pipe and elbow wear, which is why dense phase is common for abrasive minerals such as cement and sand and for fragile or blended products. Pressure-rated feed equipment and a compressed air supply make it the most expensive mode to install. Some suppliers also offer medium or semi-dense phase systems that operate between the two regimes.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dense Phase Vacuum</h3>
+        <p>High-vacuum pumps pull material at low velocity over short runs. It is the least common mode and appears mostly in pharmaceutical and specialty chemical plants that need gentle handling and full containment.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Air Supply -->
+  <section class="py-20 bg-surface" aria-labelledby="air-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Air Supply</div>
+      <h2 id="air-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Blower vs. <span class="text-accent">Air Compressor</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>The air mover sets the pressure and airflow the system can deliver and drives most of its operating cost. An undersized air mover plugs lines. An oversized one wastes energy and raises velocity, which increases breakage and wear.</p>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Positive displacement blowers:</strong> high airflow at low pressure. The standard air source for dilute phase pressure systems, usually dedicated to one conveying line.</li>
+          <li><strong class="text-ink">Vacuum pumps and exhausters:</strong> regenerative blowers, rotary lobe exhausters, rotary vane, or liquid ring pumps, chosen by required vacuum level and duty. They power dilute and dense phase vacuum systems.</li>
+          <li><strong class="text-ink">Air compressors:</strong> higher pressure at lower airflow. Needed for dense phase transporters and air-assist devices. Supply comes from a dedicated compressor or the plant compressed air network.</li>
+        </ul>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Air Supply Sizing Factors</h3>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Conveying rate and duty cycle:</strong> continuous or batch, and peak rate.</li>
+          <li><strong class="text-ink">Material properties:</strong> bulk density, particle size and shape, abrasiveness, friability, moisture, and temperature.</li>
+          <li><strong class="text-ink">Route:</strong> horizontal length, vertical lift, and number of bends. Each bend and each foot of lift adds pressure drop.</li>
+          <li><strong class="text-ink">Pipe diameter:</strong> required airflow rises with pipe cross-section at a given velocity.</li>
+          <li><strong class="text-ink">Site conditions:</strong> altitude and inlet air temperature change air density and the airflow a given machine delivers.</li>
+        </ul>
+        <p>Ask suppliers to state the design airflow and pressure, the margin included, and whether the figures come from testing your material or from a comparable one.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Plant Air vs. Dedicated Compressor</h3>
+        <p>Plant compressed air is convenient for small dense phase transporters, but a conveying cycle can draw down header pressure and starve other equipment. Confirm plant air capacity at peak demand, or budget for a dedicated compressor and receiver tank. Air quality matters too: hygroscopic materials such as sugar and salt absorb moisture and cake in the line, so the air needs drying, and food and pharmaceutical products usually need oil-free compressors or suitable filtration. Compressed air is an expensive plant utility, and the <a href="https://www.energy.gov/eere/iedo/compressed-air-systems" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">U.S. Department of Energy compressed air systems program</a> publishes guidance on reducing its cost.</p>
+      </div>
     </div>
   </section>
 
   <!-- System Components -->
-  <section class="py-20 bg-surface" aria-labelledby="components-heading">
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="components-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Components</div>
       <h2 id="components-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
@@ -183,49 +233,46 @@ const articleSchema = {
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
 
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Air Movers</h3>
-        <p>Blowers (positive displacement or centrifugal) generate airflow for dilute phase systems. Compressors provide the higher pressures needed for dense phase systems. Vacuum pumps (regenerative blowers, liquid ring, or rotary vane) create the suction for vacuum systems. Air mover sizing depends on conveying rate, distance, pipe diameter, and material properties. Oversized air movers waste energy. Undersized air movers cause line plugging.</p>
-
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Feed Devices</h3>
-        <p>Rotary airlock valves meter material from atmospheric-pressure hoppers into pressurized pipelines while maintaining the pressure seal. Rotary valves are the standard feed device for dilute phase pressure systems. Pressure vessels (blow pots or transporters) batch-feed material into dense phase pipelines. Vacuum systems often use simple suction nozzles or wands that draw material directly from bags, drums, or bulk containers with no mechanical feed device.</p>
+        <p>Rotary airlock valves meter material from atmospheric-pressure hoppers into pressurized pipelines while holding the pressure seal. They are the standard feed device for dilute phase pressure systems, and air leakage across the rotor must be included in air supply sizing. Pressure vessels batch-feed dense phase lines. Vacuum systems often use suction wands or bag spout adapters with no mechanical feeder.</p>
 
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pipeline</h3>
-        <p>Conveying pipelines use Schedule 10 or Schedule 40 carbon steel or stainless steel pipe. Pipe diameters range from 2" to 12" depending on conveying capacity. Bends use long-radius swept elbows (minimum 8:1 radius-to-diameter ratio) to reduce material impact and wear. Tight-radius elbows cause product degradation, streamers (angel hair in plastic pellet systems), and accelerated elbow wear. Specialty elbows with ceramic liners or replaceable wear backs extend life in abrasive applications.</p>
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Pipeline, Bends &#x26; Couplings</h3>
+        <p>Conveying lines use carbon steel, stainless steel, or aluminum pipe or tube. Long-radius swept bends reduce impact compared with short elbows. Tight bends cause product degradation, streamers (angel hair) in plastic pellet systems, and fast elbow wear. Ceramic-lined or replaceable-wear-back elbows extend life in abrasive service. Compression couplings join sections: align them to avoid internal steps that cause wear and buildup, and bond them electrically across joints in combustible dust service.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Filter Receivers</h3>
-        <p>Filter receivers at the destination separate conveyed material from the transport air. Material drops into the receiving hopper while air passes through filter cartridges or bags and exhausts to atmosphere (or returns to the vacuum pump). Filter media selection depends on particle size, air volume, and whether the exhaust can contain trace material. HEPA filters serve pharmaceutical and food applications where zero product emission is required.</p>
+        <p>Filter receivers at the destination separate material from transport air. Material drops into the receiving hopper while air passes through cartridges or bags. Media selection depends on particle size, air volume, and emission limits. Pharmaceutical and some food applications add HEPA filtration.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Diverter Valves</h3>
-        <p>Diverter valves route material to multiple destinations from a single pipeline. A two-way diverter sends material left or right at a Y-junction. Multi-port diverters serve 3-10+ destinations from one source. Diverter valves eliminate the need for separate conveying lines to each destination, reducing pipeline cost and air mover requirements. Coperion, Vortex, and Schenck Process manufacture pneumatic diverter valves.</p>
+        <p>Diverter valves route material from one line to multiple destinations. A two-way diverter splits at a Y-junction, and multi-port diverters serve several destinations from one source. They remove the need for separate lines and air movers for each destination.</p>
       </div>
     </div>
   </section>
 
   <!-- Applications -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="apps-heading">
+  <section class="py-20 bg-surface" aria-labelledby="apps-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Applications</div>
       <h2 id="apps-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
         Pneumatic Conveying <span class="text-accent">Applications</span>
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p><strong class="text-ink">Food ingredient handling:</strong> Pneumatic conveyors transport flour, sugar, starch, spices, milk powder, and other dry ingredients from bulk storage to mixing, batching, and packaging equipment. Enclosed pipelines prevent contamination and dust. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary system</a> designs use stainless steel pipe, quick-disconnect couplings, and CIP-capable filter receivers. Dense phase protects fragile ingredients like freeze-dried fruits and snack seasonings from breakage.</p>
+        <p><strong class="text-ink">Food ingredient handling:</strong> flour, sugar, starch, spices, and milk powder move from bulk storage to mixing, batching, and packaging equipment. <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Sanitary designs</a> use stainless steel pipe, quick-disconnect couplings, and cleanable filter receivers. Dense phase protects fragile ingredients such as freeze-dried fruit and snack seasonings.</p>
 
-        <p><strong class="text-ink">Plastic resin handling:</strong> Dilute phase vacuum systems convey plastic pellets from rail cars, silos, and gaylord boxes to injection molding machines, extruders, and blow molders. Each machine has a vacuum receiver hopper. A central vacuum pump powers the system, and sequence controllers cycle material to each machine on demand. Long-radius elbows prevent angel hair (streamers) that form when pellets melt at impact points. Conair, Novatec, and Motan manufacture plastic resin pneumatic conveying systems.</p>
+        <p><strong class="text-ink">Plastic resin handling:</strong> dilute phase vacuum systems load pellets from rail cars, silos, and gaylords to molding machines and extruders. Each machine has a vacuum receiver, a central pump powers the system, and a sequencing controller serves each receiver on demand.</p>
 
-        <p><strong class="text-ink">Pharmaceutical powders:</strong> Contained pneumatic systems transfer active pharmaceutical ingredients (APIs), excipients, and finished blends between process steps. Dense phase conveying minimizes particle attrition and segregation. Stainless steel systems with validated CIP cleaning prevent cross-contamination. GEA, Coperion, and Dec Group manufacture pharmaceutical pneumatic transfer systems.</p>
+        <p><strong class="text-ink">Pharmaceutical powders:</strong> contained systems transfer APIs, excipients, and blends between process steps. Dense phase limits attrition and segregation, and cleanable stainless construction prevents cross-contamination.</p>
 
-        <p><strong class="text-ink">Cement and minerals:</strong> Dense phase pressure systems transport cement, fly ash, calcium carbonate, and mineral powders over long distances from storage silos to processing or loadout. The abrasive nature of these materials demands low conveying velocities and wear-resistant pipeline components. Typical capacities: 10-200+ tons per hour.</p>
+        <p><strong class="text-ink">Cement and minerals:</strong> dense phase pressure systems move cement, fly ash, and mineral powders from silos to process or loadout. Abrasive materials call for low velocity and wear-resistant bends.</p>
 
-        <p><strong class="text-ink">Chemical powders and granules:</strong> Pneumatic conveyors handle pigments, catalysts, carbon black, titanium dioxide, and specialty chemicals. Inert gas conveying (nitrogen) replaces air for oxidation-sensitive or combustible materials. Explosion-proof components and flameless venting protect against dust explosions in combustible powder applications.</p>
+        <p><strong class="text-ink">Chemical powders:</strong> pigments, catalysts, carbon black, and specialty chemicals. Nitrogen replaces air for oxidation-sensitive or combustible materials.</p>
 
-        <p><strong class="text-ink">Bulk bag unloading:</strong> <a href="/conveyor-types/vacuum-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Vacuum conveying</a> systems draw material from bulk bag (FIBC) unloading stations through a suction wand or bag spout adapter. The vacuum system provides dust-free transfer from the bag to the process hopper without open material exposure.</p>
+        <p><strong class="text-ink">Bulk bag unloading:</strong> <a href="/conveyor-types/vacuum-conveyors/" class="text-accent hover:text-accent-hover font-semibold">vacuum conveying</a> draws material from bulk bag (FIBC) stations through a wand or spout adapter for dust-free transfer to the process hopper.</p>
       </div>
     </div>
   </section>
 
   <!-- Design Considerations -->
-  <section class="py-20 bg-surface" aria-labelledby="design-heading">
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="design-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Engineering</div>
       <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
@@ -234,22 +281,30 @@ const articleSchema = {
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Energy Consumption</h3>
-        <p>Pneumatic conveying consumes significantly more energy than mechanical conveying per ton of material moved. Compressed air is one of the most expensive utility forms in a manufacturing plant. Dense phase systems use less air volume but at higher pressure. Dilute phase systems use high air volumes at lower pressure. Energy-conscious design minimizes conveying distance, reduces unnecessary bends, and right-sizes the air mover for actual throughput rather than peak capacity.</p>
+        <p>Pneumatic conveying uses substantially more energy per ton than mechanical conveying. Dense phase uses less air volume at higher pressure. Dilute phase uses more air at lower pressure. Shorter routes, fewer bends, and an air mover sized to actual throughput rather than theoretical peak keep energy use down.</p>
 
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Line Sizing</h3>
-        <p>Pipeline diameter must match the required conveying rate and maintain proper air velocity. Undersized pipe causes excessive pressure drop, increased wear, and potential line plugging. Oversized pipe wastes energy by requiring more air volume. Standard pipe sizes for pneumatic conveying: 2", 3", 4", 5", 6", 8", 10", and 12". Pipe diameter selection starts with the required material throughput (tons per hour) and the material's bulk density and conveying characteristics.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dust Explosion Prevention</h3>
-        <p>Many pneumatic-conveyed materials are combustible dusts (flour, sugar, starch, metal powders, plastic fines). <a href="https://www.nfpa.org/codes-and-standards/nfpa-652-standard-development/652" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">NFPA 652</a> (Standard on the Fundamentals of Combustible Dust) requires a Dust Hazard Analysis (DHA) for facilities handling combustible dusts. Pneumatic conveying system design must address ignition sources, explosion containment, explosion venting, and inerting (nitrogen blanketing) for materials with low minimum ignition energy.</p>
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Combustible Dust</h3>
+        <p>Many conveyed materials are combustible dusts (flour, sugar, starch, metal powders, plastic fines). <a href="https://www.nfpa.org/codes-and-standards/nfpa-652-standard-development/652" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">NFPA 652</a> (Standard on the Fundamentals of Combustible Dust) requires a Dust Hazard Analysis (DHA) for facilities that handle combustible dust. <a href="https://www.osha.gov/combustible-dust" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">OSHA's combustible dust guidance</a> covers the same hazard. System design must address ignition sources, bonding and grounding, explosion venting or suppression, and inerting for materials with low minimum ignition energy.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Mechanical vs. Pneumatic Selection</h3>
-        <p>For short, straight runs with high capacity, mechanical conveyors (<a href="/conveyor-types/trough-conveyors/" class="text-accent hover:text-accent-hover font-semibold">trough belt</a>, screw, drag chain) cost less to install and operate. Pneumatic conveying wins when the route involves multiple elevation changes, wall penetrations, or tight spaces where mechanical conveyors cannot fit. It also wins when dust containment, product purity, or explosion safety make enclosed transport mandatory.</p>
+        <p>For short, straight, high-capacity runs, mechanical conveyors (<a href="/conveyor-types/screw-conveyors/" class="text-accent hover:text-accent-hover font-semibold">screw</a>, <a href="/conveyor-types/trough-conveyors/" class="text-accent hover:text-accent-hover font-semibold">trough belt</a>, drag chain) cost less to install and operate. Pneumatic conveying wins when the route has multiple elevation changes, wall penetrations, or tight spaces, or when dust containment, product purity, or explosion safety require enclosed transport.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">What to Send Suppliers</h3>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li>Material name, SDS, bulk density, particle size, moisture, and temperature</li>
+          <li>Required rate, duty cycle (continuous or batch), and future capacity</li>
+          <li>Layout sketch: horizontal distance, vertical lift, bends, and wall or floor penetrations</li>
+          <li>Number of pickup points and destinations</li>
+          <li>Available utilities: plant air capacity and quality, power, space for air movers</li>
+          <li>Sanitary, containment, and combustible dust requirements, including DHA status</li>
+          <li>Whether the supplier will test your material before quoting</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
+  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
         Frequently Asked <span class="text-accent">Questions</span>
@@ -257,11 +312,11 @@ const articleSchema = {
       <div class="space-y-4">
         <details class="group border border-border bg-surface p-6 open:pb-8" open>
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is a pneumatic conveyor?
+            What is a pneumatic conveying system?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>A system that uses air pressure or vacuum to transport dry bulk materials through sealed pipelines. Powders, granules, and pellets travel suspended in the airstream (dilute phase) or as dense plugs (dense phase). Enclosed transport eliminates dust, contamination, and spillage.</p>
+            <p>A system that uses air pressure or vacuum to move dry bulk materials through a sealed pipeline. Material travels suspended in a fast airstream (dilute phase) or as slow plugs or a dense bed (dense phase). The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment.</p>
           </div>
         </details>
 
@@ -271,7 +326,17 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Dilute phase: high velocity (3,500-5,000+ FPM), material suspended in air, lower cost. Dense phase: low velocity (500-1,500 FPM), material moves as plugs, gentler handling. Choose dilute for non-fragile materials and lower budget. Choose dense for fragile, abrasive, or high-value materials.</p>
+            <p>Dilute phase: high velocity, material suspended in air, usually blower-driven, lower installed cost. Dense phase: low velocity, material moves as plugs or a dense bed, usually compressor-driven, gentler on product and pipe. Choose dilute for free-flowing, non-fragile materials. Choose dense for fragile, abrasive, or blended materials.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Does pneumatic conveying need an air compressor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>Not always. Dilute phase pressure systems normally use a positive displacement blower, and vacuum systems use a vacuum pump or exhauster. Dense phase pressure systems need compressed air from a dedicated compressor or the plant network, dried and oil-free where product quality requires it. Confirm plant air can meet peak conveying demand without starving other equipment.</p>
           </div>
         </details>
 
@@ -281,7 +346,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Most dry bulk solids: powders (flour, cement, pigments), granules (sugar, salt, resins), pellets (plastic, pet food), flakes (cereal, herbs), and fibers (wood dust). Very wet, sticky, or extremely dense materials may require special system design or are better suited to mechanical conveyors.</p>
+            <p>Most dry bulk solids: powders (flour, cement, pigments), granules (sugar, salt, coffee), pellets (plastic resin, pet food), flakes (cereal, herbs), and fibers (wood dust). Very wet, sticky, or strongly hygroscopic materials may need special design or suit mechanical conveyors better.</p>
           </div>
         </details>
 
@@ -291,7 +356,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Pneumatic: enclosed dust-free transport, complex routing, multiple pickup/delivery points, hazardous materials. Mechanical: lower energy cost, higher capacity, better for short straight runs. Pneumatic uses 3-10x more energy but eliminates spillage and contamination.</p>
+            <p>Pneumatic: enclosed dust-free transport, complex routing, multiple pickup or delivery points, contamination-sensitive or hazardous materials. Mechanical: substantially lower energy per ton, higher capacity, and lower cost for short straight runs. Choose pneumatic when containment or routing matters more than energy cost.</p>
           </div>
         </details>
       </div>

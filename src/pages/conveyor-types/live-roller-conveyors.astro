@@ -22,8 +22,13 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "What is the difference between CDLR and BDLR?",
+      "acceptedAnswer": { "@type": "Answer", "text": "CDLR drives every roller positively with chain and sprockets and handles pallets and heavy loads up to 10,000 lbs at 20-120 FPM. BDLR drives rollers by friction from a flat belt underneath and handles cases, cartons, and totes up to 500 lbs at 50-200 FPM. BDLR supports accumulation with belt lifters. CDLR does not accumulate as standard." }
+    },
+    {
+      "@type": "Question",
       "name": "What is the difference between BDLR and line-shaft conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "BDLR (Belt Driven Live Roller) uses a flat belt running under the rollers , friction contact drives the rollers. Line-shaft uses a splined shaft with individual O-ring bands to each roller. BDLR handles heavier loads (up to 500 lbs vs 300 lbs) and provides more consistent drive force. Line-shaft provides natural slip-clutch accumulation through O-ring flexibility and is better suited for pop-up transfer diverting applications." }
+      "acceptedAnswer": { "@type": "Answer", "text": "BDLR (Belt Driven Live Roller) uses a flat belt running under the rollers, friction contact drives the rollers. Line-shaft uses a splined shaft with individual O-ring bands to each roller. BDLR handles heavier loads (up to 500 lbs vs 300 lbs) and provides more consistent drive force. Line-shaft provides natural slip-clutch accumulation through O-ring flexibility and is better suited for pop-up transfer diverting applications." }
     },
     {
       "@type": "Question",
@@ -48,7 +53,7 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout title="Live Roller Conveyor Systems: BDLR, Line-Shaft &#x26; Chain-Driven Guide" description="Complete live roller conveyor guide: belt driven live roller (BDLR), line-shaft, and chain-driven (CDLR) comparison. Zone control, accumulation, specs, and when to use each." canonical="https://packagingconveyor.com/conveyor-types/live-roller-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="CDLR vs BDLR: Live Roller Conveyor Comparison Guide" description="CDLR vs BDLR compared: chain drive vs belt drive, load range, speed, accumulation, and maintenance, plus line-shaft and MDR in one live roller conveyor table." canonical="https://packagingconveyor.com/conveyor-types/live-roller-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
 
   <!-- Breadcrumb -->
   <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
@@ -76,6 +81,71 @@ const articleSchema = {
     </div>
   </section>
 
+  <!-- CDLR vs BDLR -->
+  <section class="py-20 bg-surface border-b border-border" aria-labelledby="cdlr-bdlr-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">CDLR vs BDLR</div>
+      <h2 id="cdlr-bdlr-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Difference Between <span class="text-accent">CDLR and BDLR</span>
+      </h2>
+      <p class="text-lg text-ink-muted leading-relaxed mb-8">CDLR (chain-driven live roller) drives every roller positively through roller chain and sprockets, while BDLR (belt-driven live roller) drives the rollers by friction from a flat belt running underneath them. Choose CDLR for pallets and heavy loads that must never slip. Choose BDLR for cases, cartons, and totes, especially where the line needs accumulation.</p>
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-left border-collapse min-w-[600px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Feature</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">CDLR</th>
+              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">BDLR</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Method</td>
+              <td class="py-3 pr-4">Roller chain and sprockets on every roller</td>
+              <td class="py-3">Flat belt pressed against roller undersides</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Drive Type</td>
+              <td class="py-3 pr-4">Positive, no slip</td>
+              <td class="py-3">Friction, can slip under stopped loads</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Max Load / Product</td>
+              <td class="py-3 pr-4 font-mono text-sm">Up to 10,000 lbs</td>
+              <td class="py-3 font-mono text-sm">Up to 500 lbs</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Speed Range</td>
+              <td class="py-3 pr-4 font-mono text-sm">20-120 FPM</td>
+              <td class="py-3 font-mono text-sm">50-200 FPM</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Accumulation</td>
+              <td class="py-3 pr-4">Not standard (continuous drive)</td>
+              <td class="py-3">Zero- or minimum-pressure with belt lifters</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Typical Loads</td>
+              <td class="py-3 pr-4">Pallets, drums, heavy containers</td>
+              <td class="py-3">Cases, cartons, totes</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Key Maintenance</td>
+              <td class="py-3 pr-4">Chain lubrication and sprocket wear</td>
+              <td class="py-3">Belt tension and tracking</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-semibold text-ink">Upfront Cost</td>
+              <td class="py-3 pr-4 font-mono text-sm">$$$</td>
+              <td class="py-3 font-mono text-sm">$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Load and speed figures match the full comparison table below. For chain-drive details, see the <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyor guide</a>.</p>
+    </div>
+  </section>
+
   <!-- Technology Overview -->
   <article class="py-20 bg-surface" aria-labelledby="tech-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,12 +156,12 @@ const articleSchema = {
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Belt-Driven Live Roller (BDLR)</h3>
-        <p>BDLR conveyors use a continuous flat belt running beneath the rollers. The belt contacts the underside of each roller through friction. A single AC gearmotor at one end drives the belt via a drive pulley. Tension is maintained by a spring-loaded take-up. BDLR handles the widest load range of the three conventional live roller types , up to 500 lbs per product at speeds of 50-200 FPM.</p>
+        <p>BDLR conveyors use a continuous flat belt running beneath the rollers. The belt contacts the underside of each roller through friction. A single AC gearmotor at one end drives the belt via a drive pulley. Tension is maintained by a spring-loaded take-up. BDLR handles the widest load range of the three conventional live roller types, up to 500 lbs per product at speeds of 50-200 FPM.</p>
         <p>BDLR provides the foundation for most <a href="/conveyor-types/roller-conveyors/powered/" class="text-accent hover:text-accent-hover font-semibold">powered roller conveyor</a> installations. Hytrol, Dematic, and Intelligrated offer extensive BDLR product lines. With added pneumatic zone controls (belt lifters or pop-up stops), BDLR supports both zero-pressure and minimum-pressure <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Line-Shaft</h3>
         <p>A line-shaft conveyor uses a continuously rotating splined steel shaft running the conveyor length. Individual polyurethane O-ring bands connect each roller to the shaft. The shaft rotates via an AC gearmotor, and O-rings transfer rotation from shaft to roller. Line-shaft conveyors handle up to 300 lbs at 30-180 FPM.</p>
-        <p>The O-ring connection provides a built-in slip clutch , if a product stops, the O-ring slips on the shaft rather than stalling the motor. This passive slip provides a degree of light <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> without active zone control. Line-shaft works particularly well with pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> sections because the O-ring can be disengaged from stopped rollers in the transfer zone without affecting adjacent rollers.</p>
+        <p>The O-ring connection provides a built-in slip clutch, if a product stops, the O-ring slips on the shaft rather than stalling the motor. This passive slip provides a degree of light <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a> without active zone control. Line-shaft works particularly well with pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> sections because the O-ring can be disengaged from stopped rollers in the transfer zone without affecting adjacent rollers.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain-Driven Live Roller (CDLR)</h3>
         <p><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> use roller chains and sprockets to positively drive all rollers. The chain-and-sprocket engagement provides zero-slip positive drive at any load. CDLR handles 500 to over 10,000 lbs per product at 20-120 FPM. CDLR serves as the standard live roller technology for <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyor systems</a> and heavy industrial applications.</p>
@@ -221,7 +291,7 @@ const articleSchema = {
         <p>If yes, <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a> provides the simplest and most reliable <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">zero-pressure accumulation</a>. BDLR with pneumatic zones is the traditional alternative. Line-shaft provides light passive accumulation through O-ring slip. CDLR does not accumulate (continuous positive drive).</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Is Noise a Constraint?</h3>
-        <p>MDR operates at 55-65 dB , conversational level. BDLR runs at 70-80 dB. Line-shaft and CDLR run at 75-85 dB. Facilities with hundreds of feet of conveyor in occupied work areas benefit significantly from MDR's quiet operation.</p>
+        <p>MDR operates at 55-65 dB, conversational level. BDLR runs at 70-80 dB. Line-shaft and CDLR run at 75-85 dB. Facilities with hundreds of feet of conveyor in occupied work areas benefit significantly from MDR's quiet operation.</p>
 
         <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Do You Need Diverting?</h3>
         <p>Line-shaft conveyors work best with pop-up <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer</a> diverters because individual rollers can be disengaged from the shaft at the transfer point without affecting the rest of the conveyor. BDLR and MDR also work with transfers but require different zone control approaches at the divert point.</p>
@@ -274,7 +344,16 @@ const articleSchema = {
         </details>
         <details class="group border border-border bg-surface p-6 open:pb-8">
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            BDLR vs line-shaft , what is the difference?
+            What is the difference between CDLR and BDLR?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>CDLR drives every roller positively with chain and sprockets and handles pallets and heavy loads up to 10,000 lbs at 20-120 FPM. BDLR drives rollers by friction from a flat belt underneath and handles cases, cartons, and totes up to 500 lbs at 50-200 FPM. BDLR supports accumulation with belt lifters. CDLR does not accumulate as standard.</p>
+          </div>
+        </details>
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            BDLR vs line-shaft, what is the difference?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">

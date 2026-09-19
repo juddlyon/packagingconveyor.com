@@ -15,7 +15,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Conveyor Reject Systems",
-  "description": "Conveyor reject systems , pneumatic reject, pusher reject, diverter reject, air blast, and integration with metal detectors, checkweighers, and vision systems.",
+  "description": "How conveyor reject systems remove bad product: reject diverters, pushers, air blast, and retracting reject belts compared by product, speed, and failure mode.",
   "url": "https://packagingconveyor.com/conveyor-functions/reject-systems/",
   "datePublished": "2026-03-12",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
@@ -32,8 +32,13 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "How do rejection systems remove contaminated products from the line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A rejection system removes contaminated product in five steps. An inspection device (metal detector, X-ray, checkweigher, or vision system) flags the pack. The controller tracks that pack by belt encoder or timer to the reject point. A reject mechanism (air blast, pusher, diverter arm, or retracting belt) removes it into a reject bin. A confirm sensor verifies the pack left the line. The bin is locked so rejected product cannot be returned, and any failed step stops the line or raises an alarm." }
+    },
+    {
+      "@type": "Question",
       "name": "What types of conveyor reject mechanisms exist?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The four main reject mechanisms are: (1) Air blast , compressed air jets blow lightweight product off the conveyor, fastest response at 20-50ms. (2) Pusher arm , a pneumatic or servo cylinder pushes product off the side, handles 50g to 25kg. (3) Diverter gate/arm , a pivoting arm sweeps product off, handles medium to heavy products. (4) Drop-out belt , a belt section retracts or drops, releasing product through the conveyor into a reject bin below. The right choice depends on product weight, speed, and whether the product can tolerate contact force." }
+      "acceptedAnswer": { "@type": "Answer", "text": "The four main reject mechanisms are: (1) Air blast, compressed air jets blow lightweight product off the conveyor, fastest response at 20-50ms. (2) Pusher arm, a pneumatic or servo cylinder pushes product off the side, handles 50g to 25kg. (3) Diverter gate/arm, a pivoting arm sweeps product off, handles medium to heavy products. (4) Drop-out belt, a belt section retracts or drops, releasing product through the conveyor into a reject bin below. The right choice depends on product weight, speed, and whether the product can tolerate contact force." }
     },
     {
       "@type": "Question",
@@ -43,13 +48,13 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Do I need a reject confirm sensor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, in regulated industries (food, pharmaceutical) and for critical quality defects (metal contamination). A reject confirm sensor verifies that the defective product actually left the main conveyor and entered the reject bin. If the sensor does not confirm rejection within the expected time window, the system triggers an alarm and stops the line. Loma Systems, Mettler-Toledo, and Fortress Technology include reject confirmation as a standard feature on their metal detection and checkweighing systems." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, in regulated industries (food, pharmaceutical) and for critical quality defects (metal contamination). A reject confirm sensor verifies that the defective product actually left the main conveyor and entered the reject bin. If the sensor does not confirm rejection within the expected time window, the system triggers an alarm and stops the line. Major retailers and food safety standards (BRC, SQF) increasingly mandate reject confirmation on metal detector and X-ray systems." }
     }
   ]
 };
 ---
 
-<BaseLayout title="Conveyor Reject Systems | PackagingConveyor.com" description="Conveyor reject systems , air blast, pusher, diverter, and drop-out belt rejects integrated with metal detectors, checkweighers, and vision inspection." canonical="https://packagingconveyor.com/conveyor-functions/reject-systems/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Conveyor Reject Systems: Diverters, Pushers & Air Blast" description="How conveyor reject systems remove bad product: reject diverters, pushers, air blast, and retracting reject belts compared by product, speed, and failure mode." canonical="https://packagingconveyor.com/conveyor-functions/reject-systems/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
 
   <!-- ═══ HERO ═══ -->
   <section class="bg-blueprint relative overflow-hidden">
@@ -75,13 +80,35 @@ const faqSchema = {
     <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p id="aio-heading" class="text-lg text-ink leading-relaxed">
-          A conveyor reject system removes non-conforming product from the production line after a metal detector, checkweigher, vision system, or X-ray scanner detects a defect. The reject mechanism activates within 20 to 500 milliseconds of the detection signal, diverting defective product into a locked reject bin while good product continues downstream. Loma Systems, Mettler-Toledo, Eriez, and Fortress Technology manufacture integrated inspection-and-reject conveyor systems for food, pharmaceutical, and consumer goods packaging lines.
+          A conveyor reject system automatically removes contaminated or out-of-spec product from the line after a metal detector, checkweigher, vision system, or X-ray scanner flags it. The controller tracks the flagged pack to the reject point, a mechanism (air blast, pusher, diverter arm, or retracting belt) moves it into a locked reject bin, and a sensor confirms it left the line. Good product continues downstream without stopping.
         </p>
       </div>
     </section>
 
+    <!-- ═══ HOW A REJECT SYSTEM WORKS ═══ -->
+    <section class="py-20 bg-surface" aria-labelledby="how-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-label text-accent mb-4">Sequence</div>
+        <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
+          How a Reject System <span class="text-accent">Works</span>
+        </h2>
+        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
+          <p>
+            A rejection system removes contaminated product from the line in five steps. If any step fails, a properly configured system alarms or stops the line rather than letting the pack continue.
+          </p>
+          <ol class="list-decimal list-inside space-y-4 ml-2">
+            <li><strong class="text-ink">Detect.</strong> The inspection device (metal detector, X-ray, checkweigher, or vision camera) flags the pack and sends a reject signal.</li>
+            <li><strong class="text-ink">Track.</strong> The controller follows that pack from the inspection point to the reject point, using a belt encoder or a fixed time delay. Encoder tracking holds timing when belt speed changes.</li>
+            <li><strong class="text-ink">Reject.</strong> The mechanism fires when the pack reaches it and removes only that pack. The mechanism choice is covered in the <a href="#compare-heading" class="text-accent hover:text-accent-hover font-semibold">comparison table</a> below.</li>
+            <li><strong class="text-ink">Confirm.</strong> A photoeye or sensor at the bin or chute verifies the pack actually left the conveyor. No confirmation within the expected window means a failed reject.</li>
+            <li><strong class="text-ink">Contain and verify.</strong> The bin is locked so rejected product cannot be returned to the line. Bin-full and bin-door sensors stop the line before a full or open bin defeats the system. Operators verify the whole chain with test packs at the start of each shift or at the interval the site's food safety plan sets.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ WHY REJECT SYSTEMS MATTER ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="why-heading">
+    <section class="py-20 bg-surface-dim" aria-labelledby="why-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Critical Function</div>
         <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
@@ -89,10 +116,10 @@ const faqSchema = {
         </h2>
         <div class="text-lg text-ink-muted leading-relaxed space-y-5">
           <p>
-            Reject systems are the last line of defense between a defective product and the consumer. A metal detector that finds contamination means nothing if the reject mechanism fails to remove that product from the line. Regulatory bodies including the FDA, USDA, and GFSI-benchmarked food safety schemes (SQF, BRC, FSSC 22000) require documented proof that reject systems reliably remove every detected defect.
+            Reject systems are the last line of defense between a defective product and the consumer. A metal detector that finds contamination means nothing if the reject mechanism fails to remove that product from the line. The FDA's <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-preventive-controls-human-food" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">Preventive Controls for Human Food rule</a> requires facilities to verify that their preventive controls work, and GFSI-benchmarked schemes (SQF, BRCGS, FSSC 22000) audit whether detection and reject systems are tested and recorded.
           </p>
           <p>
-            Reject system failures cause two types of costly events. <strong class="text-ink">False passes</strong> , contaminated product reaches the consumer, triggering recalls, liability, and brand damage. <strong class="text-ink">False rejects</strong> , good product diverts into the reject bin, wasting material and reducing yield. A well-designed reject system minimizes both. The detection device determines false pass and false reject rates. The reject mechanism determines whether a true detection results in reliable product removal.
+            Reject system failures cause two types of costly events. <strong class="text-ink">False passes</strong>, contaminated product reaches the consumer, triggering recalls, liability, and brand damage. <strong class="text-ink">False rejects</strong>, good product diverts into the reject bin, wasting material and reducing yield. A well-designed reject system minimizes both. The detection device determines false pass and false reject rates. The reject mechanism determines whether a true detection results in reliable product removal.
           </p>
           <p>
             Most <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food packaging lines</a> place reject systems at two to four points: after the metal detector (mandatory for most retailers), after the checkweigher (weight compliance), after the vision system (label and package integrity), and optionally after the X-ray system (foreign object detection). Each reject point requires its own mechanism, bin, and confirmation sensor.
@@ -102,12 +129,15 @@ const faqSchema = {
     </section>
 
     <!-- ═══ REJECT MECHANISM TYPES ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="types-heading">
+    <section class="py-20 bg-surface" aria-labelledby="types-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Mechanism Types</div>
         <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
           Reject Mechanism <span class="text-accent">Types</span>
         </h2>
+        <p class="text-lg text-ink-muted leading-relaxed mb-10">
+          A conveyor reject mechanism is the device that physically removes a flagged pack: an air nozzle, a pusher, a diverter arm, or an opening in the conveyor bed. Most are pneumatic (air blast, pneumatic pushers, pneumatic diverter arms), with servo drives used where stroke length or cycle rate must be programmable. For pushers and diverters used outside inspection, such as lane sorting, see <a href="/conveyor-functions/pusher-diverter/" class="text-accent hover:text-accent-hover font-semibold">pusher and diverter mechanisms</a>.
+        </p>
 
         <div class="space-y-12">
           <!-- Air Blast -->
@@ -115,26 +145,26 @@ const faqSchema = {
             <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Air Blast Reject</h3>
             <div class="text-lg text-ink-muted leading-relaxed space-y-4">
               <p>
-                Air blast rejects use a burst of compressed air to blow product off the conveyor into a reject bin. A solenoid valve fires one or more air nozzles mounted beside or above the conveyor. Response time is 20–50ms , the fastest of all reject types. Air blast rejects handle lightweight products (under 500g) at high speeds (up to 400+ FPM).
+                Air blast rejects use a burst of compressed air to blow product off the conveyor into a reject bin. A solenoid valve fires one or more air nozzles mounted beside or above the conveyor. Response time is 20–50ms, the fastest of all reject types. Air blast rejects handle lightweight products (under 500g) at high speeds (up to 400+ FPM).
               </p>
               <p>
-                Air blast works best for small, lightweight items: individual snack bags, pouches, candy bars, blister packs, and loose confectionery. The air pulse must generate enough force to push the product clear of the belt before the next product arrives. Product spacing (gap between products) must be wide enough that the air blast does not deflect adjacent good product. A product gap of at least 1.5x the air pulse duration prevents collateral rejection.
+                Air blast works best for small, lightweight items: individual snack bags, pouches, candy bars, blister packs, and loose confectionery. The air pulse must generate enough force to push the product clear of the belt before the next product arrives. Product spacing (gap between products) must be wide enough that the air blast does not deflect adjacent good product. If the gap is shorter than the distance the belt travels during the air pulse, the neighboring pack is exposed to the blast and may be rejected with the bad one.
               </p>
               <p>
-                Limitations: air blast cannot reject heavy products (cases, bottles, jars). Compressed air consumption adds operating cost , a high-reject-rate line uses significant air volume. In dusty environments, the air blast can scatter particulates. Air blast rejects require a clean, dry compressed air supply (instrument-grade, filtered to 5 microns minimum) to prevent nozzle clogging.
+                Limitations: air blast cannot reject heavy products (cases, bottles, jars). Compressed air consumption adds operating cost, a high-reject-rate line uses significant air volume. In dusty environments, the air blast can scatter particulates. Air blast rejects require a clean, dry compressed air supply (instrument-grade, filtered to 5 microns minimum) to prevent nozzle clogging.
               </p>
             </div>
           </div>
 
           <!-- Pusher Arm -->
           <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Pusher Arm Reject</h3>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Conveyor Reject Pusher (Pusher Arm)</h3>
             <div class="text-lg text-ink-muted leading-relaxed space-y-4">
               <p>
-                Pusher arm rejects use a pneumatic or servo-driven cylinder to push product off the side of the conveyor. The arm extends across the belt, contacts the product, and pushes it into a reject chute or bin. Response time is 50–150ms. Pusher arms handle products from 50g to 25kg , the workhorse reject for cases, cartons, bottles, jars, and cans.
+                A conveyor reject pusher uses a pneumatic or servo-driven cylinder to push the flagged pack off the side of the conveyor, and it is the most common reject for cases and rigid containers. The arm extends across the belt, contacts the product, and pushes it into a reject chute or bin. Response time is 50–150ms. Pusher arms handle products from 50g to 25kg, the workhorse reject for cases, cartons, bottles, jars, and cans.
               </p>
               <p>
-                Pusher arm design must match the product's height, width, and center of gravity. The contact pad (the surface that touches the product) should be wide enough to push the product without tipping it. Products with a high center of gravity (tall bottles, upright cartons) may need a two-level pusher , one pad contacts the base, another contacts the upper portion. Mettler-Toledo and Loma Systems offer pusher arm rejects as standard options on their checkweigher and metal detector conveyor systems.
+                Pusher arm design must match the product's height, width, and center of gravity. The contact pad (the surface that touches the product) should be wide enough to push the product without tipping it. Products with a high center of gravity (tall bottles, upright cartons) may need a two-level pusher, one pad contacts the base, another contacts the upper portion.
               </p>
               <p>
                 The pusher arm must fully retract before the next good product arrives. At high speeds with tight product spacing, the retract time limits throughput. Servo-driven pushers retract faster than pneumatic and offer programmable stroke length for different product widths. However, servo pushers cost significantly more than pneumatic.
@@ -144,13 +174,16 @@ const faqSchema = {
 
           <!-- Diverter Gate -->
           <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Diverter Gate / Sweep Arm Reject</h3>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Reject Diverter (Diverter Arm / Sweep Gate)</h3>
             <div class="text-lg text-ink-muted leading-relaxed space-y-4">
               <p>
-                Diverter gate rejects use a pivoting arm or gate that swings across the conveyor path, sweeping product off the side. The gate pivots from one side of the conveyor and sweeps product to the opposite side into a reject chute. Response time is 100–300ms. Diverter gates handle medium to heavy products (1–50kg) including cases, trays, and bundled products.
+                A reject diverter is a pivoting arm or gate that swings across the conveyor path and steers the flagged pack off the side. The gate pivots from one side of the conveyor and sweeps product to the opposite side into a reject chute. Response time is 100–300ms. Diverter gates handle medium to heavy products (1–50kg) including cases, trays, and bundled products.
               </p>
               <p>
-                Diverter gates excel at rejecting products that arrive in groups (multi-packs, shrink-wrapped bundles) because the sweeping motion clears the full belt width. The gate design can include a curved guide surface that redirects product smoothly rather than pushing against it , reducing impact damage to the product and the mechanism.
+                <strong class="text-ink">In-line diverter rejection</strong> keeps the rejected pack on a conveyor instead of dropping it in a bin: the arm or a guide rail steers it into a parallel reject lane or onto a reject table. This suits bottles and cans that would tip or break in a bin, and cases that operators must inspect or rework. Where the defect is a contamination risk, the reject lane still needs a locked or guarded end point.
+              </p>
+              <p>
+                Diverter gates excel at rejecting products that arrive in groups (multi-packs, shrink-wrapped bundles) because the sweeping motion clears the full belt width. The gate design can include a curved guide surface that redirects product smoothly rather than pushing against it, reducing impact damage to the product and the mechanism.
               </p>
               <p>
                 For <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyor</a> applications, heavy-duty diverter gates reject entire cases or pallets. These gates use servo motors or hydraulic cylinders rather than pneumatics to handle the high forces required.
@@ -160,13 +193,13 @@ const faqSchema = {
 
           <!-- Drop-Out Belt -->
           <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Drop-Out (Retractable) Belt Reject</h3>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Reject Belt: Retracting Nose, Drop-Out &amp; Drop-Flap</h3>
             <div class="text-lg text-ink-muted leading-relaxed space-y-4">
               <p>
-                Drop-out belt rejects remove a section of the conveyor belt when a defect triggers rejection. The belt section either drops away (hinged), retracts laterally, or accelerates forward to open a gap. Product falls through the opening into a reject bin below the conveyor. Response time is 150–500ms , slower than other methods but with a key advantage: no lateral force touches the product.
+                A reject belt (also called a retracting, drop-out, or drop-flap reject) opens a gap in the conveyor bed so the flagged pack falls through into a bin below, with no side force on the product. Drop-out belt rejects remove a section of the conveyor belt when a defect triggers rejection. The belt section either drops away (hinged), retracts laterally, or accelerates forward to open a gap. Product falls through the opening into a reject bin below the conveyor. Response time is 150–500ms, slower than other methods but with a key advantage: no lateral force touches the product.
               </p>
               <p>
-                Drop-out belts suit products that cannot tolerate side pushing , open trays, unwrapped food, loose product on a belt. They also reject products of any weight, from lightweight pouches to heavy cases, because gravity does the work. The drop-out section must be long enough to clear the entire product before closing. Eriez and Fortress Technology offer integrated metal detector/drop-out belt systems for food processing.
+                Drop-out belts suit products that cannot tolerate side pushing, open trays, unwrapped food, loose product on a belt. They also reject products of any weight, from lightweight pouches to heavy cases, because gravity does the work. The drop-out section must be long enough to clear the entire product before closing. A drop-flap is the bulk-flow version: a hinged flap at a transfer point or chute swings open to dump a slug of loose product (nuts, cereal, frozen pieces) around the detected contaminant.
               </p>
               <p>
                 The primary limitation is speed. The belt must open, the product must clear the gap, and the belt must close before the next product arrives. At high speeds with tight product spacing, drop-out belts cannot cycle fast enough. A minimum product gap of 300–500mm is typical.
@@ -178,7 +211,7 @@ const faqSchema = {
     </section>
 
     <!-- ═══ COMPARISON TABLE ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
+    <section class="py-20 bg-surface-dim" aria-labelledby="compare-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Comparison</div>
         <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
@@ -186,49 +219,65 @@ const faqSchema = {
         </h2>
 
         <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[850px]">
+          <table class="w-full text-left border-collapse min-w-[1000px]">
             <thead>
               <tr class="border-b-2 border-ink">
                 <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Mechanism</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Response Time</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Weight</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Types</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Line Speed Fit</th>
                 <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Contact</th>
                 <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Relative Cost</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
+                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Common Failure Modes</th>
               </tr>
             </thead>
             <tbody class="text-base text-ink-muted">
               <tr class="border-b border-border">
                 <td class="py-4 pr-4 font-semibold text-ink">Air Blast</td>
-                <td class="py-4 pr-4 font-mono text-sm">20–50 ms</td>
-                <td class="py-4 pr-4 font-mono text-sm">&#x3C; 500g</td>
+                <td class="py-4 pr-4">Light packs: snack bags, pouches, bars, blister packs</td>
+                <td class="py-4 pr-4">Highest</td>
                 <td class="py-4 pr-4">None (air only)</td>
                 <td class="py-4 pr-4 font-mono text-sm">$</td>
-                <td class="py-4">Snack bags, pouches, blister packs</td>
+                <td class="py-4">Low or wet air supply weakens the blast. Tight gaps blow good neighbors off. Pack weight or shape changes leave product on the belt.</td>
               </tr>
               <tr class="border-b border-border">
                 <td class="py-4 pr-4 font-semibold text-ink">Pusher Arm</td>
-                <td class="py-4 pr-4 font-mono text-sm">50–150 ms</td>
-                <td class="py-4 pr-4 font-mono text-sm">50g–25 kg</td>
+                <td class="py-4 pr-4">Cartons, cases, bottles, jars, cans</td>
+                <td class="py-4 pr-4">Medium to high (servo faster than pneumatic)</td>
                 <td class="py-4 pr-4">Side contact</td>
                 <td class="py-4 pr-4 font-mono text-sm">$$</td>
-                <td class="py-4">Bottles, jars, cartons, cases</td>
+                <td class="py-4">Timing drift hits the wrong pack edge or tips tall product. Slow retract strikes the next pack. Packs jam in the reject chute.</td>
               </tr>
               <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Diverter Gate</td>
-                <td class="py-4 pr-4 font-mono text-sm">100–300 ms</td>
-                <td class="py-4 pr-4 font-mono text-sm">1–50 kg</td>
+                <td class="py-4 pr-4 font-semibold text-ink">Diverter Arm / Sweep Gate</td>
+                <td class="py-4 pr-4">Cases, trays, bundles, multi-packs, in-line reject lanes</td>
+                <td class="py-4 pr-4">Low to medium</td>
                 <td class="py-4 pr-4">Sweep contact</td>
                 <td class="py-4 pr-4 font-mono text-sm">$$–$$$</td>
-                <td class="py-4">Cases, bundles, multi-packs</td>
+                <td class="py-4">Arm returns late and takes the next good pack. Product bridges or wedges at the gate. Pivot wear changes sweep timing.</td>
               </tr>
-              <tr>
-                <td class="py-4 pr-4 font-semibold text-ink">Drop-Out Belt</td>
-                <td class="py-4 pr-4 font-mono text-sm">150–500 ms</td>
-                <td class="py-4 pr-4 font-mono text-sm">Any weight</td>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Retracting / Drop-Out Belt</td>
+                <td class="py-4 pr-4">Open trays, unwrapped or fragile food, mixed weights</td>
+                <td class="py-4 pr-4">Low to medium (needs long gaps)</td>
                 <td class="py-4 pr-4">None (gravity)</td>
                 <td class="py-4 pr-4 font-mono text-sm">$$$</td>
-                <td class="py-4">Open trays, unwrapped food, fragile</td>
+                <td class="py-4">Short packs carry over the gap. Belt closes on a pack still falling. Nose roller and belt wear from constant cycling.</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-4 pr-4 font-semibold text-ink">Drop-Flap</td>
+                <td class="py-4 pr-4">Loose or bulk product in a continuous stream</td>
+                <td class="py-4 pr-4">Continuous flow (rejects a slug, not one pack)</td>
+                <td class="py-4 pr-4">None (gravity)</td>
+                <td class="py-4 pr-4 font-mono text-sm">$$</td>
+                <td class="py-4">Flap opens too briefly and the contaminant passes. Product lodges in the hinge. Rejects more good product than pack-level methods.</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 font-semibold text-ink">Stop-on-Detect (Belt Stop)</td>
+                <td class="py-4 pr-4">Low-rate, large, or irregular product</td>
+                <td class="py-4 pr-4">Low</td>
+                <td class="py-4 pr-4">Manual removal</td>
+                <td class="py-4 pr-4 font-mono text-sm">$</td>
+                <td class="py-4">Depends on the operator removing the right item. Often not acceptable where retailer or audit codes call for automatic rejection.</td>
               </tr>
             </tbody>
           </table>
@@ -238,7 +287,7 @@ const faqSchema = {
     </section>
 
     <!-- ═══ INSPECTION DEVICE INTEGRATION ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="integration-heading">
+    <section class="py-20 bg-surface" aria-labelledby="integration-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Integration</div>
         <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
@@ -247,7 +296,7 @@ const faqSchema = {
         <div class="text-lg text-ink-muted leading-relaxed space-y-6">
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Metal Detector Integration</h3>
           <p>
-            Metal detectors scan product for ferrous, non-ferrous, and stainless steel contamination. The detector sends a reject signal to the reject mechanism controller after detecting metal. The time delay between detection and reject activation accounts for the distance the product must travel from the detector aperture to the reject point. This delay , called the reject delay or product track time , must be calculated precisely. Too short, and the reject fires before the contaminated product arrives. Too long, and the product passes the reject point.
+            Metal detectors scan product for ferrous, non-ferrous, and stainless steel contamination. The detector sends a reject signal to the reject mechanism controller after detecting metal. The time delay between detection and reject activation accounts for the distance the product must travel from the detector aperture to the reject point. This delay, called the reject delay or product track time, must be calculated precisely. Too short, and the reject fires before the contaminated product arrives. Too long, and the product passes the reject point.
           </p>
           <p>
             Loma Systems' IQ4 series, Mettler-Toledo's Profile Advantage, and Fortress Technology's Interceptor line integrate metal detection with built-in conveyor and reject systems. These combination units mount the metal detector, conveyor belt, and reject mechanism on a single frame, ensuring consistent detector-to-reject distance and eliminating integration timing issues.
@@ -256,10 +305,10 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Checkweigher Integration</h3>
           <p>
-            Checkweighers weigh every product in motion and reject units outside the target weight range (underweight or overweight). The checkweigher's built-in reject system , typically a pusher arm or air blast , fires immediately after the weigh cell determines the product is out of spec. Checkweighers require a controlled infeed spacing to ensure only one product occupies the weigh cell at a time. An <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> or spacing belt upstream provides this consistent product gap.
+            Checkweighers weigh every product in motion and reject units outside the target weight range (underweight or overweight). The checkweigher's built-in reject system, typically a pusher arm or air blast, fires immediately after the weigh cell determines the product is out of spec. Checkweighers require a controlled infeed spacing to ensure only one product occupies the weigh cell at a time. An <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyor</a> or spacing belt upstream provides this consistent product gap.
           </p>
           <p>
-            Mettler-Toledo's C-Series and Ishida's DACS checkweighers include integrated reject systems with reject confirmation sensors. The reject confirmation sensor verifies that the rejected product left the belt and entered the reject bin. If confirmation fails, the checkweigher alarms and optionally stops the line , a critical safety feature for products sold by weight (meat, cheese, produce).
+            Mettler-Toledo's C-Series and Ishida's DACS checkweighers include integrated reject systems with reject confirmation sensors. The reject confirmation sensor verifies that the rejected product left the belt and entered the reject bin. If confirmation fails, the checkweigher alarms and optionally stops the line, a critical safety feature for products sold by weight (meat, cheese, produce).
           </p>
           <!-- VERIFY: Ishida DACS current model range and reject confirmation feature set -->
 
@@ -273,14 +322,14 @@ const faqSchema = {
 
           <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">X-Ray System Integration</h3>
           <p>
-            X-ray inspection detects foreign objects that metal detectors miss , glass, stone, bone, dense plastics, and rubber. X-ray systems also perform mass estimation, fill level checking, and component counting. Reject mechanisms for X-ray systems follow the same principles as metal detector rejects. Eriez and Mettler-Toledo supply X-ray inspection systems with integrated conveyor and reject for food and pharmaceutical lines.
+            X-ray inspection detects foreign objects that metal detectors miss, glass, stone, bone, dense plastics, and rubber. X-ray systems also perform mass estimation, fill level checking, and component counting. Reject mechanisms for X-ray systems follow the same principles as metal detector rejects. Eriez and Mettler-Toledo supply X-ray inspection systems with integrated conveyor and reject for food and pharmaceutical lines.
           </p>
         </div>
       </div>
     </section>
 
     <!-- ═══ REJECT CONFIRMATION & COMPLIANCE ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="confirm-heading">
+    <section class="py-20 bg-surface-dim" aria-labelledby="confirm-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Compliance</div>
         <h2 id="confirm-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
@@ -292,11 +341,11 @@ const faqSchema = {
           </p>
           <ul class="list-disc list-inside space-y-3 ml-2">
             <li><strong class="text-ink">Confirmed reject:</strong> The sensor detects the product in the bin. The system logs the event and continues running. Normal operation.</li>
-            <li><strong class="text-ink">Failed reject (no confirmation):</strong> The sensor does not detect a product in the bin. The contaminated product may still be on the main conveyor. The system triggers an alarm and , depending on configuration , stops the line. This is the critical safety event that reject confirmation exists to catch.</li>
+            <li><strong class="text-ink">Failed reject (no confirmation):</strong> The sensor does not detect a product in the bin. The contaminated product may still be on the main conveyor. The system triggers an alarm and, depending on configuration, stops the line. This is the critical safety event that reject confirmation exists to catch.</li>
             <li><strong class="text-ink">False confirmation:</strong> The sensor detects a product in the bin, but it was not the target product (e.g., a different product fell into the bin accidentally). Rare, but possible if the reject bin sensor lacks specificity.</li>
           </ul>
           <p>
-            Major retailers (Walmart, Costco, Kroger, Aldi) and food safety audit standards (BRC Global Standard for Food Safety, SQF Code) increasingly mandate reject confirmation on metal detector and X-ray reject systems. Some retailers specify that the line must stop automatically on a failed reject confirmation , manual acknowledgment alone is insufficient.
+            Major retailers (Walmart, Costco, Kroger, Aldi) and food safety audit standards (BRC Global Standard for Food Safety, SQF Code) increasingly mandate reject confirmation on metal detector and X-ray reject systems. Some retailers specify that the line must stop automatically on a failed reject confirmation, manual acknowledgment alone is insufficient.
           </p>
           <p>
             The reject bin must be locked to prevent operators from retrieving rejected product and returning it to the line. Keyed locks, electronic latches tied to the PLC, and tamper-evident seals all serve this purpose. Loma Systems, Fortress Technology, and Mettler-Toledo offer locked reject bins with confirmation sensors as standard equipment on their <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food-grade inspection systems</a>.
@@ -306,7 +355,7 @@ const faqSchema = {
     </section>
 
     <!-- ═══ CONVEYOR DESIGN FOR REJECT ZONES ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="design-heading">
+    <section class="py-20 bg-surface" aria-labelledby="design-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Conveyor Design</div>
         <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
@@ -330,7 +379,7 @@ const faqSchema = {
     </section>
 
     <!-- ═══ SELECTION CRITERIA ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="selection-heading">
+    <section class="py-20 bg-surface-dim" aria-labelledby="selection-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-label text-accent mb-4">Selection Guide</div>
         <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
@@ -343,7 +392,7 @@ const faqSchema = {
           <ol class="list-decimal list-inside space-y-4 ml-2">
             <li><strong class="text-ink">Product weight and size.</strong> Air blast for products under 500g. Pusher arm for 50g–25kg. Diverter gate for 1–50kg. Drop-out belt for any weight, especially products that cannot tolerate lateral contact.</li>
             <li><strong class="text-ink">Conveyor speed and product spacing.</strong> Higher speed demands faster mechanism response. Calculate the product transit time from detector to reject: Transit time = Distance (inches) / Speed (inches/sec). The mechanism must complete its cycle within this window.</li>
-            <li><strong class="text-ink">Reject rate.</strong> High reject rates (>2%) mean the mechanism cycles frequently. Pneumatic mechanisms consume more compressed air; electrical mechanisms consume more power. High reject rates also fill the reject bin faster , size the bin for the expected reject volume per shift.</li>
+            <li><strong class="text-ink">Reject rate.</strong> High reject rates (>2%) mean the mechanism cycles frequently. Pneumatic mechanisms consume more compressed air; electrical mechanisms consume more power. High reject rates also fill the reject bin faster, size the bin for the expected reject volume per shift.</li>
             <li><strong class="text-ink">Compliance requirements.</strong> Food and pharmaceutical applications require reject confirmation sensors, locked reject bins, and event logging. Ensure the reject system's data output integrates with your line PLC and quality management system.</li>
             <li><strong class="text-ink">Environment.</strong> <a href="/industries/food-conveyors/sanitary/" class="text-accent hover:text-accent-hover font-semibold">Washdown environments</a> require stainless steel construction and IP69K ratings. Dry environments accept standard industrial construction.</li>
           </ol>
@@ -394,6 +443,16 @@ const faqSchema = {
           </summary>
           <div class="text-ink-muted leading-relaxed space-y-3">
             <p>A conveyor reject system removes non-conforming product from the line after a metal detector, checkweigher, vision system, or X-ray scanner detects a defect. The mechanism activates within 20–500ms and diverts the defective product into a locked reject bin while good product continues downstream.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How do rejection systems remove contaminated products from the line?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p>A rejection system removes contaminated product in five steps. An inspection device (metal detector, X-ray, checkweigher, or vision system) flags the pack. The controller tracks that pack by belt encoder or timer to the reject point. A reject mechanism (air blast, pusher, diverter arm, or retracting belt) removes it into a reject bin. A confirm sensor verifies the pack left the line. The bin is locked so rejected product cannot be returned, and any failed step stops the line or raises an alarm.</p>
           </div>
         </details>
 

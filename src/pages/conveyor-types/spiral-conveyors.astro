@@ -18,17 +18,27 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a spiral conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A spiral conveyor moves products vertically between different elevation levels using a helical (spiral) path. Products ride on a continuous belt, slat, or roller surface that wraps around a central column or drum in a compact spiral footprint. Spiral conveyors handle elevation changes of 3 to 50+ feet while maintaining continuous product flow, unlike vertical reciprocating conveyors that batch-lift products on a platform." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A spiral conveyor is a vertical conveyor that moves products between elevation levels along a helical path. Products ride on a continuous slat, modular plastic, or wire mesh belt that wraps around a central column or drum. Products enter and exit at the same time, so flow stays continuous, unlike vertical reciprocating conveyors that lift batches on a platform." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a modular spiral conveyor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A modular spiral conveyor is assembled from standard, factory-built components: tier sections, support columns, a drive unit, and infeed and discharge ends. Height changes by adding or removing tiers, and the unit can be moved or reconfigured later. The tradeoff is that sizes are limited to the supplier's standard widths, diameters, and pitches. The term is also used for spirals that run on modular plastic belt, so confirm which meaning a supplier intends." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are spiral conveyors supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most spiral conveyors are self-supporting: a central column or drum and a ring of outer posts carry the helical track, and the base anchors to the floor. Tall units, units that pass through a mezzanine or floor opening, and units in seismic zones may need lateral bracing to building structure. Confirm floor slab capacity at the base, anchor requirements, and how the infeed and discharge ends are supported." }
     },
     {
       "@type": "Question",
       "name": "What is the difference between a spiral conveyor and a vertical reciprocating conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A spiral conveyor provides continuous flow , products enter and exit simultaneously without stopping. A vertical reciprocating conveyor (VRC) lifts a batch of products on a platform, pauses to load/unload, and returns for the next batch. Spirals handle higher sustained throughput. VRCs handle heavier individual loads and require less floor space. Spirals cost more but eliminate batch cycling delays." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A spiral conveyor provides continuous flow: products enter and exit simultaneously without stopping. A vertical reciprocating conveyor (VRC) lifts a batch of products on a platform, pauses to load and unload, and returns for the next batch. Spirals handle higher sustained throughput of cases and totes. VRCs handle heavier individual loads such as pallets and fit a smaller footprint. Spirals cost more but eliminate batch cycling delays." }
     },
     {
       "@type": "Question",
       "name": "How much does a spiral conveyor cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Spiral conveyors represent a significant capital investment compared to incline belt conveyors or VRCs. Cost depends on elevation change, belt width, throughput, environment (washdown, freezer), and whether the spiral is up, down, or dual. Key cost factors include the number of tiers (spiral wraps), belt type, drive system, and any environmental enclosures. Spiral conveyors justify their cost through continuous throughput and small floor footprint." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Spiral conveyors represent a significant capital investment compared to incline belt conveyors or VRCs. Cost depends on elevation change, belt width, tier count, drive type, environment (washdown, freezer), and construction material. Spiral conveyors justify their cost through continuous throughput and a small floor footprint." }
     }
   ]
 };
@@ -36,14 +46,14 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Spiral & Vertical Conveyors: Continuous Elevation Change Systems",
-  "description": "Spiral and vertical conveyors including spiral up, spiral down, continuous vs indexed, and comparison with VRCs for packaging and distribution applications.",
+  "headline": "Spiral Conveyors: Modular Systems, Supports & Selection",
+  "description": "Vertical spiral conveyor systems: modular vs custom spirals, drive types, supports and structure, spiral vs VRC vs incline, and how to specify one.",
   "url": "https://packagingconveyor.com/conveyor-types/spiral-conveyors/",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
 
-<BaseLayout title="Spiral &#x26; Vertical Conveyors: Continuous Elevation Change Systems" description="Spiral and vertical conveyors: spiral up/down, continuous vs indexed, VRC comparison. Throughput, footprint, and selection for packaging and distribution." canonical="https://packagingconveyor.com/conveyor-types/spiral-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="Spiral Conveyors: Modular Systems, Supports &#x26; Selection" description="Vertical spiral conveyor systems explained: modular vs custom spirals, drive types, supports and structure, spiral vs VRC vs incline, and how to specify one." canonical="https://packagingconveyor.com/conveyor-types/spiral-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
 
   <!-- Breadcrumb -->
   <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
@@ -61,85 +71,23 @@ const articleSchema = {
   <!-- AIO -->
   <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Spiral &#x26; Vertical Conveyors</div>
+      <div class="section-label text-accent mb-4">Vertical Spiral Conveyors</div>
       <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-8">
-        Spiral &#x26; Vertical Conveyors
+        Spiral Conveyor Systems
       </h1>
-      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
-        <p>A spiral conveyor moves products vertically between elevation levels using a helical path that wraps around a central column in a compact footprint. Spiral conveyors handle elevation changes of 3 to 50+ feet with continuous product flow , products enter and exit simultaneously without batch cycling. They serve <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>, distribution centers, and food processing facilities where floor space is limited and throughput demands rule out batch-lifting alternatives like <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors (VRCs)</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How Spirals Work -->
-  <article class="py-20 bg-surface" aria-labelledby="how-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">How They Work</div>
-      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        How Spiral Conveyors <span class="text-accent">Work</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p>A spiral conveyor wraps a conveying surface , typically a plastic modular belt, slat chain, or wire mesh belt , around a central drum or column in a continuous helix. The belt rides on a support structure that spirals upward (or downward) at a constant pitch angle. A single motor drives the belt through the entire spiral path. Products placed on the belt at the bottom travel upward through the helix and discharge at the top (or vice versa for down-spirals).</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Friction-Drive Spirals</h3>
-        <p>Most spiral conveyors use a friction-drive design where the belt wraps around a central rotating drum. The drum surface has a high-friction coating or surface texture. As the drum rotates, friction between the drum and the belt inner edge drives the belt through the spiral. No sprockets, chains, or edge drives are needed. <a href="https://www.ryson.com/spiral-conveyors/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">Ryson International</a> and AmbaFlex are the two dominant friction-drive spiral conveyor manufacturers globally.</p>
-        <!-- VERIFY: Ryson and AmbaFlex market positioning as dominant spiral manufacturers -->
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Chain-Drive Spirals</h3>
-        <p>Some spiral conveyors use chain or gear drives to positively move the belt or slat surface through the spiral. Chain-driven spirals handle heavier loads and maintain more precise speed control than friction-drive units. They cost more and require more maintenance (chain lubrication, tension adjustment). Nercon and Garvey Corporation offer chain-driven spiral solutions for heavy-duty packaging applications.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Geometry</h3>
-        <p>Key spiral dimensions: outside diameter (typically 4-10 feet), belt width (6-36 inches), number of tiers (spiral wraps, typically 2-20), elevation change per tier (6-18 inches), and total elevation change (sum of all tier heights). The pitch angle (incline) is typically 5-12 degrees , gentle enough to prevent product sliding but steep enough to gain elevation efficiently. Tighter spirals (smaller diameter) save floor space but increase belt wear and limit belt width.</p>
-      </div>
-    </div>
-  </article>
-
-  <!-- Spiral Up and Down -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="updown-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Up &#x26; Down</div>
-      <h2 id="updown-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Spiral Up vs. <span class="text-accent">Spiral Down</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Up Conveyors</h3>
-        <p>Spiral up conveyors lift products from a lower elevation to a higher one. Common applications: lifting cases from a ground-level packaging line to an overhead conveyor system, lifting products from production level to mezzanine-level palletizing, and lifting finished goods from packaging to an elevated shipping conveyor. Spiral up conveyors need more drive power than spiral down because they work against gravity plus friction.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Down Conveyors</h3>
-        <p>Spiral down conveyors lower products from a higher elevation to a lower one. The most common application: lowering products from an overhead conveyor or mezzanine to ground-level shipping. Spiral down conveyors in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> lower hot products through cooling zones , the spiral path provides extended dwell time in cooled or ambient air. Bakery lines use cooling spirals to cool bread, baked goods, and confections over 30-60 minutes of spiral travel.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dual Spirals</h3>
-        <p>Dual spiral conveyors stack an up-spiral and a down-spiral concentrically (one inside the other) or side by side. This provides both elevation change and return path in a single footprint. Dual spirals serve applications where products must go up to a process level and return down to the original level , for example, lifting products through an overhead treatment zone (UV curing, cooling, drying) and returning them to the packaging line.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Continuous vs Indexed -->
-  <section class="py-20 bg-surface" aria-labelledby="mode-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Operating Modes</div>
-      <h2 id="mode-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Continuous vs. <span class="text-accent">Indexed</span> Operation
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Continuous Flow</h3>
-        <p>Continuous-flow spirals run at constant speed with products entering and exiting simultaneously. Belt speed typically ranges from 30 to 200 FPM. Throughput depends on belt speed and product spacing: at 100 FPM with 18-inch product spacing, a continuous spiral delivers 67 products per minute. Continuous spirals suit high-throughput operations where products flow without interruption from upstream <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation systems</a>.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Indexed (Mass Flow) Operation</h3>
-        <p>Indexed spirals stop and start to fill the entire spiral with products before advancing the belt. The spiral fills completely during the stop period, then indexes forward to discharge the products. This mode maximizes the number of products in the spiral at any time, providing maximum cooling/holding time per product. Indexed spirals serve food cooling and freezing applications where dwell time matters more than throughput rate.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Hybrid Operation</h3>
-        <p>Some spiral systems vary belt speed dynamically to balance throughput and dwell time. Variable-speed drives adjust the spiral speed based on upstream production rate and downstream demand. During high production, the spiral runs faster. During slow periods, the spiral slows to provide more dwell time (cooling, drying) per product. This is common in bakery spiral coolers where production rate varies between product changeovers.</p>
+      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
+        <p>A spiral conveyor is a vertical conveyor that moves products between elevation levels along a helical path wrapped around a central column. Products enter and exit at the same time, so flow stays continuous with no batch cycling. Spirals serve <a href="/industries/packaging-line-conveyors/" class="text-accent hover:text-accent-hover font-semibold">packaging lines</a>, distribution centers, and food plants where floor space is limited and throughput rules out batch lifts like <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">vertical reciprocating conveyors (VRCs)</a>.</p>
+        <p>The main buying decisions are the vertical conveyor type (spiral, VRC, or incline), modular or custom construction, drive type, and how the unit is supported. The comparison below covers the first.</p>
       </div>
     </div>
   </section>
 
   <!-- Spiral vs VRC Comparison -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
+  <section class="py-20 bg-surface" aria-labelledby="comparison-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Comparison</div>
       <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Spiral vs. VRC <span class="text-accent">Comparison</span>
+        Spiral vs. VRC vs. <span class="text-accent">Incline</span>
       </h2>
       <div class="overflow-x-auto -mx-4 px-4">
         <table class="w-full text-left border-collapse min-w-[700px]">
@@ -160,33 +108,33 @@ const articleSchema = {
             </tr>
             <tr class="border-b border-border">
               <td class="py-3 pr-4 font-semibold text-ink">Throughput</td>
-              <td class="py-3 pr-4 font-mono text-sm">30-200 PPM</td>
-              <td class="py-3 pr-4 font-mono text-sm">4-15 cycles/min</td>
-              <td class="py-3 font-mono text-sm">30-200 PPM</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Elevation Change</td>
-              <td class="py-3 pr-4 font-mono text-sm">3-50+ ft</td>
-              <td class="py-3 pr-4 font-mono text-sm">3-40 ft</td>
-              <td class="py-3 font-mono text-sm">3-20 ft</td>
+              <td class="py-3 pr-4">High, set by belt speed and spacing</td>
+              <td class="py-3 pr-4">Limited by cycle time</td>
+              <td class="py-3">High, set by belt speed and spacing</td>
             </tr>
             <tr class="border-b border-border">
               <td class="py-3 pr-4 font-semibold text-ink">Floor Space</td>
-              <td class="py-3 pr-4">Moderate (4-10 ft dia)</td>
-              <td class="py-3 pr-4">Small (shaft footprint)</td>
-              <td class="py-3">Large (long incline run)</td>
+              <td class="py-3 pr-4">Compact round footprint</td>
+              <td class="py-3 pr-4">Smallest (platform footprint)</td>
+              <td class="py-3">Largest (long incline run)</td>
             </tr>
             <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink">Max Load/Unit</td>
-              <td class="py-3 pr-4 font-mono text-sm">150 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">6,000 lbs</td>
-              <td class="py-3 font-mono text-sm">100 lbs</td>
+              <td class="py-3 pr-4 font-semibold text-ink">Elevation Change</td>
+              <td class="py-3 pr-4">Tall lifts in one footprint</td>
+              <td class="py-3 pr-4">Tall lifts, multiple levels</td>
+              <td class="py-3">Limited by incline angle and run length</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-3 pr-4 font-semibold text-ink">Typical Loads</td>
+              <td class="py-3 pr-4">Cases, cartons, totes, packaged goods</td>
+              <td class="py-3 pr-4">Pallets, carts, heavy loads</td>
+              <td class="py-3">Cases, bags, loose product</td>
             </tr>
             <tr class="border-b border-border">
               <td class="py-3 pr-4 font-semibold text-ink">Best For</td>
-              <td class="py-3 pr-4">High-throughput cases/cartons</td>
+              <td class="py-3 pr-4">High-throughput cases and cartons</td>
               <td class="py-3 pr-4">Heavy loads, low throughput</td>
-              <td class="py-3">Low elevation, long run OK</td>
+              <td class="py-3">Low lifts where floor length is available</td>
             </tr>
             <tr>
               <td class="py-3 pr-4 font-semibold text-ink">Relative Cost</td>
@@ -197,7 +145,102 @@ const articleSchema = {
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-ink-muted mt-4">See our <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC guide</a> for detailed vertical reciprocating conveyor coverage. See <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for pricing factors.</p>
+      <p class="text-sm text-ink-muted mt-4">See the <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC guide</a>, <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyor guide</a>, and <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for detail on each option.</p>
+    </div>
+  </section>
+
+  <!-- How Spirals Work -->
+  <article class="py-20 bg-surface-dim bg-dots" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">How They Work</div>
+      <h2 id="how-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        How Spiral Conveyors <span class="text-accent">Work</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A spiral conveyor carries a conveying surface, typically a slat chain, plastic modular belt, or wire mesh belt, along a helical track around a central column or drum. The track rises (or descends) at a constant pitch. Products loaded at the bottom travel up through the helix and discharge at the top, or the reverse for down-spirals.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drive Types</h3>
+        <p><strong class="text-ink">Drum-driven (friction) spirals:</strong> a rotating central drum or cage drives the belt's inner edge by friction. This design is common in spiral freezers, coolers, and proofers, where the belt carries product through many tiers inside an enclosure.</p>
+        <p><strong class="text-ink">Positive-drive spirals:</strong> a drive unit engages a slat chain or modular belt directly and pulls it through the helix. This design is common in spirals that move cases, totes, and packaged goods between levels. Ask which drive a quote uses, because it affects belt tension, wear parts, and maintenance access.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Geometry</h3>
+        <p>Key dimensions are outside diameter, belt width, number of tiers (wraps), rise per tier, and total elevation change. Pitch must be gentle enough that products do not slide or tip, and the inside radius must suit product length so long items do not overhang or jam. Tighter spirals save floor space but limit belt width and product size. Suppliers publish these limits for their standard models.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Modular Spirals -->
+  <section class="py-20 bg-surface" aria-labelledby="modular-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Construction</div>
+      <h2 id="modular-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Modular vs. Custom <span class="text-accent">Spirals</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>A modular spiral conveyor is assembled from standard, factory-built components: tier sections, support columns, a drive unit, and infeed and discharge ends. Height changes by adding or removing tiers, and the unit can be moved or reconfigured when the line changes. The tradeoff is that sizes are limited to the supplier's standard widths, diameters, and pitches.</p>
+        <p>Custom-engineered spirals are designed around one application, such as a spiral freezer sized to its enclosure or a spiral for unusually heavy or long products. They fit cases that standard modules cannot, at the cost of more engineering time and less flexibility later.</p>
+        <p>"Modular spiral" is also used for spirals that run on <a href="/conveyor-types/modular-conveyors/" class="text-accent hover:text-accent-hover font-semibold">modular plastic belt</a>. Confirm which meaning a supplier intends.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supports and Structure -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="supports-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Structure</div>
+      <h2 id="supports-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Spiral Conveyor <span class="text-accent">Supports</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p>Most spiral conveyors are self-supporting: a central column or drum and a ring of outer posts carry the helical track, and the base anchors to the floor. No building steel is needed in most installations, but the support design still drives floor loading, footprint, and access. Check these points before layout is final:</p>
+        <ul class="list-disc list-inside space-y-3 ml-2">
+          <li><strong class="text-ink">Floor slab:</strong> confirm slab capacity for the load concentrated at the spiral base and the supplier's anchor pattern.</li>
+          <li><strong class="text-ink">Height and bracing:</strong> tall units, units that pass through a mezzanine or floor opening, and units in seismic zones may need lateral bracing to building structure. Local building code governs.</li>
+          <li><strong class="text-ink">Infeed and discharge ends:</strong> define who supplies the support stands and how the top discharge ties into the mezzanine or overhead conveyor.</li>
+          <li><strong class="text-ink">Access and guarding:</strong> outer post spacing and guard panels determine where crews can reach the belt. Guard infeed, discharge, and drive pinch points per <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">OSHA 1910.212</a> and <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">ASME B20.1</a>.</li>
+          <li><strong class="text-ink">Frame material:</strong> painted or galvanized steel for dry areas. Stainless steel with open, cleanable framing for washdown.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spiral Up and Down -->
+  <section class="py-20 bg-surface" aria-labelledby="updown-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Up &#x26; Down</div>
+      <h2 id="updown-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Spiral Up vs. <span class="text-accent">Spiral Down</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Up Conveyors</h3>
+        <p>Spiral up conveyors lift cases from a floor-level packaging line to an overhead conveyor, a mezzanine palletizing area, or an elevated shipping conveyor. They need more drive power than spiral down units because they work against gravity plus friction.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral Down Conveyors</h3>
+        <p>Spiral down conveyors lower products from an overhead conveyor or mezzanine to floor-level shipping. In <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a>, the long spiral path gives hot products extended dwell time in cooled or ambient air.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dual Spirals</h3>
+        <p>Dual spiral conveyors combine an up-spiral and a down-spiral, nested or side by side, to provide both elevation change and a return path in one footprint. They suit processes where products go up through an overhead zone (cooling, drying, curing) and return to the original line.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous vs Indexed -->
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="mode-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Operating Modes</div>
+      <h2 id="mode-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Continuous vs. <span class="text-accent">Indexed</span> Operation
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Continuous Flow</h3>
+        <p>Continuous-flow spirals run at constant speed with products entering and exiting simultaneously. Throughput equals belt speed divided by product pitch. For example, a belt at 100 FPM carrying products on 18-inch pitch delivers about 67 products per minute. Mass-flow spirals carry unspaced product, such as bottles or cans, back to back rather than on a set pitch.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Indexed Operation</h3>
+        <p>Indexed spirals stop and start to fill the spiral before advancing. This maximizes the number of products in the spiral at any time and the holding time per product. It suits cooling and freezing applications where dwell time matters more than throughput rate.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Variable Speed</h3>
+        <p>Variable-speed drives adjust spiral speed to upstream production rate and downstream demand. The spiral runs faster during peak production and slower when longer dwell time (cooling, drying) is needed. This is common in bakery spiral coolers where rate changes between products.</p>
+      </div>
     </div>
   </section>
 
@@ -209,18 +252,17 @@ const articleSchema = {
         Spiral Conveyor <span class="text-accent">Applications</span>
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p><strong class="text-ink">Packaging line elevation changes:</strong> Spiral conveyors lift finished cases, cartons, and totes from ground-level packaging to mezzanine-level palletizing or overhead <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a>. The compact footprint saves floor space compared to long <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyors</a>. Ryson spirals are the most common in <a href="/conveyor-functions/ball-transfer-tables/">packaging line applications</a>, offered in widths from 6 to 30 inches.</p>
+        <p><strong class="text-ink">Packaging line elevation changes:</strong> spirals lift finished cases, cartons, and totes from floor-level packaging to mezzanine palletizing or overhead <a href="/conveyor-types/diverting-merging/sortation/" class="text-accent hover:text-accent-hover font-semibold">sortation systems</a>, using far less floor space than a long <a href="/conveyor-types/incline-conveyors/" class="text-accent hover:text-accent-hover font-semibold">incline conveyor</a>.</p>
 
-        <p><strong class="text-ink">Food cooling and freezing:</strong> Spiral conveyors in <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food processing</a> carry products through cooling or freezing chambers. The spiral path provides 30-120 minutes of dwell time within a compact freezer footprint. Bakery products, pizzas, prepared meals, and meat products ride through spiral freezers at -30 to -40°F. GEA, JBT (FoodTech), and Linde supply spiral freezer systems with integrated spiral conveyors in stainless steel and food-grade plastic belt construction.</p>
-        <!-- VERIFY: GEA, JBT, Linde current spiral freezer offerings -->
+        <p><strong class="text-ink">Food cooling and freezing:</strong> spirals carry bakery products, prepared meals, and meat through cooling or freezing chambers. The spiral path provides long dwell time inside a compact enclosure. Stainless steel frames and food-grade belts are standard.</p>
 
-        <p><strong class="text-ink">Distribution center level changes:</strong> Spiral conveyors move totes, cartons, and shipping containers between floors in multi-level distribution centers and fulfillment centers. The continuous flow handles the high throughput of e-commerce operations where batch-lifting VRCs create bottlenecks. AmbaFlex supplies spirals optimized for distribution center applications with wide belts handling multiple products per tier.</p>
+        <p><strong class="text-ink">Distribution center level changes:</strong> spirals move totes and cartons between floors in multi-level distribution and fulfillment centers, where batch-lifting VRCs would limit throughput.</p>
 
-        <p><strong class="text-ink">Accumulation in vertical space:</strong> Spiral conveyors double as vertical <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation buffers</a>. The spiral path provides 50-200 feet of conveyor length within a small floor footprint. Slowing or stopping the spiral accumulates products throughout the helix. This is more floor-space-efficient than long horizontal accumulation lanes for applications where vertical space is available.</p>
+        <p><strong class="text-ink">Vertical buffering:</strong> a spiral holds a long run of conveyor in a small footprint, so slowing or stopping it accumulates product in the helix. Dynamic buffer spirals vary their storage length with line conditions. See <a href="/conveyor-types/buffer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">buffer conveyors</a> for FIFO and LIFO buffer designs and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a> for horizontal options.</p>
 
-        <p><strong class="text-ink">Proofing and drying:</strong> Spirals carry bakery dough through temperature and humidity-controlled proofing chambers. The extended spiral path provides the 30-90 minute dwell time needed for dough rising. Similarly, spirals carry coated, washed, or printed products through drying zones where extended air exposure removes moisture. The spiral geometry maximizes dwell time per cubic foot of chamber volume.</p>
+        <p><strong class="text-ink">Proofing and drying:</strong> spirals carry dough through temperature- and humidity-controlled proofers and carry coated or washed products through drying zones. The helix maximizes dwell time per unit of chamber volume.</p>
 
-        <p><strong class="text-ink">Clean room and pharmaceutical:</strong> Spiral conveyors in enclosed housings move products between clean room levels or between production and packaging areas at different elevations. Stainless steel construction and smooth surfaces meet pharmaceutical and clean room standards. The enclosed spiral prevents contamination during vertical transport.</p>
+        <p><strong class="text-ink">Clean room and pharmaceutical:</strong> enclosed stainless spirals move product between clean room levels or between production and packaging areas at different elevations.</p>
       </div>
     </div>
   </section>
@@ -228,20 +270,20 @@ const articleSchema = {
   <!-- Selection Guide -->
   <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Selection Guide</div>
+      <div class="section-label text-accent mb-4">Specification Checklist</div>
       <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        How to Select a <span class="text-accent">Spiral Conveyor</span>
+        How to Specify a <span class="text-accent">Spiral Conveyor</span>
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p><strong class="text-ink">Elevation change and available floor space set the diameter and tier count.</strong> Divide the total elevation change by the elevation per tier (typically 6-18 inches) to get the number of tiers. More tiers mean a taller spiral. A larger diameter allows more elevation per tier (steeper pitch) and more belt area but consumes more floor space.</p>
+        <p><strong class="text-ink">Elevation change and floor space set diameter and tier count.</strong> Total rise divided by rise per tier gives the number of tiers. A larger diameter allows more rise per tier and wider belts but uses more floor space.</p>
 
-        <p><strong class="text-ink">Product dimensions and weight determine belt width and type.</strong> The product must fit within the belt width with clearance on both sides. Product weight must not exceed the belt and drive capacity per linear foot. Typical spiral belts handle 25-50 lbs per linear foot. Heavy products (over 75 lbs each) may require chain-driven spirals or <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC alternatives</a>.</p>
+        <p><strong class="text-ink">Product size and weight set belt width and type.</strong> The product must fit the belt with side clearance, and load per foot must stay within the belt and drive rating. Heavy products may call for a heavier-duty positive-drive spiral or a <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC</a>.</p>
 
-        <p><strong class="text-ink">Throughput determines belt speed and product spacing.</strong> Calculate products per minute. Divide belt speed (FPM) by product pitch (product length + gap). Ensure the calculation accounts for infeed and discharge conveyor speeds. <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer conveyors</a> at the spiral infeed and discharge must match the spiral belt speed for smooth product transition.</p>
+        <p><strong class="text-ink">Throughput sets belt speed and product pitch.</strong> Products per minute equals belt speed divided by pitch (product length plus gap). <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer conveyors</a> at infeed and discharge must match spiral speed for smooth handoff.</p>
 
-        <p><strong class="text-ink">Environment defines materials and belt type.</strong> Standard packaging: steel frame, plastic modular belt. Washdown food: stainless steel frame, open-mesh belt for drainage. Freezer: stainless steel with low-temperature belt material rated for -40°F. High-temperature: heat-resistant belt and lubrication for oven and drying applications.</p>
+        <p><strong class="text-ink">Environment sets materials and belt type.</strong> Dry packaging: steel frame, slat or plastic modular belt. Washdown food: stainless frame, open belt for drainage. Freezer: stainless frame with a belt rated for the operating temperature. High heat: heat-rated belt and lubrication.</p>
 
-        <p><strong class="text-ink">Maintenance accessibility matters.</strong> Spiral interiors are difficult to access. Select spirals with removable covers, hinged sections, or walk-in designs for belt cleaning, adjustment, and replacement. Belt replacement on a 20-tier spiral is a significant maintenance event , design for accessibility from the start.</p>
+        <p><strong class="text-ink">Supports and access need early decisions.</strong> Confirm slab capacity, bracing, and who supplies infeed and discharge supports. Specify removable guards or walk-in access for belt cleaning and replacement, since belt replacement on a tall spiral is a major maintenance event.</p>
       </div>
     </div>
   </section>
@@ -259,17 +301,37 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
-            <p>A spiral conveyor moves products vertically using a helical belt path around a central column. Elevation changes from 3 to 50+ feet with continuous flow , products enter and exit simultaneously. See our <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor type guide</a> for all vertical transport options.</p>
+            <p>A vertical conveyor that moves products between levels along a helical belt path around a central column. Products enter and exit at the same time, so flow stays continuous. See the <a href="/conveyor-types/" class="text-accent hover:text-accent-hover font-semibold">conveyor type guide</a> for all vertical transport options.</p>
           </div>
         </details>
 
         <details class="group border border-border bg-surface p-6 open:pb-8">
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            Spiral conveyor vs VRC , which should I choose?
+            What is a modular spiral conveyor?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
-            <p>Spiral for high-throughput continuous flow of cases and cartons (under 150 lbs each). <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC</a> for heavier loads (up to 6,000 lbs), lower throughput, and smaller footprint. Spirals cost more but eliminate batch-cycling delays. VRCs handle pallets and heavy loads that spirals cannot.</p>
+            <p>A spiral assembled from standard tier sections, columns, a drive unit, and infeed and discharge ends. Height changes by adding or removing tiers, and the unit can be relocated. Sizes are limited to the supplier's standard range. The term also describes spirals that run on modular plastic belt, so confirm the meaning.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            How are spiral conveyors supported?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Most are self-supporting: a central column or drum and outer posts carry the track, and the base anchors to the floor. Tall units, units passing through a mezzanine, and units in seismic zones may need bracing to building structure. Confirm slab capacity, anchoring, and infeed and discharge supports.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            Spiral conveyor vs VRC, which should I choose?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>Spiral for continuous, high-throughput flow of cases, cartons, and totes. <a href="/conveyor-types/vertical-reciprocating/" class="text-accent hover:text-accent-hover font-semibold">VRC</a> for pallets and heavy loads, lower throughput, and a smaller footprint. Spirals cost more but eliminate batch-cycling delays.</p>
           </div>
         </details>
 
@@ -279,7 +341,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
-            <p>Spiral conveyors are $$$$-level capital investments. Cost depends on elevation, belt width, tier count, environment (washdown, freezer), and construction material. They justify cost through continuous throughput and small footprint. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed factors.</p>
+            <p>Spirals are a significant capital investment compared with incline conveyors or VRCs. Cost depends on elevation, belt width, tier count, drive type, environment (washdown, freezer), and construction material. They justify cost through continuous throughput and small footprint. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed factors.</p>
           </div>
         </details>
       </div>
@@ -296,13 +358,13 @@ const articleSchema = {
           <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">VRC Systems</div>
           <p class="text-sm text-white/60">Batch-lift vertical alternative</p>
         </a>
-        <a href="/conveyor-types/accumulation-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
-          <p class="text-sm text-white/60">Buffer before spiral infeed</p>
+        <a href="/conveyor-types/buffer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Buffer Conveyors</div>
+          <p class="text-sm text-white/60">Dynamic spiral buffers, FIFO vs LIFO</p>
         </a>
-        <a href="/conveyor-types/flat-belt-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Belt Conveyors</div>
-          <p class="text-sm text-white/60">Incline belt alternatives</p>
+        <a href="/conveyor-types/incline-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Incline Conveyors</div>
+          <p class="text-sm text-white/60">Belt alternatives for low lifts</p>
         </a>
         <a href="/industries/food-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
           <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Food Conveyors</div>

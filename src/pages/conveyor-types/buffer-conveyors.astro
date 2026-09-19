@@ -20,7 +20,23 @@ const faqSchema = {
       "name": "What is a buffer conveyor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A buffer conveyor temporarily stores products between upstream and downstream processes to absorb speed differences, equipment stoppages, and line imbalances. Buffer conveyors use accumulation technology (zero-pressure or minimum-pressure) to queue products without damage. They increase line efficiency by allowing upstream equipment to continue producing while downstream equipment catches up."
+        "text": "A buffer conveyor temporarily stores products between upstream and downstream processes to absorb speed differences, equipment stoppages, and line imbalances. Buffer conveyors use accumulation technology (zero-pressure or minimum-pressure) to queue products without damage. They improve line efficiency by allowing upstream equipment to keep producing while downstream equipment recovers from a stop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a dynamic buffer spiral conveyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A dynamic buffer spiral conveyor is a spiral accumulator whose usable storage length changes with line conditions. When downstream slows or stops, the spiral absorbs product. When downstream recovers, the spiral releases it back to the line. In-line designs keep product in sequence (FIFO) by varying the length of a single conveying path. Off-line designs divert product into a reversible spiral and send it back out the same way (LIFO). Both store product vertically, so they use far less floor space than a horizontal buffer of the same length."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a FIFO and a LIFO dynamic buffer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A FIFO (first in, first out) dynamic buffer sits in-line, and every product passes through it in order. The buffer lengthens or shortens its path to absorb or release product, so production sequence and lot order are preserved. A LIFO (last in, first out) dynamic buffer sits off-line. A switch diverts product into the buffer during a downstream stop, and the buffer reverses to return product to the line, so the last product in is the first out. Choose FIFO for dated, perishable, or lot-tracked product. LIFO is simpler to integrate and suits product where sequence does not matter."
       }
     },
     {
@@ -53,8 +69,8 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Buffer Conveyors: Accumulation Systems for Line Efficiency",
-  "description": "Guide to buffer conveyors for packaging line efficiency. Buffer sizing, accumulation types, serpentine and spiral buffers, and integration with upstream/downstream equipment.",
+  "headline": "Buffer Conveyors: Dynamic Spiral Buffers, FIFO vs LIFO",
+  "description": "How to choose a buffer conveyor: dynamic spiral buffers, FIFO vs LIFO operation, in-line vs off-line layout, horizontal and bi-flow alternatives, and buffer sizing.",
   "url": "https://packagingconveyor.com/conveyor-types/buffer-conveyors/",
   "datePublished": "2026-03-14",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
@@ -62,8 +78,8 @@ const articleSchema = {
 ---
 
 <BaseLayout
-  title="Buffer Conveyors: Accumulation Systems for Line Efficiency"
-  description="Guide to buffer conveyors for packaging line efficiency. Buffer sizing formulas, accumulation types (ZPA, minimum-pressure), serpentine and spiral buffers, and line integration."
+  title="Buffer Conveyors: Dynamic Spiral Buffers, FIFO vs LIFO"
+  description="Dynamic buffer spiral conveyors explained: FIFO vs LIFO operation, in-line vs off-line layouts, and when a horizontal or bi-flow buffer conveyor fits better."
   canonical="https://packagingconveyor.com/conveyor-types/buffer-conveyors/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
@@ -86,10 +102,10 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Conveyor Types</div>
       <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-8">
-        Buffer Conveyors: Accumulation Systems for Line Efficiency
+        Buffer Conveyors &#x26; Dynamic Spiral Buffers
       </h1>
       <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
-        <p>A buffer conveyor temporarily stores products between upstream and downstream processes, absorbing speed differences, equipment stoppages, and changeovers. By decoupling machines, buffer conveyors increase overall line efficiency (OEE) by 10-30%. They use <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation technology</a> to queue products without damage, keeping upstream production running while downstream catches up.</p>
+        <p>A buffer conveyor temporarily stores products between upstream and downstream processes, absorbing speed differences, micro-stops, and changeovers. By decoupling machines, a buffer keeps upstream production running while downstream recovers, which raises line efficiency (OEE). Buffers use <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation technology</a> to queue products without damage. This page compares the main buffer designs, including <a href="#dynamic-spiral-buffers" class="text-accent hover:text-accent-hover font-semibold">dynamic spiral buffers</a>, and shows when each one fits.</p>
       </div>
     </div>
   </section>
@@ -157,6 +173,7 @@ const articleSchema = {
           <li><strong class="text-ink">Accumulation tables:</strong> Mass buffering with random flow</li>
           <li><strong class="text-ink">Multi-level conveyors:</strong> Stacked lanes with vertical transfers</li>
         </ul>
+        <p>When the buffer must cover long stops such as changeovers or shift breaks, rather than micro-stops, see <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">storage conveyors and vertical accumulation</a> for long-duration storage layouts and capacity sizing.</p>
       </div>
     </div>
   </section>
@@ -217,7 +234,7 @@ const articleSchema = {
 
         <div class="border border-border p-6">
           <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink mb-3">Dynamic Buffer</h3>
-          <p class="text-ink-muted leading-relaxed mb-3">Variable-length buffer that expands and contracts based on demand. Uses movable conveyors or indexed carriage systems. Provides maximum buffer when needed, minimum footprint when not.</p>
+          <p class="text-ink-muted leading-relaxed mb-3">Variable-length buffer that expands and contracts based on demand, most often built as a spiral. Product travels only as far as line conditions require. See <a href="#dynamic-spiral-buffers" class="text-accent hover:text-accent-hover font-semibold">dynamic spiral buffers</a> below for FIFO and LIFO designs.</p>
           <div class="flex gap-2 mt-3">
             <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Variable</span>
             <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">Adaptive</span>
@@ -227,8 +244,91 @@ const articleSchema = {
     </div>
   </section>
 
+  <!-- Dynamic Spiral Buffers -->
+  <section id="dynamic-spiral-buffers" class="py-20 bg-surface-dim bg-dots" aria-labelledby="dynamic-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-label text-accent mb-4">Dynamic Buffers</div>
+      <h2 id="dynamic-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
+        Dynamic Spiral <span class="text-accent">Buffers</span>
+      </h2>
+      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
+        <p><strong class="text-ink">A dynamic buffer spiral conveyor is a spiral accumulator whose usable storage length changes with line conditions.</strong> When downstream slows or stops, the spiral absorbs product. When downstream recovers, it releases product back to the line. A fixed buffer holds a set length of conveyor full or empty. A dynamic buffer only uses the length the current stop requires, so product in normal running does not travel the whole storage path. The spiral shape stacks that storage length vertically on a small footprint. For the underlying spiral mechanics, see <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">spiral conveyors</a>.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">FIFO Dynamic Buffers (In-Line)</h3>
+        <p>A FIFO (first in, first out) dynamic buffer sits directly in the product path. Every product passes through it in order, so production sequence, lot order, and date codes stay intact. The buffer changes its effective path length instead of rerouting product. In one common design, a movable transfer section travels along the spiral to lengthen or shorten the loaded path between infeed and outfeed. AmbaFlex describes its <a href="https://www.ambaflex.com/en/products/accuveyor-avl-series" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">AccuVeyor AVL dynamic buffer</a> as working "just like a trombone," with a moving U-shaped segment that increases or reduces accumulation length. ITW Hartness markets its <a href="https://hartness.com/product/dynac-6400/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">DYNAC 6400</a> as a single-file spiral with sequential FIFO, zero-pressure accumulation.</p>
+        <p>In-line FIFO buffers suit dated, perishable, and lot-tracked product, and product that must not touch while accumulating. The tradeoff is integration: every product passes through the buffer, so it must handle full line speed and every package format on the line.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">LIFO Dynamic Buffers (Off-Line)</h3>
+        <p>A LIFO (last in, first out) dynamic buffer sits beside the main line. During normal running, product bypasses it. When downstream stops, a switch diverts product into a reversible spiral. When downstream restarts, the spiral reverses and a second switch merges product back into the line. The last product in is the first product out. AmbaFlex documents this sequence for its <a href="https://www.ambaflex.com/en/news/offline-buffering-for-maximum-efficiency" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">off-line AccuVeyor AVo buffer</a>. Ryson describes its <a href="https://ryson.com/spiral-conveyors/vertical-accumulation-buffer/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">vertical accumulation buffer</a> as using one reversible spiral or two or more spirals.</p>
+        <p>Off-line LIFO buffers are simpler to retrofit because product only enters the buffer during a stop. They suit non-dated product where sequence does not matter. They do not suit lines where lot order, date-code sequence, or product age must be controlled.</p>
+
+        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Spiral vs. Horizontal vs. Bi-Flow Buffers</h3>
+        <p>Choose a dynamic spiral when floor space is the binding constraint and product is stable on a curved, inclined path: cases, cartons, trays, pouches, and flow wraps. Choose a horizontal buffer, such as a <a href="/conveyor-types/serpentine-conveyors/" class="text-accent hover:text-accent-hover font-semibold">serpentine conveyor</a> or a FIFO accumulation table, when product is tall, unstable, or open-topped and should stay level, or when overhead space is taken. Choose a bi-directional (bi-flow) table for round containers in mass flow. Garvey's <a href="https://garvey.com/bi-flo-models/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">Bi-Flo tables</a> use two conveyors running in opposite directions so product circulates on the table until downstream needs it. Recirculation does not hold strict sequence, and containers touch each other in the mass, so bi-flow tables are a poor fit for strict FIFO or for low back pressure requirements on fragile product.</p>
+      </div>
+
+      <div class="overflow-x-auto -mx-4 px-4 mt-10">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <caption class="sr-only">Buffer conveyor comparison: sequence, layout, footprint, product pressure, and best fit</caption>
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Buffer Type</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Sequence</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Layout</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Footprint</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Back Pressure</th>
+              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Choose When</th>
+            </tr>
+          </thead>
+          <tbody class="text-base text-ink-muted">
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Dynamic spiral, FIFO</td>
+              <td class="py-4 pr-4">FIFO</td>
+              <td class="py-4 pr-4">In-line</td>
+              <td class="py-4 pr-4">Smallest</td>
+              <td class="py-4 pr-4">Zero-pressure designs available</td>
+              <td class="py-4">Dated or lot-tracked product, tight floor space</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Dynamic spiral, LIFO</td>
+              <td class="py-4 pr-4">LIFO</td>
+              <td class="py-4 pr-4">Off-line</td>
+              <td class="py-4 pr-4">Small, beside the line</td>
+              <td class="py-4 pr-4">Depends on design</td>
+              <td class="py-4">Non-dated product, retrofit on an existing line</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Serpentine (horizontal)</td>
+              <td class="py-4 pr-4">FIFO</td>
+              <td class="py-4 pr-4">In-line</td>
+              <td class="py-4 pr-4">Large</td>
+              <td class="py-4 pr-4">Low to moderate, single file</td>
+              <td class="py-4">Tall or unstable containers, no overhead space</td>
+            </tr>
+            <tr class="border-b border-border">
+              <td class="py-4 pr-4 font-semibold text-ink">Bi-flow table</td>
+              <td class="py-4 pr-4">Not strict</td>
+              <td class="py-4 pr-4">In-line or off-line</td>
+              <td class="py-4 pr-4">Moderate</td>
+              <td class="py-4 pr-4">Product-to-product contact</td>
+              <td class="py-4">Round containers in mass flow</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-semibold text-ink">Linear ZPA</td>
+              <td class="py-4 pr-4">FIFO</td>
+              <td class="py-4 pr-4">In-line</td>
+              <td class="py-4 pr-4">Largest per minute of buffer</td>
+              <td class="py-4 pr-4">Zero-pressure</td>
+              <td class="py-4">Cases and totes, short micro-stop buffering</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-muted mt-4">Back pressure and footprint vary by manufacturer and product. Confirm product-contact behavior and changeover range with each supplier during RFQ. For zone-control options on linear buffers, see <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>.</p>
+    </div>
+  </section>
+
   <!-- Integration -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="integration-heading">
+  <section class="py-20 bg-surface" aria-labelledby="integration-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Integration</div>
       <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
@@ -267,24 +367,44 @@ const articleSchema = {
   </section>
 
   <!-- FAQ -->
-  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
+  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="faq-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
         Frequently Asked <span class="text-accent">Questions</span>
       </h2>
 
       <div class="space-y-4">
-        <details class="group border border-border bg-surface-dim p-6 open:pb-8" open>
+        <details class="group border border-border bg-surface p-6 open:pb-8" open>
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
             What is a buffer conveyor?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
-            <p>A buffer conveyor temporarily stores products between upstream and downstream processes to absorb speed differences, stoppages, and line imbalances. Buffer conveyors use <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation technology</a> to queue products without damage, increasing overall line efficiency by 10-30%.</p>
+            <p>A buffer conveyor temporarily stores products between upstream and downstream processes to absorb speed differences, stoppages, and line imbalances. Buffer conveyors use <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation technology</a> to queue products without damage, keeping upstream equipment producing while downstream recovers.</p>
           </div>
         </details>
 
-        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is a dynamic buffer spiral conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A spiral accumulator whose usable storage length changes with line conditions. It absorbs product when downstream slows or stops and releases it when downstream recovers. In-line designs keep product in sequence (FIFO) by varying the length of one conveying path. Off-line designs divert product into a reversible spiral and send it back out the same way (LIFO). See <a href="#dynamic-spiral-buffers" class="text-accent hover:text-accent-hover font-semibold">dynamic spiral buffers</a> for the full comparison.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a FIFO and a LIFO dynamic buffer?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>A FIFO dynamic buffer sits in-line, and every product passes through it in order, preserving sequence and lot order. A LIFO dynamic buffer sits off-line: a switch diverts product in during a stop, and the buffer reverses to return it, so the last product in is the first out. Choose FIFO for dated, perishable, or lot-tracked product. LIFO is simpler to integrate and suits product where sequence does not matter.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
             How much buffer capacity do I need?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
@@ -294,13 +414,23 @@ const articleSchema = {
           </div>
         </details>
 
-        <details class="group border border-border bg-surface-dim p-6 open:pb-8">
+        <details class="group border border-border bg-surface p-6 open:pb-8">
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
             What types of conveyors are used for buffering?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
           <div class="text-ink-muted leading-relaxed">
             <p>Common buffer types include: <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> with zone control, <a href="/conveyor-types/live-roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">belt-driven live roller</a> with pneumatic zones, <a href="/conveyor-types/serpentine-conveyors/" class="text-accent hover:text-accent-hover font-semibold">serpentine conveyors</a> for high-density buffering, <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">spiral accumulation</a> for vertical buffering, and accumulation tables for mass buffering.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between a buffer conveyor and an accumulation conveyor?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed">
+            <p>The terms are often used interchangeably. Accumulation refers to the controlled queuing behavior (zero-pressure, minimum-pressure). Buffering refers to the function of temporarily storing products to absorb line variations. A buffer conveyor is an <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyor</a> used specifically for buffering between processes.</p>
           </div>
         </details>
       </div>
@@ -319,13 +449,13 @@ const articleSchema = {
           <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Accumulation</div>
           <p class="text-sm text-white/60">ZPA and minimum-pressure</p>
         </a>
-        <a href="/conveyor-types/mdr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">MDR Conveyors</div>
-          <p class="text-sm text-white/60">Zone-controlled technology</p>
+        <a href="/conveyor-functions/storage-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Storage Conveyors</div>
+          <p class="text-sm text-white/60">Vertical accumulation and long-duration storage</p>
         </a>
         <a href="/conveyor-types/spiral-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
           <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Spiral Conveyors</div>
-          <p class="text-sm text-white/60">Vertical buffering</p>
+          <p class="text-sm text-white/60">Spiral mechanics and sizing</p>
         </a>
         <a href="/industries/packaging-line-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
           <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Packaging Lines</div>

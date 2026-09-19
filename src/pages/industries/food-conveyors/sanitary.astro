@@ -8,7 +8,7 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
     { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://packagingconveyor.com/industries/" },
     { "@type": "ListItem", "position": 3, "name": "Food-Grade Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/" },
-    { "@type": "ListItem", "position": 4, "name": "Sanitary & Washdown Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/sanitary/" }
+    { "@type": "ListItem", "position": 4, "name": "Sanitary Conveyors", "item": "https://packagingconveyor.com/industries/food-conveyors/sanitary/" }
   ]
 };
 
@@ -18,7 +18,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the difference between IP65, IP66, and IP69K for washdown conveyors?",
+      "name": "What is the difference between IP65, IP66, and IP69K?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "IP65 protects against low-pressure water jets from any direction (6.3mm nozzle, 12.5 liters/min). IP66 protects against high-pressure water jets from any direction (12.5mm nozzle, 100 liters/min). IP69K protects against close-range high-pressure, high-temperature water jets (80°C / 176°F at 80-100 bar / 1160-1450 PSI). IP69K is required for food plants using CIP, foam-and-rinse, or high-pressure steam sanitation."
@@ -62,16 +62,16 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Sanitary & Washdown Conveyors: IP Ratings, CIP Cleaning & USDA Standards",
-  "description": "Technical guide to sanitary and washdown conveyor systems for food processing. Covers IP65/IP66/IP69K ratings, CIP/COP cleaning methods, USDA/3-A acceptance, sanitary design principles, and belt material selection.",
+  "headline": "Sanitary Conveyors: Hygienic Washdown Design, USDA & 3-A",
+  "description": "Sanitary conveyor design for food plants: hygienic design principles, surface finish, CIP and COP cleaning, USDA and 3-A acceptance, and how to specify one.",
   "url": "https://packagingconveyor.com/industries/food-conveyors/sanitary/",
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
 
 <BaseLayout
-  title="Sanitary & Washdown Conveyors: IP Ratings, CIP, USDA | PackagingConveyor.com"
-  description="Technical guide to sanitary and washdown conveyors for food processing. Covers IP65 through IP69K ratings, CIP/COP cleaning, USDA and 3-A acceptance, belt materials, and sanitary design principles from Dorner, Nercon, mk North America, and Key Technology."
+  title="Sanitary Conveyors: Hygienic Washdown Design, USDA & 3-A"
+  description="Sanitary conveyor design for food plants: hygienic design principles, surface finish, CIP and COP cleaning, USDA and 3-A acceptance, and how to specify one."
   canonical="https://packagingconveyor.com/industries/food-conveyors/sanitary/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
@@ -86,7 +86,7 @@ const articleSchema = {
         <li class="text-ink-muted/50">/</li>
         <li><a href="/industries/food-conveyors/" class="hover:text-accent transition-colors">Food Conveyors</a></li>
         <li class="text-ink-muted/50">/</li>
-        <li class="text-ink font-semibold">Sanitary & Washdown</li>
+        <li class="text-ink font-semibold">Sanitary Conveyors</li>
       </ol>
     </div>
   </nav>
@@ -96,14 +96,14 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Food Conveyors</div>
       <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-6">
-        Sanitary & Washdown Conveyors
+        Sanitary Conveyors: Hygienic Design Standards
       </h1>
       <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
         <p>
-          Sanitary conveyors are food-processing conveyor systems designed for thorough cleaning through washdown, CIP (Clean-in-Place), or COP (Clean-out-of-Place) methods. They use IP65 through IP69K rated components, stainless steel frames with crevice-free welds, self-draining surfaces, and FDA-compliant contact materials to meet <a href="https://www.ams.usda.gov/services/lab-testing/acepp" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">USDA acceptance</a> and <a href="https://www.3-a.org" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">3-A Sanitary Standards</a>.
+          Sanitary conveyors are food-processing conveyor systems designed for thorough cleaning through washdown, CIP (Clean-in-Place), or COP (Clean-out-of-Place) methods. They use IP65 through IP69K rated components, stainless steel frames with crevice-free welds, self-draining surfaces, and FDA-compliant contact materials to meet <a href="https://www.ams.usda.gov/services/auditing/equipment" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">USDA acceptance</a> and <a href="https://www.3-a.org" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">3-A Sanitary Standards</a>.
         </p>
         <p>
-          Washdown conveyors protect food products from cross-contamination by allowing sanitation crews to clean equipment in place using water, chemicals, foam, and high-pressure rinses without damaging motors, bearings, or electrical components.
+          A sanitary washdown conveyor combines two requirements: components that survive wet cleaning, and hygienic geometry that leaves no place for residue or bacteria to hide. This page covers the hygienic design side. For component ratings, heavy washdown materials, and failure modes, see <a href="/conveyor-types/washdown-conveyors/" class="text-accent hover:text-accent-hover font-semibold">washdown conveyors</a>. For spray bars, belt washers, and scrapers, see <a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">conveyor cleaning systems</a>.
         </p>
       </div>
     </div>
@@ -115,7 +115,7 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">IP Ratings Explained</div>
       <h2 id="ip-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        IP65, IP66 & IP69K: Choosing the Right Washdown Rating
+        IP Ratings in Sanitary Zones: IP65, IP66 & IP69K
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-4">
         <p>
@@ -247,6 +247,9 @@ const articleSchema = {
           Many food plants combine CIP and COP. The conveyor frame and drive components clean via CIP spray systems during the sanitation cycle. The belt removes for COP tank cleaning, where it soaks in sanitizer solution, gets scrubbed, rinsed, and inspected before reinstallation. This combination provides the most thorough sanitation while keeping line downtime manageable.
         </p>
         <p>
+          The spray bars, belt washers, and scrapers that deliver CIP chemistry are covered in <a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">conveyor cleaning systems</a>.
+        </p>
+        <p>
           Nercon's sanitary conveyor platforms support this combined approach with quick-release belts on CIP-capable stainless frames. mk North America's modular designs also allow rapid belt change-outs during COP cycles.
         </p>
       </div>
@@ -307,7 +310,7 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Sanitary Belt Materials</div>
       <h2 id="belts-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Belt Materials for Washdown Environments
+        Sanitary Conveyor Belt Materials
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-4">
         <p>
@@ -384,7 +387,7 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-label text-accent mb-4">Regulatory Acceptance</div>
       <h2 id="acceptance-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        USDA and 3-A Acceptance for Washdown Conveyors
+        USDA and 3-A Acceptance for Sanitary Conveyors
       </h2>
       <div class="text-lg text-ink-muted leading-relaxed space-y-4">
         <p>
@@ -525,7 +528,7 @@ const articleSchema = {
           <li><strong class="text-ink">What is the product?</strong> Raw or cooked? Direct contact or sealed package? Temperature at the conveyor (frozen, ambient, hot)?</li>
           <li><strong class="text-ink">What is the cleaning protocol?</strong> Wipe-down, hose-down, high-pressure washdown, CIP, or COP? Frequency (every shift, daily, weekly)?</li>
           <li><strong class="text-ink">What cleaning chemicals are used?</strong> Quaternary ammonium, chlorinated alkaline, peracetic acid, caustic, or other? This determines 304 vs. 316 stainless and belt material compatibility.</li>
-          <li><strong class="text-ink">Which regulatory standard applies?</strong> USDA, 3-A, BISSC, or general <a href="https://www.fda.gov/food/food-ingredients-packaging/food-contact-substances-fcs" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">FDA</a>/FSMA compliance?</li>
+          <li><strong class="text-ink">Which regulatory standard applies?</strong> USDA, 3-A, BISSC, or general <a href="https://www.fda.gov/food/food-ingredients-packaging/packaging-food-contact-substances-fcs" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">FDA</a>/FSMA compliance?</li>
           <li><strong class="text-ink">What is the environment?</strong> Ambient dry, humid, wet floor, outdoor, or temperature-controlled?</li>
           <li><strong class="text-ink">What throughput is required?</strong> Products per minute, line speed (FPM), and <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation requirements</a>.</li>
           <li><strong class="text-ink">What upstream/downstream equipment connects?</strong> <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer points</a>, elevation changes, and <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">laning/collating</a> requirements.</li>
@@ -568,6 +571,16 @@ const articleSchema = {
 
         <details class="group border border-border bg-surface p-6 open:pb-8">
           <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
+            What is the difference between CIP and COP for conveyors?
+            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="text-ink-muted leading-relaxed space-y-3">
+            <p><strong class="text-ink">CIP (Clean-in-Place)</strong> cleans the conveyor without disassembly using automated spray systems. <strong class="text-ink">COP (Clean-out-of-Place)</strong> requires removing parts (belts, rollers, guards) and cleaning them in a separate wash station or tank. Many food conveyors use a combination: the frame and drive components clean via CIP, while the belt removes for COP cleaning in a sanitizing tank. Modular plastic belts support COP because individual links snap out for tank cleaning.</p>
+          </div>
+        </details>
+
+        <details class="group border border-border bg-surface p-6 open:pb-8">
+          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
             Do I need USDA acceptance for my food conveyor?
             <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </summary>
@@ -598,12 +611,12 @@ const articleSchema = {
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <a href="/industries/food-conveyors/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Food-Grade Conveyors</div>
-          <div class="text-sm text-ink-muted mt-1">Materials, standards, and belt selection</div>
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Food Industry Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">Food-grade materials, standards, and belt selection</div>
         </a>
-        <a href="/conveyor-types/roller-conveyors/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Roller Conveyors</div>
-          <div class="text-sm text-ink-muted mt-1">Stainless and food-grade roller options</div>
+        <a href="/conveyor-types/washdown-conveyors/" class="card group p-5">
+          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Washdown Conveyors</div>
+          <div class="text-sm text-ink-muted mt-1">IP ratings, heavy washdown, common problems</div>
         </a>
         <a href="/conveyor-functions/reject-systems/" class="card group p-5">
           <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Reject Systems</div>
