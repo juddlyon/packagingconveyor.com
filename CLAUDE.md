@@ -200,7 +200,7 @@ Every new page should link:
 - downward where applicable
 - toward at least one commercial-intent or shortlist page when appropriate
 
-Use `internal-linker` (installed globally) to audit internal links, orphan pages, and linking opportunities after adding new pages.
+Use `internal-linker` to audit internal links, orphan pages, and linking opportunities after adding new pages. See [CLI Tools](#cli-tools) for usage.
 
 ### External linking rule
 
@@ -412,6 +412,98 @@ When contradictions exist:
 - prefer trust-preserving, long-term positioning
 - flag the contradiction
 - align copy and UX to the current agreed strategy
+
+## CLI Tools
+
+The following tools are installed globally and available for SEO operations and deployment.
+
+### seo-pulse
+
+Search engine feedback loop: pulls performance data from GSC/Bing and can drive content optimization.
+
+```bash
+# Read performance data (impressions, clicks, queries)
+seo-pulse read sc-domain:packagingconveyor.com
+
+# Read with indexing status check for new pages
+seo-pulse read sc-domain:packagingconveyor.com --inspect
+
+# Interactive content optimization mode
+seo-pulse write sc-domain:packagingconveyor.com --content-dir .
+
+# Check indexing status for specific URLs
+seo-pulse inspect sc-domain:packagingconveyor.com
+
+# Use cached data from last pull
+seo-pulse read sc-domain:packagingconveyor.com --cached
+
+# Output as markdown
+seo-pulse read sc-domain:packagingconveyor.com --md
+```
+
+Use `seo-pulse` to:
+- identify high-impression queries that lack dedicated pages
+- find pages with poor CTR that need title/description optimization
+- check indexing status after deploying new pages
+- prioritize content work based on real search demand
+
+### internal-linker
+
+Audit internal links, orphan pages, SEO issues, and broken links in Astro projects.
+
+```bash
+# Run all checks
+internal-linker -p .
+
+# Find internal linking opportunities
+internal-linker scan -p .
+
+# Run SEO audit (titles, descriptions, headings)
+internal-linker seo -p .
+
+# Check for broken links
+internal-linker links -p .
+
+# Find orphan pages (no inbound links)
+internal-linker orphans -p .
+
+# Include external link checking (slower)
+internal-linker links --check-external -p .
+
+# Output as JSON
+internal-linker seo --json -p .
+```
+
+Run `internal-linker` after adding new pages to:
+- ensure new pages have inbound links
+- identify missed linking opportunities
+- catch SEO issues before deployment
+- find orphan pages that need integration
+
+### Deployment
+
+The site deploys to Netlify. The project is linked to the `packagingconveyor` site.
+
+```bash
+# Build and deploy to production
+npm run deploy
+
+# Or manually:
+astro build && netlify deploy --prod --dir=dist
+```
+
+The deploy process:
+1. Builds the Astro site to `dist/`
+2. Deploys to Netlify production
+3. Runs the IndexNow plugin to notify search engines of updated URLs
+
+Production URL: https://packagingconveyor.com
+
+To check deploy status or re-link:
+```bash
+netlify status
+netlify link --name packagingconveyor
+```
 
 ## Practical File Priorities
 

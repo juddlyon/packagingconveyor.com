@@ -13,7 +13,8 @@
     "astro": "astro",
     "test": "npx playwright test",
     "test:a11y": "npx playwright test tests/a11y.spec.ts",
-    "test:e2e": "npx playwright test tests/e2e.spec.ts"
+    "test:e2e": "npx playwright test tests/e2e.spec.ts",
+    "deploy": "astro build && netlify deploy --prod --dir=dist"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
