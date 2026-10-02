@@ -59,7 +59,7 @@ const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].
 const tocHtml = toc.length >= 3 ? `<nav class="page-toc" aria-label="Table of contents"><p class="page-toc__title">On this page</p><ul>${toc.map(h => `<li><a href="#${h.slug}">${h.text}</a></li>`).join('')}</ul></nav>` : '';
 const h1End = body.indexOf('</h1>');
 const introEnd = h1End < 0 ? -1 : body.slice(h1End).search(/<p class="usa-intro">[\s\S]*?<\/p>/) >= 0 ? body.indexOf('</p>', body.indexOf('<p class="usa-intro">', h1End)) + 4 : h1End + 5;
-const metaHtml = updatedLabel ? `<p class="article-meta">Updated <time datetime="${updated}">${updatedLabel}</time> by the PackagingConveyor.com editorial team. <a href="/about/">How we research</a>.</p>` : '';
+const metaHtml = updatedLabel ? `<p class="article-meta">Updated <time datetime="${updated}">${updatedLabel}</time> by the PackagingConveyor.com editorial team. <a href="/about/#editorial-heading">How we research</a>.</p>` : '';
 const content = introEnd > 0 ? body.slice(0, introEnd) + metaHtml + tocHtml + body.slice(introEnd) : metaHtml + tocHtml + body;
 ---
 
