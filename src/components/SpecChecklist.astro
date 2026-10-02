@@ -1,0 +1,14 @@
+---
+// Printable RFQ spec checklist (USWDS checkboxes). Items are [label, detail] pairs.
+interface Props { id: string; title?: string; items: [string, string][] }
+const { id, title = 'Specification checklist', items } = Astro.props;
+---
+<section class="spec-checklist" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+  <p>Send these details with every quote request so each supplier quotes the same system.</p>
+  <fieldset class="usa-fieldset checklist"><legend class="usa-sr-only">{title}</legend>
+    {items.map(([label, detail], i) => <div class="usa-checkbox"><input class="usa-checkbox__input" id={`${id}-${i}`} type="checkbox" /><label class="usa-checkbox__label" for={`${id}-${i}`}><strong>{label}.</strong> {detail}</label></div>)}
+  </fieldset>
+  <p class="source-note">Checkmarks only track your progress on this page. They are not saved or sent anywhere.</p>
+  <p class="actions"><button class="usa-button usa-button--outline print-button" type="button" data-print>Print checklist</button></p>
+</section>

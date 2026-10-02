@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { lastModified } from './src/lib/lastmod.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +20,9 @@ export default defineConfig({
         item.priority = 0.8;
         item.changefreq = 'weekly';
       }
-      item.lastmod = new Date().toISOString();
+      // Real content edit date from git, not the build time.
+      const modified = lastModified(new URL(item.url).pathname);
+      if (modified) item.lastmod = modified;
       return item;
     },
   })],
