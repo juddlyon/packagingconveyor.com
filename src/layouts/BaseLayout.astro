@@ -1,5 +1,9 @@
 ---
-import '../styles/global.css';
+import '../styles/theme.scss';
+import '../styles/site.css';
+import SideNav from '../components/SideNav.astro';
+import { sections, sectionFor } from '../nav';
+import { enhance } from '../lib/enhance';
 
 interface Props {
   title: string;
@@ -36,6 +40,20 @@ const defaultSchema = [
 ];
 
 const allSchema = [...defaultSchema, ...schema];
+const active = sectionFor(currentPath);
+
+// Breadcrumb trail comes from the page's BreadcrumbList schema.
+const crumbSchema = schema.find((s: any) => s['@type'] === 'BreadcrumbList') as any;
+const crumbs: { name: string; href: string }[] = (crumbSchema?.itemListElement ?? []).map((i: any) => ({ name: i.name, href: new URL(i.item, siteUrl).pathname }));
+const current = crumbs.pop();
+
+const body = enhance(await Astro.slots.render('default'));
+const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(m => ({ slug: m[1], text: m[2].replace(/<[^>]+>/g, '').trim() }));
+// Phone and tablet table of contents goes after the H1 and intro. Widescreen uses the USWDS in-page nav instead.
+const tocHtml = toc.length >= 3 ? `<nav class="page-toc" aria-label="Table of contents"><p class="page-toc__title">On this page</p><ul>${toc.map(h => `<li><a href="#${h.slug}">${h.text}</a></li>`).join('')}</ul></nav>` : '';
+const h1End = body.indexOf('</h1>');
+const introEnd = h1End < 0 ? -1 : body.slice(h1End).search(/<p class="usa-intro">[\s\S]*?<\/p>/) >= 0 ? body.indexOf('</p>', body.indexOf('<p class="usa-intro">', h1End)) + 4 : h1End + 5;
+const content = introEnd > 0 ? body.slice(0, introEnd) + tocHtml + body.slice(introEnd) : tocHtml + body;
 ---
 
 <!DOCTYPE html>
@@ -49,11 +67,10 @@ const allSchema = [...defaultSchema, ...schema];
 
   <!-- SEO: robots -->
   <meta name="robots" content={robots} />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/merriweather/Latin-Merriweather-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <meta name="theme-color" content="#b45309" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -75,348 +92,53 @@ const allSchema = [...defaultSchema, ...schema];
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={pageOgImage} />
 
+  <script is:inline set:html={`(()=>{var n,e="usa-js-loading";function t(){document.documentElement.classList.remove(e)}document.documentElement.classList.add(e),n=setTimeout(t,8e3),window.addEventListener("load",function e(){window.uswdsPresent&&(clearTimeout(n),t(),window.removeEventListener("load",e,!0))},!0)})();`} />
+
   <!-- Structured Data -->
   {allSchema.map(s => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
 </head>
-<body class="min-h-screen flex flex-col">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:font-sans focus:font-semibold focus:text-sm">Skip to content</a>
-  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-18">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2.5 group" aria-label="PackagingConveyor.com home">
-          <div class="font-display text-lg sm:text-xl font-bold tracking-wider uppercase leading-none">
-            <span class="text-ink">Packaging</span><span class="text-accent">Conveyor</span>
-          </div>
-        </a>
-
-        <!-- Desktop Mega Nav -->
-        <nav class="hidden lg:flex items-center gap-1 font-sans" aria-label="Main navigation">
-          <!-- Conveyor Types -->
-          <div class="mega-trigger relative group">
-            <a href="/conveyor-types/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors inline-flex items-center gap-1">
-              Conveyor Types
-              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-            </a>
-            <div class="mega-panel absolute top-full left-0 pt-2 hidden group-hover:block" style="width: min(700px, calc(100vw - 2rem));">
-              <div class="bg-surface border border-border shadow-xl p-6">
-                <div class="grid grid-cols-3 gap-6">
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">Belt & Flat</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/conveyor-types/flat-belt-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Flat Belt</a></li>
-                      <li><a href="/conveyor-types/cleated-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Cleated Belt</a></li>
-                      <li><a href="/conveyor-types/modular-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Modular Belt</a></li>
-                      <li><a href="/conveyor-types/wire-mesh-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Wire Mesh</a></li>
-                      <li><a href="/conveyor-types/hinged-steel-belt/" class="text-ink-muted hover:text-accent transition-colors">Hinged Steel Belt</a></li>
-                      <li><a href="/conveyor-types/incline-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Incline / Decline</a></li>
-                      <li><a href="/conveyor-types/curved-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Curved</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">Roller & Chain</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/conveyor-types/roller-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Roller Conveyors</a></li>
-                      <li><a href="/conveyor-types/mdr-conveyors/" class="text-ink-muted hover:text-accent transition-colors">MDR (Motor Driven)</a></li>
-                      <li><a href="/conveyor-types/live-roller-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Live Roller</a></li>
-                      <li><a href="/conveyor-types/cdlr-conveyors/" class="text-ink-muted hover:text-accent transition-colors">CDLR</a></li>
-                      <li><a href="/conveyor-types/chain-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Chain Conveyors</a></li>
-                      <li><a href="/conveyor-types/drag-chain-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Drag Chain</a></li>
-                      <li><a href="/conveyor-types/slat-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Slat</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">Specialty</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/conveyor-types/spiral-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Spiral / Vertical</a></li>
-                      <li><a href="/conveyor-types/accumulation-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Accumulation</a></li>
-                      <li><a href="/conveyor-types/diverting-merging/" class="text-ink-muted hover:text-accent transition-colors">Diverting & Merging</a></li>
-                      <li><a href="/conveyor-types/transfer-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Transfer</a></li>
-                      <li><a href="/conveyor-types/magnetic-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Magnetic</a></li>
-                      <li><a href="/conveyor-types/screw-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Screw / Auger</a></li>
-                      <li><a href="/conveyor-types/pneumatic-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Pneumatic</a></li>
-                      <li><a href="/conveyor-types/bucket-elevators/" class="text-ink-muted hover:text-accent transition-colors">Bucket Elevators</a></li>
-                      <li><a href="/conveyor-types/vibratory-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Vibratory</a></li>
-                    </ul>
-                    <a href="/conveyor-types/" class="inline-block mt-3 text-sm font-semibold text-accent hover:text-accent-hover">All 40+ types &rarr;</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Industries -->
-          <div class="mega-trigger relative group">
-            <a href="/industries/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors inline-flex items-center gap-1">
-              Industries
-              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-            </a>
-            <div class="mega-panel absolute top-full -left-4 pt-2 hidden group-hover:block" style="width: 480px;">
-              <div class="bg-surface border border-border shadow-xl p-6">
-                <div class="grid grid-cols-2 gap-6">
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">By Industry</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/industries/food-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Food & Beverage</a></li>
-                      <li><a href="/industries/food-conveyors/sanitary/" class="text-ink-muted hover:text-accent transition-colors pl-3">Sanitary / Washdown</a></li>
-                      <li><a href="/industries/food-conveyors/bakery/" class="text-ink-muted hover:text-accent transition-colors pl-3">Bakery</a></li>
-                      <li><a href="/industries/food-conveyors/beverage/" class="text-ink-muted hover:text-accent transition-colors pl-3">Beverage Lines</a></li>
-                      <li><a href="/industries/packaging-line-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Packaging Lines</a></li>
-                      <li><a href="/industries/packaging-line-conveyors/case/" class="text-ink-muted hover:text-accent transition-colors pl-3">Case Packing</a></li>
-                      <li><a href="/industries/packaging-line-conveyors/pallet/" class="text-ink-muted hover:text-accent transition-colors pl-3">Pallet Handling</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <span class="block mb-3" aria-hidden="true"></span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/industries/pharmaceutical-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Pharmaceutical</a></li>
-                      <li><a href="/industries/pharmaceutical-conveyors/cleanroom/" class="text-ink-muted hover:text-accent transition-colors pl-3">Cleanroom</a></li>
-                      <li><a href="/industries/automotive-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Automotive</a></li>
-                      <li><a href="/industries/warehouse-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Warehouse & Distribution</a></li>
-                      <li><a href="/industries/assembly-line-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Assembly Lines</a></li>
-                      <li><a href="/industries/mining-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Mining & Bulk</a></li>
-                    </ul>
-                    <a href="/industries/" class="inline-block mt-3 text-sm font-semibold text-accent hover:text-accent-hover">All industries &rarr;</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Functions -->
-          <div class="mega-trigger relative group">
-            <a href="/conveyor-functions/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors inline-flex items-center gap-1">
-              Functions
-              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-            </a>
-            <div class="mega-panel absolute top-full right-0 pt-2 hidden group-hover:block" style="width: 480px;">
-              <div class="bg-surface border border-border shadow-xl p-6">
-                <div class="grid grid-cols-2 gap-6">
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">Material Handling</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/conveyor-functions/storage-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Accumulation & Buffering</a></li>
-                      <li><a href="/conveyor-functions/collating-laning/" class="text-ink-muted hover:text-accent transition-colors">Collating & Laning</a></li>
-                      <li><a href="/conveyor-functions/singulation/" class="text-ink-muted hover:text-accent transition-colors">Singulation</a></li>
-                      <li><a href="/conveyor-functions/metering/" class="text-ink-muted hover:text-accent transition-colors">Metering</a></li>
-                      <li><a href="/conveyor-functions/indexing-conveyors/" class="text-ink-muted hover:text-accent transition-colors">Indexing & Positioning</a></li>
-                      <li><a href="/conveyor-functions/product-handling/" class="text-ink-muted hover:text-accent transition-colors">Product Handling</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <span class="font-display text-xs font-bold uppercase tracking-widest text-ink-muted mb-3 block">Packaging</span>
-                    <ul class="space-y-1.5 text-sm">
-                      <li><a href="/conveyor-functions/infeed-outfeed/" class="text-ink-muted hover:text-accent transition-colors">Infeed & Outfeed</a></li>
-                      <li><a href="/conveyor-functions/tray-loading/" class="text-ink-muted hover:text-accent transition-colors">Tray Loading</a></li>
-                      <li><a href="/conveyor-functions/slug-loading/" class="text-ink-muted hover:text-accent transition-colors">Slug Loading</a></li>
-                      <li><a href="/conveyor-functions/bag-loading/" class="text-ink-muted hover:text-accent transition-colors">Bag Loading</a></li>
-                      <li><a href="/conveyor-functions/stacking-machines/" class="text-ink-muted hover:text-accent transition-colors">Stacking</a></li>
-                      <li><a href="/conveyor-functions/reject-systems/" class="text-ink-muted hover:text-accent transition-colors">Reject & Divert</a></li>
-                    </ul>
-                    <a href="/conveyor-functions/" class="inline-block mt-3 text-sm font-semibold text-accent hover:text-accent-hover">All functions &rarr;</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Resources -->
-          <div class="mega-trigger relative group">
-            <a href="/resources/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors inline-flex items-center gap-1">
-              Resources
-              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-            </a>
-            <div class="mega-panel absolute top-full right-0 pt-2 hidden group-hover:block" style="width: 360px;">
-              <div class="bg-surface border border-border shadow-xl p-6">
-                <ul class="space-y-1.5 text-sm">
-                  <li><a href="/resources/conveyor-design-guide/" class="text-ink-muted hover:text-accent transition-colors">Conveyor Design Guide</a></li>
-                  <li><a href="/resources/conveyor-design-guide/components/" class="text-ink-muted hover:text-accent transition-colors pl-3">Frame, Drive &amp; Pulley Design</a></li>
-                  <li><a href="/resources/conveyor-design-guide/conveyor-engineering/" class="text-ink-muted hover:text-accent transition-colors pl-3">Engineering Calculations</a></li>
-                  <li><a href="/resources/conveyor-cost-guide/" class="text-ink-muted hover:text-accent transition-colors">Cost Factors Guide</a></li>
-                  <li><a href="/resources/conveyor-manufacturers/" class="text-ink-muted hover:text-accent transition-colors">Manufacturer Directory</a></li>
-                  <li><a href="/resources/conveyor-companies/" class="text-ink-muted hover:text-accent transition-colors">Conveyor Companies</a></li>
-                  <li><a href="/resources/conveyor-belting/" class="text-ink-muted hover:text-accent transition-colors">Belting Guide</a></li>
-                  <li><a href="/resources/conveyor-parts/" class="text-ink-muted hover:text-accent transition-colors">Parts & Components</a></li>
-                  <li><a href="/resources/conveyor-motors-drives/" class="text-ink-muted hover:text-accent transition-colors">Motors & Drives</a></li>
-                  <li><a href="/resources/conveyor-safety/" class="text-ink-muted hover:text-accent transition-colors">Safety Standards</a></li>
-                  <li><a href="/resources/conveyor-maintenance/" class="text-ink-muted hover:text-accent transition-colors">Maintenance Guide</a></li>
-                </ul>
-                <a href="/resources/" class="inline-block mt-3 text-sm font-semibold text-accent hover:text-accent-hover">All resources &rarr;</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Components -->
-          <a href="/components/" class="px-4 py-2.5 text-base font-semibold text-ink-muted hover:text-ink transition-colors">Components</a>
-        </nav>
-
-        <!-- Tablet Nav (md only no mega menus, just links) -->
-        <nav class="hidden md:flex lg:hidden items-center gap-1 font-sans" aria-label="Tablet navigation">
-          <a href="/conveyor-types/" class="px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Types</a>
-          <a href="/industries/" class="px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Industries</a>
-          <a href="/conveyor-functions/" class="px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Functions</a>
-          <a href="/resources/" class="px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Resources</a>
-          <a href="/components/" class="px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink transition-colors">Components</a>
-        </nav>
-
-        <!-- Mobile menu button bigger tap target -->
-        <button id="mobile-menu-btn" class="md:hidden p-3 text-ink-muted hover:text-ink" aria-label="Open menu" aria-expanded="false">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Nav accordion sections with direct leaf links -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-surface max-h-[80vh] overflow-y-auto">
-      <nav class="px-4 py-4 space-y-1 font-sans" aria-label="Mobile navigation">
-        <details class="group">
-          <summary class="flex items-center justify-between px-4 py-3 text-lg font-semibold text-ink cursor-pointer">
-            <a href="/conveyor-types/" class="hover:text-accent" onclick="event.stopPropagation()">Conveyor Types</a>
-            <svg class="w-4 h-4 text-ink-muted transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="pl-8 pb-3 space-y-1">
-            <a href="/conveyor-types/roller-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Roller Conveyors</a>
-            <a href="/conveyor-types/flat-belt-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Flat Belt</a>
-            <a href="/conveyor-types/mdr-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">MDR (Motor Driven)</a>
-            <a href="/conveyor-types/accumulation-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Accumulation</a>
-            <a href="/conveyor-types/chain-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Chain Conveyors</a>
-            <a href="/conveyor-types/spiral-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Spiral / Vertical</a>
-            <a href="/conveyor-types/diverting-merging/" class="block py-2 text-base text-ink-muted hover:text-accent">Diverting & Merging</a>
-            <a href="/conveyor-types/" class="block py-2 text-sm font-semibold text-accent">All 40+ types &rarr;</a>
-          </div>
-        </details>
-        <details class="group">
-          <summary class="flex items-center justify-between px-4 py-3 text-lg font-semibold text-ink cursor-pointer">
-            <a href="/industries/" class="hover:text-accent" onclick="event.stopPropagation()">Industries</a>
-            <svg class="w-4 h-4 text-ink-muted transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="pl-8 pb-3 space-y-1">
-            <a href="/industries/food-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Food & Beverage</a>
-            <a href="/industries/packaging-line-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Packaging Lines</a>
-            <a href="/industries/pharmaceutical-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Pharmaceutical</a>
-            <a href="/industries/automotive-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Automotive</a>
-            <a href="/industries/warehouse-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Warehouse</a>
-            <a href="/industries/" class="block py-2 text-sm font-semibold text-accent">All industries &rarr;</a>
-          </div>
-        </details>
-        <details class="group">
-          <summary class="flex items-center justify-between px-4 py-3 text-lg font-semibold text-ink cursor-pointer">
-            <a href="/conveyor-functions/" class="hover:text-accent" onclick="event.stopPropagation()">Functions</a>
-            <svg class="w-4 h-4 text-ink-muted transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="pl-8 pb-3 space-y-1">
-            <a href="/conveyor-functions/storage-conveyors/" class="block py-2 text-base text-ink-muted hover:text-accent">Accumulation</a>
-            <a href="/conveyor-functions/collating-laning/" class="block py-2 text-base text-ink-muted hover:text-accent">Collating & Laning</a>
-            <a href="/conveyor-functions/infeed-outfeed/" class="block py-2 text-base text-ink-muted hover:text-accent">Infeed & Outfeed</a>
-            <a href="/conveyor-functions/singulation/" class="block py-2 text-base text-ink-muted hover:text-accent">Singulation</a>
-            <a href="/conveyor-functions/reject-systems/" class="block py-2 text-base text-ink-muted hover:text-accent">Reject & Divert</a>
-            <a href="/conveyor-functions/" class="block py-2 text-sm font-semibold text-accent">All functions &rarr;</a>
-          </div>
-        </details>
-        <a href="/resources/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Resources</a>
-        <a href="/components/" class="block px-4 py-3 text-lg font-semibold text-ink-muted hover:text-ink">Components</a>
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar"><div class="usa-logo"><em class="usa-logo__text"><a href="/" title="PackagingConveyor.com home">Packaging<span class="logo-accent">Conveyor</span></a></em></div><button type="button" class="usa-menu-btn">Menu</button></div>
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close"><img src="/img/usa-icons/close.svg" alt="Close navigation" width="24" height="24" /></button>
+        <ul class="usa-nav__primary usa-accordion">{sections.map(section => <li class="usa-nav__primary-item"><a href={section.href} class:list={['usa-nav__link', { 'usa-current': section === active }]} aria-current={currentPath === section.href ? 'page' : undefined}><span>{section.label}</span></a></li>)}</ul>
       </nav>
     </div>
   </header>
-
-  <main id="main-content" class="flex-1">
-    <slot />
-  </main>
-
-  <footer class="bg-ink text-white/60 font-sans">
-    <div class="stripe-accent"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <!-- Brand -->
-        <div class="lg:col-span-1">
-          <div class="font-display text-xl font-bold tracking-wider uppercase text-white mb-3">
-            Packaging<span class="text-accent-bright">Conveyor</span>
-          </div>
-          <p class="text-sm leading-relaxed">
-            Technical guides and selection criteria for over 30 packaging conveyor types.
-          </p>
-        </div>
-
-        <!-- Conveyor Types -->
-        <div>
-          <div class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Conveyor Types</div>
-          <ul class="space-y-2.5 text-base">
-            <li><a href="/conveyor-types/roller-conveyors/" class="hover:text-white transition-colors">Roller Conveyors</a></li>
-            <li><a href="/conveyor-types/flat-belt-conveyors/" class="hover:text-white transition-colors">Flat Belt</a></li>
-            <li><a href="/conveyor-types/accumulation-conveyors/" class="hover:text-white transition-colors">Accumulation</a></li>
-            <li><a href="/conveyor-types/mdr-conveyors/" class="hover:text-white transition-colors">MDR / Motor Driven</a></li>
-            <li><a href="/conveyor-types/pneumatic-conveyors/" class="hover:text-white transition-colors">Pneumatic</a></li>
-            <li><a href="/conveyor-types/spiral-conveyors/" class="hover:text-white transition-colors">Spiral</a></li>
-            <li><a href="/conveyor-types/buffer-conveyors/" class="hover:text-white transition-colors">Buffer</a></li>
-            <li><a href="/conveyor-types/transfer-conveyors/" class="hover:text-white transition-colors">Transfer</a></li>
-            <li><a href="/conveyor-types/" class="text-accent-bright hover:text-white transition-colors">All 40+ Types &rarr;</a></li>
-          </ul>
-        </div>
-
-        <!-- Industries & Functions -->
-        <div>
-          <div class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Industries</div>
-          <ul class="space-y-2.5 text-base">
-            <li><a href="/industries/food-conveyors/" class="hover:text-white transition-colors">Food & Beverage</a></li>
-            <li><a href="/industries/packaging-line-conveyors/" class="hover:text-white transition-colors">Packaging Lines</a></li>
-            <li><a href="/industries/pharmaceutical-conveyors/" class="hover:text-white transition-colors">Pharmaceutical</a></li>
-            <li><a href="/industries/warehouse-conveyors/" class="hover:text-white transition-colors">Warehouse</a></li>
-            <li><a href="/industries/automotive-conveyors/" class="hover:text-white transition-colors">Automotive</a></li>
-            <li><a href="/industries/" class="text-accent-bright hover:text-white transition-colors">All Industries &rarr;</a></li>
-          </ul>
-          <div class="font-display text-base font-bold tracking-widest uppercase text-white mt-6 mb-4">Functions</div>
-          <ul class="space-y-2.5 text-base">
-            <li><a href="/conveyor-functions/infeed-outfeed/" class="hover:text-white transition-colors">Infeed & Outfeed</a></li>
-            <li><a href="/conveyor-functions/reject-systems/" class="hover:text-white transition-colors">Reject & Divert</a></li>
-            <li><a href="/conveyor-functions/singulation/" class="hover:text-white transition-colors">Singulation</a></li>
-            <li><a href="/conveyor-functions/" class="text-accent-bright hover:text-white transition-colors">All Functions &rarr;</a></li>
-          </ul>
-        </div>
-
-        <!-- Resources & Components -->
-        <div>
-          <div class="font-display text-base font-bold tracking-widest uppercase text-white mb-4">Resources</div>
-          <ul class="space-y-2.5 text-base">
-            <li><a href="/resources/conveyor-manufacturers/" class="hover:text-white transition-colors">Manufacturer Directory</a></li>
-            <li><a href="/resources/conveyor-cost-guide/" class="hover:text-white transition-colors">Cost & Pricing Guide</a></li>
-            <li><a href="/resources/conveyor-design-guide/" class="hover:text-white transition-colors">Design Guide</a></li>
-            <li><a href="/resources/conveyor-belting/" class="hover:text-white transition-colors">Belt Selection</a></li>
-            <li><a href="/resources/conveyor-safety/" class="hover:text-white transition-colors">Safety Standards</a></li>
-            <li><a href="/resources/conveyor-maintenance/" class="hover:text-white transition-colors">Maintenance</a></li>
-            <li><a href="/resources/" class="text-accent-bright hover:text-white transition-colors">All Resources &rarr;</a></li>
-          </ul>
-          <div class="font-display text-base font-bold tracking-widest uppercase text-white mt-6 mb-4">Components</div>
-          <ul class="space-y-2.5 text-base">
-            <li><a href="/components/guide-rails/" class="hover:text-white transition-colors">Guide Rails</a></li>
-            <li><a href="/components/cleaning-systems/" class="hover:text-white transition-colors">Cleaning Systems</a></li>
-            <li><a href="/components/" class="text-accent-bright hover:text-white transition-colors">All Components &rarr;</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
-        <p>&copy; {new Date().getFullYear()} PackagingConveyor.com. All rights reserved.</p>
-        <div class="flex gap-6">
-          <a href="/about/" class="hover:text-white transition-colors">About</a>
-          <a href="/privacy/" class="hover:text-white transition-colors">Privacy</a>
-          <a href="/terms/" class="hover:text-white transition-colors">Terms</a>
-        </div>
+  <div class="grid-container docs-layout">
+    <SideNav />
+    <div class="usa-in-page-nav-container docs-body">
+      <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="p" data-heading-elements="h2" data-main-content-selector="#main-content" data-minimum-heading-count="3"></aside>
+      <main class="usa-prose docs-content" id="main-content" tabindex="-1">
+        {current && (
+          <nav class="usa-breadcrumb" aria-label="Breadcrumb"><ol class="usa-breadcrumb__list">
+            {crumbs.map(c => <li class="usa-breadcrumb__list-item"><a href={c.href} class="usa-breadcrumb__link"><span>{c.name}</span></a></li>)}
+            <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>{current.name}</span></li>
+          </ol></nav>
+        )}
+        <Fragment set:html={content} />
+      </main>
+    </div>
+  </div>
+  <footer class="usa-footer usa-footer--slim site-footer">
+    <div class="usa-footer__primary-section">
+      <div class="grid-container">
+        <nav aria-label="Footer navigation"><ul class="footer-links">{sections.map(s => <li><a class="usa-footer__primary-link" href={s.href}>{s.label}</a></li>)}</ul></nav>
       </div>
     </div>
+    <div class="grid-container footer-details">
+      <p><strong>PackagingConveyor.com</strong></p>
+      <p>Technical guides and selection criteria for packaging conveyor types.</p>
+      <ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li></ul>
+      <p>&copy; {new Date().getFullYear()} PackagingConveyor.com. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-      const menu = document.getElementById('mobile-menu');
-      const btn = document.getElementById('mobile-menu-btn');
-      menu?.classList.toggle('hidden');
-      btn?.setAttribute('aria-expanded', menu?.classList.contains('hidden') ? 'false' : 'true');
-    });
-  </script>
+  <script>import '../scripts/site.ts';</script>
 </body>
 </html>

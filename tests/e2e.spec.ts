@@ -30,18 +30,17 @@ test.describe('Homepage', () => {
 
   test('should have FAQ section with working accordions', async ({ page }) => {
     await page.goto('/');
-    const faqSection = page.locator('section', { has: page.locator('h2:has-text("Frequently Asked")') });
-    const details = faqSection.locator('details');
-    const count = await details.count();
+    const buttons = page.locator('.usa-accordion .usa-accordion__button');
+    const count = await buttons.count();
     expect(count).toBeGreaterThanOrEqual(3);
 
-    const first = details.first();
-    await expect(first).toHaveAttribute('open', '');
+    await expect(buttons.first()).toHaveAttribute('aria-expanded', 'true');
 
-    const second = details.nth(1);
-    await expect(second).not.toHaveAttribute('open', '');
-    await second.locator('summary').click();
-    await expect(second).toHaveAttribute('open', '');
+    const second = buttons.nth(1);
+    await expect(second).toHaveAttribute('aria-expanded', 'false');
+    await second.click();
+    await expect(second).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator(`#${await second.getAttribute('aria-controls')}`)).toBeVisible();
   });
 
   test('should have comparison table with pricing data', async ({ page }) => {
@@ -59,7 +58,7 @@ test.describe('Homepage', () => {
 
   test('should have working navigation', async ({ page }) => {
     await page.goto('/');
-    const nav = page.locator('nav[aria-label="Main navigation"]');
+    const nav = page.locator('nav[aria-label="Primary navigation"]');
     await expect(nav).toBeVisible();
 
     const links = nav.locator('a');
@@ -67,10 +66,10 @@ test.describe('Homepage', () => {
     expect(count).toBeGreaterThanOrEqual(4);
   });
 
-  test('should have hero quick-nav cards', async ({ page }) => {
+  test('should have conveyor type collection', async ({ page }) => {
     await page.goto('/');
-    const heroCards = page.locator('section').first().locator('a.block');
-    const count = await heroCards.count();
+    const items = page.locator('.usa-collection__item');
+    const count = await items.count();
     expect(count).toBeGreaterThanOrEqual(3);
   });
 
@@ -88,13 +87,13 @@ test.describe('Navigation & Links', () => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto('/');
 
-    const mobileMenu = page.locator('#mobile-menu');
+    const mobileMenu = page.locator('.usa-nav');
     await expect(mobileMenu).toBeHidden();
 
-    await page.locator('#mobile-menu-btn').click();
+    await page.locator('.usa-menu-btn').click();
     await expect(mobileMenu).toBeVisible();
 
-    await page.locator('#mobile-menu-btn').click();
+    await page.locator('.usa-nav__close').click();
     await expect(mobileMenu).toBeHidden();
   });
 

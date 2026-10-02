@@ -110,304 +110,154 @@ const articleSchema = {
   }
 };
 ---
-
 <BaseLayout
   title="Conveyor Components: System Parts, Wear Parts & Accessories"
   description="Map of conveyor components by category: frame, conveying surface, drives, take-ups, guide rails, sensors, guards, and wear parts, with what drives each spec."
   canonical="https://packagingconveyor.com/components/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
+<h1>Conveyor Components: Parts of a Conveyor System</h1>
+<p class="usa-intro">Conveyor components are the parts that make up a conveyor system: the frame, the conveying surface (belt, rollers, or chain), the drive, the pulleys and take-up that hold tension, the bearings, the product handling accessories such as guide rails, the sensors and controls, and the guarding. This page maps each category, what drives its specification, and where to go for detail. For how frame, drive, and pulley choices are sized together during a new design, see <a href="/resources/conveyor-design-guide/components/">how to specify frames, drives, and pulleys in conveyor design</a>.</p>
+<h2 id="map-heading">Conveyor Components by Category</h2>
+<p>Use this map to see which component categories your project touches, which inputs set the specification, and which guide covers each one.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What It Includes</th>
+<th>What Sets the Spec</th>
+<th>Detailed Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame &amp; Structure</td>
+<td>Side channels or extrusions, cross members, supports, legs, and floor or ceiling mounts</td>
+<td>Load per foot, span between supports, washdown and corrosion exposure, reconfiguration needs</td>
+<td><a href="/resources/conveyor-design-guide/components/">Frame and drive design</a></td>
+</tr>
+<tr>
+<td>Conveying Surface</td>
+<td>Fabric or modular plastic belts, wire mesh, gravity or powered rollers, tabletop and other chain</td>
+<td>Product size, weight, and surface; temperature; food contact; accumulation and curves</td>
+<td><a href="/resources/conveyor-belting/">Belting guide</a>, <a href="/conveyor-types/roller-conveyors/">roller conveyors</a></td>
+</tr>
+<tr>
+<td>Drive &amp; Power Transmission</td>
+<td>Gearmotor, VFD or servo drive, drive pulley or sprocket, drum motors, MDR rollers</td>
+<td>Belt pull, speed range, start and stop frequency, indexing accuracy, enclosure rating</td>
+<td><a href="/resources/conveyor-motors-drives/">Motors and drives</a></td>
+</tr>
+<tr>
+<td>Pulleys, Take-Ups &amp; Bearings</td>
+<td>Tail and snub pulleys, nose rollers, screw or gravity take-ups, pillow block and flange bearings</td>
+<td>Belt type and minimum pulley diameter, conveyor length, transfer gap, sanitation</td>
+<td><a href="/resources/conveyor-design-guide/components/">Pulley and take-up design</a></td>
+</tr>
+<tr>
+<td>Product Handling</td>
+<td>Side rails, adjustable side guides, lane dividers, hold-down rails, transfer plates</td>
+<td>Product width range, changeover frequency, stability, downstream positioning accuracy</td>
+<td><a href="/components/guide-rails/">Conveyor guide rails</a></td>
+</tr>
+<tr>
+<td>Controls &amp; Sensors</td>
+<td>Photoeyes, proximity sensors, encoders, zone controllers, PLC and HMI</td>
+<td>Accumulation logic, tracking and diverting, product color and material, washdown rating</td>
+<td><a href="/conveyor-functions/inspection-detection/">Inspection and detection</a></td>
+</tr>
+<tr>
+<td>Guarding &amp; Safety</td>
+<td>Nip point and drive guards, underguards, e-stops and pull cords, light curtains</td>
+<td>Operator access points, <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer">OSHA 1910.219</a> power transmission guarding, <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a></td>
+<td><a href="/resources/conveyor-safety/">Conveyor safety</a></td>
+</tr>
+<tr>
+<td>Cleaning &amp; Sanitation</td>
+<td>Belt scrapers and brushes, spray bars, clean-in-place systems</td>
+<td>Residue type, sanitation schedule, food or pharma requirements</td>
+<td><a href="/components/cleaning-systems/">Cleaning systems</a></td>
+</tr>
+<tr>
+<td>Wear &amp; Replacement Parts</td>
+<td>Belts, rollers, bearings, wear strips, O-rings, sprockets, chain</td>
+<td>Duty cycle, abrasion, OEM versus aftermarket availability, spares strategy</td>
+<td><a href="/resources/conveyor-parts/">Conveyor parts guide</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="components-heading">Component Guides</h2>
+<p>Select a guide below for specifications, selection criteria, and sourcing guidance.</p>
+<ul class="usa-collection">{components.map((component) => (
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={component.slug}>{component.name}</a></h3><p class="usa-collection__description">{component.desc}</p>{component.tags && <p class="tags">{component.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
+))}</ul>
+<h2 id="overview-heading">Understanding Conveyor Components</h2>
+<h3>Frame &amp; Structure</h3>
+<p>The frame carries the conveying surface, the drive, the product load, and every mounted accessory. Carbon steel is the default for dry environments, stainless steel for washdown and food contact, and aluminum extrusion for light-duty and reconfigurable lines. Frame choice also sets the material for bearings, fasteners, and guide rail brackets. The <a href="/resources/conveyor-design-guide/components/">frame, drive, and pulley design guide</a> covers how to specify the frame alongside the drive and take-up.</p>
+<h3>Product Handling Components</h3>
+<p><a href="/components/guide-rails/">Conveyor guide rails</a>, also called side rails or side guides, keep products positioned on the conveyor and channel them into lanes for downstream operations. Side guides prevent edge falloff on belt conveyors. Lane dividers create parallel product streams on wide conveyors. Adjustable guide systems allow quick changeover between product sizes without tools. These components are typically made from UHMW polyethylene (low friction, food-grade grades available), stainless steel (durability, washdown), or aluminum with UHMW contact strips.</p>
+<h3>Cleaning &amp; Sanitation</h3>
+<p><a href="/components/cleaning-systems/">Conveyor cleaning systems</a> maintain sanitary conditions on <a href="/industries/food-conveyors/">food and beverage lines</a> and remove carryback on bulk material conveyors. Belt cleaners (scrapers, brushes) mount at the head pulley to remove residue. Washdown systems use water, foam, or sanitizer to clean conveyor surfaces during changeovers or sanitation breaks. <a href="/industries/pharmaceutical-conveyors/">Pharmaceutical</a> and cleanroom applications require specialized cleaning protocols and equipment.</p>
+<h3>Conveying Surface Components</h3>
+<p>The conveying surface is the primary wear component on any conveyor. <a href="/resources/conveyor-belting/">Conveyor belts</a> come in many materials and constructions: PVC/PU fabric belts for general packaging, modular plastic belts for food and wet environments, wire mesh for high-temperature applications, and timing belts for precision positioning. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> use gravity rollers, powered rollers, or <a href="/conveyor-types/mdr-conveyors/">MDR motorized rollers</a> as the conveying surface.</p>
+<h3>Drive Components</h3>
+<p><a href="/resources/conveyor-motors-drives/">Motors and drives</a> provide the power that moves the conveyor. AC gearmotors are the standard drive for most packaging conveyors. Variable frequency drives (VFDs) allow speed adjustment and soft starting. Servo drives enable precise positioning for <a href="/conveyor-functions/indexing-conveyors/">indexing applications</a>. <a href="/conveyor-types/mdr-conveyors/">MDR systems</a> use 24VDC motors built into the conveyor rollers themselves.</p>
+<h3>Overhead Conveyor Components</h3>
+<p><a href="/conveyor-types/chain-conveyors/overhead/">Overhead conveyors</a> use a different component set from floor-mounted belt and roller conveyors. The core parts are the track (I-beam or enclosed track), the chain, trolleys that ride on or in the track, carriers or hangers that hold the product, a drive unit, and a take-up that keeps chain tension as the chain wears. Power-and-free systems add a separate free track plus stops and switches so individual carriers can accumulate or change paths. Load per trolley, track layout, and the environment (paint booths, ovens, washers) set the specification.</p>
+<h3>Wear Parts &amp; Replacement</h3>
+<p><a href="/resources/conveyor-parts/">Conveyor parts</a> that require regular replacement include belts, rollers, bearings, wear strips, O-rings (on line-shaft conveyors), and sensors. Understanding replacement intervals, OEM versus aftermarket sourcing, and spare parts inventory strategy reduces unplanned downtime and maintenance cost. The parts guide covers identification, sourcing, and stocking recommendations for all major wear components.</p>
+<h2 id="selection-heading">Component Selection Criteria</h2>
+<p>Selecting conveyor components requires matching specifications to your application requirements. Key factors include:</p>
+<p><strong>1. Material compatibility.</strong> Food and pharmaceutical applications require FDA-compliant materials (UHMW, certain plastics, stainless steel). Wet or washdown environments need corrosion-resistant materials. High-temperature applications require heat-resistant materials and lubricants.</p>
+<p><strong>2. Product characteristics.</strong> Product weight determines bearing and roller capacity. Product fragility affects guide rail padding and contact pressure. Product dimensions determine guide rail spacing and belt width. Product surface (smooth, rough, oily) affects belt grip and cleaning requirements.</p>
+<p><strong>3. Environment.</strong> Ambient temperature affects lubricant selection and plastic material choice. Humidity and washdown frequency affect corrosion resistance requirements. Dust and debris levels affect sealing and cleaning frequency.</p>
+<p><strong>4. Speed and throughput.</strong> Higher speeds require more robust bearings, better belt tracking, and more frequent maintenance. High throughput applications may justify premium components with longer service life.</p>
+<p><strong>5. Maintenance capability.</strong> Components that require frequent adjustment or replacement should be easy to access. Quick-change guide rails reduce changeover time. Tool-free belt tensioning speeds maintenance. Standard components from multiple suppliers ensure availability.</p>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What are the main components of a conveyor system?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>A conveyor system is built from the frame and support structure, the conveying surface (<a href="/resources/conveyor-belting/">belt</a>, <a href="/conveyor-types/roller-conveyors/">rollers</a>, or chain), the drive (<a href="/resources/conveyor-motors-drives/">motor, gearbox</a>, and drive pulley or sprocket), tensioning parts (tail pulley, take-up, and bearings), product handling accessories (<a href="/components/guide-rails/">guide rails</a>, lane dividers, <a href="/conveyor-types/transfer-conveyors/">transfers</a>), controls and sensors, and guarding. Each category is specified for the product, load, speed, and environment, and choices in one category constrain the others.</p>
 
-  <!-- Breadcrumb -->
-  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <ol class="flex items-center gap-2 text-sm text-ink-muted">
-        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
-        <li class="text-ink-muted/50">/</li>
-        <li class="text-ink font-semibold">Components</li>
-      </ol>
-    </div>
-  </nav>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What are conveyor guide rails used for?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p><a href="/components/guide-rails/">Conveyor guide rails</a>, also called side rails or side guides, keep products centered on the conveyor, prevent products from falling off the edges, create lanes for multi-product flow, and orient products for downstream operations like labeling or <a href="/industries/packaging-line-conveyors/case/">case packing</a>. They are typically made from UHMW polyethylene, stainless steel, or aluminum with UHMW contact surfaces. Adjustable guide rails allow quick changeover between product sizes.</p>
 
-  <!-- Hero -->
-  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Conveyor Components</div>
-      <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-8">
-        Conveyor Components: Parts of a Conveyor System
-      </h1>
-      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
-        <p>Conveyor components are the parts that make up a conveyor system: the frame, the conveying surface (belt, rollers, or chain), the drive, the pulleys and take-up that hold tension, the bearings, the product handling accessories such as guide rails, the sensors and controls, and the guarding. This page maps each category, what drives its specification, and where to go for detail. For how frame, drive, and pulley choices are sized together during a new design, see <a href="/resources/conveyor-design-guide/components/" class="text-accent hover:text-accent-hover font-semibold">how to specify frames, drives, and pulleys in conveyor design</a>.</p>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What are the components of an overhead conveyor?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p><a href="/conveyor-types/chain-conveyors/overhead/">Overhead conveyors</a> use a different component set from floor conveyors. The main parts are the track (I-beam or enclosed track), the chain, trolleys that ride in or on the track, carriers or hangers that hold the product, a drive unit, and a take-up that keeps chain tension. Power-and-free systems add a separate free track plus stops and switches so individual carriers can accumulate or change paths.</p>
 
-  <!-- Component Map -->
-  <section class="py-20 bg-surface" aria-labelledby="map-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Component Map</div>
-      <h2 id="map-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-6">
-        Conveyor Components <span class="text-accent">by Category</span>
-      </h2>
-      <p class="text-lg text-ink-muted leading-relaxed max-w-3xl mb-10">
-        Use this map to see which component categories your project touches, which inputs set the specification, and which guide covers each one.
-      </p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How do I choose the right conveyor belt cleaner?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>Belt cleaner selection depends on the belt type, product residue characteristics, and sanitation requirements. Primary cleaners mount at the head pulley to scrape bulk material. Secondary cleaners mount behind the primary for finer cleaning. For <a href="/industries/food-conveyors/">food applications</a>, FDA-compliant blade materials and washdown-rated designs are required. For heavy carryback, consider urethane or tungsten carbide blades. For light dust, brush cleaners may suffice. See the <a href="/components/cleaning-systems/">cleaning systems guide</a> for detailed selection criteria.</p>
 
-      <div class="overflow-x-auto -mx-4 px-4">
-        <table class="w-full text-left border-collapse min-w-[900px]">
-          <thead>
-            <tr class="border-b-2 border-ink">
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Category</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">What It Includes</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">What Sets the Spec</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Detailed Guide</th>
-            </tr>
-          </thead>
-          <tbody class="text-ink-muted">
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Frame &amp; Structure</td>
-              <td class="py-4 pr-4">Side channels or extrusions, cross members, supports, legs, and floor or ceiling mounts</td>
-              <td class="py-4 pr-4">Load per foot, span between supports, washdown and corrosion exposure, reconfiguration needs</td>
-              <td class="py-4"><a href="/resources/conveyor-design-guide/components/" class="text-accent hover:text-accent-hover font-semibold">Frame and drive design</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Conveying Surface</td>
-              <td class="py-4 pr-4">Fabric or modular plastic belts, wire mesh, gravity or powered rollers, tabletop and other chain</td>
-              <td class="py-4 pr-4">Product size, weight, and surface; temperature; food contact; accumulation and curves</td>
-              <td class="py-4"><a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">Belting guide</a>, <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller conveyors</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Drive &amp; Power Transmission</td>
-              <td class="py-4 pr-4">Gearmotor, VFD or servo drive, drive pulley or sprocket, drum motors, MDR rollers</td>
-              <td class="py-4 pr-4">Belt pull, speed range, start and stop frequency, indexing accuracy, enclosure rating</td>
-              <td class="py-4"><a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">Motors and drives</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Pulleys, Take-Ups &amp; Bearings</td>
-              <td class="py-4 pr-4">Tail and snub pulleys, nose rollers, screw or gravity take-ups, pillow block and flange bearings</td>
-              <td class="py-4 pr-4">Belt type and minimum pulley diameter, conveyor length, transfer gap, sanitation</td>
-              <td class="py-4"><a href="/resources/conveyor-design-guide/components/" class="text-accent hover:text-accent-hover font-semibold">Pulley and take-up design</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Product Handling</td>
-              <td class="py-4 pr-4">Side rails, adjustable side guides, lane dividers, hold-down rails, transfer plates</td>
-              <td class="py-4 pr-4">Product width range, changeover frequency, stability, downstream positioning accuracy</td>
-              <td class="py-4"><a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">Conveyor guide rails</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Controls &amp; Sensors</td>
-              <td class="py-4 pr-4">Photoeyes, proximity sensors, encoders, zone controllers, PLC and HMI</td>
-              <td class="py-4 pr-4">Accumulation logic, tracking and diverting, product color and material, washdown rating</td>
-              <td class="py-4"><a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">Inspection and detection</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Guarding &amp; Safety</td>
-              <td class="py-4 pr-4">Nip point and drive guards, underguards, e-stops and pull cords, light curtains</td>
-              <td class="py-4 pr-4">Operator access points, <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">OSHA 1910.219</a> power transmission guarding, <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">ASME B20.1</a></td>
-              <td class="py-4"><a href="/resources/conveyor-safety/" class="text-accent hover:text-accent-hover font-semibold">Conveyor safety</a></td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Cleaning &amp; Sanitation</td>
-              <td class="py-4 pr-4">Belt scrapers and brushes, spray bars, clean-in-place systems</td>
-              <td class="py-4 pr-4">Residue type, sanitation schedule, food or pharma requirements</td>
-              <td class="py-4"><a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">Cleaning systems</a></td>
-            </tr>
-            <tr>
-              <td class="py-4 pr-4 font-semibold text-ink">Wear &amp; Replacement Parts</td>
-              <td class="py-4 pr-4">Belts, rollers, bearings, wear strips, O-rings, sprockets, chain</td>
-              <td class="py-4 pr-4">Duty cycle, abrasion, OEM versus aftermarket availability, spares strategy</td>
-              <td class="py-4"><a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">Conveyor parts guide</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What conveyor components need regular replacement?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>The components replaced most often are the ones in sliding or rolling contact: belts, rollers and bearings, wear strips and UHMW guide rail surfaces, O-rings on line-shaft conveyors, and sensors damaged in service. <a href="/resources/conveyor-motors-drives/">Motors and gearboxes</a> usually last longer. Actual intervals depend on load, speed, duty cycle, cleaning chemistry, and maintenance, so use the manufacturer's recommendations and your own failure history to set replacement schedules. The <a href="/resources/conveyor-parts/">conveyor parts guide</a> covers spares planning.</p>
 
-  <!-- Components Grid -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="components-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Browse Components</div>
-      <h2 id="components-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-6">
-        Component <span class="text-accent">Guides</span>
-      </h2>
-      <p class="text-lg text-ink-muted leading-relaxed max-w-3xl mb-12">
-        Select a guide below for specifications, selection criteria, and sourcing guidance.
-      </p>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {components.map((component) => (
-          <a href={component.slug} class="card group p-6 flex flex-col">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">{component.name}</h3>
-            <p class="text-base text-ink-muted leading-relaxed mb-4 flex-1">{component.desc}</p>
-            <div class="flex flex-wrap gap-2">
-              {component.tags.map((tag: string) => (
-                <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">{tag}</span>
-              ))}
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Component Categories Overview -->
-  <section class="py-20 bg-surface" aria-labelledby="overview-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Component Overview</div>
-      <h2 id="overview-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Understanding Conveyor <span class="text-accent">Components</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-8">
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Frame &amp; Structure</h3>
-          <p>The frame carries the conveying surface, the drive, the product load, and every mounted accessory. Carbon steel is the default for dry environments, stainless steel for washdown and food contact, and aluminum extrusion for light-duty and reconfigurable lines. Frame choice also sets the material for bearings, fasteners, and guide rail brackets. The <a href="/resources/conveyor-design-guide/components/" class="text-accent hover:text-accent-hover font-semibold">frame, drive, and pulley design guide</a> covers how to specify the frame alongside the drive and take-up.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Product Handling Components</h3>
-          <p><a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">Conveyor guide rails</a>, also called side rails or side guides, keep products positioned on the conveyor and channel them into lanes for downstream operations. Side guides prevent edge falloff on belt conveyors. Lane dividers create parallel product streams on wide conveyors. Adjustable guide systems allow quick changeover between product sizes without tools. These components are typically made from UHMW polyethylene (low friction, food-grade grades available), stainless steel (durability, washdown), or aluminum with UHMW contact strips.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Cleaning & Sanitation</h3>
-          <p><a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">Conveyor cleaning systems</a> maintain sanitary conditions on <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food and beverage lines</a> and remove carryback on bulk material conveyors. Belt cleaners (scrapers, brushes) mount at the head pulley to remove residue. Washdown systems use water, foam, or sanitizer to clean conveyor surfaces during changeovers or sanitation breaks. <a href="/industries/pharmaceutical-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Pharmaceutical</a> and cleanroom applications require specialized cleaning protocols and equipment.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Conveying Surface Components</h3>
-          <p>The conveying surface is the primary wear component on any conveyor. <a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">Conveyor belts</a> come in many materials and constructions: PVC/PU fabric belts for general packaging, modular plastic belts for food and wet environments, wire mesh for high-temperature applications, and timing belts for precision positioning. <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Roller conveyors</a> use gravity rollers, powered rollers, or <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR motorized rollers</a> as the conveying surface.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Drive Components</h3>
-          <p><a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">Motors and drives</a> provide the power that moves the conveyor. AC gearmotors are the standard drive for most packaging conveyors. Variable frequency drives (VFDs) allow speed adjustment and soft starting. Servo drives enable precise positioning for <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing applications</a>. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR systems</a> use 24VDC motors built into the conveyor rollers themselves.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Overhead Conveyor Components</h3>
-          <p><a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">Overhead conveyors</a> use a different component set from floor-mounted belt and roller conveyors. The core parts are the track (I-beam or enclosed track), the chain, trolleys that ride on or in the track, carriers or hangers that hold the product, a drive unit, and a take-up that keeps chain tension as the chain wears. Power-and-free systems add a separate free track plus stops and switches so individual carriers can accumulate or change paths. Load per trolley, track layout, and the environment (paint booths, ovens, washers) set the specification.</p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-3">Wear Parts & Replacement</h3>
-          <p><a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">Conveyor parts</a> that require regular replacement include belts, rollers, bearings, wear strips, O-rings (on line-shaft conveyors), and sensors. Understanding replacement intervals, OEM versus aftermarket sourcing, and spare parts inventory strategy reduces unplanned downtime and maintenance cost. The parts guide covers identification, sourcing, and stocking recommendations for all major wear components.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Selection Criteria -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="selection-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Selection Guide</div>
-      <h2 id="selection-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Component Selection <span class="text-accent">Criteria</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p>Selecting conveyor components requires matching specifications to your application requirements. Key factors include:</p>
-
-        <p><strong class="text-ink">1. Material compatibility.</strong> Food and pharmaceutical applications require FDA-compliant materials (UHMW, certain plastics, stainless steel). Wet or washdown environments need corrosion-resistant materials. High-temperature applications require heat-resistant materials and lubricants.</p>
-
-        <p><strong class="text-ink">2. Product characteristics.</strong> Product weight determines bearing and roller capacity. Product fragility affects guide rail padding and contact pressure. Product dimensions determine guide rail spacing and belt width. Product surface (smooth, rough, oily) affects belt grip and cleaning requirements.</p>
-
-        <p><strong class="text-ink">3. Environment.</strong> Ambient temperature affects lubricant selection and plastic material choice. Humidity and washdown frequency affect corrosion resistance requirements. Dust and debris levels affect sealing and cleaning frequency.</p>
-
-        <p><strong class="text-ink">4. Speed and throughput.</strong> Higher speeds require more robust bearings, better belt tracking, and more frequent maintenance. High throughput applications may justify premium components with longer service life.</p>
-
-        <p><strong class="text-ink">5. Maintenance capability.</strong> Components that require frequent adjustment or replacement should be easy to access. Quick-change guide rails reduce changeover time. Tool-free belt tensioning speeds maintenance. Standard components from multiple suppliers ensure availability.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-20 bg-surface" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
-      </h2>
-
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What are the main components of a conveyor system?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>A conveyor system is built from the frame and support structure, the conveying surface (<a href="/resources/conveyor-belting/" class="text-accent hover:text-accent-hover font-semibold">belt</a>, <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">rollers</a>, or chain), the drive (<a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">motor, gearbox</a>, and drive pulley or sprocket), tensioning parts (tail pulley, take-up, and bearings), product handling accessories (<a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">guide rails</a>, lane dividers, <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a>), controls and sensors, and guarding. Each category is specified for the product, load, speed, and environment, and choices in one category constrain the others.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What are conveyor guide rails used for?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p><a href="/components/guide-rails/" class="text-accent hover:text-accent-hover font-semibold">Conveyor guide rails</a>, also called side rails or side guides, keep products centered on the conveyor, prevent products from falling off the edges, create lanes for multi-product flow, and orient products for downstream operations like labeling or <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing</a>. They are typically made from UHMW polyethylene, stainless steel, or aluminum with UHMW contact surfaces. Adjustable guide rails allow quick changeover between product sizes.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What are the components of an overhead conveyor?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p><a href="/conveyor-types/chain-conveyors/overhead/" class="text-accent hover:text-accent-hover font-semibold">Overhead conveyors</a> use a different component set from floor conveyors. The main parts are the track (I-beam or enclosed track), the chain, trolleys that ride in or on the track, carriers or hangers that hold the product, a drive unit, and a take-up that keeps chain tension. Power-and-free systems add a separate free track plus stops and switches so individual carriers can accumulate or change paths.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            How do I choose the right conveyor belt cleaner?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Belt cleaner selection depends on the belt type, product residue characteristics, and sanitation requirements. Primary cleaners mount at the head pulley to scrape bulk material. Secondary cleaners mount behind the primary for finer cleaning. For <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food applications</a>, FDA-compliant blade materials and washdown-rated designs are required. For heavy carryback, consider urethane or tungsten carbide blades. For light dust, brush cleaners may suffice. See the <a href="/components/cleaning-systems/" class="text-accent hover:text-accent-hover font-semibold">cleaning systems guide</a> for detailed selection criteria.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What conveyor components need regular replacement?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>The components replaced most often are the ones in sliding or rolling contact: belts, rollers and bearings, wear strips and UHMW guide rail surfaces, O-rings on line-shaft conveyors, and sensors damaged in service. <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">Motors and gearboxes</a> usually last longer. Actual intervals depend on load, speed, duty cycle, cleaning chemistry, and maintenance, so use the manufacturer's recommendations and your own failure history to set replacement schedules. The <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">conveyor parts guide</a> covers spares planning.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Pages -->
-  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent-bright mb-4">Related Resources</div>
-      <h2 id="related-heading" class="font-display text-3xl font-extrabold text-white tracking-wide mb-8">
-        Continue <span class="text-accent-bright">Researching</span>
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/conveyor-types/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Conveyor Types</div>
-          <p class="text-sm text-white/60">30+ conveyor types compared</p>
-        </a>
-        <a href="/resources/conveyor-manufacturers/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Manufacturers</div>
-          <p class="text-sm text-white/60">Find conveyor suppliers</p>
-        </a>
-        <a href="/resources/conveyor-cost-guide/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Cost Guide</div>
-          <p class="text-sm text-white/60">Pricing factors by component</p>
-        </a>
-        <a href="/resources/conveyor-maintenance/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Maintenance</div>
-          <p class="text-sm text-white/60">Preventive maintenance guide</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
+</div>
+</div>
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/">Conveyor Types</a></h3>
+<p class="usa-collection__description">30+ conveyor types compared</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/">Manufacturers</a></h3>
+<p class="usa-collection__description">Find conveyor suppliers</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-cost-guide/">Cost Guide</a></h3>
+<p class="usa-collection__description">Pricing factors by component</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-maintenance/">Maintenance</a></h3>
+<p class="usa-collection__description">Preventive maintenance guide</p></div></li>
+</ul>
 </BaseLayout>

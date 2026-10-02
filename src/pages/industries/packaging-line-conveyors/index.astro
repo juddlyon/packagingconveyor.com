@@ -67,472 +67,255 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-
 <BaseLayout title="Packaging Conveyor Systems: Line Layout &#x26; Selection Guide" description="Packaging conveyor systems: conveyor types by line stage, layout and integration points, buffering for high-speed lines, speed matching, and cost drivers." canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<h1>Packaging Conveyor Systems</h1>
+<p class="usa-intro">A packaging conveyor system connects every machine on a packaging line, from fillers and sealers through case packers and palletizers to stretch wrappers and shipping docks. It moves product between machines, buffers product when one machine stops, changes lanes for multipacks, and handles elevation changes between floor and mezzanine equipment.</p>
+<p>The system's job is to keep a single machine stoppage from shutting down the whole line. The table below shows which conveyor types do that work at each stage.</p>
+<h2 id="types-heading">Conveyor Types in a Packaging Line</h2>
+<p>Most packaging lines combine five or more conveyor types. The right type depends on product shape, weight, speed, and handling needs at each point in the line.</p>
+<table>
+<thead>
+<tr>
+<th>Conveyor Type</th>
+<th>Line Stage</th>
+<th>Best For</th>
+<th>Accumulation</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/conveyor-types/flat-belt-conveyors/">Belt conveyor</a></td>
+<td>Primary</td>
+<td>Pouches, bags, trays, unstable items</td>
+<td>Limited (product slides on belt)</td>
+<td>$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/tabletop-conveyors/">Tabletop chain</a></td>
+<td>Primary</td>
+<td>Bottles, cans, jars</td>
+<td>Mass accumulation on low-friction chain</td>
+<td>$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/roller-conveyors/">Powered roller</a></td>
+<td>Secondary</td>
+<td>Cases, cartons, totes</td>
+<td>Minimum-pressure zones</td>
+<td>$$-$$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/mdr-conveyors/">MDR</a></td>
+<td>Secondary</td>
+<td>Case accumulation, zone control</td>
+<td>Zero-pressure zones</td>
+<td>$$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/transfer-conveyors/">Transfer</a></td>
+<td>All stages</td>
+<td>Right-angle turns, lane changes</td>
+<td>None</td>
+<td>$$$-$$$$</td>
+</tr>
+<tr>
+<td><a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyor</a></td>
+<td>Tertiary</td>
+<td>Palletized loads to stretch wrap and dock</td>
+<td>Pallet positions</td>
+<td>$$$-$$$$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flow-heading">Primary, Secondary &amp; Tertiary Packaging Conveyors</h2>
+<h3>Primary Packaging Conveyors</h3>
+<p>Primary packaging conveyors handle individual products during filling, sealing, capping, and labeling. They need precise positioning, gentle handling, and consistent spacing. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyors</a> stop products at exact points for fill heads, cappers, labelers, and vision inspection. <a href="/conveyor-types/tabletop-conveyors/">Tabletop chain conveyors</a> carry bottles, cans, and jars because the flat chain surface resists tipping.</p>
+<p>Product-contact conveyors in food plants need <a href="/industries/food-conveyors/">food-grade construction</a> with food-contact belt materials and stainless frames. Pharmaceutical lines need GMP-compliant designs.</p>
+<h3>Secondary Packaging Conveyors</h3>
+<p>Secondary packaging conveyors move sealed cases, cartons, bundles, trays, and shrink-wrapped multipacks, so food-contact rules typically do not apply, though some food safety audit schemes require washdown capability in these zones too. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> (gravity, powered, and <a href="/conveyor-types/mdr-conveyors/">MDR</a>) carry most of this traffic because flat, rigid case bottoms ride well on rollers. See <a href="/industries/packaging-line-conveyors/case/">case packing and case conveyors</a> for this stage in detail.</p>
+<p><a href="/conveyor-functions/collating-laning/">Laning and collating conveyors</a> split single-file product into lanes for case packing. <a href="/conveyor-functions/reject-systems/">Reject conveyors</a> divert out-of-spec product, checkweigher failures, and metal detector rejects.</p>
+<h3>Tertiary Packaging Conveyors</h3>
+<p>Tertiary conveyors move palletized loads from palletizer discharge through stretch wrapping to staging and shipping. <a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyors</a> carry the heaviest loads on the line, and <a href="/conveyor-types/cdlr-conveyors/">chain-driven live roller (CDLR)</a> is the common type. <a href="/conveyor-types/transfer-conveyors/">Transfer conveyors</a> (turntables, right-angle and chain transfers) route pallets between lanes, storage rows, and dock doors.</p>
+<h2 id="layout-heading">Packaging Line Layout and Integration Points</h2>
+<p>Layout sets floor space use, operator and maintenance access, and fork truck routes. Conveyor crossovers, guarding, and emergency stops must meet <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, the U.S. safety standard for conveyors. Three layout patterns cover most lines.</p>
+<ul>
+<li><strong>Straight line:</strong> filler to palletizer in one run. Fewest transfers and simplest conveyor design, but needs the most floor length. Suits single-product lines with few changeovers.</li>
+<li><strong>U-shape:</strong> the line starts and ends on the same wall, so receiving and shipping share a side. Shortens fork truck travel and lets operators see both ends. Needs 180-degree turns using <a href="/conveyor-types/transfer-conveyors/">transfers</a> or <a href="/conveyor-types/curved-conveyors/">curves</a>.</li>
+<li><strong>L-shape:</strong> one 90-degree turn fits the line to the building. Common when primary packaging runs along one wall and secondary and tertiary along the next.</li>
+</ul>
+<h3>Key Integration Points</h3>
+<p>Most conveyor problems show up where conveyors hand product to a machine. Each integration point needs the right conveyor type, speed matching, and controls coordination.</p>
+<table>
+<thead>
+<tr>
+<th>Integration Point</th>
+<th>Conveyor Type</th>
+<th>Key Requirement</th>
+<th>Common Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filler to capper</td>
+<td>Belt / tabletop chain</td>
+<td>Speed match, gentle handling</td>
+<td>Tipping, spacing errors</td>
+</tr>
+<tr>
+<td>Labeler to case packer</td>
+<td>Belt + accumulation</td>
+<td>Accumulation buffer</td>
+<td>Case packer starved after upstream stops</td>
+</tr>
+<tr>
+<td>Case packer to sealer</td>
+<td>Powered roller / MDR</td>
+<td>Tracking, orientation</td>
+<td>Skewed cases, open flaps</td>
+</tr>
+<tr>
+<td>Sealer to palletizer</td>
+<td>Roller + laning</td>
+<td>Pattern formation</td>
+<td>Gaps and wrong orientation at pattern forming</td>
+</tr>
+<tr>
+<td>Palletizer to stretch wrap</td>
+<td><a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyor</a> / <a href="/conveyor-types/pallet-conveyors/">CDLR</a></td>
+<td>Heavy load, low speed</td>
+<td>Pallet queueing, load shift</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accumulation-heading">Accumulation and Buffering for Packaging Lines</h2>
+<p>Every machine on a packaging line stops periodically for jam clears, changeovers, roll changes, and minor faults. <a href="/conveyor-types/accumulation-conveyors/">Accumulation conveyors</a> absorb those stops so upstream and downstream machines keep running. Without them, a short jam at the case sealer stops the filler, the labeler, and the palletizer.</p>
+<h3>Sizing Buffers</h3>
+<p class="formula"><strong>Accumulation Length (ft) = Buffer Time (min) x Products/min x Product Pitch (ft)</strong></p>
+<p>Product pitch is product length plus the gap between products. Set buffer time from the line's own stop data: the buffer should ride through the frequent short stops of the machine it protects without stopping its neighbors. Long stops such as changeovers and breakdowns are usually handled by stopping the line, not by buffer.</p>
+<p>Buffers only refill if machines around them can run faster than the line rate. Most lines use a V-curve: the critical machine, usually the filler, has the lowest rated speed, and machines upstream and downstream are rated progressively faster so they can refill and drain buffers after a stop.</p>
+<h3>Buffering Options for High-Speed Lines</h3>
+<table>
+<thead>
+<tr>
+<th>Buffer Type</th>
+<th>Product Order</th>
+<th>Space Use</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inline accumulation (ZPA, minimum pressure)</td>
+<td>FIFO</td>
+<td>Horizontal length</td>
+<td>Cases, printed or fragile cartons</td>
+</tr>
+<tr>
+<td>Mass or bi-directional accumulation table</td>
+<td>FIFO or LIFO, by design</td>
+<td>Wide floor area</td>
+<td>Bottles, cans, jars in mass</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/spiral-conveyors/">Dynamic spiral buffer</a></td>
+<td>FIFO (inline) or LIFO (offline)</td>
+<td>Vertical, small footprint</td>
+<td>Large buffers where floor space is tight</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/serpentine-conveyors/">Serpentine / storage conveyor</a></td>
+<td>FIFO</td>
+<td>Compact floor area</td>
+<td>Long buffer length in a rectangular footprint</td>
+</tr>
+</tbody>
+</table>
+<p>Choose by product stability, whether product order must be kept (for lot or date code control), and available floor or vertical space. Zero-pressure (ZPA) keeps products from touching and costs the most. Minimum-pressure allows light contact and suits rigid cases. Back-pressure accumulation suits only heavy, rigid products that tolerate contact. See <a href="/conveyor-types/buffer-conveyors/">buffer conveyors</a> for FIFO and LIFO buffer design in depth.</p>
+<h2 id="controls-heading">Speed Matching and Line Control</h2>
+<p>Every conveyor must match speed with the machines on either side. Mismatches cause jams, spacing errors, and machine starvation. The line PLC, or the individual machine controllers, coordinates conveyor speeds, accumulation zones, and start and stop sequences. <a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">OMAC PackML</a> defines a standard machine state model that simplifies coordination when machines come from different suppliers.</p>
+<h3>Variable Frequency Drives (VFDs)</h3>
+<p><a href="/resources/conveyor-motors-drives/">VFDs</a> set motor speed by varying frequency and voltage, so speed changes from the PLC or HMI without gearbox changes. They also soft-start conveyors, which reduces mechanical shock on belts and chains.</p>
+<h3>Photo-Eye Sensors</h3>
+<p>Photo-eyes detect product at accumulation zones, transfer points, and machine infeeds. They trigger conveyor start and stop, zone release in MDR accumulation, and jam faults. Food-grade lines need stainless or sealed housings rated to the appropriate IP level.</p>
+<h3>Line Speed Calculation</h3>
+<p class="formula"><strong>Speed (FPM) = Products/min x (Product Length + Gap in inches) / 12</strong></p>
+<p>Add speed headroom above peak throughput so the conveyor never limits the machines. In <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a>, the controller adjusts speed from sensor inputs and machine status.</p>
+<h2 id="cost-heading">Packaging Line Conveyor Cost Drivers</h2>
+<ul>
+<li><strong>Total footage:</strong> more length costs more, but not linearly. Longer runs spread fixed costs (drives, controls) over more footage.</li>
+<li><strong>Transfers, merges, and diverts:</strong> each is a discrete unit and costs far more per foot than straight conveyor.</li>
+<li><strong>Accumulation:</strong> zero-pressure MDR accumulation costs more per foot than simple powered roller transport.</li>
+<li><strong>Material:</strong> <a href="/industries/food-conveyors/">food-grade stainless</a> costs substantially more than painted carbon steel.</li>
+<li><strong>Controls integration:</strong> PLC programming, HMI screens, networking, and VFDs are a major share of project cost, not an add-on.</li>
+<li><strong>Installation:</strong> structural supports, electrical work, and commissioning add to equipment cost.</li>
+</ul>
+<p>See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors by conveyor type.</p>
+<h2 id="subpages-heading">Packaging Conveyor Guides</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/industries/packaging-line-conveyors/case/">Case Conveyors</a></h3>
+<p class="usa-collection__description">Case erecting, packing, and sealing, and the conveyors that connect them in secondary packaging.</p>
+<p class="usa-collection__description">Case Packing Sealing</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/industries/packaging-line-conveyors/pallet/">Pallet Conveyor Systems</a></h3>
+<p class="usa-collection__description">Chain-driven, roller, and turntable pallet conveyors, load capacity, and stretch wrap integration.</p>
+<p class="usa-collection__description">CDLR Heavy-Duty Palletizer</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/accumulation-conveyors/">Accumulation Conveyors</a></h3>
+<p class="usa-collection__description">Zero-pressure, minimum-pressure, and back-pressure accumulation, sizing, and packaging line buffering.</p>
+<p class="usa-collection__description">ZPA Buffer MDR</p></div></li>
+</ul>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What conveyors are used in a packaging line?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>Belt and <a href="/conveyor-types/tabletop-conveyors/">tabletop chain conveyors</a> for primary packaging, <a href="/conveyor-types/roller-conveyors/">roller</a> and MDR conveyors for cases, <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a> between machines, <a href="/conveyor-types/transfer-conveyors/">transfer conveyors</a> for turns and lane changes, and <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyors</a> for finished loads. Most lines also use reject, laning, and indexing conveyors.</p>
 
-  <!-- Breadcrumb -->
-  <nav class="bg-surface-dim border-b border-border" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <ol class="flex items-center gap-2 text-sm text-ink-muted">
-        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
-        <li class="text-ink-muted/50">/</li>
-        <li><a href="/industries/" class="hover:text-accent transition-colors">Industries</a></li>
-        <li class="text-ink-muted/50">/</li>
-        <li class="text-ink font-semibold">Packaging Line Conveyors</li>
-      </ol>
-    </div>
-  </nav>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is the difference between primary, secondary, and tertiary packaging conveyors?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p><strong>Primary:</strong> handles individual products during filling, capping, and labeling. Requires gentle handling and precise positioning.</p>
+<p><strong>Secondary:</strong> carries cases, cartons, and bundles through case packing, sealing, and shrink wrapping.</p>
+<p><strong>Tertiary:</strong> moves palletized loads to stretch wrappers and shipping docks. Heaviest loads, lowest speeds.</p>
 
-  <!-- Hero / AIO -->
-  <section class="py-24 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Packaging Line Conveyors</div>
-      <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-6">
-        Packaging Conveyor Systems
-      </h1>
-      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl space-y-4">
-        <p>
-          A packaging conveyor system connects every machine on a packaging line, from fillers and sealers through case packers and palletizers to stretch wrappers and shipping docks. It moves product between machines, buffers product when one machine stops, changes lanes for multipacks, and handles elevation changes between floor and mezzanine equipment.
-        </p>
-        <p>
-          The system's job is to keep a single machine stoppage from shutting down the whole line. The table below shows which conveyor types do that work at each stage.
-        </p>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How much accumulation do I need between packaging machines?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>Size each buffer from your line's stop data: enough product to ride through the frequent short stops of the machine it protects without stopping its neighbors. Length = Buffer time (min) x Products per minute x Product pitch (ft). Long stops such as changeovers are usually handled by stopping the line.</p>
 
-  <article>
-  <!-- Conveyor Types for Packaging Lines -->
-  <section class="py-24 bg-surface" aria-labelledby="types-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Conveyor Selection</div>
-      <h2 id="types-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Conveyor Types in a Packaging Line
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Most packaging lines combine five or more conveyor types. The right type depends on product shape, weight, speed, and handling needs at each point in the line.
-        </p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What are the best conveyor buffering systems for high-speed packaging lines?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>No single type is best. Inline zero-pressure accumulation suits cases and fragile cartons. Mass and bi-directional tables hold large volumes of round containers. <a href="/conveyor-types/spiral-conveyors/">Dynamic spiral buffers</a> store product vertically and can keep FIFO order. Serpentine conveyors fit long buffer length into limited floor space. Choose by product stability, order requirements, available space, and the length of stops the buffer must absorb.</p>
 
-        <div class="overflow-x-auto -mx-4 px-4 mt-8">
-          <table class="w-full text-left border-collapse min-w-[750px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Conveyor Type</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Line Stage</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Accumulation</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Cost</th>
-              </tr>
-            </thead>
-            <tbody class="text-base text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/flat-belt-conveyors/" class="text-accent hover:text-accent-hover">Belt conveyor</a></td>
-                <td class="py-4 pr-4">Primary</td>
-                <td class="py-4 pr-4">Pouches, bags, trays, unstable items</td>
-                <td class="py-4 pr-4">Limited (product slides on belt)</td>
-                <td class="py-4 font-mono text-sm">$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover">Tabletop chain</a></td>
-                <td class="py-4 pr-4">Primary</td>
-                <td class="py-4 pr-4">Bottles, cans, jars</td>
-                <td class="py-4 pr-4">Mass accumulation on low-friction chain</td>
-                <td class="py-4 font-mono text-sm">$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover">Powered roller</a></td>
-                <td class="py-4 pr-4">Secondary</td>
-                <td class="py-4 pr-4">Cases, cartons, totes</td>
-                <td class="py-4 pr-4">Minimum-pressure zones</td>
-                <td class="py-4 font-mono text-sm">$$-$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover">MDR</a></td>
-                <td class="py-4 pr-4">Secondary</td>
-                <td class="py-4 pr-4">Case accumulation, zone control</td>
-                <td class="py-4 pr-4">Zero-pressure zones</td>
-                <td class="py-4 font-mono text-sm">$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover">Transfer</a></td>
-                <td class="py-4 pr-4">All stages</td>
-                <td class="py-4 pr-4">Right-angle turns, lane changes</td>
-                <td class="py-4 pr-4">None</td>
-                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-semibold text-ink"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet conveyor</a></td>
-                <td class="py-4 pr-4">Tertiary</td>
-                <td class="py-4 pr-4">Palletized loads to stretch wrap and dock</td>
-                <td class="py-4 pr-4">Pallet positions</td>
-                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What conveyor speed do I need for my packaging line?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>Speed (FPM) = Products/min x (Product length + gap, in inches) / 12. Add headroom above peak throughput so the conveyor never limits the machines, and run conveyors feeding a machine at or slightly above that machine's rate.</p>
 
-  <!-- Primary / Secondary / Tertiary Packaging Flow -->
-  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="flow-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Packaging Flow</div>
-      <h2 id="flow-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Primary, Secondary &#x26; Tertiary Packaging Conveyors
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Primary Packaging Conveyors</h3>
-        <p>
-          Primary packaging conveyors handle individual products during filling, sealing, capping, and labeling. They need precise positioning, gentle handling, and consistent spacing. <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Indexing conveyors</a> stop products at exact points for fill heads, cappers, labelers, and vision inspection. <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Tabletop chain conveyors</a> carry bottles, cans, and jars because the flat chain surface resists tipping.
-        </p>
-        <p>
-          Product-contact conveyors in food plants need <a href="/industries/food-conveyors/" class="text-accent hover:text-accent-hover font-semibold">food-grade construction</a> with food-contact belt materials and stainless frames. Pharmaceutical lines need GMP-compliant designs.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Secondary Packaging Conveyors</h3>
-        <p>
-          Secondary packaging conveyors move sealed cases, cartons, bundles, trays, and shrink-wrapped multipacks, so food-contact rules typically do not apply, though some food safety audit schemes require washdown capability in these zones too. <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Roller conveyors</a> (gravity, powered, and <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR</a>) carry most of this traffic because flat, rigid case bottoms ride well on rollers. See <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing and case conveyors</a> for this stage in detail.
-        </p>
-        <p>
-          <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Laning and collating conveyors</a> split single-file product into lanes for case packing. <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">Reject conveyors</a> divert out-of-spec product, checkweigher failures, and metal detector rejects.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Tertiary Packaging Conveyors</h3>
-        <p>
-          Tertiary conveyors move palletized loads from palletizer discharge through stretch wrapping to staging and shipping. <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">Pallet conveyors</a> carry the heaviest loads on the line, and <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">chain-driven live roller (CDLR)</a> is the common type. <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Transfer conveyors</a> (turntables, right-angle and chain transfers) route pallets between lanes, storage rows, and dock doors.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Packaging Line Layout -->
-  <section class="py-24 bg-surface" aria-labelledby="layout-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Line Layout</div>
-      <h2 id="layout-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Packaging Line Layout and Integration Points
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Layout sets floor space use, operator and maintenance access, and fork truck routes. Conveyor crossovers, guarding, and emergency stops must meet <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">ASME B20.1</a>, the U.S. safety standard for conveyors. Three layout patterns cover most lines.
-        </p>
-        <ul class="list-disc list-inside space-y-3 ml-2">
-          <li><strong class="text-ink">Straight line:</strong> filler to palletizer in one run. Fewest transfers and simplest conveyor design, but needs the most floor length. Suits single-product lines with few changeovers.</li>
-          <li><strong class="text-ink">U-shape:</strong> the line starts and ends on the same wall, so receiving and shipping share a side. Shortens fork truck travel and lets operators see both ends. Needs 180-degree turns using <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfers</a> or <a href="/conveyor-types/curved-conveyors/" class="text-accent hover:text-accent-hover font-semibold">curves</a>.</li>
-          <li><strong class="text-ink">L-shape:</strong> one 90-degree turn fits the line to the building. Common when primary packaging runs along one wall and secondary and tertiary along the next.</li>
-        </ul>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Key Integration Points</h3>
-        <p>
-          Most conveyor problems show up where conveyors hand product to a machine. Each integration point needs the right conveyor type, speed matching, and controls coordination.
-        </p>
-      </div>
-
-      <div class="overflow-x-auto -mx-4 px-4 mt-8">
-        <table class="w-full text-left border-collapse min-w-[700px]">
-          <thead>
-            <tr class="border-b-2 border-ink">
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Integration Point</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Conveyor Type</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Requirement</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Common Problem</th>
-            </tr>
-          </thead>
-          <tbody class="text-base text-ink-muted">
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Filler to capper</td>
-              <td class="py-4 pr-4">Belt / tabletop chain</td>
-              <td class="py-4 pr-4">Speed match, gentle handling</td>
-              <td class="py-4">Tipping, spacing errors</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Labeler to case packer</td>
-              <td class="py-4 pr-4">Belt + accumulation</td>
-              <td class="py-4 pr-4">Accumulation buffer</td>
-              <td class="py-4">Case packer starved after upstream stops</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Case packer to sealer</td>
-              <td class="py-4 pr-4">Powered roller / MDR</td>
-              <td class="py-4 pr-4">Tracking, orientation</td>
-              <td class="py-4">Skewed cases, open flaps</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Sealer to palletizer</td>
-              <td class="py-4 pr-4">Roller + laning</td>
-              <td class="py-4 pr-4">Pattern formation</td>
-              <td class="py-4">Gaps and wrong orientation at pattern forming</td>
-            </tr>
-            <tr>
-              <td class="py-4 pr-4 font-semibold text-ink">Palletizer to stretch wrap</td>
-              <td class="py-4 pr-4"><a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover">Pallet conveyor</a> / <a href="/conveyor-types/pallet-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a></td>
-              <td class="py-4 pr-4">Heavy load, low speed</td>
-              <td class="py-4">Pallet queueing, load shift</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accumulation -->
-  <section class="py-24 bg-surface-dim bg-dots" aria-labelledby="accumulation-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Accumulation</div>
-      <h2 id="accumulation-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Accumulation and Buffering for Packaging Lines
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Every machine on a packaging line stops periodically for jam clears, changeovers, roll changes, and minor faults. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> absorb those stops so upstream and downstream machines keep running. Without them, a short jam at the case sealer stops the filler, the labeler, and the palletizer.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Sizing Buffers</h3>
-        <p class="font-mono text-ink bg-surface px-4 py-3 border border-border">
-          <strong>Accumulation Length (ft) = Buffer Time (min) x Products/min x Product Pitch (ft)</strong>
-        </p>
-        <p>
-          Product pitch is product length plus the gap between products. Set buffer time from the line's own stop data: the buffer should ride through the frequent short stops of the machine it protects without stopping its neighbors. Long stops such as changeovers and breakdowns are usually handled by stopping the line, not by buffer.
-        </p>
-        <p>
-          Buffers only refill if machines around them can run faster than the line rate. Most lines use a V-curve: the critical machine, usually the filler, has the lowest rated speed, and machines upstream and downstream are rated progressively faster so they can refill and drain buffers after a stop.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Buffering Options for High-Speed Lines</h3>
-      </div>
-
-      <div class="overflow-x-auto -mx-4 px-4 mt-4">
-        <table class="w-full text-left border-collapse min-w-[750px]">
-          <thead>
-            <tr class="border-b-2 border-ink">
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Buffer Type</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Product Order</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Space Use</th>
-              <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Best For</th>
-            </tr>
-          </thead>
-          <tbody class="text-base text-ink-muted">
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Inline accumulation (ZPA, minimum pressure)</td>
-              <td class="py-4 pr-4">FIFO</td>
-              <td class="py-4 pr-4">Horizontal length</td>
-              <td class="py-4">Cases, printed or fragile cartons</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink">Mass or bi-directional accumulation table</td>
-              <td class="py-4 pr-4">FIFO or LIFO, by design</td>
-              <td class="py-4 pr-4">Wide floor area</td>
-              <td class="py-4">Bottles, cans, jars in mass</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Dynamic spiral buffer</a></td>
-              <td class="py-4 pr-4">FIFO (inline) or LIFO (offline)</td>
-              <td class="py-4 pr-4">Vertical, small footprint</td>
-              <td class="py-4">Large buffers where floor space is tight</td>
-            </tr>
-            <tr>
-              <td class="py-4 pr-4 font-semibold text-ink"><a href="/conveyor-types/serpentine-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Serpentine / storage conveyor</a></td>
-              <td class="py-4 pr-4">FIFO</td>
-              <td class="py-4 pr-4">Compact floor area</td>
-              <td class="py-4">Long buffer length in a rectangular footprint</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4 mt-8">
-        <p>
-          Choose by product stability, whether product order must be kept (for lot or date code control), and available floor or vertical space. Zero-pressure (ZPA) keeps products from touching and costs the most. Minimum-pressure allows light contact and suits rigid cases. Back-pressure accumulation suits only heavy, rigid products that tolerate contact. See <a href="/conveyor-types/buffer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">buffer conveyors</a> for FIFO and LIFO buffer design in depth.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Controls and Speed Matching -->
-  <section class="py-24 bg-surface" aria-labelledby="controls-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Controls</div>
-      <h2 id="controls-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-8">
-        Speed Matching and Line Control
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-        <p>
-          Every conveyor must match speed with the machines on either side. Mismatches cause jams, spacing errors, and machine starvation. The line PLC, or the individual machine controllers, coordinates conveyor speeds, accumulation zones, and start and stop sequences. <a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold">OMAC PackML</a> defines a standard machine state model that simplifies coordination when machines come from different suppliers.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Variable Frequency Drives (VFDs)</h3>
-        <p>
-          <a href="/resources/conveyor-motors-drives/" class="text-accent hover:text-accent-hover font-semibold">VFDs</a> set motor speed by varying frequency and voltage, so speed changes from the PLC or HMI without gearbox changes. They also soft-start conveyors, which reduces mechanical shock on belts and chains.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Photo-Eye Sensors</h3>
-        <p>
-          Photo-eyes detect product at accumulation zones, transfer points, and machine infeeds. They trigger conveyor start and stop, zone release in MDR accumulation, and jam faults. Food-grade lines need stainless or sealed housings rated to the appropriate IP level.
-        </p>
-
-        <h3 class="font-display text-2xl font-extrabold text-ink tracking-wide mt-8 mb-4">Line Speed Calculation</h3>
-        <p class="font-mono text-ink bg-surface-dim px-4 py-3 border border-border">
-          <strong>Speed (FPM) = Products/min x (Product Length + Gap in inches) / 12</strong>
-        </p>
-        <p class="mt-4">
-          Add speed headroom above peak throughput so the conveyor never limits the machines. In <a href="/resources/automated-conveyor-systems/" class="text-accent hover:text-accent-hover font-semibold">automated conveyor systems</a>, the controller adjusts speed from sensor inputs and machine status.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cost Factors -->
-  <section class="py-24 bg-ink-light" aria-labelledby="cost-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent-bright mb-4">Cost Factors</div>
-      <h2 id="cost-heading" class="font-display text-4xl font-extrabold text-white tracking-wide mb-8">
-        Packaging Line Conveyor Cost Drivers
-      </h2>
-      <div class="text-lg text-white/60 leading-relaxed space-y-4">
-        <ul class="list-disc list-inside space-y-3 ml-2 text-white/60">
-          <li><strong class="text-white">Total footage:</strong> more length costs more, but not linearly. Longer runs spread fixed costs (drives, controls) over more footage.</li>
-          <li><strong class="text-white">Transfers, merges, and diverts:</strong> each is a discrete unit and costs far more per foot than straight conveyor.</li>
-          <li><strong class="text-white">Accumulation:</strong> zero-pressure MDR accumulation costs more per foot than simple powered roller transport.</li>
-          <li><strong class="text-white">Material:</strong> <a href="/industries/food-conveyors/" class="text-accent-bright hover:text-white font-semibold">food-grade stainless</a> costs substantially more than painted carbon steel.</li>
-          <li><strong class="text-white">Controls integration:</strong> PLC programming, HMI screens, networking, and VFDs are a major share of project cost, not an add-on.</li>
-          <li><strong class="text-white">Installation:</strong> structural supports, electrical work, and commissioning add to equipment cost.</li>
-        </ul>
-        <p>
-          See the <a href="/resources/conveyor-cost-guide/" class="text-accent-bright hover:text-white font-semibold">conveyor cost guide</a> for cost factors by conveyor type.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sub-pages -->
-  <section class="py-24 bg-surface" aria-labelledby="subpages-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Deep Dives</div>
-      <h2 id="subpages-heading" class="font-display text-4xl font-extrabold text-ink tracking-wide mb-10">
-        Packaging Conveyor <span class="text-accent">Guides</span>
-      </h2>
-      <div class="grid md:grid-cols-3 gap-5">
-        <a href="/industries/packaging-line-conveyors/case/" class="card group p-7 flex flex-col">
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Case Conveyors</h3>
-          <p class="text-base text-ink-muted leading-relaxed">Case erecting, packing, and sealing, and the conveyors that connect them in secondary packaging.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Case Packing</span>
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Sealing</span>
-          </div>
-        </a>
-        <a href="/industries/packaging-line-conveyors/pallet/" class="card group p-7 flex flex-col">
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Pallet Conveyor Systems</h3>
-          <p class="text-base text-ink-muted leading-relaxed">Chain-driven, roller, and turntable pallet conveyors, load capacity, and stretch wrap integration.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">CDLR</span>
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Heavy-Duty</span>
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Palletizer</span>
-          </div>
-        </a>
-        <a href="/conveyor-types/accumulation-conveyors/" class="card group p-7 flex flex-col">
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-3">Accumulation Conveyors</h3>
-          <p class="text-base text-ink-muted leading-relaxed">Zero-pressure, minimum-pressure, and back-pressure accumulation, sizing, and packaging line buffering.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">ZPA</span>
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">Buffer</span>
-            <span class="text-sm font-semibold px-3 py-1 bg-ink/5 text-ink">MDR</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  </article>
-
-  <!-- FAQ -->
-  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
-      </h2>
-
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What conveyors are used in a packaging line?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Belt and <a href="/conveyor-types/tabletop-conveyors/" class="text-accent hover:text-accent-hover font-semibold">tabletop chain conveyors</a> for primary packaging, <a href="/conveyor-types/roller-conveyors/" class="text-accent hover:text-accent-hover font-semibold">roller</a> and MDR conveyors for cases, <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a> between machines, <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">transfer conveyors</a> for turns and lane changes, and <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">pallet conveyors</a> for finished loads. Most lines also use reject, laning, and indexing conveyors.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is the difference between primary, secondary, and tertiary packaging conveyors?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p><strong class="text-ink">Primary:</strong> handles individual products during filling, capping, and labeling. Requires gentle handling and precise positioning.</p>
-            <p><strong class="text-ink">Secondary:</strong> carries cases, cartons, and bundles through case packing, sealing, and shrink wrapping.</p>
-            <p><strong class="text-ink">Tertiary:</strong> moves palletized loads to stretch wrappers and shipping docks. Heaviest loads, lowest speeds.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            How much accumulation do I need between packaging machines?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Size each buffer from your line's stop data: enough product to ride through the frequent short stops of the machine it protects without stopping its neighbors. Length = Buffer time (min) x Products per minute x Product pitch (ft). Long stops such as changeovers are usually handled by stopping the line.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What are the best conveyor buffering systems for high-speed packaging lines?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>No single type is best. Inline zero-pressure accumulation suits cases and fragile cartons. Mass and bi-directional tables hold large volumes of round containers. <a href="/conveyor-types/spiral-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Dynamic spiral buffers</a> store product vertically and can keep FIFO order. Serpentine conveyors fit long buffer length into limited floor space. Choose by product stability, order requirements, available space, and the length of stops the buffer must absorb.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What conveyor speed do I need for my packaging line?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Speed (FPM) = Products/min x (Product length + gap, in inches) / 12. Add headroom above peak throughput so the conveyor never limits the machines, and run conveyors feeding a machine at or slightly above that machine's rate.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Resources -->
-  <section class="py-16 bg-surface" aria-labelledby="related-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="related-heading" class="font-display text-3xl font-extrabold text-ink tracking-wide mb-8">
-        Related Resources
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/conveyor-types/buffer-conveyors/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Buffer Conveyors</div>
-          <div class="text-sm text-ink-muted mt-1">FIFO and LIFO buffer design</div>
-        </a>
-        <a href="/conveyor-functions/tray-loading/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Tray Loading</div>
-          <div class="text-sm text-ink-muted mt-1">Tray loading, denesting, and unloading</div>
-        </a>
-        <a href="/conveyor-functions/collating-laning/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Collating &#x26; Laning</div>
-          <div class="text-sm text-ink-muted mt-1">Multi-lane product distribution</div>
-        </a>
-        <a href="/resources/conveyor-cost-guide/" class="card group p-5">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors">Cost Guide</div>
-          <div class="text-sm text-ink-muted mt-1">Pricing factors and budget planning</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
+</div>
+</div>
+<h2 id="related-heading">Related Resources</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/buffer-conveyors/">Buffer Conveyors</a></h3>
+<p class="usa-collection__description">FIFO and LIFO buffer design</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/tray-loading/">Tray Loading</a></h3>
+<p class="usa-collection__description">Tray loading, denesting, and unloading</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/collating-laning/">Collating &amp; Laning</a></h3>
+<p class="usa-collection__description">Multi-lane product distribution</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-cost-guide/">Cost Guide</a></h3>
+<p class="usa-collection__description">Pricing factors and budget planning</p></div></li>
+</ul>
 </BaseLayout>

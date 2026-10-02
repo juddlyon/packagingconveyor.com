@@ -127,433 +127,170 @@ const faqSchema = {
 
 <BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Conveyor manufacturers organized by type, industry, and capability: belt, roller, modular plastic, sanitary, and specialty conveyor builders." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema, directorySchema]}>
 
-  <!-- ═══ HERO + FILTERS (compact) ═══ -->
-  <article>
-    <section class="bg-blueprint relative overflow-hidden" id="directory">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">
-        <nav class="text-sm font-mono text-white/60 mb-6" aria-label="Breadcrumb">
-          <a href="/" class="hover:text-white/70">Home</a>
-          <span class="mx-2">/</span>
-          <a href="/resources/" class="hover:text-white/70">Resources</a>
-          <span class="mx-2">/</span>
-          <span class="text-white/70">Manufacturer Directory</span>
-        </nav>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-wide uppercase leading-[0.95] mb-4">
-          Conveyor <span class="text-accent-bright">Manufacturer</span> Directory
-        </h1>
-        <p class="text-base text-white/50 max-w-2xl mb-8">
-          {manufacturers.length} manufacturers and integrators organized by conveyor type. Independent listings, no commissions. <a href="/resources/conveyor-companies/" class="text-accent-bright/70 hover:text-accent-bright">Find companies near you &rarr;</a>
-        </p>
+<h1>Conveyor Manufacturer Directory</h1>
+<p class="usa-intro">{manufacturers.length} manufacturers and integrators organized by conveyor type. Independent listings, no commissions. <a href="/resources/conveyor-companies/">Find companies near you</a>.</p>
+<form class="dir-filters" role="search" aria-label="Filter manufacturers" onsubmit="return false">
+  <div class="usa-form-group">
+    <label class="usa-label" for="dir-search">Search by name, specialty, or location</label>
+    <input class="usa-input" id="dir-search" name="dir-search" type="search" autocomplete="off" />
+  </div>
+  <div class="usa-form-group">
+    <label class="usa-label" for="dir-category">Category</label>
+    <select class="usa-select" id="dir-category" name="dir-category">
+      <option value="">All categories</option>
+      {allCategories.map(c => <option value={c}>{c}</option>)}
+    </select>
+  </div>
+  <div class="usa-form-group">
+    <label class="usa-label" for="dir-type">Company type</label>
+    <select class="usa-select" id="dir-type" name="dir-type">
+      <option value="">All types</option>
+      {allTypes.map(t => <option value={t}>{t}</option>)}
+    </select>
+  </div>
+</form>
+<div class="dir-toolbar">
+  <p id="dir-count" aria-live="polite">{manufacturers.length} companies</p>
+  <ul class="usa-button-group usa-button-group--segmented" aria-label="Sort by">
+    <li class="usa-button-group__item"><button type="button" class="usa-button dir-sort" data-sort="name" aria-pressed="true">Name</button></li>
+    <li class="usa-button-group__item"><button type="button" class="usa-button usa-button--outline dir-sort" data-sort="hq" aria-pressed="false">Location</button></li>
+    <li class="usa-button-group__item"><button type="button" class="usa-button usa-button--outline dir-sort" data-sort="type" aria-pressed="false">Type</button></li>
+  </ul>
+</div>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Manufacturer directory (table)">
+  <table class="usa-table usa-table--compact stack-mobile" id="dir-table">
+    <thead>
+      <tr><th scope="col">Company</th><th scope="col">Known for</th><th scope="col">Category</th><th scope="col">Headquarters</th></tr>
+    </thead>
+    <tbody id="dir-tbody">
+      {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => (
+        <tr class="dir-row" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
+          <td data-label="Company">
+            {m.website ? <a href={m.website} target="_blank" rel="noopener noreferrer"><strong>{m.name}</strong></a> : <strong>{m.name}</strong>}
+            <br /><span class="usa-tag">{m.type}</span>
+          </td>
+          <td data-label="Known for">{m.knownFor}</td>
+          <td data-label="Category">{m.categories.join(', ')}</td>
+          <td data-label="Headquarters">{m.hq}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<div id="dir-empty" class="usa-alert usa-alert--info usa-alert--slim" hidden>
+  <div class="usa-alert__body"><p class="usa-alert__text">No manufacturers match your filters. <button type="button" id="dir-reset" class="usa-button usa-button--unstyled">Clear all filters</button></p></div>
+</div>
+<h2 id="choosing-heading">How to Choose a Conveyor Manufacturer</h2>
+<h3>Start With Your Application, Not the Manufacturer</h3>
+<p>Define your requirements before contacting vendors: product dimensions and weight, throughput rate, environment (ambient, washdown, cleanroom, outdoor), regulatory requirements (FDA, USDA, ATEX, Class 100), and integration points with upstream and downstream equipment. A clear specification reduces quote variance and helps you compare vendors on equal terms. See our <a href="/resources/conveyor-cost-guide/">cost guide</a> for factors that drive pricing.</p>
+<h3>Evaluate Industry Experience</h3>
+<p>A manufacturer that has built 200 <a href="/industries/food-conveyors/bakery/">bakery conveyors</a> will anticipate problems, flour dust ingress, high-temperature exposure, sanitation protocols, that a general-purpose builder may not. Ask for case studies or references in your specific industry. If the manufacturer cannot provide them, that does not disqualify them, but it means you should scrutinize their design more carefully.</p>
+<h3>Consider Total Cost of Ownership</h3>
+<p>The purchase price is one component of conveyor cost. Long-term costs include energy consumption, <a href="/resources/conveyor-parts/">replacement parts</a> (belts, rollers, bearings, motors), maintenance labor, and downtime. A conveyor with standard catalog parts from multiple suppliers will cost less to maintain than one with proprietary components available only from the OEM. Ask manufacturers what percentage of wear parts are standard versus proprietary.</p>
+<h3>Geographic Proximity Matters</h3>
+<p>For installation support, emergency service, and parts delivery, proximity reduces response time and travel costs. This does not mean you must buy local, many manufacturers service nationally, but a company with a service center within a few hours of your facility can respond to breakdowns faster. See our <a href="/resources/conveyor-companies/">conveyor companies near you</a> guide for regional search strategies.</p>
+<h3>Get Multiple Quotes</h3>
+<p>Request quotes from at least 2-3 manufacturers. Ensure all vendors are quoting on the same specification: same conveyor type, length, width, speed, load capacity, material of construction, controls scope, and installation scope. Price differences of 20-40% between qualified vendors are common and reflect differences in manufacturing approach, overhead structure, and local market conditions, not necessarily quality differences.</p>
+<h2 id="associations-heading">Industry Associations &amp; Directories</h2>
+<p>Beyond this directory, the following industry associations maintain member directories that can help you identify conveyor manufacturers for specific applications:</p>
+<h3><a href="https://www.cema.org" target="_blank" rel="noopener noreferrer">CEMA</a></h3>
+<p>Conveyor Equipment Manufacturers Association, trade association for North American conveyor manufacturers. Member directory organized by conveyor type.</p>
+<h3><a href="https://www.mhi.org" target="_blank" rel="noopener noreferrer">MHI</a></h3>
+<p>Material Handling Industry, parent organization covering conveyors, AGVs, robotics, and warehouse automation. Hosts ProMat and MODEX trade shows.</p>
+<h3><a href="https://www.pmmi.org" target="_blank" rel="noopener noreferrer">PMMI</a></h3>
+<p>Association for Packaging and Processing Technologies, members include packaging machinery and conveyor manufacturers. Hosts PACK EXPO trade shows.</p>
+<h3>Thomas</h3>
+<p>Thomasnet.com, industrial supplier directory with detailed company profiles, certifications, and capabilities filtering for conveyor manufacturers.</p>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">Who are the largest conveyor manufacturers?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry, a company that dominates warehouse sortation may not build sanitary food conveyors.</p>
 
-        <!-- Filters & Search (in hero) -->
-        <div class="flex flex-col sm:flex-row gap-3">
-          <div class="relative flex-1 max-w-md">
-            <input
-              type="text"
-              id="dir-search"
-              placeholder="Search by name, specialty, or location..."
-              class="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white text-base font-sans placeholder:text-white/40 focus:outline-none focus:border-accent-bright focus:ring-1 focus:ring-accent-bright"
-              autocomplete="off"
-            />
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          </div>
-          <select id="dir-category" class="px-4 py-3 pr-10 bg-white/10 border border-white/20 text-white text-base font-sans focus:outline-none focus:border-accent-bright cursor-pointer min-w-[160px] appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22rgba(255%2C255%2C255%2C0.5)%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_12px_center] bg-no-repeat">
-            <option value="">All Categories</option>
-            {allCategories.map(c => <option value={c} class="text-ink bg-surface">{c}</option>)}
-          </select>
-          <select id="dir-type" class="px-4 py-3 pr-10 bg-white/10 border border-white/20 text-white text-base font-sans focus:outline-none focus:border-accent-bright cursor-pointer min-w-[160px] appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22rgba(255%2C255%2C255%2C0.5)%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_12px_center] bg-no-repeat">
-            <option value="">All Types</option>
-            {allTypes.map(t => <option value={t} class="text-ink bg-surface">{t}</option>)}
-          </select>
-        </div>
-      </div>
-    </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How do I choose a conveyor manufacturer?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>Start by defining your application requirements: product type, weight, speed, environment (washdown, cleanroom, outdoor), and any regulatory standards (FDA, USDA, ATEX). Then evaluate manufacturers based on relevant experience in your industry, geographic proximity for service and installation, lead time, warranty terms, parts availability, and controls integration capability. Request references from similar installations and ask for a factory visit or demo if possible.</p>
 
-    <!-- ═══ DIRECTORY TABLE ═══ -->
-    <section class="py-6 bg-surface-dim">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Result count & sort -->
-        <div class="flex items-center justify-between mb-4">
-          <p id="dir-count" class="text-sm font-mono text-ink-muted">{manufacturers.length} companies</p>
-          <div class="flex items-center gap-2 text-sm font-sans text-ink-muted">
-            <span>Sort:</span>
-            <button data-sort="name" class="dir-sort px-2 py-1 font-semibold text-accent border-b-2 border-accent" aria-pressed="true">Name</button>
-            <button data-sort="hq" class="dir-sort px-2 py-1 font-semibold text-ink-muted hover:text-ink border-b-2 border-transparent" aria-pressed="false">Location</button>
-            <button data-sort="type" class="dir-sort px-2 py-1 font-semibold text-ink-muted hover:text-ink border-b-2 border-transparent" aria-pressed="false">Type</button>
-          </div>
-        </div>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the difference between a conveyor manufacturer and an integrator?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>A conveyor manufacturer designs and builds conveyor equipment, they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management.</p>
 
-        <!-- Directory Table (desktop) -->
-        <div class="hidden md:block overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse table-fixed" id="dir-table">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-6" style="width:30%">Company</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4" style="width:40%">Known For</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4" style="width:14%">Category</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4" style="width:16%">Headquarters</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-muted" id="dir-tbody">
-              {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => {
-                const domain = m.website ? new URL(m.website).hostname.replace('www.', '') : null;
-                return (
-                <tr class="border-b border-border dir-row align-top" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
-                  <td class="py-4 pr-6 font-semibold text-ink">
-                    <div class="flex items-start gap-3">
-                      {domain ? (
-                        <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="20" height="20" class="flex-shrink-0 rounded-sm mt-0.5" loading="lazy" />
-                      ) : (
-                        <div class="w-5 h-5 flex-shrink-0 rounded-sm mt-0.5 bg-ink/10"></div>
-                      )}
-                      <div>
-                        {m.website ? (
-                          <a href={m.website} target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-hover font-semibold inline-flex items-center gap-1.5 group text-base">
-                            {m.name}
-                            <svg class="w-3.5 h-3.5 opacity-30 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                          </a>
-                        ) : (
-                          <span>{m.name}</span>
-                        )}
-                        <div class="mt-1">
-                          <span class={`text-xs font-mono font-semibold px-1.5 py-0.5 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-4 pr-4 text-sm leading-relaxed align-top">{m.knownFor}</td>
-                  <td class="py-4 pr-4 align-top">
-                    <div class="flex flex-wrap gap-1">
-                      {m.categories.map(c => (
-                        <span class="text-xs font-mono font-semibold px-2 py-0.5 bg-ink/5 text-ink-muted">{c}</span>
-                      ))}
-                    </div>
-                  </td>
-                  <td class="py-4 text-sm align-top">{m.hq}</td>
-                </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">Do conveyor manufacturers sell direct or through distributors?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>It varies by company. Some manufacturers like Dorner and mk North America sell both direct and through distributor networks. Others like Hytrol sell primarily through a network of integration partners. Large system manufacturers like Dematic and Honeywell Intelligrated typically sell direct through their own sales engineering teams. For packaging-specific conveyors, many manufacturers sell direct because the applications require custom engineering. Always check the manufacturer's website for their preferred sales channel in your region.</p>
 
-        <!-- Directory Cards (mobile) -->
-        <div class="md:hidden space-y-2" id="dir-cards">
-          {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => {
-            const domain = m.website ? new URL(m.website).hostname.replace('www.', '') : null;
-            return (
-            <div class="dir-card border border-border bg-surface p-4" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
-              <div class="flex items-center gap-3 mb-2">
-                {domain ? (
-                  <img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`} alt="" width="24" height="24" class="flex-shrink-0 rounded-sm" loading="lazy" />
-                ) : (
-                  <div class="w-6 h-6 flex-shrink-0 rounded-sm bg-ink/10"></div>
-                )}
-                <div class="flex-1 min-w-0">
-                  {m.website ? (
-                    <a href={m.website} target="_blank" rel="noopener noreferrer" class="font-display text-lg font-bold uppercase tracking-wider text-accent hover:text-accent-hover inline-flex items-center gap-1.5 group">
-                      {m.name}
-                      <svg class="w-3.5 h-3.5 opacity-30 group-hover:opacity-100 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    </a>
-                  ) : (
-                    <span class="font-display text-lg font-bold uppercase tracking-wider text-ink">{m.name}</span>
-                  )}
-                </div>
-                <span class={`text-xs font-mono font-semibold px-2 py-0.5 flex-shrink-0 ${m.type === 'Integrator' ? 'bg-accent/10 text-accent' : 'bg-ink/5 text-ink-muted'}`}>{m.type}</span>
-              </div>
-              <p class="text-sm text-ink-muted leading-relaxed mb-2">{m.knownFor}</p>
-              <div class="flex items-center justify-between">
-                <div class="flex flex-wrap gap-1">
-                  {m.categories.map(c => (
-                    <span class="text-xs font-mono font-semibold px-2 py-0.5 bg-ink/5 text-ink-muted">{c}</span>
-                  ))}
-                </div>
-                <span class="text-ink-muted text-xs flex-shrink-0 ml-2">{m.hq}</span>
-              </div>
-            </div>
-            );
-          })}
-        </div>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">Can I buy conveyor parts from any manufacturer?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>Many conveyor components, rollers, bearings, motors, VFDs, belting, and chain, are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability.</p>
 
-        <!-- No results message -->
-        <div id="dir-empty" class="hidden py-16 text-center">
-          <p class="text-lg text-ink-muted">No manufacturers match your filters.</p>
-          <button id="dir-reset" class="mt-4 text-accent hover:text-accent-hover font-semibold text-base">Clear all filters</button>
-        </div>
-      </div>
-    </section>
+</div>
+</div>
+<h2 id="related-heading">Related Resources</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/custom/">Custom Conveyor Design</a></h3>
+<p class="usa-collection__description">When to go custom vs. catalog: process, costs, and lead times for custom-engineered conveyor systems.</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-companies/">Conveyor Companies Near You</a></h3>
+<p class="usa-collection__description">How to find and evaluate conveyor companies and integrators in your region.</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-parts/">Conveyor Parts &amp; Replacement</a></h3>
+<p class="usa-collection__description">Guide to conveyor wear parts: rollers, bearings, belts, motors, drives, and guards.</p></div></li>
+</ul>
+<script>
+  const search = document.getElementById('dir-search') as HTMLInputElement | null;
+  const catFilter = document.getElementById('dir-category') as HTMLSelectElement | null;
+  const typeFilter = document.getElementById('dir-type') as HTMLSelectElement | null;
+  const countEl = document.getElementById('dir-count');
+  const emptyEl = document.getElementById('dir-empty');
+  const resetBtn = document.getElementById('dir-reset');
+  const tbody = document.getElementById('dir-tbody');
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('.dir-row'));
+  const sortBtns = document.querySelectorAll<HTMLButtonElement>('.dir-sort');
 
-    <!-- ═══ CHOOSING A MANUFACTURER ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="choosing-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Selection Guide</div>
-        <h2 id="choosing-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          How to <span class="text-accent">Choose</span> a Conveyor Manufacturer
-        </h2>
-
-        <div class="max-w-4xl space-y-8">
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Start With Your Application, Not the Manufacturer</h3>
-            <p class="text-lg text-ink-muted leading-relaxed">
-              Define your requirements before contacting vendors: product dimensions and weight, throughput rate, environment (ambient, washdown, cleanroom, outdoor), regulatory requirements (FDA, USDA, ATEX, Class 100), and integration points with upstream and downstream equipment. A clear specification reduces quote variance and helps you compare vendors on equal terms. See our <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">cost guide</a> for factors that drive pricing.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Evaluate Industry Experience</h3>
-            <p class="text-lg text-ink-muted leading-relaxed">
-              A manufacturer that has built 200 <a href="/industries/food-conveyors/bakery/" class="text-accent hover:text-accent-hover font-semibold">bakery conveyors</a> will anticipate problems, flour dust ingress, high-temperature exposure, sanitation protocols, that a general-purpose builder may not. Ask for case studies or references in your specific industry. If the manufacturer cannot provide them, that does not disqualify them, but it means you should scrutinize their design more carefully.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Consider Total Cost of Ownership</h3>
-            <p class="text-lg text-ink-muted leading-relaxed">
-              The purchase price is one component of conveyor cost. Long-term costs include energy consumption, <a href="/resources/conveyor-parts/" class="text-accent hover:text-accent-hover font-semibold">replacement parts</a> (belts, rollers, bearings, motors), maintenance labor, and downtime. A conveyor with standard catalog parts from multiple suppliers will cost less to maintain than one with proprietary components available only from the OEM. Ask manufacturers what percentage of wear parts are standard versus proprietary.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Geographic Proximity Matters</h3>
-            <p class="text-lg text-ink-muted leading-relaxed">
-              For installation support, emergency service, and parts delivery, proximity reduces response time and travel costs. This does not mean you must buy local, many manufacturers service nationally, but a company with a service center within a few hours of your facility can respond to breakdowns faster. See our <a href="/resources/conveyor-companies/" class="text-accent hover:text-accent-hover font-semibold">conveyor companies near you</a> guide for regional search strategies.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Get Multiple Quotes</h3>
-            <p class="text-lg text-ink-muted leading-relaxed">
-              Request quotes from at least 2-3 manufacturers. Ensure all vendors are quoting on the same specification: same conveyor type, length, width, speed, load capacity, material of construction, controls scope, and installation scope. Price differences of 20-40% between qualified vendors are common and reflect differences in manufacturing approach, overhead structure, and local market conditions, not necessarily quality differences.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ MANUFACTURER ASSOCIATIONS ═══ -->
-    <section class="py-20 bg-ink-light" aria-labelledby="associations-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent-bright mb-4">Industry Resources</div>
-        <h2 id="associations-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-wide uppercase mb-10">
-          Industry <span class="text-accent-bright">Associations</span> &#x26; Directories
-        </h2>
-
-        <div class="max-w-4xl space-y-6">
-          <p class="text-lg text-white/60 leading-relaxed">
-            Beyond this directory, the following industry associations maintain member directories that can help you identify conveyor manufacturers for specific applications:
-          </p>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="border border-white/10 p-6">
-              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white mb-2"><a href="https://www.cema.org" target="_blank" rel="noopener noreferrer" class="text-accent-bright hover:text-white font-semibold">CEMA</a></h3>
-              <p class="text-white/60 leading-relaxed">Conveyor Equipment Manufacturers Association, trade association for North American conveyor manufacturers. Member directory organized by conveyor type.</p>
-            </div>
-            <div class="border border-white/10 p-6">
-              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white mb-2"><a href="https://www.mhi.org" target="_blank" rel="noopener noreferrer" class="text-accent-bright hover:text-white font-semibold">MHI</a></h3>
-              <p class="text-white/60 leading-relaxed">Material Handling Industry, parent organization covering conveyors, AGVs, robotics, and warehouse automation. Hosts ProMat and MODEX trade shows.</p>
-            </div>
-            <div class="border border-white/10 p-6">
-              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white mb-2"><a href="https://www.pmmi.org" target="_blank" rel="noopener noreferrer" class="text-accent-bright hover:text-white font-semibold">PMMI</a></h3>
-              <p class="text-white/60 leading-relaxed">Association for Packaging and Processing Technologies, members include packaging machinery and conveyor manufacturers. Hosts PACK EXPO trade shows.</p>
-            </div>
-            <div class="border border-white/10 p-6">
-              <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white mb-2">Thomas</h3>
-              <p class="text-white/60 leading-relaxed">Thomasnet.com, industrial supplier directory with detailed company profiles, certifications, and capabilities filtering for conveyor manufacturers.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ FAQ ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="faq-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">FAQ</div>
-        <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Frequently Asked <span class="text-accent">Questions</span>
-        </h2>
-
-        <div class="space-y-4">
-          <details open class="group border border-border">
-            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
-              Who are the largest conveyor manufacturers?
-              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">Major conveyor manufacturers include Hytrol, Dorner, Interroll, mk North America, Bastian Solutions (now a Toyota Advanced Logistics company), Dematic, Honeywell Intelligrated, and Siemens Logistics. In food and packaging specifically, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well-known. The largest players vary by conveyor type and industry, a company that dominates warehouse sortation may not build sanitary food conveyors.</p>
-            </div>
-          </details>
-
-          <details class="group border border-border">
-            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
-              How do I choose a conveyor manufacturer?
-              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">Start by defining your application requirements: product type, weight, speed, environment (washdown, cleanroom, outdoor), and any regulatory standards (FDA, USDA, ATEX). Then evaluate manufacturers based on relevant experience in your industry, geographic proximity for service and installation, lead time, warranty terms, parts availability, and controls integration capability. Request references from similar installations and ask for a factory visit or demo if possible.</p>
-            </div>
-          </details>
-
-          <details class="group border border-border">
-            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
-              What is the difference between a conveyor manufacturer and an integrator?
-              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">A conveyor manufacturer designs and builds conveyor equipment, they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management.</p>
-            </div>
-          </details>
-
-          <details class="group border border-border">
-            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
-              Do conveyor manufacturers sell direct or through distributors?
-              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">It varies by company. Some manufacturers like Dorner and mk North America sell both direct and through distributor networks. Others like Hytrol sell primarily through a network of integration partners. Large system manufacturers like Dematic and Honeywell Intelligrated typically sell direct through their own sales engineering teams. For packaging-specific conveyors, many manufacturers sell direct because the applications require custom engineering. Always check the manufacturer's website for their preferred sales channel in your region.</p>
-            </div>
-          </details>
-
-          <details class="group border border-border">
-            <summary class="flex items-center justify-between cursor-pointer p-6 font-display text-lg font-bold uppercase tracking-wider text-ink">
-              Can I buy conveyor parts from any manufacturer?
-              <span class="ml-4 text-accent transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div class="px-6 pb-6">
-              <p class="text-ink-muted leading-relaxed">Many conveyor components, rollers, bearings, motors, VFDs, belting, and chain, are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ RELATED RESOURCES ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="related-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Explore</div>
-        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Related <span class="text-accent">Resources</span>
-        </h2>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a href="/resources/conveyor-manufacturers/custom/" class="group border border-border p-6 hover:border-accent transition-colors">
-            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Custom Conveyor Design</h3>
-            <p class="text-ink-muted text-sm leading-relaxed">When to go custom vs. catalog: process, costs, and lead times for custom-engineered conveyor systems.</p>
-          </a>
-          <a href="/resources/conveyor-companies/" class="group border border-border p-6 hover:border-accent transition-colors">
-            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Companies Near You</h3>
-            <p class="text-ink-muted text-sm leading-relaxed">How to find and evaluate conveyor companies and integrators in your region.</p>
-          </a>
-          <a href="/resources/conveyor-parts/" class="group border border-border p-6 hover:border-accent transition-colors">
-            <h3 class="font-display text-lg font-bold uppercase tracking-wider text-ink mb-2 group-hover:text-accent transition-colors">Conveyor Parts &#x26; Replacement</h3>
-            <p class="text-ink-muted text-sm leading-relaxed">Guide to conveyor wear parts: rollers, bearings, belts, motors, drives, and guards.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </article>
-
-  <script>
-    const search = document.getElementById('dir-search');
-    const catFilter = document.getElementById('dir-category');
-    const typeFilter = document.getElementById('dir-type');
-    const countEl = document.getElementById('dir-count');
-    const emptyEl = document.getElementById('dir-empty');
-    const resetBtn = document.getElementById('dir-reset');
-    const rows = document.querySelectorAll('.dir-row');
-    const cards = document.querySelectorAll('.dir-card');
-    const sortBtns = document.querySelectorAll('.dir-sort');
-    const tbody = document.getElementById('dir-tbody');
-    const cardsContainer = document.getElementById('dir-cards');
-
-    function applyFilters() {
-      const q = (search?.value || '').toLowerCase().trim();
-      const cat = catFilter?.value || '';
-      const type = typeFilter?.value || '';
-      let visible = 0;
-
-      // Filter table rows
-      rows.forEach(row => {
-        const name = row.dataset.name || '';
-        const known = row.dataset.known || '';
-        const hq = row.dataset.hq || '';
-        const industries = row.dataset.industries || '';
-        const categories = JSON.parse(row.dataset.categories || '[]');
-        const rowType = row.dataset.type || '';
-
-        const matchSearch = !q || name.includes(q) || known.includes(q) || hq.includes(q) || industries.includes(q);
-        const matchCat = !cat || categories.includes(cat);
-        const matchType = !type || rowType === type;
-
-        const show = matchSearch && matchCat && matchType;
-        row.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
-
-      // Filter mobile cards
-      cards.forEach(card => {
-        const name = card.dataset.name || '';
-        const known = card.dataset.known || '';
-        const hq = card.dataset.hq || '';
-        const industries = card.dataset.industries || '';
-        const categories = JSON.parse(card.dataset.categories || '[]');
-        const cardType = card.dataset.type || '';
-
-        const matchSearch = !q || name.includes(q) || known.includes(q) || hq.includes(q) || industries.includes(q);
-        const matchCat = !cat || categories.includes(cat);
-        const matchType = !type || cardType === type;
-
-        card.style.display = matchSearch && matchCat && matchType ? '' : 'none';
-      });
-
-      if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}`;
-      if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
-    }
-
-    function applySorting(field) {
-      if (!tbody || !cardsContainer) return;
-
-      const sortRows = Array.from(rows);
-      const sortCards = Array.from(cards);
-
-      const getVal = (el) => {
-        if (field === 'name') return el.dataset.name || '';
-        if (field === 'hq') return el.dataset.hq || '';
-        if (field === 'type') return el.dataset.type || '';
-        return '';
-      };
-
-      sortRows.sort((a, b) => getVal(a).localeCompare(getVal(b)));
-      sortCards.sort((a, b) => getVal(a).localeCompare(getVal(b)));
-
-      sortRows.forEach(row => tbody.appendChild(row));
-      sortCards.forEach(card => cardsContainer.appendChild(card));
-    }
-
-    search?.addEventListener('input', applyFilters);
-    catFilter?.addEventListener('change', applyFilters);
-    typeFilter?.addEventListener('change', applyFilters);
-
-    sortBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        sortBtns.forEach(b => {
-          b.classList.remove('text-accent', 'border-accent');
-          b.classList.add('text-ink-muted', 'border-transparent');
-          b.setAttribute('aria-pressed', 'false');
-        });
-        btn.classList.remove('text-ink-muted', 'border-transparent');
-        btn.classList.add('text-accent', 'border-accent');
-        btn.setAttribute('aria-pressed', 'true');
-        applySorting(btn.dataset.sort);
-      });
+  function applyFilters() {
+    const q = (search?.value || '').toLowerCase().trim();
+    const cat = catFilter?.value || '';
+    const type = typeFilter?.value || '';
+    let visible = 0;
+    rows.forEach(row => {
+      const d = row.dataset;
+      const categories = JSON.parse(d.categories || '[]');
+      const matchSearch = !q || [d.name, d.known, d.hq, d.industries].some(v => (v || '').includes(q));
+      const show = matchSearch && (!cat || categories.includes(cat)) && (!type || d.type === type);
+      row.hidden = !show;
+      if (show) visible++;
     });
+    if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}`;
+    if (emptyEl) emptyEl.hidden = visible !== 0;
+  }
 
-    resetBtn?.addEventListener('click', () => {
-      if (search) search.value = '';
-      if (catFilter) catFilter.value = '';
-      if (typeFilter) typeFilter.value = '';
-      applyFilters();
-    });
-  </script>
+  function applySorting(field: string) {
+    const key = (el: HTMLElement) => (field === 'hq' ? el.dataset.hq : field === 'type' ? el.dataset.type : el.dataset.name) || '';
+    rows.sort((a, b) => key(a).localeCompare(key(b))).forEach(row => tbody?.appendChild(row));
+  }
 
+  search?.addEventListener('input', applyFilters);
+  catFilter?.addEventListener('change', applyFilters);
+  typeFilter?.addEventListener('change', applyFilters);
+  sortBtns.forEach(btn => btn.addEventListener('click', () => {
+    sortBtns.forEach(b => { b.classList.add('usa-button--outline'); b.setAttribute('aria-pressed', 'false'); });
+    btn.classList.remove('usa-button--outline');
+    btn.setAttribute('aria-pressed', 'true');
+    applySorting(btn.dataset.sort || 'name');
+  }));
+  resetBtn?.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (catFilter) catFilter.value = '';
+    if (typeFilter) typeFilter.value = '';
+    applyFilters();
+  });
+</script>
 </BaseLayout>

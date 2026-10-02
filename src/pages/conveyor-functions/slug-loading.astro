@@ -48,279 +48,85 @@ const faqSchema = {
   ]
 };
 ---
-
 <BaseLayout title="Slug Conveyors &#x26; Slug Loading for Case Packers" description="What a slug conveyor does: counts products, forms tight slugs, and releases them into case packers on cycle. Covers stop gates, MDR slug release, and screws." canonical="https://packagingconveyor.com/conveyor-functions/slug-loading/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<h1>Slug Loading &amp; Slug Conveyors</h1>
+<p class="usa-intro">Slug loading groups a counted number of products into a tight linear batch, a slug, and feeds that slug as a single unit into a case packer, tray loader, or shrink wrapper. The slug conveyor counts products using photoeyes or encoders, accumulates them against a stop gate, and releases the completed group on the packaging machine's command signal. Brenton (ProMach), Pearson Packaging, Douglas Machine, and Schneider Packaging manufacture case packers with integrated slug loading conveyors for food, beverage, pharmaceutical, and consumer goods packaging lines.</p>
+<h2 id="why-heading">What Is a Slug Conveyor?</h2>
+<p>A slug conveyor counts products arriving in single file, holds them in a tight nose-to-tail group (the slug), and releases the whole group at once into a case packer, tray loader, or wrapper. It turns a continuous stream into exact, machine-timed batches.</p>
+<p>The term has a second meaning in <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a>. Slug release, or slug mode, releases all accumulated zones at the same time so products leave as one closely spaced train. Singulated release, the alternative, releases zones one at a time with gaps between products. Slug release clears an accumulation line faster. Singulated release preserves the gaps that scanners and sorters need.</p>
+<p>Case packers, tray loaders, and shrink wrappers require exact product counts delivered at exact intervals. A case packer loading 12 bottles per case needs exactly 12 bottles, not 11, not 13, presented as a group at the precise moment the case is positioned for loading. Continuous random-flow product feeding cannot guarantee exact counts or synchronization with machine cycles.</p>
+<p>Slug loading solves both problems. The slug conveyor counts products as they arrive, accumulates the exact number, and releases them as a tight group synchronized to the packaging machine's cycle. The machine does not start its loading stroke until the slug is in position. This eliminates miscounts, prevents partial case fills, and synchronizes the conveyor with the machine's intermittent motion.</p>
+<p>Without slug loading, packaging machines must incorporate their own counting and grouping mechanisms, adding cost, complexity, and potential jam points inside the machine. A well-designed slug loading conveyor upstream of the case packer moves the grouping function out of the machine and onto the conveyor, simplifying the machine design and improving accessibility for jam clearance and maintenance. For multi-row case patterns, slug loading combines with <a href="/conveyor-functions/collating-laning/">collating and laning</a> to form the complete case load pattern.</p>
+<h2 id="process-heading">Slug Forming Process</h2>
+<h3>Step 1: Counting</h3>
+<p>Products arrive in single file on an infeed conveyor. A photoeye sensor detects each product as it passes, incrementing a counter in the PLC. Encoder-based counting measures belt travel distance rather than individual product detection, useful for closely spaced or touching products where individual photoeye detection is unreliable. The counter target equals the number of products per slug (e.g., 6, 12, 24).</p>
+<h3>Step 2: Accumulating</h3>
+<p>Products accumulate against a downstream stop gate or within a slow-speed conveyor zone. The first product hits the gate and stops. Subsequent products stack behind it, forming a tight slug with product-to-product contact. The conveyor behind the gate runs at a controlled speed to push products against the slug gently, enough force to close gaps but not enough to damage product or labels.</p>
+<p>For fragile products, the accumulation zone uses a conveyor running at a speed slightly faster than the slug formation rate, with a low-friction belt surface that allows products to slip rather than crush against the forming slug. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> accomplish this with zone speed control, the slug zone runs slowly or stops while the upstream zone continues feeding at line speed.</p>
+<h3>Step 3: Releasing</h3>
+<p>When the count reaches the target, the PLC signals the stop gate to open (pneumatic retract or servo lift) and the slug zone conveyor accelerates to push the completed slug into the packaging machine's infeed. The gate closes immediately after the last product in the slug passes, and the next count cycle begins. The release timing synchronizes with the packaging machine's cycle, the slug arrives at the loading position precisely when the machine is ready to load.</p>
+<p>Gap creation between slugs is critical. The release must create enough separation between the departing slug and the next forming slug to prevent carryover, products from the next slug following the departing slug into the machine. A speed differential between the slug release zone (fast) and the upstream counting zone (line speed) creates this gap. Typical gap distance is 6-18 inches, depending on line speed and product size.</p>
+<h2 id="types-heading">Slug Loading Conveyor Types</h2>
+<h3>Belt Conveyor with Stop Gates</h3>
+<p>The most common slug loading configuration uses a flat belt conveyor with one or two pneumatic or servo-driven stop gates. The downstream gate holds the forming slug. The upstream gate holds the infeed queue. When the slug count is complete, the downstream gate retracts, the slug releases, and the upstream gate holds the next batch of products while the downstream gate closes for the next cycle.</p>
+<p>Pneumatic gates respond in 50-100ms and suit line speeds up to about 150 FPM. Servo-driven gates respond in 20-50ms and handle higher speeds and more precise positioning. Servo gates can also partially open to meter individual products into the slug zone at controlled intervals, providing finer count control at high speeds.</p>
+<h3>MDR Zone-Controlled Slug Forming</h3>
+<p><a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> form slugs without mechanical gates by controlling zone speeds. The slug zone stops (or runs slowly) while products feed in from the upstream zone. When the count reaches the target, the slug zone accelerates to release the slug forward, while the upstream zone holds the next product. No physical gate contacts the product, reducing jam risk and eliminating gate wear parts.</p>
+<p>MDR slug forming suits cases, cartons, and totes with flat bottoms that track well on rollers. It does not suit round products (bottles, cans) that can roll between rollers or small products that fall between roller gaps. For round products, belt conveyors with timing screws or guide rails provide more reliable slug forming.</p>
+<h3>Timing Screw &amp; Starwheel Systems</h3>
+<p>Timing screws (also called timing augers or feed screws), often paired with starwheels, handle round products, bottles, cans, jars, by mechanically engaging each product in a screw pocket. The screw rotates at a speed synchronized to the packaging machine, spacing products at a precise pitch determined by the screw's thread profile. Products enter the screw in random or tight spacing and exit at the screw's fixed pitch, creating uniform slugs.</p>
+<p>Timing screws are product-specific, each screw profile matches a specific product diameter. Changing product sizes requires changing the screw. Adjustable-pitch screws exist but add cost and complexity. Timing screws integrate with <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a> and case packer infeed conveyors to form precise slugs at high speed (200+ bottles per minute).</p>
+<h2 id="packer-heading">Case Packer Integration</h2>
+<p>Slug loading conveyors feed three types of case packers, each with different slug delivery requirements:</p>
+<h3>Drop Packers (Top-Load)</h3>
+<p>Drop packers load product into cases from above. The slug forms on a dead plate or conveyor section directly over the open case. When the slug is complete, the dead plate retracts and the slug drops into the case by gravity. The slug must be precisely positioned over the case opening with tight tolerances, typically ±0.25 inches. Product spacing within the slug must match the case interior dimensions so products drop cleanly without jamming on case flaps.</p>
+<h3>Side-Load (Wrap-Around) Packers</h3>
+<p>Side-load packers push the slug sideways into a case or wrap a case blank around the slug. The slug forms on the infeed conveyor, then a pusher bar or servo arm pushes the slug laterally into the waiting case or onto the case blank. The slug must maintain tight formation during the push, products that separate during the push cause incomplete case fills. Guide rails along the slug conveyor prevent slug separation before the push.</p>
+<h3>Continuous-Motion Packers</h3>
+<p>Continuous-motion case packers do not stop between loading cycles, the case and slug move together during loading. The slug conveyor must match the case packer's continuous speed and deliver slugs at precise intervals synchronized to the case pitch. Servo-driven slug conveyors provide the speed matching and precise positioning required for continuous-motion packing at 30-60+ cases per minute.</p>
+<p>All three packer types require reliable <a href="/conveyor-functions/inspection-detection/">upstream inspection</a> to ensure defective products do not enter slugs and contaminate complete cases. A <a href="/conveyor-functions/reject-systems/">reject system</a> upstream of the slug conveyor removes defective items before counting begins. A defective product within a formed slug causes either a bad case or a slug recount/reform, both waste time and reduce line efficiency.</p>
+<h2 id="design-heading">Design Parameters</h2>
+<p><strong>Slug length:</strong> The total length of the formed slug equals (number of products x product length) + ((number of products - 1) x inter-product gap). If the gap is zero (tight slug), slug length equals product count x product length. A 12-count slug of 3-inch-diameter bottles with zero gap is 36 inches long. This length must fit within the case or tray interior dimension.</p>
+<p><strong>Slug formation rate:</strong> The slug must form faster than the case packer cycles. If the packer cycles every 2 seconds (30 cases/min), the slug must form in under 2 seconds. At 12 products per slug, products must arrive at a rate of at least 6 per second (360/min). The infeed conveyor speed and product spacing determine arrival rate.</p>
+<p><strong>Gate cycle time:</strong> The stop gate must open, the slug must clear, and the gate must close within the gap between slugs. Total gate cycle time (open + slug transit + close) must be less than the available gap time. At 30 cases/min with a 12-count slug arriving at 360 products/min, the gap between slugs depends on the speed differential, typically 200-500ms available for the gate cycle.</p>
+<p><strong>Product stability:</strong> Products must maintain their orientation during slug formation. Tall, narrow products (bottles, tubes) tip during the accumulation push. Side guide rails, overhead containment, or V-belt side conveyors stabilize products during slug formation. For products that cannot tolerate contact pressure, the accumulation zone uses air cushioning or soft bumpers to prevent damage.</p>
+<p>For upstream product spacing before slug formation, see <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. For storing product between line sections before slug loading, see <a href="/conveyor-functions/storage-conveyors/">storage conveyors</a>.</p>
+<h2 id="related-heading">Related Functions &amp; Types</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/collating-laning/">Collating &amp; Laning</a></h3>
+<p class="usa-collection__description">Multi-row pattern forming</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/tray-loading/">Tray Loading</a></h3>
+<p class="usa-collection__description">Slug-to-tray loading</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/indexing-conveyors/">Indexing Conveyors</a></h3>
+<p class="usa-collection__description">Precision product spacing</p></div></li>
+</ul>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is slug loading?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>Slug loading groups a counted number of products into a tight linear batch (slug) and feeds it into a case packer, tray loader, or shrink wrapper. The slug conveyor counts products, accumulates them against a stop gate, and releases the group synchronized to the machine's cycle.</p>
 
-  <!-- HERO -->
-  <section class="bg-blueprint relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
-      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-white/70">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/conveyor-functions/" class="hover:text-white/70">Functions</a>
-        <span class="mx-2">/</span>
-        <span class="text-white/70">Slug Loading</span>
-      </nav>
-      <div class="max-w-3xl">
-        <div class="section-label text-accent-bright/80 mb-6">Conveyor Function</div>
-        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-wide uppercase leading-[0.95] mb-8">
-          Slug Loading &#x26; <span class="text-accent-bright">Slug</span> Conveyors
-        </h1>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How does a slug conveyor form slugs?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>Three steps: (1) Count products via photoeye or encoder. (2) Accumulate against a stop gate or slow-speed zone until count is reached. (3) Release by retracting the gate and accelerating the slug zone. A speed differential creates a gap between the departing slug and the next forming slug.</p>
 
-  <!-- AIO DEFINITION -->
-  <article>
-    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
-          Slug loading groups a counted number of products into a tight linear batch, a slug, and feeds that slug as a single unit into a case packer, tray loader, or shrink wrapper. The slug conveyor counts products using photoeyes or encoders, accumulates them against a stop gate, and releases the completed group on the packaging machine's command signal. Brenton (ProMach), Pearson Packaging, Douglas Machine, and Schneider Packaging manufacture case packers with integrated slug loading conveyors for food, beverage, pharmaceutical, and consumer goods packaging lines.
-        </p>
-      </div>
-    </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the difference between slug loading and collating?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>Slug loading groups products in a single row. <a href="/conveyor-functions/collating-laning/">Collating</a> arranges products into multi-row patterns (e.g., 3x4 grids). Many case packing operations combine both, slugs form individual rows, then collating arranges multiple slugs side-by-side into the final case pattern.</p>
 
-    <!-- WHY SLUG LOADING -->
-    <section class="py-20 bg-surface" aria-labelledby="why-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">The Function</div>
-        <h2 id="why-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          What Is a Slug <span class="text-accent">Conveyor?</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            A slug conveyor counts products arriving in single file, holds them in a tight nose-to-tail group (the slug), and releases the whole group at once into a case packer, tray loader, or wrapper. It turns a continuous stream into exact, machine-timed batches.
-          </p>
-          <p>
-            The term has a second meaning in <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a>. Slug release, or slug mode, releases all accumulated zones at the same time so products leave as one closely spaced train. Singulated release, the alternative, releases zones one at a time with gaps between products. Slug release clears an accumulation line faster. Singulated release preserves the gaps that scanners and sorters need.
-          </p>
-          <p>
-            Case packers, tray loaders, and shrink wrappers require exact product counts delivered at exact intervals. A case packer loading 12 bottles per case needs exactly 12 bottles, not 11, not 13, presented as a group at the precise moment the case is positioned for loading. Continuous random-flow product feeding cannot guarantee exact counts or synchronization with machine cycles.
-          </p>
-          <p>
-            Slug loading solves both problems. The slug conveyor counts products as they arrive, accumulates the exact number, and releases them as a tight group synchronized to the packaging machine's cycle. The machine does not start its loading stroke until the slug is in position. This eliminates miscounts, prevents partial case fills, and synchronizes the conveyor with the machine's intermittent motion.
-          </p>
-          <p>
-            Without slug loading, packaging machines must incorporate their own counting and grouping mechanisms, adding cost, complexity, and potential jam points inside the machine. A well-designed slug loading conveyor upstream of the case packer moves the grouping function out of the machine and onto the conveyor, simplifying the machine design and improving accessibility for jam clearance and maintenance. For multi-row case patterns, slug loading combines with <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating and laning</a> to form the complete case load pattern.
-          </p>
-        </div>
-      </div>
-    </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What conveyor types are used for slug loading?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>Belt conveyors with pneumatic or servo stop gates (most common), <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> with zone speed control (gateless), and timing screws for round products (bottles, cans). Belt-with-gate is the most versatile. MDR is cleanest for cases and cartons. Timing screws are best for high-speed round container lines.</p>
 
-    <!-- SLUG FORMING PROCESS -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="process-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Process</div>
-        <h2 id="process-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Slug Forming <span class="text-accent">Process</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Step 1: Counting</h3>
-          <p>
-            Products arrive in single file on an infeed conveyor. A photoeye sensor detects each product as it passes, incrementing a counter in the PLC. Encoder-based counting measures belt travel distance rather than individual product detection, useful for closely spaced or touching products where individual photoeye detection is unreliable. The counter target equals the number of products per slug (e.g., 6, 12, 24).
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Step 2: Accumulating</h3>
-          <p>
-            Products accumulate against a downstream stop gate or within a slow-speed conveyor zone. The first product hits the gate and stops. Subsequent products stack behind it, forming a tight slug with product-to-product contact. The conveyor behind the gate runs at a controlled speed to push products against the slug gently, enough force to close gaps but not enough to damage product or labels.
-          </p>
-          <p>
-            For fragile products, the accumulation zone uses a conveyor running at a speed slightly faster than the slug formation rate, with a low-friction belt surface that allows products to slip rather than crush against the forming slug. <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> accomplish this with zone speed control, the slug zone runs slowly or stops while the upstream zone continues feeding at line speed.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Step 3: Releasing</h3>
-          <p>
-            When the count reaches the target, the PLC signals the stop gate to open (pneumatic retract or servo lift) and the slug zone conveyor accelerates to push the completed slug into the packaging machine's infeed. The gate closes immediately after the last product in the slug passes, and the next count cycle begins. The release timing synchronizes with the packaging machine's cycle, the slug arrives at the loading position precisely when the machine is ready to load.
-          </p>
-          <p>
-            Gap creation between slugs is critical. The release must create enough separation between the departing slug and the next forming slug to prevent carryover, products from the next slug following the departing slug into the machine. A speed differential between the slug release zone (fast) and the upstream counting zone (line speed) creates this gap. Typical gap distance is 6-18 inches, depending on line speed and product size.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONVEYOR TYPES FOR SLUG LOADING -->
-    <section class="py-20 bg-surface" aria-labelledby="types-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Conveyor Types</div>
-        <h2 id="types-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Slug Loading <span class="text-accent">Conveyor Types</span>
-        </h2>
-        <div class="space-y-12">
-
-          <!-- Belt with Gates -->
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Belt Conveyor with Stop Gates</h3>
-            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-              <p>
-                The most common slug loading configuration uses a flat belt conveyor with one or two pneumatic or servo-driven stop gates. The downstream gate holds the forming slug. The upstream gate holds the infeed queue. When the slug count is complete, the downstream gate retracts, the slug releases, and the upstream gate holds the next batch of products while the downstream gate closes for the next cycle.
-              </p>
-              <p>
-                Pneumatic gates respond in 50-100ms and suit line speeds up to about 150 FPM. Servo-driven gates respond in 20-50ms and handle higher speeds and more precise positioning. Servo gates can also partially open to meter individual products into the slug zone at controlled intervals, providing finer count control at high speeds.
-              </p>
-            </div>
-          </div>
-
-          <!-- MDR Zone Control -->
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">MDR Zone-Controlled Slug Forming</h3>
-            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-              <p>
-                <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> form slugs without mechanical gates by controlling zone speeds. The slug zone stops (or runs slowly) while products feed in from the upstream zone. When the count reaches the target, the slug zone accelerates to release the slug forward, while the upstream zone holds the next product. No physical gate contacts the product, reducing jam risk and eliminating gate wear parts.
-              </p>
-              <p>
-                MDR slug forming suits cases, cartons, and totes with flat bottoms that track well on rollers. It does not suit round products (bottles, cans) that can roll between rollers or small products that fall between roller gaps. For round products, belt conveyors with timing screws or guide rails provide more reliable slug forming.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timing Screws -->
-          <div>
-            <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mb-4">Timing Screw &#x26; Starwheel Systems</h3>
-            <div class="text-lg text-ink-muted leading-relaxed space-y-4">
-              <p>
-                Timing screws (also called timing augers or feed screws), often paired with starwheels, handle round products, bottles, cans, jars, by mechanically engaging each product in a screw pocket. The screw rotates at a speed synchronized to the packaging machine, spacing products at a precise pitch determined by the screw's thread profile. Products enter the screw in random or tight spacing and exit at the screw's fixed pitch, creating uniform slugs.
-              </p>
-              <p>
-                Timing screws are product-specific, each screw profile matches a specific product diameter. Changing product sizes requires changing the screw. Adjustable-pitch screws exist but add cost and complexity. Timing screws integrate with <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a> and case packer infeed conveyors to form precise slugs at high speed (200+ bottles per minute).
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE PACKER INTEGRATION -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="packer-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Integration</div>
-        <h2 id="packer-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Case Packer <span class="text-accent">Integration</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            Slug loading conveyors feed three types of case packers, each with different slug delivery requirements:
-          </p>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-4 mb-3">Drop Packers (Top-Load)</h3>
-          <p>
-            Drop packers load product into cases from above. The slug forms on a dead plate or conveyor section directly over the open case. When the slug is complete, the dead plate retracts and the slug drops into the case by gravity. The slug must be precisely positioned over the case opening with tight tolerances, typically ±0.25 inches. Product spacing within the slug must match the case interior dimensions so products drop cleanly without jamming on case flaps.
-          </p>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Side-Load (Wrap-Around) Packers</h3>
-          <p>
-            Side-load packers push the slug sideways into a case or wrap a case blank around the slug. The slug forms on the infeed conveyor, then a pusher bar or servo arm pushes the slug laterally into the waiting case or onto the case blank. The slug must maintain tight formation during the push, products that separate during the push cause incomplete case fills. Guide rails along the slug conveyor prevent slug separation before the push.
-          </p>
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-3">Continuous-Motion Packers</h3>
-          <p>
-            Continuous-motion case packers do not stop between loading cycles, the case and slug move together during loading. The slug conveyor must match the case packer's continuous speed and deliver slugs at precise intervals synchronized to the case pitch. Servo-driven slug conveyors provide the speed matching and precise positioning required for continuous-motion packing at 30-60+ cases per minute.
-          </p>
-          <p>
-            All three packer types require reliable <a href="/conveyor-functions/inspection-detection/" class="text-accent hover:text-accent-hover font-semibold">upstream inspection</a> to ensure defective products do not enter slugs and contaminate complete cases. A <a href="/conveyor-functions/reject-systems/" class="text-accent hover:text-accent-hover font-semibold">reject system</a> upstream of the slug conveyor removes defective items before counting begins. A defective product within a formed slug causes either a bad case or a slug recount/reform, both waste time and reduce line efficiency.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DESIGN PARAMETERS -->
-    <section class="py-20 bg-surface" aria-labelledby="design-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Engineering</div>
-        <h2 id="design-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Design <span class="text-accent">Parameters</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            <strong class="text-ink">Slug length:</strong> The total length of the formed slug equals (number of products x product length) + ((number of products - 1) x inter-product gap). If the gap is zero (tight slug), slug length equals product count x product length. A 12-count slug of 3-inch-diameter bottles with zero gap is 36 inches long. This length must fit within the case or tray interior dimension.
-          </p>
-          <p>
-            <strong class="text-ink">Slug formation rate:</strong> The slug must form faster than the case packer cycles. If the packer cycles every 2 seconds (30 cases/min), the slug must form in under 2 seconds. At 12 products per slug, products must arrive at a rate of at least 6 per second (360/min). The infeed conveyor speed and product spacing determine arrival rate.
-          </p>
-          <p>
-            <strong class="text-ink">Gate cycle time:</strong> The stop gate must open, the slug must clear, and the gate must close within the gap between slugs. Total gate cycle time (open + slug transit + close) must be less than the available gap time. At 30 cases/min with a 12-count slug arriving at 360 products/min, the gap between slugs depends on the speed differential, typically 200-500ms available for the gate cycle.
-          </p>
-          <p>
-            <strong class="text-ink">Product stability:</strong> Products must maintain their orientation during slug formation. Tall, narrow products (bottles, tubes) tip during the accumulation push. Side guide rails, overhead containment, or V-belt side conveyors stabilize products during slug formation. For products that cannot tolerate contact pressure, the accumulation zone uses air cushioning or soft bumpers to prevent damage.
-          </p>
-          <p>
-            For upstream product spacing before slug formation, see <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">indexing conveyors</a>. For storing product between line sections before slug loading, see <a href="/conveyor-functions/storage-conveyors/" class="text-accent hover:text-accent-hover font-semibold">storage conveyors</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- RELATED -->
-    <section class="py-20 bg-ink-light" aria-labelledby="related-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent-bright mb-4">Related</div>
-        <h2 id="related-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-wide uppercase mb-10">
-          Related <span class="text-accent-bright">Functions &#x26; Types</span>
-        </h2>
-        <div class="grid sm:grid-cols-3 gap-5">
-          <a href="/conveyor-functions/collating-laning/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Collating &#x26; Laning</h3>
-            <p class="text-base text-white/60">Multi-row pattern forming</p>
-          </a>
-          <a href="/conveyor-functions/tray-loading/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Tray Loading</h3>
-            <p class="text-base text-white/60">Slug-to-tray loading</p>
-          </a>
-          <a href="/conveyor-functions/indexing-conveyors/" class="group p-7 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-2">Indexing Conveyors</h3>
-            <p class="text-base text-white/60">Precision product spacing</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </article>
-
-  <!-- FAQ -->
-  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
-      </h2>
-
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is slug loading?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Slug loading groups a counted number of products into a tight linear batch (slug) and feeds it into a case packer, tray loader, or shrink wrapper. The slug conveyor counts products, accumulates them against a stop gate, and releases the group synchronized to the machine's cycle.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            How does a slug conveyor form slugs?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Three steps: (1) Count products via photoeye or encoder. (2) Accumulate against a stop gate or slow-speed zone until count is reached. (3) Release by retracting the gate and accelerating the slug zone. A speed differential creates a gap between the departing slug and the next forming slug.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is the difference between slug loading and collating?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Slug loading groups products in a single row. <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">Collating</a> arranges products into multi-row patterns (e.g., 3x4 grids). Many case packing operations combine both, slugs form individual rows, then collating arranges multiple slugs side-by-side into the final case pattern.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What conveyor types are used for slug loading?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Belt conveyors with pneumatic or servo stop gates (most common), <a href="/conveyor-types/mdr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">MDR conveyors</a> with zone speed control (gateless), and timing screws for round products (bottles, cans). Belt-with-gate is the most versatile. MDR is cleanest for cases and cartons. Timing screws are best for high-speed round container lines.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
+</div>
+</div>
 </BaseLayout>

@@ -95,299 +95,163 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-
 <BaseLayout
   title="Pallet Conveyors: CDLR, Chain & Heavy-Duty Systems | Packaging Conveyor"
   description="Guide to pallet conveyors: CDLR (chain-driven live roller), drag chain, transfers, and pallet flow. Load capacities up to 10,000 lbs, integration, and selection criteria."
   canonical="https://packagingconveyor.com/conveyor-types/pallet-conveyors/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
+<h1>Pallet Conveyors: CDLR, Chain &amp; Heavy-Duty Systems</h1>
+<p class="usa-intro">Pallet conveyors are heavy-duty systems designed to transport loaded pallets weighing 2,000 to 10,000+ pounds. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, automated storage/retrieval systems (AS/RS), and dock operations. The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR (Chain-Driven Live Roller)</a> and drag chain conveyors, with transfers and turntables for direction changes.</p>
+<h2 id="subtypes-heading">Explore Pallet Conveyor Types</h2>
+<ul class="usa-collection">{palletTypes.map((type) => (
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={type.slug}>{type.name}</a></h3><p class="usa-collection__description">{type.desc}</p>{type.tags && <p class="tags">{type.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
+))}</ul>
+<h2 id="cdlr-heading">Chain-Driven Live Roller (CDLR)</h2>
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> are the standard choice for pallet handling in packaging and distribution. A roller chain (typically #60 or #80 ANSI chain) drives large-diameter steel rollers (2.5" to 3.5" typical). The pallet rides on the roller surfaces, which are driven at a constant speed by the chain.</p>
+<h3>CDLR Specifications</h3>
+<ul>
+<li><strong>Load capacity:</strong> 2,000-10,000 lbs depending on frame and roller specifications</li>
+<li><strong>Roller diameter:</strong> 2.5", 2.9", 3.5" common; larger for heavier loads</li>
+<li><strong>Roller spacing:</strong> 3", 4", 6" typical; must support pallet bottom boards</li>
+<li><strong>Speed:</strong> 20-60 FPM typical for pallet handling</li>
+<li><strong>Frame:</strong> Heavy structural steel channel or formed sections</li>
+</ul>
+<h3>CDLR Advantages</h3>
+<ul>
+<li>High load capacity with positive chain drive</li>
+<li>Smooth, controlled pallet transport</li>
+<li>Zone accumulation available with clutches</li>
+<li>Handles standard GMA pallets, Euro pallets, and custom sizes</li>
+<li>Integrates easily with transfers, lifts, and automation</li>
+</ul>
+<h3>CDLR Limitations</h3>
+<ul>
+<li>Requires pallet bottom boards parallel to conveyor direction</li>
+<li>Block pallets may not convey well (no bottom boards)</li>
+<li>Chain maintenance required (lubrication, tensioning)</li>
+</ul>
+<h2 id="chain-heading">Drag Chain Pallet Conveyors</h2>
+<p><a href="/conveyor-types/chain-conveyors/">Drag chain conveyors</a> (also called strand chain or slat chain) use two or three strands of heavy chain running in tracks. The pallet bottom stringers ride directly on the chain strands. This design handles non-standard pallets, block pallets, and very heavy loads that CDLR cannot.</p>
+<h3>When to Use Drag Chain</h3>
+<ul>
+<li>Block pallets or plastic pallets without bottom boards</li>
+<li>Non-standard pallet sizes or mixed pallet types</li>
+<li>Extremely heavy loads (10,000+ lbs)</li>
+<li>Applications where pallets enter from the side (perpendicular)</li>
+<li>Integration with pallet dispensers or pallet magazines</li>
+</ul>
+<h3>Drag Chain Considerations</h3>
+<ul>
+<li>Higher friction than CDLR (chain slides against pallet)</li>
+<li>More wear on pallet bottoms</li>
+<li>Noisier operation</li>
+<li>Higher chain wear and lubrication requirements</li>
+</ul>
+<h2 id="comparison-heading">Pallet Conveyor Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Best For</th>
+<th>Load Capacity</th>
+<th>Speed</th>
+<th>Pallet Types</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/conveyor-types/cdlr-conveyors/">CDLR</a></td>
+<td>Standard pallet transport</td>
+<td>2,000-10,000 lbs</td>
+<td>20-60 FPM</td>
+<td>GMA, Euro, stringer</td>
+<td>$$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/chain-conveyors/">Drag Chain (2-strand)</a></td>
+<td>Non-standard, heavy loads</td>
+<td>Up to 15,000 lbs</td>
+<td>10-40 FPM</td>
+<td>Any, including block</td>
+<td>$$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/chain-conveyors/">Drag Chain (3-strand)</a></td>
+<td>Very heavy, wide loads</td>
+<td>Up to 20,000 lbs</td>
+<td>10-30 FPM</td>
+<td>Any, including double</td>
+<td>$$$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/roller-conveyors/gravity/">Gravity Pallet Flow</a></td>
+<td>FIFO storage, staging</td>
+<td>2,000-4,000 lbs</td>
+<td>Gravity</td>
+<td>Standard with boards</td>
+<td>$$</td>
+</tr>
+<tr>
+<td><a href="/conveyor-types/transfer-conveyors/">Chain Transfer</a></td>
+<td>Right-angle direction change</td>
+<td>2,000-6,000 lbs</td>
+<td>20-40 FPM</td>
+<td>Standard with boards</td>
+<td>$$$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-heading">Pallet Conveyor Integration</h2>
+<h3>Palletizer Integration</h3>
+<p>Pallet conveyors transport empty pallets to <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a> and loaded pallets away. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">Pallet dispensers</a> feed empty pallets onto the infeed conveyor. Outfeed conveyors transport loaded pallets to stretch wrap and shipping. Conveyor height must match palletizer load/unload height (typically 16-24" floor to roller top).</p>
+<h3>Stretch Wrapper Integration</h3>
+<p>Pallet conveyors feed stretch wrappers and remove wrapped pallets. Turntable wrappers require a pallet transfer to position the pallet on the turntable. Rotary arm and ring wrappers allow in-line pallet flow without transfer. Conveyor speed must match wrapper cycle time.</p>
+<h3>AS/RS Integration</h3>
+<p>Automated storage and retrieval systems (AS/RS) interface with pallet conveyors at pick/deposit stations. Conveyors queue pallets for crane pickup and receive pallets from crane deposits. Zone accumulation controls pallet flow to match crane cycle. Pallet verification (dimensions, weight, label) often occurs on the conveyor before AS/RS entry.</p>
+<h3>Dock Operations</h3>
+<p>Pallet conveyors transport pallets between production/storage and shipping docks. Gravity pallet flow lanes stage pallets in order. Powered conveyors extend into truck trailers for automated trailer loading systems (ATLS). Dock levelers and vehicle restraints integrate with <a href="/industries/mining-conveyors/">conveyor safety systems</a>.</p>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a pallet conveyor?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets (typically 2,000-10,000 lbs). Pallet conveyors use <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>, <a href="/conveyor-types/chain-conveyors/">drag chain</a>, or heavy-duty roller systems. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, and AS/RS systems.</p>
 
-  <!-- Breadcrumb -->
-  <nav class="bg-surface border-b border-border" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <ol class="flex items-center gap-2 text-sm text-ink-muted">
-        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
-        <li class="text-ink-muted/50">/</li>
-        <li><a href="/conveyor-types/" class="hover:text-accent transition-colors">Conveyor Types</a></li>
-        <li class="text-ink-muted/50">/</li>
-        <li class="text-ink font-semibold">Pallet Conveyors</li>
-      </ol>
-    </div>
-  </nav>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What type of conveyor is used for pallets?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> for standard pallets up to 10,000 lbs, <a href="/conveyor-types/chain-conveyors/">drag chain</a> for heavy or non-standard pallets, <a href="/conveyor-types/roller-conveyors/gravity/">heavy-duty gravity roller</a> for pallet flow, and <a href="/conveyor-types/transfer-conveyors/">turntables or chain transfers</a> for direction changes. CDLR is the standard for most applications.</p>
 
-  <!-- Hero -->
-  <section class="py-16 sm:py-20 bg-surface-dim bg-dots">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Conveyor Types</div>
-      <h1 class="font-display text-5xl sm:text-6xl font-extrabold text-ink tracking-wide uppercase leading-tight mb-8">
-        Pallet Conveyors: CDLR, Chain & Heavy-Duty Systems
-      </h1>
-      <div class="text-xl text-ink-muted leading-relaxed max-w-3xl">
-        <p>Pallet conveyors are heavy-duty systems designed to transport loaded pallets weighing 2,000 to 10,000+ pounds. They integrate with <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizers</a>, stretch wrappers, automated storage/retrieval systems (AS/RS), and dock operations. The most common types are <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR (Chain-Driven Live Roller)</a> and drag chain conveyors, with transfers and turntables for direction changes.</p>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How much weight can a pallet conveyor handle?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>Standard <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle 2,000-4,000 lb pallets. Heavy-duty CDLR and <a href="/conveyor-types/chain-conveyors/">drag chain</a> handle up to 10,000-20,000 lbs. Capacity depends on roller diameter, spacing, bearing rating, chain size, and frame construction. Always specify maximum expected load plus safety factor.</p>
 
-  <!-- Pallet Type Navigation -->
-  <section class="py-16 bg-surface" aria-labelledby="subtypes-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Pallet Conveyor Types</div>
-      <h2 id="subtypes-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Explore Pallet <span class="text-accent">Conveyor Types</span>
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {palletTypes.map((type) => (
-          <a href={type.slug} class="card group p-6">
-            <h3 class="font-display text-xl font-bold uppercase tracking-wider text-ink group-hover:text-accent transition-colors mb-2">{type.name}</h3>
-            <p class="text-base text-ink-muted">{type.desc}</p>
-            <div class="flex flex-wrap gap-2 mt-3">
-              {type.tags.map((tag: string) => (
-                <span class="text-xs font-semibold px-2.5 py-1 bg-ink/5 text-ink-muted">{tag}</span>
-              ))}
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is the difference between CDLR and drag chain?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR</a> uses chain-driven rollers that contact pallet bottom boards. Works best with standard pallets. <a href="/conveyor-types/chain-conveyors/">Drag chain</a> uses chain strands that directly contact pallet stringers. Handles block pallets, non-standard sizes, and very heavy loads better than CDLR.</p>
 
-  <!-- CDLR Overview -->
-  <article class="py-20 bg-surface-dim bg-dots" aria-labelledby="cdlr-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Primary Technology</div>
-      <h2 id="cdlr-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Chain-Driven Live Roller <span class="text-accent">(CDLR)</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> are the standard choice for pallet handling in packaging and distribution. A roller chain (typically #60 or #80 ANSI chain) drives large-diameter steel rollers (2.5" to 3.5" typical). The pallet rides on the roller surfaces, which are driven at a constant speed by the chain.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">CDLR Specifications</h3>
-        <ul class="list-disc list-inside space-y-2 ml-2">
-          <li><strong class="text-ink">Load capacity:</strong> 2,000-10,000 lbs depending on frame and roller specifications</li>
-          <li><strong class="text-ink">Roller diameter:</strong> 2.5", 2.9", 3.5" common; larger for heavier loads</li>
-          <li><strong class="text-ink">Roller spacing:</strong> 3", 4", 6" typical; must support pallet bottom boards</li>
-          <li><strong class="text-ink">Speed:</strong> 20-60 FPM typical for pallet handling</li>
-          <li><strong class="text-ink">Frame:</strong> Heavy structural steel channel or formed sections</li>
-        </ul>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">CDLR Advantages</h3>
-        <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>High load capacity with positive chain drive</li>
-          <li>Smooth, controlled pallet transport</li>
-          <li>Zone accumulation available with clutches</li>
-          <li>Handles standard GMA pallets, Euro pallets, and custom sizes</li>
-          <li>Integrates easily with transfers, lifts, and automation</li>
-        </ul>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">CDLR Limitations</h3>
-        <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>Requires pallet bottom boards parallel to conveyor direction</li>
-          <li>Block pallets may not convey well (no bottom boards)</li>
-          <li>Chain maintenance required (lubrication, tensioning)</li>
-        </ul>
-      </div>
-    </div>
-  </article>
-
-  <!-- Drag Chain -->
-  <section class="py-20 bg-surface" aria-labelledby="chain-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Alternative</div>
-      <h2 id="chain-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Drag Chain <span class="text-accent">Pallet Conveyors</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-        <p><a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Drag chain conveyors</a> (also called strand chain or slat chain) use two or three strands of heavy chain running in tracks. The pallet bottom stringers ride directly on the chain strands. This design handles non-standard pallets, block pallets, and very heavy loads that CDLR cannot.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">When to Use Drag Chain</h3>
-        <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>Block pallets or plastic pallets without bottom boards</li>
-          <li>Non-standard pallet sizes or mixed pallet types</li>
-          <li>Extremely heavy loads (10,000+ lbs)</li>
-          <li>Applications where pallets enter from the side (perpendicular)</li>
-          <li>Integration with pallet dispensers or pallet magazines</li>
-        </ul>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Drag Chain Considerations</h3>
-        <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>Higher friction than CDLR (chain slides against pallet)</li>
-          <li>More wear on pallet bottoms</li>
-          <li>Noisier operation</li>
-          <li>Higher chain wear and lubrication requirements</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comparison Table -->
-  <section class="py-20 bg-surface-dim bg-dots" aria-labelledby="comparison-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Comparison</div>
-      <h2 id="comparison-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Pallet Conveyor <span class="text-accent">Comparison</span>
-      </h2>
-
-      <div class="overflow-x-auto -mx-4 px-4">
-        <table class="w-full text-left border-collapse min-w-[900px]">
-          <thead>
-            <tr class="border-b-2 border-ink">
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Type</th>
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Best For</th>
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Load Capacity</th>
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed</th>
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4 pr-4">Pallet Types</th>
-              <th class="font-display text-sm font-bold uppercase tracking-wider text-ink py-4">Cost</th>
-            </tr>
-          </thead>
-          <tbody class="text-base text-ink-muted">
-            <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover">CDLR</a></td>
-              <td class="py-3 pr-4">Standard pallet transport</td>
-              <td class="py-3 pr-4 font-mono text-sm">2,000-10,000 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">20-60 FPM</td>
-              <td class="py-3 pr-4">GMA, Euro, stringer</td>
-              <td class="py-3 font-mono text-sm">$$$</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover">Drag Chain (2-strand)</a></td>
-              <td class="py-3 pr-4">Non-standard, heavy loads</td>
-              <td class="py-3 pr-4 font-mono text-sm">Up to 15,000 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">10-40 FPM</td>
-              <td class="py-3 pr-4">Any, including block</td>
-              <td class="py-3 font-mono text-sm">$$$</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover">Drag Chain (3-strand)</a></td>
-              <td class="py-3 pr-4">Very heavy, wide loads</td>
-              <td class="py-3 pr-4 font-mono text-sm">Up to 20,000 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">10-30 FPM</td>
-              <td class="py-3 pr-4">Any, including double</td>
-              <td class="py-3 font-mono text-sm">$$$$</td>
-            </tr>
-            <tr class="border-b border-border">
-              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover">Gravity Pallet Flow</a></td>
-              <td class="py-3 pr-4">FIFO storage, staging</td>
-              <td class="py-3 pr-4 font-mono text-sm">2,000-4,000 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">Gravity</td>
-              <td class="py-3 pr-4">Standard with boards</td>
-              <td class="py-3 font-mono text-sm">$$</td>
-            </tr>
-            <tr>
-              <td class="py-3 pr-4 font-semibold text-ink"><a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover">Chain Transfer</a></td>
-              <td class="py-3 pr-4">Right-angle direction change</td>
-              <td class="py-3 pr-4 font-mono text-sm">2,000-6,000 lbs</td>
-              <td class="py-3 pr-4 font-mono text-sm">20-40 FPM</td>
-              <td class="py-3 pr-4">Standard with boards</td>
-              <td class="py-3 font-mono text-sm">$$$</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Integration -->
-  <section class="py-20 bg-surface" aria-labelledby="integration-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent mb-4">Integration</div>
-      <h2 id="integration-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-8">
-        Pallet Conveyor <span class="text-accent">Integration</span>
-      </h2>
-      <div class="text-lg text-ink-muted leading-relaxed space-y-6">
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Palletizer Integration</h3>
-        <p>Pallet conveyors transport empty pallets to <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizers</a> and loaded pallets away. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/" class="text-accent hover:text-accent-hover font-semibold">Pallet dispensers</a> feed empty pallets onto the infeed conveyor. Outfeed conveyors transport loaded pallets to stretch wrap and shipping. Conveyor height must match palletizer load/unload height (typically 16-24" floor to roller top).</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Stretch Wrapper Integration</h3>
-        <p>Pallet conveyors feed stretch wrappers and remove wrapped pallets. Turntable wrappers require a pallet transfer to position the pallet on the turntable. Rotary arm and ring wrappers allow in-line pallet flow without transfer. Conveyor speed must match wrapper cycle time.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">AS/RS Integration</h3>
-        <p>Automated storage and retrieval systems (AS/RS) interface with pallet conveyors at pick/deposit stations. Conveyors queue pallets for crane pickup and receive pallets from crane deposits. Zone accumulation controls pallet flow to match crane cycle. Pallet verification (dimensions, weight, label) often occurs on the conveyor before AS/RS entry.</p>
-
-        <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink">Dock Operations</h3>
-        <p>Pallet conveyors transport pallets between production/storage and shipping docks. Gravity pallet flow lanes stage pallets in order. Powered conveyors extend into truck trailers for automated trailer loading systems (ATLS). Dock levelers and vehicle restraints integrate with <a href="/industries/mining-conveyors/" class="text-accent hover:text-accent-hover font-semibold">conveyor safety systems</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
-      </h2>
-
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is a pallet conveyor?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed">
-            <p>A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets (typically 2,000-10,000 lbs). Pallet conveyors use <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a>, <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain</a>, or heavy-duty roller systems. They integrate with <a href="/industries/packaging-line-conveyors/pallet/" class="text-accent hover:text-accent-hover font-semibold">palletizers</a>, stretch wrappers, and AS/RS systems.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What type of conveyor is used for pallets?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed">
-            <p>The most common types are <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> for standard pallets up to 10,000 lbs, <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain</a> for heavy or non-standard pallets, <a href="/conveyor-types/roller-conveyors/gravity/" class="text-accent hover:text-accent-hover font-semibold">heavy-duty gravity roller</a> for pallet flow, and <a href="/conveyor-types/transfer-conveyors/" class="text-accent hover:text-accent-hover font-semibold">turntables or chain transfers</a> for direction changes. CDLR is the standard for most applications.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            How much weight can a pallet conveyor handle?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed">
-            <p>Standard <a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR conveyors</a> handle 2,000-4,000 lb pallets. Heavy-duty CDLR and <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">drag chain</a> handle up to 10,000-20,000 lbs. Capacity depends on roller diameter, spacing, bearing rating, chain size, and frame construction. Always specify maximum expected load plus safety factor.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is the difference between CDLR and drag chain?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed">
-            <p><a href="/conveyor-types/cdlr-conveyors/" class="text-accent hover:text-accent-hover font-semibold">CDLR</a> uses chain-driven rollers that contact pallet bottom boards. Works best with standard pallets. <a href="/conveyor-types/chain-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Drag chain</a> uses chain strands that directly contact pallet stringers. Handles block pallets, non-standard sizes, and very heavy loads better than CDLR.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Pages -->
-  <section class="py-16 bg-ink-light" aria-labelledby="related-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-label text-accent-bright mb-4">Related Pages</div>
-      <h2 id="related-heading" class="font-display text-3xl font-extrabold text-white tracking-wide mb-8">
-        Continue <span class="text-accent-bright">Researching</span>
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/conveyor-types/cdlr-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">CDLR Conveyors</div>
-          <p class="text-sm text-white/60">Chain-driven live roller details</p>
-        </a>
-        <a href="/industries/packaging-line-conveyors/pallet/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Palletizing Lines</div>
-          <p class="text-sm text-white/60">End-of-line integration</p>
-        </a>
-        <a href="/conveyor-types/chain-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Chain Conveyors</div>
-          <p class="text-sm text-white/60">Drag chain and slat</p>
-        </a>
-        <a href="/conveyor-types/transfer-conveyors/" class="p-5 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-accent/40 transition-all group">
-          <div class="font-display text-lg font-bold uppercase tracking-wider text-white group-hover:text-accent-bright transition-colors mb-1">Transfer Conveyors</div>
-          <p class="text-sm text-white/60">Direction changes</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
+</div>
+</div>
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/cdlr-conveyors/">CDLR Conveyors</a></h3>
+<p class="usa-collection__description">Chain-driven live roller details</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/industries/packaging-line-conveyors/pallet/">Palletizing Lines</a></h3>
+<p class="usa-collection__description">End-of-line integration</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/chain-conveyors/">Chain Conveyors</a></h3>
+<p class="usa-collection__description">Drag chain and slat</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/transfer-conveyors/">Transfer Conveyors</a></h3>
+<p class="usa-collection__description">Direction changes</p></div></li>
+</ul>
 </BaseLayout>

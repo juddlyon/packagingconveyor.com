@@ -50,320 +50,134 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-
 <BaseLayout
   title="Cookie & Cracker Packaging Conveyors: Stacking, Wrapping & Handling | PackagingConveyor.com"
   description="Technical guide to cookie and cracker packaging conveyors: counter stackers, slug-wrap infeed, tray loading, gentle accumulation, and breakage prevention for fragile baked goods."
   canonical="https://packagingconveyor.com/industries/food-conveyors/bakery/cookie-cracker/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
+<h1>Cookie &amp; Cracker Packaging Conveyors</h1>
+<p class="usa-intro">Cookie and cracker packaging conveyors handle fragile baked products through counting, stacking, wrapping, tray loading, and case packing without breakage. These lines use slip-torque accumulation, zero-gap belt transfers, counter stackers, and servo-driven wrapper infeed conveyors to maintain product integrity at production rates of 400 to 1,200+ pieces per minute per lane. Manufacturers like Bosch (now Syntegon), Cavanna, Fuji Machinery, and Campbell Wrapper supply integrated cookie and cracker packaging systems with conveyor subsystems designed for fragile product handling.</p>
+<h2 id="challenges-heading">Why Cookies &amp; Crackers Break</h2>
+<p>Cookies and crackers break from three causes on packaging lines: impact at transfer points, compression during accumulation, and vibration during transport. Each cause requires a different conveyor solution. Breakage rates above 2-3% waste raw materials, slow production (jams from broken pieces), and create customer complaints from damaged product in the package.</p>
+<h3>Impact Breakage</h3>
+<p>Every transfer point between conveyor sections creates an impact opportunity. Products fall across gaps, hit dead plates, or land on hard roller surfaces. Cookie packaging lines minimize transfers and use tapered-nose belt conveyors that overlap the receiving belt by 1-2 inches, eliminating the gap entirely. Where transfers cannot be avoided, air-cushion transfer plates use a thin layer of compressed air to float product across the gap.</p>
+<h3>Compression Breakage</h3>
+<p>When products accumulate (stop) on a running conveyor, back-pressure from upstream product pushes against stopped product. Standard conveyors apply full belt friction force to stopped products, enough to crush cookies. <a href="/conveyor-types/accumulation-conveyors/">Accumulation conveyors</a> with slip-torque or zero-pressure technology solve this. Shuttleworth's slip-torque rollers are a bakery industry standard, when product stops, the rollers slip freely under the product, applying near-zero force.</p>
+<h3>Vibration Breakage</h3>
+<p>High-frequency vibration from belt splices, roller bearings, and drive components cracks thin products like crackers. Solutions include seamless (welded) belts, precision-balanced rollers, and vibration-damped conveyor frames. Running conveyors at consistent speed (avoiding frequent start-stop cycles) also reduces vibration damage.</p>
+<h2 id="stacker-heading">Counter Stackers &amp; Slug Formation</h2>
+<p>Counter stackers count individual cookies on a high-speed belt, form them into stacks (slugs) of a specified count, and deliver slugs to the wrapping machine at the correct pitch. This is the most mechanically complex conveyor subsystem in a cookie packaging line, operating at 400-1,200+ cookies per minute per lane.</p>
+<p>The counter stacker process works in four steps:</p>
+<ol>
+<li><strong>Counting:</strong> Photoeyes or laser sensors count individual products on a high-speed belt. Sensor resolution must distinguish products at 10-20mm spacing at speeds of 100-300 FPM.</li>
+<li><strong>Grouping:</strong> A servo-driven diverter or speed-change belt separates counted groups from the continuous product stream. The gap between groups provides time for the stacking mechanism to reset.</li>
+<li><strong>Stacking:</strong> Products drop or slide into a vertical stack. Edge-stacking (products on edge like books) or flat-stacking (products face-up in a pile) depends on the product shape and wrapper format.</li>
+<li><strong>Slug delivery:</strong> The completed slug transfers to a wrapper infeed conveyor. Servo timing ensures the slug arrives at the wrapper at the correct position and speed. For more on <a href="/conveyor-functions/stacking-machines/">stacking machine technology</a>, see our dedicated guide.</li>
+</ol>
+<p>Counter stackers from Syntegon (formerly Bosch Packaging), IMA, and Cavanna integrate directly with their wrapping machines. Standalone counter stackers from companies like SIG and LoeschPack serve multi-brand cookie lines where different wrappers handle different products.</p>
+<h2 id="infeed-heading">Wrapper Infeed Conveyors</h2>
+<p>The wrapper infeed conveyor is the critical link between the stacking system and the flow wrapper. It must deliver product slugs at exact pitch (center-to-center spacing) and speed to match the wrapper's film feed cycle. Timing errors produce misregistered packages, the seal cuts through the product instead of between slugs.</p>
+<h3>Slug-Wrap (Horizontal Stack) Infeed</h3>
+<p>Slug-wrap lines deliver horizontal stacks of cookies on-edge to a horizontal form-fill-seal (HFFS) wrapper. The <a href="/conveyor-functions/infeed-outfeed/">infeed conveyor</a> uses flights (pusher bars) attached to a timing belt to maintain exact slug spacing. Servo-driven flights allow recipe-based pitch changes for different slug lengths. Typical wrapper speeds for slug-wrap lines range from 150 to 400 packages per minute.</p>
+<h3>Tray-Pack Infeed</h3>
+<p>Tray-pack lines load cookies flat into thermoformed or pre-made trays. A <a href="/conveyor-functions/tray-loading/">tray loading conveyor</a> positions empty trays under a pick-and-place mechanism (vacuum cups, mechanical fingers, or delta robots) that places counted cookies into tray cavities. The loaded tray transfers to overwrap or top-seal equipment. Tray loading conveyors use <a href="/conveyor-functions/indexing-conveyors/">servo indexing</a> to position trays precisely under the loading head.</p>
+<h3>Pillow-Pack Infeed</h3>
+<p>Pillow-pack (individual wrap) lines wrap each cookie individually in a small film pillow. The infeed conveyor spaces individual cookies at the wrapper pitch, typically 30-60mm spacing at 200-600 FPM. Servo-driven phasing belts accelerate cookies to the correct spacing. This format is common for single-serve cookies in vending, foodservice, and variety packs.</p>
+<h2 id="accum-heading">Gentle Accumulation</h2>
+<p>Cookie and cracker lines need accumulation between the oven and the packaging equipment. The oven runs continuously; the packaging machine stops for film splices, jam clearing, or changeover. Without accumulation, every packaging stop shuts down the oven, wasting product already in the baking cycle.</p>
+<p>Standard <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a> apply too much back-pressure for fragile cookies. Cookie lines use two gentle accumulation approaches:</p>
+<ul>
+<li><strong>Slip-torque accumulation:</strong> Shuttleworth-style conveyors use rollers that slip freely when product stops. The rollers continue rotating but apply near-zero force to stationary product. Multiple zones accumulate product without compression. Zones release in sequence when the downstream machine restarts.</li>
+<li><strong>Mass-flow accumulation:</strong> Wide belt conveyors accumulate product in a mass (random orientation) at low depth. Products spread across the full belt width rather than stacking up. A <a href="/conveyor-functions/product-handling/spreader/">spreader conveyor</a> distributes product evenly. This approach suits round cookies that can contact each other without damage but is unsuitable for decorated or enrobed products.</li>
+</ul>
+<p>Accumulation capacity (minutes of buffer) depends on packaging machine reliability. High-reliability lines need 2-3 minutes of buffer. Lines with frequent stops need 5-10 minutes. Each minute of buffer at 800 cookies per minute requires conveyor surface area for 800 cookies, plan floor space accordingly.</p>
+<h2 id="lane-heading">Multi-Lane Conveyor Layouts</h2>
+<p>High-volume cookie and cracker lines use multiple parallel lanes from oven to wrapper. A wide oven belt (48-72 inches) produces cookies in 4-12 lanes simultaneously. Each lane feeds its own stacker and wrapper, or multiple lanes merge into a single high-speed wrapper with a <a href="/conveyor-functions/collating-laning/">collating and laning system</a>.</p>
+<p>Lane-splitting conveyors use adjustable guide rails or servo-positioned diverters to separate the wide oven output into individual lanes. Lane width adjustment accommodates different cookie diameters. Servo-positioned guides change lane width through recipe selection on the HMI, no manual adjustment required during changeover.</p>
+<p>Lane balancing ensures equal product count across all lanes. Unequal lane loading causes one wrapper to starve while another jams. Photoeye sensors at each lane count products and signal the lane-splitting conveyor to redistribute product toward underloaded lanes.</p>
+<h2 id="case-heading">Case Packing &amp; End-of-Line</h2>
+<p>Wrapped cookie and cracker packages move from wrappers to <a href="/industries/packaging-line-conveyors/case/">case packing conveyors</a>. The conveyor between wrapper and case packer collates packages into case patterns, typically 6, 12, 24, or 36 packages per case. Collating conveyors group packages using timing belts, lane guides, and servo-positioned stops.</p>
+<p><a href="/industries/packaging-line-conveyors/case/robotic-case-packing/">Robotic case packers</a> with delta robots handle the high speed and gentle touch required for cookie packages. Delta robots pick single or multiple packages and place them into cases at 60-120 picks per minute. The robot vision system compensates for package orientation variations on the infeed conveyor.</p>
+<p>After case sealing, case conveyors transport sealed cases to palletizing. Cookie and cracker cases are lightweight (typically 5-15 lb) and stack well, making them suitable for high-level palletizers. The <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">pallet dispenser</a> feeds empty pallets to the palletizer, and case conveyors deliver sealed cases at the palletizer's cycle rate.</p>
+<h2 id="compare-heading">Cookie Line Conveyor Types</h2>
+<table>
+<thead>
+<tr>
+<th>Line Position</th>
+<th>Conveyor Type</th>
+<th>Speed Range</th>
+<th>Key Requirement</th>
+<th>Relative Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oven discharge</td>
+<td>Wire mesh belt</td>
+<td>3-15 FPM</td>
+<td>High temp, gentle product release</td>
+<td>$$$</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>Spiral or straight mesh</td>
+<td>3-10 FPM</td>
+<td>Airflow, compact footprint</td>
+<td>$$$-$$$$</td>
+</tr>
+<tr>
+<td>Accumulation</td>
+<td>Slip-torque roller</td>
+<td>20-80 FPM</td>
+<td>Zero back-pressure</td>
+<td>$$$</td>
+</tr>
+<tr>
+<td>Counter stacker</td>
+<td>Servo belt + mechanism</td>
+<td>100-300 FPM</td>
+<td>Precise counting, gentle stacking</td>
+<td>$$$$</td>
+</tr>
+<tr>
+<td>Wrapper infeed</td>
+<td>Servo flighted belt</td>
+<td>50-200 FPM</td>
+<td>Exact pitch, speed sync</td>
+<td>$$$-$$$$</td>
+</tr>
+<tr>
+<td>Case packer infeed</td>
+<td>Flat belt + collating</td>
+<td>40-120 FPM</td>
+<td>Pattern formation</td>
+<td>$$-$$$</td>
+</tr>
+</tbody>
+</table>
+<p>FPM = feet per minute. Speeds and costs are typical ranges. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for detailed cost factors.</p>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">Why do cookie lines need special conveyors?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>Cookies and crackers break from impact, compression, and vibration. Standard conveyors create all three. Cookie lines use slip-torque <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>, zero-gap transfers, and servo-timed infeed to keep breakage below 2%.</p>
 
-  <!-- ═══ HERO ═══ -->
-  <section class="bg-blueprint relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
-      <nav class="text-sm font-mono text-white/60 mb-8" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-white/70">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/industries/" class="hover:text-white/70">Industries</a>
-        <span class="mx-2">/</span>
-        <a href="/industries/food-conveyors/" class="hover:text-white/70">Food Conveyors</a>
-        <span class="mx-2">/</span>
-        <a href="/industries/food-conveyors/bakery/" class="hover:text-white/70">Bakery</a>
-        <span class="mx-2">/</span>
-        <span class="text-white/70">Cookie & Cracker</span>
-      </nav>
-      <div class="max-w-3xl">
-        <div class="section-label text-accent-bright/80 mb-6">Bakery Conveyors</div>
-        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-wide uppercase leading-[0.95] mb-8">
-          Cookie & Cracker <span class="text-accent-bright">Packaging Conveyors</span>
-        </h1>
-      </div>
-    </div>
-  </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is a counter stacker?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>A counter stacker counts individual cookies on a high-speed belt, forms them into stacks of a specified count, and delivers the stack to a wrapper. Speeds range from 400 to 1,200+ cookies per minute per lane. See also: <a href="/conveyor-functions/stacking-machines/">stacking machines</a>.</p>
 
-  <!-- ═══ AIO ═══ -->
-  <article>
-    <section class="py-12 bg-surface-dim" aria-labelledby="aio-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p id="aio-heading" class="text-lg text-ink leading-relaxed">
-          Cookie and cracker packaging conveyors handle fragile baked products through counting, stacking, wrapping, tray loading, and case packing without breakage. These lines use slip-torque accumulation, zero-gap belt transfers, counter stackers, and servo-driven wrapper infeed conveyors to maintain product integrity at production rates of 400 to 1,200+ pieces per minute per lane. Manufacturers like Bosch (now Syntegon), Cavanna, Fuji Machinery, and Campbell Wrapper supply integrated cookie and cracker packaging systems with conveyor subsystems designed for fragile product handling.
-        </p>
-      </div>
-    </section>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How do you prevent cookie breakage?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>Eliminate hard transfer points with tapered nose rollers or zero-gap transfers. Use slip-torque accumulation (belt slips under stopped product). Maintain gentle speed differentials. Use soft belt surfaces. Target less than 2% breakage rate across the line.</p>
 
-    <!-- ═══ FRAGILE PRODUCT CHALLENGES ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="challenges-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Core Challenge</div>
-        <h2 id="challenges-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Why Cookies & Crackers <span class="text-accent">Break</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            Cookies and crackers break from three causes on packaging lines: impact at transfer points, compression during accumulation, and vibration during transport. Each cause requires a different conveyor solution. Breakage rates above 2-3% waste raw materials, slow production (jams from broken pieces), and create customer complaints from damaged product in the package.
-          </p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is slug-wrap packaging?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>Slug-wrap wraps a horizontal stack of cookies in film using a HFFS (horizontal form-fill-seal) machine. The slug conveyor delivers counted stacks at precise spacing and speed. Standard for sandwich cookies, thin crackers, and premium brands.</p>
 
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Impact Breakage</h3>
-          <p>
-            Every transfer point between conveyor sections creates an impact opportunity. Products fall across gaps, hit dead plates, or land on hard roller surfaces. Cookie packaging lines minimize transfers and use tapered-nose belt conveyors that overlap the receiving belt by 1-2 inches, eliminating the gap entirely. Where transfers cannot be avoided, air-cushion transfer plates use a thin layer of compressed air to float product across the gap.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Compression Breakage</h3>
-          <p>
-            When products accumulate (stop) on a running conveyor, back-pressure from upstream product pushes against stopped product. Standard conveyors apply full belt friction force to stopped products, enough to crush cookies. <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">Accumulation conveyors</a> with slip-torque or zero-pressure technology solve this. Shuttleworth's slip-torque rollers are a bakery industry standard, when product stops, the rollers slip freely under the product, applying near-zero force.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Vibration Breakage</h3>
-          <p>
-            High-frequency vibration from belt splices, roller bearings, and drive components cracks thin products like crackers. Solutions include seamless (welded) belts, precision-balanced rollers, and vibration-damped conveyor frames. Running conveyors at consistent speed (avoiding frequent start-stop cycles) also reduces vibration damage.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ COUNTER STACKERS ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="stacker-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Stacking</div>
-        <h2 id="stacker-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Counter Stackers & <span class="text-accent">Slug Formation</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            Counter stackers count individual cookies on a high-speed belt, form them into stacks (slugs) of a specified count, and deliver slugs to the wrapping machine at the correct pitch. This is the most mechanically complex conveyor subsystem in a cookie packaging line, operating at 400-1,200+ cookies per minute per lane.
-          </p>
-          <p>
-            The counter stacker process works in four steps:
-          </p>
-          <ol class="list-decimal list-inside space-y-3 ml-2">
-            <li><strong class="text-ink">Counting:</strong> Photoeyes or laser sensors count individual products on a high-speed belt. Sensor resolution must distinguish products at 10-20mm spacing at speeds of 100-300 FPM.</li>
-            <li><strong class="text-ink">Grouping:</strong> A servo-driven diverter or speed-change belt separates counted groups from the continuous product stream. The gap between groups provides time for the stacking mechanism to reset.</li>
-            <li><strong class="text-ink">Stacking:</strong> Products drop or slide into a vertical stack. Edge-stacking (products on edge like books) or flat-stacking (products face-up in a pile) depends on the product shape and wrapper format.</li>
-            <li><strong class="text-ink">Slug delivery:</strong> The completed slug transfers to a wrapper infeed conveyor. Servo timing ensures the slug arrives at the wrapper at the correct position and speed. For more on <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">stacking machine technology</a>, see our dedicated guide.</li>
-          </ol>
-          <p>
-            Counter stackers from Syntegon (formerly Bosch Packaging), IMA, and Cavanna integrate directly with their wrapping machines. Standalone counter stackers from companies like SIG and LoeschPack serve multi-brand cookie lines where different wrappers handle different products. <!-- VERIFY: Current branding for SIG cookie packaging equipment -->
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ WRAPPER INFEED ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="infeed-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Wrapping</div>
-        <h2 id="infeed-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Wrapper <span class="text-accent">Infeed Conveyors</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            The wrapper infeed conveyor is the critical link between the stacking system and the flow wrapper. It must deliver product slugs at exact pitch (center-to-center spacing) and speed to match the wrapper's film feed cycle. Timing errors produce misregistered packages, the seal cuts through the product instead of between slugs.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Slug-Wrap (Horizontal Stack) Infeed</h3>
-          <p>
-            Slug-wrap lines deliver horizontal stacks of cookies on-edge to a horizontal form-fill-seal (HFFS) wrapper. The <a href="/conveyor-functions/infeed-outfeed/" class="text-accent hover:text-accent-hover font-semibold">infeed conveyor</a> uses flights (pusher bars) attached to a timing belt to maintain exact slug spacing. Servo-driven flights allow recipe-based pitch changes for different slug lengths. Typical wrapper speeds for slug-wrap lines range from 150 to 400 packages per minute.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Tray-Pack Infeed</h3>
-          <p>
-            Tray-pack lines load cookies flat into thermoformed or pre-made trays. A <a href="/conveyor-functions/tray-loading/" class="text-accent hover:text-accent-hover font-semibold">tray loading conveyor</a> positions empty trays under a pick-and-place mechanism (vacuum cups, mechanical fingers, or delta robots) that places counted cookies into tray cavities. The loaded tray transfers to overwrap or top-seal equipment. Tray loading conveyors use <a href="/conveyor-functions/indexing-conveyors/" class="text-accent hover:text-accent-hover font-semibold">servo indexing</a> to position trays precisely under the loading head.
-          </p>
-
-          <h3 class="font-display text-2xl font-bold uppercase tracking-wider text-ink mt-8 mb-4">Pillow-Pack Infeed</h3>
-          <p>
-            Pillow-pack (individual wrap) lines wrap each cookie individually in a small film pillow. The infeed conveyor spaces individual cookies at the wrapper pitch, typically 30-60mm spacing at 200-600 FPM. Servo-driven phasing belts accelerate cookies to the correct spacing. This format is common for single-serve cookies in vending, foodservice, and variety packs.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ ACCUMULATION ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="accum-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Accumulation</div>
-        <h2 id="accum-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Gentle <span class="text-accent">Accumulation</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            Cookie and cracker lines need accumulation between the oven and the packaging equipment. The oven runs continuously; the packaging machine stops for film splices, jam clearing, or changeover. Without accumulation, every packaging stop shuts down the oven, wasting product already in the baking cycle.
-          </p>
-          <p>
-            Standard <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation conveyors</a> apply too much back-pressure for fragile cookies. Cookie lines use two gentle accumulation approaches:
-          </p>
-          <ul class="list-disc list-inside space-y-3 ml-2">
-            <li><strong class="text-ink">Slip-torque accumulation:</strong> Shuttleworth-style conveyors use rollers that slip freely when product stops. The rollers continue rotating but apply near-zero force to stationary product. Multiple zones accumulate product without compression. Zones release in sequence when the downstream machine restarts.</li>
-            <li><strong class="text-ink">Mass-flow accumulation:</strong> Wide belt conveyors accumulate product in a mass (random orientation) at low depth. Products spread across the full belt width rather than stacking up. A <a href="/conveyor-functions/product-handling/spreader/" class="text-accent hover:text-accent-hover font-semibold">spreader conveyor</a> distributes product evenly. This approach suits round cookies that can contact each other without damage but is unsuitable for decorated or enrobed products.</li>
-          </ul>
-          <p>
-            Accumulation capacity (minutes of buffer) depends on packaging machine reliability. High-reliability lines need 2-3 minutes of buffer. Lines with frequent stops need 5-10 minutes. Each minute of buffer at 800 cookies per minute requires conveyor surface area for 800 cookies, plan floor space accordingly.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ MULTI-LANE HANDLING ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="lane-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Multi-Lane Systems</div>
-        <h2 id="lane-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Multi-Lane <span class="text-accent">Conveyor Layouts</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            High-volume cookie and cracker lines use multiple parallel lanes from oven to wrapper. A wide oven belt (48-72 inches) produces cookies in 4-12 lanes simultaneously. Each lane feeds its own stacker and wrapper, or multiple lanes merge into a single high-speed wrapper with a <a href="/conveyor-functions/collating-laning/" class="text-accent hover:text-accent-hover font-semibold">collating and laning system</a>.
-          </p>
-          <p>
-            Lane-splitting conveyors use adjustable guide rails or servo-positioned diverters to separate the wide oven output into individual lanes. Lane width adjustment accommodates different cookie diameters. Servo-positioned guides change lane width through recipe selection on the HMI, no manual adjustment required during changeover.
-          </p>
-          <p>
-            Lane balancing ensures equal product count across all lanes. Unequal lane loading causes one wrapper to starve while another jams. Photoeye sensors at each lane count products and signal the lane-splitting conveyor to redistribute product toward underloaded lanes.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ CASE PACKING ═══ -->
-    <section class="py-20 bg-surface-dim" aria-labelledby="case-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">End of Line</div>
-        <h2 id="case-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-8">
-          Case Packing & <span class="text-accent">End-of-Line</span>
-        </h2>
-        <div class="text-lg text-ink-muted leading-relaxed space-y-5">
-          <p>
-            Wrapped cookie and cracker packages move from wrappers to <a href="/industries/packaging-line-conveyors/case/" class="text-accent hover:text-accent-hover font-semibold">case packing conveyors</a>. The conveyor between wrapper and case packer collates packages into case patterns, typically 6, 12, 24, or 36 packages per case. Collating conveyors group packages using timing belts, lane guides, and servo-positioned stops.
-          </p>
-          <p>
-            <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/" class="text-accent hover:text-accent-hover font-semibold">Robotic case packers</a> with delta robots handle the high speed and gentle touch required for cookie packages. Delta robots pick single or multiple packages and place them into cases at 60-120 picks per minute. The robot vision system compensates for package orientation variations on the infeed conveyor.
-          </p>
-          <p>
-            After case sealing, case conveyors transport sealed cases to palletizing. Cookie and cracker cases are lightweight (typically 5-15 lb) and stack well, making them suitable for high-level palletizers. The <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/" class="text-accent hover:text-accent-hover font-semibold">pallet dispenser</a> feeds empty pallets to the palletizer, and case conveyors deliver sealed cases at the palletizer's cycle rate.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ SELECTION TABLE ═══ -->
-    <section class="py-20 bg-surface" aria-labelledby="compare-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-label text-accent mb-4">Comparison</div>
-        <h2 id="compare-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-          Cookie Line Conveyor <span class="text-accent">Types</span>
-        </h2>
-
-        <div class="overflow-x-auto -mx-4 px-4">
-          <table class="w-full text-left border-collapse min-w-[850px]">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Line Position</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Conveyor Type</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Speed Range</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4 pr-4">Key Requirement</th>
-                <th class="font-display text-base font-bold uppercase tracking-wider text-ink py-4">Relative Cost</th>
-              </tr>
-            </thead>
-            <tbody class="text-base text-ink-muted">
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Oven discharge</td>
-                <td class="py-4 pr-4">Wire mesh belt</td>
-                <td class="py-4 pr-4 font-mono text-sm">3-15 FPM</td>
-                <td class="py-4 pr-4">High temp, gentle product release</td>
-                <td class="py-4 font-mono text-sm">$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Cooling</td>
-                <td class="py-4 pr-4">Spiral or straight mesh</td>
-                <td class="py-4 pr-4 font-mono text-sm">3-10 FPM</td>
-                <td class="py-4 pr-4">Airflow, compact footprint</td>
-                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Accumulation</td>
-                <td class="py-4 pr-4">Slip-torque roller</td>
-                <td class="py-4 pr-4 font-mono text-sm">20-80 FPM</td>
-                <td class="py-4 pr-4">Zero back-pressure</td>
-                <td class="py-4 font-mono text-sm">$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Counter stacker</td>
-                <td class="py-4 pr-4">Servo belt + mechanism</td>
-                <td class="py-4 pr-4 font-mono text-sm">100-300 FPM</td>
-                <td class="py-4 pr-4">Precise counting, gentle stacking</td>
-                <td class="py-4 font-mono text-sm">$$$$</td>
-              </tr>
-              <tr class="border-b border-border">
-                <td class="py-4 pr-4 font-semibold text-ink">Wrapper infeed</td>
-                <td class="py-4 pr-4">Servo flighted belt</td>
-                <td class="py-4 pr-4 font-mono text-sm">50-200 FPM</td>
-                <td class="py-4 pr-4">Exact pitch, speed sync</td>
-                <td class="py-4 font-mono text-sm">$$$-$$$$</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-semibold text-ink">Case packer infeed</td>
-                <td class="py-4 pr-4">Flat belt + collating</td>
-                <td class="py-4 pr-4 font-mono text-sm">40-120 FPM</td>
-                <td class="py-4 pr-4">Pattern formation</td>
-                <td class="py-4 font-mono text-sm">$$-$$$</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-sm text-ink-muted mt-4">FPM = feet per minute. Speeds and costs are typical ranges. See the <a href="/resources/conveyor-cost-guide/" class="text-accent hover:text-accent-hover font-semibold">conveyor cost guide</a> for detailed cost factors.</p>
-      </div>
-    </section>
-  </article>
-
-  <!-- ═══ FAQ ═══ -->
-  <section class="py-20 bg-surface-dim" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="faq-heading" class="font-display text-4xl sm:text-5xl font-extrabold text-ink tracking-wide uppercase mb-10">
-        Frequently Asked <span class="text-accent">Questions</span>
-      </h2>
-
-      <div class="space-y-4">
-        <details class="group border border-border bg-surface p-6 open:pb-8" open>
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            Why do cookie lines need special conveyors?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Cookies and crackers break from impact, compression, and vibration. Standard conveyors create all three. Cookie lines use slip-torque <a href="/conveyor-types/accumulation-conveyors/" class="text-accent hover:text-accent-hover font-semibold">accumulation</a>, zero-gap transfers, and servo-timed infeed to keep breakage below 2%.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is a counter stacker?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>A counter stacker counts individual cookies on a high-speed belt, forms them into stacks of a specified count, and delivers the stack to a wrapper. Speeds range from 400 to 1,200+ cookies per minute per lane. See also: <a href="/conveyor-functions/stacking-machines/" class="text-accent hover:text-accent-hover font-semibold">stacking machines</a>.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            How do you prevent cookie breakage?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Eliminate hard transfer points with tapered nose rollers or zero-gap transfers. Use slip-torque accumulation (belt slips under stopped product). Maintain gentle speed differentials. Use soft belt surfaces. Target less than 2% breakage rate across the line.</p>
-          </div>
-        </details>
-
-        <details class="group border border-border bg-surface p-6 open:pb-8">
-          <summary class="font-display text-xl font-bold uppercase tracking-wider text-ink cursor-pointer list-none flex items-center justify-between group-open:mb-4">
-            What is slug-wrap packaging?
-            <svg class="w-6 h-6 text-ink-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-          </summary>
-          <div class="text-ink-muted leading-relaxed space-y-3">
-            <p>Slug-wrap wraps a horizontal stack of cookies in film using a HFFS (horizontal form-fill-seal) machine. The slug conveyor delivers counted stacks at precise spacing and speed. Standard for sandwich cookies, thin crackers, and premium brands.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
+</div>
+</div>
 </BaseLayout>

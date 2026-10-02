@@ -1,0 +1,38 @@
+---
+import { sections, sectionFor, type NavLink } from '../nav';
+const path = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const active = sectionFor(path);
+const open = (link: NavLink): boolean => path.startsWith(link.href);
+---
+<nav aria-label="Site sections" class="docs-sidebar">
+  <ul class="usa-sidenav">
+    {sections.map(section => (
+      <li class="usa-sidenav__item">
+        <a href={section.href} class:list={{ 'usa-current': section === active }} aria-current={path === section.href ? 'page' : undefined}>{section.label}</a>
+        {section === active && section.children && (
+          <ul class="usa-sidenav__sublist">
+            {section.children.map(child => (
+              <li class="usa-sidenav__item">
+                <a href={child.href} class:list={{ 'usa-current': open(child) }} aria-current={path === child.href ? 'page' : undefined}>{child.label}</a>
+                {open(child) && child.children && (
+                  <ul class="usa-sidenav__sublist">
+                    {child.children.map(grand => (
+                      <li class="usa-sidenav__item">
+                        <a href={grand.href} class:list={{ 'usa-current': open(grand) }} aria-current={path === grand.href ? 'page' : undefined}>{grand.label}</a>
+                        {open(grand) && grand.children && (
+                          <ul class="usa-sidenav__sublist">
+                            {grand.children.map(leaf => <li class="usa-sidenav__item"><a href={leaf.href} class:list={{ 'usa-current': path === leaf.href }} aria-current={path === leaf.href ? 'page' : undefined}>{leaf.label}</a></li>)}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
