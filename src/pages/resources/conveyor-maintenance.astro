@@ -33,7 +33,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How do I track a conveyor belt?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt tracking centers the belt on the conveyor by adjusting the tail pulley, snub rollers, or tracking idlers. Step 1: Run the belt empty. If the belt drifts to one side, adjust the tail pulley on the side the belt is moving toward, tighten that side or loosen the opposite side by 1/4 turn. Step 2: Wait for 3-5 belt revolutions to see the effect. Step 3: Repeat small adjustments until the belt runs centered. Step 4: Load product and verify tracking holds under load. Never make large adjustments, small 1/4-turn changes prevent overcorrection. If tracking does not respond to adjustment, check for belt damage, splice failure, material buildup on pulleys, or conveyor frame misalignment." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt tracking centers the belt by adjusting the tracking device the conveyor maker specifies: a snub roller, the tail pulley take-up, or a tracking cam. Step 1: Run the belt empty, slowly or with frequent stops at first. Step 2: Make one small adjustment at one pulley or roller, in the direction the conveyor manual gives. On Hytrol belt conveyors, for example, you loosen the snub roller bolts nearest the tail pulley and tap the bolt on the side toward which the belt needs to move. Step 3: Let the belt make several revolutions before the next change. Hytrol says the belt should begin moving toward center within seven revolutions. Step 4: Repeat until centered, then load product and confirm tracking holds. If tracking does not respond, check for material buildup on pulleys, belt damage, splice failure, or a frame or pulley out of square." }
     },
     {
       "@type": "Question",
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How do I know when to replace a conveyor belt?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Replace a conveyor belt when you observe: (1) Edge fraying extending more than 1/2 inch from the belt edge. (2) Surface cracks or delamination where the cover separates from the carcass. (3) Visible carcass (fabric) through worn cover material. (4) Belt stretch exceeding the tensioner's adjustment range, the take-up is maxed out and the belt still slips. (5) Splice failure, the belt splice opens or delaminates. (6) Hardening or brittleness, the belt surface is no longer flexible. For food-grade belts, also replace when the belt surface cannot be cleaned to sanitary standards or when the belt color has degraded to the point where contamination visibility is compromised." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Replace a conveyor belt when you observe: (1) Edge fraying that keeps growing after tracking is corrected. (2) Surface cracks or delamination where the cover separates from the carcass. (3) Visible carcass (fabric) through worn cover material. (4) Belt stretch exceeding the tensioner's adjustment range, the take-up is maxed out and the belt still slips. (5) Splice failure, the belt splice opens or delaminates. (6) Hardening or brittleness, the belt surface is no longer flexible. For food-grade belts, also replace when the belt surface cannot be cleaned to sanitary standards or when the belt color has degraded to the point where contamination visibility is compromised." }
     }
   ]
 };
@@ -67,7 +67,7 @@ const faqSchema = {
 </ul>
 <h3>Weekly</h3>
 <ul>
-<li>Belt tension check, verify 1% sag between supports (push down on the belt; it should deflect about 1% of the center-to-center distance between supports). Adjust tension if necessary.</li>
+<li>Belt tension check, confirm the drive pulley moves the belt under full load without slipping and that the gauge marks (see <a href="#tension-heading">Belt Tensioning</a>) still show the belt maker's elongation. Adjust tension if necessary.</li>
 <li>Roller spin test, manually spin each roller (on roller conveyors). Rollers should spin freely with no grinding, wobbling, or stiffness. Replace any roller that does not spin freely.</li>
 <li>Sensor function test, block each photoeye and proximity sensor and verify the correct PLC response (conveyor stop, zone control, counting).</li>
 <li>Guide rail alignment, verify guide rails are parallel to the belt and positioned at the correct width for the product. Misaligned guides cause jams and product damage.</li>
@@ -75,10 +75,10 @@ const faqSchema = {
 </ul>
 <h3>Monthly</h3>
 <ul>
-<li>Bearing lubrication, grease bearings per manufacturer's schedule (typically 1-3 pumps of NLGI #2 grease). Over-greasing forces grease into the belt contact area and contaminates product. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> use sealed bearings, no lubrication needed.</li>
+<li>Bearing lubrication, grease bearings with the grease type, quantity, and interval the bearing maker specifies. Over-greasing forces grease into the belt contact area and contaminates product. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> use sealed bearings, no lubrication needed.</li>
 <li>Motor temperature check, use an infrared thermometer to measure motor housing temperature. Compare to baseline. A motor running significantly hotter than baseline indicates overload, ventilation blockage, or bearing failure inside the motor.</li>
-<li>Belt/chain wear measurement, measure belt thickness at multiple points and compare to new belt thickness. Replace belt when thickness loss exceeds 30% or when carcass is visible. For chain conveyors, measure chain pitch elongation, replace when elongation exceeds 2-3%.</li>
-<li>Guard condition, inspect all safety guards and covers. Replace damaged guards immediately. Missing guards are OSHA violations and serious safety hazards.</li>
+<li>Belt/chain wear measurement, measure belt thickness at multiple points and compare to new belt thickness. Replace the belt when the cover is worn through to the carcass or below the belt maker's minimum. For roller chain drives, measure pitch elongation: <a href="https://www.renold.com/media/1269222/chain-wear-guide-instructions.pdf" target="_blank" rel="noopener noreferrer">Renold's chain wear guide</a> says to consider replacement at 2% elongation and replace immediately at 3%. For tabletop and other conveyor chain, use the chain maker's published limit.</li>
+<li>Guard condition, inspect all safety guards and covers. Replace damaged guards immediately. Missing guards are serious hazards, and <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">OSHA 29 CFR 1910.212</a> requires guarding of ingoing nip points and rotating parts.</li>
 </ul>
 <h3>Quarterly</h3>
 <ul>
@@ -93,18 +93,19 @@ const faqSchema = {
 <li>Belt replacement assessment, evaluate whether the belt will last another year. Schedule proactive replacement during planned downtime rather than waiting for in-service failure.</li>
 <li>Motor insulation test (megger test), measures motor winding insulation resistance. Low readings predict motor failure months before it occurs. Replace motors with declining insulation readings.</li>
 <li>Controls system backup, back up PLC programs, HMI configurations, VFD parameters, and sensor settings. Store backups off-site. A PLC failure without a backup can take days to recover.</li>
-<li>Safety system audit, verify all E-stops, guard interlocks, light curtains, and safety relays function correctly. Document results per OSHA requirements.</li>
+<li>Safety system audit, verify all E-stops, guard interlocks, light curtains, and safety relays function correctly, and document the results. Separately, <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.147" target="_blank" rel="noopener noreferrer">OSHA 29 CFR 1910.147(c)(6)</a> requires a periodic inspection of each lockout/tagout energy control procedure at least annually, with a written certification of who, what equipment, and when.</li>
 </ul>
 <h2 id="tracking-heading">Belt Tracking</h2>
 <p>Belt tracking is the most critical and most frequently needed conveyor maintenance task. A mistracking belt grinds against the conveyor frame, shredding the belt edge, contaminating product with belt material, and eventually destroying the belt. Mistracking also jams product, misaligns product for downstream equipment, and can trigger <a href="/conveyor-functions/inspection-detection/">inspection system</a> false rejects.</p>
 <h3>Tracking Procedure</h3>
+<p>The adjustment point and direction depend on the conveyor design, so follow the conveyor manual. Some designs track at a snub roller, some at the tail pulley take-up, and some at a cam. The method below follows the general guidance in <a href="https://www.habasit.com/-/media/Project/Habasit/NewWebsite/Downloads/Products/General-conveyor-belts/Fabric-Conveyor-Belts-Installation-and-Maintenance-Guide.pdf" target="_blank" rel="noopener noreferrer">Habasit's fabric belt installation and maintenance guide</a> and the <a href="https://blog.hytrol.com/ask-hytrol-how-to-track-a-belt/" target="_blank" rel="noopener noreferrer">Hytrol belt tracking procedure</a>.</p>
 <ol>
-<li><strong>Run the belt empty.</strong> Remove all product from the conveyor. Tracking adjustments must be made with the belt running but unloaded first.</li>
-<li><strong>Observe the belt for 3-5 full revolutions.</strong> Note which direction the belt drifts and where along the conveyor the drift is worst (near the head, tail, or middle).</li>
-<li><strong>Adjust the tail pulley.</strong> If the belt drifts to the right, tighten the right-side tail pulley adjusting bolt by 1/4 turn (or loosen the left side by 1/4 turn). The belt moves toward the side with more tension.</li>
-<li><strong>Wait 3-5 revolutions.</strong> The belt takes multiple revolutions to respond to an adjustment. Do not make additional adjustments until the belt stabilizes.</li>
-<li><strong>Repeat.</strong> Make small adjustments (1/4 turn maximum) until the belt runs centered. Large adjustments overcorrect and create oscillating tracking problems.</li>
-<li><strong>Load product.</strong> After the belt tracks centered when empty, add product and verify tracking holds under load. Off-center product loading pulls the belt toward the loaded side, product infeed alignment may need adjustment.</li>
+<li><strong>Run the belt empty.</strong> Remove all product. Run slowly or with frequent stops at first so a run-off tendency is caught before it damages the belt edge.</li>
+<li><strong>Find where the drift starts.</strong> Note which direction the belt drifts and where it is worst (near the head, tail, or middle). Correct first where the belt is most at risk of damage.</li>
+<li><strong>Make one small adjustment at one point.</strong> Adjust only one pulley or roller at a time. Adjusting several at once makes tracking unstable. On Hytrol belt conveyors, for example, you loosen the snub roller bolts nearest the tail pulley and tap the bolt on the side toward which the belt needs to move.</li>
+<li><strong>Wait several revolutions.</strong> The belt needs a few turns to settle into the new alignment. Hytrol says the belt should begin moving toward center within seven revolutions.</li>
+<li><strong>Repeat in small steps.</strong> Large adjustments overcorrect and create oscillating tracking problems. Hytrol's target is a belt within a quarter inch of the tail pulley center.</li>
+<li><strong>Load product.</strong> After the belt tracks centered when empty, add product and verify tracking holds under load. Off-center loading pulls the belt toward the loaded side, so infeed alignment may need adjustment.</li>
 </ol>
 <h3>Tracking Does Not Respond to Adjustment</h3>
 <p>If the belt does not respond to tail pulley adjustment, investigate these root causes:</p>
@@ -112,21 +113,43 @@ const faqSchema = {
 <li><strong>Material buildup on pulleys or rollers:</strong> Product, adhesive, or debris stuck to the drive pulley or return rollers creates a high spot that pushes the belt off-center. Clean all pulleys and rollers.</li>
 <li><strong>Damaged or cupped belt:</strong> A belt that has taken a permanent curve (cupping) will not track straight regardless of adjustment. Replace the belt.</li>
 <li><strong>Failed splice:</strong> A belt splice that is not straight or has begun separating pulls the belt off-track at the splice location. Re-splice or replace.</li>
-<li><strong>Frame misalignment:</strong> The conveyor frame is not straight or the pulleys are not perpendicular to the frame. Check with a string line and correct frame alignment before attempting belt tracking.</li>
+<li><strong>Frame or pulleys out of square:</strong> The conveyor frame is not straight or the pulleys are not at right angles to the belt path. Habasit's troubleshooting checklist says to release the tension, square all pulleys and rollers, and re-tension before tracking again.</li>
 <li><strong>Crowned pulley worn flat:</strong> Crowned (barrel-shaped) pulleys self-center the belt. If the crown wears flat, the belt loses its self-centering tendency. Replace the pulley.</li>
 </ul>
 <h2 id="tension-heading">Belt Tensioning</h2>
 <p>Correct belt tension provides enough friction between the belt and drive pulley to transmit motor power without the belt slipping, and no more. Over-tensioning stresses bearings, stretches the belt, increases motor load, and accelerates wear on the slider bed and belt bottom. Under-tensioning causes belt slip, which generates heat, glazes the drive pulley and belt underside, and eventually melts or burns the belt.</p>
 <h3>Tension Check Method</h3>
-<p>The most practical tension check for packaging conveyors uses the sag test. With the conveyor stopped and unloaded, push down on the belt at the midpoint between the two most distant supports (typically the center of the conveyor between the head and tail pulleys for short conveyors, or between the slider bed supports for long conveyors). The belt should deflect approximately 1% of the unsupported span. For a 10-foot span, the belt should deflect about 1.2 inches. More sag indicates under-tension. Less sag indicates over-tension.</p>
-<p>Belt manufacturers publish specific tension recommendations per <a href="/resources/conveyor-belting/">belt type</a> and width. Habasit, Forbo Siegling, and Ammeraal Beltech provide tension calculation tools that account for belt type, width, conveyor length, incline angle, and product weight. Use these tools for initial setup. Use the sag test for ongoing verification.</p>
+<p>Fabric belt makers set tension by elongation, not by feel. <a href="https://www.habasit.com/-/media/Project/Habasit/NewWebsite/Downloads/Products/General-conveyor-belts/Fabric-Conveyor-Belts-Installation-and-Maintenance-Guide.pdf" target="_blank" rel="noopener noreferrer">Habasit's installation guide</a> describes the method: put two marks a known distance apart on each side of the slack belt, tension until the marks have stretched by the required percentage, run the belt one full circuit, and measure again. Habasit lists the admissible initial elongation as 0.3% to about 1% for polyester-fabric belts and 0.5% to about 1.5% for polyamide-fabric belts, and its sizing software gives the exact figure for a given belt and conveyor.</p>
+<table>
+<thead>
+<tr>
+<th>Traction layer</th>
+<th>Minimum initial elongation</th>
+<th>Maximum initial elongation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polyester fabric</td>
+<td>0.3%</td>
+<td>About 1%</td>
+</tr>
+<tr>
+<td>Polyamide fabric</td>
+<td>0.5%</td>
+<td>About 1.5%</td>
+</tr>
+</tbody>
+</table>
+<p>Source: Habasit, Fabric Conveyor Belts Installation and Maintenance Guide. Other belt makers publish their own figures, so use the values for the belt you have. Leave the marks on the belt. They make later tension checks and re-tensioning after maintenance quick and repeatable. Habasit warns that re-tensioning a released belt by the first-time method overtensions it, because the new elongation adds to the elongation that never fully released.</p>
+<p>Belt manufacturers publish tension recommendations per <a href="/resources/conveyor-belting/">belt type</a> and width, and several offer belt calculation software that accounts for belt type, width, conveyor length, incline, and load. Use the maker's figure for setup and the gauge marks for ongoing checks.</p>
 <h3>Adjusting Tension</h3>
 <p>Tension adjusts by moving the tail pulley away from the head pulley (to increase tension) or toward the head pulley (to decrease tension). Most packaging conveyors use screw-type take-up bolts on both sides of the tail pulley. Turn both bolts equally to change tension without affecting tracking. Turning one side more than the other changes both tension and tracking simultaneously, a common mistake that creates two problems from one adjustment. Always adjust tension first, then track separately.</p>
-<p><strong>New belt stretch:</strong> New belts stretch during the first 24-48 hours of operation. Re-tension after the first 8 hours of running, again at 24 hours, and once more at 48 hours. After the initial stretch-in period, the belt stabilizes and tension checks revert to the weekly schedule.</p>
+<p><strong>New belt relaxation:</strong> Habasit notes that synthetic belts relax after first tensioning, so the effective tension drops over a running-in period of several hours before it levels off. Tension a new belt enough to stay slip-free after relaxation, check the gauge marks after the first circuit and again after the first shifts, and re-tension if needed without exceeding the maximum elongation.</p>
 <h2 id="roller-heading">Roller &amp; Bearing Maintenance</h2>
 <p>Rollers and bearings are the highest-wear components in <a href="/conveyor-types/roller-conveyors/">roller conveyors</a>, <a href="/conveyor-types/live-roller-conveyors/">live roller conveyors</a>, and <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a>. A failed roller creates a dead spot that jams product, damages the belt (in belt-driven systems), and can contaminate product if bearing grease or metal fragments enter the product stream.</p>
 <h3>Roller Spin Test</h3>
-<p>The roller spin test is the simplest and most effective roller check. With the conveyor stopped and locked out, manually spin each roller. A healthy roller spins freely for 2-5 seconds and coasts to a smooth stop. Replace any roller that:</p>
+<p>The roller spin test is the simplest and most effective roller check. With the conveyor stopped and locked out, manually spin each roller. A healthy roller spins freely and coasts to a smooth stop. Compare against a known-good roller of the same type. Replace any roller that:</p>
 <ul>
 <li>Does not spin at all (seized bearing).</li>
 <li>Spins with grinding or crunching sound (bearing failure in progress).</li>
@@ -134,8 +157,8 @@ const faqSchema = {
 <li>Has a worn, grooved, or damaged surface (causes belt tracking issues and product damage).</li>
 </ul>
 <h3>Bearing Lubrication</h3>
-<p>Pillow block and flange bearings on conveyor drive shafts, tail pulleys, and idler rollers require periodic grease lubrication. Use the grease type and quantity specified by the bearing manufacturer, typically NLGI #2 lithium-based grease, 1-3 pump strokes per zerk fitting. For <a href="/industries/food-conveyors/sanitary/">food-grade applications</a>, use NSF H1-registered grease.</p>
-<p><strong>Over-greasing is a common and costly mistake.</strong> Excess grease forces past the bearing seal, contaminating the belt and product. In food environments, grease contamination causes product rejects, customer complaints, and potential recalls. Apply the manufacturer-specified quantity, no more.</p>
+<p>Pillow block and flange bearings on conveyor drive shafts, tail pulleys, and idler rollers require periodic grease lubrication. Use the grease type, quantity, and interval specified by the bearing manufacturer. General-purpose NLGI 2 greases are common on conveyor bearings, and <a href="https://cdn.skfmediahub.skf.com/api/public/0901d196802103bc/pdf_preview_medium/0901d196802103bc_pdf_preview_medium.pdf" target="_blank" rel="noopener noreferrer">SKF's grease selection chart</a> lists conveyors as an application for its general-purpose LGMT 2 grade. For <a href="/industries/food-conveyors/sanitary/">food-grade applications</a>, use NSF H1-registered grease.</p>
+<p>SKF states on the same chart that poor lubrication accounts for over 36% of premature bearing failures. <strong>Over-greasing is also a common and costly mistake.</strong> Excess grease forces past the bearing seal, contaminating the belt and product. In food environments, grease contamination causes product rejects, customer complaints, and potential recalls. Apply the manufacturer-specified quantity, no more.</p>
 <p>MDR conveyors and many modern roller conveyors use sealed-for-life bearings that require no lubrication. This eliminates the over-greasing risk and reduces PM labor. When specifying new conveyors, sealed bearings reduce long-term maintenance cost and contamination risk.</p>
 <h2 id="trouble-heading">Common Problems &amp; Solutions</h2>
 <table>
@@ -150,7 +173,7 @@ const faqSchema = {
 <tr>
 <td>Belt drifts to one side</td>
 <td>Tail pulley misalignment, material buildup on pulley, frame not straight, damaged belt</td>
-<td>Adjust tail pulley 1/4 turn. Clean pulleys. Check frame alignment. Inspect belt for damage.</td>
+<td>Make a small tracking adjustment. Clean pulleys. Check frame alignment. Inspect belt for damage.</td>
 </tr>
 <tr>
 <td>Belt slips on drive pulley</td>
@@ -175,7 +198,7 @@ const faqSchema = {
 <tr>
 <td>Motor overheating</td>
 <td>Blocked ventilation, overload, high ambient temperature, VFD low-speed operation</td>
-<td>Clear ventilation. Check load vs. motor rating. Add forced-air cooling for VFD low-speed duty.</td>
+<td>Clear ventilation. Check load vs. motor rating. On constant-torque loads run at low speed, confirm the motor is rated for that turndown or add a separate cooling blower.</td>
 </tr>
 <tr>
 <td>Product jams at transfer point</td>
@@ -192,22 +215,32 @@ const faqSchema = {
 <h2 id="motor-heading">Motor &amp; Drive Maintenance</h2>
 <p>Conveyor motors fail from three causes: overheating (insulation degradation), bearing failure (lubrication or contamination), and electrical failure (winding shorts, connection faults). A structured motor maintenance program addresses all three.</p>
 <ul>
-<li><strong>Temperature monitoring:</strong> Record motor housing temperature monthly with an infrared thermometer. Establish a baseline during commissioning. A 20°F increase above baseline warrants investigation, check ventilation, load, ambient temperature, and VFD parameters. Motors running above their nameplate temperature rating suffer accelerated insulation degradation (each 18°F above rating halves insulation life).</li>
-<li><strong>Motor bearing lubrication:</strong> Motor bearings require regreasing on a schedule based on motor size and speed, typically every 6-12 months for standard TEFC motors. Over-greasing motor bearings forces grease into the motor windings, causing insulation failure. Follow the motor manufacturer's grease type and quantity specifications exactly.</li>
-<li><strong>VFD maintenance:</strong> Keep VFD cooling fans clean and air filters clear. Dust accumulation causes VFD overheating and premature capacitor failure. Inspect DC bus capacitors annually (on drives older than 7 years), capacitor failure is the most common VFD failure mode. Back up all VFD parameters after commissioning and after any changes.</li>
-<li><strong>Gearbox oil:</strong> Gear reducers require oil level checks monthly and oil changes per manufacturer schedule (typically annually or every 2,500 hours). Use the specified oil type and viscosity. Contaminated or low oil levels destroy gear teeth and bearings. Synthetic gear oils extend change intervals and improve efficiency in cold environments.</li>
+<li><strong>Temperature monitoring:</strong> Record motor housing temperature monthly with an infrared thermometer. Establish a baseline during commissioning. A clear, sustained rise above baseline warrants investigation: check ventilation, load, ambient temperature, and VFD parameters. Heat is what ages winding insulation. As <a href="https://www.ecmweb.com/content/article/20899136/the-hot-issue-of-motor-temperature-ratings" target="_blank" rel="noopener noreferrer">EC&amp;M reports</a>, insulation life drops by half for each 10°C (18°F) of operation above the insulation's rated temperature.</li>
+<li><strong>Motor bearing lubrication:</strong> Motor bearings that have grease fittings require regreasing on a schedule set by the motor maker, based on frame size, speed, and duty. Over-greasing motor bearings forces grease into the motor windings, causing insulation failure. Follow the motor manufacturer's grease type and quantity specifications exactly.</li>
+<li><strong>VFD maintenance:</strong> Keep VFD cooling fans clean and air filters clear. Dust accumulation causes VFD overheating and premature capacitor failure. DC bus capacitors age with heat and time, so follow the drive maker's inspection and replacement guidance, especially on older drives. Back up all VFD parameters after commissioning and after any changes.</li>
+<li><strong>Gearbox oil:</strong> Gear reducers require regular oil level checks and oil changes on the reducer maker's schedule, which depends on oil type, operating temperature, and hours. Use the specified oil type and viscosity. Contaminated or low oil levels destroy gear teeth and bearings. Synthetic gear oils extend change intervals and improve efficiency in cold environments.</li>
 </ul>
 <p>For conveyor motor and drive cost factors, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>. For <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a>, PLC and controls maintenance adds another layer, program backups, I/O testing, and network diagnostics.</p>
 <h2 id="spares-heading">Recommended Spare Parts</h2>
-<p>Stocking the right spare parts prevents extended downtime when a component fails. The cost of carrying spare parts is a fraction of the production loss during a multi-day wait for an emergency shipment. Recommended spares for packaging conveyor systems:</p>
+<p>Stocking the right spare parts prevents extended downtime when a component fails. Compare the cost of carrying each spare against the production lost while waiting for an emergency shipment. Recommended spares for packaging conveyor systems:</p>
 <ul>
-<li><strong>Belts:</strong> One spare belt per conveyor type and size. For <a href="/resources/conveyor-belting/">modular belts</a>, stock replacement modules (10-20 modules per belt type) rather than complete belts.</li>
-<li><strong>Rollers:</strong> Stock 5-10% of the installed roller count as spares, matching diameter, length, and bearing type. For MDR conveyors, stock motorized rollers and slave rollers separately.</li>
+<li><strong>Belts:</strong> One spare belt per conveyor type and size. For <a href="/resources/conveyor-belting/">modular belts</a>, stock replacement modules and hinge rods rather than complete belts.</li>
+<li><strong>Rollers:</strong> Stock spares based on how many fail per year on your lines, matching diameter, length, and bearing type. For MDR conveyors, stock motorized rollers and slave rollers separately.</li>
 <li><strong>Bearings:</strong> Stock pillow block and flange bearings matching every shaft size in the system. Bearings are commodity items with long shelf life.</li>
-<li><strong>Motors:</strong> Stock one spare motor per motor size used in the system. Motors have long lead times (4-12 weeks for non-standard ratings). A spare motor on the shelf converts a potential week-long outage into a same-day repair.</li>
-<li><strong>Sensors:</strong> Stock spare photoeyes, proximity switches, and encoders, one per type used. Sensor failure is the most common electronic fault on conveyors.</li>
+<li><strong>Motors:</strong> Stock one spare motor per motor size used in the system. Non-standard ratings, washdown motors, and gearmotors can have long lead times. A spare on the shelf turns a long wait into a same-shift repair.</li>
+<li><strong>Sensors:</strong> Stock spare photoeyes, proximity switches, and encoders, one per type used. Sensors are exposed to impacts and cleaning chemicals and are quick to swap.</li>
 <li><strong>Drive components:</strong> Spare drive belts, chains, sprockets, and pulleys. One set per conveyor drive type.</li>
 <li><strong>Pneumatic components:</strong> Spare solenoid valves, air cylinders (for <a href="/conveyor-functions/pusher-diverter/">pushers and diverters</a>), and filter/regulator elements.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.habasit.com/-/media/Project/Habasit/NewWebsite/Downloads/Products/General-conveyor-belts/Fabric-Conveyor-Belts-Installation-and-Maintenance-Guide.pdf" target="_blank" rel="noopener noreferrer">Fabric Conveyor Belts Installation and Maintenance Guide (Media No. 6040)</a>, Habasit. Initial elongation ranges, gauge-mark tensioning, relaxation, tracking practice, and troubleshooting.</li>
+<li><a href="https://blog.hytrol.com/ask-hytrol-how-to-track-a-belt/" target="_blank" rel="noopener noreferrer">Ask Hytrol: How to Track a Belt</a>, Hytrol. Snub roller tracking method, seven-revolution response, quarter-inch target.</li>
+<li><a href="https://www.renold.com/media/1269222/chain-wear-guide-instructions.pdf" target="_blank" rel="noopener noreferrer">Chain Wear Guide Instructions</a>, Renold. 2% and 3% roller chain elongation limits.</li>
+<li><a href="https://cdn.skfmediahub.skf.com/api/public/0901d196802103bc/pdf_preview_medium/0901d196802103bc_pdf_preview_medium.pdf" target="_blank" rel="noopener noreferrer">Bearing Grease Selection Chart</a>, SKF. Lubrication share of premature bearing failures and conveyor grease grade.</li>
+<li><a href="https://www.ecmweb.com/content/article/20899136/the-hot-issue-of-motor-temperature-ratings" target="_blank" rel="noopener noreferrer">The Hot Issue of Motor Temperature Ratings</a>, EC&amp;M (Ed Cowern, P.E.). Insulation life halves per 10°C over rating.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.147" target="_blank" rel="noopener noreferrer">29 CFR 1910.147, Control of Hazardous Energy</a>, OSHA. Annual periodic inspection and certification of energy control procedures.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General Requirements for All Machines</a>, OSHA. Guarding of nip points and rotating parts.</li>
 </ul>
 <h2 id="related-heading">Related Guides</h2>
 <ul class="usa-collection">
@@ -233,7 +266,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How do I track a conveyor belt?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Run the belt empty. If it drifts right, tighten the right-side tail pulley bolt by 1/4 turn. Wait 3-5 revolutions. Repeat with small adjustments until centered. Then load product and verify. If tracking does not respond, check for material buildup on pulleys, belt damage, splice failure, or frame misalignment.</p>
+<p>Run the belt empty. Make one small adjustment at the tracking point the conveyor manual specifies (snub roller, tail pulley take-up, or cam). Wait several revolutions: Hytrol says the belt should begin moving toward center within seven. Repeat in small steps until centered. Then load product and verify. If tracking does not respond, check for material buildup on pulleys, belt damage, splice failure, or frame misalignment.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What causes a conveyor belt to slip?</button></h3>
@@ -243,7 +276,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">When should I replace a conveyor belt?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Replace when you see: edge fraying over 1/2 inch, surface cracks or delamination, visible carcass through the cover, belt stretch beyond tensioner range, splice failure, or hardening/brittleness. For <a href="/industries/food-conveyors/">food belts</a>, also replace when the surface cannot be cleaned to sanitary standards. See <a href="/resources/conveyor-belting/">belt types guide</a> for material-specific life ranges.</p>
+<p>Replace when you see: edge fraying that keeps growing after tracking is corrected, surface cracks or delamination, visible carcass through the cover, belt stretch beyond tensioner range, splice failure, or hardening/brittleness. For <a href="/industries/food-conveyors/">food belts</a>, also replace when the surface cannot be cleaned to sanitary standards. See <a href="/resources/conveyor-belting/">belt types guide</a> for material-specific life ranges.</p>
 
 </div>
 </div>

@@ -60,10 +60,10 @@ const faqSchema = {
   schema={[breadcrumbSchema, faqSchema]}
 >
 <h1>What Do You Need Your Conveyor to Do?</h1>
-<p class="usa-intro">Stop shopping by equipment name. Start with the job your line needs done. Every function below links to the conveyor types, configurations, and manufacturers that solve that specific problem.</p>
-<p><strong>Conveyor functions</strong> describe the specific tasks a conveyor performs inside a packaging line, accumulating, indexing, rejecting, laning, loading trays, sorting, merging, or elevating product. Selecting a conveyor by function rather than by equipment type ensures the system matches the actual production requirement. Most packaging lines combine four or more distinct conveyor functions between primary packaging and palletizing.</p>
+<p class="usa-intro">Stop shopping by equipment name. Start with the job your line needs done. Every function below links to the conveyor types and configurations that solve that specific problem.</p>
+<p><strong>Conveyor functions</strong> describe the specific tasks a conveyor performs inside a packaging line, accumulating, indexing, rejecting, laning, loading trays, sorting, merging, or elevating product. Selecting a conveyor by function rather than by equipment type ensures the system matches the actual production requirement. Most packaging lines combine several distinct conveyor functions between primary packaging and palletizing.</p>
 <h2 id="functions-heading">Browse by Function</h2>
-<p>Each card represents a distinct packaging line task. Pages marked "Guide Available" have full technical deep-dives with manufacturer comparisons, specs, and selection criteria.</p>
+<p>Each card represents a distinct packaging line task and links to a guide covering how it works, technology options, and selection criteria.</p>
 <ul class="usa-collection">{functions.map((fn) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={fn.slug.startsWith('/') ? `${fn.slug}/` : `/conveyor-functions/${fn.slug}/`}>{fn.name}</a></h3><p class="usa-collection__description">{fn.desc}</p></div></li>
 ))}</ul>
@@ -72,9 +72,10 @@ const faqSchema = {
 <p>The function-first approach works in three steps:</p>
 <ol>
 <li><strong>Map every transition</strong> between machines on your packaging line. Each transition is a conveyor function, accumulate, index, lane, reject, merge, or elevate.</li>
-<li><strong>Define requirements per function</strong>, throughput, product size, weight, orientation, accumulation time, and environment (washdown, cleanroom, etc.).</li>
+<li><strong>Define requirements per function</strong>: throughput, product size, weight, orientation, accumulation time, environment (washdown, cleanroom), and guarding. <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> is the US safety standard for conveyor design, installation, and operation.</li>
 <li><strong>Select conveyor type per function</strong>, a single line may use <a href="/conveyor-types/roller-conveyors/">roller conveyors</a> for case transport, <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> for accumulation, and a dedicated <a href="/conveyor-functions/reject-systems/">reject system</a> after the checkweigher.</li>
 </ol>
+<p>Define the signals at each transition too. Machines that follow <a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">PackML</a>, the OMAC machine-state standard adopted by ISA as TR88.00.02, report states such as running, held, and stopped in a common way, which makes it easier to program each conveyor to accumulate, meter, or stop in response. <a href="https://www.pmmi.org/" target="_blank" rel="noopener noreferrer">PMMI</a>, the Association for Packaging and Processing Technologies, represents the machine builders who supply many of these functions.</p>
 <p>This approach prevents the common mistake of over-specifying expensive conveyor types where simple gravity sections would suffice, or under-specifying critical accumulation and reject zones that cause line stoppages. See our <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for how function selection affects project budgets.</p>
 <h2 id="xref-heading">Function vs. Conveyor Type</h2>
 <table>
@@ -83,7 +84,7 @@ const faqSchema = {
 <th>Function</th>
 <th>Common Conveyor Types</th>
 <th>Key Spec</th>
-<th>Relative Cost</th>
+<th>Main cost drivers</th>
 </tr>
 </thead>
 <tbody>
@@ -91,53 +92,53 @@ const faqSchema = {
 <td>Accumulate &amp; Buffer</td>
 <td><a href="/conveyor-types/mdr-conveyors/">MDR</a>, <a href="/conveyor-types/accumulation-conveyors/">Zero-Pressure</a></td>
 <td>Buffer time (min)</td>
-<td>$$$</td>
+<td>Buffer length, zone controls, footprint (spiral vs. floor)</td>
 </tr>
 <tr>
 <td><a href="/conveyor-functions/collating-laning/">Collate &amp; Lane</a></td>
 <td>Belt, Tabletop, Modular</td>
 <td>Lanes, PPM</td>
-<td>$$–$$$</td>
+<td>Lane count, guide changeover method, product stability</td>
 </tr>
 <tr>
 <td><a href="/conveyor-functions/tray-loading/">Load Trays</a></td>
 <td>Pick-and-place, Servo, Robotic</td>
 <td>Trays/min</td>
-<td>$$$–$$$$</td>
+<td>Robot or pick head, servo axes, tray handling, format count</td>
 </tr>
 <tr>
 <td><a href="/conveyor-functions/indexing-conveyors/">Index &amp; Position</a></td>
 <td>Servo belt, Timing screw, Pallet</td>
 <td>± positioning (mm)</td>
-<td>$$–$$$$</td>
+<td>Servo vs. mechanical drive, fixtured pallets, accuracy required</td>
 </tr>
 <tr>
 <td><a href="/conveyor-functions/reject-systems/">Reject &amp; Divert</a></td>
 <td>Air blast, Pusher, Diverter arm</td>
 <td>Response time (ms)</td>
-<td>$$</td>
+<td>Reject mechanism, confirmation sensors, locking bin</td>
 </tr>
 <tr>
 <td>Turn &amp; Orient</td>
 <td><a href="/conveyor-types/transfer-conveyors/">Transfer</a>, Turner bar, Twist belt</td>
 <td>Rotation angle</td>
-<td>$$</td>
+<td>Passive bar vs. powered turner, changeover parts</td>
 </tr>
 <tr>
 <td>Merge &amp; Combine</td>
 <td>Belt merge, <a href="/conveyor-types/roller-conveyors/">Powered roller</a></td>
 <td>Merge ratio, PPM</td>
-<td>$$–$$$</td>
+<td>Number of infeeds, speed control, gap management</td>
 </tr>
 <tr>
 <td>Elevate &amp; Lower</td>
 <td>Spiral, VRC, Incline belt</td>
 <td>Elevation (ft), FPM</td>
-<td>$$$–$$$$</td>
+<td>Height, load, spiral vs. VRC vs. incline, guarding</td>
 </tr>
 </tbody>
 </table>
-<p>Relative cost: $ = lowest, $$$$ = highest. Actual pricing depends on throughput, materials, controls, and environment.
+<p>Actual pricing also depends on throughput, materials, controls, and environment.
 <a href="/resources/conveyor-cost-guide/">See full cost guide</a>.</p>
 <h2 id="related-heading">Other Ways to Browse</h2>
 <ul class="usa-collection">
@@ -154,11 +155,17 @@ const faqSchema = {
 <h3 class="usa-collection__heading"><a class="usa-link" href="/resources/">Resources</a></h3>
 <p class="usa-collection__description">Cost guides, design references, manufacturer directories, and technical tools.</p></div></li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. Scope of US conveyor safety standard.</li>
+<li><a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">PackML</a>, OMAC. Machine-state standard adopted by ISA as TR88.00.02.</li>
+<li><a href="https://www.pmmi.org/" target="_blank" rel="noopener noreferrer">PMMI</a>, The Association for Packaging and Processing Technologies. Packaging machinery trade association.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a conveyor function?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>A conveyor function describes the specific task a conveyor performs, accumulating, indexing, rejecting, laning, or loading trays. Packaging lines typically require four or more distinct functions between the primary packaging machine and the palletizer. Selecting by function ensures you match equipment to the actual production need rather than defaulting to a familiar conveyor brand or type.</p>
+<p>A conveyor function describes the specific task a conveyor performs, accumulating, indexing, rejecting, laning, or loading trays. Packaging lines typically require several distinct functions between the primary packaging machine and the palletizer. Selecting by function ensures you match equipment to the actual production need rather than defaulting to a familiar conveyor brand or type.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How do I choose the right conveyor function for my line?</button></h3>

@@ -59,7 +59,7 @@ const faqSchema = {
       "name": "What is a belt conveyor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A belt conveyor uses a continuous loop of material (the belt) stretched between two or more pulleys to transport products. The belt wraps around a head pulley (driven) and a tail pulley (idler), with the top surface carrying products and the bottom returning empty. Belt conveyors handle products of any shape, size, or bottom condition, including bags, pouches, irregular shapes, and loose items that roller conveyors cannot transport."
+        "text": "A belt conveyor is a conveyor that carries products on the top surface of a continuous belt loop. A motor turns a drive pulley, which pulls the belt around a tail pulley at the other end, and a slider bed or rollers support the belt in between. Industrial belt conveyor systems add a frame, take-up for belt tension, guarding, and controls. Because the belt is a continuous surface, it carries bags, pouches, small parts, and irregular items that would fall between or snag on roller conveyor rollers."
       }
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       "name": "What is the difference between a belt conveyor and a roller conveyor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Belt conveyors use a continuous belt surface and can transport products of any shape or bottom condition. Roller conveyors use cylindrical rollers and require flat, rigid product bottoms spanning at least 3 rollers. Belt conveyors excel at inclines, handling bags and pouches, and transporting small or loose items. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy flat-bottomed loads like cases and pallets."
+        "text": "Belt conveyors use a continuous belt surface and carry products with soft, irregular, or small footprints. Roller conveyors use cylindrical rollers and need a firm, flat product bottom resting on at least three rollers at all times. Belt conveyors are the usual choice for inclines, bags and pouches, and small items. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy flat-bottomed loads like cases and pallets."
       }
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       "name": "How fast can a belt conveyor run?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Belt conveyor speeds typically range from 20 to 400 feet per minute (FPM) depending on the application. Light-duty packaging conveyors commonly run at 50-150 FPM. High-speed sortation and distribution conveyors may reach 400-600 FPM. Maximum practical speed depends on belt type, product stability, and the ability to load and unload products at the conveyor ends. Incline conveyors run slower to prevent product slippage."
+        "text": "Speed depends on the conveyor model and the product. Published examples: Hytrol's Model SB slider bed conveyor runs at a constant 65 FPM as standard, Dorner rates its 2200 Series flat belt conveyor at up to 400 ft/min, and Dorner rates its heavy-duty 3200 Series flat belt at up to 600 ft/min. The practical maximum is usually set by product stability and by how cleanly products load and unload at the conveyor ends, not by the belt itself. Cleated and incline belts usually run slower than flat horizontal belts."
       }
     }
   ]
@@ -112,7 +112,7 @@ const articleSchema = {
 ---
 <BaseLayout title="Belt Conveyors: Types, Materials &#x26; Selection Guide | Packaging Conveyor" description="Guide to belt conveyor types: flat belt, cleated, modular plastic, wire mesh, and timing belts. Comparison, speed ranges, and selection criteria for packaging applications." canonical="https://packagingconveyor.com/conveyor-types/belt-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
 <h1>Belt Conveyors: Types, Materials &amp; Selection Guide</h1>
-<p class="usa-intro">A belt conveyor uses a continuous loop of flexible material stretched between pulleys to transport products. Unlike <a href="/conveyor-types/roller-conveyors/">roller conveyors</a> that require flat-bottomed loads, belt conveyors handle products of any shape: bags, pouches, irregular items, small parts, and loose bulk materials. Belt types range from general-purpose flat belts to specialized cleated, modular plastic, and wire mesh designs for specific applications.</p>
+<p class="usa-intro">A belt conveyor is a conveyor that carries products on the top surface of a continuous belt loop. A motor turns a drive pulley that pulls the belt around a tail pulley, and a slider bed or rollers support the belt between them. An industrial belt conveyor system adds the frame, a take-up to hold belt tension, guarding, and controls. Unlike <a href="/conveyor-types/roller-conveyors/">roller conveyors</a>, which need a firm, flat product bottom, belt conveyors carry bags, pouches, small parts, irregular items, and loose bulk material. Belt types range from general-purpose flat belts to cleated, modular plastic, and wire mesh designs for specific jobs.</p>
 <h2 id="subtypes-heading">Explore Belt Conveyor Sub-Types</h2>
 <ul class="usa-collection">{beltTypes.map((type) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={type.slug}>{type.name}</a></h3><p class="usa-collection__description">{type.desc}</p>{type.tags && <p class="tags">{type.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
@@ -133,88 +133,80 @@ const articleSchema = {
 <tr>
 <th>Belt Type</th>
 <th>Best For</th>
-<th>Speed Range</th>
-<th>Max Incline</th>
+<th>Incline Guidance</th>
 <th>Washdown</th>
-<th>Cost</th>
+<th>Main Cost Drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="/conveyor-types/flat-belt-conveyors/">Flat Belt (PVC/PU)</a></td>
 <td>General packaging, cases, cartons</td>
-<td>20-400 FPM</td>
-<td>15-20°</td>
+<td>Smooth belts: Dorner limits flat belts to under 20°. Some patterned tops reach 30° (Forbo).</td>
 <td>Limited</td>
-<td>$</td>
+<td>Length, width, load rating, food-grade belt compound</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/cleated-conveyors/">Cleated Belt</a></td>
 <td>Inclines, product separation</td>
-<td>20-200 FPM</td>
-<td>45-90°</td>
+<td>Dorner rates cleated belts up to 60°. Sidewall belts reach 90° (Continental Flexowell).</td>
 <td>Limited</td>
-<td>$$</td>
+<td>Cleat height and spacing, welded cleats, sidewalls, transition sections</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/modular-conveyors/">Modular Plastic</a></td>
 <td>Food, beverage, washdown</td>
-<td>20-150 FPM</td>
-<td>30-45°</td>
+<td>Forbo guideline: flat top 3 to 5°, friction top 20 to 40°, with profiles steeper</td>
 <td>Excellent</td>
-<td>$$$</td>
+<td>Module material, sprockets and shafts, stainless frame, sanitary design</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/wire-mesh-conveyors/">Wire Mesh</a></td>
 <td>Baking, cooling, high-temp</td>
-<td>10-100 FPM</td>
-<td>30°</td>
+<td>Mostly horizontal. Flights can be added for inclines.</td>
 <td>Good</td>
-<td>$$$</td>
+<td>Alloy, mesh weave, belt width, temperature rating</td>
 </tr>
 <tr>
 <td>Timing / Positive Drive</td>
 <td>Indexing, precision positioning</td>
-<td>20-200 FPM</td>
-<td>30°</td>
+<td>Mostly horizontal</td>
 <td>Limited</td>
-<td>$$</td>
+<td>Servo drive, controls, positioning accuracy</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/activated-roller-belt/">Activated Roller Belt</a></td>
 <td>Diverting, merging, transfers</td>
-<td>100-400 FPM</td>
-<td>0°</td>
+<td>Horizontal</td>
 <td>No</td>
-<td>$$$$</td>
+<td>Actuation hardware, controls, sortation software</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/hinged-steel-belt/">Hinged Steel Belt</a></td>
 <td>Scrap, chips, heavy/hot materials</td>
-<td>10-50 FPM</td>
-<td>60°</td>
+<td>Horizontal-to-incline layouts are common</td>
 <td>Yes</td>
-<td>$$$</td>
+<td>Belt pitch, steel gauge, length, coolant handling</td>
 </tr>
 </tbody>
 </table>
-<p>Speed and incline values are typical ranges. Actual capabilities depend on belt construction, product characteristics, and manufacturer specifications. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for detailed pricing factors.</p>
+<p>Incline figures are manufacturer guidelines, not guarantees. Product weight, bottom surface, moisture, and dust all change the usable angle, so test with real product. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for more on pricing factors.</p>
 <h2 id="materials-heading">Conveyor Belt Materials</h2>
 <h3>PVC (Polyvinyl Chloride)</h3>
-<p>The most common belt material for general-purpose packaging conveyors. PVC belts are economical, available in many surface finishes (smooth, rough-top, pattern-top), and suitable for temperatures from 14°F to 180°F. Standard PVC is not FDA-approved for direct food contact. Food-grade PVC variants are available but are being replaced by PU in food applications.</p>
+<p>The most common belt material for general-purpose packaging conveyors. PVC belts are economical, available in many surface finishes (smooth, rough-top, pattern-top), and usable across normal plant temperatures (check the belt data sheet for the exact range). Standard PVC compounds are not intended for direct food contact. Food-grade PVC exists, but many food plants choose PU instead.</p>
 <h3>PU (Polyurethane)</h3>
-<p>Preferred for <a href="/industries/food-conveyors/">food and beverage applications</a> because PU is FDA-compliant, resistant to oils and fats, and easier to clean than PVC. PU belts offer better abrasion resistance and longer service life than PVC but cost more. Temperature range is similar to PVC. White and blue PU is standard for food lines (blue for visibility in case of belt fragments).</p>
+<p>Preferred for <a href="/industries/food-conveyors/">food and beverage applications</a> because food-grade PU compounds are made to comply with FDA food-contact rules (<a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">21 CFR Part 177</a>), resistant to oils and fats, and easier to clean than PVC. PU belts offer better abrasion resistance and longer service life than PVC but cost more. Temperature range is similar to PVC. White and blue PU is standard for food lines (blue for visibility in case of belt fragments).</p>
 <h3>Modular Plastic</h3>
-<p><a href="/conveyor-types/modular-conveyors/">Modular plastic belts</a> consist of interlocking plastic modules joined by hinge pins. Materials include polypropylene (PP), acetal (POM), and polyethylene (PE), all available in FDA-compliant grades. Modular belts excel in <a href="/industries/food-conveyors/sanitary/">sanitary washdown environments</a> because individual modules can be removed for cleaning or replacement. Intralox and Habasit are leading modular belt manufacturers.</p>
+<p><a href="/conveyor-types/modular-conveyors/">Modular plastic belts</a> consist of interlocking plastic modules joined by hinge pins. Materials include polypropylene (PP), acetal (POM), and polyethylene (PE), all available in FDA-compliant grades. Modular belts excel in <a href="/industries/food-conveyors/sanitary/">sanitary washdown environments</a> because individual modules can be removed for cleaning or replacement.</p>
 <h3>Wire Mesh / Metal</h3>
-<p><a href="/conveyor-types/wire-mesh-conveyors/">Wire mesh belts</a> use woven or welded metal wire for high-temperature applications (baking, cooling, heat treatment) and applications requiring airflow through the belt. Stainless steel mesh handles temperatures to 2000°F+ depending on alloy. Carbon steel is lower cost for non-corrosive, non-food applications. Wire mesh belts are also used for <a href="/industries/food-conveyors/cooling/">cooling conveyors</a> where airflow is needed.</p>
+<p><a href="/conveyor-types/wire-mesh-conveyors/">Wire mesh belts</a> use woven or welded metal wire for high-temperature applications (baking, cooling, heat treatment) and applications requiring airflow through the belt. Stainless and high-nickel alloy mesh handle oven and furnace temperatures, with the limit set by the alloy. Carbon steel is lower cost for non-corrosive, non-food applications. Wire mesh belts are also used for <a href="/industries/food-conveyors/cooling/">cooling conveyors</a> where airflow is needed.</p>
 <h3>Specialty Materials</h3>
 <p>Specialty belt materials include silicone (high-temperature, non-stick), Teflon/PTFE coating (release properties), anti-static formulations, metal-detectable plastics, and reinforced rubber for heavy-duty bulk handling. Material selection depends on product contact requirements, temperature, chemical exposure, and regulatory compliance (FDA, USDA, 3-A).</p>
 <h2 id="applications-heading">Belt Conveyor Applications</h2>
 <h3>Primary Packaging</h3>
 <p>Belt conveyors transport products through primary packaging operations: filling, sealing, wrapping, and labeling. Flat belts provide stable, consistent product positioning for accurate filling and labeling. Precision belt conveyors with servo drives support <a href="/conveyor-functions/indexing-conveyors/">indexing motions</a> for intermittent packaging machines.</p>
 <h3>Incline and Decline Transport</h3>
-<p>Belt conveyors handle <a href="/conveyor-types/incline-conveyors/">incline and decline transport</a> that roller conveyors cannot. Standard flat belts handle up to 15-20° inclines depending on product friction. <a href="/conveyor-types/cleated-conveyors/">Cleated belts</a> enable steeper inclines up to 90° (vertical). Rough-top and high-grip belt surfaces extend incline capability without cleats.</p>
+<p>Belt conveyors handle <a href="/conveyor-types/incline-conveyors/">incline and decline transport</a> that roller conveyors cannot. <a href="https://www.dornerconveyors.com/solutions/cleated-belt-conveyor-solutions" target="_blank" rel="noopener noreferrer">Dorner</a> limits standard flat belts to angles under 20 degrees and rates <a href="/conveyor-types/cleated-conveyors/">cleated belts</a> up to 60 degrees. Patterned and rough-top surfaces extend incline capability without cleats: <a href="https://www.forbo.com/movement/en-gl/products/conveyor-belts/siegling-transilon/top-face-patterns-and-textures/ppi6n3" target="_blank" rel="noopener noreferrer">Forbo Siegling</a> states certain patterned belts reach 30 degrees without profiles. Sidewall belts with cleats go to vertical.</p>
 <h3>Food and Beverage</h3>
 <p><a href="/industries/food-conveyors/">Food and beverage plants</a> use belt conveyors for raw ingredient handling, product transport between processing steps, and finished goods packaging. <a href="/conveyor-types/modular-conveyors/">Modular plastic belts</a> dominate wet environments. <a href="/conveyor-types/wire-mesh-conveyors/">Wire mesh belts</a> carry products through <a href="/industries/food-conveyors/bakery/">bakery ovens</a>, fryers, and <a href="/industries/food-conveyors/cooling/">cooling tunnels</a>.</p>
 <h3>Small Parts and Components</h3>
@@ -225,27 +217,38 @@ const articleSchema = {
 <p>Belt conveyor selection involves matching belt type, material, width, and speed to your product and application requirements.</p>
 <p><strong>1. Product characteristics.</strong> Consider product weight (determines belt strength and motor sizing), dimensions (determines belt width), bottom surface (smooth, irregular, soft, rigid), temperature (hot products require heat-resistant belts), and sensitivity (fragile products need soft or cushioned belts).</p>
 <p><strong>2. Environmental requirements.</strong> <a href="/industries/food-conveyors/sanitary/">Food contact</a> requires FDA-compliant materials. Washdown environments require sealed components and corrosion-resistant construction. High or low temperatures require appropriate belt materials. Chemical exposure requires compatible belt and frame materials.</p>
-<p><strong>3. Incline angle.</strong> Calculate the incline angle from floor rise and horizontal run. Select belt type based on maximum incline capability: flat belt (15-20°), rough-top (25-30°), <a href="/conveyor-types/cleated-conveyors/">cleated</a> (up to 90°). Higher inclines require slower speeds.</p>
+<p><strong>3. Incline angle.</strong> Calculate the incline angle from floor rise and horizontal run. Then match the belt surface to that angle: smooth flat belt for gentle slopes (Dorner: under 20°), patterned or rough-top for moderate slopes (Forbo: up to 30° for certain patterns), <a href="/conveyor-types/cleated-conveyors/">cleated</a> for steep runs (Dorner: up to 60°), and sidewall-cleated belts for near-vertical bulk lifts. Steeper runs usually run slower.</p>
 <p><strong>4. Speed and throughput.</strong> Calculate required belt speed from throughput and product spacing. Higher speeds require more robust belt construction, larger motors, and attention to product stability at load/unload points.</p>
 <p><strong>5. Accumulation needs.</strong> Belt conveyors do not accumulate as easily as <a href="/conveyor-types/roller-conveyors/">roller conveyors</a>. If accumulation is needed, consider a belt conveyor with a <a href="/conveyor-types/mdr-conveyors/">roller accumulation section</a>, or a modular plastic belt with low-friction top surface that allows slip accumulation.</p>
 <p><strong>6. Cleaning and maintenance.</strong> Evaluate cleaning requirements and <a href="/resources/conveyor-parts/">maintenance access</a>. <a href="/conveyor-types/modular-conveyors/">Modular plastic belts</a> are easiest to clean and repair (individual modules replace without removing the entire belt). Fabric belts may require more frequent replacement in abrasive or wet environments.</p>
-<h2 id="manufacturers-heading">Belt Conveyor Manufacturers</h2>
-<p>Belt conveyor manufacturers range from conveyor system builders to belting specialists:</p>
+<h2 id="evaluate-heading">How to Evaluate Belt Conveyor Suppliers</h2>
+<p>Belt conveyor suppliers fall into two groups: conveyor builders that sell complete frames, drives, and controls, and belting makers that sell belts to those builders and to plants for replacement. Most projects buy from the first group. Ask each supplier for:</p>
 <ul>
-<li><strong>Dorner</strong> (Hartland, WI): Precision belt conveyors for packaging, assembly, and food processing. Known for sanitary <a href="/conveyor-types/stainless-steel-conveyors/">stainless steel conveyors</a>.</li>
-<li><strong>mk North America</strong> (Bloomfield, CT): Modular aluminum-frame belt conveyors for automation and packaging.</li>
-<li><strong>Hytrol</strong> (Jonesboro, AR): Full range of belt, roller, and accumulation conveyors for distribution and manufacturing.</li>
-<li><strong>Nercon</strong> (Oconto, WI): Sanitary conveyors for food, beverage, and pharmaceutical.</li>
-<li><strong>Habasit</strong> (Global): Belting manufacturer producing fabric, modular plastic, and timing belts for OEMs and replacement.</li>
-<li><strong>Intralox</strong> (Harahan, LA): Modular plastic belting specialist, known for DirectDrive and ThermoDrive technologies.</li>
-<li><strong>Forbo-Siegling</strong> (Global): Fabric and specialty belting for conveyor OEMs.</li>
+<li><strong>Published load and speed ratings</strong> for the exact model, width, and length quoted, not a series maximum.</li>
+<li><strong>Belt data sheet</strong> naming the compound, food-contact compliance, temperature range, and minimum pulley diameter.</li>
+<li><strong>Incline and transition design</strong> (nose-over or Z-frame) with the angle tested on your product.</li>
+<li><strong>Guarding and safety</strong> to <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, including nip points at pulleys and e-stops.</li>
+<li><strong>Belt change and spare parts</strong>: time to replace a belt, and which parts are stocked regionally.</li>
 </ul>
-<p>See the <a href="/resources/conveyor-manufacturers/">conveyor manufacturers directory</a> for a comprehensive list.</p>
+<p>See the <a href="/resources/conveyor-manufacturers/">conveyor manufacturers directory</a> for supplier listings.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.dornerconveyors.com/solutions/cleated-belt-conveyor-solutions" target="_blank" rel="noopener noreferrer">Cleated Belt Conveyor Solutions</a>, Dorner. Flat belts limited to under 20 degrees, cleated belts up to 60 degrees.</li>
+<li><a href="https://www.dornerconveyors.com/products/3200-series/3200-belted/z-frame" target="_blank" rel="noopener noreferrer">3200 Series Z-Frame Conveyor</a>, Dorner. Flat belt speeds to 600 ft/min, cleated speeds to 275 ft/min.</li>
+<li><a href="https://www.dornerconveyors.com/products/2200-series/2200-belted-conveyor" target="_blank" rel="noopener noreferrer">2200 Series Flat Belt Conveyor</a>, Dorner. Speeds up to 400 ft/min.</li>
+<li><a href="https://www.cisco-eagle.com/uploads/Hytrol-Spec-Belt/Model-SB-Specs.pdf" target="_blank" rel="noopener noreferrer">Model SB Slider Bed Belt Conveyor specifications</a>, Hytrol (hosted by Cisco-Eagle). Constant 65 FPM belt speed.</li>
+<li><a href="https://www.forbo.com/movement/en-gl/products/conveyor-belts/siegling-transilon/top-face-patterns-and-textures/ppi6n3" target="_blank" rel="noopener noreferrer">Top Face Patterns and Textures</a>, Forbo Siegling. Certain patterned belts reach 30 degrees without profiles.</li>
+<li><a href="https://www.forbo.com/media/document/8d828b24-c03a-498c-ab3b-713371a7a5d5" target="_blank" rel="noopener noreferrer">Siegling Prolink: Recommendations for Constructing and Calculating Conveyors</a>, Forbo Movement Systems. Modular belt incline guidelines by surface.</li>
+<li><a href="https://allstateconveyors.com/wp-content/uploads/2021/02/Continental_FLEXOWELL%C2%AE_Steep-Angle-Vertical-Conveying-System.pdf" target="_blank" rel="noopener noreferrer">FLEXOWELL Belts for Steep Inclined and Vertical Conveying</a>, Continental (hosted by Allstate Conveyors). Sidewall belts up to 90 degrees.</li>
+<li><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Roller Conveyor Selection Guide</a>, Ashland Conveyor. Minimum of three rollers under the load.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">21 CFR Part 177: Indirect Food Additives: Polymers</a>, eCFR. Food-contact polymer rules.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety and guarding.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a belt conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>A belt conveyor uses a continuous loop of material (the belt) stretched between two or more pulleys to transport products. The belt wraps around a head pulley (driven) and a tail pulley (idler), with the top surface carrying products and the bottom returning empty. Belt conveyors handle products of any shape, size, or bottom condition, including bags, pouches, and irregular shapes that <a href="/conveyor-types/roller-conveyors/">roller conveyors</a> cannot transport.</p>
+<p>A belt conveyor is a conveyor that carries products on the top surface of a continuous belt loop. A motor turns a drive pulley, which pulls the belt around a tail pulley at the other end, and a slider bed or rollers support the belt in between. Industrial belt conveyor systems add a frame, take-up for belt tension, guarding, and controls. Because the belt is a continuous surface, it carries bags, pouches, small parts, and irregular items that would fall between or snag on <a href="/conveyor-types/roller-conveyors/">roller conveyor</a> rollers.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What are the different types of conveyor belts?</button></h3>
@@ -255,7 +258,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the difference between a belt conveyor and a roller conveyor?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Belt conveyors use a continuous belt surface and can transport products of any shape or bottom condition. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> use cylindrical rollers and require flat, rigid product bottoms spanning at least 3 rollers. Belt conveyors excel at <a href="/conveyor-types/incline-conveyors/">inclines</a>, handling bags and pouches, and transporting small items. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>, and lower friction for heavy flat-bottomed loads.</p>
+<p>Belt conveyors use a continuous belt surface and carry products with soft, irregular, or small footprints. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> use cylindrical rollers and need a firm, flat product bottom resting on at least three rollers at all times. Belt conveyors are the usual choice for <a href="/conveyor-types/incline-conveyors/">inclines</a>, bags and pouches, and small items. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>, and lower friction for heavy flat-bottomed loads like cases and pallets.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What belt conveyor is best for food applications?</button></h3>
@@ -265,7 +268,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">How fast can a belt conveyor run?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p>Belt conveyor speeds typically range from 20 to 400 feet per minute (FPM) depending on the application. Light-duty <a href="/industries/packaging-line-conveyors/">packaging conveyors</a> commonly run at 50-150 FPM. High-speed sortation and distribution conveyors may reach 400-600 FPM. Maximum practical speed depends on belt type, product stability, and the ability to load and unload at the conveyor ends. <a href="/conveyor-types/incline-conveyors/">Incline conveyors</a> run slower to prevent product slippage.</p>
+<p>Speed depends on the conveyor model and the product. Published examples: Hytrol's Model SB slider bed conveyor runs at a constant 65 FPM as standard, Dorner rates its 2200 Series flat belt conveyor at up to 400 ft/min, and Dorner rates its heavy-duty 3200 Series flat belt at up to 600 ft/min. On <a href="/industries/packaging-line-conveyors/">packaging lines</a>, the practical maximum is usually set by product stability and by how cleanly products load and unload at the conveyor ends, not by the belt itself. Cleated and <a href="/conveyor-types/incline-conveyors/">incline</a> belts usually run slower than flat horizontal belts.</p>
 
 </div>
 </div>

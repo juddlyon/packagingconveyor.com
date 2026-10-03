@@ -58,6 +58,145 @@ const faqSchema = {
 >
 <h1>Conveyor Frame, Drive &amp; Pulley Design</h1>
 <p class="usa-intro">Specifying a conveyor means choosing the frame, conveying surface, drive, pulleys, take-up, bearings, and sensors so they work as one system. These choices are linked: the belt sets the minimum pulley diameter and the take-up style, the drive position sets where tension is highest and how tight the end transfers can be, and the frame material sets what bearings and fasteners can be used. This design guide covers how to specify each part and how the choices interact. For a map of all <a href="/components/">conveyor components</a>, including guide rails, cleaning systems, and wear parts, see the components hub.</p>
+<h2 id="conveyor-anatomy">Parts of a Belt Conveyor</h2>
+<p>A belt conveyor has a frame (side channels) carrying a slider bed or carrying rollers, an endless belt looped around a head (drive) pulley and a tail pulley, return rollers under the frame, a take-up that sets belt tension, and a gearmotor that turns the head pulley. Bearings hold every pulley shaft, legs set the height, and guide rails keep product on the belt. The diagram shows a common end-drive layout in side view.</p>
+<figure class="diagram">
+<div class="diagram__scroll" tabindex="0" role="region" aria-label="Belt conveyor parts diagram">
+<svg viewBox="0 0 760 320" role="img" aria-labelledby="ca-title ca-desc">
+<title id="ca-title">Parts of a belt conveyor, side view</title>
+<desc id="ca-desc">Side view of an end-drive belt conveyor. Product travels left to right on the carry side of the belt, which slides on a slider bed supported by the frame side channel. The belt wraps the tail pulley at the left and the head drive pulley at the right. A shaft-mounted gearmotor drives the head pulley. A snub roller behind the head pulley increases belt wrap. The return side of the belt runs back under the frame on return rollers. A screw take-up at the tail sets tension. Bearings support the pulley shafts, legs support the frame, and a guide rail runs along the side above the belt.</desc>
+<defs>
+<marker id="ca-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
+</defs>
+<g font-family="sans-serif" font-size="14" fill="#1c1917">
+<line x1="300" y1="36" x2="440" y2="36" stroke="#b45309" stroke-width="3" marker-end="url(#ca-arrow)"/>
+<text x="370" y="26" text-anchor="middle">Product flow</text>
+<line x1="20" y1="292" x2="740" y2="292" stroke="#1c1917" stroke-width="2"/>
+<rect x="146" y="150" width="8" height="142" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="556" y="150" width="8" height="142" fill="#f5f0eb" stroke="#1c1917"/>
+<text x="162" y="272">Legs / supports</text>
+<rect x="190" y="86" width="56" height="32" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="430" y="86" width="56" height="32" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="96" y="124" width="548" height="26" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="96" y="119.5" width="548" height="4" fill="#fef3c7" stroke="#b45309"/>
+<line x1="130" y1="102" x2="130" y2="124" stroke="#1c1917" stroke-width="2"/>
+<line x1="380" y1="102" x2="380" y2="124" stroke="#1c1917" stroke-width="2"/>
+<line x1="610" y1="102" x2="610" y2="124" stroke="#1c1917" stroke-width="2"/>
+<rect x="110" y="97" width="520" height="5" fill="#fef3c7" stroke="#1c1917"/>
+<line x1="80" y1="118" x2="660" y2="118" stroke="#1c1917" stroke-width="3"/>
+<path d="M660,118 A14,14 0 0 1 660,146" fill="none" stroke="#1c1917" stroke-width="3"/>
+<path d="M80,146 A14,14 0 0 1 80,118" fill="none" stroke="#1c1917" stroke-width="3"/>
+<circle cx="80" cy="132" r="12" fill="#fef3c7" stroke="#1c1917"/>
+<circle cx="660" cy="132" r="12" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="76" y="128" width="8" height="8" fill="#b45309"/>
+<rect x="656" y="128" width="8" height="8" fill="#b45309"/>
+<circle cx="628" cy="150" r="7" fill="#fef3c7" stroke="#1c1917"/>
+<circle cx="210" cy="184" r="7" fill="#fef3c7" stroke="#1c1917"/>
+<circle cx="360" cy="184" r="7" fill="#fef3c7" stroke="#1c1917"/>
+<circle cx="500" cy="184" r="7" fill="#fef3c7" stroke="#1c1917"/>
+<polyline points="660,146 628,143 560,177 130,177 80,146" fill="none" stroke="#1c1917" stroke-width="3"/>
+<line x1="24" y1="132" x2="68" y2="132" stroke="#1c1917" stroke-width="3"/>
+<line x1="30" y1="156" x2="66" y2="156" stroke="#b45309" stroke-width="2" marker-start="url(#ca-arrow)" marker-end="url(#ca-arrow)"/>
+<line x1="664" y1="136" x2="690" y2="156" stroke="#1c1917" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="686" y="152" width="56" height="32" fill="#fef3c7" stroke="#1c1917"/>
+<text x="14" y="84">Tail pulley</text>
+<line x1="50" y1="88" x2="74" y2="120" stroke="#1c1917"/>
+<text x="45" y="180" text-anchor="middle">Take-up</text>
+<text x="320" y="78" text-anchor="middle">Guide rail</text>
+<line x1="320" y1="82" x2="320" y2="97" stroke="#1c1917"/>
+<text x="560" y="62" text-anchor="middle">Belt (carry side)</text>
+<line x1="560" y1="66" x2="560" y2="116" stroke="#1c1917"/>
+<text x="750" y="84" text-anchor="end">Head (drive) pulley</text>
+<line x1="690" y1="88" x2="668" y2="120" stroke="#1c1917"/>
+<text x="750" y="128" text-anchor="end">Bearing</text>
+<line x1="693" y1="124" x2="665" y2="131" stroke="#1c1917"/>
+<text x="714" y="204" text-anchor="middle">Gearmotor</text>
+<text x="714" y="220" text-anchor="middle">(drive)</text>
+<text x="628" y="240" text-anchor="middle">Snub roller</text>
+<line x1="628" y1="226" x2="628" y2="157" stroke="#1c1917"/>
+<line x1="175" y1="131" x2="175" y2="124" stroke="#1c1917"/>
+<text x="182" y="142">Slider bed</text>
+<text x="470" y="142" text-anchor="middle">Frame (side channel)</text>
+<text x="280" y="170" text-anchor="middle">Belt (return side)</text>
+<text x="360" y="212" text-anchor="middle">Return rollers</text>
+<line x1="360" y1="198" x2="360" y2="191" stroke="#1c1917"/>
+</g>
+</svg>
+</div>
+<figcaption>End-drive belt conveyor, side view. The gearmotor turns the head pulley, the snub roller adds wrap on the head pulley, and the screw take-up moves the tail pulley to set tension. Roller-bed conveyors replace the slider bed with carrying rollers. Center-drive designs move the drive and take-up under the frame.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What it does</th>
+<th>Common wear item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame (side channels)</td>
+<td>Holds the bed, pulleys, and accessories in alignment and carries the load to the legs</td>
+<td>Rarely wears. Check for loose bolts, bent channel, and damaged paint or coating</td>
+</tr>
+<tr>
+<td>Slider bed or carrying rollers</td>
+<td>Supports the carry side of the belt under the product</td>
+<td>Bed surface polished or grooved by the belt underside. Carrying roller bearings</td>
+</tr>
+<tr>
+<td>Belt (carry and return sides)</td>
+<td>Carries product on the top side and returns empty underneath</td>
+<td>Top cover cuts and wear, frayed edges from mistracking, splice or lacing</td>
+</tr>
+<tr>
+<td>Head (drive) pulley</td>
+<td>Transfers drive torque to the belt by friction</td>
+<td>Lagging wear, buildup on the face, shaft bearings</td>
+</tr>
+<tr>
+<td>Tail pulley</td>
+<td>Turns the belt from the return side to the carry side, often the tracking and take-up point</td>
+<td>Shaft bearings, buildup that causes mistracking</td>
+</tr>
+<tr>
+<td>Snub roller</td>
+<td>Increases belt wrap on the drive pulley so it can pull without slipping</td>
+<td>Bearings, buildup on the roller face</td>
+</tr>
+<tr>
+<td>Take-up</td>
+<td>Sets and holds belt tension as the belt stretches</td>
+<td>Seized screws or slides, take-up travel used up by belt stretch</td>
+</tr>
+<tr>
+<td>Return rollers</td>
+<td>Support the return side of the belt under the frame</td>
+<td>Seized rollers that wear the belt, buildup on the roller shell</td>
+</tr>
+<tr>
+<td>Gearmotor (drive)</td>
+<td>Supplies power and reduces motor speed to belt speed</td>
+<td>Gear oil, shaft seals, motor bearings. Chain and sprockets if chain-coupled</td>
+</tr>
+<tr>
+<td>Bearings</td>
+<td>Support the pulley and roller shafts</td>
+<td>The bearing itself: seals and lubrication. Watch for noise and heat</td>
+</tr>
+<tr>
+<td>Legs and supports</td>
+<td>Set conveyor height and carry the frame to the floor</td>
+<td>Leveling feet and fasteners that loosen and let the frame go out of level</td>
+</tr>
+<tr>
+<td>Guide rails</td>
+<td>Keep product centered on the belt</td>
+<td>Plastic rail facing worn by product contact, loose brackets</td>
+</tr>
+</tbody>
+</table>
+<p>For parts that wear and need stocking, see the <a href="/resources/conveyor-parts/">conveyor parts guide</a>.</p>
 <h2 id="interact-heading">How Component Choices Interact</h2>
 <p>Most specification errors come from choosing one part in isolation. Use this table to check what each decision constrains before you finalize it.</p>
 <table>
@@ -108,7 +247,7 @@ const faqSchema = {
 <h3>Stainless Steel</h3>
 <p>Stainless steel frames are required for washdown, food-grade, pharmaceutical, and corrosive environments. Type 304 stainless steel handles most food and beverage applications, including daily washdown with standard cleaning chemicals. Type 316 stainless steel resists chlorides, acids, and aggressive sanitizers, required for salt, citric acid, and chlorinated-cleaning environments. Stainless frames use TIG-welded construction with ground and polished welds to eliminate crevices that harbor bacteria. Stainless steel conveyor systems for sanitary applications are widely available from packaging conveyor specialists.</p>
 <h3>Aluminum Extrusion</h3>
-<p>Aluminum extrusion frames use T-slot profiles that bolt together without welding. This modular construction allows quick assembly, reconfiguration, and disassembly. Aluminum frames are lightweight (aluminum is roughly one-third the density of steel), naturally corrosion-resistant, and offer a clean appearance suitable for cleanroom, pharmaceutical, and light-duty packaging applications. Aluminum extrusion-framed conveyors are available from multiple conveyor builders. Load capacity is generally lower than a comparable steel frame and depends on profile size and span, so confirm the rated load per foot for the chosen profile and support spacing.</p>
+<p>Aluminum extrusion frames use T-slot profiles that bolt together without welding. This modular construction allows quick assembly, reconfiguration, and disassembly. Aluminum frames are much lighter than steel frames of similar size, naturally corrosion-resistant, and offer a clean appearance suitable for cleanroom, pharmaceutical, and light-duty packaging applications. Aluminum extrusion-framed conveyors are available from multiple conveyor builders. Load capacity is generally lower than a comparable steel frame and depends on profile size and span, so confirm the rated load per foot for the chosen profile and support spacing.</p>
 <h3>Painted and Powder-Coated Steel</h3>
 <p>Painted carbon steel frames add a layer of corrosion protection at lower cost than stainless steel. Powder coating is more durable than wet paint and resists chipping, scratching, and chemical exposure better. Standard colors are machine gray, safety blue, or custom RAL colors. Powder-coated frames suit dry food packaging (packaged products, not exposed food) and general industrial environments. For exposed food and full washdown, stainless steel is the better choice. Replacement <a href="/resources/conveyor-parts/">conveyor parts</a> and accessories must match the frame material for corrosion compatibility.</p>
 <h2 id="belts-heading">Belt Types</h2>
@@ -118,7 +257,7 @@ const faqSchema = {
 <h3>Polyurethane (PU) Belts</h3>
 <p>Polyurethane is a common food-grade belt material. Food-grade PU formulations are made to comply with FDA food-contact regulations, so ask the supplier for the specific 21 CFR citation and a compliance letter. PU belts resist abrasion, cuts, oils, fats, and cleaning chemicals. Temperature limits vary by formulation. PU belts cost more than PVC but generally offer better hygiene and chemical resistance. They are the default belt for sanitary conveyor applications.</p>
 <h3>Modular Plastic Belts</h3>
-<p>Modular plastic belts consist of interlocking modules connected by hinge rods. Damaged modules are individually replaceable without removing the entire belt, which shortens repair downtime. Available in acetal (Delrin) and polypropylene in FDA-compliant formulations. Intralox pioneered the modular plastic belt category and remains a leading supplier alongside several competitors. Modular belts handle curves, inclines, and heavy loads. Higher upfront cost can be offset by lower maintenance cost over the belt's service life.</p>
+<p>Modular plastic belts consist of interlocking modules connected by hinge rods. Damaged modules are individually replaceable without removing the entire belt, which shortens repair downtime. Available in acetal, polypropylene, polyethylene, and nylon, with FDA-compliant formulations offered. Resin sets the temperature range: <a href="https://www.intralox.com/belt-finder/modular-plastic-belting/series-800/flat-top" target="_blank" rel="noopener noreferrer">Intralox rates its Series 800 Flat Top</a> at 34 to 220°F in polypropylene and -50 to 150°F in polyethylene. Modular belts handle curves, inclines, and heavy loads. Higher upfront cost can be offset by lower maintenance cost over the belt's service life.</p>
 <h3>Wire Mesh and Metal Belts</h3>
 <p>Wire mesh belts handle high-temperature applications (ovens, dryers, fryers) and heavy loads. Stainless steel wire mesh handles temperatures well beyond polymer belt limits, with the exact rating set by alloy and construction. Flat wire belts provide a smooth surface for small products. Chain-edge belts handle heavy loads in accumulation applications. Metal belts are common in baking, snack food, and heat-treat applications where high temperatures and heavy loads exceed the capabilities of polymer belts.</p>
 <h3>Steel Belts</h3>
@@ -126,11 +265,11 @@ const faqSchema = {
 <h2 id="rollers-heading">Conveyor Rollers</h2>
 <p>Rollers are the conveying surface on roller conveyors. Roller diameter, material, bearing type, and spacing determine load capacity, speed, noise, and service life. For a detailed overview of roller conveyor types, see the <a href="/conveyor-types/roller-conveyors/">roller conveyors page</a>.</p>
 <h3>Gravity Rollers</h3>
-<p>Gravity rollers are unpowered. Product moves by gravity (on a slight decline) or by manual push. Gravity rollers are the simplest and lowest-cost conveyor component. Standard gravity rollers use carbon steel tubes with precision bearings. Roller diameter and tube wall thickness scale with product weight. Roller spacing is determined by product size. A common rule of thumb is that at least three rollers should be under the product at all times. Gravity roller conveyors are one of the most widely available conveyor products, offered by nearly every conveyor manufacturer.</p>
+<p>Gravity rollers are unpowered. Product moves by gravity (on a slight decline) or by manual push. Gravity rollers are the simplest and lowest-cost conveyor component. Standard gravity rollers use carbon steel tubes with precision bearings. Roller diameter and tube wall thickness scale with product weight. Roller spacing is determined by product size. <a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Ashland's roller conveyor guide</a> says a minimum of three rollers should be in contact with the load at all times, so the shortest product sets the maximum roller center. Gravity roller conveyors are one of the most widely available conveyor products, offered by nearly every conveyor manufacturer.</p>
 <h3>Powered Rollers</h3>
 <p>Powered rollers are driven by belts, chains, or line shafts from an external motor. Belt-driven live roller (BDLR) conveyors use a flat belt running under the rollers. The belt contacts the bottom of each roller, spinning it. Chain-driven live roller (CDLR) conveyors use roller chain and sprockets to drive each roller, handling heavier loads than belt-driven rollers. Line-shaft driven conveyors use a rotating shaft with O-ring or spool drives to power individual rollers.</p>
 <h3>Accumulation Rollers</h3>
-<p>Accumulation rollers allow products to queue on the conveyor without back pressure. Minimum-pressure accumulation conveyors disengage roller drive when a zone is full, the drive belt or chain slips on a clutch mechanism. Zero-pressure accumulation conveyors use independently controlled zones with photoeye sensors, each zone stops its rollers when the downstream zone is occupied. MDR (motorized drive roller) conveyors achieve zero-pressure accumulation using a 24V DC motor embedded inside a drive roller in each zone. MDR rollers are available from several global suppliers specializing in motorized roller technology.</p>
+<p>Accumulation rollers allow products to queue on the conveyor without back pressure. Minimum-pressure accumulation conveyors disengage roller drive when a zone is full, the drive belt or chain slips on a clutch mechanism. Zero-pressure accumulation conveyors use independently controlled zones with photoeye sensors, each zone stops its rollers when the downstream zone is occupied. MDR (motorized drive roller) conveyors achieve zero-pressure accumulation using a low-voltage DC motor embedded inside a drive roller in each zone. MDR rollers are available from several global suppliers specializing in motorized roller technology.</p>
 <h2 id="drives-heading">Drive Configurations</h2>
 <p>The drive system converts electrical power into belt or roller motion. Drive configuration, end drive, center drive, or head drive, affects belt tension distribution, transfer point design, and maintenance access. For motor and VFD selection details, see the <a href="/resources/conveyor-motors-drives/">motors and drives guide</a>.</p>
 <h3>End Drive</h3>
@@ -146,7 +285,7 @@ const faqSchema = {
 <h3>Tail Pulley</h3>
 <p>The tail pulley is located at the infeed end of the conveyor. It redirects the belt from the return strand to the carrying strand. Tail pulleys are typically the same diameter as or smaller than the drive pulley. Wing-style tail pulleys have vanes that shed debris, preventing material buildup that causes belt mistracking.</p>
 <h3>Take-Up Mechanisms</h3>
-<p>Take-up mechanisms maintain belt tension as the belt stretches over time. Screw take-ups use threaded rods to adjust the tail pulley position manually, simple and low-cost for short conveyors. Gravity take-ups use a weighted pulley that automatically maintains constant belt tension, preferred for long conveyors and systems where belt elongation is significant. Spring-loaded take-ups provide automatic tension adjustment for medium-length conveyors.</p>
+<p>Take-up mechanisms set and maintain belt tension. Fabric belt makers specify tension as a percentage of initial elongation, and <a href="https://www.habasit.com/-/media/Project/Habasit/NewWebsite/Downloads/Products/General-conveyor-belts/Fabric-Conveyor-Belts-Installation-and-Maintenance-Guide.pdf" target="_blank" rel="noopener noreferrer">Habasit's installation guide</a> says the tension pulley must stay exactly at right angles to the belt while tensioning, so the take-up must have enough travel and move both ends evenly. Screw take-ups use threaded rods to adjust the tail pulley position manually, simple and low-cost for short conveyors. Gravity take-ups use a weighted pulley that automatically maintains constant belt tension, preferred for long conveyors and systems where belt elongation is significant. Spring-loaded take-ups provide automatic tension adjustment for medium-length conveyors.</p>
 <h3>Bearings</h3>
 <p>Bearings support pulley shafts and roller shafts. Pillow block bearings and flanged bearings are standard on conveyor pulleys. Sealed bearings prevent contamination from dust, water, and cleaning chemicals. Stainless steel bearings and food-grade bearings with H1-rated lubricant are required for washdown and food-contact environments. Bearing failure is one of the top causes of conveyor downtime. Predictive maintenance using vibration monitoring and temperature monitoring detects bearing degradation before failure. The <a href="/resources/conveyor-design-guide/">design guide hub</a> covers maintenance planning as part of the design process.</p>
 <h2 id="sensors-heading">Sensors &amp; Detection</h2>
@@ -163,6 +302,14 @@ const faqSchema = {
 <p>Guards prevent operator contact with moving conveyor components, nip points, drive components, belt edges, and rotating shafts. <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer">OSHA 29 CFR 1910.219</a> requires guarding of all power transmission components. ANSI/ASME B20.1 provides specific guarding requirements for conveyor systems.</p>
 <p>Nip point guards cover the pinch points where the belt wraps around drive pulleys, tail pulleys, and snub pulleys. These are the most critical guard locations, nip points can pull in clothing, fingers, and hair. Guards must be fixed (bolted) and require a tool for removal. Interlocked guards connect to the safety circuit so that removing the guard stops the conveyor motor.</p>
 <p>Drive guards enclose the motor, gearbox, belts, chains, and sprockets. Perforated metal or wire mesh guards allow airflow for motor cooling while preventing contact. Underguards cover the return strand of belt conveyors to prevent contact and to catch material that falls off the conveyor. Side guards prevent product from falling off the conveyor edges.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.intralox.com/belt-finder/modular-plastic-belting/series-800/flat-top" target="_blank" rel="noopener noreferrer">Series 800 Flat Top belt data</a>, Intralox. Temperature ranges by belt resin.</li>
+<li><a href="https://www.habasit.com/-/media/Project/Habasit/NewWebsite/Downloads/Products/General-conveyor-belts/Fabric-Conveyor-Belts-Installation-and-Maintenance-Guide.pdf" target="_blank" rel="noopener noreferrer">Fabric Conveyor Belts Installation and Maintenance Guide</a>, Habasit. Tensioning by initial elongation and take-up alignment.</li>
+<li><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Roller Conveyor Selection Guide</a>, Ashland Conveyor. Minimum of three rollers in contact with the load.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1, Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety requirements.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer">29 CFR 1910.219, Mechanical Power-Transmission Apparatus</a>, OSHA. Guarding of drives, pulleys, belts, and chains.</li>
+</ul>
 <h2 id="faq-heading">Design FAQ</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">In what order should conveyor components be specified?</button></h3>

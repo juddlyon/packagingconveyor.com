@@ -33,7 +33,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between a metal detector and X-ray inspection?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Metal detectors use electromagnetic fields to detect metallic contamination only, ferrous metals, non-ferrous metals (aluminum, copper), and stainless steel. X-ray systems use radiation to detect any material denser than the product, including metal, glass, stone, bone, ceramic, and dense plastics. X-ray also performs mass estimation, component counting, and fill level checking. Metal detectors cost less ($ to $$), detect smaller metal fragments, and require no radiation safety measures. X-ray systems cost more ($$$ to $$$$) but detect a wider range of contaminants." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Metal detectors use electromagnetic fields to detect metallic contamination only, ferrous metals, non-ferrous metals (aluminum, copper), and stainless steel. X-ray systems use radiation to detect any material denser than the product, including metal, glass, stone, bone, ceramic, and dense plastics. X-ray also performs mass estimation, component counting, and fill level checking. Metal detectors cost less, often find smaller metal fragments in dry unpackaged product, and need no radiation safety program. X-ray systems cost more because of the X-ray source, detector, shielding, and image software, but they detect a wider range of contaminants and can inspect product in metallized film or foil." }
     },
     {
       "@type": "Question",
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Do conveyor inspection systems require integrated reject mechanisms?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inspection system that identifies defects must have an integrated or immediately downstream reject mechanism to remove defective product from the line. A metal detector that finds contamination but cannot reject the product provides no safety benefit. Most inspection system manufacturers (Mettler-Toledo, Loma Systems, Fortress Technology, Ishida) supply integrated conveyor-reject-inspection units as complete systems. Reject confirmation sensors verify that rejected product actually left the conveyor." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inspection system that identifies defects must have an integrated or immediately downstream reject mechanism to remove defective product from the line. A metal detector that finds contamination but cannot reject the product provides no safety benefit. Most inspection system manufacturers supply the conveyor, inspection head, and reject as one integrated unit. Reject confirmation sensors verify that rejected product actually left the conveyor." }
     }
   ]
 };
@@ -55,25 +55,25 @@ const faqSchema = {
   schema={[breadcrumbSchema, articleSchema, faqSchema]}
 >
 <h1>Metal Detectors &amp; Inspection Systems</h1>
-<p class="usa-intro">Conveyor-mounted inspection systems scan every product on the packaging line for contaminants, weight deviations, label defects, and package integrity failures, then trigger <a href="/conveyor-functions/reject-systems/">reject mechanisms</a> to remove non-conforming product before it reaches the consumer. The four primary inspection technologies are metal detectors, X-ray systems, checkweighers, and vision inspection. Mettler-Toledo, Loma Systems, Fortress Technology, Ishida, Eriez, and Cognex manufacture inspection systems with integrated conveyor and reject hardware for food, pharmaceutical, and consumer goods packaging lines.</p>
+<p class="usa-intro">Conveyor-mounted inspection systems scan every product on the packaging line for contaminants, weight deviations, label defects, and package integrity failures, then trigger <a href="/conveyor-functions/reject-systems/">reject mechanisms</a> to remove non-conforming product before it reaches the consumer. The four primary inspection technologies are metal detectors, X-ray systems, checkweighers, and vision inspection. For food, FDA treats hard or sharp foreign objects 7 mm to 25 mm long in ready-to-eat food as an adulteration hazard (see <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-555425-foods-adulteration-involving-hard-or-sharp-foreign-objects" target="_blank" rel="noopener noreferrer">FDA CPG Sec. 555.425</a>), which is why contaminant detection is a common critical control point.</p>
 <h2 id="metal-heading">Conveyor Metal Detectors</h2>
 <p>Conveyor metal detectors pass product through a balanced coil aperture that generates an electromagnetic field. Metal contamination, ferrous, non-ferrous, or stainless steel, disturbs the field, triggering a detection signal. The detector sends a reject command to the downstream reject mechanism after calculating the delay for product travel from the aperture to the reject point.</p>
-<p>Detection sensitivity depends on aperture size, product effect (the electromagnetic signal the product itself generates), and contaminant type. Ferrous metals are easiest to detect, fragments as small as 0.5mm in diameter in non-conductive products. Non-ferrous metals (aluminum, copper) require 1.0-1.5mm minimum. Stainless steel 316 is the most difficult, 1.5-2.5mm minimum for reliable detection. Wet, salty, or conductive products (fresh meat, cheese, salty snacks) generate high product effect that masks small contaminant signals, requiring advanced multi-frequency or multi-simultaneous-frequency (MSF) detectors.</p>
-<p>Mettler-Toledo's Profile Advantage, Loma Systems' IQ4 series, and Fortress Technology's Interceptor line represent current multi-frequency metal detection technology for <a href="/industries/food-conveyors/">food packaging lines</a>. These systems automatically adjust frequency and sensitivity based on product characteristics, reducing false rejects while maintaining detection performance.</p>
-<p>Metal detector conveyor integration requires a metal-free zone around the aperture, no metal conveyor components within the aperture area. The conveyor belt uses non-metallic splices (sewn or plastic pin). The conveyor frame transitions from steel to plastic or stainless steel through the detection zone. Most inspection manufacturers supply the conveyor section as part of the integrated metal detector system, ensuring proper metal-free zone design.</p>
+<p>Detection sensitivity depends on aperture size, product effect (the electromagnetic signal the product itself generates), and contaminant type. The <a href="https://www.mt.com/mt_ext_files/Editorial/Generic/5/PI-Safeline-Metal-Detection-Guide_Editorial-Generic_1190206474429_files/MetalDetectionGuide_Preview_1190206474429.pdf" target="_blank" rel="noopener noreferrer">Mettler-Toledo Safeline Metal Detection Guide</a> states that ferrous metal is the easiest to detect, while non-magnetic stainless grades such as 304 and 316 are often the most difficult, with non-ferrous metals usually in between. The smallest detectable sphere for each metal depends on aperture height, product, and line speed, so ask the supplier to test your actual product. Wet, salty, or conductive products (fresh meat, cheese, salty snacks) generate high product effect that masks small contaminant signals, requiring advanced multi-frequency or multi-simultaneous-frequency (MSF) detectors.</p>
+<p>Multi-frequency detectors used on <a href="/industries/food-conveyors/">food packaging lines</a> run or switch between several frequencies to separate the product signal from the metal signal. This reduces false rejects on high-product-effect foods while keeping detection performance.</p>
+<p>Metal detector conveyor integration requires a metal-free zone around the aperture, no metal conveyor components within the aperture area. The conveyor belt uses non-metallic splices (sewn or plastic pin). The conveyor frame transitions from steel to plastic or stainless steel through the detection zone. The Mettler-Toledo guide gives typical metal-free zone values of 1.5 times aperture height for stationary metal and 2.0 times aperture height for moving metal, and notes the manufacturer's installation instructions set the actual figure. Most inspection manufacturers supply the conveyor section with the detector for this reason.</p>
 <h2 id="xray-heading">X-Ray Inspection Systems</h2>
-<p>X-ray inspection systems use low-energy X-ray beams to create a density image of every product on the conveyor. The X-ray image reveals contaminants that differ in density from the product, metal, glass, stone, bone, ceramic, dense plastics, and rubber. Software algorithms analyze the image in real time (5-20ms per product) and trigger rejection when a contaminant is detected.</p>
+<p>X-ray inspection systems use low-energy X-ray beams to create a density image of every product on the conveyor. The X-ray image reveals contaminants that differ in density from the product, metal, glass, stone, bone, ceramic, dense plastics, and rubber. Software analyzes each image in real time and triggers rejection when a contaminant is detected.</p>
 <p>X-ray systems detect contaminant types that metal detectors miss. Glass fragments in glass jars, stone chips in grain products, bone fragments in meat, and rubber gasket pieces in sauced products are invisible to metal detectors but visible on X-ray. X-ray systems also perform secondary inspection functions, fill level verification, missing component detection (e.g., a missing prize in a cereal box), mass estimation, and seal integrity checking.</p>
-<p>Mettler-Toledo, Ishida, Eagle Product Inspection (a Mettler-Toledo brand), and Eriez manufacture X-ray inspection systems for packaging conveyor lines. Systems range from compact single-beam units for individual product inspection to dual-beam and side-shoot configurations for detecting contaminants in tall or irregularly shaped products.</p>
-<p>X-ray systems require radiation safety compliance, shielding, interlocks, warning labels, and periodic radiation surveys. Modern food-grade X-ray systems are fully shielded and emit no measurable radiation outside the cabinet. The product receives a dose far below any regulatory limit. However, facility safety officers must register X-ray equipment and maintain inspection records per state and federal radiation safety regulations.</p>
-<p>Relative cost for X-ray systems is $$$ to $$$$, significantly more than metal detectors ($ to $$). The higher cost is justified when the contamination risk includes non-metallic foreign objects or when secondary inspection functions (fill level, component counting) replace separate inspection stations. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for inspection system cost factors.</p>
+<p>Systems range from compact single-beam units for individual product inspection to dual-beam and side-shoot configurations for detecting contaminants in tall or irregularly shaped products.</p>
+<p>In the US, conveyor X-ray inspectors are cabinet X-ray systems regulated by <a href="https://www.fda.gov/radiation-emitting-products/security-systems/cabinet-x-ray-systems-closed-x-ray-systems" target="_blank" rel="noopener noreferrer">FDA</a> under <a href="https://www.law.cornell.edu/cfr/text/21/1020.40" target="_blank" rel="noopener noreferrer">21 CFR 1020.40</a>. The standard limits emission to 0.5 milliroentgen in one hour at any point 5 cm outside the cabinet and requires at least two safety interlocks per door, "X-RAY ON" indicators, and warning labels. Many states also require registration of X-ray equipment, so involve the plant's radiation safety contact before installation.</p>
+<p>X-ray systems cost significantly more than metal detectors because of the X-ray generator, detector array, shielding, and image software. The higher cost is justified when the contamination risk includes non-metallic foreign objects or when secondary inspection functions (fill level, component counting) replace separate inspection stations. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for inspection system cost factors.</p>
 <h2 id="checkweigh-heading">In-Motion Checkweighers</h2>
-<p>Checkweighers weigh every product in motion on the conveyor without stopping the line. A precision load cell under a short conveyor section captures the product weight as it crosses the weigh zone. Products outside the target weight range (underweight or overweight) trigger a reject signal. Checkweighers verify fill accuracy, detect missing components, and ensure regulatory weight compliance (NIST Handbook 133, EU Prepackages Directive).</p>
-<p>Checkweigher accuracy depends on product speed, vibration isolation, and weigh zone length. Typical accuracy is ±0.1g to ±1g depending on product weight and belt speed. Higher speeds reduce weighing time per product, decreasing accuracy. The weigh zone must be long enough for the product to settle on the load cell, typically 1.5 to 2 times the product length. Products must arrive with controlled spacing, only one product on the weigh section at a time. An <a href="/conveyor-functions/indexing-conveyors/">indexing conveyor</a> or speed-up belt upstream creates the required gap.</p>
-<p>Mettler-Toledo, Ishida, Wipotec-OCS, and Minebea Intec manufacture high-speed checkweighers with integrated conveyor and reject systems. Throughput ranges from 50 to 600+ products per minute depending on product size and weight range. High-speed pharmaceutical checkweighers (Wipotec, Mettler-Toledo) verify individual blister pack weights at 400+ per minute with accuracy of ±0.05g.</p>
-<p>Checkweighers integrate with upstream filling equipment through feedback control. The checkweigher's statistical weight data feeds back to the filler's PLC, allowing automatic fill weight adjustment to maintain target weight and minimize overfill giveaway. A filler consistently producing packages 2g heavy wastes product worth thousands of dollars per shift, checkweigher feedback eliminates this giveaway.</p>
+<p>Checkweighers weigh every product in motion on the conveyor without stopping the line. A precision load cell under a short conveyor section captures the product weight as it crosses the weigh zone. Products outside the target weight range (underweight or overweight) trigger a reject signal. Checkweighers verify fill accuracy, detect missing components, and support net contents compliance. In the US, inspectors test packages using <a href="https://www.nist.gov/pml/owm/nist-handbook-133-current-edition" target="_blank" rel="noopener noreferrer">NIST Handbook 133</a>, Checking the Net Contents of Packaged Goods.</p>
+<p>Checkweigher accuracy depends on product speed, vibration isolation, and weigh zone length. Higher speeds reduce weighing time per product, which reduces accuracy. The weigh conveyor must be long enough for the product to be fully on the weigh section and settle before the reading is taken, so it is sized from the longest product and belt speed. Ask suppliers for accuracy at your product weight and rate, stated as a standard deviation. Products must arrive with controlled spacing, only one product on the weigh section at a time. An <a href="/conveyor-functions/indexing-conveyors/">indexing conveyor</a> or speed-up belt upstream creates the required gap.</p>
+<p>Checkweighers are sold with integrated infeed, weigh, and reject conveyors. Achievable rate falls as product length grows, because each product must cross the weigh belt alone.</p>
+<p>Checkweighers integrate with upstream filling equipment through feedback control. The checkweigher's statistical weight data feeds back to the filler's PLC, allowing automatic fill weight adjustment to maintain target weight and minimize overfill giveaway. A filler that runs consistently heavy gives away product on every package, and checkweigher feedback reduces that giveaway.</p>
 <h2 id="vision-heading">Vision Inspection Systems</h2>
-<p>Vision inspection systems use industrial cameras and image processing software to inspect product appearance, label accuracy, package integrity, and dimensional conformance at line speed. A camera captures an image of each product as it passes a fixed position on the conveyor. The software analyzes the image against trained criteria and sends a pass/fail signal to the reject controller within 5-50ms.</p>
+<p>Vision inspection systems use industrial cameras and image processing software to inspect product appearance, label accuracy, package integrity, and dimensional conformance at line speed. A camera captures an image of each product as it passes a fixed position on the conveyor. The software analyzes the image against trained criteria and sends a pass/fail signal to the reject controller before the product reaches the reject point.</p>
 <p>Common vision inspection checks on packaging conveyors include:</p>
 <ul>
 <li><strong>Label presence and position:</strong> Confirms a label exists and is positioned within tolerance. Detects missing labels, skewed labels, and wrinkled labels.</li>
@@ -83,7 +83,7 @@ const faqSchema = {
 <li><strong>Fill level:</strong> Measures visible fill level through transparent or translucent containers. Detects underfilled and overfilled packages.</li>
 <li><strong>Color and surface defects:</strong> Detects discoloration, surface damage, foreign material on the product surface, and cosmetic defects that indicate quality problems.</li>
 </ul>
-<p>Cognex, Keyence, Omron (Microscan), and SICK manufacture vision systems for packaging conveyor applications. Cognex's In-Sight series and Keyence's CV-X series are widely deployed on food and pharmaceutical packaging lines. Smart cameras integrate the camera, processor, and I/O in a single unit, simplifying installation on existing conveyors.</p>
+<p>Smart cameras integrate the camera, processor, and I/O in a single unit, simplifying installation on existing conveyors.</p>
 <p>Vision system integration requires controlled lighting (LED bar lights, dome lights, or backlight panels), a fixed camera mount position relative to the conveyor, and a product trigger sensor that tells the camera when to capture. Product tracking from the camera position to the <a href="/conveyor-functions/pusher-diverter/">reject mechanism</a> uses an encoder on the conveyor to calculate when the defective product reaches the reject point.</p>
 <h2 id="placement-heading">Where to Place Inspection Systems</h2>
 <p>Inspection system placement follows two principles: <strong>inspect as early as possible</strong> (to prevent defective product from wasting downstream processing) and <strong>inspect as late as possible</strong> (to catch contamination introduced by downstream equipment). Best practice uses both, early inspection catches incoming defects, final inspection catches everything.</p>
@@ -97,10 +97,10 @@ const faqSchema = {
 <h2 id="conveyor-heading">Conveyor Requirements</h2>
 <p>Inspection systems impose specific requirements on the conveyor sections that carry product through the inspection zone:</p>
 <ul>
-<li><strong>Consistent speed:</strong> VFD-controlled motors with encoder feedback maintain belt speed within ±1%. Speed variation causes checkweigher inaccuracy and reject timing errors. The conveyor speed signal feeds the inspection system's product tracking calculation.</li>
-<li><strong>Product spacing:</strong> Checkweighers require one product on the weigh cell at a time. Metal detectors and X-ray systems need sufficient gap between products to assign reject signals to individual products. Minimum spacing depends on the inspection system, typically 1-2 product lengths between products.</li>
+<li><strong>Consistent speed:</strong> VFD-controlled motors with encoder feedback hold belt speed steady. Speed variation causes checkweigher inaccuracy and reject timing errors. The conveyor speed signal feeds the inspection system's product tracking calculation.</li>
+<li><strong>Product spacing:</strong> Checkweighers require one product on the weigh cell at a time. Metal detectors and X-ray systems need sufficient gap between products to assign reject signals to individual products. Minimum spacing depends on the inspection system and reject type, so get it from the supplier.</li>
 <li><strong>Vibration isolation:</strong> Checkweighers require vibration-free mounting. The weigh conveyor section isolates from the main conveyor frame using rubber mounts or spring isolators. Adjacent equipment vibration (compressors, other conveyors) transmits through the floor and degrades weighing accuracy.</li>
-<li><strong>Metal-free zones:</strong> Metal detector conveyor sections eliminate metal from the detection zone, non-metallic belt splices, plastic idler rollers, and stainless steel or plastic frame components within the aperture. The metal-free zone extends 12-18 inches on each side of the aperture.</li>
+<li><strong>Metal-free zones:</strong> Metal detector conveyor sections eliminate metal from the detection zone, non-metallic belt splices, plastic idler rollers, and stainless steel or plastic frame components within the aperture. The metal-free zone is set by aperture height (Mettler-Toledo cites 1.5 to 2.0 times aperture height as typical) and the manufacturer's instructions.</li>
 <li><strong>Sanitary construction:</strong> <a href="/industries/food-conveyors/sanitary/">Food-grade inspection conveyors</a> use stainless steel frames, FDA-compliant belts, IP69K motors, and open-frame designs for washdown cleaning. The inspection equipment itself must match the environmental rating.</li>
 </ul>
 <h2 id="compare-heading">Inspection System Comparison</h2>
@@ -109,43 +109,38 @@ const faqSchema = {
 <tr>
 <th>System</th>
 <th>Detects</th>
-<th>Speed</th>
-<th>Relative Cost</th>
-<th>Key Manufacturers</th>
+<th>What limits rate</th>
+<th>Main cost drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Metal detector</td>
 <td>Ferrous, non-ferrous, SS</td>
-<td>Up to 500+ FPM</td>
-<td>$-$$</td>
-<td>Mettler-Toledo, Loma, Fortress</td>
+<td>Reject response and product spacing</td>
+<td>Aperture size, frequency technology, sanitary build</td>
 </tr>
 <tr>
 <td>X-ray</td>
 <td>Metal, glass, stone, bone</td>
-<td>Up to 300+ FPM</td>
-<td>$$$-$$$$</td>
-<td>Mettler-Toledo, Ishida, Eriez</td>
+<td>Detector scan rate and image processing</td>
+<td>X-ray source, detector, shielding, beam configuration</td>
 </tr>
 <tr>
 <td>Checkweigher</td>
 <td>Weight deviation</td>
-<td>50-600+ UPM</td>
-<td>$$-$$$</td>
-<td>Mettler-Toledo, Ishida, Wipotec</td>
+<td>Product length and settling time on weigh belt</td>
+<td>Load cell technology, weigh range, reject type</td>
 </tr>
 <tr>
 <td>Vision</td>
 <td>Labels, seals, codes, cosmetic</td>
-<td>Up to 1000+ UPM</td>
-<td>$$-$$$</td>
-<td>Cognex, Keyence, Omron</td>
+<td>Camera exposure, lighting, processing time</td>
+<td>Number of cameras, lighting, software, integration</td>
 </tr>
 </tbody>
 </table>
-<p>UPM = units per minute. Cost: $ = lowest, $$$$ = highest. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
+<p>See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for how these drivers affect project budgets.</p>
 <h2 id="related-heading">Related Functions &amp; Guides</h2>
 <ul class="usa-collection">
 <li class="usa-collection__item">
@@ -161,6 +156,14 @@ const faqSchema = {
 <h3 class="usa-collection__heading"><a class="usa-link" href="/resources/automated-conveyor-systems/">Automated Systems</a></h3>
 <p class="usa-collection__description">Inspection in automated lines</p></div></li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-555425-foods-adulteration-involving-hard-or-sharp-foreign-objects" target="_blank" rel="noopener noreferrer">CPG Sec. 555.425 Foods: Adulteration Involving Hard or Sharp Foreign Objects</a>, US FDA. 7 mm to 25 mm hazard size range.</li>
+<li><a href="https://www.mt.com/mt_ext_files/Editorial/Generic/5/PI-Safeline-Metal-Detection-Guide_Editorial-Generic_1190206474429_files/MetalDetectionGuide_Preview_1190206474429.pdf" target="_blank" rel="noopener noreferrer">The Metal Detection Guide</a>, Mettler-Toledo Safeline. Ferrous easiest and stainless hardest to detect, product effect, metal-free zone of 1.5 to 2.0 times aperture height.</li>
+<li><a href="https://www.fda.gov/radiation-emitting-products/security-systems/cabinet-x-ray-systems-closed-x-ray-systems" target="_blank" rel="noopener noreferrer">Cabinet X-Ray Systems</a>, US FDA. Cabinet X-ray systems used for food inspection.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/21/1020.40" target="_blank" rel="noopener noreferrer">21 CFR 1020.40 Cabinet X-ray systems</a>, Code of Federal Regulations (via Cornell LII). Emission limit, interlocks, indicators, warning labels.</li>
+<li><a href="https://www.nist.gov/pml/owm/nist-handbook-133-current-edition" target="_blank" rel="noopener noreferrer">NIST Handbook 133</a>, National Institute of Standards and Technology. Net contents test procedures.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What inspection systems are used on packaging conveyors?</button></h3>
@@ -170,7 +173,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">Metal detector vs. X-ray, what is the difference?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Metal detectors find metallic contamination only using electromagnetic fields. X-ray detects any dense foreign object, metal, glass, stone, bone, ceramic. Metal detectors cost less and detect smaller metal fragments. X-ray costs more but finds non-metallic contaminants and performs secondary checks (fill level, component counting).</p>
+<p>Metal detectors find metallic contamination only using electromagnetic fields. X-ray detects any dense foreign object, metal, glass, stone, bone, ceramic. Metal detectors cost less, often find smaller metal fragments in dry unpackaged product, and need no radiation safety program. X-ray costs more but finds non-metallic contaminants, can inspect product in foil or metallized film, and performs secondary checks (fill level, component counting).</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Where should inspection systems go on the line?</button></h3>

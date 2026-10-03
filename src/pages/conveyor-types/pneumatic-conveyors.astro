@@ -23,7 +23,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between dilute phase and dense phase pneumatic conveying?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Dilute phase conveying keeps air velocity high enough that material stays suspended in the airstream, usually with a blower at low pressure. Dense phase conveying moves material as slow plugs or a dense bed at higher pressure, usually with compressed air and a pressure vessel. Dilute phase costs less to install and suits free-flowing, non-fragile materials. Dense phase suits fragile, abrasive, or blended materials because low velocity reduces particle breakage, segregation, and pipe wear." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Dilute phase (also called lean phase) keeps gas velocity above the saltation velocity, so particles stay suspended in the airstream. Dense phase runs below the saltation velocity, so material moves as plugs or as a moving bed. Eric Maynard of Jenike & Johanson, writing in AIChE's Chemical Engineering Progress, gives typical figures: dilute phase carries less than 15 lb of solids per lb of gas at under 15 psig, and dense phase carries more than 15 lb per lb of gas at over 30 psig. Dilute phase usually uses a blower and costs less to install. Dense phase usually uses compressed air and a pressure vessel, and its low velocity reduces particle breakage and pipe wear." }
     },
     {
       "@type": "Question",
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Pneumatic conveyor vs. mechanical conveyor: which is better?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors excel at enclosed, dust-free transport, complex routing through walls and floors, multiple pickup or delivery points, and contamination-sensitive or hazardous materials. Mechanical conveyors (belt, screw, drag chain) use substantially less energy per ton and usually cost less for short, straight, high-capacity runs. Choose pneumatic when containment or routing matters more than energy cost." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors excel at enclosed, dust-free transport, complex routing through walls and floors, multiple pickup or delivery points, and contamination-sensitive or hazardous materials. Pneumatic conveying has the highest specific energy use of the common conveying methods because it moves large volumes of air. Mechanical conveyors (belt, screw, drag chain) use less energy per ton and usually suit high tonnage rates and long distances better. Choose pneumatic when containment or routing matters more than energy cost." }
     }
   ]
 };
@@ -60,8 +60,63 @@ const articleSchema = {
 >
 <h1>Pneumatic Conveying Systems</h1>
 <p class="usa-intro">A pneumatic conveying system moves dry bulk material (powders, granules, pellets, and flakes) through a sealed pipeline using air. A blower, compressor, or vacuum pump either pushes material from a pressurized feed point or pulls it toward a vacuum receiver. The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment, carrying material from silos, bulk bags, and hoppers to mixers, process equipment, and <a href="/industries/packaging-line-conveyors/">packaging lines</a>.</p>
-<p>Two choices define every system: the conveying phase (dilute or dense) and the air source (pressure or vacuum). The table below compares the four combinations.</p>
+<p>Two choices define every system: the conveying phase (dilute or dense) and the air source (pressure or vacuum). The phase is set by how fast the gas moves relative to the material's saltation velocity. The air source is set by whether the air mover sits at the start of the line (pressure) or the end (vacuum).</p>
+<h2 id="phase-heading">Dilute Phase vs. Dense Phase (Lean Phase vs. Dense Phase)</h2>
+<p>Dilute phase is also called lean phase. The dividing line is the <strong>saltation velocity</strong>: the gas velocity at which fully suspended particles in a horizontal line begin to drop out and settle on the bottom of the pipe. Dilute phase runs above it. Dense phase runs below it. The typical figures below come from Eric Maynard of Jenike &amp; Johanson, writing in AIChE's <a href="https://www.aiche.org/sites/default/files/cep/20221147.pdf" target="_blank" rel="noopener noreferrer">Chemical Engineering Progress</a>. They are typical values, not hard limits.</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Dilute (Lean) Phase</th>
+<th>Dense Phase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gas velocity</td>
+<td>Above saltation velocity</td>
+<td>Below saltation velocity</td>
+</tr>
+<tr>
+<td>How material moves</td>
+<td>Fully suspended in the gas stream</td>
+<td>Piston or plug flow, or moving bed flow</td>
+</tr>
+<tr>
+<td>Typical solids loading</td>
+<td>Less than 15 lb of solids per lb of gas</td>
+<td>More than 15 lb of solids per lb of gas</td>
+</tr>
+<tr>
+<td>Typical pressure</td>
+<td>Less than 15 psig</td>
+<td>More than 30 psig (45 to 60 psig is common)</td>
+</tr>
+<tr>
+<td>Pipe wear and particle breakage</td>
+<td>Higher, from high velocity</td>
+<td>Lower, from low velocity</td>
+</tr>
+<tr>
+<td>Gas use</td>
+<td>More gas</td>
+<td>Less gas, at higher pressure</td>
+</tr>
+<tr>
+<td>Equipment cost</td>
+<td>Lower: no pressure vessels or heavy-duty valves</td>
+<td>Higher: pressure vessels, heavy-duty valves, flanged pipe</td>
+</tr>
+<tr>
+<td>Material fit</td>
+<td>Most materials that can be fed into the line</td>
+<td>Plug flow: coarse, permeable, free-flowing solids such as pellets. Moving bed: fine, air-retentive powders such as cement</td>
+</tr>
+</tbody>
+</table>
+<p>Dense phase does not mean the whole line runs dense. Gas expands as pressure drops along the pipe, so the tail end of a dense phase line can run in dilute phase. Material testing decides which mode a given powder will run in reliably.</p>
 <h2 id="compare-heading">Types of Pneumatic Conveying Systems</h2>
+<p>Phase and air source combine into four system types.</p>
 <table>
 <thead>
 <tr>
@@ -123,22 +178,22 @@ const articleSchema = {
 <td>Toxic or fragile materials needing full containment</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$$</td>
-<td>$$</td>
-<td>$$$$</td>
-<td>$$$</td>
+<td>Main Cost Drivers</td>
+<td>Blower, rotary airlock, filter receiver, diverter valves</td>
+<td>Vacuum pump, receiver and filter at each destination</td>
+<td>Pressure vessel, compressor and air treatment, heavy-duty valves, flanged pipe</td>
+<td>High-vacuum pump, vacuum-rated receivers and filters</td>
 </tr>
 </tbody>
 </table>
-<p>Actual rate and distance depend on material properties, pipe size, route (bends and vertical lift), and air supply. Suppliers confirm feasibility with material testing. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
+<p>Actual rate and distance depend on material properties, pipe size, route (bends and vertical lift), and air supply. Maynard notes that vacuum systems are typically limited to less than 300 ft, while positive pressure systems can convey over long distances. Suppliers confirm feasibility with material testing. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
 <h2 id="modes-heading">How Each Mode Works</h2>
 <h3>Dilute Phase Pressure</h3>
 <p>A blower pushes air through the line, and a rotary airlock valve meters material from the hopper into the pressurized pipe while holding the air seal. Air velocity stays above the material's saltation velocity, the speed below which particles drop out of the airstream and settle in horizontal pipe. At the destination, a filter receiver or cyclone separates material from the air. Diverter valves let one source feed several destinations. Dilute phase pressure is the default for free-flowing materials that tolerate impact.</p>
 <h3>Dilute Phase Vacuum</h3>
-<p>A vacuum pump at the destination pulls air and material through the line. Material enters at open pickup points (a wand, a bag or drum station, a hopper) with no airlock at the source, and several pickup points can feed one receiver. Leaks draw air inward, so dust stays inside the system. Rate and distance are limited because the pressure difference a vacuum system can use never exceeds atmospheric pressure. See the <a href="/conveyor-types/vacuum-conveyors/">vacuum conveyor guide</a> for vacuum belt and tube systems.</p>
+<p>A vacuum pump at the destination pulls air and material through the line. Material enters at open pickup points (a wand, a bag or drum station, a hopper) with no airlock at the source, and several pickup points can feed one receiver. Leaks draw air inward, so dust stays inside the system. Rate and distance are limited because the pressure difference a vacuum system can use never exceeds atmospheric pressure. Maynard puts the realistic limit for most industrial vacuum systems at about 20 in. Hg, and recommends dilute phase pressure when the route exceeds about 300 ft or the line pressure drop exceeds about 10 psi. See the <a href="/conveyor-types/vacuum-conveyors/">vacuum conveyor guide</a> for vacuum belt and tube systems.</p>
 <h3>Dense Phase Pressure</h3>
-<p>Material loads into a pressure vessel (transporter or blow pot), which is sealed and pressurized with compressed air. Material leaves as slow-moving plugs or a dense moving bed. Low velocity reduces particle breakage, blend segregation, and pipe and elbow wear, which is why dense phase is common for abrasive minerals such as cement and sand and for fragile or blended products. Pressure-rated feed equipment and a compressed air supply make it the most expensive mode to install. Some suppliers also offer medium or semi-dense phase systems that operate between the two regimes.</p>
+<p>Material loads into a pressure vessel (transporter or blow pot), which is sealed and pressurized with compressed air. Material leaves the vessel in one of two dense phase modes. In plug flow, coarse, permeable, free-flowing solids such as plastic pellets, coffee beans, and seeds move as discrete plugs with air passing through them. In moving bed flow, fine powders that fluidize and hold air, such as cement and fine ash, slide along the pipe as a dense bed. Low velocity reduces particle breakage, blend segregation, and pipe and elbow wear. Pressure vessels, heavy-duty valves, flanged pipe, and a compressed air supply make dense phase cost more to install than dilute phase. Colin Barbeau of Hatch, writing in <a href="https://www.powderbulksolids.com/pneumatic-conveying/is-dilute-or-dense-phase-right-for-my-material-" target="_blank" rel="noopener noreferrer">Powder &amp; Bulk Solids</a>, also describes a mixed or medium phase that runs near the saltation velocity and suits fluidizable materials.</p>
 <h3>Dense Phase Vacuum</h3>
 <p>High-vacuum pumps pull material at low velocity over short runs. It is the least common mode and appears mostly in pharmaceutical and specialty chemical plants that need gentle handling and full containment.</p>
 <h2 id="air-heading">Blower vs. Air Compressor</h2>
@@ -158,7 +213,7 @@ const articleSchema = {
 </ul>
 <p>Ask suppliers to state the design airflow and pressure, the margin included, and whether the figures come from testing your material or from a comparable one.</p>
 <h3>Plant Air vs. Dedicated Compressor</h3>
-<p>Plant compressed air is convenient for small dense phase transporters, but a conveying cycle can draw down header pressure and starve other equipment. Confirm plant air capacity at peak demand, or budget for a dedicated compressor and receiver tank. Air quality matters too: hygroscopic materials such as sugar and salt absorb moisture and cake in the line, so the air needs drying, and food and pharmaceutical products usually need oil-free compressors or suitable filtration. Compressed air is an expensive plant utility, and the <a href="https://www.energy.gov/eere/iedo/compressed-air-systems" target="_blank" rel="noopener noreferrer">U.S. Department of Energy compressed air systems program</a> publishes guidance on reducing its cost.</p>
+<p>Plant compressed air is convenient for small dense phase transporters, but a conveying cycle can draw down header pressure and starve other equipment. Confirm plant air capacity at peak demand, or budget for a dedicated compressor and receiver tank. Air quality matters too: hygroscopic materials such as sugar and salt absorb moisture and cake in the line, so the air needs drying, and food and pharmaceutical products usually need oil-free compressors or suitable filtration. Generating air at the 45 to 60 psig that dense phase often needs takes significant energy, and the <a href="https://www.energy.gov/eere/iedo/compressed-air-systems" target="_blank" rel="noopener noreferrer">U.S. Department of Energy compressed air systems program</a> publishes tools and tip sheets for cutting compressed air energy use.</p>
 <h2 id="components-heading">System Components</h2>
 <h3>Feed Devices</h3>
 <p>Rotary airlock valves meter material from atmospheric-pressure hoppers into pressurized pipelines while holding the pressure seal. They are the standard feed device for dilute phase pressure systems, and air leakage across the rotor must be included in air supply sizing. Pressure vessels batch-feed dense phase lines. Vacuum systems often use suction wands or bag spout adapters with no mechanical feeder.</p>
@@ -177,11 +232,11 @@ const articleSchema = {
 <p><strong>Bulk bag unloading:</strong> <a href="/conveyor-types/vacuum-conveyors/">vacuum conveying</a> draws material from bulk bag (FIBC) stations through a wand or spout adapter for dust-free transfer to the process hopper.</p>
 <h2 id="design-heading">Design Considerations</h2>
 <h3>Energy Consumption</h3>
-<p>Pneumatic conveying uses substantially more energy per ton than mechanical conveying. Dense phase uses less air volume at higher pressure. Dilute phase uses more air at lower pressure. Shorter routes, fewer bends, and an air mover sized to actual throughput rather than theoretical peak keep energy use down.</p>
+<p>Maynard notes that pneumatic conveying has the highest specific energy consumption of common conveying methods, because it moves large volumes of air. Dense phase uses less air at higher pressure, which can lower operating cost, but the energy to generate 45 to 60 psig air can still be significant. Dilute phase uses more air at lower pressure. Shorter routes, fewer bends, and an air mover sized to actual throughput rather than theoretical peak keep energy use down.</p>
 <h3>Combustible Dust</h3>
 <p>Many conveyed materials are combustible dusts (flour, sugar, starch, metal powders, plastic fines). <a href="https://www.nfpa.org/codes-and-standards/nfpa-652-standard-development/652" target="_blank" rel="noopener noreferrer">NFPA 652</a> (Standard on the Fundamentals of Combustible Dust) requires a Dust Hazard Analysis (DHA) for facilities that handle combustible dust. <a href="https://www.osha.gov/combustible-dust" target="_blank" rel="noopener noreferrer">OSHA's combustible dust guidance</a> covers the same hazard. System design must address ignition sources, bonding and grounding, explosion venting or suppression, and inerting for materials with low minimum ignition energy.</p>
 <h3>Mechanical vs. Pneumatic Selection</h3>
-<p>For short, straight, high-capacity runs, mechanical conveyors (<a href="/conveyor-types/screw-conveyors/">screw</a>, <a href="/conveyor-types/trough-conveyors/">trough belt</a>, drag chain) cost less to install and operate. Pneumatic conveying wins when the route has multiple elevation changes, wall penetrations, or tight spaces, or when dust containment, product purity, or explosion safety require enclosed transport.</p>
+<p>For short, straight, high-capacity runs, mechanical conveyors (<a href="/conveyor-types/screw-conveyors/">screw</a>, <a href="/conveyor-types/trough-conveyors/">trough belt</a>, drag chain) usually cost less to install and operate. Maynard's selection flowchart points toward mechanical conveying when the requirement exceeds about 50 tons per hour or about 1,500 ft, though specialized pneumatic designs can go beyond those values. Pneumatic conveying wins when the route has multiple elevation changes, wall penetrations, or tight spaces, or when dust containment, product purity, or explosion safety require enclosed transport.</p>
 <h3>What to Send Suppliers</h3>
 <ul>
 <li>Material name, SDS, bulk density, particle size, moisture, and temperature</li>
@@ -192,6 +247,14 @@ const articleSchema = {
 <li>Sanitary, containment, and combustible dust requirements, including DHA status</li>
 <li>Whether the supplier will test your material before quoting</li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.aiche.org/sites/default/files/cep/20221147.pdf" target="_blank" rel="noopener noreferrer">Dilute or Dense Phase Pneumatic Conveying?</a>, Eric Maynard (Jenike &amp; Johanson), AIChE Chemical Engineering Progress, November 2022. Saltation velocity, dilute and dense phase definitions, solids loading and pressure figures, plug and moving bed modes, vacuum distance and pressure limits, energy and cost comparisons, mechanical selection guideline.</li>
+<li><a href="https://www.powderbulksolids.com/pneumatic-conveying/is-dilute-or-dense-phase-right-for-my-material-" target="_blank" rel="noopener noreferrer">Is Dilute or Dense Phase Right for My Material?</a>, Colin Barbeau (Hatch), Powder &amp; Bulk Solids. Mixed phase and permeable versus non-permeable dense phase.</li>
+<li><a href="https://www.energy.gov/eere/iedo/compressed-air-systems" target="_blank" rel="noopener noreferrer">Compressed Air Systems</a>, U.S. Department of Energy. Compressed air efficiency tools and tip sheets.</li>
+<li><a href="https://www.nfpa.org/codes-and-standards/nfpa-652-standard-development/652" target="_blank" rel="noopener noreferrer">NFPA 652: Standard on the Fundamentals of Combustible Dust</a>, NFPA. Dust Hazard Analysis requirement.</li>
+<li><a href="https://www.osha.gov/combustible-dust" target="_blank" rel="noopener noreferrer">Combustible Dust</a>, OSHA. Combustible dust hazard guidance.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a pneumatic conveying system?</button></h3>
@@ -201,7 +264,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">Dilute phase vs. dense phase?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Dilute phase: high velocity, material suspended in air, usually blower-driven, lower installed cost. Dense phase: low velocity, material moves as plugs or a dense bed, usually compressor-driven, gentler on product and pipe. Choose dilute for free-flowing, non-fragile materials. Choose dense for fragile, abrasive, or blended materials.</p>
+<p>Dilute (lean) phase runs above the saltation velocity, so particles stay suspended. Dense phase runs below it, so material moves as plugs or a moving bed. Typical figures from AIChE's Chemical Engineering Progress: dilute phase carries less than 15 lb of solids per lb of gas at under 15 psig, and dense phase more than 15 lb per lb at over 30 psig. Dilute phase is usually blower-driven with lower installed cost. Dense phase is usually compressor-driven and gentler on product and pipe.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Does pneumatic conveying need an air compressor?</button></h3>
@@ -216,7 +279,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">Pneumatic vs. mechanical conveyor?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p>Pneumatic: enclosed dust-free transport, complex routing, multiple pickup or delivery points, contamination-sensitive or hazardous materials. Mechanical: substantially lower energy per ton, higher capacity, and lower cost for short straight runs. Choose pneumatic when containment or routing matters more than energy cost.</p>
+<p>Pneumatic: enclosed dust-free transport, complex routing, multiple pickup or delivery points, contamination-sensitive or hazardous materials. Pneumatic conveying has the highest specific energy use of common methods. Mechanical: lower energy per ton, and a better fit for high tonnage rates and long distances. Choose pneumatic when containment or routing matters more than energy cost.</p>
 
 </div>
 </div>

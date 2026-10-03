@@ -18,27 +18,27 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What are the different types of roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The four main types of roller conveyors are gravity roller (unpowered, product moves by gravity or manual push), powered roller or belt-driven live roller (BDLR, single motor drives all rollers via belt), line-shaft roller (single motor drives all rollers via splined shaft and O-ring bands), and motor driven roller (MDR, individual 24VDC motors inside rollers for zone control). Chain driven live roller (CDLR) is a fifth type used for heavy-duty pallet handling." }
+      "acceptedAnswer": { "@type": "Answer", "text": "The five main types of roller conveyors are gravity roller (unpowered, product moves by gravity or a manual push), belt-driven live roller or BDLR (one motor drives a belt that turns the rollers by friction), line-shaft (one motor turns a shaft that drives each roller through an O-ring band), motor driven roller or MDR (low-voltage DC motors inside some rollers, each driving one zone), and chain-driven live roller or CDLR (roller chain and sprockets drive the rollers, used for pallets and heavy loads)." }
     },
     {
       "@type": "Question",
       "name": "How do I choose between gravity and powered roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Choose gravity roller when you have a slight decline available (3-5 degrees), product weights are consistent, and you do not need controlled speed or accumulation. Choose powered roller when you need consistent speed regardless of load, uphill transport, controlled accumulation, or integration with automated systems. Gravity roller costs significantly less than powered roller per linear foot." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose gravity roller when the layout allows a slight decline or a manual push, product weights are consistent, and you do not need controlled speed or accumulation. Set the decline by testing your lightest and heaviest products. Choose powered roller when you need consistent speed regardless of load, uphill transport, controlled accumulation, or integration with automated equipment. Gravity roller costs less per foot because it has no motor, drive, or controls." }
     },
     {
       "@type": "Question",
       "name": "What is the weight capacity of a roller conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Roller conveyor weight capacity depends on the type. Standard gravity rollers handle up to 75-200 lbs per product. Belt-driven live roller (BDLR) handles up to 500 lbs. MDR conveyors typically handle up to 150-250 lbs per zone. CDLR conveyors handle 500-10,000+ lbs for heavy pallet applications. Capacity depends on roller diameter, wall thickness, bearing type, axle size, and frame gauge." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Roller conveyor capacity is rated per linear foot of conveyor and per roller, not as one number per conveyor type, and it depends on roller diameter and wall, axle, bearings, frame, and support spacing. Hytrol's published chain-driven ratings show the range: the 199-CRR is rated at 150 lbs per linear foot, the 26-CRR at 300 lbs per foot with supports on 10-foot centers or 1,000 lbs per foot with supports on 5-foot centers, and the 36-CRRH at 2,000 lbs per foot with supports on 5-foot centers. Ask suppliers for both the per-foot and per-roller rating for your heaviest load." }
     },
     {
       "@type": "Question",
       "name": "What roller spacing do I need?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The standard rule is that at least 3 rollers must contact the product bottom at all times. Divide your smallest product length by 3, then round down to the nearest standard pitch. Common roller spacings are 1.5 inches, 2 inches, 3 inches, 4.5 inches, and 6 inches. For example, a 12-inch case needs 4-inch or smaller roller spacing (12 / 3 = 4)." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Hytrol's guidance is that a product should be supported by 3 rollers at all times. Divide your shortest product length by 3 and choose a roller center at or below that figure. For example, a 12-inch case needs roller centers of 4 inches or less (12 / 3 = 4). Hytrol notes that 1.9-inch rollers are most often spaced on 3-inch centers, with 2-inch spacing growing for small e-commerce products." }
     },
     {
       "@type": "Question",
       "name": "What is MDR and why is it replacing line-shaft conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) uses small brushless DC motors built inside individual conveyor rollers, controlled in independent zones. MDR is replacing line-shaft and belt-driven live roller because it provides zero-pressure accumulation without pneumatics, uses 50%+ less energy, runs quieter (65 dB vs 80+ dB), requires less maintenance (no belts, chains, or O-rings to replace), and supports easy zone-by-zone expansion. Interroll, Itoh Denki, and Rulmeca are leading MDR roller manufacturers." }
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR (motor driven roller) places a low-voltage brushless DC motor inside one roller per zone, and that roller drives the other rollers in the zone with bands or belts. Each zone runs only when product needs to move, so MDR provides zero-pressure accumulation without compressed air, a continuously running line shaft, or a long drive belt. That makes it a common choice for new accumulation and zone-control lines carrying lighter unit loads. Line-shaft and belt-driven conveyors still suit simple continuous transport." }
     }
   ]
 };
@@ -54,50 +54,44 @@ const articleSchema = {
 ---
 <BaseLayout title="Roller Conveyors: Types, Applications &#x26; Specifications | Packaging Conveyor Guide" description="Roller conveyor types: gravity, powered, MDR, line-shaft, and CDLR. Comparison tables, weight capacities, roller spacing rules, and selection criteria for packaging." canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
 <h1>Roller Conveyors: Types, Applications &amp; Specifications</h1>
-<p class="usa-intro">A roller conveyor uses a series of cylindrical rollers mounted between side frames to transport flat-bottomed products such as cases, cartons, totes, and pallets. Roller conveyors come in five primary types: gravity (unpowered), belt-driven live roller (BDLR), line-shaft, motor driven roller (MDR), and chain driven live roller (CDLR). They are the most widely installed conveyor category in packaging and distribution facilities worldwide.</p>
+<p class="usa-intro">A roller conveyor uses a series of cylindrical rollers mounted between side frames to transport flat-bottomed products such as cases, cartons, totes, and pallets. Roller conveyors come in five primary types: gravity (unpowered), belt-driven live roller (BDLR), line-shaft, motor driven roller (MDR), and chain-driven live roller (CDLR). They are a standard choice for unit loads in packaging and distribution facilities.</p>
 <h2 id="subtypes-heading">Explore Roller Conveyor Sub-Types</h2>
 <ul class="usa-collection">
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/roller-conveyors/gravity/">Gravity Roller</a></h3>
-<p class="usa-collection__description">Unpowered systems using gravity or manual push. Lowest cost and zero energy consumption.</p>
-<p class="usa-collection__description">No power required</p></div></li>
+<p class="usa-collection__description">Unpowered systems using gravity or a manual push. No motor, drive, or controls.</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/roller-conveyors/powered/">Powered &amp; Live Roller</a></h3>
-<p class="usa-collection__description">Belt-driven, line-shaft, and chain-driven powered systems with zone control and accumulation.</p>
-<p class="usa-collection__description">$$-$$$Zone Control</p></div></li>
+<p class="usa-collection__description">Belt-driven, line-shaft, and chain-driven powered systems with zone control and accumulation options.</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller)</a></h3>
-<p class="usa-collection__description">24VDC motorized rollers with built-in zone control and zero-pressure accumulation.</p>
-<p class="usa-collection__description">$$$ZPA Built-In</p></div></li>
+<p class="usa-collection__description">Low-voltage DC motorized rollers with built-in zone control and zero-pressure accumulation.</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/cdlr-conveyors/">CDLR (Chain Driven Live Roller)</a></h3>
-<p class="usa-collection__description">Heavy-duty chain-driven rollers for pallets, drums, and heavy cases up to 10,000 lbs.</p>
-<p class="usa-collection__description">$$$Heavy-Duty</p></div></li>
+<p class="usa-collection__description">Chain-driven rollers for pallets, drums, and other heavy unit loads.</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/live-roller-conveyors/">Live Roller Systems</a></h3>
-<p class="usa-collection__description">Complete comparison of BDLR, line-shaft, and CDLR powered roller technologies.</p>
-<p class="usa-collection__description">Comparison</p></div></li>
+<p class="usa-collection__description">Comparison of BDLR, line-shaft, CDLR, and MDR powered roller technologies.</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/accumulation-conveyors/">Accumulation</a></h3>
-<p class="usa-collection__description">Zero-pressure and minimum-pressure roller accumulation for line buffering.</p>
-<p class="usa-collection__description">ZPABuffer</p></div></li>
+<p class="usa-collection__description">Zero-pressure and minimum-pressure roller accumulation for line buffering.</p></div></li>
 </ul>
 <h2 id="how-heading">How Roller Conveyors Work</h2>
-<p>Every roller conveyor shares the same basic structure: cylindrical rollers rotate on bearings seated in side frames. Products ride on top of the rollers. The rollers either spin freely (gravity) or are driven by an external force (powered). Frame construction uses formed steel channel or structural angle in gauges from 7 to 12, depending on load capacity.</p>
+<p>Every roller conveyor shares the same basic structure: cylindrical rollers rotate on bearings seated in side frames. Products ride on top of the rollers. The rollers either spin freely (gravity) or are driven by an external force (powered). Frame construction uses formed steel channel or structural members, and the frame gauge rises with load rating.</p>
 <h3>Roller Construction</h3>
-<p>Standard conveyor rollers consist of a steel or aluminum tube, two precision bearings (typically ABEC-1 or ABEC-3), and a hex or spring-loaded axle. Roller diameter ranges from 1.375 inches (light duty) to 3.5 inches (heavy duty). Wall thickness ranges from 16-gauge (0.065") for light cases to 7-gauge (0.180") for heavy pallets. Manufacturers like Interroll, Rulmeca, and Dematic-Hytrol offer rollers in carbon steel, stainless steel, PVC, and aluminum.</p>
+<p>A conveyor roller is a steel, stainless, aluminum, or plastic tube with a bearing at each end and an axle (often hex) that seats in the frame. Diameter and wall thickness rise with load. Hytrol's chain-driven line shows the spread: the 199-CRR uses 2-1/8-inch diameter rollers with a 1/8-inch wall, the <a href="https://www.cisco-eagle.com/category/3251/26-crr-heavy-duty-straight-chain-driven-conveyor" target="_blank" rel="noopener noreferrer">26-CRR</a> uses 2-5/8-inch by 7-gauge rollers, and the 36-CRRH uses 3-1/2-inch rollers with a 0.300-inch wall. Package conveyors commonly use 1.9-inch rollers.</p>
 <h3>Roller Spacing (Pitch)</h3>
-<p>Roller pitch determines how many rollers contact the product at any time. The universal rule requires at least 3 rollers under the product at all times. Common pitch values include 1.5", 2", 3", 4.5", and 6" center-to-center. Closer pitch provides smoother transport for small or lightweight items. Wider pitch reduces cost and suits large, heavy products. Hytrol publishes a detailed roller pitch selection table in their engineering manual that cross-references product length to recommended pitch.</p>
+<p>Roller pitch (center-to-center spacing) determines how many rollers contact the product at any time. <a href="https://blog.hytrol.com/belts-vs-live-roller-conveyors/" target="_blank" rel="noopener noreferrer">Hytrol's guidance</a> is that a product should be supported by 3 rollers at all times. Hytrol notes that 1.9-inch rollers are most often spaced on 3-inch centers, with 2-inch spacing growing as e-commerce products get smaller. Closer pitch gives smoother transport for small or light items. Wider pitch reduces roller count and suits long, heavy products such as pallets.</p>
 <h3>Bearing Types</h3>
-<p>Conveyor roller bearings come in three grades. Precision ball bearings (lowest rolling resistance) suit <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller conveyors</a> where minimal force must move the product. Standard ball bearings work for <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> where the drive system overcomes bearing friction. Sealed and lubricated-for-life bearings dominate <a href="/industries/food-conveyors/">food and beverage</a> applications where contamination risk prohibits re-lubrication.</p>
+<p>Conveyor roller bearings come in several grades. Precision ball bearings (lowest rolling resistance) suit <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller conveyors</a> where minimal force must move the product. Standard ball bearings work for <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> where the drive overcomes bearing friction. Sealed, lubricated-for-life bearings are common in <a href="/industries/food-conveyors/">food and beverage</a> applications where re-lubrication adds contamination risk.</p>
 <h3>Frame Types</h3>
-<p>Roller conveyor frames use three common profiles. Channel frame (C-channel) offers the highest strength-to-weight ratio for heavy-duty applications. Angle frame (L-shaped) provides a <a href="/conveyor-types/low-profile-conveyors/">low-profile</a>, economical option for light-duty gravity sections. Structural tube frame suits custom fabrications and <a href="/industries/food-conveyors/sanitary/">sanitary stainless steel designs</a>. Frame widths range from 12" to 60" between rails. Support heights range from 24" to 42" for standard floor-mounted installations.</p>
+<p>Roller conveyor frames use three common profiles. Channel frame (C-channel) offers a high strength-to-weight ratio for heavy-duty applications. Angle frame (L-shaped) provides a <a href="/conveyor-types/low-profile-conveyors/">low-profile</a>, economical option for light-duty gravity sections. Structural tube frame suits custom fabrications and <a href="/industries/food-conveyors/sanitary/">sanitary stainless steel designs</a>. Specify between-frame width from your widest product plus side clearance, and elevation from the equipment it connects to.</p>
 <h2 id="comparison-heading">Roller Conveyor Type Comparison</h2>
 <table>
 <thead>
@@ -113,127 +107,129 @@ const articleSchema = {
 <tbody>
 <tr>
 <td>Drive Method</td>
-<td>None (gravity)</td>
+<td>None (gravity or manual push)</td>
 <td>Belt under rollers</td>
-<td>Splined shaft + O-rings</td>
-<td>24VDC motor in roller</td>
-<td>Chain loops on sprockets</td>
+<td>Rotating shaft + O-ring bands</td>
+<td>Low-voltage DC motor in one roller per zone</td>
+<td>Roller chain on sprockets</td>
 </tr>
 <tr>
-<td>Speed Range</td>
-<td>Gravity</td>
-<td>30-200 FPM</td>
-<td>30-180 FPM</td>
-<td>30-180 FPM</td>
-<td>20-120 FPM</td>
-</tr>
-<tr>
-<td>Max Load / Product</td>
-<td>Up to 200 lbs</td>
-<td>Up to 500 lbs</td>
-<td>Up to 300 lbs</td>
-<td>Up to 250 lbs</td>
-<td>Up to 10,000 lbs</td>
+<td>Typical Loads</td>
+<td>Cases, totes, manual handling</td>
+<td>Cases, cartons, totes</td>
+<td>Light to medium cases and totes</td>
+<td>Lighter cases, cartons, totes</td>
+<td>Pallets, drums, heavy unit loads</td>
 </tr>
 <tr>
 <td>Accumulation</td>
 <td>No</td>
-<td>With pneumatic zones</td>
-<td>With clutch/brake</td>
-<td>Built-in ZPA</td>
-<td>No (continuous)</td>
+<td>Zero-pressure with pneumatic zones, or minimum-pressure</td>
+<td>Zero-pressure with zone brakes</td>
+<td>Built-in zero-pressure</td>
+<td>Zero-pressure with a gearmotor per zone</td>
 </tr>
 <tr>
-<td>Noise Level</td>
-<td>&lt;60 dB</td>
-<td>70-80 dB</td>
-<td>75-85 dB</td>
-<td>55-65 dB</td>
-<td>75-85 dB</td>
+<td>Compressed Air</td>
+<td>No</td>
+<td>For pneumatic zones</td>
+<td>For pneumatic zone brakes</td>
+<td>No</td>
+<td>No (zoned models use motors)</td>
 </tr>
 <tr>
 <td>Energy Use</td>
 <td>None</td>
-<td>Moderate</td>
-<td>Moderate</td>
-<td>Low (on-demand)</td>
-<td>Moderate-High</td>
+<td>Motor runs continuously</td>
+<td>Motor runs continuously</td>
+<td>Zones run only on demand</td>
+<td>Motor runs continuously unless zoned</td>
 </tr>
 <tr>
 <td>Maintenance</td>
 <td>Minimal</td>
 <td>Belt tension, tracking</td>
-<td>O-ring replacement</td>
-<td>Very low</td>
-<td>Chain lubrication</td>
+<td>O-ring replacement, keep shaft free of oil</td>
+<td>Motor roller and zone card replacement</td>
+<td>Chain lubrication and tension</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$</td>
-<td>$$</td>
-<td>$$</td>
-<td>$$$</td>
-<td>$$$</td>
+<td>Main Cost Drivers</td>
+<td>Roller and frame gauge, length</td>
+<td>Gearmotor, belt, pneumatic zones if used</td>
+<td>Gearmotor, shaft, spools, zone brakes if used</td>
+<td>Motor rollers and controller per zone, power supplies</td>
+<td>Heavy rollers and frames, chain, gearmotors</td>
 </tr>
 </tbody>
 </table>
-<p>Speed and load values represent typical ranges from Hytrol, Interroll, and Dematic product lines. Actual capacity depends on roller diameter, pitch, bearing type, and frame gauge. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for pricing details.</p>
+<p>Accumulation entries reflect Hytrol's published line: belt-driven, line-shaft, and chain-driven models are all offered in zero-pressure versions (see <a href="https://hytrol.com/products/transport/live-roller-conveyor/" target="_blank" rel="noopener noreferrer">Hytrol live roller conveyors</a>). Speed and load ratings vary by model, so compare supplier data sheets for the specific models quoted. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for cost factors.</p>
 <h2 id="applications-heading">Roller Conveyor Applications</h2>
 <h3>Case and Carton Transport</h3>
-<p>Roller conveyors dominate case transport in <a href="/industries/packaging-line-conveyors/">packaging line applications</a>. Sealed cases with flat bottoms ride smoothly across rollers at speeds from 30 to 200 FPM. End-of-line systems typically use <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> between case packers, case sealers, labelers, and palletizers. <a href="/conveyor-types/accumulation-conveyors/">Accumulation zones</a> <a href="/conveyor-types/buffer-conveyors/">buffer cases</a> before palletizing.</p>
+<p>Roller conveyors are common for case transport in <a href="/industries/packaging-line-conveyors/">packaging line applications</a>. Sealed cases with flat bottoms ride smoothly across rollers. End-of-line systems typically use <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> between case packers, case sealers, labelers, and palletizers. <a href="/conveyor-types/accumulation-conveyors/">Accumulation zones</a> <a href="/conveyor-types/buffer-conveyors/">buffer cases</a> before palletizing.</p>
 <h3>Distribution and Fulfillment</h3>
-<p>Distribution centers use <a href="/conveyor-types/mdr-conveyors/">MDR roller conveyors</a> for zone-controlled transport and accumulation. Totes and shipping cartons route through pick modules, merge onto trunk lines, and accumulate before shipping sorters, where <a href="/conveyor-functions/singulation/">singulation</a> spaces them for induction. MDR provides silent zero-pressure accumulation that protects product and reduces energy consumption. Intelligrated (Honeywell), Dematic, and TGW integrate MDR roller conveyors into large-scale <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a>.</p>
+<p>Distribution centers use <a href="/conveyor-types/mdr-conveyors/">MDR roller conveyors</a> for zone-controlled transport and accumulation. Totes and shipping cartons route through pick modules, merge onto trunk lines, and accumulate before shipping sorters, where <a href="/conveyor-functions/singulation/">singulation</a> spaces them for induction. MDR provides zero-pressure accumulation without compressed air, and zones that are not carrying product stop. Large sites build these lines into <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a>.</p>
 <h3>Pallet Handling</h3>
-<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle loaded pallets between stretch wrappers, pallet jacks, and truck loading areas. Heavy-duty rollers with 3.5" diameter and 7-gauge wall thickness support pallet loads up to 4,000 lbs on standard frames and 10,000+ lbs on structural frames. <a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyor systems</a> often include <a href="/conveyor-types/transfer-conveyors/">right-angle transfers</a> and <a href="/conveyor-types/vertical-reciprocating/">vertical reciprocating conveyors</a> for multi-level facilities.</p>
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle loaded pallets between stretch wrappers, pallet jacks, and truck loading areas. Pallet-duty CDLR uses large-diameter, heavy-wall rollers and close support spacing. As an example, Hytrol's <a href="https://acgconveyors.com/partners/hytrol/chain-driven-live-roller-conveyors/36-crrh-heavy-duty-chain-driven-live-roller/" target="_blank" rel="noopener noreferrer">36-CRRH</a> uses 3-1/2-inch rollers with a 0.300-inch wall and is rated at 2,000 lbs per linear foot with supports on 5-foot centers. <a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyor systems</a> often include <a href="/conveyor-types/transfer-conveyors/">right-angle transfers</a> and <a href="/conveyor-types/vertical-reciprocating/">vertical reciprocating conveyors</a> for multi-level facilities.</p>
 <h3>Food and Beverage</h3>
-<p><a href="/industries/food-conveyors/">Food and beverage facilities</a> use stainless steel roller conveyors with sealed bearings and open-frame construction for washdown cleaning. <a href="/industries/food-conveyors/sanitary/">Sanitary roller conveyors</a> feature tool-free roller removal, sloped frame surfaces that shed water, and FDA-compliant bearing seals. Dorner and mk North America manufacture purpose-built sanitary roller conveyor lines.</p>
+<p><a href="/industries/food-conveyors/">Food and beverage facilities</a> use stainless steel roller conveyors with sealed bearings and open-frame construction for washdown cleaning. <a href="/industries/food-conveyors/sanitary/">Sanitary roller conveyors</a> feature tool-free roller removal and frame surfaces that shed water.</p>
 <h3>Loading Docks and Shipping</h3>
-<p><a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> are the standard for loading dock applications. Workers push cases down a slight decline into trailers. Flexible/expandable gravity roller sections telescope to reach deep into trailers. These cost a fraction of powered systems and require zero electrical infrastructure.</p>
+<p><a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> are a standard choice for loading dock applications. Workers push cases down a slight decline into trailers. Flexible, expandable gravity roller sections extend into trailers and retract when not in use. They cost less than powered systems and need no electrical infrastructure.</p>
 <h2 id="selection-heading">How to Select a Roller Conveyor</h2>
 <p>Selecting the right roller conveyor requires matching six parameters to available equipment.</p>
-<p><strong>1. Product bottom surface.</strong> Roller conveyors require a flat, rigid bottom surface. Soft bags, pouches, and irregular shapes fall between rollers and require belt conveyors instead. The product bottom must span at least 3 rollers at the chosen pitch.</p>
-<p><strong>2. Product weight.</strong> Individual product weight determines roller diameter, wall thickness, bearing type, and frame gauge. Light cases (under 50 lbs) use 1.9" diameter rollers in light-gauge frames. Heavy pallets (over 500 lbs) require 3.5" rollers in structural frames with heavy-duty bearings.</p>
+<p><strong>1. Product bottom surface.</strong> Roller conveyors require a flat, rigid bottom surface. Hytrol notes that bagged materials need the full support of a belt conveyor. The product bottom must span at least 3 rollers at the chosen pitch.</p>
+<p><strong>2. Product weight.</strong> Product weight per foot sets roller diameter, wall thickness, bearing type, frame gauge, and support spacing. Light cases ride on light-gauge package rollers. Loaded pallets need heavy-wall pallet rollers in structural frames. Ask for the conveyor's rating in pounds per linear foot and per roller, and check it against your heaviest product.</p>
 <p><strong>3. Speed and throughput.</strong> Calculate required speed from your throughput formula. <a href="/conveyor-types/roller-conveyors/gravity/">Gravity systems</a> provide variable, uncontrolled speed. Powered systems provide consistent, adjustable speed. Match the conveyor speed to your upstream and downstream equipment rates.</p>
-<p><strong>4. Accumulation requirement.</strong> If products must queue without backpressure, select <a href="/conveyor-types/mdr-conveyors/">MDR</a> or pneumatic <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a>. Continuous transport without accumulation allows simpler <a href="/conveyor-types/live-roller-conveyors/">live roller</a> or gravity configurations.</p>
+<p><strong>4. Accumulation requirement.</strong> If products must queue without backpressure, select <a href="/conveyor-types/mdr-conveyors/">MDR</a> or a zero-pressure <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a>. Continuous transport without accumulation allows simpler <a href="/conveyor-types/live-roller-conveyors/">live roller</a> or gravity configurations.</p>
 <p><strong>5. Environment.</strong> Wet or <a href="/conveyor-types/washdown-conveyors/">washdown environments</a> require stainless steel rollers, sealed bearings, and corrosion-resistant frames. Standard warehouse environments use galvanized or painted carbon steel. High-temperature environments require special bearing lubricants and heat-resistant materials.</p>
-<p><strong>6. Budget.</strong> <a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller</a> costs the least per foot. <a href="/conveyor-types/mdr-conveyors/">MDR</a> costs more upfront but saves on energy and maintenance over the conveyor's 15-20 year life. <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> costs more due to heavier construction but handles loads that lighter conveyors cannot. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for factor-by-factor cost breakdowns.</p>
-<h2 id="manufacturers-heading">Leading <a href="/resources/conveyor-manufacturers/">Roller Conveyor Manufacturers</a></h2>
-<p>The roller conveyor market includes both component manufacturers (who make rollers and frames) and system integrators (who design and install complete systems). Key players include:</p>
+<p><strong>6. Budget.</strong> <a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller</a> costs the least per foot. <a href="/conveyor-types/mdr-conveyors/">MDR</a> costs more upfront but removes compressed air for accumulation and stops idle zones. <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> costs more due to heavier construction but handles loads that lighter conveyors cannot. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for factor-by-factor cost breakdowns.</p>
+<h2 id="evaluate-heading">How to Evaluate Roller Conveyor Options</h2>
+<p>Quotes for the same line can differ in roller gauge, support spacing, controls, and who installs and integrates the system. Ask each supplier the same questions so the bids compare:</p>
 <ul>
-<li><strong>Hytrol</strong>, Jonesboro, AR. Full range of gravity, BDLR, CDLR, and MDR roller conveyors. One of the largest North American conveyor manufacturers with a nationwide integrator network.</li>
-<li><strong>Interroll</strong>, Global. Manufactures MDR rollers (RollerDrive series), gravity roller modules, and conveyor platforms. Major OEM supplier to system integrators.</li>
-<li><strong>Dematic</strong>, Global. System integrator offering MDR, BDLR, and CDLR roller conveyor systems for distribution and fulfillment.</li>
-<li><strong>Intelligrated (Honeywell)</strong>, Mason, OH. Full conveyor system integrator with IntelliSort sortation and roller conveyor lines.</li>
-<li><strong>TGW</strong>, Global. Integrated roller conveyor systems for e-commerce and distribution.</li>
-<li><strong>Bastian Solutions (Toyota)</strong>, Indianapolis, IN. Conveyor system integrator specializing in distribution and fulfillment.</li>
-<li><strong>Dorner</strong>, Hartland, WI. Precision roller and belt conveyors for packaging, assembly, and food processing.</li>
-<li><strong>mk North America</strong>, Bloomfield, CT. Modular aluminum-frame roller and belt conveyors for packaging and automation.</li>
+<li><strong>Load rating:</strong> rated capacity in pounds per linear foot and per roller, and the support spacing that rating assumes.</li>
+<li><strong>Roller and pitch:</strong> roller diameter, wall, axle, bearing type, and roller centers, checked against the 3-roller rule for your shortest product.</li>
+<li><strong>Drive and controls:</strong> drive type, speed range, zone length, and how the conveyor interfaces with your line controls.</li>
+<li><strong>Utilities:</strong> whether accumulation needs compressed air, and at what pressure.</li>
+<li><strong>Maintenance:</strong> wear parts (belts, O-rings, chain, motor rollers), lubrication intervals, and spare parts lead time.</li>
+<li><strong>Safety:</strong> guarding at pinch points and drives, and conformance to <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>.</li>
+<li><strong>Scope:</strong> whether the bid covers supports, installation, controls integration, and start-up.</li>
+</ul>
+<p>To find suppliers, see the <a href="/resources/conveyor-manufacturers/">conveyor manufacturers directory</a>.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://blog.hytrol.com/belts-vs-live-roller-conveyors/" target="_blank" rel="noopener noreferrer">Belts vs. Live Roller Conveyors: When to Use Each</a>, Hytrol. 3-roller support rule, 1.9-inch rollers on 3-inch centers, 2-inch spacing for small products, bagged products need belts.</li>
+<li><a href="https://hytrol.com/products/transport/live-roller-conveyor/" target="_blank" rel="noopener noreferrer">Live Roller Conveyor</a>, Hytrol. Belt-driven, chain-driven, line-shaft, and 24-volt drive types.</li>
+<li><a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Zero-Pressure Conveyor</a>, Hytrol. Zero-pressure models in belt-driven, line-shaft, and chain-driven versions.</li>
+<li><a href="https://www.cisco-eagle.com/category/3247/199-crr-chain-driven-live-roller-conveyor" target="_blank" rel="noopener noreferrer">Hytrol 199-CRR</a>, Hytrol (via distributor Cisco-Eagle). 2-1/8-inch by 1/8-inch wall rollers, 150 lbs per linear foot.</li>
+<li><a href="https://www.cisco-eagle.com/category/3251/26-crr-heavy-duty-straight-chain-driven-conveyor" target="_blank" rel="noopener noreferrer">Hytrol 26-CRR</a>, Hytrol (via distributor Cisco-Eagle). 2-5/8-inch by 7-gauge rollers, 300 lbs per foot on 10-foot supports or 1,000 lbs per foot on 5-foot supports.</li>
+<li><a href="https://acgconveyors.com/partners/hytrol/chain-driven-live-roller-conveyors/36-crrh-heavy-duty-chain-driven-live-roller/" target="_blank" rel="noopener noreferrer">Hytrol 36-CRRH</a>, Hytrol (via distributor ACG Conveyors). 3-1/2-inch by 0.300-inch wall rollers, 2,000 lbs per foot on 5-foot supports.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1: Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety requirements.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What are the different types of roller conveyors?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>The five main roller conveyor types are: <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> (unpowered), belt-driven live roller or BDLR (single motor drives all rollers via belt), line-shaft roller (motor drives rollers via splined shaft and O-rings), <a href="/conveyor-types/mdr-conveyors/">MDR</a> (24VDC motors inside individual rollers), and <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> (chain loops drive rollers via sprockets for heavy loads).</p>
+<p>The five main roller conveyor types are: <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> (unpowered), belt-driven live roller or BDLR (one motor drives a belt that turns the rollers by friction), line-shaft (a rotating shaft drives each roller through an O-ring band), <a href="/conveyor-types/mdr-conveyors/">MDR</a> (low-voltage DC motors inside some rollers, each driving one zone), and <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> (roller chain and sprockets drive the rollers, used for pallets and heavy loads).</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How do I choose between gravity and powered roller conveyors?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Choose <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> when you have a slight decline (3-5 degrees), consistent product weights, and no need for speed control or <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>. Choose <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> when you need consistent speed, uphill transport, accumulation, or integration with <a href="/resources/automated-conveyor-systems/">automated systems</a>.</p>
+<p>Choose <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> when the layout allows a slight decline or a manual push, product weights are consistent, and you do not need speed control or <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>. Set the decline by testing your lightest and heaviest products. Choose <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> when you need consistent speed, uphill transport, accumulation, or integration with <a href="/resources/automated-conveyor-systems/">automated systems</a>. Gravity roller costs less per foot because it has no motor, drive, or controls.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What roller spacing do I need?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>At least 3 rollers must contact the product bottom at all times. Divide your smallest product length by 3, then round down to the nearest standard pitch (1.5", 2", 3", 4.5", or 6"). A 12-inch long case needs 4-inch or smaller roller spacing. A 24-inch pallet needs 8-inch or smaller spacing.</p>
+<p>Hytrol's guidance is that a product should be supported by 3 rollers at all times. Divide your shortest product length by 3 and choose a roller center at or below that figure. A 12-inch case needs roller centers of 4 inches or less (12 / 3 = 4). Hytrol notes that 1.9-inch rollers are most often spaced on 3-inch centers, with 2-inch spacing growing for small e-commerce products.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is the weight capacity of a roller conveyor?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Weight capacity depends on roller type. Standard gravity rollers: 75-200 lbs per product. BDLR: up to 500 lbs. <a href="/conveyor-types/mdr-conveyors/">MDR</a>: 150-250 lbs per zone. <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>: 500-10,000+ lbs for <a href="/industries/packaging-line-conveyors/pallet/">pallet applications</a>. Capacity depends on roller diameter, wall thickness, bearing type, and frame gauge.</p>
+<p>Capacity is rated per linear foot and per roller, and depends on roller diameter and wall, axle, bearings, frame, and support spacing. Hytrol's chain-driven ratings show the range: 199-CRR at 150 lbs per foot, 26-CRR at 300 lbs per foot on 10-foot supports or 1,000 lbs per foot on 5-foot supports, and 36-CRRH at 2,000 lbs per foot on 5-foot supports. Ask suppliers for both ratings for your heaviest <a href="/industries/packaging-line-conveyors/pallet/">pallet</a> or case.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">Why is MDR replacing line-shaft conveyors?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p><a href="/conveyor-types/mdr-conveyors/">MDR technology</a> provides zero-pressure accumulation without pneumatics, uses 50%+ less energy (zones only run when needed), runs quieter (65 dB vs 80+ dB), requires less maintenance (no belts, chains, or O-rings), and supports easy zone-by-zone expansion. Interroll, Itoh Denki, and Rulmeca are leading MDR roller manufacturers.</p>
+<p><a href="/conveyor-types/mdr-conveyors/">MDR</a> places a low-voltage brushless DC motor inside one roller per zone. Each zone runs only when product needs to move, so MDR provides zero-pressure accumulation without compressed air, a continuously running line shaft, or a long drive belt. That makes it a common choice for new accumulation and zone-control lines carrying lighter unit loads. Line-shaft and belt-driven conveyors still suit simple continuous transport.</p>
 
 </div>
 </div>

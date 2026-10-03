@@ -19,22 +19,22 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between belt-driven and line-shaft roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller (BDLR) conveyors use a flat belt running beneath the rollers, each roller rests on the belt and rotates by friction contact. Line-shaft conveyors use a continuously rotating splined shaft running the length of the conveyor, with individual O-ring bands connecting each roller to the shaft. BDLR provides higher torque and handles heavier loads (up to 500 lbs). Line-shaft provides smoother speed transitions and easier product diverting because O-rings slip more gracefully than friction belts." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller (BDLR) conveyors use a belt running beneath the rollers. Pressure rollers hold the belt against the carrying rollers, which turn by friction. Line-shaft conveyors use a rotating shaft along the length of the conveyor, with drive spools on the shaft and an O-ring band from each spool to a roller. BDLR drive force can be set by adjusting pressure-roller contact. Line-shaft O-rings slip when a product is held, and the design works well with pop-up transfers because individual rollers are driven separately." }
     },
     {
       "@type": "Question",
       "name": "Can powered roller conveyors accumulate product?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard continuous-run powered roller conveyors do not accumulate product. However, powered roller conveyors can be equipped with zone controls to enable accumulation. Belt-driven live rollers use pneumatic pop-up stops or zone-actuated belt lifters. Line-shaft conveyors use O-ring release clutches. For built-in zero-pressure accumulation without pneumatic add-ons, MDR (Motor Driven Roller) conveyors are the preferred technology." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard continuous-run powered roller conveyors do not accumulate without backpressure, but all three drive types are offered in accumulating versions. Hytrol's zero-pressure belt-driven model uses a pressure frame to apply and remove drive plus a pneumatic brake in each zone. Its line-shaft zero-pressure model uses air bags and brake pads per zone. Its chain-driven zero-pressure models use a gearmotor per zone. Belt-driven minimum-pressure conveyors limit drive pressure so products stop with light contact. MDR (motor driven roller) conveyors provide zero-pressure accumulation without compressed air." }
     },
     {
       "@type": "Question",
       "name": "What speed range do powered roller conveyors support?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Powered roller conveyors typically operate between 30 and 200 feet per minute (FPM). Belt-driven live roller systems commonly run 50-200 FPM. Line-shaft conveyors run 30-180 FPM. Speed is controlled by the drive motor and can be adjusted with a variable frequency drive (VFD). Most packaging line applications run between 60 and 150 FPM." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the model, drive gearing, and roller diameter, so there is no single range for each drive type. Constant-speed conveyors are geared to one speed. A variable frequency drive (VFD) on the gearmotor allows adjustment. Specify the speed your upstream and downstream equipment needs, and confirm the quoted model's rated speed at your load on the supplier data sheet." }
     },
     {
       "@type": "Question",
       "name": "What maintenance do powered roller conveyors require?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller conveyors require periodic belt tension adjustment, belt tracking checks, and belt replacement when worn. Line-shaft conveyors require O-ring replacement as bands stretch or break, a common maintenance item that typically requires replacing 5-10% of O-rings annually. Both types require motor and gearbox lubrication per manufacturer schedule. Chain-driven live roller conveyors require chain lubrication and periodic chain/sprocket replacement." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller conveyors need periodic belt tension, tracking, and pressure adjustment, and belt replacement when worn. Line-shaft conveyors need O-ring replacement as bands stretch or break, and the shaft must stay free of oil, which Hytrol lists as a cause of rollers not turning under load. Chain-driven conveyors need chain lubrication: Hytrol's manuals call for lubricating every 2,080 hours of operation or every 6 months, whichever comes first, in normal environments, and more often in damp, dusty, hot, or high-speed service. All types need motor and reducer service per the manufacturer schedule." }
     }
   ]
 };
@@ -50,23 +50,23 @@ const articleSchema = {
 ---
 <BaseLayout
   title="Powered & Live Roller Conveyors: Belt-Driven, Line-Shaft & Chain-Driven Guide"
-  description="Powered roller conveyors: belt-driven live roller, line-shaft, and chain-driven. Zone control, accumulation options, speeds 30-200 FPM, loads up to 500 lbs."
+  description="Powered roller conveyors: belt-driven live roller, line-shaft, and chain-driven. Zone control, accumulation options, and how to read speed and load ratings."
   canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/powered/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Powered &amp; Live Roller Conveyors</h1>
-<p class="usa-intro">A powered roller conveyor uses an external motor to drive cylindrical rollers, transporting flat-bottomed products at controlled, consistent speeds regardless of product weight. The three primary drive methods are belt-driven live roller (BDLR), line-shaft, and <a href="/conveyor-types/pallet-conveyors/">chain-driven live roller (CDLR)</a>. Powered roller conveyors handle cases, cartons, totes, and pallets at speeds from 30 to 200 FPM and serve as the backbone of automated <a href="/industries/packaging-line-conveyors/">packaging lines</a> and distribution systems.</p>
+<p class="usa-intro">A powered roller conveyor uses an external motor to drive cylindrical rollers, transporting flat-bottomed products at a controlled speed. The three conventional drive methods are belt-driven live roller (BDLR), line-shaft, and <a href="/conveyor-types/pallet-conveyors/">chain-driven live roller (CDLR)</a>. Powered roller conveyors move cases, cartons, totes, and pallets through automated <a href="/industries/packaging-line-conveyors/">packaging lines</a> and distribution systems.</p>
 <h2 id="drives-heading">Three Drive Methods Compared</h2>
 <h3>Belt-Driven Live Roller (BDLR)</h3>
-<p>A BDLR conveyor uses a continuous flat belt running beneath the rollers. The belt contacts the underside of each roller, and friction between belt and roller creates rotation. A single gearmotor at one end drives the belt. The belt wraps around a drive roller at the motor end and a tail roller at the opposite end, with tension maintained by a spring-loaded take-up mechanism.</p>
-<p>BDLR provides the highest torque of the three belt/shaft drive methods. It handles product loads up to 500 lbs per item and runs at speeds from 50 to 200 FPM. Hytrol and Dematic both offer belt-driven roller platforms widely specified for this application class. The primary maintenance item is belt tension and tracking adjustment, plus periodic belt replacement.</p>
+<p>A BDLR conveyor uses a continuous belt running beneath the rollers. Pressure rollers hold the belt against the underside of the carrying rollers, and friction turns them. A single gearmotor drives the belt through a drive pulley, with a take-up to maintain tension.</p>
+<p>Because drive force comes from belt contact, it can be adjusted. In Hytrol's <a href="https://cdn.hytrol.com/2015_682_190acc.pdf" target="_blank" rel="noopener noreferrer">190-ACC manual</a>, suspension angles support the pressure rollers that hold the drive V-belt against the tread rollers, and knurled nuts set the pressure. The primary maintenance items are belt tension, tracking, and pressure adjustment, plus periodic belt replacement.</p>
 <h3>Line-Shaft Roller Conveyor</h3>
-<p>A line-shaft conveyor uses a continuously rotating splined steel shaft running the length of the conveyor beneath the rollers. Each roller connects to the line shaft via a polyurethane O-ring band. As the shaft rotates, the O-rings transfer rotation to each roller. A single motor at one end drives the shaft through a gearbox.</p>
-<p>Line-shaft conveyors run at 30-180 FPM and handle products up to 300 lbs. The O-ring drive provides a natural slip clutch effect, if a product is held or stopped, the O-ring simply slips on the shaft rather than stalling the motor. This makes line-shaft conveyors suitable for light accumulation without backpressure buildup. Hytrol and Bastian Solutions both offer line-shaft style platforms in this application class.</p>
-<p>The major maintenance item is O-ring replacement. O-rings stretch and break over time, requiring periodic replacement. Typical O-ring life is 12-24 months in continuous-duty applications. Operators can replace individual O-rings in minutes without tools on most designs.</p>
+<p>A line-shaft conveyor uses a continuously rotating steel shaft running the length of the conveyor beneath the rollers. Drive spools ride on the shaft, and a polyurethane O-ring band connects each spool to a roller. A single gearmotor drives the shaft. Hytrol's 190-NSP is one example of this design.</p>
+<p>The O-ring drive acts as a slip clutch: if a product is held, the spool slips on the shaft rather than stalling the motor. This allows low-pressure accumulation without active zone control and makes line-shaft a good fit for pop-up transfers. The shaft must stay clean: Hytrol's <a href="https://cdn.hytrol.com/2015_677_190nsp.pdf" target="_blank" rel="noopener noreferrer">190-NSP manual</a> lists oil on the line shaft as a cause of rollers not turning under load.</p>
+<p>The major maintenance item is O-ring replacement. O-rings stretch and break over time, and each one can be replaced individually.</p>
 <h3>Chain-Driven Live Roller (CDLR)</h3>
-<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> use roller chains and sprockets to drive rollers. Each roller has a sprocket welded or keyed to it, and a continuous chain loop wraps around adjacent roller sprockets. A gearmotor drives the chain, which positively drives every roller with zero slip.</p>
-<p>CDLR handles the heaviest loads, up to 10,000 lbs for structural-frame pallet conveyors. Speed ranges from 20 to 120 FPM. The positive chain drive ensures rollers turn regardless of product weight, eliminating the slip risk inherent in belt and O-ring drives. CDLR conveyors dominate <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyor</a> applications and heavy case transport.</p>
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> use roller chain and sprockets to drive rollers. Each roller carries sprockets, and chain loops link adjacent rollers. A gearmotor drives the chain, which positively drives every roller with no slip.</p>
+<p>CDLR handles the heaviest loads of the three. Capacity is rated per linear foot: Hytrol's <a href="https://www.cisco-eagle.com/category/3251/26-crr-heavy-duty-straight-chain-driven-conveyor" target="_blank" rel="noopener noreferrer">26-CRR</a> is rated at 300 lbs per foot with supports on 10-foot centers or 1,000 lbs per foot with supports on 5-foot centers. The positive chain drive keeps rollers turning regardless of product weight, which is why CDLR is the usual choice for <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyor</a> applications and heavy case transport.</p>
 <h2 id="comparison-heading">BDLR vs Line-Shaft vs CDLR</h2>
 <table>
 <thead>
@@ -80,39 +80,33 @@ const articleSchema = {
 <tbody>
 <tr>
 <td>Drive Element</td>
-<td>Flat belt under rollers</td>
-<td>Splined shaft + O-rings</td>
-<td>Chain + sprockets</td>
+<td>Belt held against rollers by pressure rollers</td>
+<td>Rotating shaft, spools, O-ring bands</td>
+<td>Roller chain and sprockets</td>
 </tr>
 <tr>
-<td>Speed Range</td>
-<td>50-200 FPM</td>
-<td>30-180 FPM</td>
-<td>20-120 FPM</td>
+<td>Drive Type</td>
+<td>Friction, adjustable pressure</td>
+<td>Friction, slips when product is held</td>
+<td>Positive, no slip</td>
 </tr>
 <tr>
-<td>Max Load</td>
-<td>Up to 500 lbs</td>
-<td>Up to 300 lbs</td>
-<td>Up to 10,000 lbs</td>
+<td>Typical Loads</td>
+<td>Cases, cartons, totes</td>
+<td>Light to medium cases and totes</td>
+<td>Pallets, drums, heavy unit loads</td>
 </tr>
 <tr>
 <td>Accumulation</td>
-<td>Pneumatic zones</td>
-<td>O-ring slip (light)</td>
-<td>Not standard</td>
-</tr>
-<tr>
-<td>Noise</td>
-<td>70-80 dB</td>
-<td>75-85 dB</td>
-<td>75-85 dB</td>
+<td>Zero-pressure (pneumatic zones) or minimum-pressure (adjusted drive pressure)</td>
+<td>Low-pressure by O-ring slip, zero-pressure with zone brakes</td>
+<td>Zero-pressure with a gearmotor per zone</td>
 </tr>
 <tr>
 <td>Key Maintenance</td>
-<td>Belt tension/tracking</td>
-<td>O-ring replacement</td>
-<td>Chain lubrication</td>
+<td>Belt tension, tracking, pressure</td>
+<td>O-ring replacement, clean shaft</td>
+<td>Chain lubrication and tension</td>
 </tr>
 <tr>
 <td>Best For</td>
@@ -121,61 +115,74 @@ const articleSchema = {
 <td>Heavy pallets, drums</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$$</td>
-<td>$$</td>
-<td>$$$</td>
+<td>Main Cost Drivers</td>
+<td>Gearmotor, belt, pneumatic zones if used</td>
+<td>Gearmotor, shaft and spools, zone brakes if used</td>
+<td>Heavy rollers and frame, chain, gearmotors</td>
 </tr>
 </tbody>
 </table>
-<p>Typical specifications from Hytrol, Dematic, and Intelligrated product lines. For built-in zone control without pneumatics, see <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a>. For <a href="/resources/conveyor-cost-guide/">detailed pricing factors</a>, see the cost guide.</p>
+<p>Speed and load ratings vary by model, so compare data sheets for the specific models quoted. For built-in zone control without pneumatics, see <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a>. For <a href="/resources/conveyor-cost-guide/">detailed pricing factors</a>, see the cost guide.</p>
 <h2 id="zone-heading">Zone Control and Accumulation</h2>
-<p>Standard powered roller conveyors run all rollers continuously. Adding zone control allows individual sections to start, stop, or change speed independently. Zone control converts a simple transport conveyor into an <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a> that can buffer products without backpressure.</p>
+<p>Standard powered roller conveyors run all rollers continuously. Adding zone control allows individual sections to start and stop independently. Zone control converts a transport conveyor into an <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a> that can buffer products without backpressure. <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Hytrol's zero-pressure line</a> includes belt-driven, line-shaft, and chain-driven models, each built differently.</p>
 <h3>BDLR Zone Methods</h3>
-<p>Belt-driven live roller conveyors achieve zone control through two primary methods. Pneumatic belt lifters raise and lower sections of the drive belt to engage or disengage rollers in each zone. Pop-up stops hold products at zone boundaries while the belt continues running beneath disengaged rollers. Both methods require compressed air infrastructure, adding cost and maintenance.</p>
+<p>In Hytrol's belt-driven zero-pressure model (ABEZ), each zone has a zone controller, a pressure frame that applies and removes drive, and a pneumatically operated brake. When a zone is occupied and the next zone downstream is full, the zone stops driving. The ABEZ manual sets the regulator to a working pressure of 35 psi. This approach needs compressed air and valves in each zone.</p>
 <h3>Line-Shaft Zone Methods</h3>
-<p>Line-shaft conveyors achieve zone control through clutch/brake mechanisms on the line shaft or by using O-ring release assemblies. Some line-shaft designs use pneumatic clamps that press or release individual O-rings against the shaft. The inherent slip of O-rings provides a degree of passive accumulation even without active zone control.</p>
+<p>In Hytrol's line-shaft zero-pressure model (190-NSPEZ), air bags in each zone inflate to stop that zone from driving, working with brake pads. Its manual sets the regulator to 40 psi. Without zone control, O-ring slip still allows low-pressure accumulation.</p>
+<h3>CDLR Zone Methods</h3>
+<p>Chain-driven zero-pressure conveyors split the conveyor into zones, each with its own gearmotor. In Hytrol's <a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">CREZD models</a>, each zone has a zone controller, a zone starter box, and a gearmotor, so no compressed air is needed.</p>
 <h3>MDR Alternative</h3>
-<p><a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller) conveyors</a> provide zone control as a built-in feature without pneumatics, belt lifters, or clutch mechanisms. Each zone has its own 24VDC motor and photo-eye sensor. This makes MDR the preferred technology for new zero-pressure accumulation installations. MDR costs more per foot than BDLR or line-shaft but eliminates the compressed air infrastructure and mechanical zone control hardware.</p>
+<p><a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller) conveyors</a> provide zone control as a built-in feature without pneumatics or mechanical clutch hardware. Each zone has its own low-voltage DC motorized roller and photo-eye sensor. This makes MDR a common choice for new zero-pressure accumulation installations carrying lighter loads. MDR costs more per foot than a continuous-run BDLR or line-shaft transport conveyor but removes compressed air from the accumulation design.</p>
 <h3>Accumulation Modes</h3>
-<p>Powered roller conveyors support three accumulation modes when equipped with zone controls:</p>
+<p>Powered roller conveyors support three accumulation modes:</p>
 <ul>
-<li><strong>Zero-pressure accumulation (ZPA):</strong> Products stop and queue with controlled gaps between them. No product-to-product contact. Protects fragile items from crushing and label scuffing.</li>
-<li><strong>Minimum-pressure accumulation:</strong> Products queue with light contact (typically 2-5 lbs of backpressure). Lower cost than ZPA because fewer zones are needed. Acceptable for durable products like corrugated cases.</li>
-<li><strong>Slug accumulation:</strong> Products accumulate in groups (slugs) with backpressure within each slug but gaps between slugs. Used for batch release applications like <a href="/conveyor-functions/tray-loading/">tray loading</a> and palletizer layer forming.</li>
+<li><strong>Zero-pressure accumulation (ZPA):</strong> Products stop in zones with gaps between them. No product-to-product contact. Protects fragile items from crushing and label scuffing.</li>
+<li><strong>Minimum-pressure accumulation:</strong> Products queue with light contact. On belt-driven models such as Hytrol's 190-ACC, drive pressure is adjusted so it just moves the heaviest item, and the rollers slip under stopped product. Hytrol states <a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">minimum-pressure conveyors</a> can be adjusted to bring backpressure to 2% of the live load. Acceptable for durable products like corrugated cases.</li>
+<li><strong>Slug accumulation:</strong> Products accumulate in groups (slugs) and release together. Used for batch release applications like <a href="/conveyor-functions/tray-loading/">tray loading</a> and palletizer layer forming.</li>
 </ul>
 <h2 id="apps-heading">Powered Roller Applications</h2>
-<p><strong>End-of-line packaging:</strong> Powered roller conveyors connect case packers, case sealers, labelers, checkweighers, and palletizers in a continuous automated line. <a href="/industries/packaging-line-conveyors/">Packaging line integrators</a> use BDLR sections for high-speed case transport and accumulation zones before palletizers.</p>
-<p><strong>Distribution and order fulfillment:</strong> Pick module systems use powered roller conveyors as trunk lines connecting pick zones to shipping. <a href="/conveyor-types/transfer-conveyors/">Transfer conveyors</a> divert totes and cartons from trunk lines to pick stations and back. Dematic, Intelligrated, and TGW design large-scale distribution systems around powered roller and <a href="/conveyor-types/mdr-conveyors/">MDR</a> conveyor platforms.</p>
-<p><strong>Manufacturing:</strong> Assembly line applications use powered roller conveyors to move work-in-process between stations at a controlled pace. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyor</a> configurations stop and start the conveyor at precise intervals for robotic pick-and-place or manual operations.</p>
-<p><strong>Food and beverage:</strong> <a href="/industries/food-conveyors/">Food-grade powered roller conveyors</a> use stainless steel frames, sealed bearings, and FDA-compliant belt materials. <a href="/industries/food-conveyors/sanitary/">Sanitary designs</a> feature tool-free belt removal for cleaning and sloped surfaces that prevent water pooling.</p>
-<p><strong>Heavy-duty pallet handling:</strong> <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle loaded pallets between stretch wrappers, <a href="/industries/packaging-line-conveyors/pallet/">pallet dispensers</a>, and shipping docks. Structural steel frames and heavy-duty bearings support loads from 1,000 to 10,000 lbs.</p>
+<p><strong>End-of-line packaging:</strong> Powered roller conveyors connect case packers, case sealers, labelers, checkweighers, and palletizers in a continuous automated line. <a href="/industries/packaging-line-conveyors/">Packaging line integrators</a> use live roller sections for case transport and accumulation zones before palletizers.</p>
+<p><strong>Distribution and order fulfillment:</strong> Pick module systems use powered roller conveyors as trunk lines connecting pick zones to shipping. <a href="/conveyor-types/transfer-conveyors/">Transfer conveyors</a> divert totes and cartons from trunk lines to pick stations and back. Many of these systems combine live roller and <a href="/conveyor-types/mdr-conveyors/">MDR</a> sections.</p>
+<p><strong>Manufacturing:</strong> Assembly line applications use powered roller conveyors to move work-in-process between stations at a controlled pace. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyor</a> configurations stop and start the conveyor at set intervals for robotic pick-and-place or manual operations.</p>
+<p><strong>Food and beverage:</strong> <a href="/industries/food-conveyors/">Food-grade powered roller conveyors</a> use stainless steel frames, sealed bearings, and food-contact-rated belt materials where product touches the belt. <a href="/industries/food-conveyors/sanitary/">Sanitary designs</a> feature tool-free removal for cleaning and surfaces that prevent water pooling.</p>
+<p><strong>Heavy-duty pallet handling:</strong> <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle loaded pallets between stretch wrappers, <a href="/industries/packaging-line-conveyors/pallet/">pallet dispensers</a>, and shipping docks. Heavy-wall rollers, structural frames, and close support spacing raise the per-foot rating.</p>
 <h2 id="selection-heading">Choosing the Right Powered Roller</h2>
-<p><strong>Choose BDLR when:</strong> you need medium-duty case transport (up to 500 lbs), speeds of 50-200 FPM, and can add pneumatic zone controls for accumulation. BDLR has the widest installed base and the most vendor options.</p>
-<p><strong>Choose line-shaft when:</strong> you need light to medium-duty transport (up to 300 lbs), simple diverting (pop-up transfers work well with line-shaft), and light passive accumulation. Line-shaft excels where products must be easily diverted to side spurs using pop-up chain <a href="/conveyor-types/transfer-conveyors/">transfer units</a>.</p>
-<p><strong>Choose CDLR when:</strong> product weight exceeds 500 lbs, you need positive drive with zero slip (such as <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyors</a>), or products have poor bottom surfaces that need high-torque roller contact.</p>
-<p><strong>Choose MDR instead when:</strong> you need built-in zero-pressure accumulation, energy efficiency is a priority, low noise is critical, and product weight is under 250 lbs. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> cost more upfront but eliminate pneumatic infrastructure and reduce long-term energy and maintenance costs.</p>
-<p>Many <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a> combine multiple powered roller types. A typical system might use BDLR for high-speed transport trunk lines, MDR for accumulation zones, CDLR for pallet handling, and <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> for take-away sections.</p>
+<p><strong>Choose BDLR when:</strong> you need medium-duty case transport, adjustable drive pressure, and the option of pneumatic zero-pressure zones or mechanical minimum-pressure accumulation.</p>
+<p><strong>Choose line-shaft when:</strong> you need light to medium-duty transport, simple diverting (pop-up transfers work well with line-shaft), and light passive accumulation. Line-shaft fits layouts where products divert to side spurs using pop-up <a href="/conveyor-types/transfer-conveyors/">transfer units</a>.</p>
+<p><strong>Choose CDLR when:</strong> loads exceed the per-foot rating of belt-driven or line-shaft models, you need positive drive with no slip (such as <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyors</a>), or products have bottoms that slip on friction-driven rollers.</p>
+<p><strong>Choose MDR instead when:</strong> you need built-in zero-pressure accumulation without compressed air, idle zones should stop, and product weight is within the motor roller and zone rating. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> cost more upfront but remove pneumatic infrastructure.</p>
+<p>Many <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a> combine multiple powered roller types. A typical system might use BDLR for transport trunk lines, MDR for accumulation zones, CDLR for pallet handling, and <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> for take-away sections.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://cdn.hytrol.com/2015_682_190acc.pdf" target="_blank" rel="noopener noreferrer">Model 190-ACC, LRC, LRS &amp; LRSS Installation and Maintenance Manual</a>, Hytrol. Pressure rollers hold the drive V-belt against tread rollers, adjustable for minimum-pressure accumulation.</li>
+<li><a href="https://cdn.hytrol.com/2015_677_190nsp.pdf" target="_blank" rel="noopener noreferrer">Model 190-NSP Family Installation and Maintenance Manual</a>, Hytrol. Line-shaft spools and O-rings, oil on the line shaft as a cause of rollers not turning.</li>
+<li><a href="https://cdn.hytrol.com/2013_647_abez.pdf" target="_blank" rel="noopener noreferrer">Model ABEZ Installation and Maintenance Manual</a>, Hytrol. Belt-driven zero-pressure zones with pressure frame and pneumatic brake, 35 psi working pressure.</li>
+<li><a href="https://cdn.hytrol.com/2006_568_138nspez_190nspez.pdf" target="_blank" rel="noopener noreferrer">Model 138-NSPEZ &amp; 190-NSPEZ Installation and Maintenance Manual</a>, Hytrol. Line-shaft zero-pressure zones with air bags and brake pads, 40 psi working pressure.</li>
+<li><a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">Model 199-CREZD, 25-CREZD &amp; 36-CREZD Installation and Maintenance Manual</a>, Hytrol. Chain-driven zero-pressure zones with a gearmotor per zone, chain lubrication every 2,080 hours or 6 months.</li>
+<li><a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Minimum Pressure Conveyor</a>, Hytrol. Backpressure adjustable to 2% of the live load.</li>
+<li><a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Zero-Pressure Conveyor</a>, Hytrol. Zero-pressure models by drive type.</li>
+<li><a href="https://www.cisco-eagle.com/category/3251/26-crr-heavy-duty-straight-chain-driven-conveyor" target="_blank" rel="noopener noreferrer">Hytrol 26-CRR</a>, Hytrol (via distributor Cisco-Eagle). 300 lbs per foot on 10-foot supports, 1,000 lbs per foot on 5-foot supports.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is the difference between belt-driven and line-shaft?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>BDLR uses a flat belt under the rollers, friction between belt and roller creates rotation. Line-shaft uses a splined shaft with individual O-ring bands connecting each roller. BDLR provides higher torque (up to 500 lbs). Line-shaft provides smoother diverting and natural slip-clutch accumulation. See the full comparison in our <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor guide</a>.</p>
+<p>BDLR uses a belt under the rollers, held in contact by pressure rollers, and friction turns the rollers. Line-shaft uses a rotating shaft with spools and an O-ring band to each roller. BDLR drive force can be set by adjusting pressure-roller contact. Line-shaft O-rings slip when product is held, and the design works well with pop-up transfers. See the full comparison in our <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor guide</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">Can powered roller conveyors accumulate product?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Standard continuous-run powered rollers do not accumulate. Zone controls (pneumatic belt lifters for BDLR, clutch/brake for line-shaft) enable <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> provide built-in ZPA without pneumatic add-ons.</p>
+<p>Continuous-run powered rollers do not accumulate without backpressure, but all three drive types come in accumulating versions. Hytrol's belt-driven zero-pressure model uses a pressure frame and pneumatic brake per zone, its line-shaft model uses air bags and brake pads, and its chain-driven models use a gearmotor per zone. Belt-driven minimum-pressure conveyors limit drive pressure so products stop with light contact. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> provide <a href="/conveyor-types/accumulation-conveyors/">zero-pressure accumulation</a> without compressed air.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What speed range do powered rollers support?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>BDLR: 50-200 FPM. Line-shaft: 30-180 FPM. CDLR: 20-120 FPM. Speed is controlled by the drive motor and adjustable with a variable frequency drive (VFD). Most packaging applications run 60-150 FPM.</p>
+<p>Speed depends on the model, drive gearing, and roller diameter, so there is no single range per drive type. Constant-speed conveyors are geared to one speed, and a variable frequency drive (VFD) allows adjustment. Specify the speed your line needs and confirm the quoted model's rated speed at your load on the data sheet.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What maintenance do powered roller conveyors require?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>BDLR needs periodic belt tension, tracking, and replacement. Line-shaft needs O-ring replacement (5-10% annually in continuous duty). CDLR needs chain lubrication and periodic chain/sprocket replacement. All types need motor and gearbox lubrication per manufacturer schedule. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> eliminate belts, O-rings, and chains entirely.</p>
+<p>BDLR needs periodic belt tension, tracking, and pressure adjustment, and belt replacement. Line-shaft needs O-ring replacement and a shaft kept free of oil. CDLR needs chain lubrication: Hytrol's manuals call for every 2,080 hours or 6 months, whichever comes first, in normal environments, and more often in harsh service. All types need motor and reducer service per the manufacturer schedule. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> have no drive belt, line shaft, or chain.</p>
 
 </div>
 </div>

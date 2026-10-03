@@ -28,17 +28,17 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is an indexing conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An indexing conveyor moves product in precise, repeatable start-stop cycles rather than continuous motion. Each cycle advances product a fixed distance (the index length) and holds it stationary at a dwell position for a downstream operation, filling, labeling, pick-and-place, assembly, or inspection. Positioning accuracy ranges from ±2mm on mechanical systems to ±0.1mm on servo-driven systems." }
+      "acceptedAnswer": { "@type": "Answer", "text": "An indexing conveyor moves product in precise, repeatable start-stop cycles rather than continuous motion. Each cycle advances product a fixed distance (the index length) and holds it stationary at a dwell position for a downstream operation such as filling, labeling, pick-and-place, assembly, or inspection. Accuracy depends on the technology: Dorner rates its 2200 Precision Move servo belt package at plus or minus 0.04 inch index accuracy, while pallet systems with lift-and-locate stations reach plus or minus 0.004 inch repeatability (Dorner FlexMove)." }
     },
     {
       "@type": "Question",
       "name": "What is the difference between servo indexing and mechanical indexing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Servo indexing uses programmable servo motors with electronic motion profiles. Operators change index length, speed, dwell time, and acceleration through the HMI. Mechanical indexing uses cams, Geneva drives, or ratchet mechanisms that produce a fixed motion profile. Servo costs more but offers recipe-based changeover; mechanical costs less and provides reliable, maintenance-simple operation for single-format lines." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Servo indexing uses programmable servo motors with electronic motion profiles. Operators change index length, speed, dwell time, and acceleration through the HMI. Mechanical indexing uses cams, Geneva drives, or ratchet mechanisms that produce a fixed motion profile. Servo costs more but offers recipe-based changeover. Mechanical costs less and provides reliable, maintenance-simple operation for single-format lines." }
     },
     {
       "@type": "Question",
       "name": "What positioning accuracy can an indexing conveyor achieve?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Positioning accuracy depends on the drive technology. Servo-driven indexing conveyors achieve ±0.1mm to ±0.5mm repeatability. Mechanical cam-driven systems achieve ±0.5mm to ±1.0mm. Timing-screw indexers with servo drives achieve ±0.25mm. Belt-driven indexers with pneumatic stops achieve ±1.0mm to ±2.0mm. The required accuracy depends on the downstream operation, labeling needs ±1mm, robotic pick-and-place needs ±0.5mm, and precision assembly needs ±0.1mm." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Accuracy depends on the drive and how the product is located. A servo-driven cogged belt indexer locates the belt, not the part: Dorner rates its 2200 Precision Move servo package at plus or minus 0.04 inch index accuracy. Pallet systems locate a fixtured carrier at each station: Dorner rates its FlexMove lift-and-locate at plus or minus 0.004 inch repeatability, and Bosch Rexroth states its TS 2plus with TS 2Booster reaches a stop position with an accuracy of up to 0.015 mm. Mechanical cam indexers are rated in arc seconds at the output shaft. Match the technology to the tolerance your downstream operation actually needs." }
     },
     {
       "@type": "Question",
@@ -55,125 +55,119 @@ const faqSchema = {
   schema={[breadcrumbSchema, articleSchema, faqSchema]}
 >
 <h1>Indexing Conveyors for Precision Positioning</h1>
-<p class="usa-intro">An indexing conveyor moves product in precise, repeatable start-stop cycles, advancing a fixed distance (the index length) and holding product stationary at a dwell position for filling, labeling, pick-and-place, assembly, or inspection. Buyers also call them positioning conveyors or conveyor positioning systems. Positioning accuracy ranges from ±2mm on simple pneumatic-stop systems to ±0.1mm on servo-driven belt or pallet-transfer indexers. Dorner, Shuttleworth, and mk North America manufacture indexing conveyors for packaging, pharmaceutical, and assembly applications.</p>
+<p class="usa-intro">An indexing conveyor moves product in precise, repeatable start-stop cycles, advancing a fixed distance (the index length) and holding product stationary at a dwell position for filling, labeling, pick-and-place, assembly, or inspection. Buyers also call them positioning conveyors or conveyor positioning systems. Accuracy depends on whether the system locates the belt or a fixtured pallet. <a href="https://www.dornerconveyors.com/products/2200-series/2200-precision-move-conveyor" target="_blank" rel="noopener noreferrer">Dorner rates its 2200 Precision Move servo belt package</a> at ±0.04 in (about ±1 mm) index accuracy, while pallet systems with lift-and-locate stations reach ±0.004 in (about ±0.1 mm) repeatability.</p>
 <h2 id="how-heading">How Indexing Works</h2>
 <p>Continuous conveyors move product at a constant speed. Indexing conveyors move product in a cycle: <strong>advance</strong>, <strong>decelerate</strong>, <strong>dwell</strong>, <strong>accelerate</strong>, and <strong>repeat</strong>. The dwell period gives downstream equipment, a filler nozzle, a labeler head, a pick-and-place arm, or an inspection camera, time to operate on a stationary target.</p>
 <p>The indexing cycle has four critical parameters:</p>
 <ul>
-<li><strong>Index length (pitch):</strong> The distance the conveyor advances per cycle. This equals the spacing between product stations. Common index lengths range from 50mm (small bottles) to 1,200mm (pallet indexers).</li>
-<li><strong>Index time:</strong> How long the conveyor takes to advance one index length. Shorter index times mean higher throughput. Typical range: 0.2 to 2.0 seconds.</li>
-<li><strong>Dwell time:</strong> How long product stays stationary at the station. Determined by the downstream operation, a label application takes 0.1–0.3 seconds; a multi-head filler takes 1.0–3.0 seconds.</li>
+<li><strong>Index length (pitch):</strong> The distance the conveyor advances per cycle. This equals the spacing between product stations, from a small container pitch up to a full pallet length.</li>
+<li><strong>Index time:</strong> How long the conveyor takes to advance one index length. Shorter index times mean higher throughput. Index time is limited by the acceleration the product can tolerate without tipping or shifting.</li>
+<li><strong>Dwell time:</strong> How long product stays stationary at the station. Determined by the downstream operation. A label application is short. A fill cycle is longer and depends on fill volume and product viscosity.</li>
 <li><strong>Cycle time:</strong> Index time + dwell time = one complete cycle. Throughput (products per minute) = 60 / cycle time in seconds.</li>
 </ul>
 <p>The motion profile, how the conveyor accelerates, cruises, and decelerates, directly affects product stability. Aggressive acceleration topples tall bottles. Abrupt deceleration shifts loose product in trays. Servo-driven indexers let engineers tune the motion profile (trapezoidal, S-curve, or custom) to match the product's stability characteristics. Mechanical indexers use fixed cam profiles that balance speed and smoothness for a given application.</p>
 <h2 id="tech-heading">Indexing Technologies</h2>
 <h3>Servo Indexing Conveyors</h3>
-<p>A servo indexing conveyor uses a servo motor to advance the belt a programmed distance, stop it at a programmed position, and repeat, with index length, speed, dwell, and motion profile all set in software. Servo-driven belt indexing is the most versatile and widely used indexing technology for packaging lines. A servo motor drives the conveyor belt through a precision gearbox. The servo controller executes programmable motion profiles, trapezoidal, S-curve, sinusoidal, or custom, with index length, speed, and dwell time all adjustable through the HMI. Dorner's 2200 Series Precision Move and mk North America's VersaMove indexing conveyors are examples of servo belt indexers used in packaging.</p>
-<p>Servo belt indexers achieve ±0.1mm to ±0.5mm repeatability depending on belt type, drive ratio, and load. Timing belts (polyurethane with steel or Kevlar cords) provide the highest precision because they eliminate belt slip. Flat PVC or polyurethane belts offer lower friction for product sliding onto and off the belt but sacrifice positioning accuracy to ±0.5–1.0mm due to belt elasticity.</p>
-<p>Changeover on servo belt indexers requires no mechanical adjustment. Operators load a new recipe, index length, speed, dwell, and motion profile, from the HMI. This makes servo belt indexing the default choice for lines running multiple SKUs with different package sizes. Dorner's SmartPace software automates recipe management and links indexing parameters to upstream and downstream machine speeds.</p>
+<p>A servo indexing conveyor uses a servo motor to advance the belt a programmed distance, stop it at a programmed position, and repeat, with index length, speed, dwell, and motion profile all set in software. Servo-driven belt indexing is the most versatile and widely used indexing technology for packaging lines. A servo motor drives the conveyor belt through a precision gearbox. The servo controller executes programmable motion profiles, trapezoidal, S-curve, sinusoidal, or custom, with index length, speed, and dwell time all adjustable through the HMI. Dorner's 2200 Series Precision Move, which uses a T10 profile cogged belt and lists precision indexing and timed conveying among its uses, is one example of a servo belt indexer.</p>
+<p>Accuracy depends on belt type, drive ratio, and load. Dorner lists ±0.02 in mechanical accuracy and ±0.04 in index accuracy for the 2200 Precision Move with a servo package. Cogged timing belts give the best accuracy because they cannot slip on the pulley. Flat belts are easier for products to slide on and off, but belt stretch and slip reduce positioning accuracy. If the product can shift on the belt, add a fixture, cleat, or stop at the station.</p>
+<p>Changeover on servo belt indexers requires no mechanical adjustment. Operators load a new recipe, index length, speed, dwell, and motion profile, from the HMI. This makes servo belt indexing the default choice for lines running multiple SKUs with different package sizes.</p>
 <h3>Timing Screw (Starwheel) Indexing</h3>
 <p>Timing screws (also called feed screws or worm drives) use a helical screw rotating alongside the conveyor to capture product and space it at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on a continuous flat belt or <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor</a> while the screw controls spacing. This technology is dominant in bottle and container lines where round products need consistent pitch before labeling, filling, or capping.</p>
-<p>Servo-driven timing screws adjust pitch by changing the screw speed relative to the belt speed. Fixed-pitch timing screws require a physical screw change for different container diameters. Changeover time for fixed screws ranges from 15 to 45 minutes. Servo screws change over in 1–2 minutes through recipe selection. Manufacturers including Hartness (part of ITW), Morrison Container Handling Solutions, and Aagard supply timing screws for packaging lines.</p>
+<p>Servo-driven timing screws adjust pitch by changing the screw speed relative to the belt speed. A timing screw's flight profile is cut for a container shape, so a container that differs much in diameter or profile needs a different screw. Servo drive lets one screw run different pitches and speeds by recipe, but it does not remove the need for screw change parts across container shapes.</p>
 <h3>Mechanical Cam &amp; Geneva Drive Indexing</h3>
-<p>Mechanical indexing uses physical cams or Geneva drives to convert continuous motor rotation into intermittent motion. A Geneva drive produces a fixed dwell-to-index ratio, typically 2:1 or 3:1, with smooth acceleration and deceleration built into the cam geometry. The motion profile is fixed and repeatable without electronic control, making these systems extremely reliable for dedicated, single-format lines.</p>
-<p>Cam-driven indexers use barrel cams, globoidal cams, or cylindrical cams to produce custom motion profiles. The cam grind determines the acceleration curve, dwell period, and maximum speed. Changing the motion profile requires machining a new cam, a process that takes weeks and costs significantly more than a servo recipe change. However, the simplicity of a mechanical indexer (no servo drives, no controllers, no software) appeals to plants with limited controls expertise.</p>
-<p>Mechanical indexers excel in high-speed pharmaceutical blister packing, cartoning, and tube filling where the motion profile never changes. Companies like Destaco (Camco division) and Ferguson Machine manufacture precision mechanical indexers with decades of installed base in pharmaceutical and cosmetics packaging.</p>
+<p>Mechanical indexing uses physical cams or Geneva drives to convert continuous motor rotation into intermittent motion. A Geneva drive produces a fixed dwell-to-index ratio set by its slot count. A four-slot Geneva indexes during a quarter turn of the driver and dwells for three quarters (3:1). A six-slot Geneva gives 2:1. Geneva motion has abrupt jerk at the start and end of each index, so higher-speed machines often use cam indexers instead. The motion profile is fixed and repeatable without electronic control, making these systems extremely reliable for dedicated, single-format lines.</p>
+<p>Cam-driven indexers use barrel cams, globoidal cams, or cylindrical cams to produce custom motion profiles. The cam grind determines the acceleration curve, dwell period, and maximum speed. Changing the motion profile requires machining a new cam, which takes far longer and costs more than a servo recipe change. However, the simplicity of a mechanical indexer (no servo drives, no controllers, no software) appeals to plants with limited controls expertise.</p>
+<p>Mechanical indexers excel in high-speed pharmaceutical blister packing, cartoning, and tube filling where the motion profile never changes. <a href="https://www.destaco.com/rotary-positioning/indexers/mechanical-rotary-indexers" target="_blank" rel="noopener noreferrer">DESTACO's CAMCO line</a>, for example, describes its cam-actuated indexers as having a known displacement-time relationship and quick settling in the dwell position, with accuracy listed in arc seconds at the output (12 to 90 arc seconds depending on series).</p>
 <h3>Pallet Transfer (Workpiece Carrier) Indexing</h3>
-<p>Pallet transfer systems carry product on machined pallets (workpiece carriers) that ride on a conveyor loop. The pallet provides a stable, repeatable reference surface, locating pins, nests, or fixtures on the pallet hold the product in a known position. The conveyor indexes the pallet to each workstation, and the pallet's precision fixturing delivers ±0.05mm repeatability at each station.</p>
-<p>mk North America's VersaMove, Bosch Rexroth's TS 2plus, and Dorner's FlexMove pallet systems are widely used in pharmaceutical, medical device, and electronics assembly. These systems combine belt or chain conveyor transport with precision locating at each station using pop-up pins, clamps, or servo-positioned stops. The pallet circulates in a loop, loading at station one, indexing through process stations, unloading at the final station, and returning empty to the start.</p>
+<p>Pallet transfer systems carry product on machined pallets (workpiece carriers) that ride on a conveyor loop. The pallet provides a stable, repeatable reference surface, locating pins, nests, or fixtures on the pallet hold the product in a known position. The conveyor carries the pallet to each workstation, where a lift-and-locate or positioning unit raises it onto locating pins. <a href="https://www.dornerconveyors.com/products/flexmove/flexmove-pallet-system/lift-locate" target="_blank" rel="noopener noreferrer">Dorner rates its FlexMove lift-and-locate</a> at ±0.004 in repeatability, and <a href="https://www.boschrexroth.com/en/de/products/industrial-solutions/assembly-technology/conveyor-and-transfer-systems/ts-2plus-transfer-system/" target="_blank" rel="noopener noreferrer">Bosch Rexroth</a> states its TS 2plus with TS 2Booster reaches a stop position with an accuracy of up to 0.015 mm.</p>
+<p>Workpiece pallet systems such as Bosch Rexroth's TS 2plus, Dorner's FlexMove pallet system, and <a href="https://www.mknorthamerica.com/Products/pallet-conveyor-systems-1/" target="_blank" rel="noopener noreferrer">mk North America's VersaMove</a> (which mk describes as a non-synchronous workpiece pallet-based conveyor) are used in medical device, electronics, and other assembly. These systems combine belt or chain conveyor transport with precision locating at each station using pop-up pins, clamps, or servo-positioned stops. The pallet circulates in a loop, loading at station one, indexing through process stations, unloading at the final station, and returning empty to the start.</p>
 <p>Pallet transfer indexing suits operations where the same conveyor must handle multiple product variants. Different pallet fixtures accommodate different product shapes. Changeover involves swapping pallets rather than adjusting the conveyor. This approach is common in <a href="/conveyor-types/vertical-lift/">packaging line integration</a> for kitting, assembly, and multi-step filling operations.</p>
 <h3>Pneumatic Stop Indexing</h3>
 <p>The simplest form of indexing uses a continuously running conveyor with pneumatic pop-up stops. The conveyor runs at constant speed. A pneumatic cylinder raises a stop blade into the product path, holding the product at the station. When the downstream operation completes, the stop retracts and the product advances to the next station.</p>
-<p>Pneumatic stop indexing achieves ±1.0–2.0mm positioning accuracy, limited by product momentum, belt slip under the stopped product, and cylinder response time. This approach costs significantly less than servo indexing and works well for operations that tolerate moderate positional variation. <a href="/conveyor-types/accumulation-conveyors/">Accumulation conveyors</a> with zone stops use this same principle to create multi-zone indexing behavior. Shuttleworth's slip-torque conveyors are designed for this mode, the belt slips under stopped product without building pressure or scuffing.</p>
+<p>Pneumatic stop accuracy is limited by product momentum, product size variation, and how squarely the product meets the stop. It costs much less than servo indexing and works well for operations that tolerate moderate positional variation. <a href="/conveyor-types/accumulation-conveyors/">Accumulation conveyors</a> with zone stops use this same principle to create multi-zone indexing behavior. On <a href="https://www.shuttleworth.com/products/slip-torque-technology/" target="_blank" rel="noopener noreferrer">Shuttleworth's Slip-Torque conveyors</a>, segmented rollers stop under a held product, which keeps back pressure low while upstream product waits.</p>
 <h2 id="compare-heading">Indexing Technology Comparison</h2>
 <table>
 <thead>
 <tr>
 <th>Technology</th>
-<th>Accuracy</th>
-<th>Max Speed</th>
+<th>What sets accuracy</th>
 <th>Changeover</th>
-<th>Relative Cost</th>
+<th>Main cost drivers</th>
 <th>Best For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Servo Belt</td>
-<td>±0.1–0.5 mm</td>
-<td>120+ CPM</td>
-<td>Recipe (1–2 min)</td>
-<td>$$$</td>
+<td>Belt type and drive. Dorner 2200 Precision Move: ±0.04 in index accuracy with servo package</td>
+<td>Recipe at HMI</td>
+<td>Servo motor and drive, cogged belt, motion programming</td>
 <td>Multi-SKU packaging</td>
 </tr>
 <tr>
 <td>Timing Screw</td>
-<td>±0.25 mm</td>
-<td>600+ BPM</td>
-<td>Screw swap (15–45 min) or recipe</td>
-<td>$$–$$$</td>
+<td>Screw pitch and fit to the container</td>
+<td>Screw change per container shape, speed by recipe if servo-driven</td>
+<td>Machined screws per format, drive, guide rails</td>
 <td>Bottle/container lines</td>
 </tr>
 <tr>
 <td>Mechanical Cam</td>
-<td>±0.5–1.0 mm</td>
-<td>200+ CPM</td>
-<td>Cam swap (hours)</td>
-<td>$$</td>
+<td>Cam indexer accuracy (arc seconds at output) plus conveyor drive play</td>
+<td>New cam to change profile</td>
+<td>Indexer drive, custom cam if needed</td>
 <td>Dedicated single-format</td>
 </tr>
 <tr>
 <td>Pallet Transfer</td>
-<td>±0.05–0.1 mm</td>
-<td>30–60 CPM</td>
-<td>Pallet swap (5–20 min)</td>
-<td>$$$$</td>
+<td>Locating pins at each station. Dorner FlexMove lift-and-locate: ±0.004 in repeatability</td>
+<td>Swap pallet fixtures</td>
+<td>Machined pallets and fixtures, lift-and-locate at each station, return loop</td>
 <td>Assembly, pharma, medical</td>
 </tr>
 <tr>
 <td>Pneumatic Stop</td>
-<td>±1.0–2.0 mm</td>
-<td>60–80 CPM</td>
-<td>Stop position (5–15 min)</td>
-<td>$</td>
+<td>Product momentum, size variation, stop contact</td>
+<td>Move stop position</td>
+<td>Stop cylinders, sensors, valves</td>
 <td>Low-cost, moderate accuracy</td>
 </tr>
 </tbody>
 </table>
-<p>CPM = cycles per minute. BPM = bottles per minute. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/">See full cost guide</a>.</p>
+<p>Speed ratings vary by product and index length, so ask suppliers for the cycle rate at your index length and product weight. <a href="/resources/conveyor-cost-guide/">See full cost guide</a>.</p>
 <h2 id="motion-heading">Motion Profiles Explained</h2>
 <p>The motion profile defines how the indexing conveyor accelerates, cruises, and decelerates during each index cycle. Three profiles cover most packaging applications:</p>
 <h3>Trapezoidal Profile</h3>
 <p>The trapezoidal profile accelerates at a constant rate, cruises at maximum speed, and decelerates at a constant rate. The velocity-time graph forms a trapezoid. This profile produces the shortest possible index time for a given maximum speed and acceleration. The trade-off is jerk, abrupt transitions between acceleration, cruise, and deceleration phases create mechanical shock. Trapezoidal profiles suit rigid, heavy products (cases, cartons, pallets) that resist tipping.</p>
 <h3>S-Curve Profile</h3>
-<p>The S-curve profile ramps acceleration gradually, eliminating the abrupt jerk of trapezoidal motion. The velocity-time graph shows smooth transitions at the start and end of acceleration and deceleration phases. S-curve profiles take 10–15% longer than trapezoidal profiles for the same index distance but produce significantly less product disturbance. This profile is standard for bottles, containers, and any tall or top-heavy product that tends to topple under sudden acceleration.</p>
-<h3>Modified Sine (Cycloidal) Profile</h3>
-<p>The modified sine profile produces the smoothest possible motion, zero jerk at all points in the cycle. The acceleration curve follows a sine wave. This profile takes the longest time for a given index distance but provides the gentlest handling. Modified sine profiles suit fragile products (glass bottles, decorated cakes, filled cups) and precision operations where vibration at the dwell position must be minimized.</p>
-<p>Servo controllers from Allen-Bradley (Rockwell), Siemens, Beckhoff, and B&amp;R offer all three profiles as standard selections. Custom cam profiles can combine elements, aggressive acceleration with gentle deceleration, for example, to optimize throughput for specific product characteristics.</p>
+<p>The S-curve profile ramps acceleration gradually, eliminating the abrupt jerk of trapezoidal motion. The velocity-time graph shows smooth transitions at the start and end of acceleration and deceleration phases. For the same peak speed and acceleration, an S-curve move takes somewhat longer than a trapezoidal move, but it produces much less product disturbance. This profile is standard for bottles, containers, and any tall or top-heavy product that tends to topple under sudden acceleration.</p>
+<h3>Cycloidal and Modified Sine Profiles</h3>
+<p>These are cam laws also available as servo profiles. In a cycloidal profile, acceleration follows a sine curve, so acceleration starts and ends at zero and jerk stays finite. Modified sine blends sine segments to lower peak acceleration for the same index time. Both handle product more gently than a trapezoidal move. Modified sine profiles suit fragile products (glass bottles, decorated cakes, filled cups) and precision operations where vibration at the dwell position must be minimized.</p>
+<p>Most servo motion controllers support trapezoidal and S-curve moves and electronic cam tables for custom profiles. Custom cam profiles can combine elements, aggressive acceleration with gentle deceleration, for example, to optimize throughput for specific product characteristics.</p>
 <h2 id="apps-heading">Where Indexing Conveyors Work</h2>
 <h3>Filling Stations</h3>
-<p>Liquid and granular filling machines require containers to stop precisely under fill nozzles. Servo indexing conveyors position bottles, jars, or pouches under multi-head fillers with ±0.5mm accuracy. The dwell time matches the fill cycle, 0.5 to 3.0 seconds depending on product viscosity and fill volume. Overflow fillers, piston fillers, and net-weight fillers all rely on indexing conveyors for container positioning. The indexing conveyor feeds from a <a href="/conveyor-functions/collating-laning/">laning or singulating conveyor</a> that delivers containers in single file at the correct pitch.</p>
+<p>Liquid and granular filling machines require containers to stop precisely under fill nozzles. Servo indexing conveyors position bottles, jars, or pouches under multi-head fillers, often with a nest or neck guide to center the container under the nozzle. The dwell time matches the fill cycle, which depends on product viscosity and fill volume. Overflow fillers, piston fillers, and net-weight fillers all rely on indexing conveyors for container positioning. The indexing conveyor feeds from a <a href="/conveyor-functions/collating-laning/">laning or singulating conveyor</a> that delivers containers in single file at the correct pitch.</p>
 <h3>Labeling Stations</h3>
-<p>Pressure-sensitive labelers apply labels to products moving at a controlled speed or stopped at a fixed position. Wrap-around labeling requires the product to rotate at a consistent speed while the label applies, a continuous-motion indexer or timing screw provides this. Front-and-back labeling requires the product to stop momentarily while two label heads apply simultaneously. Servo belt indexers handle both modes with recipe changes. Dorner's Precision Move conveyors serve labeling applications across <a href="/industries/food-conveyors/">food</a>, beverage, and pharmaceutical lines.</p>
+<p>Pressure-sensitive labelers apply labels to products moving at a controlled speed or stopped at a fixed position. Wrap-around labeling requires the product to rotate at a consistent speed while the label applies, a continuous-motion indexer or timing screw provides this. Front-and-back labeling requires the product to stop momentarily while two label heads apply simultaneously. Servo belt indexers handle both modes with recipe changes. The same approach serves labeling on <a href="/industries/food-conveyors/">food</a>, beverage, and pharmaceutical lines.</p>
 <h3>Pick-and-Place &amp; Robotic Loading</h3>
 <p><a href="/conveyor-functions/tray-loading/">Tray loading</a> systems use indexing conveyors to position trays under pick-and-place heads. The tray indexes one pitch (one tray width), the pick-and-place loads product, then the tray indexes again. Servo indexing provides recipe-based tray pitch changes for different tray sizes. For robotic systems using vision tracking, the conveyor runs continuously rather than indexing, but the upstream product infeed often uses an indexing conveyor to meter product spacing.</p>
 <h3>Assembly &amp; Kitting</h3>
-<p>Pallet transfer indexing conveyors carry components through multi-station assembly cells. Each station adds a component, inspects, or tests. Medical device assembly, consumer electronics assembly, and automotive component kitting all use pallet indexers. mk North America's VersaMove system and Bosch Rexroth's TS 2plus are standard platforms for these applications. The pallet's precision fixturing ensures repeatable positioning at each station without re-referencing.</p>
+<p>Pallet transfer indexing conveyors carry components through multi-station assembly cells. Each station adds a component, inspects, or tests. Medical device assembly, consumer electronics assembly, and automotive component kitting all use pallet indexers. Workpiece pallet platforms are common for these applications. The pallet's precision fixturing ensures repeatable positioning at each station without re-referencing.</p>
 <h3>Inspection &amp; Quality Control</h3>
-<p><a href="/conveyor-functions/inspection-detection/">Vision inspection systems</a> require product to pause under cameras for image capture. Servo indexing conveyors dwell product at the camera station for 50–200ms, long enough for camera exposure and image processing. <a href="/conveyor-functions/reject-systems/">Reject systems</a> downstream remove product that fails inspection. The indexing conveyor synchronizes with the vision system's trigger signal and the reject actuator's response time.</p>
+<p><a href="/conveyor-functions/inspection-detection/">Vision inspection systems</a> require product to pause under cameras for image capture. Servo indexing conveyors dwell product at the camera station long enough for exposure. Many modern vision systems capture moving product with a strobe or short exposure, so confirm whether a stop is needed at all. <a href="/conveyor-functions/reject-systems/">Reject systems</a> downstream remove product that fails inspection. The indexing conveyor synchronizes with the vision system's trigger signal and the reject actuator's response time.</p>
 <h2 id="selection-heading">Selecting an Indexing Conveyor</h2>
 <p>Indexing conveyor selection requires matching five parameters to the downstream operation:</p>
 <ol>
-<li><strong>Required positioning accuracy.</strong> Labeling (±1mm) tolerates pneumatic stops. Robotic pick-and-place (±0.5mm) needs servo belt indexing. Precision assembly (±0.1mm) demands pallet transfer systems.</li>
-<li><strong>Throughput requirement (CPM).</strong> Calculate cycle time = index time + dwell time. Ensure the indexing conveyor's maximum index speed supports the required cycle rate with 15% headroom.</li>
+<li><strong>Required positioning accuracy.</strong> Get the tolerance from the downstream machine or robot supplier. Belt-located servo indexers suit labeling and many pick-and-place jobs. Tight assembly tolerances usually need a fixtured pallet with lift-and-locate.</li>
+<li><strong>Throughput requirement (CPM).</strong> Calculate cycle time = index time + dwell time. Ensure the indexing conveyor's maximum index speed supports the required cycle rate with headroom for recovery after stops.</li>
 <li><strong>Product characteristics.</strong> Tall bottles need S-curve or modified sine profiles. Heavy cases tolerate trapezoidal. Fragile products demand soft acceleration and deceleration. Round containers may need timing screws instead of belt indexers.</li>
 <li><strong>SKU count and changeover frequency.</strong> Single-format lines suit mechanical indexers (lowest cost, highest reliability). Multi-SKU lines need servo with recipe management. High-mix, low-volume lines need pallet transfer with swappable fixtures.</li>
 <li><strong>Environment.</strong> <a href="/industries/food-conveyors/sanitary/">Sanitary washdown</a> environments require stainless steel frames, IP69K drives, and food-grade belting. Cleanroom environments require low-particulate designs with enclosed drives. Standard industrial environments accept painted steel with standard IP54 enclosures.</li>
 </ol>
-<p>Discuss these parameters with manufacturers early in the project. Dorner, mk North America, and Shuttleworth all offer application engineering support to size indexing conveyors for specific packaging line requirements. For budgeting, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
+<p>Discuss these parameters with suppliers early in the project and ask for the accuracy, cycle rate, and payload in writing for your product. For budgeting, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
 <h2 id="integration-heading">PLC &amp; Controls Integration</h2>
 <p>Indexing conveyors integrate with the line PLC through either a dedicated motion controller or a servo drive with built-in motion capability. The PLC sends a "start index" command, and the servo controller executes the stored motion profile. A "motion complete" signal returns to the PLC when the conveyor reaches the dwell position, triggering the downstream operation.</p>
-<p>Modern servo drives from Allen-Bradley (Kinetix series), Siemens (Sinamics), and Beckhoff (AX series) support EtherNet/IP, PROFINET, and EtherCAT networks for real-time coordination between the indexer and other line equipment. This synchronization is critical when the indexing conveyor must coordinate with a filler, labeler, or robot that also has servo-driven axes.</p>
+<p>Modern servo drives support industrial Ethernet networks such as EtherNet/IP, PROFINET, and EtherCAT for real-time coordination between the indexer and other line equipment. This synchronization is critical when the indexing conveyor must coordinate with a filler, labeler, or robot that also has servo-driven axes.</p>
 <p>For a broader view of controls architecture, sensor integration, and Industry 4.0 connectivity for conveyor systems, see the <a href="/resources/automated-conveyor-systems/">automated conveyor systems guide</a>.</p>
 <h2 id="related-heading">Related Functions</h2>
 <ul class="usa-collection">
@@ -190,11 +184,20 @@ const faqSchema = {
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/reject-systems/">Reject Systems</a></h3>
 <p class="usa-collection__description">Remove defects after indexed inspection</p></div></li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.dornerconveyors.com/products/2200-series/2200-precision-move-conveyor" target="_blank" rel="noopener noreferrer">2200 Series Precision Move Conveyor</a>, Dorner. T10 cogged belt, ±0.02 in mechanical accuracy, ±0.04 in index accuracy with servo package, precision indexing applications.</li>
+<li><a href="https://www.dornerconveyors.com/products/flexmove/flexmove-pallet-system/lift-locate" target="_blank" rel="noopener noreferrer">FlexMove Pallet System Lift and Locate</a>, Dorner. ±0.004 in repeatability for pallet locating.</li>
+<li><a href="https://www.boschrexroth.com/en/de/products/industrial-solutions/assembly-technology/conveyor-and-transfer-systems/ts-2plus-transfer-system/" target="_blank" rel="noopener noreferrer">TS 2plus Transfer System</a>, Bosch Rexroth. Workpiece pallet system, stop position accuracy up to 0.015 mm with TS 2Booster.</li>
+<li><a href="https://www.mknorthamerica.com/Products/pallet-conveyor-systems-1/" target="_blank" rel="noopener noreferrer">VersaMove Asynchronous Conveyors</a>, mk North America. Non-synchronous workpiece pallet conveyor.</li>
+<li><a href="https://www.destaco.com/rotary-positioning/indexers/mechanical-rotary-indexers" target="_blank" rel="noopener noreferrer">CAMCO Mechanical Indexers</a>, DESTACO. Cam-actuated indexing, settling in dwell, accuracy in arc seconds.</li>
+<li><a href="https://www.shuttleworth.com/products/slip-torque-technology/" target="_blank" rel="noopener noreferrer">Slip-Torque Technology</a>, Shuttleworth. Segmented rollers stop under held product for low back pressure.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is an indexing conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>An indexing conveyor advances product a fixed distance and holds it stationary for a downstream operation. Each start-stop cycle positions product at a precise dwell point for filling, labeling, pick-and-place, inspection, or assembly. Positioning accuracy ranges from ±2mm (pneumatic stops) to ±0.1mm (servo-driven belt or pallet transfer).</p>
+<p>An indexing conveyor advances product a fixed distance and holds it stationary for a downstream operation. Each start-stop cycle positions product at a precise dwell point for filling, labeling, pick-and-place, inspection, or assembly. Accuracy depends on the technology: Dorner rates its 2200 Precision Move servo belt package at ±0.04 in index accuracy, while pallet systems with lift-and-locate stations reach ±0.004 in repeatability (Dorner FlexMove).</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">Servo indexing vs. mechanical indexing?</button></h3>
@@ -204,7 +207,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What accuracy can indexing conveyors achieve?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Servo belt: ±0.1–0.5mm. Timing screw: ±0.25mm. Mechanical cam: ±0.5–1.0mm. Pallet transfer: ±0.05–0.1mm. Pneumatic stops: ±1.0–2.0mm. Choose the technology based on your downstream operation's positioning tolerance.</p>
+<p>A servo cogged belt indexer locates the belt, not the part: Dorner rates its 2200 Precision Move servo package at ±0.04 in index accuracy. Pallet systems locate a fixtured carrier: Dorner rates its FlexMove lift-and-locate at ±0.004 in repeatability, and Bosch Rexroth states its TS 2plus with TS 2Booster reaches a stop position with an accuracy of up to 0.015 mm. Mechanical cam indexers are rated in arc seconds at the output shaft. Match the technology to the tolerance your downstream operation actually needs.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What industries use indexing conveyors?</button></h3>

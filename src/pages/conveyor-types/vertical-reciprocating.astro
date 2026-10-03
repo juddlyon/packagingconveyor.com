@@ -18,27 +18,27 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a vertical reciprocating conveyor (VRC)?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vertical reciprocating conveyor (VRC) is a mechanical device that moves materials vertically between two or more levels on a guided carriage or platform. VRCs are classified as conveyors (not elevators) under ASME B20.1 Safety Standard for Conveyors and Related Equipment, which means they are subject to different, and generally simpler, code requirements than freight elevators. VRCs cannot carry people." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A vertical reciprocating conveyor (VRC) is a hydraulic or mechanical lift that moves materials between two or more levels on a guided carriage. VRCs are classified as conveyors under ASME B20.1, Safety Standard for Conveyors and Related Equipment, not as elevators. ASME A17.1, the elevator code, excludes B20 conveyors from its scope. VRCs are for material only. No one may ride the carriage." }
     },
     {
       "@type": "Question",
       "name": "What is the difference between a VRC and a freight elevator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VRCs move materials only and cannot carry people. They are governed by ASME B20.1 (conveyor standard). Freight elevators move materials and people, and are governed by ASME A17.1 (elevator standard). VRCs have simpler code requirements, shorter permitting timelines, lower installation cost, and do not require a machine room or hoistway. Freight elevators require full elevator code compliance, an elevator contractor license, annual inspections, and typically a pit and overhead machine room." }
+      "acceptedAnswer": { "@type": "Answer", "text": "VRCs move material only and are built to ASME B20.1. Freight elevators can carry people and are built to ASME A17.1. According to MHI's VRC application guidelines, VRCs normally run below 100 feet per minute, ride on rollers in guide columns, never have controls on the carriage, and are typically regulated by OSHA. Elevators run on T-rails in a hoistway, use A17-approved door interlocks, and are typically regulated and inspected by a state or municipal authority. Some jurisdictions still require permits or testing for a VRC, so confirm with the local authority having jurisdiction." }
     },
     {
       "@type": "Question",
       "name": "What is the weight capacity of a VRC?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VRC load capacities range from 500 lbs for light-duty package lifts to 20,000 lbs or more for heavy-duty pallet and automotive applications. Standard pallet VRCs typically handle 2,000-6,000 lbs. The capacity depends on the VRC type (mechanical, hydraulic, or straddle), guide column construction, platform size, and drive system. PFlow, Wildeck, and Autoquip are leading VRC manufacturers that publish detailed capacity tables." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on drive type, mast configuration, and carriage size. Autoquip rates its mechanical VRCs up to 20,000 lbs and its hydraulic VRCs up to 6,000 lbs. PFlow rates its two-post M Series up to 10,000 lbs and its four-post F Series up to 50,000 lbs standard, customizable to 200,000 lbs. Four-post designs carry the highest loads. Cantilever designs are limited by the overturning moment on a single guide structure." }
     },
     {
       "@type": "Question",
       "name": "How much does a VRC cost compared to a freight elevator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VRCs cost significantly less than freight elevators for the same lift height and capacity. A VRC typically costs 40-60% less than a comparable freight elevator when you factor in equipment, installation, pit construction, machine room, and code compliance. VRC installation timelines are also shorter, weeks versus months for a freight elevator. However, VRCs cannot carry people, which limits their use to material-only applications." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A VRC is generally the lower-cost option because it is built to the conveyor standard instead of the elevator code. Cost drivers for a VRC are capacity, travel height, number of levels, carriage size, mechanical versus hydraulic drive, gates and enclosures at each level, and any permitting or testing the local authority requires. A freight elevator adds a hoistway, elevator-grade rails and door interlocks, and state or municipal elevator inspection. A VRC cannot carry people, so it only replaces an elevator in material-only applications." }
     },
     {
       "@type": "Question",
       "name": "What safety standards apply to VRCs?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VRCs are governed by ASME B20.1 Safety Standard for Conveyors and Related Equipment, specifically Section 3008 for vertical reciprocating conveyors. Key requirements include: full guarding of the carriage path at all levels, interlocked gates that prevent operation unless closed, upper and lower travel limit switches, emergency stop buttons at each level, and slack chain/cable detection devices. Local building codes and fire codes may add additional requirements." }
+      "acceptedAnswer": { "@type": "Answer", "text": "ASME B20.1 governs VRCs. Since 2015 it has included a mandatory appendix covering VRC design, installation, commissioning, and periodic inspection. MHI's VRC application guidelines summarize key requirements: enclosures at each level (96 inches high per B20.1, with handrails allowed as part of the guarding at the top landing in some cases), gates interlocked so the VRC cannot run with a gate open, travel limit switches, and slack chain or cable sensors on mechanical units. OSHA lockout/tagout rules apply during maintenance. The International Building Code, Chapter 30, recognizes VRCs under B20.1, and local officials may require permits or testing." }
     }
   ]
 };
@@ -59,16 +59,51 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Vertical Reciprocating Conveyors (VRCs)</h1>
-<p class="usa-intro">A vertical reciprocating conveyor (VRC) lifts materials between two or more levels on a guided carriage or platform. VRCs are classified as conveyors under <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, not elevators, which simplifies code compliance, reduces installation cost, and shortens permitting timelines compared to freight elevators. VRCs handle loads from 500 lbs to over 20,000 lbs and serve as the standard vertical transport solution for mezzanine-to-floor transfers in packaging, distribution, and manufacturing facilities.</p>
-<h2 id="types-heading">Four VRC Configurations</h2>
-<h3>Mechanical (Chain/Cable) VRC</h3>
-<p>Mechanical VRCs use roller chains or wire rope cables wound around a drum or driven by sprockets to raise and lower the carriage. An electric gearmotor provides the drive force. Mechanical VRCs offer the widest capacity range (500-20,000 lbs), fastest travel speeds (typically 20-40 FPM), and serve the broadest application base. PFlow Industries and Wildeck are leading mechanical VRC manufacturers. Four-post designs provide the greatest stability for heavy loads.</p>
+<p class="usa-intro">A vertical reciprocating conveyor (VRC) lifts materials between two or more levels on a guided carriage. VRCs are classified as conveyors under <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, not elevators, so they are not built to the elevator code. Published capacities run from light package lifts to heavy four-post units rated in the tens of thousands of pounds. VRCs are the standard way to move pallets, carts, and totes between a floor and a mezzanine in packaging, distribution, and manufacturing plants. No one may ride a VRC.</p>
+<h2 id="types-heading">Drive Types and Mast Configurations</h2>
+<p>A VRC is specified on two separate axes: how it lifts (mechanical or hydraulic drive) and how the carriage is supported (mast configuration). The <a href="https://www.pflow.com/wp-content/uploads/2020/02/MHI_CSS_vrc_application_guidelines_pdf.pdf" target="_blank" rel="noopener noreferrer">MHI Application Guidelines for Vertical Reciprocating Conveyors</a>, written by the VRC subcommittee of MHI's Conveyor and Sortation Systems product group, defines four mast configurations.</p>
+<h3>Mechanical (chain or cable) VRC</h3>
+<p>A brake motor and gear reducer drive roller chains or cables that raise and lower the carriage. Mechanical units cover the widest range of capacity, travel height, and number of stops. <a href="https://autoquip.com/blog/mechanical-vs-hydraulic-vertical-reciprocating-conveyers-vrcs-what-is-best-for-my-application/" target="_blank" rel="noopener noreferrer">Autoquip</a> rates its mechanical VRCs up to 20,000 lbs and up to 100 feet of travel. PFlow rates its two-post <a href="https://www.pflow.com/vertical-conveyors/mechanical/m-series/" target="_blank" rel="noopener noreferrer">M Series</a> up to 10,000 lbs at a standard 25 FPM, with higher speeds available for high-cycle automated systems.</p>
 <h3>Hydraulic VRC</h3>
-<p>Hydraulic VRCs use hydraulic cylinders to lift the carriage. A hydraulic power unit (pump, reservoir, and valves) pressurizes hydraulic fluid that extends the cylinder. Hydraulic VRCs provide smooth, controlled motion and handle heavy loads (up to 10,000+ lbs). Travel height is limited by cylinder stroke length, typically up to 20-25 feet. Hydraulic VRCs suit applications requiring precise speed control and soft start/stop motion. Autoquip and Pflow manufacture hydraulic VRC platforms.</p>
-<h3>Straddle VRC</h3>
-<p>Straddle VRCs use two vertical mast columns with a carriage that travels between them. The mast straddles one or two sides of the platform opening. Straddle designs provide clear access from multiple sides for fork truck loading or conveyor infeed/outfeed. They suit applications where the VRC must be approached from the front and one or both sides simultaneously.</p>
-<h3>Cantilever VRC</h3>
-<p>Cantilever VRCs use a single mast column with the carriage extending outward like a shelf. The platform is supported from one side only. Cantilever designs provide three-sided access to the platform and suit applications with tight floor space. Load capacity is lower than four-post designs because the single-mast structure must resist the tilting moment of off-center loads. Cantilever VRCs typically handle 500-4,000 lbs.</p>
+<p>An electric motor drives a hydraulic pump that extends cylinders to raise the carriage. Hydraulic units suit lower travel heights and two-level service. Autoquip rates its hydraulic VRCs up to 6,000 lbs with less than 30 feet of travel. PFlow rates its <a href="https://www.pflow.com/vertical-conveyors/hydraulic/21-series/" target="_blank" rel="noopener noreferrer">21 Series</a> hydraulic lift up to 6,000 lbs, 22 feet of rise, two levels, and 10 cycles per hour at the standard 24 FPM. Autoquip describes hydraulic units as the less expensive option where their height and capacity limits fit.</p>
+<h3>Mast configurations</h3>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>How the carriage is supported</th>
+<th>Loading access</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Straddle</td>
+<td>Carriage rides between two masts on opposite sides</td>
+<td>Two opposite ends ("C" and "Z" loading patterns)</td>
+<td>Cannot load from the mast sides</td>
+</tr>
+<tr>
+<td>Cantilever</td>
+<td>Carriage mounted out in front of the mast</td>
+<td>Three sides</td>
+<td>Load creates an overturning moment that must be braced into the building, which limits platform size and capacity</td>
+</tr>
+<tr>
+<td>Four post</td>
+<td>Platform mounted inside four guide beams</td>
+<td>All four sides</td>
+<td>Highest capacity and largest platforms, but a larger footprint</td>
+</tr>
+<tr>
+<td>Double mast</td>
+<td>Four guide beams, carriage cantilevered between two sets of masts</td>
+<td>Depends on mast placement</td>
+<td>No overhead cross member, but lower capacity than four post</td>
+</tr>
+</tbody>
+</table>
+<p>Source: MHI VRC Application Guidelines, Section 4.</p>
 <h2 id="comparison-heading">VRC vs Freight Elevator vs Spiral Conveyor</h2>
 <table>
 <thead>
@@ -83,7 +118,7 @@ const articleSchema = {
 <tr>
 <td>Carries People?</td>
 <td>No (materials only)</td>
-<td>Yes (materials + people)</td>
+<td>Yes</td>
 <td>No (materials only)</td>
 </tr>
 <tr>
@@ -93,134 +128,192 @@ const articleSchema = {
 <td>ASME B20.1 (conveyor)</td>
 </tr>
 <tr>
-<td>Load Capacity</td>
-<td>500-20,000 lbs</td>
-<td>2,000-20,000+ lbs</td>
-<td>Up to 75 lbs</td>
+<td>Typical Loads</td>
+<td>Pallets, carts, totes, cases</td>
+<td>Pallets, carts, and riders</td>
+<td>Cases and totes</td>
 </tr>
 <tr>
 <td>Product Flow</td>
-<td>Batch (reciprocating)</td>
-<td>Batch (reciprocating)</td>
+<td>Batch (one load per cycle)</td>
+<td>Batch (one load per cycle)</td>
 <td>Continuous</td>
 </tr>
 <tr>
 <td>Throughput</td>
-<td>10-20 loads/hr typical</td>
-<td>10-15 loads/hr typical</td>
-<td>Continuous (matched to line)</td>
+<td>Set by cycle time: travel, gate, load, and unload</td>
+<td>Set by cycle time</td>
+<td>Continuous, matched to line rate</td>
 </tr>
 <tr>
-<td>Max Height</td>
-<td>Up to 100+ ft</td>
-<td>Unlimited</td>
-<td>Up to 40 ft</td>
+<td>Speed</td>
+<td>Normally below 100 FPM (MHI)</td>
+<td>Normally above 100 FPM (MHI)</td>
+<td>Matched to line rate</td>
 </tr>
 <tr>
-<td>Pit Required?</td>
-<td>No (surface mount)</td>
-<td>Yes (code required)</td>
-<td>No</td>
+<td>Guidance</td>
+<td>Rollers in guide columns braced to the building</td>
+<td>T-rails attached to the building, in a hoistway</td>
+<td>Helical slat track on a central column</td>
 </tr>
 <tr>
-<td>Machine Room?</td>
-<td>No</td>
-<td>Yes (code required)</td>
-<td>No</td>
+<td>Mounting</td>
+<td>Surface mounted or pit mounted</td>
+<td>Hoistway required</td>
+<td>Floor mounted</td>
 </tr>
 <tr>
-<td>Installation Time</td>
-<td>1-3 weeks</td>
-<td>2-6 months</td>
-<td>2-4 weeks</td>
+<td>Typical Regulator</td>
+<td>OSHA (MHI)</td>
+<td>State or municipal elevator authority (MHI)</td>
+<td>OSHA</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$$$</td>
-<td>$$$$</td>
-<td>$$$$</td>
+<td>Cost Drivers</td>
+<td>Capacity, travel height, levels, carriage size, gates and enclosures</td>
+<td>Hoistway construction, elevator-grade rails and door interlocks, elevator inspection</td>
+<td>Number of turns (rise), product size, single or multiple lanes</td>
 </tr>
 </tbody>
 </table>
-<p>VRC costs 40-60% less than a comparable freight elevator when factoring in equipment, installation, pit, machine room, and code compliance. See <a href="/resources/conveyor-cost-guide/">cost guide</a>.</p>
-<h2 id="specs-heading">VRC Specification Ranges</h2>
-<p>VRC specifications vary widely based on type and application. Typical ranges across PFlow, Wildeck, and Autoquip product lines:</p>
-<ul>
-<li><strong>Load capacity:</strong> 500-20,000 lbs (standard), up to 100,000 lbs (custom heavy-duty)</li>
-<li><strong>Travel speed:</strong> 20-40 FPM (standard), up to 100 FPM (high-speed)</li>
-<li><strong>Travel height:</strong> 5-100+ feet (mechanical), 5-25 feet (hydraulic)</li>
-<li><strong>Platform size:</strong> 3' x 3' (minimum) to 12' x 12' (large pallet/cart)</li>
-<li><strong>Number of stops:</strong> 2-6 levels</li>
-<li><strong>Power:</strong> 208-480V three-phase (mechanical), hydraulic power unit (hydraulic)</li>
-<li><strong>Drive types:</strong> Chain-driven, cable-driven, hydraulic cylinder</li>
-</ul>
+<p>A VRC is generally the lower-cost way to move material between levels because it is built to the conveyor standard instead of the elevator code. Permitting and testing still vary by jurisdiction. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for cost factors.</p>
+<h2 id="specs-heading">Published VRC Specifications</h2>
+<p>Ranges vary by manufacturer and model. These are published figures from manufacturer product pages:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Type</th>
+<th>Rated capacity</th>
+<th>Standard speed</th>
+<th>Travel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autoquip mechanical VRCs</td>
+<td>Mechanical</td>
+<td>Up to 20,000 lbs</td>
+<td>Not stated</td>
+<td>Up to 100 ft</td>
+</tr>
+<tr>
+<td>Autoquip hydraulic VRCs</td>
+<td>Hydraulic</td>
+<td>Up to 6,000 lbs</td>
+<td>Not stated</td>
+<td>Less than 30 ft</td>
+</tr>
+<tr>
+<td>PFlow M Series</td>
+<td>Mechanical, two-post (cantilever or straddle)</td>
+<td>Up to 10,000 lbs</td>
+<td>25 FPM, up to 400 FPM optional</td>
+<td>Unlimited rise per PFlow</td>
+</tr>
+<tr>
+<td>PFlow F Series</td>
+<td>Mechanical, four-post</td>
+<td>Up to 50,000 lbs standard, customizable to 200,000 lbs</td>
+<td>18 FPM, up to 400 FPM optional</td>
+<td>Unlimited rise per PFlow</td>
+</tr>
+<tr>
+<td>PFlow 21 Series</td>
+<td>Hydraulic (cantilever or straddle)</td>
+<td>Up to 6,000 lbs</td>
+<td>24 FPM, up to 30 FPM optional</td>
+<td>22 ft, two levels</td>
+</tr>
+</tbody>
+</table>
+<p>Other inputs that vary by project: carriage size, number of stops, power supply (mechanical units use an electric gearmotor, hydraulic units a hydraulic power unit), and indoor, outdoor, or washdown finish.</p>
 <h2 id="safety-heading">VRC Safety Standards and Code Requirements</h2>
-<h3>ASME B20.1 Section 3008</h3>
-<p>ASME B20.1 is the primary safety standard governing VRCs. Section 3008 specifically addresses vertical reciprocating conveyors. Key requirements include full guarding of the carriage path at every accessible level, interlocked access gates that prevent VRC operation unless all gates are closed, upper and lower travel limit switches, emergency stop buttons accessible from each level, slack chain/cable detection devices, and overload protection.</p>
-<h3>Building Code Requirements</h3>
-<p>The International Building Code (IBC) recognizes VRCs as conveyors, not elevators, provided they comply with ASME B20.1 and do not carry people. The VRC shaft opening between floors may require fire-rated enclosures or sprinkler protection depending on the building's fire code classification. Consult your local authority having jurisdiction (AHJ) for specific requirements.</p>
-<h3>Key Safety Features</h3>
+<h3>ASME B20.1</h3>
+<p>ASME B20.1 is the safety standard for VRCs. The MHI guidelines note that in 2015 B20.1 added a mandatory appendix covering VRC design, installation, commissioning, and periodic inspection. ASME A17.1, the elevator code, expressly excludes B20 conveyors, including VRCs, from its scope (A17.1 Section 1.1.2, as cited by MHI). Some elevator inspectors still treat VRCs as A17.1 Type A material lifts. The MHI guidelines were written in part to address that confusion.</p>
+<h3>OSHA</h3>
+<p>MHI states that VRCs are typically regulated and inspected by OSHA. Maintenance work must follow <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.147" target="_blank" rel="noopener noreferrer">OSHA 1910.147 lockout/tagout</a>, and the carriage must be mechanically blocked per the manufacturer's procedure before anyone works under it.</p>
+<h3>Building code</h3>
+<p>According to MHI, many state and local jurisdictions have adopted the International Building Code (IBC), which recognizes VRCs under ASME B20.1 by reference in Chapter 30. Local building officials may still require special permitting or testing, and the owner is responsible for confirming that. Gates on a VRC do not replace fire doors where the floor opening requires them. Confirm with your authority having jurisdiction (AHJ).</p>
+<h3>Key safety features</h3>
 <ul>
-<li><strong>Interlocked gates:</strong> Every access point (loading/unloading level) has a gate that must be closed and locked before the VRC operates. Interlock circuits prevent bypassing.</li>
-<li><strong>Overtravel limits:</strong> Redundant limit switches stop the carriage if it overtravel past the upper or lower stop position.</li>
-<li><strong>Slack chain/cable detection:</strong> Sensors detect if lifting chains or cables go slack (indicating a broken chain or obstruction). The VRC stops immediately.</li>
-<li><strong>Emergency stops:</strong> E-stop buttons at each level and on the control panel. Red mushroom-head style per NFPA 79.</li>
-<li><strong>Velocity fuse (hydraulic):</strong> Hydraulic VRCs include a velocity fuse that stops the carriage if it descends faster than normal operating speed, preventing freefall in case of hydraulic line failure.</li>
+<li><strong>Enclosures:</strong> B20.1 requires 96-inch-high enclosures at each floor level. At the top landing, 42-inch handrails may be permitted as part of the guarding in some cases. Mesh openings must reject a 2-inch ball, and enclosures must withstand 200 lbs of force in any direction (MHI Section 10.1).</li>
+<li><strong>Interlocked gates:</strong> The VRC cannot run while any gate is open, and a gate cannot open unless the carriage is at that landing. MHI notes that VRCs use a mechanical lock plus an electric gate status switch, not an A17-type elevator door interlock.</li>
+<li><strong>Limit switches:</strong> Upper and lower travel limit switches, plus overtravel sensors on mechanical units.</li>
+<li><strong>Slack chain or cable detection:</strong> On mechanical units, sensors stop the lift if a chain or cable goes slack. Many units also have safety cams or carriage brakes that arrest the carriage if a chain fails.</li>
+<li><strong>Velocity fuse (hydraulic):</strong> A hydraulic valve that locks oil in the cylinder if a hose is severed, so the carriage cannot descend.</li>
+<li><strong>Controls off the carriage:</strong> VRC operator controls are never reachable from the carriage (MHI).</li>
+<li><strong>Emergency stops:</strong> E-stop buttons at each operating station.</li>
 </ul>
-<h3>VRC Cannot Carry People</h3>
-<p>VRCs are classified as material-only conveyors. They cannot carry people under any circumstance. Signage must clearly state "NOT FOR PERSONNEL USE" or equivalent. If your application requires lifting both materials and people, you must install a freight elevator under ASME A17.1. This distinction is the fundamental difference between VRC and elevator classification.</p>
+<h3>VRCs cannot carry people</h3>
+<p>VRCs are material-only conveyors. No one may ride the carriage, and signage at each landing must say so. If people must ride with the load, the application needs an elevator built to ASME A17.1.</p>
 <h2 id="apps-heading">VRC Applications</h2>
 <p><strong>Mezzanine material transport:</strong> The most common VRC application. VRCs lift pallets, cases, and totes between the ground floor and mezzanine pick modules in distribution centers and warehouses. <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> feed pallets onto the VRC platform at the lower level and receive them at the upper level.</p>
 <p><strong>Multi-level <a href="/industries/packaging-line-conveyors/">packaging facilities</a>:</strong> Packaging plants with production on one floor and warehousing on another use VRCs to move cased goods and pallets between levels. The VRC integrates with horizontal <a href="/conveyor-types/roller-conveyors/">roller conveyor</a> systems via <a href="/conveyor-types/transfer-conveyors/">transfer conveyors</a> at each level.</p>
-<p><strong><a href="/industries/food-conveyors/">Food and beverage:</a></strong> <a href="/industries/food-conveyors/sanitary/">Sanitary stainless steel</a> VRCs move product between processing floors and packaging areas. Food-grade VRCs use washdown-rated components and sealed enclosures to maintain hygienic conditions.</p>
-<p><strong>Manufacturing:</strong> VRCs move raw materials from receiving docks to elevated production floors and return finished goods to ground-level shipping. Heavy-duty VRCs (6,000-20,000 lbs) handle steel coils, engine assemblies, and fabricated sub-assemblies in automotive and industrial manufacturing.</p>
+<p><strong><a href="/industries/food-conveyors/">Food and beverage:</a></strong> VRCs move product between processing floors and packaging areas. Galvanized, epoxy, or <a href="/industries/food-conveyors/sanitary/">sanitary stainless</a> finishes are available for washdown areas.</p>
+<p><strong>Manufacturing:</strong> VRCs move raw materials from receiving docks to elevated production floors and return finished goods to ground-level shipping. Four-post mechanical units handle the heaviest loads, such as large fabricated assemblies.</p>
 <p><strong>Retail distribution:</strong> Multi-level retail distribution centers use VRCs to move merchandise between receiving, pick floors, and shipping levels. <a href="/conveyor-types/mdr-conveyors/">MDR conveyor</a> systems on each level connect to VRCs via powered <a href="/conveyor-types/accumulation-conveyors/">accumulation zones</a> that stage product for lift cycles.</p>
-<p><strong>When to choose a VRC over a spiral:</strong> VRCs suit batch-mode applications where throughput of 10-20 loads per hour is sufficient, loads are heavy (pallets, carts), or the lift height exceeds 40 feet. Spiral conveyors suit continuous-flow applications with lightweight products (under 75 lbs) and moderate lift heights. The VRC's batch cycle is the key trade-off, it lifts one load at a time, while spirals provide uninterrupted flow.</p>
+<p><strong>When to choose a VRC over a spiral:</strong> Choose a VRC when loads are heavy or large (pallets, carts), when the required rate fits a batch cycle, or when the lift height is beyond what a spiral can practically cover. Choose a <a href="/conveyor-types/spiral-conveyors/">spiral conveyor</a> for continuous flow of cases and totes. The VRC lifts one load per cycle, while a spiral moves product without interruption.</p>
 <h2 id="selection-heading">How to Specify a VRC</h2>
-<p>VRC specification requires defining these key parameters:</p>
+<p>VRC specification requires defining these key parameters (MHI Section 5 covers each in more detail):</p>
 <ul>
-<li><strong>Load weight and size:</strong> Maximum load weight, platform dimensions needed (width x depth x height clearance), and whether the load is a pallet, cart, tote, or mixed.</li>
-<li><strong>Travel height:</strong> Floor-to-floor distance between the lowest and highest stop. Include any below-grade pit or overhead clearance constraints.</li>
-<li><strong>Number of stops:</strong> Two-stop (ground + mezzanine) is the most common. Multi-stop VRCs serve 3-6 levels.</li>
-<li><strong>Throughput requirement:</strong> Loads per hour required. Calculate cycle time: travel time (up + down) + load time + unload time + gate open/close time. Divide 60 minutes by cycle time to get max loads per hour.</li>
-<li><strong>Loading method:</strong> Fork truck, hand pallet jack, powered <a href="/conveyor-types/roller-conveyors/">conveyor</a>, or manual cart push. Conveyor-fed VRCs integrate with horizontal <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> or <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> lines for automated loading/unloading.</li>
-<li><strong>Environment:</strong> Indoor/outdoor, temperature range, washdown, and hazardous area classification affect material selection and component ratings.</li>
-<li><strong>Code jurisdiction:</strong> Confirm local AHJ requirements for VRC installations. Some jurisdictions require permits, inspections, or registrations beyond ASME B20.1.</li>
+<li><strong>Load weight and size:</strong> Maximum load weight, carriage dimensions (width x depth x height clearance), and whether the load is a pallet, cart, tote, or mixed.</li>
+<li><strong>Load orientation and loading pattern:</strong> Which sides you load and unload from. Same side, opposite ends ("Z"), or adjacent sides determines straddle, cantilever, or four-post.</li>
+<li><strong>Travel height:</strong> Floor-to-floor distance between the lowest and highest stop. Include any pit or overhead clearance constraints.</li>
+<li><strong>Number of stops:</strong> Two-stop (ground plus mezzanine) is the most common. Hydraulic units are usually limited to two levels.</li>
+<li><strong>Throughput requirement:</strong> Loads per hour required. Calculate cycle time: travel time (up + down) + load time + unload time + gate open/close time. Divide 60 minutes by cycle time to get max loads per hour. Confirm the rated duty cycle with the manufacturer.</li>
+<li><strong>Loading method:</strong> Fork truck, hand pallet jack, powered <a href="/conveyor-types/roller-conveyors/">conveyor</a>, or manual cart push. Conveyor-fed VRCs integrate with horizontal <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> or <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> lines for automated loading and unloading.</li>
+<li><strong>Gates and enclosures:</strong> Gate type at each level and who supplies the enclosure. The installer must make sure the full installation meets B20.1 regardless of who supplies the gates.</li>
+<li><strong>Environment:</strong> Indoor or outdoor, temperature range, washdown, and hazardous area classification affect finish and component ratings.</li>
+<li><strong>Code jurisdiction:</strong> Confirm local AHJ requirements. Some jurisdictions require permits, inspections, or testing beyond ASME B20.1.</li>
 </ul>
-<p>See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for VRC pricing factors. Request quotes from at least two VRC manufacturers (PFlow, Wildeck, Autoquip) to compare options. <a href="/resources/automated-conveyor-systems/">System integrators</a> can design the complete horizontal + vertical conveyor system as a turnkey project.</p>
-<h2 id="mfg-heading">Leading VRC Manufacturers</h2>
+<p>See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for VRC cost factors. <a href="/resources/automated-conveyor-systems/">System integrators</a> can design the complete horizontal and vertical conveyor system as a turnkey project.</p>
+<h2 id="evaluate-heading">How to Evaluate VRC Options</h2>
 <ul>
-<li><strong>PFlow Industries</strong>, Milwaukee, WI. Largest dedicated VRC manufacturer in North America. Mechanical chain-driven VRCs with capacities from 500 to 100,000 lbs.</li>
-<li><strong>Wildeck</strong>, Waukesha, WI. VRCs, mezzanines, and vertical lifts. Mechanical and hydraulic models from 500 to 20,000 lbs.</li>
-<li><strong>Autoquip</strong>, Guthrie, OK. Hydraulic and mechanical VRCs and scissor lifts from 500 to 20,000 lbs.</li>
-<li><strong>Pallet Runner</strong>, VRC integration with automated pallet conveyor systems.</li>
-<li><strong>Dematic / Intelligrated</strong>, System integrators who specify and integrate VRCs from component manufacturers into complete <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a>.</li>
+<li><strong>Standard compliance:</strong> Ask the manufacturer to confirm in writing that the unit is designed and built to ASME B20.1, including the VRC appendix.</li>
+<li><strong>Rated capacity at your carriage size:</strong> Capacity often depends on carriage size and options. Get the rating for your exact carriage, not the series maximum.</li>
+<li><strong>Duty cycle:</strong> Compare rated cycles per hour and per day against your calculated requirement.</li>
+<li><strong>Fall arrest:</strong> Ask how the carriage is held if a chain, cable, or hose fails (safety cams, carriage brakes, velocity fuse).</li>
+<li><strong>Gate and enclosure scope:</strong> Clarify who supplies gates and enclosures and who signs off that the installation meets B20.1.</li>
+<li><strong>Installation and commissioning:</strong> Ask for the startup test procedure and the periodic inspection schedule.</li>
+</ul>
+<p>Get proposals from at least two VRC manufacturers on the same specification.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.pflow.com/wp-content/uploads/2020/02/MHI_CSS_vrc_application_guidelines_pdf.pdf" target="_blank" rel="noopener noreferrer">Application Guidelines for Vertical Reciprocating Conveyors (February 2019)</a>, MHI Conveyor and Sortation Systems VRC subcommittee. B20.1 jurisdiction, A17.1 exclusion, VRC vs material lift comparison, OSHA, IBC Chapter 30, mast configurations, enclosure and gate requirements, velocity fuse definition.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. Governing standard for conveyors, including VRCs.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.147" target="_blank" rel="noopener noreferrer">1910.147 The control of hazardous energy (lockout/tagout)</a>, OSHA. Lockout/tagout during VRC maintenance.</li>
+<li><a href="https://autoquip.com/blog/mechanical-vs-hydraulic-vertical-reciprocating-conveyers-vrcs-what-is-best-for-my-application/" target="_blank" rel="noopener noreferrer">Mechanical vs. Hydraulic Vertical Reciprocating Conveyors</a>, Autoquip. Mechanical and hydraulic capacity and travel ranges.</li>
+<li><a href="https://www.pflow.com/vertical-conveyors/mechanical/m-series/" target="_blank" rel="noopener noreferrer">M Series two-post mechanical lift</a>, PFlow Industries. Capacity, speed, configuration.</li>
+<li><a href="https://www.pflow.com/vertical-conveyors/mechanical/f-series/" target="_blank" rel="noopener noreferrer">F Series four-post mechanical lift</a>, PFlow Industries. Capacity, speed, configuration.</li>
+<li><a href="https://www.pflow.com/vertical-conveyors/hydraulic/21-series/" target="_blank" rel="noopener noreferrer">21 Series hydraulic lift</a>, PFlow Industries. Capacity, speed, rise, cycles per hour.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a vertical reciprocating conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>A VRC lifts materials vertically between levels on a guided carriage. VRCs are classified as conveyors under ASME B20.1, not elevators, which simplifies code compliance. VRCs cannot carry people. See our <a href="/conveyor-types/">complete conveyor type guide</a> for other vertical transport options.</p>
+<p>A VRC is a hydraulic or mechanical lift that moves materials between levels on a guided carriage. VRCs are classified as conveyors under ASME B20.1, not elevators, and ASME A17.1 excludes B20 conveyors from its scope. No one may ride the carriage. See our <a href="/conveyor-types/">complete conveyor type guide</a> for other vertical transport options.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">VRC vs freight elevator, what is the difference?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>VRCs move materials only (ASME B20.1). Freight elevators move materials and people (ASME A17.1). VRCs cost 40-60% less, install in weeks (not months), and do not require a pit or machine room. Elevators are required only when people must ride with the load.</p>
+<p>VRCs move material only and are built to ASME B20.1. Freight elevators can carry people and are built to ASME A17.1. Per MHI's VRC application guidelines, VRCs normally run below 100 FPM, ride on rollers in guide columns, never have controls on the carriage, and are typically regulated by OSHA. Elevators run on T-rails in a hoistway and are typically inspected by a state or municipal authority. Some jurisdictions still require permits or testing for a VRC.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the weight capacity of a VRC?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>500-20,000 lbs standard, up to 100,000 lbs custom. Standard pallet VRCs handle 2,000-6,000 lbs. PFlow, Wildeck, and Autoquip publish detailed capacity tables.</p>
+<p>It depends on drive type, mast configuration, and carriage size. Autoquip rates its mechanical VRCs up to 20,000 lbs and hydraulic VRCs up to 6,000 lbs. PFlow rates its two-post M Series up to 10,000 lbs and its four-post F Series up to 50,000 lbs standard, customizable to 200,000 lbs. Four-post designs carry the highest loads.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What safety standards apply to VRCs?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>ASME B20.1 Section 3008 governs VRCs. Key requirements: full guarding, interlocked gates, travel limit switches, emergency stops, slack chain/cable detection, and overload protection. Local building codes may add additional requirements. The VRC must never carry people.</p>
+<p>ASME B20.1 governs VRCs, and since 2015 it has included a mandatory VRC appendix covering design, installation, commissioning, and periodic inspection. Key requirements: 96-inch enclosures at each level (handrails may form part of the guarding at the top landing in some cases), interlocked gates, travel limit switches, and slack chain or cable sensors on mechanical units. OSHA lockout/tagout applies during maintenance. IBC Chapter 30 recognizes VRCs under B20.1, and local officials may require permits or testing.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">How much does a VRC cost compared to an elevator?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p>VRCs cost 40-60% less than a comparable freight elevator. VRCs do not require a pit, machine room, or elevator contractor license. Installation takes weeks, not months. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for detailed pricing factors.</p>
+<p>A VRC is generally the lower-cost option because it is built to the conveyor standard instead of the elevator code. VRC cost drivers are capacity, travel height, number of levels, carriage size, drive type, gates and enclosures, and any local permitting or testing. A freight elevator adds a hoistway, elevator-grade rails and door interlocks, and elevator inspection. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
 
 </div>
 </div>

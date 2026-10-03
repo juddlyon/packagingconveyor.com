@@ -23,17 +23,17 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between zero-pressure and minimum-pressure accumulation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact (typically 2-5 lbs of backpressure) within zones. ZPA costs more because it requires more zones and sensors per linear foot. Minimum-pressure suits durable products like corrugated cases. ZPA is required for fragile products, printed labels, and shrink-wrapped goods." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact, with drive pressure set low enough that rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can be adjusted to bring backpressure to 2% of the live load. ZPA costs more because it needs a sensor and drive control in every zone. Minimum-pressure suits durable products like corrugated cases. ZPA is required for fragile products, printed labels, and shrink-wrapped goods." }
     },
     {
       "@type": "Question",
       "name": "How much accumulation buffer do I need on my packaging line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Accumulation buffer length depends on downstream equipment downtime frequency and duration. A common rule of thumb is to provide 3-5 minutes of buffer capacity between major equipment sections. Calculate buffer length using: Length (ft) = (products per minute x product length in feet x buffer minutes) + gap allowances. Critical transitions like before palletizers or case packers often require more buffer than transitions between labelers or checkweighers." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Accumulation buffer length depends on how often the downstream machine stops and how long each stop lasts. Measure or estimate the stops you want the buffer to absorb, then calculate buffer length using: Length (ft) = (products per minute x product length in feet x buffer minutes) + gap allowances. Transitions before machines with frequent or long stops, such as palletizers and case packers, usually need more buffer than transitions between labelers or checkweighers." }
     },
     {
       "@type": "Question",
       "name": "What conveyor type is best for accumulation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) conveyors are the most widely specified technology for zero-pressure accumulation in new installations. Belt-driven live roller with pneumatic zones and line-shaft with clutch/brake zones are legacy alternatives. Belt conveyors with servo-driven zone controls handle irregular product shapes. The best type depends on product characteristics, throughput, budget, and whether compressed air is available." }
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) conveyors are a common choice for zero-pressure accumulation in new installations because they need no compressed air. Belt-driven live roller with pneumatic zones and line-shaft with zone brakes are established alternatives, and chain-driven live roller with a gearmotor per zone handles pallets. Belt conveyors with servo-driven zone controls handle irregular product shapes. The best type depends on product characteristics, throughput, budget, and whether compressed air is available." }
     }
   ]
 };
@@ -51,22 +51,21 @@ const articleSchema = {
 <h1>Accumulation Conveyors: Zero-Pressure &amp; Minimum-Pressure</h1>
 <p class="usa-intro">An accumulation conveyor buffers products between upstream and downstream processes, absorbing speed differences, equipment stoppages, and operator breaks without shutting down the entire packaging line. Accumulation conveyors operate in three modes: zero-pressure (ZPA), minimum-pressure, and slug-mode. They use zone-controlled roller or belt drive systems to stop, hold, and release products on demand, preventing the product damage and line inefficiency caused by uncontrolled backpressure.</p>
 <h2 id="why-heading">Why Accumulation Matters</h2>
-<p>Every <a href="/industries/packaging-line-conveyors/">packaging line</a> consists of multiple machines operating at different speeds with different reliability profiles. A filler runs at 120 bottles per minute. A labeler runs at 100 per minute. A case packer stops for 15 seconds every time it forms a new case. A palletizer cycles every 45 seconds. Without accumulation, any downstream stop forces an immediate upstream stop, cascading back through the entire line.</p>
-<p>Accumulation conveyors decouple these processes. Products queue in a controlled buffer zone, and upstream machines continue producing while downstream equipment catches up. This decoupling increases overall line efficiency (OEE) by 10-30% in typical <a href="/conveyor-functions/ball-transfer-tables/">packaging line applications</a>. The buffer absorbs the micro-stops, speed differences, and changeovers that otherwise cascade into full-line shutdowns. For dedicated FIFO and LIFO buffer strategies, see our <a href="/conveyor-types/buffer-conveyors/">buffer conveyor guide</a>.</p>
+<p>Every <a href="/industries/packaging-line-conveyors/">packaging line</a> consists of multiple machines operating at different speeds with different reliability profiles. A filler and a labeler rarely run at exactly the same rate. A case packer pauses while it forms each case. A palletizer runs in cycles. Without accumulation, any downstream stop forces an immediate upstream stop, cascading back through the entire line.</p>
+<p>Accumulation conveyors decouple these processes. Products queue in a controlled buffer zone, and upstream machines continue producing while downstream equipment catches up. This decoupling raises overall line efficiency (OEE), because short downstream stops no longer stop the upstream machines. The buffer absorbs the micro-stops, speed differences, and changeovers that otherwise cascade into full-line shutdowns. For dedicated FIFO and LIFO buffer strategies, see our <a href="/conveyor-types/buffer-conveyors/">buffer conveyor guide</a>.</p>
 <h3>The Backpressure Problem</h3>
 <p>Without proper accumulation technology, products pile up on standard conveyors with full backpressure. The lead product presses against the stopped downstream machine. Every upstream product presses against the one in front of it. This causes label scuffing, carton crushing, shrink-wrap damage, and product shifting inside cases. Backpressure also overloads conveyor motors, trips drives, and increases belt and roller wear.</p>
 <p>Accumulation conveyors solve this by controlling each zone independently, eliminating or minimizing the pressure between products.</p>
 <h2 id="modes-heading">Three Accumulation Modes</h2>
 <h3>Zero-Pressure Accumulation (ZPA)</h3>
-<p>ZPA stops each product in its own zone with a controlled gap to the next product. No product-to-product contact occurs at any point during accumulation. Each zone uses a photo-eye sensor to detect product presence and an independent drive mechanism to start or stop rollers in that zone. When a downstream zone signals "occupied," the upstream zone holds its product and sends an "occupied" signal further upstream.</p>
-<p>ZPA protects fragile products, printed labels, shrink-wrapped packs, and any product where surface contact during accumulation causes damage. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> provide the cleanest ZPA implementation because each zone has its own motor. Belt-driven live roller conveyors achieve ZPA with pneumatic belt lifters or pop-up stops, but these add mechanical complexity.</p>
+<p>ZPA stops each product in its own zone with a controlled gap to the next product. Hytrol defines <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">zero-pressure conveyors</a> as accumulating conveyors that create space between products and do not allow them to touch. No product-to-product contact occurs at any point during accumulation. Each zone uses a photo-eye sensor to detect product presence and an independent drive mechanism to start or stop rollers in that zone. When a downstream zone signals "occupied," the upstream zone holds its product and sends an "occupied" signal further upstream.</p>
+<p>ZPA protects fragile products, printed labels, shrink-wrapped packs, and any product where surface contact during accumulation causes damage. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> provide the cleanest ZPA implementation because each zone has its own motor. Belt-driven, line-shaft, and chain-driven live roller conveyors also come in zero-pressure versions, using pneumatic zone hardware or a gearmotor per zone.</p>
 <h3>Minimum-Pressure Accumulation</h3>
-<p><a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">Minimum-pressure accumulation</a> allows light product-to-product contact, typically 2-5 lbs of backpressure per product. Products queue touching each other but with controlled force that prevents damage to durable goods like corrugated cases and rigid totes. Minimum-pressure systems need fewer zones and sensors per foot than ZPA, reducing cost by 20-40%.</p>
-<p>Minimum-pressure accumulation uses roller conveyors with zones controlled by pneumatic clutches, band brakes, or belt-release mechanisms. As backpressure from downstream products pushes against an upstream zone's roller, a sensor detects the product's backward movement and disengages the drive in that zone. The product stops with only the light contact pressure of the immediately adjacent downstream product.</p>
-<p>Hytrol, Intelligrated, and Dematic offer both ZPA and minimum-pressure accumulation configurations on their <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyor</a> platforms.</p>
+<p><a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">Minimum-pressure accumulation</a> allows light product-to-product contact. Hytrol describes <a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">minimum-pressure conveyors</a> as accumulation conveyors that allow products to lightly touch, with drive pressure on the tread rollers adjusted manually to bring backpressure to 2% of the live load. Products queue touching each other but with controlled force that suits durable goods like corrugated cases and rigid totes. Minimum-pressure systems need fewer sensors and zone controls than ZPA, which lowers cost.</p>
+<p>On a belt-driven minimum-pressure conveyor such as Hytrol's 190-ACC, pressure rollers hold the drive belt against the carrying rollers, and the installer sets that pressure just high enough to move the heaviest product. When the lead product stops, the rollers under the queue slip, so each product pushes on the next with only light force. Hytrol builds both zero-pressure and minimum-pressure versions of its <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyor</a> lines.</p>
 <h3>Slug-Mode Accumulation</h3>
-<p>Slug-mode accumulation groups products into batches (slugs) with full backpressure within each slug but gaps between slugs. A slug zone typically holds 3-10 products. Slug accumulation suits batch-oriented downstream processes like <a href="/conveyor-functions/tray-loading/">tray loading</a>, case packing, palletizer layer forming, and <a href="/conveyor-functions/collating-laning/">collating and laning operations</a>.</p>
-<p>Slug zones release entire groups simultaneously on command from a PLC. The conveyor runs at transport speed between releases and holds the slug at rest between cycles. Slug mode is the lowest-cost accumulation method because it requires the fewest zones and sensors.</p>
+<p>Slug-mode accumulation groups products into batches (slugs) that release together. Slug size is set by the downstream process. Slug accumulation suits batch-oriented downstream processes like <a href="/conveyor-functions/tray-loading/">tray loading</a>, case packing, palletizer layer forming, and <a href="/conveyor-functions/collating-laning/">collating and laning operations</a>.</p>
+<p>Slug zones release entire groups simultaneously on command from a PLC. The conveyor runs at transport speed between releases and holds the slug at rest between cycles. Zero-pressure zone controllers can often run in slug mode as well: Hytrol's CREZD manual describes switching its zone controllers between singulation mode and slug mode.</p>
 <h2 id="comparison-heading">Accumulation Mode Comparison</h2>
 <table>
 <thead>
@@ -81,7 +80,7 @@ const articleSchema = {
 <tr>
 <td>Product Contact</td>
 <td>None (gaps maintained)</td>
-<td>Light (2-5 lbs)</td>
+<td>Light (adjustable backpressure)</td>
 <td>Full within slug</td>
 </tr>
 <tr>
@@ -91,10 +90,10 @@ const articleSchema = {
 <td>Low</td>
 </tr>
 <tr>
-<td>Zones per Foot</td>
+<td>Zones</td>
 <td>1 zone per product</td>
-<td>1 zone per 3-5 products</td>
-<td>1 zone per slug</td>
+<td>Few or none (drive pressure set along length)</td>
+<td>1 zone group per slug</td>
 </tr>
 <tr>
 <td>Sensors Required</td>
@@ -104,9 +103,9 @@ const articleSchema = {
 </tr>
 <tr>
 <td>Best Technology</td>
-<td>MDR, pneumatic BDLR</td>
-<td>Pneumatic BDLR/line-shaft</td>
-<td>Any powered roller</td>
+<td>MDR, zoned BDLR, line-shaft, or CDLR</td>
+<td>BDLR with adjustable drive pressure</td>
+<td>Zone controllers in slug mode</td>
 </tr>
 <tr>
 <td>Best For</td>
@@ -115,46 +114,57 @@ const articleSchema = {
 <td>Batch release, layer forming</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$$$</td>
-<td>$$</td>
-<td>$$</td>
+<td>Main Cost Drivers</td>
+<td>Sensor, controller, and drive or brake in every zone</td>
+<td>Conveyor length, pressure adjustment hardware</td>
+<td>Zone controls, release logic</td>
 </tr>
 </tbody>
 </table>
-<p>Cost comparison is relative within accumulation category. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for pricing factors.</p>
+<p>See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for pricing factors.</p>
 <h2 id="sizing-heading">How to Size Accumulation Buffer</h2>
 <p>Buffer length determines how long the upstream line can continue running while downstream equipment is stopped. Undersizing the buffer eliminates the decoupling benefit. Oversizing wastes floor space and capital.</p>
 <h3>Buffer Length Formula</h3>
 <p class="formula"><strong>Buffer Length (ft) = (Products/min x Product Length in ft x Buffer Minutes) + (Gaps x Number of Products)</strong></p>
-<p>For ZPA with 3" gaps between 12" cases at 30 cases per minute with 3 minutes of buffer:</p>
+<p>Worked example with illustrative inputs: ZPA with 3" gaps between 12" cases at 30 cases per minute and 3 minutes of buffer. On a ZPA conveyor the actual gap depends on zone length, so use your quoted zone length minus product length.</p>
 <p class="formula">Buffer = (30 x 1.0 x 3) + (0.25 x 90) = 90 + 22.5 = <strong>112.5 ft</strong></p>
 <h3>How Much Buffer Time?</h3>
-<p>Buffer time depends on the downstream equipment's typical stop duration and frequency. General guidelines:</p>
+<p>Buffer time depends on how often the downstream machine stops and how long each stop lasts. Size from measured stop data on the existing line or from the machine supplier's stated changeover and replenishment times, then decide which stops the buffer must absorb. Typical stop causes by location:</p>
 <ul>
-<li><strong>Before a palletizer:</strong> 3-5 minutes. Palletizers stop for sheet feeding, pallet dispensing, and stretch wrap cycles.</li>
-<li><strong>Before a case packer:</strong> 2-3 minutes. Case packers stop for case blank replenishment and minor jams.</li>
-<li><strong>Before a labeler or printer:</strong> 1-2 minutes. Short stops for ribbon changes and label roll changes.</li>
-<li><strong>Before a manual station:</strong> 3-5 minutes. Operator breaks, shift changes, and task completion variability.</li>
+<li><strong>Before a palletizer:</strong> sheet feeding, pallet dispensing, and pallet change cycles.</li>
+<li><strong>Before a case packer:</strong> case blank replenishment and minor jams.</li>
+<li><strong>Before a labeler or printer:</strong> ribbon and label roll changes.</li>
+<li><strong>Before a manual station:</strong> operator breaks, shift changes, and task time variability.</li>
 </ul>
 <h3>Floor Space Alternatives</h3>
-<p>Long accumulation runs consume floor space. Two alternatives reduce the footprint. Spiral accumulators wrap the accumulation conveyor into a vertical helix, trading vertical space for floor space. Bi-level accumulation tables use an upper and lower conveyor tier connected by incline/decline sections, doubling capacity per floor square foot. Both alternatives increase cost significantly compared to single-level accumulation.</p>
+<p>Long accumulation runs consume floor space. Two alternatives reduce the footprint. Spiral accumulators wrap the accumulation conveyor into a vertical helix, trading vertical space for floor space. Bi-level accumulation uses an upper and lower conveyor tier connected by incline and decline sections, adding a second layer of accumulation over the same floor area. Both alternatives increase cost significantly compared to single-level accumulation.</p>
 <h2 id="tech-heading">Accumulation Conveyor Technologies</h2>
 <h3>MDR Zero-Pressure Accumulation</h3>
-<p><a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller) conveyors</a> provide the cleanest ZPA implementation. Each zone contains a 24VDC motorized roller, 2-4 slave rollers driven by O-ring bands, and a photo-eye sensor. The zone controller card reads the sensor, communicates with adjacent zones, and drives the motor. No compressed air, no pneumatic valves, and no mechanical clutches. Interroll, Itoh Denki, and Rulmeca supply the MDR components that Dematic, Intelligrated, TGW, and Bastian Solutions integrate into complete <a href="/resources/automated-conveyor-systems/">automated systems</a>.</p>
+<p><a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller) conveyors</a> provide the cleanest ZPA implementation. Each zone contains a low-voltage DC motorized roller, idler rollers driven from it by bands or belts, and a photo-eye sensor. The zone controller reads the sensor, communicates with adjacent zones, and drives the motor. No compressed air, no pneumatic valves, and no mechanical clutches. MDR zones are a common building block in <a href="/resources/automated-conveyor-systems/">automated systems</a>.</p>
 <h3>Pneumatic BDLR Accumulation</h3>
-<p><a href="/conveyor-types/roller-conveyors/powered/">Belt-driven live roller</a> accumulators use pneumatic cylinders to raise and lower the drive belt in each zone. When a zone must hold product, the cylinder drops the belt away from the rollers, and the rollers coast to a stop. When the zone must release, the cylinder lifts the belt back into contact. This requires compressed air infrastructure (typically 80-100 PSI) and pneumatic valve banks. Hytrol's accumulation models use this approach.</p>
+<p><a href="/conveyor-types/roller-conveyors/powered/">Belt-driven live roller</a> zero-pressure accumulators remove drive from each zone pneumatically. In Hytrol's <a href="https://cdn.hytrol.com/2013_647_abez.pdf" target="_blank" rel="noopener noreferrer">ABEZ</a>, each zone has a zone controller, a pressure frame that applies and removes drive, and a pneumatically operated brake. The ABEZ manual sets the air regulator to a working pressure of 35 psi. This approach needs compressed air and a valve in each zone.</p>
 <h3>Line-Shaft Accumulation</h3>
-<p>Line-shaft accumulators use pneumatic or mechanical O-ring release mechanisms. A pneumatic clamp presses or releases the O-ring bands against the rotating line shaft. Released rollers coast to a stop. Engaged rollers drive the product forward. Line-shaft accumulation suits lighter products (under 100 lbs) and moderate speeds. See our <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor guide</a> for line-shaft details.</p>
+<p>Line-shaft accumulators add a stopping mechanism to each zone while the shaft keeps turning. In Hytrol's <a href="https://cdn.hytrol.com/2006_568_138nspez_190nspez.pdf" target="_blank" rel="noopener noreferrer">190-NSPEZ</a>, air bags in each zone inflate to stop that zone from driving, working with brake pads, and the manual sets the regulator to 40 psi. Without zone control, O-ring slip on the shaft gives light-pressure accumulation for lighter products. See our <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor guide</a> for line-shaft details.</p>
+<h3>Chain-Driven Live Roller Accumulation</h3>
+<p>Pallets and heavy loads accumulate on chain-driven live roller with a gearmotor in each zone. In Hytrol's <a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">CREZD models</a>, each zone has a zone controller, a zone starter box, and its own gearmotor, so pallets queue without touching and without compressed air. See <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a>.</p>
 <h3>Belt Conveyor Accumulation</h3>
-<p>Belt conveyors can provide accumulation for irregularly shaped products that cannot ride on rollers. Servo-driven zone belt conveyors use individual belt sections with independent drives. Each belt section operates like an MDR zone but with a continuous belt surface. Dorner and mk North America offer precision zone belt conveyors for small-product packaging applications. Belt accumulation costs more per foot than roller accumulation but handles products that rollers cannot.</p>
+<p>Belt conveyors can provide accumulation for irregularly shaped products that cannot ride on rollers. Servo-driven zone belt conveyors use individual belt sections with independent drives. Each belt section operates like an MDR zone but with a continuous belt surface, which suits small products in packaging applications. Belt accumulation costs more per foot than roller accumulation but handles products that rollers cannot.</p>
 <h2 id="apps-heading">Accumulation Conveyor Applications</h2>
-<p><strong>Pre-palletizer buffering:</strong> The most common accumulation application in packaging. Cases accumulate before the palletizer so the upstream case packing line continues running during pallet changes, sheet insert cycles, and stretch wrapping. A 3-5 minute buffer before the palletizer can increase line OEE by 15-25%.</p>
+<p><strong>Pre-palletizer buffering:</strong> The most common accumulation application in packaging. Cases accumulate before the palletizer so the upstream case packing line continues running during pallet changes, sheet insert cycles, and stretch wrapping. Size this buffer from the palletizer's measured stop durations.</p>
 <p><strong>Between filling and packing:</strong> Filled containers accumulate between the filler/capper and the case packer. This absorbs the case packer's stop-and-go cycle and prevents the filler from shutting down during case forming delays.</p>
 <p><strong>Before <a href="/conveyor-functions/reject-systems/">quality inspection and reject</a>:</strong> Products accumulate before checkweighers, metal detectors, and vision inspection stations. The buffer ensures a steady, controlled feed rate into inspection equipment for reliable detection.</p>
 <p><strong>Distribution center merge points:</strong> Products from multiple pick zones accumulate before merging onto trunk conveyor lines. <a href="/conveyor-types/mdr-conveyors/">MDR ZPA zones</a> prevent products from colliding at merge points and ensure orderly release onto the main line.</p>
 <p><strong>Before <a href="/conveyor-types/transfer-conveyors/">transfer</a> and sortation:</strong> Products accumulate before right-angle transfers, diverters, and sorting stations. The accumulation zone meters products into the transfer at the correct spacing and timing for reliable transfer operation.</p>
 <p><strong><a href="/industries/food-conveyors/">Food and beverage lines</a>:</strong> ZPA accumulation protects labeled bottles, shrink-wrapped multipacks, and decorated cans from scuffing during line stops. <a href="/industries/food-conveyors/sanitary/">Sanitary accumulation conveyors</a> use stainless steel MDR rollers and open-frame construction for washdown environments.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Zero-Pressure Conveyor</a>, Hytrol. Definition of zero-pressure accumulation, models by drive type.</li>
+<li><a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Minimum Pressure Conveyor</a>, Hytrol. Products lightly touch, drive pressure adjusted to bring backpressure to 2% of the live load.</li>
+<li><a href="https://cdn.hytrol.com/2015_682_190acc.pdf" target="_blank" rel="noopener noreferrer">Model 190-ACC Installation and Maintenance Manual</a>, Hytrol. Pressure rollers and knurled-nut adjustment for minimum-pressure accumulation.</li>
+<li><a href="https://cdn.hytrol.com/2013_647_abez.pdf" target="_blank" rel="noopener noreferrer">Model ABEZ Installation and Maintenance Manual</a>, Hytrol. Belt-driven zero-pressure zone design, 35 psi working pressure.</li>
+<li><a href="https://cdn.hytrol.com/2006_568_138nspez_190nspez.pdf" target="_blank" rel="noopener noreferrer">Model 138-NSPEZ &amp; 190-NSPEZ Installation and Maintenance Manual</a>, Hytrol. Line-shaft zero-pressure zones with air bags and brake pads, 40 psi working pressure.</li>
+<li><a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">Model 199-CREZD, 25-CREZD &amp; 36-CREZD Installation and Maintenance Manual</a>, Hytrol. Chain-driven zones with a gearmotor per zone, singulation and slug modes.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is zero-pressure accumulation?</button></h3>
@@ -164,17 +174,17 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is the difference between zero-pressure and minimum-pressure?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>ZPA maintains gaps between every product. Minimum-pressure allows 2-5 lbs of contact force between adjacent products. ZPA costs more (more zones, more sensors). Minimum-pressure suits durable corrugated cases. ZPA is required for fragile, labeled, or shrink-wrapped products.</p>
+<p>ZPA maintains gaps between every product. Minimum-pressure allows light contact, with drive pressure set so rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can bring backpressure to 2% of the live load. ZPA costs more (a sensor and drive control in every zone). Minimum-pressure suits durable corrugated cases. ZPA is required for fragile, labeled, or shrink-wrapped products.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How much buffer do I need on my packaging line?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Provide 3-5 minutes of buffer before palletizers, 2-3 minutes before case packers, and 1-2 minutes before labelers. Use the formula: Length (ft) = (Products/min x Product Length in ft x Buffer Minutes) + gap allowances. See our <a href="/industries/packaging-line-conveyors/">packaging line conveyor guide</a> for layout planning details.</p>
+<p>Size the buffer from how often the downstream machine stops and how long each stop lasts. Palletizers and case packers usually need more buffer than labelers or checkweighers. Use the formula: Length (ft) = (Products/min x Product Length in ft x Buffer Minutes) + gap allowances. See our <a href="/industries/packaging-line-conveyors/">packaging line conveyor guide</a> for layout planning details.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What conveyor type is best for accumulation?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p><a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> dominate new ZPA installations. <a href="/conveyor-types/roller-conveyors/powered/">Belt-driven live roller</a> with pneumatic zones and line-shaft with clutch/brake are legacy alternatives. Belt conveyors with servo zones handle irregular shapes. Selection depends on product, throughput, budget, and air supply availability.</p>
+<p><a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> are a common choice for new ZPA installations because they need no compressed air. <a href="/conveyor-types/roller-conveyors/powered/">Belt-driven live roller</a> with pneumatic zones and line-shaft with zone brakes are established alternatives, and chain-driven live roller with a gearmotor per zone handles pallets. Belt conveyors with servo zones handle irregular shapes. Selection depends on product, throughput, budget, and air supply availability.</p>
 
 </div>
 </div>

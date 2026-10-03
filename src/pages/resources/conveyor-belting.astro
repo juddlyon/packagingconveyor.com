@@ -33,12 +33,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What belt material is FDA-approved for food contact?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Polyurethane, silicone, some PVC formulations, acetal and polypropylene modular plastic, and stainless steel are available in formulations that comply with FDA 21 CFR Part 177 for food contact. Polyurethane is widely specified because it combines food-contact compliance, abrasion resistance, and easy cleaning. USDA acceptance for meat and poultry also depends on belt construction: smooth, cleanable surfaces with no harborage points." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Polyurethane, silicone, some PVC formulations, acetal and polypropylene modular plastic, and stainless steel are available in food-contact formulations. The FDA clearance varies by material and food type, so ask the belt maker which regulation or clearance applies. Polyurethane is widely specified because it combines food-contact compliance, abrasion resistance, and easy cleaning. USDA acceptance for meat and poultry also depends on belt construction: smooth, cleanable surfaces with no harborage points." }
     },
     {
       "@type": "Question",
       "name": "Which conveyor belt material is most abrasion resistant?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Among polymer belts, rubber and polyurethane offer the highest abrasion resistance. In modular plastic belts, resin choice matters: acetal is hard and wear resistant, abrasion-resistant nylon grades are offered for severe wear, and polypropylene trades some wear resistance for chemical resistance. Metal belts resist abrasion best but cost more. Ask suppliers for wear data on your product." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Among polymer belts, rubber and polyurethane offer the highest abrasion resistance. For rubber, ask for the cover grade: DIN W and ISO D are the high-abrasion grades, and ARPM Grade II is the North American abrasion grade. In modular plastic belts, resin choice matters: acetal is hard and wear resistant, abrasion-resistant nylon grades are offered for severe wear, and polypropylene trades some wear resistance for chemical resistance. Metal belts resist abrasion best but cost more. Ask suppliers for wear data on your product." }
     },
     {
       "@type": "Question",
@@ -64,7 +64,7 @@ const faqSchema = {
 <th>Heat &amp; Cold</th>
 <th>Food Contact</th>
 <th>Abrasion Resistance</th>
-<th>Relative Cost</th>
+<th>What Drives Cost</th>
 <th>Best For</th>
 </tr>
 </thead>
@@ -74,7 +74,7 @@ const faqSchema = {
 <td>Ambient. Stiffens in cold, softens in heat</td>
 <td>Limited formulations</td>
 <td>Moderate</td>
-<td>$</td>
+<td>Commodity compound. Cost rises with extra plies and textured tops</td>
 <td>Dry, packaged goods, distribution</td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@ const faqSchema = {
 <td>Freezer to hot washdown</td>
 <td>Yes</td>
 <td>High</td>
-<td>$$</td>
+<td>Food-grade compound and compliance documents. Positive-drive and metal-detectable grades add cost</td>
 <td>Food packaging, sanitary</td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ const faqSchema = {
 <td>Highest heat of the elastomers</td>
 <td>Yes</td>
 <td>Low</td>
-<td>$$$</td>
+<td>Specialty compound for heat and release. Shorter life on cutting or abrasive product</td>
 <td>Bakery, oven discharge, sticky</td>
 </tr>
 <tr>
@@ -98,7 +98,7 @@ const faqSchema = {
 <td>Varies by compound</td>
 <td>Specialty compounds only</td>
 <td>Very high</td>
-<td>$$</td>
+<td>Cover grade (abrasion, heat, oil), cover thickness, and carcass strength</td>
 <td>Heavy-duty, incline, impact</td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ const faqSchema = {
 <td>Freezer to hot, varies by resin</td>
 <td>Yes (acetal, PP, PE)</td>
 <td>High, varies by resin</td>
-<td>$$-$$$</td>
+<td>Resin, module style, sprockets, and radius capability. Repairs are by module, not by belt</td>
 <td>Food processing, curves, repairability</td>
 </tr>
 <tr>
@@ -114,27 +114,77 @@ const faqSchema = {
 <td>Oven heat to deep freeze</td>
 <td>Yes (stainless)</td>
 <td>Very high</td>
-<td>$$$-$$$$</td>
+<td>Alloy (304 or 316), construction (mesh, flat wire, solid), and sprocket or drum drive</td>
 <td>Ovens, freezers, heavy loads</td>
 </tr>
 </tbody>
 </table>
-<p>Cost per linear foot: $ = lowest, $$$$ = highest. Ratings vary by formulation and supplier, so confirm temperature range, food-contact compliance, and chemical resistance on the belt datasheet. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
+<p>Ratings vary by formulation and supplier, so confirm temperature range, food-contact compliance, and chemical resistance on the belt datasheet. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
 <h2 id="selection-heading">How to Choose a Conveyor Belt</h2>
 <p>Answer these questions in order. Each one narrows the list.</p>
 <ol>
 <li><strong>Does exposed product touch the belt?</strong> If the product is unpackaged food or pharmaceutical, the belt must be food-contact compliant (PU, silicone, food-grade modular, stainless metal, or a compliant PVC). Sealed cases and wrapped goods can run on any material.</li>
-<li><strong>What is the operating temperature?</strong> Ambient: PVC, PU, modular. Freezer: PU, suitable modular resins, metal. Hot product: silicone or metal. Oven zones: metal.</li>
+<li><strong>What is the operating temperature?</strong> Ambient: PVC, PU, modular. Freezer: PU, low-temperature modular resins such as polyethylene or acetal (not polypropylene), metal. Hot product: silicone or metal. Oven zones: metal.</li>
 <li><strong>What chemicals and wear does the belt face?</strong> Sanitizers (chlorine, quaternary ammonium, peracetic acid) degrade PVC faster than PU. Oils and fats need oil-resistant formulations. Abrasive products (sugar, salt, grit, sharp-edged parts) favor rubber, PU, or wear-resistant modular resins.</li>
 <li><strong>Is the conveyor flat or inclined?</strong> Moderate inclines need textured tops (rough-top, nub-top, friction-top). Steep inclines need <a href="/conveyor-types/cleated-conveyors/">cleats or flights</a>.</li>
 <li><strong>How critical is uptime?</strong> Modular belts (quick module replacement) and positive-drive belts (no tracking adjustment) suit high-uptime lines. Lines that tolerate occasional belt changes can use lower-cost flat belts.</li>
 <li><strong>What is the budget priority?</strong> Lowest upfront cost: PVC. Lowest repair cost on high-wear lines: modular plastic. Best general food-grade value: PU.</li>
 </ol>
+<h2 id="food-contact-heading">Food-Contact Belt Materials</h2>
+<p>In the US, polymer belt materials that touch food are covered by FDA's indirect food additive rules in 21 CFR Part 177, with a separate section for each polymer family. A section sets which ingredients and conditions are allowed, so the belt is only compliant if the supplier's compound meets that section for your food type. Ask for a compliance letter that names the exact section.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Typical food uses</th>
+<th>Cleaning considerations</th>
+<th>FDA regulation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polyurethane (PU)</td>
+<td>Meat, poultry, dairy, bakery, confectionery, produce on flat and positive-drive belts</td>
+<td>Smooth, non-porous top. Cut or frayed edges can expose the fabric carcass, so specify sealed edges for wet cleaning</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1680" target="_blank" rel="noopener noreferrer">21 CFR 177.1680</a> covers polyurethane resins, but only for contact with bulk dry food. For wet or fatty food, the supplier's letter must name the clearance it relies on</td>
+</tr>
+<tr>
+<td>PVC</td>
+<td>Packaged product, and dry food only on grades sold as food-contact</td>
+<td>Sanitizers degrade it faster than PU. Fabric carcass can wick moisture at damaged edges</td>
+<td>No single Part 177 section covers PVC belting. Compliance depends on the resin and plasticizer clearances, so require a supplier letter</td>
+</tr>
+<tr>
+<td>Rubber</td>
+<td>Food-grade white nitrile and similar compounds where grip or oil resistance is needed</td>
+<td>Textured covers hold residue. Confirm the compound tolerates fats, oils, and your sanitizers</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2600" target="_blank" rel="noopener noreferrer">21 CFR 177.2600</a>, rubber articles intended for repeated use</td>
+</tr>
+<tr>
+<td>Modular plastic: acetal</td>
+<td>Meat, poultry, and bakery lines needing a hard, low-friction, wear-resistant surface</td>
+<td>Hinges and rods trap soil, so choose open-hinge designs. Check the resin's chemical resistance chart against your sanitizers</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470</a> (polyoxymethylene copolymer) or <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2480" target="_blank" rel="noopener noreferrer">177.2480</a> (homopolymer)</td>
+</tr>
+<tr>
+<td>Modular plastic: polypropylene and polyethylene</td>
+<td>PP for chemical resistance above freezing. PE for freezers and impact</td>
+<td>Same hinge and rod cleaning issues as acetal. PP is not a freezer resin</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a>, olefin polymers</td>
+</tr>
+<tr>
+<td>Stainless steel wire mesh</td>
+<td>Ovens, fryers, cooling tunnels, freezers, draining and washing</td>
+<td>Open grid drains and tolerates high-temperature cleaning. Wire crossovers and edge welds hold soil</td>
+<td>Not a Part 177 polymer. Specify the alloy (304 or 316) and sanitary construction</td>
+</tr>
+</tbody>
+</table>
 <h2 id="pvc-heading">PVC Belts</h2>
 <p>PVC (polyvinyl chloride) belts are the lowest-cost option for dry, room-temperature applications: cartons, cases, bags, and packaged goods in distribution, fulfillment, and non-food packaging. Most standard PVC formulations are not intended for direct food contact, which limits their use in <a href="/industries/food-conveyors/">food packaging</a> to already-packaged product.</p>
 <p>PVC resists oils, greases, and mild solvents and comes in smooth, rough-top, and fabric-textured surfaces. Rough-top PVC adds grip for inclines. PVC stiffens in the cold and softens with heat, so it is a poor fit for freezer or oven service. Construction is one or more plies of polyester or cotton fabric for tensile strength, with a PVC coating that forms the carrying surface.</p>
 <h2 id="pu-heading">Polyurethane (PU) Belts</h2>
-<p>Polyurethane is the standard belt material for food-grade packaging conveyors. PU formulations that comply with <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">FDA 21 CFR Part 177</a> allow direct contact with meat, dairy, baked goods, confectionery, and produce. PU resists abrasion, cutting, food acids, fats, and cleaning agents better than PVC, which makes it the default for <a href="/industries/food-conveyors/sanitary/">sanitary conveyor</a> applications. PU also stays flexible at freezer temperatures where PVC turns stiff.</p>
+<p>Polyurethane is the standard belt material for food-grade packaging conveyors. Food-grade PU belts are used on meat, dairy, bakery, confectionery, and produce lines, but the FDA clearance depends on the formulation and the food type. 21 CFR 177.1680 covers polyurethane resins only for bulk dry food, so for wet or fatty food ask the belt maker for a compliance letter that names the clearance it relies on. PU resists abrasion, cutting, food acids, fats, and cleaning agents better than PVC, which makes it the default for <a href="/industries/food-conveyors/sanitary/">sanitary conveyor</a> applications. PU also stays flexible at freezer temperatures where PVC turns stiff.</p>
 <p>Food-grade PU belts usually come in white or blue for visual contamination detection: a blue fragment stands out in white product, and a white belt shows dark contaminants. Some PU and modular belts are also made in metal-detectable formulations so <a href="/conveyor-functions/inspection-detection/">metal detection systems</a> can catch belt fragments.</p>
 <p>PU surfaces include smooth, textured (diamond, nub, or waffle patterns for grip), and positive-drive. Positive-drive PU belts have teeth or lugs on the underside that engage sprockets, which eliminates slip and tracking adjustment while keeping a smooth, cleanable top surface.</p>
 <h2 id="silicone-heading">Silicone Belts</h2>
@@ -143,9 +193,38 @@ const faqSchema = {
 <h2 id="rubber-heading">Rubber Belts</h2>
 <p>Rubber belts provide the highest grip, abrasion resistance, and impact absorption of the polymer belts. Natural and synthetic compounds (SBR, nitrile, neoprene, EPDM) suit different environments. Rubber dominates heavy bulk handling, and in packaging it appears on <a href="/conveyor-types/incline-conveyors/">incline conveyors</a> carrying heavy cases, bags, and raw materials, and at load points where product drops onto the belt.</p>
 <p>Most rubber compounds are not intended for direct food contact. Specialty white nitrile and other food-grade compounds are formulated to FDA requirements such as <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2600" target="_blank" rel="noopener noreferrer">21 CFR 177.2600</a> for rubber articles in repeated food contact. Otherwise, textured PU belts are the usual food-grade substitute for rubber's grip.</p>
+<h2 id="rubber-grades-heading">Rubber Cover Grades for Abrasion</h2>
+<p>Heavy-duty rubber belts are sold by cover grade. The grade tells you how the cover rubber performed in a lab abrasion test (ISO 4649, also published as DIN 53516), plus tensile strength and elongation. In that test a rubber sample is moved across an abrasive sheet on a rotating drum and the lost volume is measured in cubic millimeters. A lower number means less rubber lost and better abrasion resistance, as <a href="https://bulkinside.com/bulk-solids-handling/mechanical-conveying/technical-guidance-series-part-one-abrasion/" target="_blank" rel="noopener noreferrer">Fenner Dunlop explains in its abrasion guidance</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Grades</th>
+<th>What the Grades Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DIN 22102 (Germany, widely used worldwide)</td>
+<td>Y, X, W</td>
+<td>Y is for normal service. X adds resistance to cutting, impact, and gouging from large, heavy, sharp lumps. W is for highly abrasive material and is the highest DIN abrasion grade. Fenner Dunlop gives the DIN Y abrasion limit as less than 150 mm³ average loss.</td>
+</tr>
+<tr>
+<td>EN ISO 14890 (cover classes from ISO 10247)</td>
+<td>H, D, L</td>
+<td>H is for cut and impact service and D is for high abrasion. Belt makers map them to DIN grades: Fenner Dunlop lists its RE cover as DIN X and ISO H, and its RS cover as DIN W and ISO D.</td>
+</tr>
+<tr>
+<td>ARPM (formerly RMA), North America</td>
+<td>Grade I, Grade II</td>
+<td>Fenner Dunlop Americas groups Grade I compounds under cut and gouge resistance (large, heavy lumps) and Grade II compounds under abrasion resistance.</td>
+</tr>
+</tbody>
+</table>
+<p>The systems do not map one-to-one, so ask for the actual abrasion loss, tensile, and elongation values on the belt datasheet rather than the grade letter alone. Most packaging lines never need these grades. They matter on incline and bulk-handling belts that carry abrasive raw materials. For an abrasion-resistant plastic belt, the choice is resin, not cover grade: see the modular section below.</p>
 <h2 id="modular-heading">Modular Plastic Belts</h2>
 <p>Modular plastic belts are interlocking injection-molded modules joined by hinge rods. A damaged section is replaced module by module without removing the belt, which makes <a href="/conveyor-types/modular-conveyors/">modular belt conveyors</a> the lowest-maintenance option on lines where sharp products, heavy loads, or process equipment damage belts often.</p>
-<p>Resin choice sets performance. Acetal (POM) is hard, strong, and wear resistant with low friction. Polypropylene resists chemicals and costs less. Polyethylene holds up to impact and low temperatures. Abrasion-resistant nylon grades are offered for severe wear. Food-grade formulations are standard. Surfaces include flat, raised-rib, perforated (for drainage, airflow, and vacuum), friction-top, and nub-top.</p>
+<p>Resin choice sets performance. Acetal (POM) is hard, strong, and wear resistant with low friction. Polypropylene resists chemicals and costs less, but it is not a freezer resin. Polyethylene holds up to impact and low temperatures. As one example, <a href="https://www.intralox.com/belt-finder/modular-plastic-belting/series-800/flat-top" target="_blank" rel="noopener noreferrer">Intralox rates its Series 800 Flat Top</a> at 34 to 220°F in polypropylene and -50 to 150°F in polyethylene or acetal (with polyethylene rods), so the same belt style covers different temperature bands depending on resin. Abrasion-resistant nylon grades are offered for severe wear. Food-grade formulations are standard. Surfaces include flat, raised-rib, perforated (for drainage, airflow, and vacuum), friction-top, and nub-top.</p>
 <p>Sprockets drive the belt through its hinge rods or module features, so the belt cannot mistrack and holds position for <a href="/conveyor-functions/indexing-conveyors/">indexing applications</a>. Radius-capable modules articulate through curves, spirals, and serpentine <a href="/conveyor-functions/storage-conveyors/">storage conveyors</a>. The main downside is upfront cost, which is higher than PVC or PU flat belts and is offset by lower repair labor and less downtime on high-wear, long-shift lines.</p>
 <h2 id="metal-heading">Metal Belts</h2>
 <p>Metal belts handle the most extreme conditions: oven and furnace heat, deep freezing, heavy loads, corrosive chemicals, and abrasive products. Three constructions serve packaging-adjacent lines:</p>
@@ -178,6 +257,18 @@ const faqSchema = {
 <h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-maintenance/">Maintenance Guide</a></h3>
 <p class="usa-collection__description">PM schedules and troubleshooting</p></div></li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">21 CFR Part 177, Indirect Food Additives: Polymers</a>, U.S. FDA via eCFR. Food-contact regulation for polymer belt materials.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2600" target="_blank" rel="noopener noreferrer">21 CFR 177.2600, Rubber articles intended for repeated use</a>, U.S. FDA via eCFR. Food-contact rule for rubber compounds.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1680" target="_blank" rel="noopener noreferrer">21 CFR 177.1680, Polyurethane resins</a>, U.S. FDA via eCFR. Polyurethane food-contact use limited to bulk dry food.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520, Olefin polymers</a>, U.S. FDA via eCFR. Polypropylene and polyethylene food-contact rule.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470, Polyoxymethylene copolymer</a> and <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2480" target="_blank" rel="noopener noreferrer">177.2480, Polyoxymethylene homopolymer</a>, U.S. FDA via eCFR. Acetal food-contact rules.</li>
+<li><a href="https://www.intralox.com/belt-finder/modular-plastic-belting/series-800/flat-top" target="_blank" rel="noopener noreferrer">Series 800 Flat Top belt data</a>, Intralox. Temperature ranges by belt resin.</li>
+<li><a href="https://bulkinside.com/bulk-solids-handling/mechanical-conveying/technical-guidance-series-part-one-abrasion/" target="_blank" rel="noopener noreferrer">Technical Guidance Series Part One: Abrasion</a>, Fenner Dunlop via Bulk Inside. ISO 4649 abrasion test and DIN/ISO grade families.</li>
+<li><a href="https://www.fennerdunlopemea.com/app/uploads/emea-product-range-en__digital.pdf" target="_blank" rel="noopener noreferrer">Conveyor Belting Product Range</a>, Fenner Dunlop EMEA. DIN Y, X, W meanings, DIN Y abrasion limit, and DIN/ISO grade mapping.</li>
+<li><a href="https://fennerdunlopamericas.com/compound-attribute/cut-gouge-arpm-grade-i/" target="_blank" rel="noopener noreferrer">Cut/Gouge Resistance (ARPM Grade I) compounds</a> and <a href="https://fennerdunlopamericas.com/compound-attribute/abrasion-arpm-grade-ii/" target="_blank" rel="noopener noreferrer">Abrasion Resistance (ARPM Grade II) compounds</a>, Fenner Dunlop Americas. ARPM grade families.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What are the main types of conveyor belt material?</button></h3>
@@ -187,12 +278,12 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What belt material is FDA-approved for food?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Polyurethane, silicone, some PVC formulations, acetal and polypropylene modular plastics, and stainless steel are available in formulations that comply with FDA 21 CFR Part 177. Polyurethane is widely specified because it combines compliance, abrasion resistance, and easy cleaning. USDA acceptance also depends on smooth, cleanable belt construction. Blue and white colors aid visual <a href="/conveyor-functions/inspection-detection/">contamination detection</a>.</p>
+<p>Polyurethane, silicone, some PVC formulations, acetal and polypropylene modular plastics, and stainless steel are available in food-contact formulations. The FDA clearance varies by material and food type, so ask the belt maker which regulation or clearance applies. Polyurethane is widely specified because it combines compliance, abrasion resistance, and easy cleaning. USDA acceptance also depends on smooth, cleanable belt construction. Blue and white colors aid visual <a href="/conveyor-functions/inspection-detection/">contamination detection</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Which belt material is most abrasion resistant?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Among polymer belts, rubber and polyurethane. In modular plastic belts, acetal is hard and wear resistant, abrasion-resistant nylon grades are offered for severe wear, and polypropylene trades some wear resistance for chemical resistance. Metal belts resist abrasion best but cost more. Ask suppliers for wear data on your product.</p>
+<p>Among polymer belts, rubber and polyurethane. For rubber, ask for the cover grade: DIN W and ISO D are the high-abrasion grades, and ARPM Grade II is the North American abrasion grade. In modular plastic belts, acetal is hard and wear resistant, abrasion-resistant nylon grades are offered for severe wear, and polypropylene trades some wear resistance for chemical resistance. Metal belts resist abrasion best but cost more. Ask suppliers for wear data on your product.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How long does a conveyor belt last?</button></h3>

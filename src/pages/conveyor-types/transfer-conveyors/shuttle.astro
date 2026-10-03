@@ -29,12 +29,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How fast can a shuttle conveyor operate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Shuttle car travel speeds range from 100-300 FPM depending on load weight and travel distance. Cycle times vary from 3-10 seconds per lane change. Reciprocating pushers complete a push-and-return cycle in 1-3 seconds. Pop-up transfer shuttles cycle in 2-4 seconds. Throughput depends on the number of lanes served and the average travel distance between them." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Shuttle car cycle time is load time plus travel to the lane, unload time, and return travel, so it grows with the number of lanes and the distance between them. Reciprocating pushers cycle faster but serve only one or two lanes. Pop-up transfer arrays avoid travel time by placing one mechanism at each lane. Get rated cycle times from the supplier for your loads and layout." }
     },
     {
       "@type": "Question",
       "name": "When should I use a shuttle conveyor instead of a diverter?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use a shuttle conveyor when you need to serve many parallel lanes (4-20+) from a single infeed and throughput requirements are moderate. Use a diverter (push diverter, pop-up chain, or sortation system) when serving fewer lanes at higher speed. Shuttle cars excel in palletizer feed applications, lane distribution for case packing, and warehouse pallet put-away systems." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Use a shuttle conveyor when you need to serve many parallel lanes from a single infeed and throughput requirements are moderate. Use a diverter (push diverter, pop-up chain, or sortation system) when serving fewer lanes at higher speed. Shuttle cars excel in palletizer feed applications, lane distribution for case packing, and warehouse pallet put-away systems." }
     }
   ]
 };
@@ -57,33 +57,33 @@ const articleSchema = {
 <h1>Shuttle &amp; Reciprocating Conveyors</h1>
 <p class="usa-intro">A shuttle conveyor is a powered conveyor section mounted on a linear travel mechanism that moves back and forth to deliver products to multiple discharge points from a single infeed. Shuttle systems include shuttle cars (entire conveyor sections riding on tracks), reciprocating pushers (linear actuators that sweep products onto parallel lanes), and pop-up transfer shuttles (chain or roller mechanisms that rise and index between positions). These systems distribute products across palletizer lanes, case packing stations, and warehouse storage lanes in <a href="/industries/packaging-line-conveyors/">packaging and distribution operations</a>.</p>
 <h2 id="shuttle-car-heading">Shuttle Car Systems</h2>
-<p>A shuttle car carries an entire powered conveyor section along a linear rail or track system. The car receives product from a fixed infeed conveyor, travels laterally to align with the target discharge lane, and the onboard conveyor drives the product off onto the receiving line. The car then returns to the infeed position for the next product. Shuttle cars serve 4 to 20+ parallel lanes from a single infeed point.</p>
+<p>A shuttle car carries an entire powered conveyor section along a linear rail or track system. The car receives product from a fixed infeed conveyor, travels laterally to align with the target discharge lane, and the onboard conveyor drives the product off onto the receiving line. The car then returns to the infeed position for the next product. Shuttle cars serve many parallel lanes from a single infeed point.</p>
 <h3>Mechanical Design</h3>
 <p>Shuttle cars ride on precision linear rails with recirculating ball bearing guide blocks. A servo or AC gearmotor drives the car through a rack-and-pinion, belt drive, or chain drive. The onboard conveyor is typically a short section of <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> or <a href="/conveyor-types/flat-belt-conveyors/">belt conveyor</a> with its own drive motor. Power and control signals reach the moving car through a cable carrier (energy chain), festoon cable system, or bus bar collector.</p>
-<p>The car frame is structural steel, sized to support the product load plus the onboard conveyor weight at full travel speed. End-of-travel hard stops and deceleration sensors prevent overtravel. An absolute encoder or laser distance sensor provides real-time position feedback for lane alignment accuracy within +/- 0.25 inches.</p>
+<p>The car frame is structural steel, sized to support the product load plus the onboard conveyor weight at full travel speed. End-of-travel hard stops and deceleration sensors prevent overtravel. An absolute encoder or laser distance sensor provides real-time position feedback for lane alignment. Specify the alignment tolerance the receiving lane needs and ask the supplier to confirm it.</p>
 <h3>Performance Characteristics</h3>
-<p>Shuttle car travel speed ranges from 100 to 300 FPM, with acceleration and deceleration profiles controlled by VFD or servo drive. Lane-to-lane cycle time depends on travel distance: adjacent lane transfers take 3-4 seconds, while traversing 10+ lanes may take 8-12 seconds. Onboard conveyor speed matches the discharge lane speed, typically 60-150 FPM for case handling and 20-40 FPM for pallet handling.</p>
-<p>Throughput calculation accounts for average travel distance, not just adjacent-lane time. If the shuttle serves 10 lanes uniformly, average travel is to lane 5 (half the span). Intelligent sequencing algorithms minimize travel by grouping consecutive products destined for nearby lanes. Dematic and Intelligrated offer shuttle car systems with integrated lane-assignment optimization software.</p>
+<p>Travel speed, acceleration, and deceleration are controlled by VFD or servo drive, and heavier loads need gentler acceleration. Lane-to-lane cycle time depends on travel distance, so moves to far lanes take much longer than moves to adjacent lanes. Onboard conveyor speed matches the discharge lane speed, which is lower for pallets than for cases.</p>
+<p>Throughput calculation accounts for average travel distance, not just adjacent-lane time. If the shuttle serves 10 lanes uniformly, average travel is to lane 5 (half the span). Intelligent sequencing algorithms minimize travel by grouping consecutive products destined for nearby lanes. Ask suppliers whether their controls include lane-assignment sequencing.</p>
 <h3>Load Capacity</h3>
-<p>Case-handling shuttle cars support 10-150 lbs per product. Pallet-handling shuttle cars support 2,000-4,000 lbs per pallet. The rail system, car frame, and drive sizing scale with the maximum load and travel speed. Heavy pallet shuttle cars use <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyor</a> sections onboard and heavy-duty floor-mounted rail systems. Case shuttle cars use lighter roller or belt conveyor sections and overhead or floor-mounted rails.</p>
+<p>Case-handling and pallet-handling shuttle cars are built very differently. The rail system, car frame, and drive sizing scale with the maximum load and travel speed. Heavy pallet shuttle cars use <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyor</a> sections onboard and heavy-duty floor-mounted rail systems. Case shuttle cars use lighter roller or belt conveyor sections and overhead or floor-mounted rails.</p>
 <h2 id="pusher-heading">Reciprocating Pushers</h2>
 <p>A reciprocating pusher uses a linear actuator (pneumatic cylinder, servo-driven ball screw, or belt-driven linear unit) to push products sideways off a main conveyor line onto one or two perpendicular spur lanes. The pusher plate extends, contacts the product, pushes it across the conveyor width, and retracts. The cycle repeats for the next product.</p>
 <h3>Pneumatic Pushers</h3>
-<p>Pneumatic reciprocating pushers use air cylinders for the push stroke. They are the simplest and lowest-cost option for diverting products to a single reject lane or alternate between two lanes. Cycle time is 1-2 seconds for a push-and-return. Pneumatic pushers handle products from 1 to 50 lbs at line speeds up to 200 FPM. The push force depends on cylinder bore and air pressure, typically 50-200 lbs of push force at 80 PSI.</p>
+<p>Pneumatic reciprocating pushers use air cylinders for the push stroke. They are the simplest and lowest-cost option for diverting products to a single reject lane or alternate between two lanes. Push-and-return cycle time limits how many products per minute a pusher can handle. Push force is air pressure times piston area: a larger bore or higher supply pressure gives more force. Size the cylinder for the heaviest product and its friction on the conveyor surface.</p>
 <p>Pneumatic pushers suit <a href="/conveyor-functions/reject-systems/">reject system</a> applications where checkweighers, metal detectors, and vision systems trigger a push to remove failed products. The actuator fires on command and retracts automatically.</p>
 <h3>Servo-Driven Pushers</h3>
 <p>Servo-driven reciprocating pushers use a ball screw or belt-driven linear actuator with a servo motor. The servo controls push speed, acceleration, deceleration, and push distance independently. This allows the pusher to handle varying product sizes without mechanical adjustment and to push products gently (soft start, soft stop) to prevent product damage or tipping.</p>
-<p>Servo pushers cost more than pneumatic but provide programmable push profiles, position feedback, and the ability to push to multiple positions (2-4 lanes) from a single actuator by varying the stroke length. They eliminate the compressed air requirement. Cycle time is 1-3 seconds depending on stroke length and product weight.</p>
+<p>Servo pushers cost more than pneumatic but provide programmable push profiles, position feedback, and the ability to push to several positions from a single actuator by varying the stroke length. They eliminate the compressed air requirement. Cycle time depends on stroke length and product weight.</p>
 <h3>Sweep Arm Diverters</h3>
-<p>Sweep arm diverters are a variant of reciprocating pushers that use a rotating or pivoting arm instead of a linear pusher plate. The arm sweeps across the conveyor at an angle, guiding the product onto the spur lane with less impact than a straight push. Sweep arms handle orientation-sensitive products better than flat pushers because the angled contact reduces rotation during the divert. Hytrol and Bastian Solutions integrate sweep arm diverters into their <a href="/conveyor-types/diverting-merging/">diverting and merging systems</a>.</p>
+<p>Sweep arm diverters are a variant of reciprocating pushers that use a rotating or pivoting arm instead of a linear pusher plate. The arm sweeps across the conveyor at an angle, guiding the product onto the spur lane with less impact than a straight push. Sweep arms handle orientation-sensitive products better than flat pushers because the angled contact reduces rotation during the divert. See <a href="/conveyor-types/diverting-merging/">diverting and merging systems</a>.</p>
 <h2 id="popup-heading">Pop-Up Transfer Shuttles</h2>
 <p>Pop-up transfer shuttles combine the directional change of a <a href="/conveyor-types/transfer-conveyors/">pop-up transfer</a> with the multi-position capability of a shuttle. Chains or rollers rise above the main conveyor surface and drive the product perpendicular to the original travel direction. The pop-up mechanism indexes to different positions along the main conveyor to serve multiple discharge lanes without a moving car.</p>
 <h3>Pop-Up Chain Shuttle</h3>
 <p>Pop-up chain shuttles use parallel chain strands mounted between <a href="/conveyor-types/roller-conveyors/">roller conveyor</a> rollers. The chains lift, drive the product sideways, and lower. Multiple pop-up chain sections along the main conveyor each serve a dedicated discharge lane. A PLC controls which pop-up section activates based on product destination. This approach eliminates the moving car entirely but requires one pop-up mechanism per lane.</p>
-<p>Pop-up chain shuttles handle 10-300 lbs per product and cycle in 2-4 seconds. They maintain product orientation throughout the transfer. Dematic, Intelligrated, and TGW use pop-up chain transfer arrays in distribution center sortation zones where products divert from trunk lines to pick or pack lanes.</p>
+<p>Pop-up chain transfers handle heavier products than wheel diverters. The product moves sideways without rotating, so a different face leads on the discharge lane. A <a href="https://www.dornerconveyors.com/solutions/pop-up-transfers" target="_blank" rel="noopener noreferrer">90-degree pop-up transfer</a>, as Dorner describes it, uses conveyors moving perpendicular to each other to change direction. Pop-up arrays are used in distribution centers where products divert from trunk lines to pick or pack lanes.</p>
 <h3>Indexing Pop-Up Transfers</h3>
 <p>Indexing pop-up transfers use a single pop-up mechanism that physically moves along the main conveyor to reach different discharge positions. The mechanism rides on a linear rail beneath the conveyor and indexes to the target lane before activating. This reduces the number of pop-up mechanisms needed (one instead of one per lane) but adds index travel time to the cycle.</p>
-<p>Indexing pop-up transfers suit lower-throughput applications where the index travel time (2-5 seconds per lane change) does not bottleneck the system. They serve 4-12 lanes from a single mechanism and cost less than a full shuttle car or a pop-up-per-lane array.</p>
+<p>Indexing pop-up transfers suit lower-throughput applications where the index travel time does not bottleneck the system. They serve several lanes from a single mechanism and cost less than a full shuttle car or a pop-up-per-lane array.</p>
 <h2 id="comparison-heading">Shuttle System Comparison</h2>
 <table>
 <thead>
@@ -99,35 +99,35 @@ const articleSchema = {
 <tbody>
 <tr>
 <td>Lanes Served</td>
-<td>4-20+</td>
-<td>1-2</td>
-<td>2-4</td>
-<td>4-20+</td>
-<td>4-12</td>
+<td>Many</td>
+<td>One or two</td>
+<td>A few</td>
+<td>Many (one unit per lane)</td>
+<td>Several</td>
 </tr>
 <tr>
 <td>Cycle Time</td>
-<td>3-12 sec</td>
-<td>1-2 sec</td>
-<td>1-3 sec</td>
-<td>2-4 sec</td>
-<td>4-9 sec</td>
+<td>Grows with travel distance</td>
+<td>Fast</td>
+<td>Fast, set by stroke</td>
+<td>Fast, no travel</td>
+<td>Adds index travel</td>
 </tr>
 <tr>
-<td>Max Load</td>
-<td>4,000 lbs</td>
-<td>50 lbs</td>
-<td>100 lbs</td>
-<td>300 lbs</td>
-<td>300 lbs</td>
+<td>Load</td>
+<td>Cases to full pallets</td>
+<td>Light</td>
+<td>Light to medium</td>
+<td>Medium to heavy cases</td>
+<td>Medium to heavy cases</td>
 </tr>
 <tr>
 <td>Orientation</td>
 <td>Maintained</td>
 <td>May rotate</td>
 <td>May rotate</td>
-<td>Maintained</td>
-<td>Maintained</td>
+<td>No rotation, side face leads</td>
+<td>No rotation, side face leads</td>
 </tr>
 <tr>
 <td>Best For</td>
@@ -138,40 +138,47 @@ const articleSchema = {
 <td>Moderate-speed multi-lane</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$$$$</td>
-<td>$</td>
-<td>$$</td>
-<td>$$$</td>
-<td>$$$</td>
+<td>Main Cost Drivers</td>
+<td>Rails, car structure, drive, energy chain, guarding</td>
+<td>Cylinder, air supply</td>
+<td>Servo actuator and controls</td>
+<td>One pop-up mechanism per lane</td>
+<td>Single mechanism plus index drive</td>
 </tr>
 </tbody>
 </table>
-<p>Cycle times represent typical values; actual performance varies by load, travel distance, and manufacturer. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for pricing factors.</p>
+<p>Actual performance varies by load, travel distance, and manufacturer. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for pricing factors.</p>
 <h2 id="apps-heading">Shuttle Conveyor Applications</h2>
-<p><strong>Palletizer lane distribution:</strong> Shuttle cars distribute cases across 6-16 palletizer infeed lanes. The shuttle receives cases from a single trunk line and delivers each case to the correct palletizer based on SKU, pallet build sequence, or load-balancing logic. This is the most common shuttle car application in <a href="/industries/packaging-line-conveyors/">packaging facilities</a>. Intelligrated and Dematic supply shuttle car systems integrated with their palletizing platforms.</p>
-<p><strong>Case packing lane feed:</strong> Reciprocating pushers and servo-driven actuators distribute products across 2-6 case packing lanes. Each pusher diverts a programmed count of products into the target lane for <a href="/conveyor-functions/collating-laning/">collating and laning</a> before case packing. The servo pusher adjusts stroke length to match lane width and product size.</p>
-<p><strong>Warehouse pallet put-away:</strong> Pallet shuttle cars transport pallets from a receiving conveyor to one of many storage lane infeed positions. The shuttle aligns with the target lane and the onboard conveyor pushes the pallet onto the storage lane. This application uses heavy-duty shuttle cars with <a href="/conveyor-types/cdlr-conveyors/">CDLR onboard conveyors</a> rated for 2,000-4,000 lb pallets.</p>
+<p><strong>Palletizer lane distribution:</strong> Shuttle cars distribute cases across multiple palletizer infeed lanes. The shuttle receives cases from a single trunk line and delivers each case to the correct palletizer based on SKU, pallet build sequence, or load-balancing logic. This is the most common shuttle car application in <a href="/industries/packaging-line-conveyors/">packaging facilities</a>.</p>
+<p><strong>Case packing lane feed:</strong> Reciprocating pushers and servo-driven actuators distribute products across a small number of case packing lanes. Each pusher diverts a programmed count of products into the target lane for <a href="/conveyor-functions/collating-laning/">collating and laning</a> before case packing. The servo pusher adjusts stroke length to match lane width and product size.</p>
+<p><strong>Warehouse pallet put-away:</strong> Pallet shuttle cars transport pallets from a receiving conveyor to one of many storage lane infeed positions. The shuttle aligns with the target lane and the onboard conveyor pushes the pallet onto the storage lane. This application uses heavy-duty shuttle cars with <a href="/conveyor-types/cdlr-conveyors/">CDLR onboard conveyors</a> rated for the heaviest pallet in the system.</p>
 <p><strong>Layer forming and pattern building:</strong> Reciprocating pushers arrange products into layer patterns for palletizing. The pusher moves products into row positions, then a sweep bar pushes the completed row onto the layer-forming table. Multiple push cycles build a complete pallet layer pattern. Servo-driven pushers provide the positioning accuracy needed for tight layer patterns.</p>
 <p><strong>Sortation pre-conditioning:</strong> Pop-up transfer shuttle arrays distribute products from trunk lines to <a href="/conveyor-types/diverting-merging/sortation/">sortation system</a> infeed lanes. Each pop-up transfer feeds a dedicated sort lane. The PLC activates the correct pop-up based on product destination data from barcode or RFID reads. <a href="/conveyor-types/accumulation-conveyors/">Accumulation zones</a> upstream of the pop-up array meter products for reliable transfer.</p>
 <p><strong>Print-and-apply label stations:</strong> Shuttle conveyors position products at label application stations. The shuttle moves the product under a print-and-apply head, pauses for label placement, and advances to the next station or discharge point. Servo-driven shuttles provide the precise positioning needed for accurate label placement on multiple faces.</p>
 <h2 id="selection-heading">How to Select a Shuttle System</h2>
-<p><strong>Number of lanes drives the architecture.</strong> For 1-2 lanes, reciprocating pushers provide the simplest solution. For 3-6 lanes, servo pushers or small shuttle cars work. For 7+ lanes, full shuttle cars or pop-up transfer arrays are necessary. Pop-up arrays scale linearly (add one mechanism per lane) while shuttle cars scale by travel distance (one car covers all lanes).</p>
-<p><strong>Throughput determines feasibility.</strong> Calculate required cycles per minute. A shuttle car serving 10 lanes with an average 5-second cycle delivers 12 products per minute. If you need 30 products per minute across 10 lanes, one shuttle car cannot keep up. Options: add a second shuttle car on parallel rails, switch to a pop-up array, or use a high-speed <a href="/conveyor-types/diverting-merging/sortation/">sortation system</a>.</p>
+<p><strong>Number of lanes drives the architecture.</strong> For one or two lanes, reciprocating pushers provide the simplest solution. For a few lanes, servo pushers or small shuttle cars work. For many lanes, full shuttle cars or pop-up transfer arrays are needed. Pop-up arrays scale linearly (add one mechanism per lane) while shuttle cars scale by travel distance (one car covers all lanes).</p>
+<p><strong>Throughput determines feasibility.</strong> Calculate required cycles per minute. Products per minute equals 60 divided by the average cycle time in seconds. A shuttle car with a 5-second average cycle delivers 12 products per minute, so a requirement of 30 per minute needs a different approach. Options: add a second shuttle car on parallel rails, switch to a pop-up array, or use a high-speed <a href="/conveyor-types/diverting-merging/sortation/">sortation system</a>.</p>
+<p><strong>Guard the moving parts.</strong> Shuttle cars, pusher strokes, and pop-up mechanisms create shear and pinch points. <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">OSHA 29 CFR 1910.212</a> requires guarding of ingoing nip points and other machine hazards, and <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> covers conveyor safety. Fence the shuttle travel area or interlock access.</p>
 <p><strong>Product weight and fragility set constraints.</strong> Heavy pallets require shuttle cars with structural rail systems. Fragile products require pop-up transfers (no impact) or servo pushers (soft push profiles). Pneumatic pushers suit durable products where impact is acceptable.</p>
 <p><strong>Floor space and layout constraints matter.</strong> Shuttle cars need clear travel lanes along the full width of the lane array. Pop-up arrays integrate within the conveyor footprint but require more mechanisms. Reciprocating pushers need clearance on the push side for the actuator stroke.</p>
 <p><strong>Integration with upstream systems.</strong> Shuttle conveyors require precise product positioning at the infeed. <a href="/conveyor-types/mdr-conveyors/">MDR conveyor zones</a> with photo-eye sensors stage products at the shuttle infeed point. An <a href="/conveyor-types/accumulation-conveyors/">accumulation buffer</a> before the shuttle absorbs throughput variations and prevents starvation during long shuttle travel moves.</p>
 <h2 id="throughput-heading">Shuttle Throughput Calculations</h2>
 <p><strong>Shuttle car throughput formula:</strong></p>
 <p class="formula"><strong>Cycle Time = Load Time + Travel Time + Unload Time + Return Time</strong></p>
-<p>Load time is the time for product to transfer from the infeed conveyor onto the shuttle car (2-4 seconds for cases). Travel time depends on distance and car speed. Unload time is the time to discharge product at the target lane (2-4 seconds). Return time is the travel back to the infeed position.</p>
-<p><strong>Example:</strong> A shuttle car serves 8 lanes spaced 5 feet apart. Car travel speed is 200 FPM (3.33 ft/sec). Average travel distance to target lane is 4 lanes x 5 ft = 20 ft. Load time: 3 sec. Travel to lane: 6 sec. Unload: 3 sec. Return travel: 6 sec. Total cycle: 18 seconds. Maximum throughput: 60/18 = 3.3 products per minute.</p>
+<p>Load time is the time for product to transfer from the infeed conveyor onto the shuttle car. Travel time depends on distance, car speed, and acceleration. Unload time is the time to discharge product at the target lane. Return time is the travel back to the infeed position.</p>
+<p><strong>Illustrative example (assumed inputs, not a rating):</strong> A shuttle car serves 8 lanes spaced 5 feet apart. Car travel speed is 200 FPM (3.33 ft/sec). Average travel distance to target lane is 4 lanes x 5 ft = 20 ft. Load time: 3 sec. Travel to lane: 6 sec. Unload: 3 sec. Return travel: 6 sec. Total cycle: 18 seconds. Maximum throughput: 60/18 = 3.3 products per minute. The example ignores acceleration, so real cycles are longer.</p>
 <p><strong>Improving shuttle throughput:</strong></p>
 <ul>
-<li><strong>Dual shuttle cars:</strong> Two cars on parallel rails serve alternating cycles, doubling throughput.</li>
+<li><strong>Dual shuttle cars:</strong> Two cars on parallel rails serve alternating cycles and can approach double the throughput if the infeed keeps up.</li>
 <li><strong>Intelligent sequencing:</strong> Software sorts the product queue so consecutive products go to nearby lanes, minimizing travel distance.</li>
-<li><strong>Multi-product loading:</strong> The shuttle loads 2-3 products before traveling, serving multiple adjacent lanes per trip.</li>
+<li><strong>Multi-product loading:</strong> The shuttle loads more than one product before traveling, serving multiple adjacent lanes per trip.</li>
 <li><strong>Bi-directional unload:</strong> The onboard conveyor unloads to either side, halving the average travel distance for some lane configurations.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.dornerconveyors.com/solutions/pop-up-transfers" target="_blank" rel="noopener noreferrer">Pop-Up Transfers</a>, Dorner. 90-degree pop-up transfer using perpendicular conveyors.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General Requirements for All Machines</a>, OSHA. Guarding of nip points and other machine hazards.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1, Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety, including guarding.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
@@ -187,12 +194,12 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How fast can a shuttle conveyor operate?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Shuttle cars travel at 100-300 FPM with 3-12 second cycle times. Pneumatic pushers cycle in 1-2 seconds. Servo pushers cycle in 1-3 seconds. Pop-up transfer arrays cycle in 2-4 seconds. Throughput depends on lanes served and average travel distance.</p>
+<p>Shuttle car cycle time is load time plus travel to the lane, unload time, and return travel, so it grows with the number of lanes and the distance between them. Reciprocating pushers cycle faster but serve only one or two lanes. Pop-up transfer arrays avoid travel time by placing one mechanism at each lane. Get rated cycle times from the supplier for your loads and layout.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">When should I use a shuttle instead of a diverter?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Use a shuttle for many parallel lanes (4-20+) at moderate throughput. Use <a href="/conveyor-types/diverting-merging/">diverters and sorters</a> for fewer lanes at higher speed. Shuttle cars excel in palletizer feed, warehouse put-away, and multi-lane case packing distribution.</p>
+<p>Use a shuttle for many parallel lanes at moderate throughput. Use <a href="/conveyor-types/diverting-merging/">diverters and sorters</a> for fewer lanes at higher speed. Shuttle cars excel in palletizer feed, warehouse put-away, and multi-lane case packing distribution.</p>
 
 </div>
 </div>

@@ -29,12 +29,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What conveyor types are used between case packer and palletizer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Case transport conveyors between case packers and palletizers typically use belt-driven live roller, chain-driven live roller (CDLR), or MDR (motor-driven roller) conveyors. Roller conveyors handle the weight of sealed cases (10-60 lb typically) at moderate speeds (50-150 FPM). Accumulation zones buffer cases when the palletizer cycles. Gravity roller sections serve where elevation permits." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Case transport conveyors between case packers and palletizers typically use belt-driven live roller, chain-driven live roller (CDLR), or MDR (motor-driven roller) conveyors. Roller conveyor capacity and speed are chosen from the heaviest sealed case and the packer rate. Accumulation zones buffer cases when the palletizer cycles. Gravity roller sections serve where elevation permits." }
     },
     {
       "@type": "Question",
       "name": "How fast do case packing lines run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Case packing line speeds range from 5-10 cases per minute (CPM) for manual-assist systems to 60+ CPM for high-speed robotic or continuous-motion case packers. The conveyor system must match the case packer's output rate while providing accumulation for downstream equipment cycles. Typical mid-range systems run 15-30 CPM." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Case packing speed depends on the packer type, products per case, case size, and how steadily the infeed is fed. Manual-assist stations are limited by operator pace. Automatic drop-pack, wrap-around, and robotic packers run faster, and multi-robot cells add rate. For reference, Wexxar rates its WF30 fully automatic case erector at up to 30 cases per minute. The conveyor system must match the case packer's output rate while providing accumulation for downstream equipment cycles." }
     }
   ]
 };
@@ -56,17 +56,17 @@ const articleSchema = {
 <p>Case erectors take flat (knocked-down) corrugated blanks from a magazine, open them into box shape, fold and seal the bottom flaps, and discharge an empty, open-top case onto a conveyor. The erected case then travels to the case packer for product loading.</p>
 <p>Two erector types serve different speed and flexibility requirements:</p>
 <ul>
-<li><strong>Gravity-assist erectors ($-$$):</strong> Use gravity and mechanical fingers to open pre-scored blanks. Operator loads blank magazine manually. Speeds: 5-15 CPM. Suits low-volume operations. Wexxar Bel WF30 and Combi 2-EZ series are representative models.</li>
-<li><strong>Servo-driven erectors ($$-$$$):</strong> Use servo motors and vacuum cups to extract blanks from the magazine, open, fold, and seal. Speeds: 15-50+ CPM. Recipe-based changeover for multiple case sizes. Pearson CE25-T and Brenton M2000 are examples.</li>
+<li><strong>Semi-automatic erectors:</strong> An operator feeds blanks and assists with opening or folding, and the machine seals the bottom. Rate is set by operator pace. Suits low-volume lines and frequent size changes. Cost is driven mainly by the sealing method and size range.</li>
+<li><strong>Fully automatic erectors:</strong> Vacuum cups pull blanks from the magazine, then the machine opens, folds, and seals the case with no operator in the cycle. For reference, Wexxar rates its <a href="https://www.wexxar.com/products/fully-automatic-case-former-case-erector-wf30/" target="_blank" rel="noopener noreferrer">WF30 fully automatic case former</a> at up to 30 cases per minute (CPM). Cost is driven by speed, servo content, and how many case sizes the machine must change over to.</li>
 </ul>
 <p>The conveyor between case erector and case packer is typically a short section of flat belt or roller conveyor with photoeye sensors. The sensor signals the erector to stop when accumulated cases reach a set count, preventing case buildup that jams the packer infeed. Case spacing on this conveyor matches the packer's loading cycle.</p>
 <h2 id="packing-heading">Case Packing Methods</h2>
 <h3>Drop-Pack (Vertical) Case Packing</h3>
 <p>Drop-pack case packers collate product on a conveyor above the case, then drop the product group vertically into an open-top case positioned below. The product collating conveyor uses <a href="/conveyor-functions/collating-laning/">laning and grouping</a> mechanisms to form the case pattern (e.g., 4x3 or 6x4). A servo-driven bucket or flight system partitions product into groups. The case indexes under the loading station, the loading head descends to place product, and the loaded case advances to sealing.</p>
-<p>Drop-pack suits bottles, cans, jars, and rigid containers that withstand the vertical drop without damage. Typical speeds: 10-40 CPM. Cushioned landing mechanisms (foam pads, air cylinders) soften the drop for fragile items.</p>
+<p>Drop-pack suits bottles, cans, jars, and rigid containers that withstand the vertical drop without damage. Cushioned landing mechanisms (foam pads, air cylinders) soften the drop for fragile items.</p>
 <h3>Wrap-Around Case Packing</h3>
 <p>Wrap-around packers form the case around a collated product group. A flat corrugated blank wraps around the product, bottom first, then sides, then top, creating a tightly fitting case with minimal void space. The wrapping motion uses mechanical plows and servo-controlled folding arms.</p>
-<p>Wrap-around packing uses less corrugated material than pre-erected cases (no overlapping flaps). The tighter fit protects product better during shipping and reduces dunnage costs. However, products must be stable enough to hold their collated pattern during the wrapping motion. Wrap-around suits multipacks of bottles, cans, cartons, and pouches. Typical speeds: 15-60 CPM.</p>
+<p>Wrap-around packing uses less corrugated material than pre-erected cases (no overlapping flaps). The tighter fit protects product better during shipping and reduces dunnage costs. However, products must be stable enough to hold their collated pattern during the wrapping motion. Wrap-around suits multipacks of bottles, cans, cartons, and pouches.</p>
 <h3>Robotic Case Packing</h3>
 <p><a href="/industries/packaging-line-conveyors/case/robotic-case-packing/">Robotic case packers</a> use delta robots, articulated arms, or gantry systems to pick products from a conveyor and place them into cases. Robotic packing handles the widest range of product types, sizes, and case patterns, recipe-based changeover adjusts pick patterns, place coordinates, and speed. See our dedicated <a href="/industries/packaging-line-conveyors/case/robotic-case-packing/">robotic case packing guide</a> for detailed coverage.</p>
 <h3>Side-Load Case Packing</h3>
@@ -77,23 +77,23 @@ const articleSchema = {
 <ul>
 <li><strong>Lane dividers:</strong> Guide rails split a single product stream into multiple parallel lanes. Products fill lanes sequentially until the case count is reached. Simple and low cost. Limited to uniform, round products. See <a href="/conveyor-functions/collating-laning/">collating and laning</a> for details.</li>
 <li><strong>Servo-driven grouping:</strong> Servo belts with flights or pushers separate and group products at precise intervals. Handles variable product sizes through recipe changes. Higher cost but maximum flexibility.</li>
-<li><strong>Robot-based collating:</strong> Delta robots pick individual products and place them into the case pattern on a staging conveyor. Handles mixed products, random orientation, and complex patterns. Highest cost but unlimited flexibility.</li>
+<li><strong>Robot-based collating:</strong> Delta robots pick individual products and place them into the case pattern on a staging conveyor. Handles mixed products, random orientation, and complex patterns. Highest cost and the most flexibility.</li>
 </ul>
 <p>The collating conveyor must match the case packer's cycle rate. If the packer loads one case every 3 seconds (20 CPM), the collating conveyor must form a complete pattern every 3 seconds. <a href="/conveyor-types/accumulation-conveyors/">Accumulation zones</a> upstream buffer product when the packer stops for case changeover or jam clearing.</p>
 <h2 id="sealer-heading">Case Sealers</h2>
 <p>Case sealers close and seal loaded cases using tape, hot-melt glue, or staples. The sealer integrates with the case conveyor, the loaded case enters the sealer on powered rollers or belt, the top flaps close (gravity, plows, or pneumatic arms), adhesive applies, and the sealed case exits.</p>
 <ul>
-<li><strong>Tape sealers ($):</strong> Apply pressure-sensitive tape to the top and bottom center seam. Uniform-size sealers (fixed width and height) cost the least. Random-size sealers (auto-adjusting) handle multiple case sizes without manual changeover. Loveshaw and 3M-Matic supply tape sealers.</li>
-<li><strong>Hot-melt sealers ($$):</strong> Apply hot-melt adhesive to flaps and compress. Produces a tamper-evident seal and a cleaner appearance than tape. Required for club store (Costco, Sam's Club) shipments that prohibit tape. Nordson supplies hot-melt application equipment.</li>
-<li><strong>Staple closers ($$):</strong> Wire stitching through corrugated flaps. Used for heavy-duty cases (meat, produce) where tape adhesion fails in cold or wet environments.</li>
+<li><strong>Tape sealers:</strong> Apply pressure-sensitive tape to the top and bottom center seam. Uniform-size sealers (fixed width and height) are the simplest and least costly. Random-size sealers adjust automatically to each case, which adds sensors and mechanics but removes manual changeover.</li>
+<li><strong>Hot-melt sealers:</strong> Apply hot-melt adhesive to the flaps and compress them. Gives a tamper-evident seal and a cleaner appearance than tape. Some retail customers specify glued cases, so confirm customer packaging requirements before choosing. Cost is driven by the glue system, compression section, and heated hoses.</li>
+<li><strong>Staple closers:</strong> Wire stitching through corrugated flaps. Used for heavy-duty cases (meat, produce) where tape adhesion can be unreliable in cold or wet conditions.</li>
 </ul>
-<p>Case sealer throughput must match or exceed the case packer output. A 30 CPM case packer needs a sealer capable of 30+ CPM. Sealer belt speed typically runs 80-150 FPM. Photoeye sensors at the sealer infeed detect case arrival and trigger the sealing cycle.</p>
+<p>Case sealer throughput must match or exceed the case packer output. A 30 CPM case packer needs a sealer rated for at least 30 CPM. Photoeye sensors at the sealer infeed detect case arrival and trigger the sealing cycle. Tape cutting blades, drive belts, and flap folders create cut and pinch hazards that <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">OSHA 1910.212</a> requires guarding against.</p>
 <h2 id="transport-heading">Case Transport Conveyors</h2>
-<p>Case transport conveyors move sealed cases from the sealer to palletizing, labeling, checkweighing, or shipping. These conveyors handle case weights from 5 lb (lightweight consumer goods) to 80+ lb (heavy industrial parts). Conveyor type selection depends on case weight, speed, and routing complexity.</p>
+<p>Case transport conveyors move sealed cases from the sealer to palletizing, labeling, checkweighing, or shipping. Case weights range from light consumer goods to heavy industrial parts, so conveyor type selection depends on the heaviest case, the rate, and routing complexity. Design, guarding, and emergency stops on these conveyors fall under <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>.</p>
 <ul>
-<li><strong><a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller</a> ($$):</strong> Standard for moderate case loads (10-50 lb) at 50-150 FPM. O-ring or poly-V belt drives rollers. Quiet, energy-efficient, and low maintenance. Hytrol and TGW supply high-volume BDLR case conveyors.</li>
-<li><strong><a href="/conveyor-types/cdlr-conveyors/">Chain-driven live roller (CDLR)</a> ($$$):</strong> For heavy cases (40-80+ lb). Roller chain drives each roller. Handles impact loading from case packers and accumulation pressure from palletizer staging.</li>
-<li><strong><a href="/conveyor-types/mdr-conveyors/">MDR (motor-driven roller)</a> ($$$):</strong> Zero-pressure accumulation for case staging before palletizer. Each zone independently controlled. Energy-efficient, zones run only when product is present. Preferred for modern <a href="/industries/warehouse-conveyors/">warehouse and distribution</a> systems.</li>
+<li><strong><a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller</a>:</strong> Common for light and moderate case loads. O-ring or poly-V belts drive the rollers. Quiet, and needs less maintenance than chain drives.</li>
+<li><strong><a href="/conveyor-types/cdlr-conveyors/">Chain-driven live roller (CDLR)</a>:</strong> For heavy cases. Roller chain drives each roller. Handles impact loading from case packers and accumulation pressure from palletizer staging.</li>
+<li><strong><a href="/conveyor-types/mdr-conveyors/">MDR (motor-driven roller)</a>:</strong> Zero-pressure accumulation for case staging before palletizer. Each zone independently controlled. Energy-efficient, zones run only when product is present. Preferred for modern <a href="/industries/warehouse-conveyors/">warehouse and distribution</a> systems.</li>
 </ul>
 <p>Routing conveyors use <a href="/conveyor-types/transfer-conveyors/">right-angle transfers</a>, diverters, and merge conveyors to direct cases from multiple packing lines to a central palletizer or shipping area. For budgeting, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
 <h2 id="compare-heading">Case Packing Methods Compared</h2>
@@ -101,44 +101,50 @@ const articleSchema = {
 <thead>
 <tr>
 <th>Method</th>
-<th>Speed (CPM)</th>
+<th>Relative Speed</th>
 <th>Product Types</th>
 <th>Changeover</th>
-<th>Relative Cost</th>
+<th>Main Cost Driver</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Drop-pack</td>
-<td>10-40</td>
+<td>Moderate</td>
 <td>Rigid bottles, cans, jars</td>
-<td>Mechanical (15-30 min)</td>
-<td>$$-$$$</td>
+<td>Mechanical change parts</td>
+<td>Collating section and change parts</td>
 </tr>
 <tr>
 <td>Wrap-around</td>
-<td>15-60</td>
+<td>Moderate to high</td>
 <td>Multipacks, stable groups</td>
 <td>Recipe + blank change</td>
-<td>$$$</td>
+<td>Servo folding sections and blank handling</td>
 </tr>
 <tr>
 <td>Side-load</td>
-<td>10-30</td>
+<td>Low to moderate</td>
 <td>Cartons, trays, flat items</td>
-<td>Mechanical (15-30 min)</td>
-<td>$$-$$$</td>
+<td>Mechanical change parts</td>
+<td>Pusher and case handling mechanics</td>
 </tr>
 <tr>
 <td>Robotic</td>
-<td>15-60+</td>
+<td>Scales with robot count</td>
 <td>Any shape, mixed products</td>
-<td>Recipe (1-2 min)</td>
-<td>$$$-$$$$</td>
+<td>Recipe selection, plus gripper change if needed</td>
+<td>Robots, grippers, vision, guarding</td>
 </tr>
 </tbody>
 </table>
-<p>CPM = cases per minute. Speeds are typical ranges for single-machine systems.</p>
+<p>Relative speed compares typical single-machine systems. Actual rate depends on products per case, case size, and the specific machine. Ask each supplier for a rated speed on your products and cases.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.wexxar.com/products/fully-automatic-case-former-case-erector-wf30/" target="_blank" rel="noopener noreferrer">WF30 Fully Automatic Case Former</a>, Wexxar. Rated speed of up to 30 cases per minute.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General requirements for all machines</a>, OSHA. Guarding of points of operation and ingoing nip points.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety requirements for design, installation, and operation.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a case packing conveyor system?</button></h3>
@@ -153,12 +159,12 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What conveyor types connect packer to palletizer?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p><a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller</a>, <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>, or <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> handle case weights of 10-60+ lb at 50-150 FPM with accumulation zones for palletizer staging.</p>
+<p><a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller</a>, <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>, or <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> carry sealed cases to the palletizer, with accumulation zones for palletizer staging. Size capacity and speed from your heaviest case and the packer rate.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How fast do case packing lines run?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>5-10 CPM for manual-assist, 15-30 CPM for mid-range systems, 30-60+ CPM for high-speed robotic or continuous-motion packers. The conveyor system must match packer output while providing accumulation for downstream equipment.</p>
+<p>It depends on packer type, products per case, and case size. Manual-assist stations run at operator pace. Automatic and robotic packers run faster, and multi-robot cells add rate. Wexxar rates its WF30 fully automatic case erector at up to 30 CPM. The conveyor system must match packer output while providing accumulation for downstream equipment.</p>
 
 </div>
 </div>

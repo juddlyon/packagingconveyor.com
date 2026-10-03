@@ -26,10 +26,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How does zero-pressure accumulation work?",
+      "name": "How does a ZPA conveyor work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ZPA conveyors divide the conveyor into zones, each with its own drive mechanism and photo-eye sensor. Zone logic follows a simple rule: if the downstream zone is empty, release and transport; if occupied, stop and hold. This creates a cascading release pattern where products queue with gaps between them. MDR (Motor Driven Roller) conveyors use 24VDC motorized rollers per zone. Belt-driven systems use pneumatic clutches or brakes per zone."
+        "text": "A ZPA (zero-pressure accumulation) conveyor divides the line into zones, each with its own drive and one photo-eye sensor. A zone stops only when it is occupied and the downstream zone is also occupied. Otherwise it runs. The discharge zone stops on an external signal from the downstream machine, and the queue builds back one zone at a time with a gap between products. Products can release one zone at a time (singulation) or all together (slug or train release). MDR (Motor Driven Roller) conveyors use a low-voltage DC motorized roller per zone. Belt-driven live roller systems use a pneumatically actuated pressure frame and brake per zone, line-shaft systems use pneumatic zone brakes, and chain-driven systems use a gearmotor per zone."
       }
     },
     {
@@ -45,7 +45,7 @@ const faqSchema = {
       "name": "What is the difference between ZPA and minimum-pressure accumulation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact within zones, typically 2-5 lbs of backpressure. ZPA requires more zones and sensors per linear foot, increasing cost by 20-40% over minimum-pressure. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure is acceptable for durable products like corrugated cases."
+        "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact, with drive pressure set low enough that rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can be adjusted to bring backpressure to 2% of the live load. ZPA needs a sensor and drive control in every zone, so it costs more than minimum-pressure. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure is acceptable for durable products like corrugated cases."
       }
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
       "name": "How long should ZPA zones be?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ZPA zone length should be 2-4 inches longer than the longest product dimension in the direction of travel. Standard zone lengths are 18, 24, 30, 36, and 48 inches. Using zones longer than necessary wastes accumulation density. Using zones shorter than the product causes products to span multiple zones, breaking zone logic. For mixed product lengths, size zones for the longest product or use intelligent zone controllers that adapt to product length."
+        "text": "ZPA zone length must be longer than the longest product in the direction of travel, plus the clearance the supplier's sensor placement needs. Zone lengths are set by the manufacturer: Hytrol's 190-NSPEZ manual, for example, lists 12, 18, 24, 30, and 36-inch zones. Zones much longer than the product waste accumulation density. Zones shorter than the product let one product span two zones, which breaks zone logic. For mixed product lengths, size zones for the longest product or ask about controllers that adapt to product length."
       }
     }
   ]
@@ -76,55 +76,98 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Zero-Pressure Accumulation Conveyors</h1>
-<p class="usa-intro">Zero-pressure accumulation (ZPA) stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. ZPA is the standard accumulation technology for fragile products, pressure-sensitive labels, and premium packaging where any contact damage is unacceptable. <a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller)</a> conveyors are the dominant ZPA technology in new installations.</p>
+<p class="usa-intro">ZPA (zero-pressure accumulation) is a conveyor control method that divides the line into zones, each with its own sensor and drive, so products queue with a gap between each item and never push on each other. A ZPA conveyor and a zero-pressure accumulation conveyor are the same thing. Hytrol defines <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">zero-pressure conveyors</a> as accumulating conveyors that create space between products and do not allow them to touch. ZPA is the standard accumulation technology for fragile products, pressure-sensitive labels, and premium packaging where any contact damage is unacceptable. <a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller)</a> conveyors are a common ZPA technology in new installations, and belt-driven, line-shaft, and chain-driven live roller conveyors are also built in zero-pressure versions.</p>
 <h2 id="how-heading">How Zero-Pressure Accumulation Works</h2>
 <p>ZPA conveyors divide the conveyor length into discrete zones, each with its own drive mechanism and product sensor. The zone controller follows simple logic:</p>
 <ul>
 <li><strong>If downstream zone is empty:</strong> Run this zone, transport product forward</li>
-<li><strong>If downstream zone is occupied:</strong> Stop this zone, hold product in place</li>
+<li><strong>If this zone holds a product and the downstream zone is occupied:</strong> Stop this zone, hold product in place</li>
 <li><strong>When downstream zone clears:</strong> Release and advance one zone</li>
 </ul>
-<p>This creates a cascading release pattern. When a downstream machine restarts, the first queued product releases. The second product advances one zone. Each product moves forward one zone at a time, maintaining gaps throughout the queue. Products never touch each other.</p>
+<p>This creates a cascading release pattern. When a downstream machine restarts, the first queued product releases. The second product advances one zone. Each product moves forward one zone at a time, maintaining gaps throughout the queue. Products never touch each other. Hytrol's manuals note that products placed closer than one zone length apart separate during the first few feet of travel, until about one zone length exists between them.</p>
 <h3>Zone Components</h3>
 <p>Each ZPA zone contains:</p>
 <ul>
-<li><strong>Drive mechanism:</strong> MDR motorized roller, pneumatic clutch, or belt section</li>
+<li><strong>Drive mechanism:</strong> MDR motorized roller, pneumatic pressure frame or brake, zone gearmotor, or belt section</li>
 <li><strong>Product sensor:</strong> Photo-eye, proximity sensor, or mechanical trip</li>
 <li><strong>Zone controller:</strong> Logic card, PLC I/O, or distributed controller</li>
 <li><strong>Slave rollers:</strong> Idler or O-ring driven rollers connected to the drive roller</li>
 </ul>
 <h3>Zone Sizing</h3>
-<p>Zone length must exceed the longest product dimension in the direction of travel. Standard zone lengths are 18", 24", 30", 36", and 48". Add 2-4" clearance beyond the product length to ensure the sensor detects the product fully within the zone. For mixed product sizes, size zones for the longest product. Advanced controllers can adapt zone logic to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
+<p>Zone length must exceed the longest product dimension in the direction of travel, with enough clearance that the sensor sees the product fully within the zone. Zone lengths are set by each manufacturer: Hytrol's 190-NSPEZ manual lists 12, 18, 24, 30, and 36-inch zones, and its ABEZ manual lists bed sections for 12 to 36-inch zones. For mixed product sizes, size zones for the longest product. Advanced controllers can adapt zone logic to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
 <h4>Zone Length Formula</h4>
-<p class="formula">Zone Length = Longest Product Length + 2" to 4" clearance</p>
-<p>Example: 20" long cases require 24" zones (20" + 4" clearance)</p>
+<p class="formula">Zone Length = Longest Product Length + Sensor Clearance (per supplier), rounded up to an offered zone length</p>
+<p>Ask the supplier for the minimum clearance its sensor position requires, then pick the shortest offered zone length that fits.</p>
+<h2 id="zpa-control-logic">How ZPA Control Logic Works</h2>
+<p>Every ZPA zone has one product sensor, usually a photo-eye, and makes one decision: drive or hold. A zone holds only when it is occupied and the zone ahead of it is also occupied and holding. In Hytrol's CREZD manual, when a load blocks a zone's sensor that zone stops driving and sends an "occupied" signal to the zone behind it. The queue builds back from the discharge one zone at a time.</p>
+<table>
+<thead><tr><th>This zone occupied?</th><th>Downstream zone occupied?</th><th>Zone action</th></tr></thead>
+<tbody>
+<tr><td>No</td><td>No</td><td>Run (or sleep, if the controller has sleep mode and nothing is arriving)</td></tr>
+<tr><td>No</td><td>Yes</td><td>Run, so the next product can enter and stop in this zone</td></tr>
+<tr><td>Yes</td><td>No</td><td>Run, product advances</td></tr>
+<tr><td>Yes</td><td>Yes</td><td>Stop and hold (accumulate)</td></tr>
+<tr><td>Discharge zone, stop signal active</td><td>Not applicable</td><td>Stop and hold until the downstream machine is ready</td></tr>
+</tbody>
+</table>
+<p>The discharge zone has no zone ahead of it, so it takes an external stop signal instead. Hytrol's manual describes this zone stop input as the way all its conveyors control release from the discharge zone.</p>
+<h3>The Logic in Words (Ladder View)</h3>
+<p>If you are writing or reading a PLC program for a ZPA line, each zone's run output is one rung: the zone drives unless its own photo-eye is blocked and the downstream zone's "occupied and stopped" bit is on. The discharge zone's rung replaces the downstream bit with the line's release permissive. Release modes, sleep timers, and jam timers add contacts to that rung. Do not build a live program from a generic description. Real ZPA programs and zone controller settings come from the conveyor maker or the integrator, and they depend on the controller hardware.</p>
+<h3>Release Modes</h3>
+<table>
+<thead><tr><th>Mode</th><th>How zones release</th><th>Use when</th></tr></thead>
+<tbody>
+<tr><td>Singulation (one at a time)</td><td>Each zone releases only after the zone ahead has cleared, so products leave with a gap of about one zone</td><td>Downstream needs separated products: scanners, labelers, scales, sorters. Default mode in Hytrol's EZLogic controllers.</td></tr>
+<tr><td>Slug or train release</td><td>All accumulated zones release together, so the queue moves as a group</td><td>Downstream can take a full line of product: palletizers, case packers with infeed queues, emptying the line fast after a stop</td></tr>
+</tbody>
+</table>
+<p>Hytrol's CREZD manual lists singulation and slug as the two user-selectable modes and describes a dry-contact input that switches the conveyor between them on the fly. Other makers use "train release" or "slug release" for the same group-release behavior. Singulation gives clean gaps but leaves throughput on the table, because each product waits for the one ahead to clear a zone.</p>
+<h3>Sleep and Energy-Saving Modes</h3>
+<p>On MDR and other per-zone-drive systems, a zone with no product to move can stop its motor. Hytrol says its EZLogic control helps minimize energy use by letting the conveyor run only when necessary, and its CREZD manual describes a "Sleep" setting and a wake-up eye that senses an incoming load and wakes the zone. Sleep only works if the zone is clear: Hytrol lists a blocked upstream zone and a dirty lens as reasons a zone will not sleep. Ask the supplier how long a zone waits before sleeping and whether that delay is adjustable.</p>
+<h3>Zone Length and Product Length</h3>
+<p>The logic assumes one product per zone. A product longer than the zone blocks two sensors at once, and the zone logic can no longer keep a gap behind it. Size zones from the longest product as described in <a href="#how-heading">Zone Sizing</a> above. Because products separate to about one zone length apart in singulation mode, zone length also sets the gap between released products.</p>
+<h3>Centralized PLC vs Distributed Zone Control</h3>
+<table>
+<thead><tr><th>Approach</th><th>How it works</th><th>Tradeoffs</th></tr></thead>
+<tbody>
+<tr><td>Distributed zone cards or MDR controllers</td><td>Each zone controller reads its own sensor and talks to its neighbors through zone-to-zone cables. The PLC, if any, only sends stop and release signals.</td><td>Simple to install and expand. Logic is fixed to what the controller offers. Limited data unless the cards are networked.</td></tr>
+<tr><td>Networked zone controllers</td><td>Zone cards or MDR controllers on an industrial network such as EtherNet/IP or PROFINET. Zone logic runs locally, but status and settings are visible to the PLC.</td><td>Zone-level diagnostics and remote configuration. Requires network setup and controls support.</td></tr>
+<tr><td>Centralized PLC</td><td>Every sensor and zone drive is wired to PLC I/O. The PLC runs all zone logic.</td><td>Full control and custom sequences. More wiring and I/O, and every logic change is a programming change.</td></tr>
+</tbody>
+</table>
 <h2 id="tech-heading">ZPA Conveyor Technologies</h2>
 <h3>MDR (Motor Driven Roller)</h3>
-<p>Each zone has a 24VDC motorized roller that drives 3-6 slave rollers via O-rings or poly-V belts. Zone cards control each motor independently. MDR is the dominant ZPA technology for new installations due to low energy consumption, quiet operation, easy maintenance, and inherent zone-by-zone control.</p>
-<p><strong>Pros:</strong> Energy efficient, quiet, low maintenance, easy zone control</p>
-<p><strong>Cons:</strong> Higher initial cost, limited to ~75 lbs/zone typical</p>
+<p>Each zone has a low-voltage DC motorized roller that drives the other rollers in the zone through O-rings or poly-V belts. Zone controllers run each motor independently, and zones with no product to move stay stopped. MDR is a common ZPA technology for new installations because zone control is built in and no compressed air is needed.</p>
+<p><strong>Pros:</strong> Zones run only on demand, no compressed air, simple zone control</p>
+<p><strong>Cons:</strong> Higher initial cost than continuous-run transport, load per zone limited by motor roller torque and roller rating</p>
 <p><strong>Best for:</strong> Cases, cartons, totes, e-commerce, distribution</p>
 
 <p><a href="/conveyor-types/mdr-conveyors/">Learn more about MDR conveyors →</a></p>
 <h3>Belt-Driven Live Roller (BDLR)</h3>
-<p>A continuously running belt under the rollers drives all zones. Pneumatic clutches or brake pads per zone engage or disengage the belt from rollers. Requires compressed air. Legacy technology still common in retrofit and high-speed applications where air is already available.</p>
-<p><strong>Pros:</strong> Higher speed capability, robust, proven technology</p>
+<p>A continuously running belt under the rollers drives all zones. In Hytrol's <a href="https://cdn.hytrol.com/2013_647_abez.pdf" target="_blank" rel="noopener noreferrer">ABEZ</a>, each zone has a zone controller, a pressure frame that applies and removes drive, and a pneumatically operated brake, and the manual sets the air regulator to a working pressure of 35 psi. This approach is common where compressed air is already available.</p>
+<p><strong>Pros:</strong> Established technology, one drive for many zones</p>
 <p><strong>Cons:</strong> Requires compressed air, more maintenance, energy consumption</p>
 <p><strong>Best for:</strong> High-speed lines, existing pneumatic infrastructure</p>
 
 <p><a href="/conveyor-types/live-roller-conveyors/">Learn more about BDLR conveyors →</a></p>
 <h3>Line-Shaft with Clutch Zones</h3>
-<p>A continuously spinning line-shaft drives all rollers via O-rings. Mechanical clutch or brake assemblies per zone disengage the spool from the shaft. Older technology with higher maintenance but lower initial cost than MDR. Being replaced by MDR in most new applications.</p>
-<p><strong>Pros:</strong> Lower cost than MDR, mechanical simplicity</p>
-<p><strong>Cons:</strong> O-ring wear, clutch maintenance, noise</p>
+<p>A continuously spinning line-shaft drives all rollers via O-rings. In Hytrol's <a href="https://cdn.hytrol.com/2006_568_138nspez_190nspez.pdf" target="_blank" rel="noopener noreferrer">190-NSPEZ</a>, air bags in each zone inflate to stop that zone from driving, working with brake pads, and the manual sets the regulator to 40 psi. MDR has taken over many new applications of this type.</p>
+<p><strong>Pros:</strong> One drive for many zones, simple mechanical drive</p>
+<p><strong>Cons:</strong> O-ring wear, compressed air for zone brakes, shaft must stay clean</p>
 <p><strong>Best for:</strong> Budget projects, simple accumulation needs</p>
+<h3>Chain-Driven Live Roller Zones</h3>
+<p>For pallets and heavy loads, chain-driven live roller is split into zones, each with its own gearmotor. In Hytrol's <a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">CREZD models</a>, each zone has a zone controller, a zone starter box, and a gearmotor, so no compressed air is needed.</p>
+<p><strong>Pros:</strong> Handles pallets and heavy loads, positive drive, no compressed air</p>
+<p><strong>Cons:</strong> A gearmotor per zone, chain lubrication</p>
+<p><strong>Best for:</strong> Pallet accumulation ahead of stretch wrappers, VRCs, and shipping</p>
+<p><a href="/conveyor-types/cdlr-conveyors/">Learn more about CDLR conveyors →</a></p>
 <h3>Servo Belt Zones</h3>
 <p>Individual <a href="/conveyor-types/belt-conveyors/">belt conveyor</a> sections with servo or stepper drive per zone. Used for irregular product shapes that cannot ride on rollers, and for high-precision <a href="/conveyor-functions/indexing-conveyors/">indexing applications</a>. Highest cost but most flexible for mixed products.</p>
 <p><strong>Pros:</strong> Handles any product shape, precise positioning</p>
 <p><strong>Cons:</strong> Highest cost, complex controls</p>
 <p><strong>Best for:</strong> Irregular shapes, pouches, bags, precision indexing</p>
 <h2 id="when-heading">When to Specify Zero-Pressure</h2>
-<p>Zero-pressure accumulation costs 20-40% more than <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">minimum-pressure accumulation</a> due to smaller zones and more sensors. Specify ZPA when product requirements justify the cost:</p>
+<p>Zero-pressure accumulation costs more than <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">minimum-pressure accumulation</a> because every zone needs a sensor and a drive or brake. Specify ZPA when product requirements justify the cost:</p>
 <h3>ZPA Required</h3>
 <ul>
 <li>Glass bottles, jars, or containers (breakage risk)</li>
@@ -134,7 +177,7 @@ const articleSchema = {
 <li>Premium packaging where visible damage is unacceptable</li>
 <li>Electronic products sensitive to shock or pressure</li>
 <li>Products with glossy or coated surfaces that show marks</li>
-<li><a href="/industries/pharmaceutical-conveyors/">Pharmaceutical products</a> with regulatory requirements</li>
+<li><a href="/industries/pharmaceutical-conveyors/">Pharmaceutical products</a> where package damage is a quality defect</li>
 </ul>
 <h3>Minimum-Pressure Acceptable</h3>
 <ul>
@@ -146,7 +189,7 @@ const articleSchema = {
 <h4>Decision Checklist</h4>
 <p>Answer YES to any of these → specify ZPA:</p>
 <ul>
-<li>Will products break, deform, or shift under 5 lbs of contact pressure?</li>
+<li>Will products break, deform, tip, or shift when a full queue pushes on them?</li>
 <li>Will product surface show visible marks from contact?</li>
 <li>Are labels pressure-sensitive (could scuff, smear, or peel)?</li>
 <li>Is the product unsealed with loose contents?</li>
@@ -155,24 +198,37 @@ const articleSchema = {
 <h2 id="design-heading">ZPA Design Considerations</h2>
 <h3>Accumulation Density</h3>
 <p>ZPA accumulation density (products per linear foot) depends on zone length. Shorter zones = higher density = more products accumulated per foot of conveyor. But shorter zones = more motorized rollers and sensors = higher cost. Balance accumulation density against cost by right-sizing zones to product length.</p>
-<h3>Release Modes</h3>
-<p>ZPA conveyors support multiple release patterns:</p>
-<ul>
-<li><strong>Singulate (one-at-a-time):</strong> Release one product when downstream clears. Standard ZPA behavior.</li>
-<li><strong>Slug release:</strong> Release a group of products (slug) together. Used to batch feed downstream equipment.</li>
-<li><strong>Train release:</strong> Release all accumulated products as a continuous train. Used when downstream is ready for full throughput.</li>
-</ul>
-<h3>Zone Controller Options</h3>
-<ul>
-<li><strong>Card-based:</strong> Distributed logic cards per zone. Simple, self-contained, limited integration.</li>
-<li><strong>PLC-controlled:</strong> Central PLC with I/O per zone. Full integration with line control, data collection.</li>
-<li><strong>Network-based:</strong> Ethernet/IP, Profinet, or EtherCAT network to zone cards. Modern approach with diagnostics and configuration.</li>
-</ul>
+<p>Release modes and controller options are covered in <a href="#zpa-control-logic">How ZPA Control Logic Works</a>.</p>
 <h3>Sensor Options</h3>
 <ul>
 <li><strong>Diffuse photo-eye:</strong> Most common. Detects product presence by reflection. Works for most products.</li>
-<li><strong>Retro-reflective:</strong> Uses reflector strip. More reliable for dark or transparent products.</li>
+<li><strong>Retro-reflective:</strong> Sends the beam to a reflector across the conveyor. Detects dark products more reliably than diffuse sensing. Hytrol's EZLogic zone controllers use retro-reflective sensing with a reflector channel. Clear products may need a sensor made for clear-object detection.</li>
 <li><strong>Mechanical trip:</strong> Roller or paddle actuated by product contact. No electronics, simple, legacy.</li>
+</ul>
+<h2 id="zpa-troubleshooting">ZPA Bottlenecks and Troubleshooting</h2>
+<p>Most ZPA problems come from three places: the sensor cannot see the product reliably, the zone does not fit the product, or the release mode and speeds do not match what the downstream machine needs. Start with the sensor, because a zone that cannot see product cannot make the right decision. The first, second, and last rows below follow the accumulation troubleshooting table in Hytrol's CREZD manual. The rest are general causes to check with your supplier.</p>
+<table>
+<thead><tr><th>Symptom</th><th>Likely cause</th><th>Check</th></tr></thead>
+<tbody>
+<tr><td>Zone will not drive or release</td><td>Dirty sensor lens, missing or damaged reflector, photo-eye knocked out of alignment, power loss to the zone controller</td><td>Clean the lens in this zone and the zones on either side. Replace or realign the reflector. Confirm power and cable connections.</td></tr>
+<tr><td>Product will not accumulate in one or more zones</td><td>Zone-to-zone cable or drive cable disconnected, failed zone controller or zone drive</td><td>Reconnect cables at section joints. Swap the zone controller or drive to isolate the fault.</td></tr>
+<tr><td>Products touch or bump in the queue</td><td>Product longer than the zone, line running in slug mode where singulation is needed, products arriving faster than zones can stop them</td><td>Measure the longest product against zone length. Confirm the release mode setting. Compare infeed speed and spacing to ZPA speed.</td></tr>
+<tr><td>Gaps too large, throughput lower than expected</td><td>Singulation release where slug release would work, zones much longer than the product, downstream conveyor slower than the ZPA line</td><td>Check whether the downstream machine can accept a slug. Review zone length against current product sizes. Compare speeds across the transfer.</td></tr>
+<tr><td>Upstream conveyor backs up or jams at the ZPA infeed</td><td>Upstream conveyor keeps running when the ZPA infeed zone is full</td><td>Add an infeed-full signal (photo-eye or zone controller output) that stops or holds the upstream conveyor.</td></tr>
+<tr><td>Collisions or gap loss at transfers in and out of the ZPA line</td><td>Speed mismatch between the ZPA conveyor and the conveyors or machines on either end</td><td>Match speeds or let the receiving conveyor run slightly faster to keep gaps open. Confirm with the supplier.</td></tr>
+<tr><td>Small or light products not detected, or stall short of the sensor</td><td>Product passes under or beside the beam, or is too light to get traction on rollers and stops before it reaches the sensor</td><td>Check sensor height and position against the smallest product. Consider shorter zones, closer roller centers, or a belt-over-roller ZPA design for light items.</td></tr>
+<tr><td>Clear, shrink-wrapped, or glossy products missed or falsely detected</td><td>Retro-reflective beam passes through clear film, or a shiny surface reflects the beam back like a reflector</td><td>Ask for a sensor rated for clear-object detection or a polarized retro-reflective sensor. Test with your actual packaging.</td></tr>
+<tr><td>Zone will not sleep</td><td>Sleep feature disabled, upstream zone blocked, dirty lens</td><td>Enable sleep in the controller settings. Clear the blocked zone. Clean the lens.</td></tr>
+</tbody>
+</table>
+<p>If the bottleneck is the accumulation length itself, not a fault, see <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor types</a> for sizing the buffer between machines.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Zero-Pressure Conveyor</a>, Hytrol. Definition of zero-pressure accumulation, EZLogic energy use, models by drive type.</li>
+<li><a href="https://cdn.hytrol.com/2013_647_abez.pdf" target="_blank" rel="noopener noreferrer">Model ABEZ Installation and Maintenance Manual</a>, Hytrol. Belt-driven zones with pressure frame and pneumatic brake, 35 psi working pressure, 12 to 36-inch zone bed sections, zone-length spacing on infeed.</li>
+<li><a href="https://cdn.hytrol.com/2006_568_138nspez_190nspez.pdf" target="_blank" rel="noopener noreferrer">Model 138-NSPEZ &amp; 190-NSPEZ Installation and Maintenance Manual</a>, Hytrol. Line-shaft zones with air bags and brake pads, 40 psi working pressure, 12 to 36-inch zone lengths, retro-reflective zone controller.</li>
+<li><a href="https://cdn.hytrol.com/2015_661_crezd.pdf" target="_blank" rel="noopener noreferrer">Model 199-CREZD, 25-CREZD &amp; 36-CREZD Installation and Maintenance Manual</a>, Hytrol. Chain-driven zones with a gearmotor per zone, zone-stop and occupied-signal sequence, singulation and slug modes, sleep setting and wake-up eye, accumulation troubleshooting table.</li>
+<li><a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Minimum Pressure Conveyor</a>, Hytrol. Backpressure adjustable to 2% of the live load.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
@@ -181,19 +237,19 @@ const articleSchema = {
 <p>A zero-pressure accumulation (ZPA) conveyor stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. Each zone has independent drive control and a sensor. When a downstream zone is occupied, upstream zones hold their products with gaps. ZPA prevents product damage, label scuffing, carton crushing, and content shifting. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> are the most common ZPA technology.</p>
 
 </div>
-<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How does zero-pressure accumulation work?</button></h3>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How does a ZPA conveyor work?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>ZPA conveyors divide the conveyor into zones, each with its own drive and photo-eye sensor. Zone logic: if the downstream zone is empty, run and transport; if occupied, stop and hold. This creates cascading release where products queue with gaps. <a href="/conveyor-types/mdr-conveyors/">MDR systems</a> use 24VDC motorized rollers per zone. <a href="/conveyor-types/live-roller-conveyors/">Belt-driven systems</a> use pneumatic clutches.</p>
+<p>A ZPA (zero-pressure accumulation) conveyor divides the line into zones, each with its own drive and one photo-eye sensor. A zone stops only when it is occupied and the downstream zone is also occupied. Otherwise it runs. The discharge zone stops on an external signal from the downstream machine, and the queue builds back one zone at a time with a gap between products. Products can release one zone at a time (singulation) or all together (slug or train release). See <a href="#zpa-control-logic">How ZPA Control Logic Works</a>. <a href="/conveyor-types/mdr-conveyors/">MDR systems</a> use a low-voltage DC motorized roller per zone. <a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller</a> uses a pneumatic pressure frame and brake per zone, line-shaft uses pneumatic zone brakes, and chain-driven uses a gearmotor per zone.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the difference between ZPA and minimum-pressure accumulation?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Zero-pressure accumulation maintains gaps between every product with no contact. <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">Minimum-pressure accumulation</a> allows light product-to-product contact (2-5 lbs backpressure) within zones. ZPA costs 20-40% more due to more zones and sensors. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure works for durable products like corrugated cases.</p>
+<p>Zero-pressure accumulation maintains gaps between every product with no contact. <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">Minimum-pressure accumulation</a> allows light product-to-product contact, with drive pressure set so rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can bring backpressure to 2% of the live load. ZPA costs more because every zone needs a sensor and drive control. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure works for durable products like corrugated cases.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How long should ZPA zones be?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>ZPA zone length should be 2-4 inches longer than the longest product dimension in the direction of travel. Standard zones are 18", 24", 30", 36", and 48". Size zones for the longest product in your mix. Advanced controllers can adapt to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
+<p>Zone length must exceed the longest product in the direction of travel, plus the clearance the supplier's sensor placement needs. Zone lengths are set by the manufacturer: Hytrol's 190-NSPEZ manual lists 12, 18, 24, 30, and 36-inch zones. Size zones for the longest product in your mix. Advanced controllers can adapt to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
 
 </div>
 </div>

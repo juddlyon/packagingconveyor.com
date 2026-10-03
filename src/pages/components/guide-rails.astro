@@ -20,7 +20,7 @@ const faqSchema = {
       "name": "What are conveyor guide rails?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Conveyor guide rails, also called conveyor rails, side rails, or side guides, are side-mounted rails that keep products centered on the conveyor belt or roller surface, prevent products from falling off the edges, create lanes for multi-row product flow, and orient products for downstream operations. Guide rails are typically made from UHMW polyethylene (low friction, FDA-compliant), stainless steel (durability, washdown environments), or aluminum with UHMW contact strips. Adjustable guide rails allow quick changeover between product sizes."
+        "text": "Conveyor guide rails, also called conveyor rails, side rails, or side guides, are side-mounted rails that keep products centered on the conveyor belt or roller surface, prevent products from falling off the edges, create lanes for multi-row product flow, and orient products for downstream operations. Guide rails are typically made from UHMW polyethylene (low friction, food-grade grades available), stainless steel (durability, washdown environments), or aluminum with UHMW contact strips. Adjustable guide rails allow quick changeover between product sizes."
       }
     },
     {
@@ -28,7 +28,7 @@ const faqSchema = {
       "name": "What is the best material for conveyor guide rails?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "UHMW polyethylene is the most common guide rail material because it offers low friction, good wear resistance, FDA compliance for food contact, and low cost. For heavy-duty applications or high-speed lines, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (Delrin) provides higher rigidity than UHMW for precision applications. For washdown environments in food and pharmaceutical plants, stainless steel frames with replaceable UHMW or acetal contact surfaces are standard."
+        "text": "UHMW polyethylene is the most common guide rail material because it offers low friction, good wear resistance, food-grade grades that comply with 21 CFR 177.1520, and low cost. For heavy-duty applications or high-speed lines, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (POM) provides higher rigidity than UHMW for precision applications. For washdown environments in food and pharmaceutical plants, stainless steel frames with replaceable UHMW or acetal contact surfaces are standard."
       }
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       "name": "How wide should the gap be between conveyor guide rails?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Guide rail gap should be 1/8 to 1/4 inch (3-6mm) wider than the product on each side for standard transport. Tighter gaps (1/16 to 1/8 inch) are used for precision positioning before labelers, printers, or vision systems. Wider gaps (1/2 inch or more) may be needed for products that expand, flex, or have dimensional variation. For accumulation zones, increase the gap slightly to prevent product jamming under back-pressure."
+        "text": "Start with a small running clearance on each side, enough that the product passes without rubbing but cannot rotate or skew. Tighten the clearance for precision positioning before labelers, printers, or vision systems. Widen it for products that flex or vary in size and for accumulation zones, where back-pressure can wedge product between tight rails. The right gap depends on the product and speed, so set it by testing the largest and smallest products in the range at line speed and record the setting for each SKU."
       }
     },
     {
@@ -80,7 +80,7 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Conveyor Guide Rails &amp; Side Rails</h1>
-<p class="usa-intro">Conveyor guide rails, also called conveyor rails, side rails, or side guides, are side-mounted rails that keep products centered on the belt or roller surface, prevent edge falloff, create lanes for multi-row product flow, and orient products for downstream operations like labeling, printing, and case packing. Adjustable guide rail systems allow quick changeover between product sizes without tools, reducing downtime on multi-SKU packaging lines. Guide rails are one of the product handling categories in the <a href="/components/">conveyor components</a> map.</p>
+<p class="usa-intro">Conveyor side guides, side rails, and guide rails are the same part: side-mounted rails that keep products centered on the belt or roller surface, prevent edge falloff, create lanes for multi-row product flow, and orient products for downstream operations like labeling, printing, and case packing. Adjustable guide rail systems allow quick changeover between product sizes without tools, reducing downtime on multi-SKU packaging lines. Guide rails are one of the product handling categories in the <a href="/components/">conveyor components</a> map.</p>
 <h2 id="types-heading">Types of Conveyor Guide Rails</h2>
 <h3>Side Guide Rails</h3>
 <p>Basic side containment rails mounted to the conveyor frame on both sides of the belt or roller surface. Keep products from falling off the conveyor edges during transport. Standard on most belt and <a href="/conveyor-types/roller-conveyors/">roller conveyors</a>.</p>
@@ -92,6 +92,7 @@ const articleSchema = {
 <span class="usa-tag">Multi-SKU</span></p>
 <h3>Lane Dividers</h3>
 <p>Internal guide rails that split a wide conveyor into multiple parallel lanes. Used to increase throughput, separate products, or create staging lanes before <a href="/industries/packaging-line-conveyors/case/">case packing</a> and <a href="/industries/packaging-line-conveyors/pallet/">palletizing</a>. Typically adjustable to accommodate different lane widths.</p>
+<p>UHMW is the usual contact material for lane dividers because both faces rub product and the low friction keeps lanes flowing. Common builds are a solid UHMW bar for light products or a UHMW strip on a stainless or aluminum backbone where the divider must stay straight over a long span. Check that the divider is mounted high enough to clear the belt or chain and that its upstream end is tapered or radiused so product does not hang up on the nose. For food contact, ask for a grade that complies with 21 CFR 177.1520.</p>
 <p class="tags"><span class="usa-tag">Multi-Lane</span>
 <span class="usa-tag">Throughput</span></p>
 <h3>Flexible Guide Rails</h3>
@@ -103,7 +104,7 @@ const articleSchema = {
 <p class="tags"><span class="usa-tag">Incline</span>
 <span class="usa-tag">High-Speed</span></p>
 <h3>Precision Guide Rails</h3>
-<p>High-accuracy guide systems for positioning products before labelers, printers, vision systems, or <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. Tighter tolerances (1/16" gap) and stiffer construction than standard transport guides.</p>
+<p>High-accuracy guide systems for positioning products before labelers, printers, vision systems, or <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. Tighter clearances and stiffer construction than standard transport guides.</p>
 <p class="tags"><span class="usa-tag">Labeling</span>
 <span class="usa-tag">Vision</span></p>
 <h2 id="materials-heading">Guide Rail Materials</h2>
@@ -114,8 +115,8 @@ const articleSchema = {
 <th>Best For</th>
 <th>Friction</th>
 <th>Durability</th>
-<th>FDA</th>
-<th>Cost</th>
+<th>Food contact</th>
+<th>Main cost drivers</th>
 </tr>
 </thead>
 <tbody>
@@ -124,91 +125,148 @@ const articleSchema = {
 <td>General packaging, food, lightweight products</td>
 <td>Very Low</td>
 <td>Good</td>
-<td>Yes</td>
-<td>$</td>
+<td>Food-grade grades available</td>
+<td>Profile size, machining</td>
 </tr>
 <tr>
-<td>Acetal (Delrin)</td>
+<td>Acetal (POM)</td>
 <td>Precision positioning, high-speed lines</td>
 <td>Low</td>
 <td>Very Good</td>
-<td>Yes</td>
-<td>$$</td>
+<td>Food-grade grades available</td>
+<td>Resin price, machining</td>
 </tr>
 <tr>
 <td>Stainless Steel</td>
 <td>Washdown, sanitary, high-wear applications</td>
 <td>Medium</td>
 <td>Excellent</td>
-<td>Yes</td>
-<td>$$$</td>
+<td>Yes (304, 316)</td>
+<td>Material, forming, welding, polishing</td>
 </tr>
 <tr>
 <td>SS + UHMW Strip</td>
 <td>Heavy-duty food/pharma, best of both</td>
 <td>Very Low</td>
 <td>Excellent</td>
-<td>Yes</td>
-<td>$$$</td>
+<td>Yes, with food-grade strip</td>
+<td>Stainless structure plus replaceable strips</td>
 </tr>
 <tr>
 <td>Aluminum</td>
 <td>Lightweight, modular conveyor systems</td>
 <td>Medium</td>
 <td>Good</td>
-<td>No*</td>
-<td>$$</td>
+<td>Not typical*</td>
+<td>Extrusion profile, anodizing</td>
 </tr>
 <tr>
 <td>Aluminum + UHMW</td>
 <td>Light-duty food, general packaging</td>
 <td>Very Low</td>
 <td>Good</td>
-<td>Yes</td>
-<td>$$</td>
+<td>Yes, with food-grade strip</td>
+<td>Extrusion plus strips</td>
 </tr>
 </tbody>
 </table>
-<p>*Aluminum itself is not FDA-compliant for direct food contact but is commonly used with UHMW contact surfaces in food applications.</p>
+<p>*Bare aluminum is rarely used for direct food contact on conveyors because caustic cleaners attack it. It is commonly used with UHMW contact surfaces in food applications.</p>
 <h3>Material Selection Guidance</h3>
-<p><strong>UHMW polyethylene</strong> (ultra-high molecular weight polyethylene) is the default choice for most packaging applications. It has a very low coefficient of friction, resists wear from product sliding, and is available in food-grade grades that comply with <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a> (olefin polymers) for food contact. Ask the supplier for a compliance letter for the specific grade. UHMW is available in white (standard), black (UV-stabilized for outdoor), blue (metal-detectable for food safety), and anti-static formulations.</p>
-<p><strong>Stainless steel</strong> is required for <a href="/industries/food-conveyors/sanitary/">sanitary and washdown environments</a> where guide rails must withstand daily cleaning with water, caustic chemicals, or steam. For lower friction, stainless steel rails are often fitted with replaceable UHMW wear strips that can be swapped when worn without replacing the entire rail structure.</p>
-<p><strong>Acetal (Delrin)</strong> provides higher stiffness and dimensional stability than UHMW, making it suitable for precision positioning applications where tight tolerances must be maintained. Acetal is also more resistant to creep under constant load. Food-contact acetal grades are covered by <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470</a> (copolymer) or <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2480" target="_blank" rel="noopener noreferrer">177.2480</a> (homopolymer), depending on the resin.</p>
+<p><strong>UHMW polyethylene</strong> (ultra-high molecular weight polyethylene) is the default choice for most packaging applications. It has a very low coefficient of friction, resists wear from product sliding, and is available in food-grade grades that comply with <a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a> (olefin polymers) for food contact. Ask the supplier for a compliance letter for the specific grade. UHMW is available in white (standard), black (often UV-stabilized), blue (visually distinct from food), metal-detectable, and anti-static formulations.</p>
+<p><strong>Stainless steel</strong> is the usual choice for <a href="/industries/food-conveyors/sanitary/">sanitary and washdown environments</a> where guide rails must withstand daily cleaning with water, caustic chemicals, or steam. For lower friction, stainless steel rails are often fitted with replaceable UHMW wear strips that can be swapped when worn without replacing the entire rail structure.</p>
+<p><strong>Acetal (POM)</strong> provides higher stiffness and dimensional stability than UHMW, making it suitable for precision positioning applications where tight tolerances must be maintained. Acetal is also more resistant to creep under constant load. Food-contact acetal grades are covered by <a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470</a> (copolymer) or <a href="https://www.law.cornell.edu/cfr/text/21/177.2480" target="_blank" rel="noopener noreferrer">177.2480</a> (homopolymer), depending on the resin.</p>
 <h2 id="adjustment-heading">Guide Rail Adjustment Methods</h2>
 <h3>Hand-Knob Clamps</h3>
 <p>Star knobs or T-handles that clamp the guide rail bracket to a cross-bar. Loosen, slide to position, retighten. Simple and low-cost but slower for frequent changeovers. Best for operations with few SKU changes per shift.</p>
-<p>Changeover time: 2-5 min</p>
+<p>Changeover speed: moderate, each bracket set by hand</p>
 <p>Tools: None</p>
 <h3>Hand-Wheel / Crank</h3>
 <p>Threaded rod mechanism moves both rails simultaneously when the hand-wheel is turned. Provides consistent, repeatable positioning. Often includes a position indicator or scale. Best for moderate changeover frequency with varying product widths.</p>
-<p>Changeover time: 30-60 sec</p>
+<p>Changeover speed: fast, both rails move together</p>
 <p>Tools: None</p>
 <h3>Quick-Release Pin</h3>
 <p>Spring-loaded pins lock guide rails at predetermined positions. Pull the pin, slide to the next detent, release. Fastest manual method for operations with a fixed set of product sizes. Requires drilling holes at each position.</p>
-<p>Changeover time: 10-20 sec</p>
+<p>Changeover speed: fast, limited to preset positions</p>
 <p>Tools: None</p>
 <h3>Motorized Adjustment</h3>
 <p>Electric actuators or servo motors move guide rails to programmed positions. Controlled via PLC or HMI. Enables recipe-based changeover with no operator intervention. Highest cost but essential for high-frequency automated changeover.</p>
-<p>Changeover time: 5-15 sec</p>
+<p>Changeover speed: fastest, recipe-driven</p>
 <p>Tools: PLC program</p>
 <h3>Tool-Adjusted</h3>
 <p>Bolts or set screws require a wrench or Allen key for adjustment. Lowest cost but slowest changeover. Acceptable for fixed installations or infrequent product changes. Not recommended for multi-SKU operations.</p>
-<p>Changeover time: 5-10 min</p>
+<p>Changeover speed: slowest, tool required at each bracket</p>
 <p>Tools: Wrench/Allen key</p>
 <h3>Spring-Loaded</h3>
 <p>Springs press guide rails inward against the product. Self-adjusts to product width within a range. Used for products with dimensional variation or mixed sizes. May not provide sufficient containment for heavy products.</p>
-<p>Changeover time: 0 (auto)</p>
+<p>Changeover speed: none needed within its range</p>
 <p>Tools: None</p>
+<h2 id="brackets-heading">Guide Rail Brackets and Clamps</h2>
+<p>The bracket decides how fast and how repeatably a guide rail can be moved. It connects the rail to the conveyor frame, sets the rail height above the belt, and sets the lateral position. Most changeover problems trace back to brackets, not rails, so choose the bracket type with the same care as the rail material.</p>
+<table>
+<thead>
+<tr>
+<th>Bracket type</th>
+<th>Adjustment method</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed bracket</td>
+<td>None after install. Bolted or welded at one position.</td>
+<td>Single-product lines, distribution roller conveyors, containment only</td>
+</tr>
+<tr>
+<td>Adjustable cross-block or clamp bracket</td>
+<td>Rod slides through a clamp block on the frame and locks with a bolt or set screw</td>
+<td>General packaging lines with occasional size changes</td>
+</tr>
+<tr>
+<td>Hand-knob clamp</td>
+<td>Star knob or T-handle loosened and retightened by hand</td>
+<td>Lines with a few changeovers per week, where tool-free adjustment matters</td>
+</tr>
+<tr>
+<td>Quick-release (cam lever) clamp</td>
+<td>Lever flips to release and lock the rod in one motion</td>
+<td>Frequent changeovers, often paired with marked rods or scales</td>
+</tr>
+<tr>
+<td>Rod-and-clamp system</td>
+<td>Round rods and modular cross clamps set both height and width, with each joint adjusted separately</td>
+<td>Bottle and container lines, flexible layouts, rails over curves and transfers</td>
+</tr>
+<tr>
+<td>Tool-free changeover hardware</td>
+<td>Indexed positions, detent pins, scales, or a crank that moves a whole rail at once</td>
+<td>Multi-SKU lines where repeatable settings per SKU reduce adjustment and trial runs</td>
+</tr>
+<tr>
+<td>Sanitary or open-design bracket</td>
+<td>Usually knob or lever clamps on stainless rods, with open shapes that avoid crevices</td>
+<td>Food, dairy, and pharmaceutical washdown areas</td>
+</tr>
+</tbody>
+</table>
+<h3>How to Choose Bracket Hardware</h3>
+<ul>
+<li><strong>Changeover frequency.</strong> Fixed or bolted brackets are fine when the product never changes. Knob, cam-lever, or indexed hardware pays off as changeovers increase.</li>
+<li><strong>Repeatability.</strong> Hand-set clamps depend on the operator. Scales, marked rods, detents, or a crank that moves the whole rail make settings repeatable from shift to shift.</li>
+<li><strong>Bracket spacing and stiffness.</strong> Product pressure bends a rail between brackets. Heavier products, accumulation, and long spans need closer bracket spacing or a stiffer rail backbone.</li>
+<li><strong>Height adjustment.</strong> Products of different heights may need the rail contact line moved up or down as well as in or out. Rod-and-clamp systems handle both.</li>
+<li><strong>Sanitation.</strong> In washdown areas, use stainless hardware with open shapes, few threads exposed, and no hollow tubes that trap water. See <a href="/industries/food-conveyors/sanitary/">sanitary conveyor design</a>.</li>
+<li><strong>Fit to the frame.</strong> Many OEM frames use proprietary mounting slots. <a href="https://www.dornerconveyors.com/products/2200-series/2200-precision-move-profiles" target="_blank" rel="noopener noreferrer">Dorner's 2200 Series side guide profiles</a>, for example, include fixed aluminum sides alongside adjustable, tool-less adjustable, outboard, and horizontal adjustable guiding options for the same frame. Confirm that aftermarket brackets match the frame slot before ordering.</li>
+</ul>
 <h2 id="gap-heading">Guide Rail Gap Settings</h2>
-<p>The gap between guide rails and the product affects transport reliability, product damage, and downstream operation accuracy. Setting the gap correctly is critical for smooth conveyor operation.</p>
+<p>The gap between guide rails and the product affects transport reliability, product damage, and downstream operation accuracy. The settings below are relative starting points. Confirm them by testing.</p>
 <h3>Standard Transport Gap</h3>
-<p>For general transport, set the gap at 1/8" to 1/4" (3-6mm) wider than the product on each side. This allows smooth flow while preventing excessive lateral movement. Products should be able to pass without rubbing but should not be able to rotate significantly.</p>
+<p>For general transport, set a small running clearance on each side of the product. This allows smooth flow while preventing excessive lateral movement. Products should be able to pass without rubbing but should not be able to rotate significantly.</p>
 <h3>Precision Positioning Gap</h3>
-<p>Before labelers, printers, <a href="/conveyor-functions/inspection-detection/">vision inspection systems</a>, or <a href="/conveyor-functions/indexing-conveyors/">indexing stations</a>, tighten the gap to 1/16" to 1/8" (1.5-3mm) per side. This ensures consistent product position for accurate label placement or image capture. Use low-friction materials (UHMW or acetal) to prevent product scuffing at tight gaps.</p>
+<p>Before labelers, printers, <a href="/conveyor-functions/inspection-detection/">vision inspection systems</a>, or <a href="/conveyor-functions/indexing-conveyors/">indexing stations</a>, tighten the clearance below the transport setting. This ensures consistent product position for accurate label placement or image capture. Use low-friction materials (UHMW or acetal) to prevent product scuffing at tight gaps.</p>
 <h3>Accumulation Zone Gap</h3>
-<p>In <a href="/conveyor-types/accumulation-conveyors/">accumulation zones</a> where products queue under back-pressure, widen the gap to 1/4" to 1/2" (6-12mm) per side. Tighter gaps can cause products to jam, wedge, or tip when pressure builds. The exact gap depends on product stiffness and accumulation pressure.</p>
+<p>In <a href="/conveyor-types/accumulation-conveyors/">accumulation zones</a> where products queue under back-pressure, widen the clearance beyond the transport setting. Tighter gaps can cause products to jam, wedge, or tip when pressure builds. The exact gap depends on product stiffness and accumulation pressure.</p>
 <h3>Variable Product Gap</h3>
-<p>For products with significant dimensional variation (such as natural products, pouches, or bags), set the gap to accommodate the largest expected dimension plus 1/8". Consider spring-loaded guides that self-adjust to product width. For products that expand during transport (such as warm products cooling), account for the expansion in the initial gap setting.</p>
+<p>For products with significant dimensional variation (such as natural products, pouches, or bags), set the gap to accommodate the largest expected dimension plus a running clearance. Consider spring-loaded guides that self-adjust to product width. For products that expand during transport (such as warm products cooling), account for the expansion in the initial gap setting.</p>
 <h4>Gap Setting Checklist</h4>
 <ul>
 <li>Measure the actual product width at multiple points (top, middle, bottom)</li>
@@ -225,15 +283,22 @@ const articleSchema = {
 <h3>Food and Beverage</h3>
 <p><a href="/industries/food-conveyors/">Food and beverage operations</a> require <a href="/industries/food-conveyors/sanitary/">sanitary guide rails</a> that withstand daily washdown. Stainless steel rails with replaceable UHMW wear strips are standard. <a href="/conveyor-types/tabletop-conveyors/">Tabletop chain conveyors</a> for bottles and cans use curved guide rails that follow the chain path through turns and transfers. <a href="/industries/food-conveyors/bakery/">Bakery lines</a> use low-profile guides that do not interfere with overhead depositors or decorators.</p>
 <h3>Pharmaceutical and Medical</h3>
-<p><a href="/industries/pharmaceutical-conveyors/">Pharmaceutical conveyors</a> require precision guide rails for accurate product positioning before labeling, serialization, and vision inspection. <a href="/industries/pharmaceutical-conveyors/cleanroom/">Cleanroom applications</a> use non-shedding materials and smooth surfaces that do not trap particles. Stainless steel and acetal are preferred over UHMW in cleanroom environments.</p>
+<p><a href="/industries/pharmaceutical-conveyors/">Pharmaceutical conveyors</a> require precision guide rails for accurate product positioning before labeling, serialization, and vision inspection. <a href="/industries/pharmaceutical-conveyors/cleanroom/">Cleanroom applications</a> use non-shedding materials and smooth surfaces that do not trap particles. Ask suppliers about particle shedding for each rail material before specifying it for a cleanroom.</p>
 <h3>Distribution and Fulfillment</h3>
 <p>Distribution center conveyors use guide rails to contain cartons and totes on <a href="/conveyor-types/roller-conveyors/">roller conveyors</a> and prevent tipover during <a href="/conveyor-types/diverting-merging/">sortation and merging</a>. Adjustable guides accommodate the wide range of package sizes in e-commerce fulfillment. <a href="/conveyor-types/incline-conveyors/">Incline conveyors</a> use top hold-down rails in addition to side guides to prevent product rollback.</p>
 <h2 id="sourcing-heading">Guide Rail Sourcing</h2>
 <p>Guide rails are available from three primary sources: the conveyor manufacturer (OEM), conveyor component specialists, and plastic/metal distributors for raw material fabrication.</p>
 <p><strong>Conveyor manufacturers</strong> sell complete guide rail systems designed to fit their conveyor frames. These include mounting brackets, adjustment hardware, and rail profiles matched to the conveyor. Advantages: guaranteed fit, single-source warranty. Disadvantage: may cost more than aftermarket options.</p>
 <p><strong>Aftermarket component suppliers</strong> sell guide rail profiles, brackets, and adjustment hardware compatible with multiple conveyor brands, often with a wider selection of materials and adjustment options than the conveyor OEM. Local industrial distributors typically stock standard guide rail components.</p>
-<p><strong>Raw material fabrication</strong> is common for simple UHMW guide rails. UHMW sheet stock from distributors like Curbell Plastics, Professional Plastics, or Interstate Plastics can be cut to size with standard woodworking tools. Custom stainless steel rails are fabricated by sheet metal shops.</p>
+<p><strong>Raw material fabrication</strong> is common for simple UHMW guide rails. UHMW sheet and bar stock from plastics distributors can be cut to size with standard woodworking tools. Custom stainless steel rails are fabricated by sheet metal shops.</p>
 <p>For replacement guide rails, measure the existing rail profile, mounting hole pattern, and bracket dimensions. Many guide rail profiles are standard across manufacturers, but proprietary mounting systems may require OEM components.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520 Olefin polymers</a>, Code of Federal Regulations (via Cornell LII). Food-contact polyethylene, including UHMW grades.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470 Polyoxymethylene copolymer</a>, Code of Federal Regulations (via Cornell LII). Food-contact acetal copolymer.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/21/177.2480" target="_blank" rel="noopener noreferrer">21 CFR 177.2480 Polyoxymethylene homopolymer</a>, Code of Federal Regulations (via Cornell LII). Food-contact acetal homopolymer.</li>
+<li><a href="https://www.dornerconveyors.com/products/2200-series/2200-precision-move-profiles" target="_blank" rel="noopener noreferrer">2200 Series Precision Move Profiles</a>, Dorner. Example OEM range of fixed side profiles and adjustable and tool-less adjustable guiding.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What are conveyor guide rails?</button></h3>
@@ -243,7 +308,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is the best material for conveyor guide rails?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>UHMW polyethylene is the most common guide rail material because it offers very low friction, good wear resistance, FDA compliance for food contact, and low cost. For heavy-duty applications or <a href="/industries/food-conveyors/sanitary/">sanitary washdown environments</a>, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (Delrin) provides higher rigidity for precision positioning applications.</p>
+<p>UHMW polyethylene is the most common guide rail material because it offers very low friction, good wear resistance, food-grade grades that comply with 21 CFR 177.1520, and low cost. For heavy-duty applications or <a href="/industries/food-conveyors/sanitary/">sanitary washdown environments</a>, stainless steel rails with UHMW wear strips combine durability with low friction. Acetal (POM) provides higher rigidity for precision positioning applications.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How do I adjust conveyor guide rails for different product sizes?</button></h3>
@@ -253,7 +318,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How wide should the gap be between conveyor guide rails?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>For standard transport, set the gap at 1/8" to 1/4" (3-6mm) wider than the product on each side. For precision positioning before labelers or vision systems, tighten to 1/16" to 1/8" (1.5-3mm) per side. For <a href="/conveyor-types/accumulation-conveyors/">accumulation zones</a>, widen to 1/4" to 1/2" (6-12mm) per side to prevent jamming under back-pressure.</p>
+<p>Start with a small running clearance on each side, enough that the product passes without rubbing but cannot rotate or skew. Tighten the clearance for precision positioning before labelers, printers, or vision systems. Widen it for products that flex or vary in size and for <a href="/conveyor-types/accumulation-conveyors/">accumulation zones</a>, where back-pressure can wedge product between tight rails. The right gap depends on the product and speed, so set it by testing the largest and smallest products in the range at line speed and record the setting for each SKU.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What are lane dividers on a conveyor?</button></h3>

@@ -19,17 +19,17 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a bump turn conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A bump turn conveyor uses angled rollers, skate wheels, or guide rails at a conveyor junction to redirect products around a curve, typically 30, 45, or 90 degrees, without a powered transfer mechanism. The product's forward momentum carries it into the angled surface, which 'bumps' (deflects) it onto the new path. Passive bump turns use no motors at the turn point, relying on gravity and inertia. Powered bump turns add driven rollers to maintain speed through the turn." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A bump turn is a right-angle transfer. The product runs into an end stop at the corner and a cross conveyor carries it away at 90 degrees. The product does not rotate, so a different face leads after the turn." }
     },
     {
       "@type": "Question",
       "name": "What is the difference between a passive and powered bump turn?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A passive bump turn uses angled dead rollers or skate wheels and relies entirely on the product's incoming momentum to carry it through the turn. A powered bump turn adds motorized tapered rollers or angled driven rollers that actively propel the product through the curve. Passive turns cost less but require higher infeed speeds and can stall heavy products. Powered turns handle heavier loads and maintain consistent speed regardless of product weight." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Passive (gravity) bump turns have no motors. Product rolls into the stop and out the side on declined rollers. Powered bump turns use a driven belt or rollers to pull the product off at 90 degrees, which gives more consistent exit timing on automated lines. Passive turns cost less and suit manual, low-rate areas." }
     },
     {
       "@type": "Question",
       "name": "Does a bump turn change product orientation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, bump turns rotate the product's orientation relative to the conveyor line. A 90-degree bump turn rotates the product 90 degrees, the leading edge becomes a side edge. This orientation change can be intentional (rotating cases for labeling or palletizing) or undesirable (misaligning barcodes for scanning). If orientation must be maintained through a direction change, use a pop-up transfer or turntable instead." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, relative to the line. The product does not rotate in space, so the face that was a side becomes the leading face. A pop-up transfer behaves the same way. If the same face must keep leading, use a curve or a turntable." }
     }
   ]
 };
@@ -50,117 +50,108 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Bump Turn Conveyors</h1>
-<p class="usa-intro">A bump turn conveyor uses angled rollers, skate wheels, or guide rails at a conveyor junction to redirect products around a curve without a powered transfer mechanism. The product's forward momentum carries it into the angled surface, which deflects it onto the new travel path. Bump turns handle direction changes of 30, 45, or 90 degrees and are the simplest, lowest-cost method for changing conveyor direction in <a href="/industries/packaging-line-conveyors/">packaging and distribution systems</a>.</p>
-<h2 id="passive-heading">Passive Bump Turns</h2>
-<p>Passive bump turns contain no motors at the turn point. The product arrives on a powered infeed conveyor at sufficient speed, contacts the angled deflection surface, and redirects onto the discharge conveyor. The only energy source is the product's forward momentum from the infeed conveyor.</p>
-<h3>Angled Skate Wheel Bump Turn</h3>
-<p>The most common passive bump turn uses skate wheels mounted on axles angled toward the discharge direction. As the product contacts the angled wheels, the wheels spin and guide the product through the turn. Skate wheel bump turns handle light to moderate loads (1-75 lbs) and work best with flat-bottomed products that span multiple wheel rows. Hytrol and Intelligrated offer skate wheel curve sections that integrate with their <a href="/conveyor-types/roller-conveyors/">roller conveyor</a> platforms.</p>
-<p>Skate wheel bump turns require a minimum infeed speed of 60-80 FPM for reliable product tracking through the curve. Slower speeds risk products stalling in the turn. Heavier products need higher infeed speeds to maintain momentum through friction losses at the skate wheels.</p>
-<h3>Dead Roller Bump Turn</h3>
-<p>Dead (non-powered) rollers mounted at an angle provide a bump turn surface for heavier products. The product slides across the angled rollers, which spin freely to reduce friction. Dead roller bump turns handle 10-200 lbs and suit products with rigid, flat bottoms. The roller diameter and spacing must support the product's bottom surface without the product dropping between rollers.</p>
-<h3>Guide Rail Deflection</h3>
-<p>The simplest bump turn is a curved guide rail positioned at the outside of a <a href="/conveyor-types/curved-conveyors/">conveyor curve</a>. The product's leading edge contacts the rail, and the rail redirects the product along the curve. Guide rail deflection works on <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller conveyors</a> and belt conveyors where the conveying surface provides the driving force and the rail provides directional guidance. Guide rail curves cost the least but generate the most product impact force and are unsuitable for fragile goods.</p>
-<h2 id="powered-heading">Powered Bump Turns</h2>
-<p>Powered bump turns add motorized rollers or driven wheels to the turn section. The powered elements actively drive the product through the curve, eliminating dependence on infeed momentum. Powered turns handle heavier products, lower infeed speeds, and provide consistent transit time through the curve.</p>
-<h3>Tapered Roller Curve</h3>
-<p>Tapered roller curves use conical rollers that are wider at the outside radius and narrower at the inside. The taper differential drives the product around the curve. A single motor and chain or belt drives all rollers. Tapered roller curves handle 10-500 lbs and maintain consistent product speed from infeed to discharge. Hytrol, Dematic, and mk North America manufacture tapered roller curve sections in 30, 45, 60, and 90-degree configurations.</p>
-<p>Tapered rollers provide the best product control through curves for case-sized products on <a href="/conveyor-types/live-roller-conveyors/">live roller conveyor</a> systems. The taper prevents the product from drifting to the outside of the curve, a common problem with straight-roller curves driven by friction contact.</p>
-<h3>Belt-Over-Roller Curve</h3>
-<p>Belt-over-roller curves use a flat belt riding over a curved roller bed. The belt provides a continuous driven surface that carries the product through the turn. Belt curves handle irregular product shapes, small items, and polybags that cannot ride on rollers. Dorner and mk North America offer precision belt curve modules for small-product packaging applications.</p>
-<h3>Powered Wheel Curve</h3>
-<p>Powered wheel curves use individually driven wheels mounted at angles within the curve. Each wheel has a small motor or is driven by a common drive through differential gearing. Powered wheel curves provide omnidirectional drive forces that guide the product through complex curve profiles. They suit distribution center applications where <a href="/conveyor-types/mdr-conveyors/">MDR conveyor</a> systems need powered curves between straight sections.</p>
-<h2 id="orientation-heading">Case Orientation Effects</h2>
-<p>Bump turns rotate product orientation. A 90-degree bump turn rotates the product 90 degrees relative to the conveyor center line. The leading edge becomes a side edge. A 12x18-inch case traveling long-side-first (18" leading) through a 90-degree bump turn exits with the short side leading (12" leading). This rotation affects downstream operations.</p>
-<h3>Intentional Orientation Change</h3>
-<p>Some applications intentionally use bump turns for case rotation. Rotating a case 90 degrees before a label applicator exposes a different face for labeling. Rotating before a <a href="/conveyor-functions/collating-laning/">collating station</a> changes the packing orientation for case loading. Rotating before palletizing changes the layer pattern. Bump turns provide a zero-cost orientation change compared to dedicated case turners.</p>
-<h3>Undesirable Orientation Change</h3>
-<p>Barcode readers, vision systems, and print-and-apply labelers require consistent product orientation. A bump turn before a barcode scanner moves the barcode from the leading face to the side, requiring scanner repositioning or additional scanners. If orientation must stay constant through a direction change, use a <a href="/conveyor-types/transfer-conveyors/">pop-up chain transfer or turntable</a> that moves the product sideways without rotation.</p>
-<h3>Predictable vs. Unpredictable Rotation</h3>
-<p>Rectangular products with flat bottoms rotate predictably through bump turns: the rotation angle equals the turn angle. Round products (bottles, cans, drums) may spin unpredictably on bump turn surfaces, especially on skate wheels. Irregularly shaped products may tip, jam, or rotate inconsistently. Test product behavior on bump turn samples before committing to a layout design. Powered belt curves provide the most predictable rotation for non-rectangular products.</p>
-<h2 id="comparison-heading">Bump Turn Type Comparison</h2>
+<p class="usa-intro">A bump turn is a right-angle transfer where the product runs off the end of the infeed conveyor into a stop (the "bumper") and is carried away at 90 degrees by a cross conveyor. The product does not rotate in space. It moves sideways, so the face that was a side becomes the leading face. Bump turn modules are a compact, low-cost way to change direction at a conveyor corner in <a href="/industries/packaging-line-conveyors/">packaging and distribution systems</a>, as long as that change in leading face is acceptable downstream.</p>
+<!-- VERIFY: "bump turn" is used by some suppliers for any end-stop right-angle transfer and by others more loosely; confirm terminology with supplier literature before quoting a specific product -->
+<h2 id="how-heading">How a Bump Turn Works</h2>
+<ol>
+<li><strong>Infeed:</strong> The product travels on the infeed conveyor toward the corner.</li>
+<li><strong>Stop:</strong> The product's leading face contacts a fixed end stop or side rail at the far side of the transfer. This is the bump.</li>
+<li><strong>Cross drive:</strong> A driven surface under the product (belt, powered rollers, O-ring driven rollers, or a gravity decline) pulls the product off at 90 degrees onto the discharge conveyor.</li>
+<li><strong>Discharge:</strong> The product leaves with a different face leading. A case that entered long side leading exits short side leading.</li>
+</ol>
+<p>Because the product is stopped against a rail and then accelerated sideways, a bump turn is a stop-and-go transfer. It suits rigid, flat-bottom cases and totes that tolerate light contact. Fragile, tall, or unstable products may tip or shift on impact.</p>
+<h2 id="types-heading">Bump Turn Module Types</h2>
+<h3>Gravity Bump Turns</h3>
+<p>On <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller conveyor</a> systems, the infeed and discharge sections are both declined. The product rolls into the end stop, then rolls out the side on rollers set perpendicular to the infeed. No power is used. Gravity bump turns are common in shipping, receiving, and manual pack areas where operators control product spacing.</p>
+<h3>Powered Belt or Roller Bump Turns</h3>
+<p>On powered lines, the transfer section is a short driven conveyor running at 90 degrees to the infeed. Belt-driven and O-ring-driven roller modules are common in light case handling. <a href="https://www.hytrol.com/products/transfers" target="_blank" rel="noopener noreferrer">Hytrol</a>, for example, lists O-ring and flat right angle transfer (F-RAT) models among its transfer products. Powered bump turns keep product moving without relying on infeed momentum, which gives more consistent exit timing.</p>
+<h3>Skewed-Roller Bump Turns</h3>
+<p>Some modules use rollers skewed toward the side rail so the product is driven against the rail while it turns. The skew keeps the product registered to one edge, which helps downstream scanners and labelers that expect a known edge position.</p>
+<h2 id="vs-heading">Bump Turn vs. Curve vs. Pop-Up Transfer vs. Turntable</h2>
+<p>Four common ways to change direction by 90 degrees treat product orientation differently. This is the main reason to pick one over another.</p>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Skate Wheel (Passive)</th>
-<th>Dead Roller (Passive)</th>
-<th>Tapered Roller (Powered)</th>
-<th>Belt Curve (Powered)</th>
+<th>Method</th>
+<th>Does the Product Rotate in Space?</th>
+<th>Leading Face After the Turn</th>
+<th>Flow</th>
+<th>Main Cost Drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Max Load</td>
-<td>75 lbs</td>
-<td>200 lbs</td>
-<td>500 lbs</td>
-<td>100 lbs</td>
+<td>Bump turn</td>
+<td>No</td>
+<td>Changes (side face leads)</td>
+<td>Stop-and-go at the bumper</td>
+<td>Cross drive, side rail, guarding</td>
 </tr>
 <tr>
-<td>Min Infeed Speed</td>
-<td>60-80 FPM</td>
-<td>80-100 FPM</td>
-<td>No minimum</td>
-<td>No minimum</td>
+<td>Curve (tapered roller or belt)</td>
+<td>Yes, follows the curve</td>
+<td>Same face leads</td>
+<td>Continuous</td>
+<td>Curve radius and floor space, drive</td>
 </tr>
 <tr>
-<td>Product Types</td>
-<td>Flat-bottom cases</td>
-<td>Rigid flat-bottom</td>
-<td>Cases, totes, cartons</td>
-<td>Any shape, polybags</td>
+<td>Pop-up chain or belt transfer</td>
+<td>No</td>
+<td>Changes (side face leads)</td>
+<td>Stop, lift, transfer, lower</td>
+<td>Lift mechanism, controls</td>
 </tr>
 <tr>
-<td>Orientation Change</td>
-<td>Yes (equals turn angle)</td>
-<td>Yes (equals turn angle)</td>
-<td>Yes (equals turn angle)</td>
-<td>Yes (equals turn angle)</td>
-</tr>
-<tr>
-<td>Power Required</td>
-<td>None</td>
-<td>None</td>
-<td>Motor + chain/belt</td>
-<td>Motor + belt</td>
-</tr>
-<tr>
-<td>Relative Cost</td>
-<td>$</td>
-<td>$</td>
-<td>$$$</td>
-<td>$$$</td>
+<td>Turntable</td>
+<td>Yes, by the table angle</td>
+<td>Selectable</td>
+<td>Stop, rotate, discharge</td>
+<td>Rotation drive, controls, slower cycle</td>
 </tr>
 </tbody>
 </table>
-<p>Load ratings represent typical values. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for pricing factors.</p>
+<p>A 90-degree pop-up transfer, as <a href="https://www.dornerconveyors.com/solutions/pop-up-transfers" target="_blank" rel="noopener noreferrer">Dorner describes it</a>, uses multiple conveyors moving perpendicular to each other to change product direction. Like a bump turn, it moves the product sideways without rotating it. If the same face must keep leading, use a <a href="/conveyor-types/curved-conveyors/">curve</a> or a turntable (see <a href="/conveyor-types/transfer-conveyors/pivot/">pivot conveyors</a>).</p>
+<h2 id="orientation-heading">Case Orientation Effects</h2>
+<p>A 12 x 18 inch case traveling long side leading (18 inch face forward) through a 90-degree bump turn exits with a 12 inch face leading. The case has not rotated, but the conveyor now sees a different face first. This affects downstream equipment.</p>
+<h3>When the Change Helps</h3>
+<p>Some layouts use a bump turn on purpose. Presenting a different face to a label applicator, changing case orientation before a <a href="/conveyor-functions/collating-laning/">collating station</a>, or setting the layer pattern before palletizing can all be done without a dedicated case turner. Two bump turns in sequence return the original leading face.</p>
+<h3>When the Change Hurts</h3>
+<p>Barcode readers, vision systems, and print-and-apply labelers expect a consistent face and edge. A bump turn before a scanner moves the barcode from one face to another. Plan scanner position and label placement around the turn, or use a curve where the leading face must stay the same.</p>
+<h3>Product Behavior</h3>
+<p>Rectangular, rigid, flat-bottom products behave predictably at the bumper. Round products (bottles, cans, drums) can spin on contact. Soft packs, polybags, and tall narrow products can deform, tip, or stall. Test samples of your actual product on the module the supplier proposes before committing to the layout.</p>
 <h2 id="apps-heading">Bump Turn Applications</h2>
-<p><strong>Packaging line direction changes:</strong> Bump turns redirect conveyor flow around building columns, walls, and equipment obstructions. A 90-degree powered tapered roller curve fits into an L-shaped <a href="/industries/packaging-line-conveyors/">packaging line layout</a> and maintains line speed through the turn. Multiple 30-degree turns create gentle S-curves that route conveyors around obstacles with less orientation change per turn.</p>
-<p><strong>Gravity conveyor systems:</strong> Passive skate wheel and dead roller bump turns redirect products on <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller conveyor</a> systems. The gravity decline provides the momentum to carry products through the turn. Shipping and receiving areas commonly use gravity conveyors with bump turns to route packages from truck doors to staging areas without power requirements.</p>
-<p><strong>Case rotation for labeling:</strong> A 90-degree bump turn before a label applicator rotates the case to expose the target labeling face. This eliminates the need for a dedicated case turner. Two sequential 90-degree bump turns rotate a case 180 degrees (end-for-end). Layout designers use bump turns as no-cost case orientation tools.</p>
-<p><strong>Distribution center conveyor networks:</strong> Large distribution centers route conveyors through multi-level pick modules with numerous direction changes. Powered tapered roller curves and belt curves handle the heavy, continuous traffic at 100-200 FPM. <a href="/conveyor-types/mdr-conveyors/">MDR systems</a> from TGW, Dematic, and Bastian Solutions include powered curve modules that drop in alongside straight MDR sections without bridging hardware.</p>
-<p><strong><a href="/conveyor-types/flexible-conveyors/">Flexible conveyor</a> alternatives:</strong> Expandable skate wheel conveyors inherently provide bump turn capability at any angle along their length. Workers position the flexible conveyor in curves to route products from truck unloading to staging areas. The skate wheels serve as built-in bump turn surfaces at every curve point.</p>
+<p><strong>Tight corners in case lines:</strong> A bump turn module turns a line 90 degrees in less floor space than a wide-radius curve. It fits L-shaped layouts around columns and equipment in <a href="/industries/packaging-line-conveyors/">packaging lines</a>.</p>
+<p><strong>Gravity shipping and receiving:</strong> Gravity bump turns route packages from truck doors to staging areas with no power. See <a href="/conveyor-types/flexible-conveyors/">flexible conveyors</a> for portable layouts.</p>
+<p><strong>Face presentation for labeling:</strong> A bump turn ahead of a label applicator exposes the target face without a case turner.</p>
+<p><strong>Distribution center networks:</strong> <a href="/conveyor-types/mdr-conveyors/">MDR systems</a> often use powered right-angle transfer modules at corners where the change in leading face does not matter. Where it does, a powered curve is used instead.</p>
 <h2 id="selection-heading">How to Select a Bump Turn</h2>
-<p><strong>Passive vs. powered is the first decision.</strong> Use passive bump turns when infeed speed exceeds 60 FPM, products weigh under 75 lbs, and products have flat bottoms. Use powered bump turns when infeed speed is variable or slow, products weigh over 75 lbs, or products require consistent speed through the curve.</p>
-<p><strong>Product bottom surface determines the mechanism.</strong> Flat, rigid bottoms work on skate wheels and rollers. Flexible bottoms (polybags, pouches) require belt curves. Small products that fall between rollers require belt curves or closely spaced skate wheels. Products with protruding features on the bottom may catch on roller or wheel gaps.</p>
-<p><strong>Consider the orientation change.</strong> Every bump turn rotates the product by the turn angle. If this rotation is unacceptable, use a <a href="/conveyor-types/transfer-conveyors/pivot/">pivot conveyor</a> or pop-up transfer instead. If the rotation is acceptable or desirable, bump turns provide the lowest-cost direction change. Plan the barcode position and label orientation around the bump turn rotation.</p>
-<p><strong>Radius affects footprint and product behavior.</strong> Tighter radii (inside radius 12-24 inches) handle small products but generate more product rotation stress. Wider radii (inside radius 36-60 inches) provide smoother product flow but consume more floor space. Standard tapered roller curves from Hytrol and Dematic come in 12, 18, 24, 36, and 48-inch inside radii.</p>
-<p><strong><a href="/conveyor-types/accumulation-conveyors/">Accumulation zones</a> should not include bump turns.</strong> Products accumulating in a curve experience uneven backpressure and may jam, tip, or rotate unpredictably. Place accumulation sections on straight conveyor runs before or after the bump turn, not within the curve.</p>
+<p><strong>Confirm the orientation change is acceptable.</strong> If downstream equipment needs the same leading face, a bump turn is the wrong choice. Use a curve or turntable.</p>
+<p><strong>Check product fit.</strong> Rigid, flat-bottom cases and totes suit bump turns. Fragile, tall, round, or soft products need testing or a different method. Give the supplier your smallest and largest product dimensions and weights.</p>
+<p><strong>Choose gravity or powered.</strong> Gravity bump turns suit manual, low-rate areas. Powered modules suit automated lines where exit timing must be consistent. Ask the supplier for the rated product weight and rate for the specific module.</p>
+<p><strong>Match the rate.</strong> Each product stops at the bumper before leaving, so a bump turn has a maximum rate set by product length, gap, and cross-conveyor speed. Confirm it with the supplier against your peak rate.</p>
+<p><strong>Guard the transfer.</strong> The bumper, cross drive, and roller-to-frame gaps create pinch points. Specify guarding per <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1, Safety Standard for Conveyors and Related Equipment</a>.</p>
+<p><strong>Keep <a href="/conveyor-types/accumulation-conveyors/">accumulation</a> out of the transfer.</strong> Products queued into a bump turn push against each other and the rail and can jam or skew. Accumulate on straight sections before the transfer.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.hytrol.com/products/transfers" target="_blank" rel="noopener noreferrer">Transfers</a>, Hytrol. O-ring, reverse O-ring, flat right angle (F-RAT), and chain transfer models.</li>
+<li><a href="https://www.dornerconveyors.com/solutions/pop-up-transfers" target="_blank" rel="noopener noreferrer">Pop-Up Transfers</a>, Dorner. 90-degree pop-up transfer using perpendicular conveyors.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1, Safety Standard for Conveyors and Related Equipment</a>, ASME. Conveyor safety, including guarding.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a bump turn conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>A bump turn uses angled rollers, skate wheels, or guide rails to redirect products around a curve. The product's forward momentum carries it into the angled surface, deflecting it onto the new path. See our <a href="/conveyor-types/transfer-conveyors/">transfer conveyor guide</a> for all direction-change methods.</p>
+<p>A bump turn is a right-angle transfer. The product runs into an end stop at the corner and a cross conveyor carries it away at 90 degrees. The product does not rotate, so a different face leads after the turn. See our <a href="/conveyor-types/transfer-conveyors/">transfer conveyor guide</a> for all direction-change methods.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is the difference between passive and powered bump turns?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Passive bump turns have no motors and rely on product momentum. Powered bump turns use motorized tapered rollers or belts to drive products through the curve. Passive turns cost less but need higher infeed speeds and lighter products. Powered turns handle heavier loads at any speed.</p>
+<p>Passive (gravity) bump turns have no motors. Product rolls into the stop and out the side on declined rollers. Powered bump turns use a driven belt or rollers to pull the product off at 90 degrees, which gives more consistent exit timing on automated lines. Passive turns cost less and suit manual, low-rate areas.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Does a bump turn change product orientation?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Yes. The product rotates by the turn angle. A 90-degree bump turn rotates the product 90 degrees. If orientation must stay constant, use a <a href="/conveyor-types/transfer-conveyors/">pop-up transfer or turntable</a> that moves the product laterally without rotation.</p>
+<p>Yes, relative to the line. The product does not rotate in space, so the face that was a side becomes the leading face. A pop-up transfer behaves the same way. If the same face must keep leading, use a <a href="/conveyor-types/curved-conveyors/">curve</a> or a turntable.</p>
 
 </div>
 </div>
@@ -173,7 +164,7 @@ const articleSchema = {
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/transfer-conveyors/pivot/">Pivot Conveyors</a></h3>
-<p class="usa-collection__description">Orientation-preserving alternatives</p></div></li>
+<p class="usa-collection__description">Turntables and pivot wheels</p></div></li>
 <li class="usa-collection__item">
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/roller-conveyors/gravity/">Gravity Rollers</a></h3>

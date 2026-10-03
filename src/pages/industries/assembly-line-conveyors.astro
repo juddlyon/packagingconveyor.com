@@ -18,12 +18,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is an assembly line conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An assembly line conveyor transports workpieces between sequential assembly stations where operators or robots add components, fasten, inspect, or test. Assembly conveyors run at slow, controlled speeds (5-30 FPM for manual stations) or index between stations for automated operations. Common types include belt conveyors, pallet transfer (workpiece carrier) systems, and chain-on-edge conveyors." }
+      "acceptedAnswer": { "@type": "Answer", "text": "An assembly line conveyor transports workpieces between sequential assembly stations where operators or robots add components, fasten, inspect, or test. Assembly conveyors run at slow, controlled speeds set by the work content at each manual station, or index between stations for automated operations. Common types include belt conveyors, pallet transfer (workpiece carrier) systems, and chain-on-edge conveyors." }
     },
     {
       "@type": "Question",
       "name": "What is a pallet transfer system for assembly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A pallet transfer system carries workpieces on machined pallets (workpiece carriers) that circulate in a loop through assembly stations. Each pallet has precision fixtures, locating pins, nests, or clamps, that hold the workpiece in a known position. The conveyor indexes pallets to each station where assembly, fastening, inspection, or testing occurs. Positioning accuracy of ±0.05mm supports robotic assembly and vision inspection." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A pallet transfer system carries workpieces on machined pallets (workpiece carriers) that circulate in a loop through assembly stations. Each pallet has precision fixtures, locating pins, nests, or clamps, that hold the workpiece in a known position. The conveyor indexes pallets to each station where assembly, fastening, inspection, or testing occurs. Positioning units at each station register the pallet with sub-millimeter repeatability, which supports robotic assembly and vision inspection." }
     },
     {
       "@type": "Question",
@@ -33,7 +33,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What conveyor speed is used for manual assembly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Manual assembly conveyors typically run at 5-30 FPM (feet per minute), depending on the assembly task duration and workstation length. Slower speeds give operators more time per station. Variable-speed drives allow speed adjustment for different products or staffing levels. Ergonomic height is 30-36 inches for seated work and 36-42 inches for standing work." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Set speed from the work content: belt speed equals station length divided by the work time needed at each station. Slower speeds give operators more time per station. Variable-speed drives allow speed adjustment for different products or staffing levels. Set working height from the operator's elbow height and the task. CCOHS recommends a work surface about 5 cm above elbow height for precision work, about 5 to 10 cm below elbow height for light assembly, and 20 to 40 cm below elbow height for heavy work." }
     }
   ]
 };
@@ -55,14 +55,14 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Assembly Line Conveyors</h1>
-<p class="usa-intro">Assembly line conveyors transport workpieces through sequential stations where operators or robots perform assembly, fastening, inspection, and testing operations. These systems range from simple flat belt conveyors for manual assembly to precision pallet transfer systems with ±0.05mm positioning for robotic stations. Conveyor types include workstation belt conveyors, pallet transfer (workpiece carrier) systems, chain-on-edge conveyors, and <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. The key design question is how much precision, reconfiguration flexibility, and workstation access the assembly process requires.</p>
+<p class="usa-intro">Assembly line conveyors transport workpieces through sequential stations where operators or robots perform assembly, fastening, inspection, and testing operations. These systems range from simple flat belt conveyors for manual assembly to precision pallet transfer systems with sub-millimeter positioning for robotic stations. Conveyor types include workstation belt conveyors, pallet transfer (workpiece carrier) systems, chain-on-edge conveyors, and <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. The key design question is how much precision, reconfiguration flexibility, and workstation access the assembly process requires.</p>
 <h2 id="types-heading">Assembly Conveyor Types</h2>
 <h3>Workstation Belt Conveyors</h3>
-<p>Flat belt conveyors run at slow, constant speed (5-30 FPM) through a series of manual workstations. Operators stand or sit alongside the conveyor and perform assembly tasks as product moves past. VFD speed control adjusts belt speed to match operator pace and staffing levels. Belt width typically matches the workpiece width plus clearance, 12 to 36 inches for most small-to-medium assembly operations.</p>
-<p>Workstation conveyors integrate with ergonomic accessories: tilting work surfaces, tool balancers, parts bins, task lighting, and ESD (electrostatic discharge) grounding for electronics assembly. Dorner's 2200 series and mk North America's GUF-P series are standard workstation conveyor platforms.</p>
+<p>Flat belt conveyors run at slow, constant speed through a series of manual workstations. Operators stand or sit alongside the conveyor and perform assembly tasks as product moves past. VFD speed control adjusts belt speed to match operator pace and staffing levels. Belt width typically matches the workpiece width plus clearance.</p>
+<p>Workstation conveyors integrate with ergonomic accessories: tilting work surfaces, tool balancers, parts bins, task lighting, and ESD (electrostatic discharge) grounding for electronics assembly. Small-frame belt conveyors suit most of this work. Dorner's <a href="https://www.dornerconveyors.com/products/2200-series/2200-belted-conveyor" target="_blank" rel="noopener noreferrer">2200 series</a>, for example, comes in belt widths from 1.75 to 24 inches and carries loads up to 120 lb.</p>
 <h3>Pallet Transfer Systems</h3>
-<p>Pallet transfer (workpiece carrier) systems carry products on machined pallets that circulate in a closed loop. Each pallet has precision fixtures, locating pins, nests, or clamps, that hold the workpiece in a repeatable position at every station. The conveyor transports pallets between stations; pop-up locating pins at each station register the pallet to ±0.05mm for robotic operations.</p>
-<p>mk North America's VersaMove, Bosch Rexroth's TS 2plus, and Montech's modular transfer platforms serve electronics, medical device, automotive component, and consumer product assembly. Pallet transfer supports both manual and automated stations on the same line, operators load components at manual stations, and robots perform fastening or inspection at automated stations.</p>
+<p>Pallet transfer (workpiece carrier) systems carry products on machined pallets that circulate in a closed loop. Each pallet has precision fixtures, locating pins, nests, or clamps, that hold the workpiece in a repeatable position at every station. The conveyor transports pallets between stations; pop-up locating pins at each station register the pallet for robotic operations. Bosch Rexroth states its <a href="https://www.boschrexroth.com/en/pl/products/industrial-solutions/assembly-technology/conveyor-and-transfer-systems/ts-2plus-transfer-system/" target="_blank" rel="noopener noreferrer">TS 2plus transfer system</a> can reach a stop position with an accuracy of up to 0.015 mm using its TS 2Booster drive, without a separate positioning unit, and handles workpiece pallets from 160 x 160 mm to 1,200 x 1,200 mm with loads up to 240 kg.</p>
+<p>Modular pallet transfer platforms serve electronics, medical device, automotive component, and consumer product assembly. Pallet transfer supports both manual and automated stations on the same line, operators load components at manual stations, and robots perform fastening or inspection at automated stations.</p>
 <h3>Chain-on-Edge Conveyors</h3>
 <p>Chain-on-edge conveyors use a precision chain running in a vertical plane (on its edge) with workpiece-carrying fixtures attached at regular intervals. Parts hang from or mount on fixtures that travel through assembly, painting, curing, and inspection stations. Common in <a href="/industries/automotive-conveyors/">automotive component assembly</a>, appliance manufacturing, and any operation where parts need 360-degree access for processing.</p>
 <h3>Overhead Conveyors</h3>
@@ -77,9 +77,9 @@ const articleSchema = {
 <h2 id="ergo-heading">Ergonomic Conveyor Design</h2>
 <p>Assembly conveyor ergonomics directly affect operator productivity, quality, and injury rates. Key ergonomic parameters:</p>
 <ul>
-<li><strong>Working height:</strong> 30-36 inches for seated assembly. 36-42 inches for standing assembly. Adjustable-height conveyor supports accommodate different operators and products.</li>
-<li><strong>Reach distance:</strong> Parts bins and tools within 16-20 inches of the operator's normal working position. Conveyor width sized so the far edge remains within comfortable reach (24 inches maximum one-sided reach).</li>
-<li><strong>Lighting:</strong> 50-100 foot-candles at the work surface for general assembly. 100-200 foot-candles for precision or inspection tasks. Task lights mounted on the conveyor frame provide supplemental lighting.</li>
+<li><strong>Working height:</strong> Set from the operator's elbow height and the task. <a href="https://www.ccohs.ca/oshanswers/ergonomics/standing/standing_basic.html" target="_blank" rel="noopener noreferrer">CCOHS recommends</a> a work surface about 5 cm above elbow height for precision work such as electronic assembly, about 5 to 10 cm below elbow height for light assembly-line work, and 20 to 40 cm below for heavy work. Adjustable-height conveyor supports accommodate different operators and products.</li>
+<li><strong>Reach distance:</strong> Keep parts bins and tools within easy forearm reach of the operator's normal working position. Size conveyor width so the far edge does not force a full-arm reach or leaning.</li>
+<li><strong>Lighting:</strong> Precision and inspection tasks need more light than general assembly. Set illuminance for the task and add task lights on the conveyor frame where general lighting falls short.</li>
 <li><strong>Anti-fatigue:</strong> Anti-fatigue mats at standing stations. Ergonomic chairs at seated stations. Conveyor belt surface at a height that minimizes shoulder elevation and wrist deviation.</li>
 <li><strong>ESD protection:</strong> For electronics assembly, the conveyor belt, frame, and work surfaces must dissipate static electricity. ESD-safe belt materials, grounded frames, and operator wrist straps prevent electrostatic damage to sensitive components.</li>
 </ul>
@@ -92,7 +92,7 @@ const articleSchema = {
 <th>Motion</th>
 <th>Positioning</th>
 <th>Best For</th>
-<th>Relative Cost</th>
+<th>Main Cost Driver</th>
 </tr>
 </thead>
 <tbody>
@@ -101,28 +101,28 @@ const articleSchema = {
 <td>Continuous</td>
 <td>N/A (moving)</td>
 <td>Manual assembly, kitting</td>
-<td>$-$$</td>
+<td>Belt length and accessories</td>
 </tr>
 <tr>
 <td>Pallet transfer</td>
 <td>Indexing</td>
-<td>±0.05 mm</td>
+<td>Sub-millimeter (positioning units)</td>
 <td>Robotic assembly, precision</td>
-<td>$$$-$$$$</td>
+<td>Pallet count, fixtures, positioning units</td>
 </tr>
 <tr>
 <td>Chain-on-edge</td>
 <td>Continuous/indexing</td>
-<td>±1-2 mm</td>
+<td>Fixture-dependent</td>
 <td>Painting, coating, 360° access</td>
-<td>$$-$$$</td>
+<td>Chain length and fixtures</td>
 </tr>
 <tr>
 <td>Overhead (P&amp;F)</td>
 <td>Power-and-free</td>
-<td>±5 mm</td>
+<td>Coarse (add locating at stations)</td>
 <td>Large products, floor space savings</td>
-<td>$$$-$$$$</td>
+<td>Track length, carriers, switches</td>
 </tr>
 </tbody>
 </table>
@@ -134,16 +134,22 @@ const articleSchema = {
 <li><strong>Consumer products:</strong> Appliance assembly, toy assembly, cosmetics kitting. Workstation belt conveyors with ergonomic accessories.</li>
 <li><strong>Aerospace:</strong> Component assembly and inspection. Low-volume, high-precision pallet transfer systems with full traceability.</li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.boschrexroth.com/en/pl/products/industrial-solutions/assembly-technology/conveyor-and-transfer-systems/ts-2plus-transfer-system/" target="_blank" rel="noopener noreferrer">TS 2plus Transfer System</a>, Bosch Rexroth. Stop position accuracy with TS 2Booster, workpiece pallet sizes, and pallet load.</li>
+<li><a href="https://www.dornerconveyors.com/products/2200-series/2200-belted-conveyor" target="_blank" rel="noopener noreferrer">2200 Series Belted Conveyors</a>, Dorner. Belt width range and load capacity.</li>
+<li><a href="https://www.ccohs.ca/oshanswers/ergonomics/standing/standing_basic.html" target="_blank" rel="noopener noreferrer">Working in a Standing Position: Basic Information</a>, Canadian Centre for Occupational Health and Safety (CCOHS). Work surface height relative to elbow height by task type.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is an assembly line conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>An assembly line conveyor transports workpieces through sequential stations for assembly, fastening, inspection, and testing. Runs at slow controlled speed (5-30 FPM) for manual stations or indexes between stations for automated operations.</p>
+<p>An assembly line conveyor transports workpieces through sequential stations for assembly, fastening, inspection, and testing. Runs at slow controlled speed for manual stations or indexes between stations for automated operations.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is a pallet transfer system?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Carries workpieces on machined pallets with precision fixtures. Circulates in a loop through assembly stations. Locating pins register pallets to ±0.05mm for robotic operations. mk North America VersaMove and Bosch Rexroth TS 2plus are common platforms.</p>
+<p>Carries workpieces on machined pallets with precision fixtures. Circulates in a loop through assembly stations. Locating pins or positioning units register pallets with sub-millimeter repeatability for robotic operations.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Continuous vs. indexing assembly conveyors?</button></h3>
@@ -153,7 +159,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What speed for manual assembly conveyors?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>5-30 FPM typical. VFD speed control adjusts for different products or staffing. Ergonomic height: 30-36 inches (seated), 36-42 inches (standing).</p>
+<p>Set speed from work content: station length divided by work time per station. VFD speed control adjusts for different products or staffing. Set working height from elbow height: CCOHS recommends about 5 to 10 cm below elbow height for light assembly and about 5 cm above for precision work.</p>
 
 </div>
 </div>

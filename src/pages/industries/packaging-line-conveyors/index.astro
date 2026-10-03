@@ -80,7 +80,7 @@ const articleSchema = {
 <th>Line Stage</th>
 <th>Best For</th>
 <th>Accumulation</th>
-<th>Cost</th>
+<th>Main Cost Driver</th>
 </tr>
 </thead>
 <tbody>
@@ -89,42 +89,42 @@ const articleSchema = {
 <td>Primary</td>
 <td>Pouches, bags, trays, unstable items</td>
 <td>Limited (product slides on belt)</td>
-<td>$$</td>
+<td>Belt material and food-contact rating</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/tabletop-conveyors/">Tabletop chain</a></td>
 <td>Primary</td>
 <td>Bottles, cans, jars</td>
 <td>Mass accumulation on low-friction chain</td>
-<td>$$</td>
+<td>Chain material, lane count, guide rails</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/">Powered roller</a></td>
 <td>Secondary</td>
 <td>Cases, cartons, totes</td>
 <td>Minimum-pressure zones</td>
-<td>$$-$$$</td>
+<td>Drive type and roller spacing</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/mdr-conveyors/">MDR</a></td>
 <td>Secondary</td>
 <td>Case accumulation, zone control</td>
 <td>Zero-pressure zones</td>
-<td>$$$</td>
+<td>Zone count and controls</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/transfer-conveyors/">Transfer</a></td>
 <td>All stages</td>
 <td>Right-angle turns, lane changes</td>
 <td>None</td>
-<td>$$$-$$$$</td>
+<td>Each unit is a separate machine with its own drives and controls</td>
 </tr>
 <tr>
 <td><a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyor</a></td>
 <td>Tertiary</td>
 <td>Palletized loads to stretch wrap and dock</td>
 <td>Pallet positions</td>
-<td>$$$-$$$$</td>
+<td>Load rating, frame gauge, number of transfers</td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ const articleSchema = {
 <h3>Tertiary Packaging Conveyors</h3>
 <p>Tertiary conveyors move palletized loads from palletizer discharge through stretch wrapping to staging and shipping. <a href="/industries/packaging-line-conveyors/pallet/">Pallet conveyors</a> carry the heaviest loads on the line, and <a href="/conveyor-types/cdlr-conveyors/">chain-driven live roller (CDLR)</a> is the common type. <a href="/conveyor-types/transfer-conveyors/">Transfer conveyors</a> (turntables, right-angle and chain transfers) route pallets between lanes, storage rows, and dock doors.</p>
 <h2 id="layout-heading">Packaging Line Layout and Integration Points</h2>
-<p>Layout sets floor space use, operator and maintenance access, and fork truck routes. Conveyor crossovers, guarding, and emergency stops must meet <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, the U.S. safety standard for conveyors. Three layout patterns cover most lines.</p>
+<p>Layout sets floor space use, operator and maintenance access, and fork truck routes. Conveyor crossovers, guarding, and emergency stops must meet <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, the U.S. safety standard for conveyors. Nip points and machine points of operation also fall under <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">OSHA 1910.212</a> machine guarding requirements. Three layout patterns cover most lines.</p>
 <ul>
 <li><strong>Straight line:</strong> filler to palletizer in one run. Fewest transfers and simplest conveyor design, but needs the most floor length. Suits single-product lines with few changeovers.</li>
 <li><strong>U-shape:</strong> the line starts and ends on the same wall, so receiving and shipping share a side. Shortens fork truck travel and lets operators see both ends. Needs 180-degree turns using <a href="/conveyor-types/transfer-conveyors/">transfers</a> or <a href="/conveyor-types/curved-conveyors/">curves</a>.</li>
@@ -268,6 +268,12 @@ const articleSchema = {
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/accumulation-conveyors/">Accumulation Conveyors</a></h3>
 <p class="usa-collection__description">Zero-pressure, minimum-pressure, and back-pressure accumulation, sizing, and packaging line buffering.</p>
 <p class="usa-collection__description">ZPA Buffer MDR</p></div></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. Scope of conveyor safety requirements for design, installation, and operation.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General requirements for all machines</a>, OSHA. Guarding of points of operation and ingoing nip points.</li>
+<li><a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">PackML</a>, OMAC. Machine state model adopted by ISA as ISA-TR88.00.02.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">

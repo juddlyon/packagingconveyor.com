@@ -25,12 +25,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between delta and articulated arm robots for case packing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Delta (spider) robots excel at high-speed picking of lightweight products (under 5 lb) from a moving conveyor, 60-120+ picks per minute. Articulated arm robots handle heavier products (5-50+ lb) with greater reach and 6-axis flexibility but at lower speeds (15-40 picks per minute). Delta robots suit food packaging; articulated arms suit heavy industrial products and mixed-case palletizing." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Delta (spider) robots excel at high-speed picking of light products from a moving conveyor. ABB's IRB 360 delta robot, for example, comes in 1, 3, 6, and 8 kg payload versions. Articulated arm robots handle heavier products with greater reach and 6-axis flexibility but cycle slower. Delta robots suit light food and consumer packages. Articulated arms suit heavier products, mixed-case packing, and palletizing." }
     },
     {
       "@type": "Question",
       "name": "How fast can robotic case packers run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Single delta robots achieve 60-120+ picks per minute. Single articulated arms achieve 15-40 picks per minute. Multi-robot cells with 2-4 robots working the same conveyor multiply throughput proportionally. A typical 2-robot delta cell packs 20-40 cases per minute depending on products per case and pattern complexity." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Rate depends on robot type, gripper, products per pick, and case pattern. Delta robots cycle fastest. ABB publishes cycle times of a fraction of a second on a standard test path for its IRB 360, and real packing rates are lower. Articulated arms cycle slower. Multi-pick grippers and cells with several robots on the same conveyor raise throughput. Ask suppliers for a rated rate on your products and case pattern." }
     },
     {
       "@type": "Question",
@@ -57,49 +57,49 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Robotic Case Packing</h1>
-<p class="usa-intro">Robotic case packing uses delta (spider), articulated arm, or gantry robots to pick products from a conveyor and place them into corrugated cases. Vision systems locate products on the infeed belt, vacuum or mechanical grippers pick single or multiple items, and programmed motion paths place product into precise case patterns. Robotic case packers from FANUC, ABB, KUKA, Yaskawa, and packaging OEMs like Brenton (ProMach), BluePrint Automation (BPA), and JLS Automation handle 15 to 120+ picks per minute with recipe-based changeover for multiple product sizes and case configurations.</p>
+<p class="usa-intro">Robotic case packing uses delta (spider), articulated arm, or gantry robots to pick products from a conveyor and place them into corrugated cases. Vision systems locate products on the infeed belt, vacuum or mechanical grippers pick single or multiple items, and programmed motion paths place product into precise case patterns. Recipe-based changeover lets one cell run multiple product sizes and case configurations.</p>
 <h2 id="types-heading">Delta, Articulated &amp; Gantry Robots</h2>
 <h3>Delta (Spider) Robots</h3>
-<p>Delta robots use three or four parallel-link arms attached to a fixed overhead frame. The lightweight arm structure enables high-speed pick-and-place, 60 to 120+ picks per minute per robot. Delta robots pick from a moving conveyor belt using vision-guided tracking. The robot controller receives product position data from an upstream camera, calculates the pick trajectory, and synchronizes with the belt encoder to pick product in motion.</p>
-<p>Delta robots suit lightweight products (under 2-5 lb depending on model): flow-wrapped snacks, pouches, bags, small cartons, and individual <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie packages</a>. FANUC M-1iA/M-3iA, ABB FlexPicker IRB 360, and Yaskawa MPP3 are common delta robot models in packaging.</p>
+<p>Delta robots use three or four parallel-link arms attached to a fixed overhead frame. The lightweight arm structure allows very short pick-and-place cycles. ABB, for example, lists a 0.30 second cycle for its <a href="https://library.e.abb.com/public/a3759d3f3e7141deba89d1caeb1dd4e4/IRB%20360%20FlexPicker_Datasheet_US%20Letter.pdf" target="_blank" rel="noopener noreferrer">IRB 360-1/1130 FlexPicker</a> carrying 0.1 kg on a standard 25/305/25 mm test path. Real packing rates are lower and depend on product, gripper, and pattern. Delta robots pick from a moving conveyor belt using vision-guided tracking. The robot controller receives product position data from an upstream camera, calculates the pick trajectory, and synchronizes with the belt encoder to pick product in motion.</p>
+<p>Delta robots suit light products: flow-wrapped snacks, pouches, bags, small cartons, and individual <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie packages</a>. Payload limits are low. ABB offers IRB 360 variants rated for 1, 3, 6, and 8 kg, and the rated payload must cover the gripper as well as the product.</p>
 <h3>Articulated Arm Robots</h3>
-<p>Articulated arm (6-axis) robots provide greater reach, payload, and flexibility than delta robots. Six joints allow the robot to approach the product from any angle, rotate it during placement, and reach into deep cases. Payload ranges from 5 to 250+ kg depending on model. Speeds are lower than delta, typically 15-40 picks per minute, because the heavier arm structure limits acceleration.</p>
-<p>Articulated arms suit heavier products (cases, trays, multipacks weighing 5-50+ lb), mixed-case packing (multiple SKUs into one case), and applications requiring product reorientation during placement. FANUC M-10/M-20, ABB IRB 2600, and KUKA KR AGILUS are widely used for case packing. These robots also handle palletizing, a single robot can pack cases and palletize them in lower-volume applications.</p>
+<p>Articulated arm (6-axis) robots provide greater reach, payload, and flexibility than delta robots. Six joints allow the robot to approach the product from any angle, rotate it during placement, and reach into deep cases. Payload capacity spans a wide range across models, from small arms for single items to large arms that lift full layers. They cycle slower than delta robots because the heavier arm structure limits acceleration.</p>
+<p>Articulated arms suit heavier products (cases, trays, multipacks), mixed-case packing (multiple SKUs into one case), and applications requiring product reorientation during placement. These robots also handle palletizing. A single robot can pack cases and palletize them in lower-volume applications.</p>
 <h3>Gantry (Cartesian) Robots</h3>
-<p>Gantry robots use linear axes (X, Y, Z) mounted on an overhead frame. The pick head travels along rails above the product conveyor and case conveyor. Gantry systems handle very heavy loads (100+ lb) and provide a large work envelope. They pick entire product layers (a complete row or partial case pattern) in a single motion, then place the layer into the case.</p>
-<p>Gantry packers suit high-volume lines packing heavy products, beverage multipacks, canned goods trays, and bulk-packaged industrial products. Speeds are moderate (10-25 CPM) but each cycle places multiple products. Schneider Packaging (Pactiv Evergreen) and Pearson Packaging supply gantry-style case packers.</p>
+<p>Gantry robots use linear axes (X, Y, Z) mounted on an overhead frame. The pick head travels along rails above the product conveyor and case conveyor. Gantry systems handle heavy loads and provide a large work envelope. They pick entire product layers (a complete row or partial case pattern) in a single motion, then place the layer into the case.</p>
+<p>Gantry packers suit high-volume lines packing heavy products, beverage multipacks, canned goods trays, and bulk-packaged industrial products. Cycle rates are moderate, but each cycle places multiple products.</p>
 <h2 id="compare-heading">Robot Type Comparison</h2>
 <table>
 <thead>
 <tr>
 <th>Robot Type</th>
-<th>Speed (Picks/Min)</th>
+<th>Relative Speed</th>
 <th>Payload</th>
 <th>Best For</th>
-<th>Relative Cost</th>
+<th>Main Cost Driver</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Delta (spider)</td>
-<td>60-120+</td>
-<td>0.5-5 lb</td>
+<td>Highest</td>
+<td>Light (ABB IRB 360: 1 to 8 kg by variant)</td>
 <td>Light products, high speed, food</td>
-<td>$$$</td>
+<td>Vision tracking and gripper</td>
 </tr>
 <tr>
 <td>Articulated arm</td>
-<td>15-40</td>
-<td>5-250+ lb</td>
+<td>Moderate</td>
+<td>Wide range by model</td>
 <td>Heavy products, mixed case, flexibility</td>
-<td>$$$-$$$$</td>
+<td>Robot size, reach, and gripper</td>
 </tr>
 <tr>
 <td>Gantry (Cartesian)</td>
-<td>10-25 (layer picks)</td>
-<td>50-300+ lb</td>
+<td>Moderate (multiple products per cycle)</td>
+<td>Heavy, layer loads</td>
 <td>Heavy, high-volume, full-layer</td>
-<td>$$$$</td>
+<td>Frame size and number of axes</td>
 </tr>
 </tbody>
 </table>
@@ -109,31 +109,37 @@ const articleSchema = {
 <ul>
 <li><strong>Consistent belt color:</strong> White or light-colored belts provide contrast against most products. Dark belts suit light-colored products.</li>
 <li><strong>Controlled lighting:</strong> Overhead LED bar lights or diffuse dome lights eliminate shadows and reflections. The conveyor section under the camera often has a light enclosure to block ambient light variation.</li>
-<li><strong>Encoder feedback:</strong> A belt-mounted encoder or motor encoder provides precise belt position to the robot controller. Encoder resolution of 0.1mm or better ensures accurate product tracking at speed.</li>
+<li><strong>Encoder feedback:</strong> A belt-mounted encoder or motor encoder provides precise belt position to the robot controller. Resolution must be fine enough for the robot to track each product accurately at belt speed.</li>
 <li><strong>Single-layer product:</strong> Products must arrive in a single layer, not stacked. A <a href="/conveyor-functions/product-handling/spreader/">spreader conveyor</a> or singulation conveyor upstream ensures single-layer presentation.</li>
 </ul>
-<p>Cognex, Keyence, and SICK supply vision systems for robotic packaging applications. FANUC's iRVision and ABB's integrated vision are robot-native vision solutions that simplify integration.</p>
+<p>Vision can come from a separate machine vision supplier or from the robot maker. Robot-native vision packages reduce the integration work between camera and controller.</p>
 <h2 id="gripper-heading">Gripper Design</h2>
 <p>The gripper (end-of-arm tool, EOAT) determines what products the robot can pick and how gently it handles them. Gripper design is the most application-specific element of a robotic case packing system. Common gripper types:</p>
 <ul>
 <li><strong>Vacuum grippers:</strong> Suction cups pick products with flat or slightly curved surfaces, bags, pouches, cartons, flow-wrapped packages. Single or multi-cup configurations pick one or multiple products per cycle. Foam or bellows cups conform to irregular surfaces. Vacuum is generated by venturi (compressed air) or electric vacuum pump.</li>
 <li><strong>Mechanical grippers:</strong> Fingers or jaws clamp around the product. Suited for rigid items (bottles, cans, tubes) that vacuum cups cannot grip reliably. Servo-controlled fingers adjust grip force for different product sizes.</li>
 <li><strong>Fork/shovel grippers:</strong> Thin forks slide under the product (from the belt surface) and lift. Used for fragile products that cannot tolerate top-surface pressure, decorated <a href="/industries/food-conveyors/bakery/">bakery products</a>, open containers, and delicate trays.</li>
-<li><strong>Multi-pick grippers:</strong> Gripper with multiple independent pick heads picks 2-8 products per cycle. Reduces required robot speed, a 4-pick gripper at 30 cycles/minute achieves 120 picks/minute. Common with delta robots on high-speed lines.</li>
+<li><strong>Multi-pick grippers:</strong> A gripper with several independent pick heads picks several products per cycle. This cuts the required robot cycle rate: a 4-pick gripper at 30 cycles per minute delivers 120 picks per minute. Common with delta robots on high-speed lines.</li>
 </ul>
-<p>Gripper changeover for different products takes 5-30 minutes for a manual tool change or 15-30 seconds with an automatic tool changer (ATC). Automatic tool changers from Schunk, ATI, and Applied Robotics enable tool-free recipe changes. The robot stores multiple grippers on a rack and swaps automatically when the operator selects a new product recipe.</p>
+<p>A manual gripper change needs an operator and stops the cell. An automatic tool changer (ATC) makes the swap much faster and without tools. The robot stores multiple grippers on a rack and swaps automatically when the operator selects a new product recipe.</p>
 <h2 id="conveyor-heading">Conveyor Requirements for Robotic Packing</h2>
 <p>A robotic case packing cell requires three conveyor subsystems working in coordination:</p>
 <ol>
-<li><strong>Product infeed conveyor:</strong> Delivers products to the robot pick zone. Belt conveyor running at constant speed (20-100 FPM typical). Servo-controlled belt with encoder feedback for vision tracking. Width sized for single-file or multi-lane product presentation. <a href="/conveyor-functions/infeed-outfeed/">Infeed system</a> upstream meters product spacing.</li>
+<li><strong>Product infeed conveyor:</strong> Delivers products to the robot pick zone. Belt conveyor running at constant speed. Servo-controlled belt with encoder feedback for vision tracking. Width sized for single-file or multi-lane product presentation. <a href="/conveyor-functions/infeed-outfeed/">Infeed system</a> upstream meters product spacing.</li>
 <li><strong>Case conveyor:</strong> Positions empty cases under the robot place zone. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyor</a> for stop-and-go placement, or continuous conveyor with tracking for place-on-the-fly operation. Case erector feeds empty cases from upstream.</li>
 <li><strong>Case discharge conveyor:</strong> Transports loaded cases from the robot cell to case sealing and palletizing. Roller or belt conveyor with <a href="/conveyor-types/accumulation-conveyors/">accumulation</a> to buffer cases when the sealer stops.</li>
 </ol>
 <p>All three conveyors communicate through the cell PLC or robot controller. The product infeed encoder feeds the vision tracking system. The case conveyor indexes in sync with the robot cycle. The discharge conveyor receives a "case full" signal and advances the loaded case. For more on controls integration, see the <a href="/resources/automated-conveyor-systems/">automated conveyor systems guide</a>.</p>
 <h2 id="safety-heading">Safety Guarding &amp; Conveyor Access</h2>
-<p>Robotic case packing cells require safety guarding per ANSI/RIA 15.06 and OSHA standards. The robot work envelope must be enclosed by safety fencing, light curtains, or area scanners. Conveyor entry and exit points through the safety perimeter use safety-rated muting sensors that allow product to pass while detecting human intrusion.</p>
-<p>Collaborative robots (cobots) from Universal Robots, FANUC (CRX series), and ABB (GoFa/SWIFTI) operate without full safety fencing in some case packing applications. Cobots limit speed and force to safe levels when humans are nearby. However, cobot speed limitations (typically 250mm/s or less in collaborative mode) reduce throughput compared to industrial robots. Cobots suit lower-volume, high-mix applications where operators frequently interact with the cell.</p>
-<p>For budgeting, robotic case packing cells cost $$$-$$$$ depending on robot type, vision system, gripper complexity, and conveyor requirements. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
+<p>Robotic case packing cells require safety guarding per <a href="https://www.roboticstomorrow.com/news/2025/09/09/new-ansia3-r1506-2025-american-national-standard-for-industrial-robot-safety-now-available-for-purchase/25501/" target="_blank" rel="noopener noreferrer">ANSI/A3 R15.06-2025</a>, the U.S. industrial robot safety standard (Part 1 covers robots, Part 2 covers robot applications and cells, Part 3 covers users). OSHA has no robot-specific standard, but the <a href="https://www.osha.gov/otm/section-4-safety-hazards/chapter-4" target="_blank" rel="noopener noreferrer">OSHA Technical Manual chapter on industrial robots</a> points to R15.06 for risk assessment and safeguarding. The robot work envelope must be enclosed by safety fencing, light curtains, or area scanners. Conveyor entry and exit points through the safety perimeter use safety-rated muting sensors that allow product to pass while detecting human intrusion.</p>
+<p>Collaborative robots (cobots) can operate without full safety fencing in some case packing applications, based on a risk assessment. Cobots limit speed and force when humans are nearby, and R15.06-2025 now consolidates the collaborative guidance from ISO/TS 15066. Those limits reduce throughput compared to fenced industrial robots. Cobots suit lower-volume, high-mix applications where operators frequently interact with the cell.</p>
+<p>For budgeting, cell cost is driven by robot type and count, vision, gripper complexity, guarding, and conveyor requirements. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://library.e.abb.com/public/a3759d3f3e7141deba89d1caeb1dd4e4/IRB%20360%20FlexPicker_Datasheet_US%20Letter.pdf" target="_blank" rel="noopener noreferrer">IRB 360 FlexPicker datasheet</a>, ABB. Payload variants of 1, 3, 6, and 8 kg and published cycle times on a 25/305/25 mm test path.</li>
+<li><a href="https://www.roboticstomorrow.com/news/2025/09/09/new-ansia3-r1506-2025-american-national-standard-for-industrial-robot-safety-now-available-for-purchase/25501/" target="_blank" rel="noopener noreferrer">New ANSI/A3 R15.06-2025 standard for industrial robot safety</a>, Robotics Tomorrow. Three-part structure of R15.06-2025 and consolidation of ISO/TS 15066 collaborative guidance.</li>
+<li><a href="https://www.osha.gov/otm/section-4-safety-hazards/chapter-4" target="_blank" rel="noopener noreferrer">OSHA Technical Manual, Section IV Chapter 4: Industrial Robot Systems and Industrial Robot System Safety</a>, OSHA. Robot cell risk assessment and safeguarding guidance referencing R15.06.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is robotic case packing?</button></h3>
@@ -143,12 +149,12 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">Delta vs. articulated arm for case packing?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Delta: 60-120+ picks/min, under 5 lb payload, ideal for food packaging. Articulated arm: 15-40 picks/min, 5-250+ lb payload, suits heavy products and mixed-case applications. See also: <a href="/industries/packaging-line-conveyors/case/">case packing overview</a>.</p>
+<p>Delta: fastest cycles, low payload (ABB IRB 360 variants are rated 1 to 8 kg), suits light food and consumer packages. Articulated arm: slower cycles, wide payload range by model, suits heavy products and mixed-case applications. See also: <a href="/industries/packaging-line-conveyors/case/">case packing overview</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How fast can robotic case packers run?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Single delta robot: 60-120+ picks/min. Single articulated arm: 15-40 picks/min. Multi-robot cells multiply throughput. A 2-robot delta cell typically packs 20-40 cases/min depending on products per case.</p>
+<p>It depends on robot type, gripper, products per pick, and case pattern. Delta robots cycle fastest, articulated arms slower. Multi-pick grippers and multi-robot cells raise throughput. Ask suppliers for a rated rate on your products and pattern.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What conveyors does robotic case packing need?</button></h3>

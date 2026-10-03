@@ -5,8 +5,8 @@ const palletTypes = [
   {
     name: 'Chain-Driven Live Roller (CDLR)',
     slug: '/conveyor-types/cdlr-conveyors/',
-    desc: 'Heavy-duty powered roller conveyors with chain drive for pallet loads up to 10,000 lbs.',
-    tags: ['Heavy-Duty', 'Chain-Drive', '10,000 lbs'],
+    desc: 'Heavy-duty powered roller conveyors with chain drive. Capacity depends on roller size, roller centers, and frame.',
+    tags: ['Heavy-Duty', 'Chain-Drive', 'Zone Accumulation'],
   },
   {
     name: 'Drag Chain Conveyors',
@@ -47,7 +47,7 @@ const faqSchema = {
       "name": "What is a pallet conveyor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets (typically 2,000-4,000 lbs, up to 10,000+ lbs). Pallet conveyors use chain-driven live rollers (CDLR), drag chain, or heavy-duty roller systems with reinforced frames, large-diameter rollers, and high-capacity bearings. They integrate with palletizers, stretch wrappers, and automated storage/retrieval systems (AS/RS)."
+        "text": "A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets. Rated capacity varies widely by model, from a few thousand pounds per pallet to much heavier loads on structural designs. Pallet conveyors use chain-driven live rollers (CDLR), drag chain, or heavy-duty roller systems with reinforced frames, large-diameter rollers, and high-capacity bearings. They integrate with palletizers, stretch wrappers, and automated storage/retrieval systems (AS/RS)."
       }
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       "name": "What type of conveyor is used for pallets?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The most common pallet conveyor types are: Chain-Driven Live Roller (CDLR) for standard pallets up to 10,000 lbs, drag chain (strand chain) conveyors for very heavy loads or non-standard pallets, heavy-duty gravity roller for pallet flow lanes, and turntables or chain transfers for direction changes. CDLR is the standard choice for most pallet handling applications."
+        "text": "The most common pallet conveyor types are: Chain-Driven Live Roller (CDLR) for standard pallets, drag chain (strand chain) conveyors for pallets or skids that do not convey well on rollers, heavy-duty gravity roller for pallet flow lanes, and turntables or chain transfers for direction changes. CDLR is the standard choice for most pallet handling applications."
       }
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       "name": "How much weight can a pallet conveyor handle?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Standard CDLR pallet conveyors handle 2,000-4,000 lb pallet loads. Heavy-duty CDLR and drag chain conveyors handle up to 10,000 lbs or more. Load capacity depends on roller diameter, roller spacing, bearing rating, chain size, and frame construction. Always specify the maximum expected pallet weight plus a safety factor when selecting pallet conveyors."
+        "text": "It depends on the model. Alba Manufacturing rates some CDLR models up to 15,000 lb and its standard drag chain conveyor up to 6,000 lb. Titan Conveyors rates CDLR rollers from 250 lb per roller on light models to 2,500 lb per roller on its Schedule 80 pipe roller model. Load capacity depends on roller diameter, roller spacing, bearing rating, chain size, and frame construction. Always specify the maximum expected pallet weight plus a safety factor when selecting pallet conveyors."
       }
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       "name": "What is the difference between CDLR and drag chain pallet conveyors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CDLR (Chain-Driven Live Roller) uses a chain to drive large-diameter rollers that contact the pallet bottom. It works best with standard pallets that have bottom boards aligned with the conveyor direction. Drag chain conveyors use two or three strands of chain that directly contact the pallet bottom stringers. Drag chain handles non-standard pallets, block pallets, and very heavy loads better than CDLR."
+        "text": "CDLR (Chain-Driven Live Roller) uses a chain to drive large-diameter rollers that contact the pallet bottom. It works best with standard pallets that have bottom boards aligned with the conveyor direction. Drag chain conveyors use two or three strands of chain that directly contact the pallet bottom stringers. Drag chain handles non-standard pallets, skids, and loads with bottoms that do not convey well on rollers."
       }
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       "name": "Can pallet conveyors accumulate pallets?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, pallet conveyors can accumulate using zone-controlled CDLR sections with pneumatic or mechanical clutches per zone. Accumulation allows pallets to queue before palletizers, stretch wrappers, or shipping docks without continuous backpressure. Pallet accumulation is typically minimum-pressure (light contact acceptable) rather than zero-pressure due to the robust nature of pallet loads."
+        "text": "Yes. Zoned CDLR sections accumulate pallets by stopping or declutching each zone, so pallets queue before palletizers, stretch wrappers, or shipping docks without building line pressure. Zero-pressure CDLR accumulation models are commercially available, for example Titan Conveyors offers a ZPA (zero pressure accumulator) CDLR model."
       }
     }
   ]
@@ -97,24 +97,24 @@ const articleSchema = {
 ---
 <BaseLayout
   title="Pallet Conveyors: CDLR, Chain & Heavy-Duty Systems | Packaging Conveyor"
-  description="Guide to pallet conveyors: CDLR (chain-driven live roller), drag chain, transfers, and pallet flow. Load capacities up to 10,000 lbs, integration, and selection criteria."
+  description="Guide to pallet conveyors: CDLR (chain-driven live roller), drag chain, transfers, and pallet flow. Load ratings, integration, and selection criteria."
   canonical="https://packagingconveyor.com/conveyor-types/pallet-conveyors/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Pallet Conveyors: CDLR, Chain &amp; Heavy-Duty Systems</h1>
-<p class="usa-intro">Pallet conveyors are heavy-duty systems designed to transport loaded pallets weighing 2,000 to 10,000+ pounds. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, automated storage/retrieval systems (AS/RS), and dock operations. The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR (Chain-Driven Live Roller)</a> and drag chain conveyors, with transfers and turntables for direction changes.</p>
+<p class="usa-intro">Pallet conveyors are heavy-duty systems designed to transport loaded pallets, with rated capacity set by roller size, roller centers, chain, and frame. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, automated storage/retrieval systems (AS/RS), and dock operations. The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR (Chain-Driven Live Roller)</a> and drag chain conveyors, with transfers and turntables for direction changes.</p>
 <h2 id="subtypes-heading">Explore Pallet Conveyor Types</h2>
 <ul class="usa-collection">{palletTypes.map((type) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={type.slug}>{type.name}</a></h3><p class="usa-collection__description">{type.desc}</p>{type.tags && <p class="tags">{type.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
 ))}</ul>
 <h2 id="cdlr-heading">Chain-Driven Live Roller (CDLR)</h2>
-<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> are the standard choice for pallet handling in packaging and distribution. A roller chain (typically #60 or #80 ANSI chain) drives large-diameter steel rollers (2.5" to 3.5" typical). The pallet rides on the roller surfaces, which are driven at a constant speed by the chain.</p>
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> are the standard choice for pallet handling in packaging and distribution. Roller chain loops drive heavy steel rollers, usually roller-to-roller. Alba Manufacturing, for example, offers RC-40, RC-50, and RC-60 roller-to-roller chain on its CDLR (<a href="https://www.albamfg.com/products/chain-driven-live-roller-conveyor/chain-driven-live-roller-conveyor-2-9-16-diameter-rollers/" target="_blank" rel="noopener noreferrer">Alba CDLR</a>). The pallet rides on the roller surfaces, which are driven at a constant speed by the chain.</p>
 <h3>CDLR Specifications</h3>
 <ul>
-<li><strong>Load capacity:</strong> 2,000-10,000 lbs depending on frame and roller specifications</li>
-<li><strong>Roller diameter:</strong> 2.5", 2.9", 3.5" common; larger for heavier loads</li>
-<li><strong>Roller spacing:</strong> 3", 4", 6" typical; must support pallet bottom boards</li>
-<li><strong>Speed:</strong> 20-60 FPM typical for pallet handling</li>
+<li><strong>Load capacity:</strong> rated per roller or per pallet. Titan Conveyors rates its CDLR models from 250 lb per roller (1.9" rollers on 4" centers) to 2,500 lb per roller (3-1/2" Schedule 80 pipe rollers on 6" centers) (<a href="https://www.titanconveyors.com/products/chain-driven-live-roller/" target="_blank" rel="noopener noreferrer">Titan CDLR</a>). Alba rates some models up to 15,000 lb.</li>
+<li><strong>Roller diameter:</strong> the Titan range above runs from 1.9" to 3-1/2". Heavier loads use larger, thicker-wall rollers.</li>
+<li><strong>Roller centers:</strong> Alba offers 2.75" to 12" centers on its 2-9/16" roller model. <a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Ashland's roller conveyor guide</a> says a minimum of three rollers should be in contact with the load at all times, so check centers against the pallet's bottom-board layout.</li>
+<li><strong>Speed:</strong> Alba offers 30, 45, and 60 fpm fixed speeds. Pallet lines usually run slower than case conveyors.</li>
 <li><strong>Frame:</strong> Heavy structural steel channel or formed sections</li>
 </ul>
 <h3>CDLR Advantages</h3>
@@ -122,7 +122,7 @@ const articleSchema = {
 <li>High load capacity with positive chain drive</li>
 <li>Smooth, controlled pallet transport</li>
 <li>Zone accumulation available with clutches</li>
-<li>Handles standard GMA pallets, Euro pallets, and custom sizes</li>
+<li>Handles GMA-style stringer pallets, Euro pallets, and custom sizes when bottom boards span the rollers</li>
 <li>Integrates easily with transfers, lifts, and automation</li>
 </ul>
 <h3>CDLR Limitations</h3>
@@ -132,19 +132,19 @@ const articleSchema = {
 <li>Chain maintenance required (lubrication, tensioning)</li>
 </ul>
 <h2 id="chain-heading">Drag Chain Pallet Conveyors</h2>
-<p><a href="/conveyor-types/chain-conveyors/">Drag chain conveyors</a> (also called strand chain or slat chain) use two or three strands of heavy chain running in tracks. The pallet bottom stringers ride directly on the chain strands. This design handles non-standard pallets, block pallets, and very heavy loads that CDLR cannot.</p>
+<p><a href="/conveyor-types/chain-conveyors/">Drag chain conveyors</a> (also called strand chain or pallet chain conveyors) use two or three strands of heavy chain running in tracks. The pallet bottom rides directly on the chain strands. Alba lists 2-strand and 3-strand as standard, RC-60 or RC-80 chain, and capacity up to 6,000 lb on its drag chain conveyor (<a href="https://www.albamfg.com/products/drag-chain-conveyor/" target="_blank" rel="noopener noreferrer">Alba drag chain</a>). The design handles products that do not convey well on rollers, such as skids, odd pallets, and loads with uneven bottoms.</p>
 <h3>When to Use Drag Chain</h3>
 <ul>
 <li>Block pallets or plastic pallets without bottom boards</li>
 <li>Non-standard pallet sizes or mixed pallet types</li>
-<li>Extremely heavy loads (10,000+ lbs)</li>
+<li>Loads with bottoms that would hang up or drop between rollers</li>
 <li>Applications where pallets enter from the side (perpendicular)</li>
 <li>Integration with pallet dispensers or pallet magazines</li>
 </ul>
 <h3>Drag Chain Considerations</h3>
 <ul>
-<li>Higher friction than CDLR (chain slides against pallet)</li>
-<li>More wear on pallet bottoms</li>
+<li>Chain slides in its track under load, so track wear strips and lubrication need attention</li>
+<li>Pallet bottom boards must span across the chain strands</li>
 <li>Noisier operation</li>
 <li>Higher chain wear and lubrication requirements</li>
 </ul>
@@ -157,81 +157,90 @@ const articleSchema = {
 <th>Load Capacity</th>
 <th>Speed</th>
 <th>Pallet Types</th>
-<th>Cost</th>
+<th>Cost drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="/conveyor-types/cdlr-conveyors/">CDLR</a></td>
 <td>Standard pallet transport</td>
-<td>2,000-10,000 lbs</td>
-<td>20-60 FPM</td>
+<td>Varies by model. Alba up to 15,000 lb on some models</td>
+<td>Alba: 30, 45, 60 fpm</td>
 <td>GMA, Euro, stringer</td>
-<td>$$$</td>
+<td>Roller size and wall, roller centers, zone count and controls</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/chain-conveyors/">Drag Chain (2-strand)</a></td>
 <td>Non-standard, heavy loads</td>
-<td>Up to 15,000 lbs</td>
-<td>10-40 FPM</td>
-<td>Any, including block</td>
-<td>$$$</td>
+<td>Alba standard: up to 6,000 lb (2- or 3-strand)</td>
+<td>Alba: 30, 45, 60 fpm</td>
+<td>Skids, odd sizes, block</td>
+<td>Chain size, strand count, track and wear strip material</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/chain-conveyors/">Drag Chain (3-strand)</a></td>
 <td>Very heavy, wide loads</td>
-<td>Up to 20,000 lbs</td>
-<td>10-30 FPM</td>
-<td>Any, including double</td>
-<td>$$$$</td>
+<td>Depends on chain and frame. Confirm with supplier</td>
+<td>Similar to 2-strand</td>
+<td>Wide or flexible-bottom loads</td>
+<td>Third strand and wider frame</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/gravity/">Gravity Pallet Flow</a></td>
 <td>FIFO storage, staging</td>
-<td>2,000-4,000 lbs</td>
-<td>Gravity</td>
+<td>Depends on roller and lane design</td>
+<td>Gravity, with speed controllers</td>
 <td>Standard with boards</td>
-<td>$$</td>
+<td>Lane length, roller grade, speed controllers and separators</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/transfer-conveyors/">Chain Transfer</a></td>
 <td>Right-angle direction change</td>
-<td>2,000-6,000 lbs</td>
-<td>20-40 FPM</td>
+<td>Alba: up to 4,000 lb</td>
+<td>Matched to adjacent conveyors</td>
 <td>Standard with boards</td>
-<td>$$$</td>
+<td>Lift mechanism, controls, and pneumatics</td>
 </tr>
 </tbody>
 </table>
 <h2 id="integration-heading">Pallet Conveyor Integration</h2>
 <h3>Palletizer Integration</h3>
-<p>Pallet conveyors transport empty pallets to <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a> and loaded pallets away. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">Pallet dispensers</a> feed empty pallets onto the infeed conveyor. Outfeed conveyors transport loaded pallets to stretch wrap and shipping. Conveyor height must match palletizer load/unload height (typically 16-24" floor to roller top).</p>
+<p>Pallet conveyors transport empty pallets to <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a> and loaded pallets away. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">Pallet dispensers</a> feed empty pallets onto the infeed conveyor. Outfeed conveyors transport loaded pallets to stretch wrap and shipping. Conveyor height must match the palletizer infeed and discharge height. Pallet conveyors are usually built low so forklifts and pallet jacks can load them. Arrow Conveyor, for example, lists a standard top-of-chain height of 12" to 24" for its CDLR pallet conveyor (<a href="https://www.arrowconveyor.com/product/chain-driven-live-roller-pallet-conveyor/" target="_blank" rel="noopener noreferrer">Arrow Conveyor</a>).</p>
 <h3>Stretch Wrapper Integration</h3>
-<p>Pallet conveyors feed stretch wrappers and remove wrapped pallets. Turntable wrappers require a pallet transfer to position the pallet on the turntable. Rotary arm and ring wrappers allow in-line pallet flow without transfer. Conveyor speed must match wrapper cycle time.</p>
+<p>Pallet conveyors feed stretch wrappers and remove wrapped pallets. Turntable wrappers require a powered turntable or transfer to position the pallet. Chain transfers such as Alba's use a pneumatic four-point lift and are rated up to 4,000 lb (<a href="https://www.albamfg.com/products/chain-transfers/" target="_blank" rel="noopener noreferrer">Alba chain transfers</a>). Rotary arm and ring wrappers allow in-line pallet flow without transfer. Conveyor speed must match wrapper cycle time.</p>
 <h3>AS/RS Integration</h3>
 <p>Automated storage and retrieval systems (AS/RS) interface with pallet conveyors at pick/deposit stations. Conveyors queue pallets for crane pickup and receive pallets from crane deposits. Zone accumulation controls pallet flow to match crane cycle. Pallet verification (dimensions, weight, label) often occurs on the conveyor before AS/RS entry.</p>
 <h3>Dock Operations</h3>
 <p>Pallet conveyors transport pallets between production/storage and shipping docks. Gravity pallet flow lanes stage pallets in order. Powered conveyors extend into truck trailers for automated trailer loading systems (ATLS). Dock levelers and vehicle restraints integrate with <a href="/industries/mining-conveyors/">conveyor safety systems</a>.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.albamfg.com/products/chain-driven-live-roller-conveyor/chain-driven-live-roller-conveyor-2-9-16-diameter-rollers/" target="_blank" rel="noopener noreferrer">Chain Driven Live Roller Conveyor, 2-9/16" rollers</a>, Alba Manufacturing. Roller-to-roller chain sizes, roller centers, fixed speeds, capacity up to 15,000 lb on some models.</li>
+<li><a href="https://www.titanconveyors.com/products/chain-driven-live-roller/" target="_blank" rel="noopener noreferrer">Chain Driven Live Roller Conveyors</a>, Titan Conveyors. Roller diameters, centers, and per-roller load ratings, ZPA model.</li>
+<li><a href="https://www.albamfg.com/products/drag-chain-conveyor/" target="_blank" rel="noopener noreferrer">Drag Chain Conveyor</a>, Alba Manufacturing. 2- and 3-strand, RC-60/RC-80 chain, capacity, speeds.</li>
+<li><a href="https://www.albamfg.com/products/chain-transfers/" target="_blank" rel="noopener noreferrer">Chain Transfers</a>, Alba Manufacturing. Pneumatic four-point lift, capacity up to 4,000 lb.</li>
+<li><a href="https://www.arrowconveyor.com/product/chain-driven-live-roller-pallet-conveyor/" target="_blank" rel="noopener noreferrer">Chain Driven Live Roller Pallet Conveyor</a>, Arrow Conveyor. Standard top-of-chain height range.</li>
+<li><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Roller Conveyor Selection Guide</a>, Ashland Conveyor. Minimum of three rollers in contact with the load.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a pallet conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets (typically 2,000-10,000 lbs). Pallet conveyors use <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>, <a href="/conveyor-types/chain-conveyors/">drag chain</a>, or heavy-duty roller systems. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, and AS/RS systems.</p>
+<p>A pallet conveyor is a heavy-duty conveyor designed to transport loaded pallets. Pallet conveyors use <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>, <a href="/conveyor-types/chain-conveyors/">drag chain</a>, or heavy-duty roller systems. They integrate with <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, stretch wrappers, and AS/RS systems.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What type of conveyor is used for pallets?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> for standard pallets up to 10,000 lbs, <a href="/conveyor-types/chain-conveyors/">drag chain</a> for heavy or non-standard pallets, <a href="/conveyor-types/roller-conveyors/gravity/">heavy-duty gravity roller</a> for pallet flow, and <a href="/conveyor-types/transfer-conveyors/">turntables or chain transfers</a> for direction changes. CDLR is the standard for most applications.</p>
+<p>The most common types are <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> for standard pallets, <a href="/conveyor-types/chain-conveyors/">drag chain</a> for heavy or non-standard pallets, <a href="/conveyor-types/roller-conveyors/gravity/">heavy-duty gravity roller</a> for pallet flow, and <a href="/conveyor-types/transfer-conveyors/">turntables or chain transfers</a> for direction changes. CDLR is the standard for most applications.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How much weight can a pallet conveyor handle?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Standard <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> handle 2,000-4,000 lb pallets. Heavy-duty CDLR and <a href="/conveyor-types/chain-conveyors/">drag chain</a> handle up to 10,000-20,000 lbs. Capacity depends on roller diameter, spacing, bearing rating, chain size, and frame construction. Always specify maximum expected load plus safety factor.</p>
+<p>It depends on the model. Alba rates some <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> models up to 15,000 lb and its standard <a href="/conveyor-types/chain-conveyors/">drag chain</a> conveyor up to 6,000 lb. Titan rates CDLR rollers from 250 lb to 2,500 lb per roller. Capacity depends on roller diameter, spacing, bearing rating, chain size, and frame construction. Always specify maximum expected load plus safety factor.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is the difference between CDLR and drag chain?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p><a href="/conveyor-types/cdlr-conveyors/">CDLR</a> uses chain-driven rollers that contact pallet bottom boards. Works best with standard pallets. <a href="/conveyor-types/chain-conveyors/">Drag chain</a> uses chain strands that directly contact pallet stringers. Handles block pallets, non-standard sizes, and very heavy loads better than CDLR.</p>
+<p><a href="/conveyor-types/cdlr-conveyors/">CDLR</a> uses chain-driven rollers that contact pallet bottom boards. Works best with standard pallets. <a href="/conveyor-types/chain-conveyors/">Drag chain</a> uses chain strands that directly contact pallet stringers. Handles skids, non-standard sizes, and bottoms that do not convey well on rollers.</p>
 
 </div>
 </div>

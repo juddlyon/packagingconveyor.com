@@ -38,12 +38,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How do I get quotes from conveyor suppliers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to 2-4 suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to two to four suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared." }
     },
     {
       "@type": "Question",
       "name": "What is the typical lead time for conveyor equipment?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Lead times vary widely by conveyor type, customization level, and supplier capacity. Standard catalog conveyors from manufacturers with quick-ship programs can ship in 1-3 weeks. Custom-engineered conveyors typically require 8-16 weeks from order to shipment. Complete conveyor systems with controls integration may require 12-24 weeks including design, fabrication, and FAT (factory acceptance testing). Component suppliers and distributors often stock common parts for same-day or next-day shipping." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Lead times vary widely by conveyor type, customization level, and supplier capacity. Some manufacturers advertise very short lead times on standard models: Dorner says its built-to-order conveyors ship in as little as 72 hours, and QC Conveyors advertises five-day lead times on its most popular conveyors. Custom-engineered conveyors take considerably longer because they need design and approval before fabrication. Complete conveyor systems with controls integration take longest, since they add design, fabrication, and FAT (factory acceptance testing). Distributors often stock common parts for same-day or next-day shipping. Confirm current lead times in every quote." }
     },
     {
       "@type": "Question",
@@ -76,37 +76,37 @@ const faqSchema = {
 <td>OEM Manufacturer</td>
 <td>Design and build conveyor equipment in their own factory</td>
 <td>Complete conveyors, custom engineering, direct factory support</td>
-<td>2-16 weeks</td>
+<td>Days for some quick-ship standard models, much longer for custom</td>
 </tr>
 <tr>
 <td>System Integrator</td>
 <td>Turnkey conveyor systems with design, equipment, controls, and installation</td>
 <td>Multi-conveyor systems, PLC integration, <a href="/resources/automated-conveyor-systems/">automation</a></td>
-<td>12-24 weeks</td>
+<td>Longest: design, build, and commissioning</td>
 </tr>
 <tr>
 <td>Dealer / Rep</td>
 <td>Specific manufacturer product lines with local sales support</td>
 <td>Purchasing a known brand, warranty coordination, regional service</td>
-<td>2-12 weeks</td>
+<td>Follows the represented brand's lead time</td>
 </tr>
 <tr>
 <td>Industrial Distributor</td>
 <td>Components from multiple manufacturers, local inventory</td>
 <td><a href="/resources/conveyor-parts/">Parts</a>, motors, drives, bearings, quick delivery</td>
-<td>Same-day to 2 weeks</td>
+<td>Same day for stocked items, longer for special orders</td>
 </tr>
 <tr>
 <td>Belting Supplier</td>
 <td>Conveyor belting in standard and custom sizes</td>
 <td><a href="/resources/conveyor-belting/">Belt replacement</a>, fabricated belt lengths, custom materials</td>
-<td>Same-day to 2 weeks</td>
+<td>Short for stocked belting, longer for special materials</td>
 </tr>
 <tr>
 <td>Aftermarket Parts</td>
 <td>Replacement rollers, bearings, guides, and wear components</td>
 <td><a href="/resources/conveyor-maintenance/">Maintenance</a> supplies, cross-referenced parts, MRO inventory</td>
-<td>Same-day to 1 week</td>
+<td>Same day for stocked items</td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@ const faqSchema = {
 <h3>1. Define Requirements Before Contacting Suppliers</h3>
 <p>Suppliers cannot provide accurate quotes without clear specifications. At minimum, define: product dimensions and weight range, required throughput (units per minute or feet per minute), environment conditions (temperature, humidity, washdown, cleanroom), integration points with upstream and downstream equipment, controls scope (standalone, integrate with existing PLC, or new controls package), and installation scope (equipment only, rigging, full installation). See our <a href="/resources/conveyor-cost-guide/">cost guide</a> for factors that affect pricing.</p>
 <h3>2. Request Quotes from Multiple Suppliers</h3>
-<p>Get quotes from 2-4 suppliers to understand the market. Send the same specification document to each supplier to ensure comparable quotes. Include different supplier types if appropriate: one OEM manufacturer, one integrator, and one regional dealer can show how different business models price the same scope. Allow 1-2 weeks for suppliers to respond with detailed quotes on custom systems; simple catalog products may quote within days.</p>
+<p>Get quotes from two to four suppliers to understand the market. Send the same specification document to each supplier to ensure comparable quotes. Include different supplier types if appropriate: one OEM manufacturer, one integrator, and one regional dealer can show how different business models price the same scope. Detailed quotes on custom systems take longer to prepare than quotes on catalog products, so build response time into your schedule.</p>
 <h3>3. Compare Scope, Not Just Price</h3>
 <p>Quote comparison requires checking what is included: Is the price for equipment FOB factory, or delivered to site? Is installation included, and what does installation mean (mechanical only, or electrical and controls)? What is the warranty duration and coverage? Are startup, commissioning, and operator training included? Are spare parts or maintenance contracts quoted? A lower-priced quote that excludes installation, startup, and warranty may cost more in total than a higher-priced turnkey quote.</p>
 <h3>4. Evaluate the Supplier, Not Just the Equipment</h3>
@@ -155,61 +155,55 @@ const faqSchema = {
 <h3>OEM Parts vs. Aftermarket Alternatives</h3>
 <p>For critical components that affect conveyor performance or safety, OEM parts ensure compatibility and maintain warranty coverage. However, many conveyor components are standard industrial items available from multiple sources. Rollers, bearings, motors, VFDs, and belting are often interchangeable across conveyor brands. Ask your conveyor manufacturer what percentage of parts are proprietary versus standard catalog items. Proprietary parts must come from the OEM; standard parts can be sourced competitively from distributors.</p>
 <h3>Major Industrial Distributors</h3>
-<p>Large industrial distributors stock conveyor components from multiple manufacturers and offer technical support, same-day shipping on stocked items, and consolidated purchasing. Motion Industries, Applied Industrial Technologies, Grainger, and McMaster-Carr carry rollers, bearings, motors, drives, belting, and conveyor accessories. Regional distributors often provide faster local delivery and may specialize in specific industries or product categories. Set up accounts with one or two distributors so <a href="/resources/conveyor-maintenance/">maintenance</a> purchasing isn't a fresh negotiation every time.</p>
+<p>Large industrial distributors stock conveyor components from multiple manufacturers and offer technical support, same-day shipping on stocked items, and consolidated purchasing. Motion Industries, Applied Industrial Technologies, Grainger, and McMaster-Carr carry bearings, motors, drives, and power transmission parts. Some also stock conveyor components: <a href="https://www.mcmaster.com/conveyor-rollers/" target="_blank" rel="noopener noreferrer">McMaster-Carr's conveyor roller catalog</a>, for example, lists replacement rollers, drive rollers, skate wheels, and ball transfers. Regional distributors often provide faster local delivery and may specialize in specific industries or product categories. Set up accounts with one or two distributors so <a href="/resources/conveyor-maintenance/">maintenance</a> purchasing isn't a fresh negotiation every time.</p>
 <h3>Specialty Parts Suppliers</h3>
 <p>Some components require specialty suppliers. Belting suppliers fabricate custom belt lengths and can source specialty materials (high-temperature, food-grade, antistatic). Roller manufacturers build replacement rollers to match existing conveyors. Sprocket and chain suppliers provide precision-matched components for chain-driven conveyors. Guide rail and side frame suppliers stock profiles compatible with major conveyor brands. For obsolete or discontinued conveyors, specialty suppliers may reverse-engineer parts that the original manufacturer no longer supports.</p>
 <h3>Building MRO Inventory</h3>
 <p>For production-critical conveyors, stock essential spare parts to minimize downtime. Typical MRO (maintenance, repair, operations) inventory includes: drive belts, replacement conveyor belts, rollers (sample of each size used), bearings, motors (or motor rebuild kits), VFDs, sensors and photoeyes, chain links and master links, guide rails, and emergency stop switches. Work with your conveyor manufacturer to identify recommended spare parts and their reorder points. See our <a href="/resources/conveyor-parts/">parts guide</a> for component details.</p>
 <h2 id="lead-heading">Lead Time Expectations</h2>
+<p>Lead time depends mostly on how much engineering and fabrication the order needs. The table ranks equipment types from fastest to slowest. Ask for a committed ship date in every quote.</p>
 <table>
 <thead>
 <tr>
 <th>Equipment Type</th>
-<th>Quick-Ship</th>
-<th>Standard</th>
-<th>Custom/Complex</th>
+<th>What Sets the Lead Time</th>
+<th>Relative Lead Time</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Catalog Conveyor</td>
-<td>1-3 weeks</td>
-<td>4-8 weeks</td>
-<td>N/A</td>
+<td>Standard parts (stocked)</td>
+<td>Distributor or OEM inventory</td>
+<td>Fastest: often same day or next day</td>
 </tr>
 <tr>
-<td>Custom Conveyor</td>
-<td>N/A</td>
-<td>8-12 weeks</td>
-<td>12-20 weeks</td>
+<td>Replacement belt</td>
+<td>Whether the belt is stocked, fabricated to length, or a special material</td>
+<td>Fast for stocked belting, longer for special materials</td>
 </tr>
 <tr>
-<td>Multi-Conveyor System</td>
-<td>N/A</td>
-<td>12-16 weeks</td>
-<td>16-24+ weeks</td>
+<td>Catalog conveyor</td>
+<td>Manufacturer quick-ship program and backlog</td>
+<td>Days for some quick-ship models, such as Dorner's 72-hour and QC Conveyors' five-day programs</td>
 </tr>
 <tr>
-<td>Replacement Belt</td>
-<td>Same day</td>
-<td>3-7 days</td>
-<td>1-3 weeks</td>
+<td>Custom or fabricated parts</td>
+<td>Drawings, machining, and material availability</td>
+<td>Longer than stocked parts</td>
 </tr>
 <tr>
-<td>Standard Parts (stocked)</td>
-<td>Same day</td>
-<td>1-3 days</td>
-<td>N/A</td>
+<td>Custom conveyor</td>
+<td>Design approval, fabrication, materials (stainless adds time)</td>
+<td>Considerably longer than catalog</td>
 </tr>
 <tr>
-<td>Custom/Fabricated Parts</td>
-<td>N/A</td>
-<td>1-3 weeks</td>
-<td>3-6 weeks</td>
+<td>Multi-conveyor system</td>
+<td>System design, controls, FAT, installation, commissioning</td>
+<td>Longest</td>
 </tr>
 </tbody>
 </table>
-<p>Lead times fluctuate with manufacturer capacity, supply chain conditions, and order complexity. The ranges above represent typical conditions; confirm current lead times when requesting quotes. For production-critical projects, consider quick-ship programs from manufacturers like Dorner, mk North America, and Hytrol that maintain inventory of standard products.</p>
+<p>Lead times fluctuate with manufacturer capacity, supply chain conditions, and order complexity. For production-critical projects, consider manufacturers with quick-ship programs on standard products. <a href="https://www.dornerconveyors.com" target="_blank" rel="noopener noreferrer">Dorner</a> says its built-to-order conveyors ship in as little as 72 hours, and <a href="https://qcconveyors.com" target="_blank" rel="noopener noreferrer">QC Conveyors</a> advertises five-day lead times on its most popular conveyors and belt styles.</p>
 <h2 id="rfq-heading">RFQ Best Practices</h2>
 <h3>What to Include in Your RFQ</h3>
 <ul>
@@ -227,18 +221,25 @@ const faqSchema = {
 <ul>
 <li>•<strong>Vague specifications:</strong> "We need a conveyor for boxes" forces suppliers to guess and results in non-comparable quotes</li>
 <li>•<strong>Unclear scope:</strong> Not specifying whether installation, controls, or commissioning are included</li>
-<li>•<strong>Unrealistic timeline:</strong> Expecting custom equipment in 2 weeks, then being surprised by the actual lead time</li>
+<li>•<strong>Unrealistic timeline:</strong> Expecting custom equipment on a catalog-product timeline, then being surprised by the actual lead time</li>
 <li>•<strong>Price-only evaluation:</strong> Choosing the lowest price without comparing scope, warranty, and supplier capability</li>
-<li>•<strong>Too many suppliers:</strong> Requesting quotes from 10+ suppliers creates evaluation fatigue and supplier disengagement</li>
+<li>•<strong>Too many suppliers:</strong> Requesting quotes from a long list of suppliers creates evaluation fatigue and supplier disengagement</li>
 </ul>
 <h3>Negotiation Points Beyond Price</h3>
 <ul>
-<li>•<strong>Extended warranty:</strong> Negotiate from standard 1-year to 2-year coverage, or include wear parts</li>
+<li>•<strong>Extended warranty:</strong> Negotiate longer coverage than the standard warranty, or include wear parts</li>
 <li>•<strong>Spare parts package:</strong> Include recommended spares in the initial order at a discount</li>
-<li>•<strong>Maintenance contract:</strong> Lock in preventive maintenance pricing for 2-3 years</li>
+<li>•<strong>Maintenance contract:</strong> Lock in preventive maintenance pricing for several years</li>
 <li>•<strong>Payment terms:</strong> Milestone-based payments rather than 100% upfront</li>
 <li>•<strong>Performance guarantee:</strong> Throughput or uptime guarantees with remedies for non-performance</li>
-<li>•<strong>Future expansion pricing:</strong> Locked pricing for additional equipment ordered within 12-24 months</li>
+<li>•<strong>Future expansion pricing:</strong> Locked pricing for additional equipment ordered within a set period</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.dornerconveyors.com" target="_blank" rel="noopener noreferrer">Dorner Conveyors</a>, Dorner (Columbus McKinnon). States that built-to-order conveyors ship in as little as 72 hours.</li>
+<li><a href="https://qcconveyors.com" target="_blank" rel="noopener noreferrer">QC Conveyors</a>, QC Conveyors (Duravant). Advertises five-day lead times on its most popular conveyors and belt styles.</li>
+<li><a href="https://www.mcmaster.com/conveyor-rollers/" target="_blank" rel="noopener noreferrer">Conveyor Rollers</a>, McMaster-Carr. Example of a distributor stocking replacement conveyor rollers and components.</li>
+<li><a href="https://members.cemanet.org/member-directory" target="_blank" rel="noopener noreferrer">Member Directory</a>, Conveyor Equipment Manufacturers Association. Starting list of conveyor OEMs.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
@@ -254,12 +255,12 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How do I get quotes from conveyor suppliers?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to 2-4 suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared.</p>
+<p>Prepare a specification document that includes product dimensions and weight, required throughput, environment conditions (temperature, washdown, cleanroom), layout constraints, and controls requirements. Send the same specification to two to four suppliers to get comparable quotes. Include timeline requirements if urgent. Be specific about what you need quoted: equipment only, equipment plus installation, or a complete turnkey system. Vague requests result in quotes that cannot be compared.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is the typical lead time for conveyor equipment?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Lead times vary widely by conveyor type, customization level, and supplier capacity. Standard catalog conveyors from manufacturers with quick-ship programs can ship in 1-3 weeks. Custom-engineered conveyors typically require 8-16 weeks from order to shipment. Complete conveyor systems with controls integration may require 12-24 weeks including design, fabrication, and FAT (factory acceptance testing). Component suppliers and distributors often stock common parts for same-day or next-day shipping.</p>
+<p>Lead times vary widely by conveyor type, customization level, and supplier capacity. Some manufacturers advertise very short lead times on standard models: Dorner says its built-to-order conveyors ship in as little as 72 hours, and QC Conveyors advertises five-day lead times on its most popular conveyors. Custom-engineered conveyors take considerably longer because they need design and approval before fabrication. Complete conveyor systems with controls integration take longest, since they add design, fabrication, and FAT (factory acceptance testing). Distributors often stock common parts for same-day or next-day shipping. Confirm current lead times in every quote.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">How do I find reliable conveyor parts suppliers?</button></h3>

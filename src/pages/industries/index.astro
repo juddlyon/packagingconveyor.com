@@ -79,7 +79,7 @@ const faqSchema = {
       "name": "How do conveyor requirements differ between industries?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Industry requirements differ across material construction, sanitation standards, speed ranges, load capacity, and regulatory compliance. Food conveyors use 304 or 316 stainless steel with IP69K washdown ratings. Pharmaceutical conveyors need particle-free designs in ISO 5-8 cleanrooms. Warehouse conveyors handle high-volume sortation at 300+ FPM. Automotive conveyors carry heavy assemblies through paint and welding environments. Mining conveyors move bulk material over long distances with heavy-duty troughed belt designs."
+        "text": "Industry requirements differ across material construction, sanitation standards, speed ranges, load capacity, and regulatory compliance. Food conveyors use 304 or 316 stainless steel with IP69K washdown ratings. Pharmaceutical conveyors need particle-free designs in ISO 5-8 cleanrooms. Warehouse conveyors prioritize high-volume sortation and throughput. Automotive conveyors carry heavy assemblies through paint and welding environments. Mining conveyors move bulk material over long distances with heavy-duty troughed belt designs."
       }
     },
     {
@@ -109,10 +109,10 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Conveyor Systems by Industry: Food, Packaging, Pharma &amp; More</h1>
-<p class="usa-intro">Every industry imposes unique demands on conveyor systems -- sanitation standards, load capacities, speed requirements, material compatibility, and regulatory compliance. These guides break down conveyor selection criteria by industry so you can match equipment to your specific application.</p>
+<p class="usa-intro">Every industry imposes its own demands on conveyor systems: sanitation standards, load capacities, speed requirements, material compatibility, and regulatory compliance. These guides break down conveyor selection criteria by industry so you can match equipment to your specific application.</p>
 <h2 id="overview-heading">Why Industry Matters for Conveyor Selection</h2>
-<p>A conveyor that works perfectly in a warehouse distribution center will fail in a food plant. Material construction, surface finish, cleaning protocols, environmental ratings, and regulatory certifications vary dramatically between industries. A stainless steel washdown conveyor rated IP69K costs significantly more than a painted carbon steel unit designed for dry warehouse use -- but a food plant has no alternative.</p>
-<p>These industry guides help you identify which <a href="/conveyor-types/">conveyor types</a> match your application, which specifications matter most, and which manufacturers specialize in your vertical. Each guide covers material selection, sanitation and compliance requirements, speed and throughput considerations, and cost factors specific to that industry.</p>
+<p>A conveyor that works perfectly in a warehouse distribution center will fail in a food plant. Material construction, surface finish, cleaning protocols, environmental ratings, and regulatory certifications vary dramatically between industries. A stainless steel washdown conveyor with IP69K-rated motors and sensors costs significantly more than a painted carbon steel unit built for dry warehouse use, but in a food plant the equipment must be cleanable and corrosion-resistant under <a href="https://www.law.cornell.edu/cfr/text/21/117.40" target="_blank" rel="noopener noreferrer">FDA 21 CFR 117.40</a>.</p>
+<p>These industry guides help you identify which <a href="/conveyor-types/">conveyor types</a> match your application, and which specifications matter most. Each guide covers material selection, sanitation and compliance requirements, speed and throughput considerations, and cost factors specific to that industry.</p>
 <h2 id="grid-heading">Choose Your Industry</h2>
 <ul class="usa-collection">{industries.map((ind) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={`/industries/${ind.slug}/`}>{ind.name}</a></h3><p class="usa-collection__description">{ind.desc}</p>{ind.tags && <p class="tags">{ind.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
@@ -123,64 +123,64 @@ const articleSchema = {
 <tr>
 <th>Industry</th>
 <th>Frame Material</th>
-<th>Key Standard</th>
-<th>Typical Speed</th>
-<th>Relative Cost</th>
+<th>Key Standard or Rule</th>
+<th>What Usually Sets Line Speed</th>
+<th>Main Cost Drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="/industries/food-conveyors/">Food &amp; Beverage</a></td>
 <td>304/316 Stainless Steel</td>
-<td>USDA, 3-A, BISSC</td>
-<td>20-200 FPM</td>
-<td>$$$-$$$$</td>
+<td>FDA 21 CFR 117, USDA, 3-A, BISSC</td>
+<td>Filler, oven, or packaging machine rate</td>
+<td>Stainless construction, washdown-rated drives, sanitary design, cleanability features</td>
 </tr>
 <tr>
 <td><a href="/industries/packaging-line-conveyors/">Packaging Lines</a></td>
 <td>Carbon Steel / Stainless</td>
 <td>NFPA 79, UL 508A</td>
-<td>30-300 FPM</td>
-<td>$$-$$$$</td>
+<td>Slowest packaging machine (case packer, palletizer)</td>
+<td>Accumulation length, controls integration, number of transfers and merges</td>
 </tr>
 <tr>
 <td><a href="/industries/pharmaceutical-conveyors/">Pharmaceutical</a></td>
 <td>316/316L Stainless Steel</td>
 <td>cGMP, FDA 21 CFR</td>
-<td>10-120 FPM</td>
-<td>$$$$</td>
+<td>Filling, inspection, and serialization equipment</td>
+<td>Cleanroom materials, validation documentation, particle control</td>
 </tr>
 <tr>
 <td><a href="/industries/warehouse-conveyors/">Warehouse &amp; Distribution</a></td>
 <td>Painted Carbon Steel</td>
-<td>CEMA, OSHA</td>
-<td>100-600 FPM</td>
-<td>$$-$$$</td>
+<td>ASME B20.1, OSHA</td>
+<td>Sorter capacity and order volume</td>
+<td>Total system length, sortation equipment, WMS/WCS integration</td>
 </tr>
 <tr>
 <td><a href="/industries/assembly-line-conveyors/">Assembly Line</a></td>
 <td>Aluminum / Carbon Steel</td>
 <td>ISO 9001, ESD</td>
-<td>5-60 FPM</td>
-<td>$$-$$$</td>
+<td>Workstation cycle time</td>
+<td>Pallet-transfer tooling, positioning accuracy, ESD materials</td>
 </tr>
 <tr>
 <td><a href="/industries/automotive-conveyors/">Automotive</a></td>
 <td>Heavy Steel / Specialized</td>
 <td>IATF 16949</td>
-<td>10-100 FPM</td>
-<td>$$$-$$$$</td>
+<td>Assembly takt time</td>
+<td>Load capacity, overhead structure, paint-shop environment</td>
 </tr>
 <tr>
 <td><a href="/industries/mining-conveyors/">Mining &amp; Aggregate</a></td>
 <td>Heavy Structural Steel</td>
-<td>MSHA, CEMA</td>
-<td>200-1000 FPM</td>
-<td>$$$-$$$$</td>
+<td>MSHA 30 CFR, CEMA</td>
+<td>Tonnes per hour, belt width, and material</td>
+<td>Conveyor length, belt rating, drive power, terrain and structure</td>
 </tr>
 </tbody>
 </table>
-<p>Relative cost: $ = lowest, $$$$ = highest. Actual pricing varies by length, configuration, and manufacturer. <a href="/resources/conveyor-cost-guide/">See our conveyor cost guide</a> for detailed pricing factors.</p>
+<p>Actual pricing varies by length, configuration, and manufacturer. <a href="/resources/conveyor-cost-guide/">See our conveyor cost guide</a> for detailed pricing factors.</p>
 <h2 id="common-types-heading">Conveyor Types That Span Every Industry</h2>
 <p>Some conveyor types appear in nearly every industry, adapted with different materials and ratings for each application. These are the workhorses of material handling.</p>
 <ul class="usa-collection">
@@ -214,16 +214,22 @@ Browse all 30+ conveyor types
 
 </a></p>
 <h2 id="criteria-heading">How to Choose a Conveyor by Industry</h2>
-<p>Every conveyor specification starts with the same core questions, but the answers -- and the weight you assign each factor -- shift by industry. A food plant manager prioritizes sanitation and regulatory compliance above throughput. A warehouse operations manager prioritizes speed and sort accuracy above material construction.</p>
+<p>Every conveyor specification starts with the same core questions, but the answers, and the weight you assign each factor, shift by industry. A food plant manager prioritizes sanitation and regulatory compliance above throughput. A warehouse operations manager prioritizes speed and sort accuracy above material construction.</p>
 <p><strong>Start with these five factors:</strong></p>
 <ol>
 <li><strong>Product characteristics:</strong> Weight, dimensions, fragility, temperature, and surface type determine belt/roller material and conveyor width.</li>
 <li><strong>Environment:</strong> Wet washdown, dry ambient, cleanroom, high-temperature, or outdoor exposure dictates frame material and IP rating.</li>
-<li><strong>Regulatory requirements:</strong> USDA acceptance, FDA compliance, cGMP, MSHA, or OSHA standards constrain your material and design options.</li>
+<li><strong>Regulatory requirements:</strong> FDA food-contact rules, USDA or 3-A sanitary design, cGMP, MSHA (for example <a href="https://www.law.cornell.edu/cfr/text/30/56.14107" target="_blank" rel="noopener noreferrer">30 CFR 56.14107</a> guarding), or OSHA requirements constrain your material and design options. <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> is the general conveyor safety standard across industries.</li>
 <li><strong>Throughput and speed:</strong> Products per minute, line speed in FPM, and accumulation requirements determine conveyor type and drive configuration.</li>
 <li><strong>Integration:</strong> Upstream and downstream equipment connections, controls architecture, and facility layout define conveyor length, elevation, and transfer points.</li>
 </ol>
 <p>Our <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> breaks down how each of these factors affects pricing. The <a href="/resources/automated-conveyor-systems/">automated conveyor systems guide</a> covers controls and integration in detail.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.law.cornell.edu/cfr/text/21/117.40" target="_blank" rel="noopener noreferrer">21 CFR 117.40, Equipment and utensils</a>, U.S. FDA (via Cornell LII). Food equipment must be adequately cleanable and food-contact surfaces corrosion-resistant.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME. General conveyor safety standard for bulk, package, and unit handling conveyors.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/30/56.14107" target="_blank" rel="noopener noreferrer">30 CFR 56.14107, Moving machine parts</a>, MSHA (via Cornell LII). Guarding of head, tail, and takeup pulleys at surface metal/nonmetal mines.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What industries use packaging conveyors?</button></h3>
@@ -238,7 +244,7 @@ Browse all 30+ conveyor types
 <ul>
 <li><strong>Food &amp; Beverage:</strong> 304 or 316 stainless steel frames, FDA-compliant belts, IP65-IP69K washdown ratings, USDA/3-A acceptance</li>
 <li><strong>Pharmaceutical:</strong> 316L stainless steel, particle-free designs, ISO Class 5-8 cleanroom compatible, cGMP validation</li>
-<li><strong>Warehouse:</strong> Painted carbon steel, high-speed sortation (300-600 FPM), heavy case loads, PLC/WMS integration</li>
+<li><strong>Warehouse:</strong> Painted carbon steel, high-speed sortation, heavy case loads, PLC/WMS integration</li>
 <li><strong>Automotive:</strong> Heavy structural steel, paint-line compatible coatings, high load capacity, overhead and inverted configurations</li>
 </ul>
 
@@ -246,7 +252,7 @@ Browse all 30+ conveyor types
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What conveyor types work across multiple industries?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
 <p><a href="/conveyor-types/roller-conveyors/">Roller conveyors</a>, belt conveyors, and <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> appear across nearly every industry. Manufacturers build these types in different material grades and configurations for each application.</p>
-<p>For example, a roller conveyor for a warehouse uses galvanized steel rollers in a painted carbon steel frame. The same roller conveyor design for a food plant uses 304 stainless steel rollers in a fully welded stainless frame with sealed bearings and no exposed fasteners. Both use the same mechanical principles -- the materials and finish standards differ.</p>
+<p>For example, a roller conveyor for a warehouse uses galvanized steel rollers in a painted carbon steel frame. The same roller conveyor design for a food plant uses 304 stainless steel rollers in a fully welded stainless frame with sealed bearings and no exposed fasteners. Both use the same mechanical principles. The materials and finish standards differ.</p>
 
 </div>
 </div>

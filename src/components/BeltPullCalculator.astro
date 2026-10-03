@@ -1,0 +1,156 @@
+---
+// Client-side belt pull (effective tension) and drive HP estimator.
+// Uses the Forbo Siegling Transilon formulas and NEMA MG 1 ratings already cited on the conveyor engineering page.
+interface Props { id?: string; title?: string }
+const { id = 'belt-pull-calculator', title = 'Belt Pull and Drive Sizing Calculator' } = Astro.props;
+const fields = [
+  { name: 'length', label: 'Conveyor length, ft', value: '50' },
+  { name: 'beltWeight', label: 'Belt weight, lb per ft of belt', value: '1.0' },
+  { name: 'load', label: 'Product load, lb per ft of conveyor', value: '15' },
+  { name: 'rollers', label: 'Return rollers and non-drive pulleys, total weight, lb', value: '60' },
+  { name: 'lift', label: 'Lift height, ft (0 for horizontal)', value: '0' },
+  { name: 'speed', label: 'Belt speed, FPM', value: '100' },
+];
+---
+<section class="belt-pull-calculator" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+  <p>Enter your conveyor data to estimate belt pull (Te), required motor horsepower, and the next standard NEMA motor size. The calculator uses the same Siegling formulas, coefficients, and NEMA ratings shown above. The default values are the worked example, so the first result matches it.</p>
+  <form class="usa-form usa-form--large" data-bpc novalidate>
+    {fields.map((f) => (
+      <div class="usa-form-group">
+        <label class="usa-label" for={`${id}-${f.name}`}>{f.label}</label>
+        <span class="usa-error-message" id={`${id}-${f.name}-error`} hidden></span>
+        <input class="usa-input" id={`${id}-${f.name}`} name={f.name} type="text" inputmode="decimal" autocomplete="off" value={f.value} aria-describedby={`${id}-${f.name}-error`} />
+      </div>
+    ))}
+    <div class="usa-form-group">
+      <label class="usa-label" for={`${id}-bed`}>Bed type and friction coefficient</label>
+      <select class="usa-select" id={`${id}-bed`} name="bed">
+        <option value="slider-0.33" selected>Slider bed, fabric belt underside (Siegling μT = 0.33)</option>
+        <option value="slider-0.5">Slider bed, coated underside such as U1, V1, VH (Siegling μT = 0.5)</option>
+        <option value="roller">Roller bed, both runs on rollers (Siegling μR = 0.033)</option>
+        <option value="custom">Slider bed, custom μT from your belt maker</option>
+      </select>
+    </div>
+    <div class="usa-form-group" data-bpc-custom hidden>
+      <label class="usa-label" for={`${id}-customMu`}>Custom slider bed friction coefficient μT</label>
+      <span class="usa-error-message" id={`${id}-customMu-error`} hidden></span>
+      <input class="usa-input" id={`${id}-customMu`} name="customMu" type="text" inputmode="decimal" autocomplete="off" value="" aria-describedby={`${id}-customMu-error`} />
+    </div>
+    <div class="usa-form-group">
+      <label class="usa-label" for={`${id}-efficiency`}>Drive train efficiency η, 0 to 1 (example value 0.85)</label>
+      <span class="usa-error-message" id={`${id}-efficiency-error`} hidden></span>
+      <input class="usa-input" id={`${id}-efficiency`} name="efficiency" type="text" inputmode="decimal" autocomplete="off" value="0.85" aria-describedby={`${id}-efficiency-error`} />
+    </div>
+    <div class="usa-form-group">
+      <label class="usa-label" for={`${id}-serviceFactor`}>Service factor, 1 or more (Sparks Belting default 1.5)</label>
+      <span class="usa-error-message" id={`${id}-serviceFactor-error`} hidden></span>
+      <input class="usa-input" id={`${id}-serviceFactor`} name="serviceFactor" type="text" inputmode="decimal" autocomplete="off" value="1.5" aria-describedby={`${id}-serviceFactor-error`} />
+    </div>
+    <button class="usa-button" type="submit">Calculate</button>
+  </form>
+  <div class="usa-summary-box" aria-live="polite" data-bpc-output>
+    <div class="usa-summary-box__body">
+      <p class="usa-summary-box__heading">Result</p>
+      <div class="usa-summary-box__text" data-bpc-result>
+        <p>Effective tension Te: 267.6 lb. Required motor power: 1.43 HP. Next standard motor size: 1-1/2 HP.</p>
+      </div>
+    </div>
+  </div>
+  <p><strong>Estimate for preliminary sizing only.</strong> It assumes steady running with no accumulation on the running belt, takes belt length as twice the conveyor length, and leaves out start-up acceleration, pulley bearing losses, scrapers, and declines. Confirm belt pull, motor, and gear reducer selection with the belt and drive manufacturer. Do not mix in coefficients from another maker's method, such as the Sparks or Prolink ranges in the table above.</p>
+</section>
+
+<script>
+  // BPC-CALC-START
+  const MU_R = 0.033;
+  const NEMA_HP: [number, string][] = [[0.25, '1/4'], [1 / 3, '1/3'], [0.5, '1/2'], [0.75, '3/4'], [1, '1'], [1.5, '1-1/2'], [2, '2'], [3, '3'], [5, '5'], [7.5, '7-1/2'], [10, '10']];
+  function beltPull(i: { bed: string; mu: number; length: number; beltWeight: number; load: number; rollers: number; lift: number; speed: number; efficiency: number; serviceFactor: number }) {
+    const P = i.load * i.length;
+    const B = i.beltWeight * 2 * i.length;
+    const R = i.rollers;
+    const lift = i.load * i.lift;
+    const te = i.bed === 'roller'
+      ? MU_R * (P + B + R) + lift
+      : i.mu * (P + B / 2) + MU_R * (B / 2 + R) + lift;
+    const hpDrive = (te * i.speed) / 33000;
+    const hpMotor = hpDrive / i.efficiency;
+    const hpRequired = hpMotor * i.serviceFactor;
+    const std = NEMA_HP.find(([hp]) => hp >= hpRequired - 1e-9);
+    return { P, B, R, lift, te, hpDrive, hpMotor, hpRequired, standard: std ? std[1] : null };
+  }
+  // BPC-CALC-END
+
+  const r1 = (n: number) => n.toFixed(1);
+  const r2 = (n: number) => n.toFixed(2);
+  const r3 = (n: number) => String(Number(n.toFixed(3)));
+
+  document.querySelectorAll<HTMLFormElement>('form[data-bpc]').forEach((form) => {
+    const section = form.closest('section')!;
+    const result = section.querySelector<HTMLElement>('[data-bpc-result]')!;
+    const customGroup = form.querySelector<HTMLElement>('[data-bpc-custom]')!;
+    const bed = form.elements.namedItem('bed') as HTMLSelectElement;
+
+    const setError = (name: string, msg: string) => {
+      const input = form.elements.namedItem(name) as HTMLInputElement;
+      const group = input.closest('.usa-form-group')!;
+      const err = group.querySelector<HTMLElement>('.usa-error-message')!;
+      group.classList.toggle('usa-form-group--error', !!msg);
+      input.classList.toggle('usa-input--error', !!msg);
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      err.textContent = msg;
+      err.hidden = !msg;
+    };
+
+    const read = (name: string, check: (n: number) => string) => {
+      const raw = (form.elements.namedItem(name) as HTMLInputElement).value.trim().replace(/,/g, '');
+      const n = raw === '' ? NaN : Number(raw);
+      const msg = Number.isFinite(n) ? check(n) : 'Enter a number.';
+      setError(name, msg);
+      return msg ? null : n;
+    };
+    const positive = (n: number) => (n > 0 ? '' : 'Enter a number greater than 0.');
+    const nonNegative = (n: number) => (n >= 0 ? '' : 'Enter 0 or a positive number.');
+
+    const run = () => {
+      const isCustom = bed.value === 'custom';
+      customGroup.hidden = !isCustom;
+      const length = read('length', positive);
+      const v = {
+        length,
+        beltWeight: read('beltWeight', nonNegative),
+        load: read('load', nonNegative),
+        rollers: read('rollers', nonNegative),
+        lift: read('lift', (n) => (n < 0 ? 'Enter 0 or a positive number. Declines are not covered.' : length !== null && n > length ? 'Lift cannot exceed conveyor length.' : '')),
+        speed: read('speed', positive),
+        efficiency: read('efficiency', (n) => (n > 0 && n <= 1 ? '' : 'Enter a value greater than 0 and no more than 1.')),
+        serviceFactor: read('serviceFactor', (n) => (n >= 1 ? '' : 'Enter 1 or more.')),
+        mu: bed.value === 'slider-0.5' ? 0.5 : 0.33,
+      };
+      if (isCustom) v.mu = read('customMu', (n) => (n > 0 && n <= 1 ? '' : 'Enter a coefficient greater than 0 and no more than 1.')) as number;
+      else setError('customMu', '');
+      if (Object.values(v).some((x) => x === null)) {
+        result.innerHTML = '<p>Fix the highlighted fields to see a result.</p>';
+        return;
+      }
+      const i = { ...v, bed: bed.value === 'roller' ? 'roller' : 'slider' } as any;
+      const o = beltPull(i);
+      const teLine = i.bed === 'roller'
+        ? `Te = μR × (P + B + R) + lift = ${MU_R} × (${r1(o.P)} + ${r1(o.B)} + ${r1(o.R)}) + ${r1(o.lift)} = ${r1(o.te)} lb`
+        : `Te = μT × (P + B/2) + μR × (B/2 + R) + lift = ${r3(i.mu)} × (${r1(o.P)} + ${r1(o.B / 2)}) + ${MU_R} × (${r1(o.B / 2)} + ${r1(o.R)}) + ${r1(o.lift)} = ${r1(o.te)} lb`;
+      const size = o.standard
+        ? `${o.standard} HP`
+        : 'above 10 HP, the largest rating listed on this page. Get the drive sized by the supplier.';
+      result.innerHTML =
+        `<p>Effective tension Te: <strong>${r1(o.te)} lb</strong>. Required motor power: <strong>${r2(o.hpRequired)} HP</strong>. Next standard motor size: <strong>${size}</strong>.</p>` +
+        `<p class="formula">P = product load × length = ${r1(o.P)} lb. B = belt weight × 2 × length = ${r1(o.B)} lb. Lift = product load × lift height = ${r1(o.lift)} lb.<br>` +
+        `${teLine}<br>` +
+        `HP<sub>drive</sub> = (Te × V) / 33,000 = (${r1(o.te)} × ${i.speed}) / 33,000 = ${r2(o.hpDrive)} HP<br>` +
+        `HP<sub>motor</sub> = HP<sub>drive</sub> / η = ${r2(o.hpDrive)} / ${i.efficiency} = ${r2(o.hpMotor)} HP<br>` +
+        `With service factor: ${r2(o.hpMotor)} × ${i.serviceFactor} = ${r2(o.hpRequired)} HP</p>`;
+    };
+
+    form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+    bed.addEventListener('change', () => { customGroup.hidden = bed.value !== 'custom'; });
+    run();
+  });
+</script>
