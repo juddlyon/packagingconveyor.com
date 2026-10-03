@@ -20,7 +20,7 @@
 - Fixed 3 meta descriptions that claimed numbers the pages no longer make (cdlr, pallet-conveyors, powered roller).
 
 ## Open
-- 10 VERIFY notes: washdown IP test values, bump-turn terminology, screw section lengths, ProMach HQ, Toyota AL HQ, 3-A finish (custom), 3-A verification and PMO (sanitary, 2), bakery temperatures, FSIS cooling link. Web search quota was exhausted.
-- The design guide has two overlapping layout sections. Merge them.
+- 3 VERIFY notes left (bump-turn terminology, ProMach HQ, FSIS cooling link): sources block automated fetches. The other 7 were resolved 2026-10-02.
+- Design guide layout sections merged 2026-10-02.
 - Hytrol specs are cited via distributor PDFs (Cisco-Eagle, ACG, condrives) because hytrol.com blocks fetches. Swap in hytrol.com links if available.
 - About 60 long titles and descriptions are held until the measurement window closes (late October).
