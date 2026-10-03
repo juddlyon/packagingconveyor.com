@@ -55,12 +55,15 @@ const current = crumbs.pop();
 
 const body = enhance(await Astro.slots.render('default'));
 const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(m => ({ slug: m[1], text: m[2].replace(/<[^>]+>/g, '').trim() }));
-// Phone and tablet table of contents goes after the H1 and intro. Widescreen uses the USWDS in-page nav instead.
-const tocHtml = toc.length >= 3 ? `<nav class="page-toc" aria-label="Table of contents"><p class="page-toc__title">On this page</p><ul>${toc.map(h => `<li><a href="#${h.slug}">${h.text}</a></li>`).join('')}</ul></nav>` : '';
-const h1End = body.indexOf('</h1>');
-const introEnd = h1End < 0 ? -1 : body.slice(h1End).search(/<p class="usa-intro">[\s\S]*?<\/p>/) >= 0 ? body.indexOf('</p>', body.indexOf('<p class="usa-intro">', h1End)) + 4 : h1End + 5;
-const metaHtml = updatedLabel ? `<p class="article-meta">Updated <time datetime="${updated}">${updatedLabel}</time> by the PackagingConveyor.com editorial team. <a href="/about/#editorial-heading">How we research</a>.</p>` : '';
-const content = introEnd > 0 ? body.slice(0, introEnd) + metaHtml + tocHtml + body.slice(introEnd) : metaHtml + tocHtml + body;
+// Page header band (lbarsealer pattern): the page's H1 and intro move out of the content column into a full-width band.
+const h1Match = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>\s*(?:<p class="usa-intro">([\s\S]*?)<\/p>)?/);
+const pageTitle = h1Match ? h1Match[1].trim() : title;
+const intro = h1Match?.[2]?.trim();
+const content = h1Match ? body.replace(h1Match[0], '') : body;
+const isHome = currentPath === '/';
+const showToc = !isHome && toc.length >= 3;
+// Homepage call-to-action buttons in the dark band.
+const actions = isHome ? [{ label: 'Compare conveyor types', href: '/conveyor-types/' }, { label: 'Cost factors guide', href: '/resources/conveyor-cost-guide/' }] : [];
 ---
 
 <!DOCTYPE html>
@@ -118,21 +121,38 @@ const content = introEnd > 0 ? body.slice(0, introEnd) + metaHtml + tocHtml + bo
       </nav>
     </div>
   </header>
-  <div class="grid-container docs-layout">
-    <SideNav />
-    <div class="usa-in-page-nav-container docs-body">
-      <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="p" data-heading-elements="h2" data-main-content-selector="#main-content" data-minimum-heading-count="3"></aside>
-      <main class="usa-prose docs-content" id="main-content" tabindex="-1">
-        {current && (
-          <nav class="usa-breadcrumb" aria-label="Breadcrumb"><ol class="usa-breadcrumb__list">
-            {crumbs.map(c => <li class="usa-breadcrumb__list-item"><a href={c.href} class="usa-breadcrumb__link"><span>{c.name}</span></a></li>)}
-            <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>{current.name}</span></li>
-          </ol></nav>
-        )}
-        <Fragment set:html={content} />
-      </main>
+  <main id="main-content" tabindex="-1">
+    <header class:list={['usa-section', 'page-header', isHome ? 'usa-section--dark page-header--home' : 'usa-section--light']}>
+      <div class="grid-container">
+        <div class="page-header__text">
+          {current && (
+            <nav class="usa-breadcrumb" aria-label="Breadcrumb"><ol class="usa-breadcrumb__list">
+              {crumbs.map(c => <li class="usa-breadcrumb__list-item"><a href={c.href} class="usa-breadcrumb__link"><span>{c.name}</span></a></li>)}
+              <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>{current.name}</span></li>
+            </ol></nav>
+          )}
+          <h1 class="page-header__title" set:html={pageTitle} />
+          {intro && <p class="usa-intro" set:html={intro} />}
+          {updatedLabel && <p class="article-meta">Updated <time datetime={updated}>{updatedLabel}</time> by the PackagingConveyor.com editorial team. <a href="/about/#editorial-heading">How we research</a>.</p>}
+          {actions.length > 0 && (
+            <ul class="usa-button-group page-header__actions">{actions.map((a, i) => <li class="usa-button-group__item"><a class:list={['usa-button', { 'usa-button--outline usa-button--inverse': i > 0 }]} href={a.href}>{a.label}</a></li>)}</ul>
+          )}
+        </div>
+      </div>
+    </header>
+    <div class="grid-container docs-layout">
+      <SideNav />
+      <div class="usa-in-page-nav-container docs-body">
+        {showToc && <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="p" data-heading-elements="h2" data-main-content-selector="#article" data-minimum-heading-count="3"></aside>}
+        <div class="usa-prose docs-content" id="article">
+          {showToc && (
+            <nav class="page-toc" aria-label="Table of contents"><p class="page-toc__title">On this page</p><ul>{toc.map(h => <li><a href={`#${h.slug}`} set:html={h.text} /></li>)}</ul></nav>
+          )}
+          <Fragment set:html={content} />
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
   <footer class="usa-footer usa-footer--slim site-footer">
     <div class="usa-footer__primary-section">
       <div class="grid-container">
