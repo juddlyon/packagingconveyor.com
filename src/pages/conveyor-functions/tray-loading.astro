@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecChecklist from '../../components/SpecChecklist.astro';
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -48,7 +49,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How fast can an automatic tray loader run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the loading mechanism, product, and tray pattern. Cam-driven pick-and-place is the fastest option for a single small, uniform product. Servo gantry trades some speed for recipe-based changeover. Single delta robots are rated by their manufacturers at roughly 120 to 300 picks per minute for light products under ideal conditions: ABB rates its IRB 365 at 120 picks per minute with a 1 kg product, and Omron rates its Quattro at up to 300. Multi-robot cells add capacity per robot: Packaging World reported a Voortman cookie line using 10 vision-guided robots to load five trays at 1,100 cookies per minute. Confirm rated speed for your product with each supplier." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the loading mechanism, product, and tray pattern. Cam-driven pick-and-place is the fastest option for a single small, uniform product. Servo gantry trades some speed for recipe-based changeover. Single delta robots are rated by their manufacturers at roughly 120 to 300 picks per minute for light products under ideal conditions: ABB rates its IRB 365 at 120 picks per minute with a 1 kg product, and Omron rated its Quattro at 300 picks per minute. Multi-robot cells add capacity by placing several robots over one belt. Real tray loading rates are lower once vision, product weight, and tray pattern are included, so confirm rated speed for your product with each supplier." }
     }
   ]
 };
@@ -61,6 +62,51 @@ const faqSchema = {
 >
 <h1>Automatic Tray Loading &amp; Unloading Systems</h1>
 <p class="usa-intro">An automatic tray loader places product into trays without hand-packing, and an automatic tray unloader does the reverse: it removes product from trays or separates stacked trays for reuse. A loading cell combines a tray denester, product infeed conveyor, placement mechanism (cam-driven pick-and-place, servo gantry, or delta robot), and outfeed conveyor. Placement method is set by throughput, SKU count, and product fragility, all compared below.</p>
+<h2 id="automatic-tray-loaders">What Is an Automatic Tray Loader?</h2>
+<p>An automatic tray loader is a machine that loads trays automatically: it takes product from an infeed conveyor and places it into tray cavities in a set pattern, with no hand-packing. Every automatic tray loader has the same four parts: a tray denester or destacker that feeds empty trays, a product infeed that presents product to the pick zone, a placement mechanism (cam-driven pick-and-place, servo gantry, or delta robot), and an outfeed that carries filled trays to a sealer, lidder, wrapper, or case packer. The placement mechanism is the main choice and is compared below.</p>
+<figure class="diagram">
+<div class="diagram__scroll" tabindex="0" role="region" aria-label="Automatic tray loader diagram">
+<svg viewBox="0 0 720 300" role="img" aria-labelledby="dg-title dg-desc">
+<title id="dg-title">Automatic tray loader, side view</title>
+<desc id="dg-desc">Side view of a tray loading cell. Product travels left to right on an infeed conveyor. An overhead pick head lifts product from the end of the infeed and carries it along an arc to an empty tray. Empty trays come from a stack in a tray denester above a tray conveyor. Filled trays travel right on the outfeed toward a sealer or wrapper.</desc>
+<defs><marker id="tl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker></defs>
+<rect x="120" y="40" width="480" height="16" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="230" y="34" width="30" height="28" fill="#f5f0eb" stroke="#1c1917"/>
+<line x1="245" y1="62" x2="245" y2="148" stroke="#1c1917" stroke-width="4"/>
+<rect x="231" y="148" width="28" height="8" fill="#b45309" stroke="#1c1917"/>
+<rect x="20" y="180" width="280" height="16" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="40" y="166" width="26" height="14" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="90" y="166" width="26" height="14" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="140" y="166" width="26" height="14" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="190" y="166" width="26" height="14" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="232" y="166" width="26" height="14" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M245 140Q360 40 470 186" fill="none" stroke="#b45309" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#tl-arrow)"/>
+<line x1="334" y1="104" x2="334" y2="218" stroke="#1c1917" stroke-width="2"/>
+<line x1="416" y1="104" x2="416" y2="218" stroke="#1c1917" stroke-width="2"/>
+<path d="M340 118h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 130h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 142h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 154h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 166h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 178h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M340 190h70l-6 14h-58z" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="330" y="220" width="370" height="16" fill="#f5f0eb" stroke="#1c1917"/>
+<path d="M440 206h70l-6 14h-58z" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="455" y="194" width="18" height="12" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M600 206h70l-6 14h-58z" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="608" y="194" width="18" height="12" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="644" y="194" width="18" height="12" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M40 252h150" stroke="#b45309" stroke-width="3" marker-end="url(#tl-arrow)"/>
+<path d="M570 282h120" stroke="#b45309" stroke-width="3" marker-end="url(#tl-arrow)"/>
+<text x="270" y="28" font-size="14" fill="#1c1917">Pick head (gantry, cam arm, or delta robot)</text>
+<text x="20" y="226" font-size="14" fill="#1c1917">Product infeed conveyor</text>
+<text x="330" y="262" font-size="14" fill="#1c1917">Tray denester</text>
+<text x="450" y="262" font-size="14" fill="#1c1917">Load position</text>
+<text x="570" y="262" font-size="14" fill="#1c1917">Filled tray outfeed</text>
+</svg>
+</div>
+<figcaption>Side view of a tray loading cell. The denester drops one empty tray at a time onto the tray conveyor, the pick head moves product from the infeed into the tray at the load position, and filled trays leave on the outfeed to a sealer, lidder, or wrapper. Schematic only, not to scale.</figcaption>
+</figure>
 <h2 id="why-heading">Why Automate Tray Loading?</h2>
 <p>Manual tray loading remains one of the most labor-intensive tasks on a packaging line. A manual tray loading station often needs several operators per shift, so on multi-shift lines the labor case for an automatic tray loader is usually the first justification. Payback depends on local labor cost, shift pattern, and line uptime, so calculate it for your own line rather than relying on a generic figure.</p>
 <p>Beyond labor savings, automatic tray loading delivers three operational advantages. First, <strong>consistency</strong>: machines place every product in the same orientation, at the same position, every cycle. Manual loading introduces variation that causes downstream problems at lidding, sealing, and case-packing stations. Second, <strong>speed</strong>: a machine holds its rated rate for the full shift, while manual crews slow with fatigue and turnover. Third, <strong>hygiene</strong>: reducing human contact with product is critical in <a href="/industries/food-conveyors/">food processing environments</a> where contamination risk drives recalls.</p>
@@ -74,21 +120,21 @@ const faqSchema = {
 <p>Servo gantry systems accept a wider range of tray sizes and product configurations than cam-driven units. Changeover involves loading a new recipe on the HMI and, in some cases, swapping the end-of-arm tooling (vacuum cups, grippers, or suction plates). Because changeover is mostly software, servo gantry is a common choice for lines running a moderate number of SKUs.</p>
 <p>The servo drive also enables soft-start and soft-stop profiles that protect fragile products, decorated cakes, frosted pastries, and delicate produce, from acceleration damage. Variable speed profiles let the system slow down during the pick phase and accelerate during the traverse phase, optimizing both gentleness and throughput.</p>
 <h3>Delta Robot Tray Loading</h3>
-<p>Delta robots (also called spider robots or parallel kinematic robots) mount above the conveyor and use three or four arms connected to a common platform. Vision-guided delta robots track product on a moving conveyor belt, compute pick coordinates in real time, and place product into trays. Manufacturer ratings for light products run from about 120 to 300 picks per minute per robot: <a href="https://new.abb.com/news/detail/93173/prsrl-ABB-launches-five-axis-Delta-robot-fastest-for-lightweight-product-picking-packing-and-re-orientation" target="_blank" rel="noopener noreferrer">ABB rates its IRB 365</a> at 120 picks per minute with a 1 kg product, and rates the <a href="https://www.industrialtechnology.co.uk/omron-debuts-worlds-fastest-and-first-4-arm-delta-robot" target="_blank" rel="noopener noreferrer">Omron Quattro</a> at up to 300. Real tray loading rates are lower once vision, product weight, and tray pattern are included.</p>
+<p>Delta robots (also called spider robots or parallel kinematic robots) mount above the conveyor and use three or four arms connected to a common platform. Vision-guided delta robots track product on a moving conveyor belt, compute pick coordinates in real time, and place product into trays. Manufacturer ratings for light products run from about 120 to 300 picks per minute per robot: <a href="https://www.therobotreport.com/abb-launches-5-axis-high-speed-delta-robot/" target="_blank" rel="noopener noreferrer">ABB rates its IRB 365</a> at 120 picks per minute with a 1 kg product, and Omron launched its four-arm <a href="https://www.industrialtechnology.co.uk/omron-debuts-worlds-fastest-and-first-4-arm-delta-robot" target="_blank" rel="noopener noreferrer">Quattro delta robot</a> with a pick rate of 300 per minute. Real tray loading rates are lower once vision, product weight, and tray pattern are included.</p>
 <p>The key advantage of delta robots is random-infeed capability. Product arrives on the infeed conveyor in no particular order or spacing. The vision system photographs the belt, identifies each product's position and orientation, and assigns picks to the robot in real time. This eliminates the need for upstream singulation, orientation, and precise spacing, functions that require significant conveyor length and complexity with non-robotic systems.</p>
-<p>Multi-robot cells place two to six delta robots in series over a single conveyor. Each robot picks product that upstream robots missed. This redundancy means the cell continues running at reduced capacity if one robot goes down for maintenance. As a scale reference, <a href="https://www.packworld.com/leaders-new/machinery/conveying-accumulation/article/13325677/robotic-tray-loaders-speed-cookie-loading" target="_blank" rel="noopener noreferrer">Packaging World reported</a> a Voortman cookie line using 10 vision-guided robots to load five trays at 1,100 cookies per minute. BluePrint Automation's Vision Guided Robotics (VGR) systems and ABB's FlexPicker IRB 360 are widely used in bakery and snack food tray loading.</p>
+<p>Multi-robot cells place two to six delta robots in series over a single conveyor. Each robot picks product that upstream robots missed. This redundancy means the cell continues running at reduced capacity if one robot goes down for maintenance. Cell capacity scales roughly with robot count, but the last robot in line sets how much product escapes unpicked, so ask suppliers how the cell handles missed picks and recirculation.</p>
 <h3>Tray Denesting &amp; Feeding</h3>
 <p>Every automatic tray loading cell requires a tray denester, the mechanism that separates individual trays from a nested stack and places them on the loading conveyor. Denesting reliability is critical because a tray-feed jam stops the entire cell. Common denesting mechanisms include vacuum cup separators, mechanical finger separators, and air-knife assisted systems.</p>
 <p>Vacuum cup denesters grip the top tray with suction cups and pull it from the stack. They work well with rigid thermoformed trays (CPET, APET, polypropylene) but struggle with thin, flexible trays that deform under vacuum. Mechanical finger denesters use spring-loaded fingers to separate trays by inserting into the nesting flange. They handle a broader range of tray materials but require adjustment when tray flange dimensions change.</p>
-<p>Stack capacity matters for operator ergonomics. A denester with a 200-tray magazine capacity reduces reload frequency to once every 2–3 minutes at 80 trays/minute. Systems with automatic stack replenishment, where a new stack feeds into the magazine without stopping, eliminate reload-related downtime entirely. Shuttleworth and Benchmark Automation offer continuous-feed denesting options for high-speed lines.</p>
+<p>Magazine capacity sets how often an operator must reload trays. Divide magazine capacity by trays per minute to get the reload interval, and check that it fits the operator's other duties. Denesters with automatic stack replenishment, where a new stack feeds into the magazine without stopping, remove reload stops from the cell.</p>
 <h2 id="conveyors-heading">Infeed &amp; Outfeed Conveyors</h2>
 <p>Tray loading systems depend on two critical conveyor sections: the product infeed and the tray outfeed. The infeed conveyor delivers product to the pick zone in the correct orientation, spacing, and speed. The outfeed conveyor carries loaded trays to the next process, typically lidding, sealing, over-wrapping, or case packing.</p>
 <h3>Product Infeed Conveyor</h3>
 <p>The product infeed conveyor must deliver product to the pick zone at a consistent, controlled rate. For cam-driven and servo gantry systems, the infeed typically uses an <a href="/conveyor-functions/indexing-conveyors/">indexing conveyor</a> that positions each product at a precise pick point. For delta robot systems, the infeed uses a continuously running belt conveyor with a vision camera mounted upstream, the robot calculates pick coordinates from the vision data and tracks the moving product.</p>
-<p>Infeed conveyor belt material matters for food applications. White FDA-approved polyurethane belting is standard for direct food contact. <a href="/industries/food-conveyors/sanitary/">Sanitary conveyor designs</a> with tool-free belt removal, open-frame construction, and IP69K-rated motors simplify daily washdown. Dorner's AquaPruf series and Shuttleworth's slip-torque conveyors are popular infeed choices for bakery and snack applications.</p>
+<p>Infeed conveyor belt material matters for food applications. Belting for direct food contact must be made from materials that comply with FDA food-contact regulations, and white polyurethane or modular plastic belting is common. <a href="/industries/food-conveyors/sanitary/">Sanitary conveyor designs</a> with tool-free belt removal, open-frame construction, and IP69K-rated motors simplify daily washdown.</p>
 <h3>Tray Outfeed Conveyor</h3>
 <p>The tray outfeed conveyor carries loaded trays from the loading station to downstream processes. This conveyor must handle the combined weight of the tray plus product without tipping or shifting the load. For lightweight trays (berries, cookies), flat belt conveyors work well. For heavier trays (ready meals, meat), <a href="/conveyor-types/roller-conveyors/">powered roller conveyors</a> or <a href="/industries/food-conveyors/beverage/">tabletop chain conveyors</a> provide more stability.</p>
-<p>Accumulation on the outfeed side is critical. Downstream machines (sealers, lidders) often cycle slower than the tray loader. Without <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a> capacity between the loader and the sealer, the tray loader must stop every time the sealer cycles, reducing effective throughput by 15–30%. Zero-pressure accumulation using <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> is the preferred solution for tray outfeed buffering.</p>
+<p>Accumulation on the outfeed side is critical. Downstream machines (sealers, lidders) often cycle slower than the tray loader. Without <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a> capacity between the loader and the sealer, the tray loader must stop every time the sealer stops or slows, which lowers effective throughput. Zero-pressure accumulation using <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> is the preferred solution for tray outfeed buffering.</p>
 <h2 id="compare-heading">Tray Loading Technology Comparison</h2>
 <table>
 <thead>
@@ -97,7 +143,7 @@ const faqSchema = {
 <th>Speed</th>
 <th>Changeover</th>
 <th>SKU Range</th>
-<th>Relative Cost</th>
+<th>Main Cost Drivers</th>
 <th>Best For</th>
 </tr>
 </thead>
@@ -107,7 +153,7 @@ const faqSchema = {
 <td>Highest for one small, uniform product</td>
 <td>Longest (mechanical)</td>
 <td>Few</td>
-<td>$$$</td>
+<td>Custom cams and tooling per product</td>
 <td>High-volume, single SKU</td>
 </tr>
 <tr>
@@ -115,7 +161,7 @@ const faqSchema = {
 <td>Moderate, set by travel distance</td>
 <td>Short (recipe on HMI)</td>
 <td>Moderate</td>
-<td>$$$</td>
+<td>Axis count, stroke length, tooling sets</td>
 <td>Mid-volume, multi-SKU</td>
 </tr>
 <tr>
@@ -123,7 +169,7 @@ const faqSchema = {
 <td>Rated ~120–300 picks/min, light products</td>
 <td>Short (recipe + EOAT)</td>
 <td>Many</td>
-<td>$$$$</td>
+<td>Robot, vision system, guarding, EOAT</td>
 <td>Random infeed, high SKU count</td>
 </tr>
 <tr>
@@ -131,12 +177,12 @@ const faqSchema = {
 <td>Scales with robot count</td>
 <td>Short (recipe + EOAT)</td>
 <td>Many</td>
-<td>$$$$</td>
+<td>Robot count, line control, cell guarding</td>
 <td>Highest throughput + flexibility</td>
 </tr>
 </tbody>
 </table>
-<p>Delta ratings are manufacturer figures for light products (ABB IRB 365, Omron Quattro). Rated speed for your product, tray pattern, and changeover time should come from each supplier. EOAT = end-of-arm tooling. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/">See full cost guide</a>.</p>
+<p>Delta ratings are manufacturer figures for light products (ABB IRB 365, Omron Quattro). Rated speed for your product, tray pattern, and changeover time should come from each supplier. EOAT = end-of-arm tooling. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
 <h2 id="unload-heading">Automatic Tray Unloaders &amp; Destackers</h2>
 <p>An automatic tray unloader removes product from trays, or separates stacked trays, without manual handling. Unloading shows up wherever trays are a carrier rather than the final package: returnable trays and crates from a cooler or freezer, bakery trays feeding a wrapper, and component trays feeding an assembly or filling line. The method depends on whether the product can tolerate a drop and whether the empty trays return to the line.</p>
 <table>
@@ -176,40 +222,42 @@ const faqSchema = {
 </tbody>
 </table>
 <p>Destacking is different from denesting. A denester separates nested, disposable trays that sit inside each other. A destacker separates stackable trays and crates that rest on each other. Tray inversion hardware overlaps with the turners and inverters covered on the <a href="/conveyor-functions/product-handling/">product handling</a> page.</p>
-<p>In horticulture, "trayloader" and "tray unloader" also name potting-line machines that load plant pots into or out of carrier trays. This page covers packaging-line tray handling. The selection logic below (tray format, product fragility, and return loop) still applies.</p>
+<h3>Horticulture Tray Loaders: Pots and Baskets</h3>
+<p>In nurseries and greenhouses, "trayloader" and "tray unloader" usually mean potting-line equipment that places filled plant pots into carrier (shuttle) trays or takes them out. The building blocks match packaging lines: destackers, pot and tray conveyors, and grouping tables. <a href="https://www.urbinati.com/en/" target="_blank" rel="noopener noreferrer">Urbinati</a>, for example, lists automatic destackers "for trays, pots and shuttle trays" and buffer tables "for the grouping and positioning of pots and trays." Filling machines sit upstream: <a href="https://packmfg.com/standard-equipment/potting/" target="_blank" rel="noopener noreferrer">Pack Manufacturing</a> describes its PM1100 as filling "nursery pots, hanging baskets, flats and plug trays," and <a href="https://mayer.de/en/planting-systems/products/" target="_blank" rel="noopener noreferrer">Mayer</a> rates its KF 2260 tray filler at up to 1,600 trays per hour. For pot and basket loading, specify pot diameter and shape, tray cell pattern, plant height and foliage spread, and whether trays return empty to the potting line.</p>
 <h2 id="apps-heading">Industry Applications</h2>
 <h3>Bakery &amp; Snack Foods</h3>
-<p>Bakery lines load cookies, crackers, pastries, bars, and breadsticks into thermoformed trays before over-wrapping or flow-wrapping. Products arrive from the oven conveyor at high speed and often in random orientation. Delta robot cells with vision guidance handle the random infeed without upstream singulation. Cam-driven systems serve dedicated cookie lines running a single product at high rates. Syntegon (formerly Bosch Packaging) and BluePrint Automation dominate bakery tray loading, with installed bases in major CPG plants worldwide.</p>
+<p>Bakery lines load cookies, crackers, pastries, bars, and breadsticks into thermoformed trays before over-wrapping or flow-wrapping. Products arrive from the oven conveyor at high speed and often in random orientation. Delta robot cells with vision guidance handle the random infeed without upstream singulation. Cam-driven systems serve dedicated cookie lines running a single product at high rates. </p>
 <h3>Fresh Produce</h3>
-<p>Produce tray loading handles berries, cherry tomatoes, mushrooms, and salad components. The primary challenge is product fragility, berries bruise under even moderate gripping force. Vacuum pick-and-place with soft silicone cups and controlled vacuum pressure provides the gentlest handling. Produce lines also require full <a href="/industries/food-conveyors/sanitary/">sanitary washdown construction</a> for daily cleaning. Shuttleworth's slip-torque tray loading conveyors protect delicate produce by allowing product to slip against stopped gates rather than building pressure.</p>
+<p>Produce tray loading handles berries, cherry tomatoes, mushrooms, and salad components. The primary challenge is product fragility, berries bruise under even moderate gripping force. Vacuum pick-and-place with soft silicone cups and controlled vacuum pressure provides the gentlest handling. Produce lines also require full <a href="/industries/food-conveyors/sanitary/">sanitary washdown construction</a> for daily cleaning. Low-backpressure accumulation, where product slips on the conveyor instead of pushing against the product ahead, protects delicate produce at stops.</p>
 <h3>Ready Meals &amp; Prepared Foods</h3>
 <p>Ready-meal tray loading places main courses, sides, and sauces into compartmented CPET or aluminum trays. Products vary in shape, consistency, and temperature, cold salads, room-temperature grains, and hot proteins load into different compartments of the same tray. Multi-head servo gantry systems with independent pick modules handle the different product streams. The outfeed conveyor delivers loaded trays to modified-atmosphere packaging (MAP) sealers or top-seal machines.</p>
 <h3>Meat &amp; Poultry</h3>
-<p>Meat tray loading places cuts, portions, or formed products into foam or rigid trays for retail overwrap or MAP sealing. The challenge is handling wet, irregular product in a cold (35–40°F) environment with aggressive daily sanitation. Stainless steel frame construction, IP69K drives, and quick-disconnect conveyor sections are mandatory. Multivac, Harpak-ULMA, and Benchmark Automation supply integrated tray loading and sealing systems for meat processing.</p>
+<p>Meat tray loading places cuts, portions, or formed products into foam or rigid trays for retail overwrap or MAP sealing. The challenge is handling wet, irregular product in a refrigerated room with aggressive daily sanitation. Stainless steel frames, washdown-rated drives, and quick-disconnect conveyor sections are standard expectations. Many suppliers offer tray loading integrated with sealing for meat processing.</p>
 <h2 id="selection-heading">How to Choose an Automatic Tray Loader</h2>
 <p>Choose an automatic tray loader by answering four questions, which set the technology, size, and cost of the system:</p>
 <ol>
 <li><strong>What is your throughput requirement?</strong> Measure in products per minute and trays per minute (products per tray times trays per minute). A line placing 8 cookies per tray at 30 trays/minute requires 240 placements/minute. Compare that figure against each supplier's rated speed for your product, not a brochure maximum.</li>
 <li><strong>How many SKUs and how often do you change over?</strong> Lines running a few SKUs with infrequent changeovers favor cam-driven. Lines running many SKUs with frequent changeovers need robotic or servo gantry with recipe-based changeover.</li>
 <li><strong>What is the product's fragility and shape consistency?</strong> Fragile products (decorated cakes, fresh berries) need controlled-force gripping, delta robots with force-limited vacuum cups. Uniform, robust products (granola bars, frozen entrees) handle mechanical pick-and-place well.</li>
-<li><strong>What is your environment and sanitation requirement?</strong> Full daily washdown (bakery, meat) requires stainless steel construction, IP69K drives, and tool-free belt removal. Dry ambient environments (confectionery, snack) accept standard painted steel frames and enclosed drives.</li>
+<li><strong>What is your environment and sanitation requirement?</strong> Full daily washdown (bakery, meat) calls for stainless steel construction, washdown-rated drives, and tool-free belt removal. Dry ambient environments (confectionery, snack) accept standard painted steel frames and enclosed drives.</li>
 </ol>
 <p>Beyond these four questions, consider upstream and downstream integration. The tray loader does not operate in isolation, it depends on a reliable product infeed (often an <a href="/conveyor-functions/indexing-conveyors/">indexing conveyor</a>) and a buffered outfeed (often an <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyor</a>). Include the surrounding conveyor infrastructure in the project budget, since it is a significant share of total cost and is often quoted separately from the loader.</p>
 <p>For detailed cost factors across all conveyor types, see the <a href="/resources/conveyor-cost-guide/">conveyor cost and pricing guide</a>.</p>
-<h2 id="checklist-heading">Tray Loader &amp; Unloader Spec Checklist</h2>
-<p>Send these inputs with every tray loader or unloader inquiry. Suppliers quoting from the same data give comparable proposals, and gaps here are the usual cause of re-quotes and commissioning surprises.</p>
-<ul>
-<li><strong>Product:</strong> dimensions, weight range, fragility, surface (dry, sticky, frozen, wet), and whether orientation matters in the tray.</li>
-<li><strong>Trays:</strong> material, cavity layout, nested or stacked supply, flange dimensions, and every tray format the machine must run.</li>
-<li><strong>Rates:</strong> trays per minute and products per tray at current and planned peak volume.</li>
-<li><strong>Infeed condition:</strong> random or spaced and oriented, and what upstream equipment feeds it.</li>
-<li><strong>SKUs and changeover:</strong> number of SKUs, changeovers per shift, and target changeover time.</li>
-<li><strong>Unloading only:</strong> whether product can tolerate a drop, and whether empty trays go to a washer, restacker, or back to the loader.</li>
-<li><strong>Sanitation:</strong> dry clean or full washdown, required ingress rating, and food-contact material requirements.</li>
-<li><strong>Integration:</strong> downstream sealer or wrapper speed, outfeed buffer space, and line controls interface.</li>
-<li><strong>Safety:</strong> guarding and access for robot cells. See OSHA's <a href="https://www.osha.gov/robotics" target="_blank" rel="noopener noreferrer">robotics safety overview</a> for the applicable standards.</li>
-<li><strong>Footprint:</strong> available floor space, ceiling height for overhead robots, and tray magazine reload access.</li>
-</ul>
+<SpecChecklist id="spec-checklist" title="Tray loader and unloader specification checklist" items={[
+  ["Product", "Dimensions, weight range, fragility, surface (dry, sticky, frozen, wet), and whether orientation matters in the tray."],
+  ["Trays", "Material, cavity layout, nested or stacked supply, flange dimensions, and every tray format the machine must run."],
+  ["Rates", "Trays per minute and products per tray at current and planned peak volume."],
+  ["Infeed condition", "Random or spaced and oriented product, and what upstream equipment feeds the cell."],
+  ["SKUs and changeover", "Number of SKUs, changeovers per shift, target changeover time, and which tooling changes per SKU."],
+  ["Tray supply", "Denester or destacker magazine capacity, reload method, and whether trays arrive nested or stacked."],
+  ["Unloading", "Whether product can tolerate a drop, and whether empty trays go to a washer, restacker, or back to the loader."],
+  ["Sanitation", "Dry clean or full washdown, required ingress rating, and food-contact material requirements."],
+  ["Integration", "Downstream sealer, lidder, or wrapper speed, outfeed buffer space, and line controls interface."],
+  ["Safety", "Guarding and access for robot cells and point-of-operation guarding for pick heads."],
+  ["Footprint", "Available floor space, ceiling height for overhead robots, and access for magazine reloads and maintenance."],
+  ["Acceptance test", "Run test with your product and trays at rated speed, allowed mispick and empty-cavity rate, and measured changeover time."]
+]} />
+<p>OSHA's <a href="https://www.osha.gov/robotics" target="_blank" rel="noopener noreferrer">robotics overview</a> notes there are no robot-specific OSHA standards and covers hazard recognition for robot cells. General machine guarding falls under <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212</a>.</p>
 <p>To shortlist builders once the spec is written, see the <a href="/resources/conveyor-suppliers/">conveyor suppliers guide</a>.</p>
 <h2 id="related-heading">Related Functions</h2>
 <ul class="usa-collection">
@@ -225,6 +273,16 @@ const faqSchema = {
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/reject-systems/">Reject Systems</a></h3>
 <p class="usa-collection__description">Remove defects before tray loading</p></div></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.therobotreport.com/abb-launches-5-axis-high-speed-delta-robot/" target="_blank" rel="noopener noreferrer">ABB launches 5-axis, high-speed delta robot</a>, The Robot Report. IRB 365 rating of 120 picks per minute with 1 kg products.</li>
+<li><a href="https://www.industrialtechnology.co.uk/omron-debuts-worlds-fastest-and-first-4-arm-delta-robot" target="_blank" rel="noopener noreferrer">Omron debuts world's fastest and first 4-arm Delta robot</a>, Industrial Technology. Quattro pick rate of 300 per minute.</li>
+<li><a href="https://www.osha.gov/robotics" target="_blank" rel="noopener noreferrer">Robotics overview</a>, OSHA. Status of robotics standards and hazard recognition.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General requirements for all machines</a>, OSHA. Machine guarding requirements.</li>
+<li><a href="https://www.urbinati.com/en/" target="_blank" rel="noopener noreferrer">Nursery automation</a>, Urbinati. Destackers and grouping tables for pots, trays, and shuttle trays.</li>
+<li><a href="https://packmfg.com/standard-equipment/potting/" target="_blank" rel="noopener noreferrer">Potting line equipment</a>, Pack Manufacturing. PM1100 filling of pots, hanging baskets, flats, and plug trays.</li>
+<li><a href="https://mayer.de/en/planting-systems/products/" target="_blank" rel="noopener noreferrer">Planting systems products</a>, Mayer. KF 2260 tray filler capacity.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
@@ -245,7 +303,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How fast can an automatic tray loader run?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Cam-driven pick-and-place is the fastest option for a single small, uniform product. Servo gantry trades some speed for recipe-based changeover. Manufacturers rate single delta robots at roughly 120 to 300 picks per minute for light products: ABB rates its IRB 365 at 120 with a 1 kg product, and Omron rates its Quattro at up to 300. Multi-robot cells scale with robot count. Packaging World reported a 10-robot Voortman cookie line loading 1,100 cookies per minute. Actual speed depends on product size, weight, fragility, and tray configuration.</p>
+<p>Cam-driven pick-and-place is the fastest option for a single small, uniform product. Servo gantry trades some speed for recipe-based changeover. Manufacturers rate single delta robots at roughly 120 to 300 picks per minute for light products: ABB rates its IRB 365 at 120 with a 1 kg product, and Omron rated its Quattro at 300. Multi-robot cells add capacity with more robots. Actual speed depends on product size, weight, fragility, and tray configuration.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What industries use automatic tray loading?</button></h3>

@@ -29,128 +29,166 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How do you calculate conveyor belt pull?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt pull (also called effective tension) is calculated as: Te = F × L × (W_belt + W_product) + (W_product × H), where F is the friction factor (typically 0.03-0.06 for slider bed conveyors), L is conveyor length in feet, W_belt is belt weight per linear foot, W_product is product load per linear foot, and H is the elevation change in feet. Belt pull is measured in pounds and determines the required motor horsepower and belt tensile strength." }
+      "acceptedAnswer": { "@type": "Answer", "text": "For a slider bed belt conveyor, Forbo Siegling's calculation method gives belt pull (effective tension) as Te = μT × (P + B/2) + μR × (B/2 + R) + P × sin α, where P is the total product weight on the carrying side, B is the weight of the whole belt, R is the weight of the return rollers and non-drive pulleys, μT is the belt-to-bed friction coefficient, μR is the roller friction coefficient, and α is the incline angle. Siegling's guideline values are μT = 0.33 for a fabric belt underside on a slider bed and μR = 0.033 for rollers. These are example values: get the actual coefficient for your belt and bed from the belt maker." }
     },
     {
       "@type": "Question",
       "name": "How do you size a conveyor motor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Motor horsepower is calculated as: HP = (belt pull in pounds × belt speed in FPM) / 33,000. Apply a service factor of 1.5 for normal duty or 2.0 for heavy duty and frequent starts/stops. Round up to the next standard motor size (0.5, 0.75, 1, 1.5, 2, 3, 5 HP). An oversized motor wastes energy; an undersized motor overheats and fails prematurely. For variable speed applications, use a VFD (variable frequency drive) to adjust motor speed without changing pulleys." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Horsepower at the drive pulley is HP = (Te × V) / 33,000, where Te is belt pull in pounds and V is belt speed in feet per minute. Divide by the drive train efficiency to get the motor power, apply the design margin your belt or gearmotor supplier specifies, and round up to the next standard motor size. Sparks Belting's slider bed calculator uses a default service factor of 1.50. Confirm gear reducer service factors in the reducer maker's catalog." }
     },
     {
       "@type": "Question",
       "name": "What is the maximum incline angle for a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Maximum incline angle depends on the product and belt surface. Smooth belt with cartons: 15-18 degrees maximum. Rough-top belt with cartons: 22-25 degrees. Cleated belt: up to 45 degrees. Cleated belt with sidewalls: up to 90 degrees (vertical). Bottles and round containers require lower angles, typically 5-10 degrees maximum before tipping. Factors include product center of gravity, surface friction between product and belt, and vibration from the conveyor drive." }
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the belt surface, the product, and its center of gravity. As a rough guide for plastic modular belts, Forbo's Siegling Prolink guide lists 3 to 5 degrees for a flat top surface, 20 to 40 degrees for a friction top surface, under 60 degrees with straight profiles (cleats), and under 90 degrees with bent profiles. Tall, narrow products such as bottles tip at lower angles. Test the actual product on a sample of the actual belt before fixing the angle." }
     },
     {
       "@type": "Question",
       "name": "How do you calculate conveyor throughput?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor throughput in products per minute equals belt speed (in feet per minute) divided by product pitch (center-to-center spacing in feet). Product pitch is the product length plus the gap between products. Example: a belt running at 80 FPM with a 12-inch product pitch (1 foot) delivers 80 products per minute. For multi-lane conveyors, multiply single-lane throughput by the number of lanes." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Throughput in products per minute equals belt speed in feet per minute divided by product pitch in feet. Product pitch is product length plus the gap between products. Example: 80 FPM with a 12-inch (1-foot) pitch gives 80 products per minute. For multi-lane conveyors, multiply single-lane throughput by the number of lanes. Real output is lower because of stops and jams, so size the conveyor using the line efficiency you measure on your own line." }
     }
   ]
 };
 ---
 <BaseLayout title="Conveyor Engineering Calculations, Belt Pull, Motor Sizing, Speed &#x26; Throughput | PackagingConveyor.com" description="Conveyor engineering formulas: belt pull, motor HP sizing, speed and throughput, accumulation zone sizing, incline limits, and transfer points." canonical="https://packagingconveyor.com/resources/conveyor-design-guide/conveyor-engineering/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
 <h1>Conveyor Engineering Calculations</h1>
-<p class="usa-intro">Conveyor engineering calculations translate product requirements and layout dimensions into motor sizes, belt specifications, and speed settings. The core calculations are belt pull (effective tension), motor horsepower sizing using HP = (belt pull × belt speed) / 33,000, throughput in products per minute using belt speed / product pitch, accumulation zone length, and incline angle limits. These formulas apply to belt conveyors, roller conveyors, and most other <a href="/conveyor-types/">conveyor types</a> used in packaging lines.</p>
+<p class="usa-intro">Conveyor engineering calculations turn product data and layout dimensions into belt pull, motor size, belt speed, and throughput. The core formulas are belt pull (effective tension), drive horsepower HP = (Te × V) / 33,000, throughput = belt speed / product pitch, and accumulation length = buffer time × rate × pitch. Use them to check supplier proposals and to catch undersized drives early. Final sizing should use the friction coefficients and efficiencies published by the belt and gearmotor makers for your exact components. These formulas apply to belt conveyors, roller conveyors, and most other <a href="/conveyor-types/">conveyor types</a> used in packaging lines.</p>
 <h2 id="beltpull-heading">Belt Pull Calculations</h2>
-<p>Belt pull, also called effective tension (Te), is the force the drive must exert on the belt to move the loaded conveyor at a constant speed. Belt pull determines motor horsepower, belt tensile strength requirement, and shaft loading on pulleys and bearings. Every conveyor design starts with a belt pull calculation.</p>
+<p>Belt pull, also called effective tension (Te), is the force the drive pulley must apply to the belt to keep the loaded conveyor moving at constant speed. It sets motor power, belt tensile rating, and shaft and bearing loads. Every drive sizing starts here.</p>
 <h3>Slider Bed Belt Pull Formula</h3>
-<p>For slider bed belt conveyors (where the belt slides on a flat surface), belt pull is calculated as:</p>
-<p class="formula">Te = F × L × (W<sub>b</sub> + W<sub>p</sub>) + W<sub>p</sub> × H</p>
-<p>Where: <strong>Te</strong> = effective tension (belt pull) in pounds. <strong>F</strong> = coefficient of friction between belt and slider bed (typically 0.03–0.06 for UHMW slider bed, 0.15–0.30 for steel slider bed without UHMW). <strong>L</strong> = conveyor length in feet (horizontal distance). <strong>W<sub>b</sub></strong> = belt weight in pounds per linear foot. <strong>W<sub>p</sub></strong> = product weight per linear foot of conveyor (total product weight on conveyor divided by conveyor length). <strong>H</strong> = elevation change in feet (positive for incline, negative for decline).</p>
-<p>The first term (F × L × (W<sub>b</sub> + W<sub>p</sub>)) is the friction force required to slide the loaded belt across the slider bed. The second term (W<sub>p</sub> × H) is the gravity force required to lift the product through the elevation change. On a horizontal conveyor, H = 0 and the second term drops out.</p>
+<p>On a slider bed conveyor the carrying side of the belt slides on a flat bed and the return side runs on rollers. Forbo Siegling's <a href="https://www.forbo.com/media/document/4ebaace0-008f-466a-b319-6313530e12d8" target="_blank" rel="noopener noreferrer">Transilon calculation method</a> treats these two parts separately. Written in pounds-force (the g term drops out), it is:</p>
+<p class="formula">Te = μ<sub>T</sub> × (P + B/2) + μ<sub>R</sub> × (B/2 + R) + P × sin α</p>
+<p>Where: <strong>Te</strong> = effective tension (belt pull), lb. <strong>P</strong> = total weight of product on the carrying side, lb. <strong>B</strong> = weight of the whole belt (carry and return runs), lb. <strong>R</strong> = weight of the return rollers and all pulleys except the drive pulley, lb. <strong>μ<sub>T</sub></strong> = friction coefficient between belt underside and slider bed. <strong>μ<sub>R</sub></strong> = friction coefficient for running over rollers. <strong>α</strong> = incline angle. Use minus instead of plus on the last term for a decline. P × sin α equals the product weight per foot of belt times the elevation change in feet.</p>
+<p>The first term is sliding friction on the bed. The second is rolling resistance on the return side. The third lifts the product. On a horizontal conveyor, α = 0 and the third term drops out.</p>
+<h3>Friction Coefficients</h3>
+<p>The friction coefficient drives the answer more than any other input, and published values differ by belt type and by calculation method. Do not mix a coefficient from one maker's method with another maker's formula.</p>
+<table>
+<thead>
+<tr><th>Source</th><th>Condition</th><th>Published value</th></tr>
+</thead>
+<tbody>
+<tr><td>Forbo Siegling, Transilon calculation method</td><td>Fabric belt underside on slider bed (μ<sub>T</sub>)</td><td>0.33</td></tr>
+<tr><td>Forbo Siegling, Transilon calculation method</td><td>Coated undersides such as U1, V1, VH (μ<sub>T</sub>)</td><td>0.5</td></tr>
+<tr><td>Forbo Siegling, Transilon calculation method</td><td>Belt running over rollers (μ<sub>R</sub>)</td><td>0.033</td></tr>
+<tr><td>Sparks Belting, conveyor belt calculations</td><td>Slider bed, bare duck to friction surface</td><td>0.20 to 0.55</td></tr>
+<tr><td>Forbo Siegling, Prolink modular belt guide</td><td>Plastic modular belt on wearstrips, by material and cleanliness</td><td>About 0.08 to 0.59</td></tr>
+</tbody>
+</table>
+<p>Siegling notes that its fabric belt values reflect worn, soiled surfaces and are about 1.5 times higher than values for new surfaces. <a href="https://www.sparksbelting.com/blog/understanding-conveyor-belt-calculations" target="_blank" rel="noopener noreferrer">Sparks Belting's simplified method</a> uses E = F × (P + M), with the full belt weight M in the friction term, and lists its own roller bed factors. For modular plastic belts, the <a href="https://www.forbo.com/media/document/8d828b24-c03a-498c-ab3b-713371a7a5d5" target="_blank" rel="noopener noreferrer">Siegling Prolink guide</a> tables coefficients by belt material (PE, PP, POM, PA), wearstrip material (UHMW PE, HDPE, steel, and others), and clean, regular, or soiled conditions. In every row of that table, soiled values are well above clean values.</p>
 <h3>Roller Bed Belt Pull Formula</h3>
-<p>For roller bed belt conveyors (where the belt rides on rollers instead of a flat surface), friction is significantly lower. The formula is the same but the friction factor F drops to 0.015–0.030 because roller bearings have less friction than a sliding surface. Roller bed conveyors are used for long runs and heavy loads where slider bed friction would require an oversized motor.</p>
+<p>On a roller bed belt conveyor, both runs ride on rollers. Siegling's formula becomes:</p>
+<p class="formula">Te = μ<sub>R</sub> × (P + B + R) + P × sin α</p>
+<p>With μ<sub>R</sub> = 0.033 in Siegling's method against 0.33 for a fabric belt on a slider bed, the friction part of belt pull is roughly a tenth for the same load. That is why roller bed construction is used for long runs and heavy loads.</p>
+<h3>Accumulation on a Running Belt</h3>
+<p>If product stops against a blade stop or a downstream machine while the belt keeps running, the belt slides under the product. Siegling adds a third friction term, μ<sub>ST</sub> × P, where μ<sub>ST</sub> is the belt-to-product coefficient (0.33 or 0.5 in Siegling's table, depending on belt surface). Accumulation can add a large share of belt pull, so state it in the RFQ.</p>
 <h3>Belt Pull Example</h3>
-<p>A 50-foot horizontal slider bed conveyor carries cases weighing 30 lbs each, spaced 2 feet apart (15 lbs per linear foot of product load). The belt weighs 1.5 lbs per linear foot. Friction factor is 0.05 (UHMW slider bed). No elevation change (H = 0).</p>
-<p class="formula">Te = 0.05 × 50 × (1.5 + 15) + 0 = 0.05 × 50 × 16.5 = 41.25 lbs</p>
-<p>The drive must produce 41.25 pounds of belt pull to move this conveyor at any constant speed. Belt pull is independent of speed, it takes the same force to move the conveyor at 20 FPM or 200 FPM (ignoring acceleration forces). Speed enters the calculation in the next step: motor sizing.</p>
+<p>A 50-foot horizontal slider bed conveyor carries 30-lb cases spaced 2 feet apart, so 25 cases are on the belt: P = 750 lb. The belt weighs 1.0 lb per foot and is about 100 feet long: B = 100 lb. Return rollers and the tail pulley weigh R = 60 lb. Use μ<sub>T</sub> = 0.33 and μ<sub>R</sub> = 0.033 (Siegling guideline values). These are example values. Get the actual coefficients and weights from the belt maker.</p>
+<p class="formula">Te = 0.33 × (750 + 50) + 0.033 × (50 + 60) + 0<br>
+Te = 264 + 3.6 = 267.6 lb (about 268 lb)</p>
+<p>The friction term on the slider bed dominates. Belt pull does not depend on speed at steady state. That is why <a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/wp/drives-wp008_-en-p.pdf" target="_blank" rel="noopener noreferrer">Rockwell Automation classifies conveyors as constant torque loads</a>. Speed enters in the next step.</p>
 <h2 id="motor-heading">Motor Sizing</h2>
-<p>Motor horsepower is calculated from belt pull and belt speed. The formula converts mechanical power (force × velocity) from foot-pounds per minute to horsepower using the conversion factor 33,000 ft·lbf/min = 1 HP.</p>
+<p>Power is force times velocity. In U.S. units, 1 HP = 33,000 ft·lbf/min, which gives the standard formula used in <a href="https://www.sparksbelting.com/blog/understanding-conveyor-belt-calculations" target="_blank" rel="noopener noreferrer">belt makers' calculation guides</a>.</p>
 <h3>Horsepower Formula</h3>
-<p class="formula">HP = (Te × V) / 33,000</p>
-<p>Where: <strong>HP</strong> = motor horsepower. <strong>Te</strong> = effective tension (belt pull) in pounds. <strong>V</strong> = belt speed in feet per minute (FPM).</p>
-<h3>Service Factor</h3>
-<p>The calculated HP is the theoretical minimum at steady state. Real conveyors must accelerate product, handle load surges, and start under load. Apply a service factor to account for these demands:</p>
-<ul>
-<li>Normal duty (continuous run, gradual loading): service factor 1.5</li>
-<li>Heavy duty (frequent starts/stops, full-load starting): service factor 2.0</li>
-<li>Severe duty (indexing, high inertia loads, reversing): service factor 2.5–3.0</li>
-</ul>
-<p>Multiply the calculated HP by the service factor, then round up to the next standard motor size. Standard NEMA motor sizes are: 0.25, 0.33, 0.5, 0.75, 1, 1.5, 2, 3, 5, 7.5, 10, 15, 20, 25 HP. Do not interpolate, always round up. An undersized motor overheats, trips on overload, and fails prematurely. The <a href="/resources/conveyor-motors-drives/">motors and drives guide</a> covers motor types, efficiency classes, and VFD selection in detail.</p>
+<p class="formula">HP<sub>drive</sub> = (Te × V) / 33,000<br>
+HP<sub>motor</sub> = HP<sub>drive</sub> / η</p>
+<p>Where: <strong>Te</strong> = belt pull, lb. <strong>V</strong> = belt speed, ft/min (FPM). <strong>η</strong> = efficiency of the drive train between motor and pulley (gear reducer, chain, couplings). Siegling's method calculates power at the drive drum and divides by drive efficiency before selecting the next larger standard motor. Gear reducer efficiency varies widely by reducer type and ratio, so take η from the reducer maker's catalog.</p>
+<h3>Service Factor and Design Margin</h3>
+<p>The formula gives steady-state power. Real conveyors also start under load, accelerate product, and see surges. Suppliers handle this with a design margin. <a href="https://www.sparksbelting.com/cd/calculator_sliderbed.html" target="_blank" rel="noopener noreferrer">Sparks Belting's slider bed HP calculator</a> uses a default service factor of 1.50 and directs users to a chart for adjustments. Gear reducer makers publish separate service factors for the reducer itself, based on load type, starts per hour, and hours per day. Check both. Frequent starts, indexing, reversing, and high-inertia loads call for more margin than a continuous, evenly loaded run.</p>
+<p>Round up to the next standard motor rating. Common NEMA fractional and integral ratings include 0.25, 0.33, 0.5, 0.75, 1, 1.5, 2, 3, 5, 7.5, and 10 HP.<!-- VERIFY: confirm standard HP rating list against NEMA MG 1 or a motor maker's catalog. --> An undersized motor overheats and trips. A grossly oversized motor runs at poor efficiency. The <a href="/resources/conveyor-motors-drives/">motors and drives guide</a> covers motor types, efficiency classes, and VFD selection.</p>
 <h3>Motor Sizing Example</h3>
-<p>Continuing the previous example: belt pull = 41.25 lbs, belt speed = 100 FPM, normal duty (service factor 1.5).</p>
-<p class="formula">HP = (41.25 × 100) / 33,000 = 0.125 HP<br>
-HP × service factor = 0.125 × 1.5 = 0.1875 HP<br>
-Next standard size = 0.25 HP</p>
-<p>A 0.25 HP (quarter-horse) motor handles this conveyor with margin. Most packaging conveyors in the 20-80 foot range with moderate loads use motors between 0.25 HP and 2 HP. Large, heavily loaded conveyors or high-speed lines may require 3-10 HP motors.</p>
+<p>Continuing the example: Te = 267.6 lb, belt speed 100 FPM, drive efficiency η = 0.85, service factor 1.5. The efficiency and service factor are example values. Use the figures your gearmotor and belt suppliers give you.</p>
+<p class="formula">HP<sub>drive</sub> = (267.6 × 100) / 33,000 = 0.81 HP<br>
+HP<sub>motor</sub> = 0.81 / 0.85 = 0.95 HP<br>
+With service factor: 0.95 × 1.5 = 1.43 HP<br>
+Next standard size = 1.5 HP</p>
+<p>Note how much the friction coefficient matters. A coefficient several times too low would have pointed to a fractional motor that could not start this conveyor loaded. Ask suppliers which coefficient and efficiency they used.</p>
 <h2 id="speed-heading">Speed Calculations</h2>
-<p>Belt speed determines throughput and is measured in feet per minute (FPM). Conveyor belt speed is a function of the drive pulley diameter and the motor/gearbox output RPM.</p>
+<p>Belt speed sets throughput and is measured in feet per minute (FPM). It depends on drive pulley diameter and pulley RPM.</p>
 <h3>Belt Speed Formula</h3>
 <p class="formula">V = π × D × RPM / 12</p>
-<p>Where: <strong>V</strong> = belt speed in feet per minute. <strong>D</strong> = drive pulley diameter in inches. <strong>RPM</strong> = drive pulley rotational speed (motor RPM / gear ratio). The division by 12 converts inches to feet.</p>
-<p>A 4-inch diameter drive pulley driven at 95 RPM produces: V = 3.1416 × 4 × 95 / 12 = 99.5 FPM, essentially 100 FPM. Changing belt speed requires changing the gear ratio (mechanical), changing the motor speed via VFD (electrical), or changing the drive pulley diameter (mechanical). VFDs provide the easiest speed adjustment, the operator changes belt speed from the HMI or the PLC adjusts speed automatically.</p>
-<h3>Typical Packaging Conveyor Speeds</h3>
-<p>Packaging conveyors typically run between 20 FPM and 200 FPM. Manual pack stations use 10-30 FPM. Automated case conveying uses 60-150 FPM. High-speed bottle and container lines run at 100-400 FPM. Accumulation conveyors run 10-20% faster than the downstream machine's infeed speed to ensure the machine is never starved.</p>
+<p>Where: <strong>V</strong> = belt speed, FPM. <strong>D</strong> = drive pulley diameter, inches (include lagging if fitted). <strong>RPM</strong> = drive pulley speed (motor RPM / gear ratio). Dividing by 12 converts inches to feet.</p>
+<p>A 4-inch drive pulley at 95 RPM gives V = 3.1416 × 4 × 95 / 12 = 99.5 FPM. To change speed, change the gear ratio, change the pulley diameter, or change motor speed with a VFD. A VFD is the easiest: the operator sets speed at the HMI or the PLC sets it automatically.</p>
+<h3>Choosing a Line Speed</h3>
+<p>Packaging conveyor speed is set by the rate and pitch the line needs, not by a standard figure. Manual pack stations run slow enough for workers to handle product. Case conveying runs faster. Container lines often run fastest. Conveyors feeding a machine are usually set somewhat faster than the machine's infeed demand so the machine is not starved. The machine builder's infeed spec is the number to design to.</p>
 <h2 id="throughput-heading">Throughput Calculations</h2>
-<p>Throughput is the number of products a conveyor delivers per unit time. It connects belt speed, product size, and product spacing into a single performance metric.</p>
+<p>Throughput is the number of products delivered per unit of time. It ties belt speed, product length, and spacing together.</p>
 <h3>Products Per Minute Formula</h3>
 <p class="formula">Products/min = V / P</p>
-<p>Where: <strong>V</strong> = belt speed in feet per minute. <strong>P</strong> = product pitch in feet (center-to-center distance = product length + gap). The gap between products depends on the application, touching products have zero gap; sensor-triggered accumulation zones require 1-3 inches of gap for photoeye detection.</p>
-<p>Example: belt speed = 80 FPM, product length = 10 inches, gap = 2 inches. Product pitch = 12 inches = 1 foot. Throughput = 80 / 1 = 80 products per minute.</p>
-<p>For multi-lane conveyors, multiply single-lane throughput by the number of lanes. A 3-lane conveyor at 80 products per minute per lane delivers 240 products per minute total. Lane dividers and downstream merge points must handle the combined throughput.</p>
+<p>Where: <strong>V</strong> = belt speed, FPM. <strong>P</strong> = product pitch in feet (product length + gap). Touching products have zero gap. Photoeye-based zone control needs a gap large enough for the sensor to see between products. That gap depends on the sensor and product, so confirm it with the controls supplier.</p>
+<p>Example: belt speed 80 FPM, product length 10 inches, gap 2 inches. Pitch = 12 inches = 1 foot. Throughput = 80 / 1 = 80 products per minute.</p>
+<p>For multi-lane conveyors, multiply single-lane throughput by the number of lanes. Three lanes at 80 per minute deliver 240 per minute. Lane dividers and downstream merges must handle the combined rate.</p>
 <h3>Throughput Limitations</h3>
-<p>Theoretical throughput assumes perfect product spacing with no gaps, jams, or stoppages. Real throughput is lower. Apply an Overall Equipment Effectiveness (OEE) factor to estimate actual throughput. Typical packaging line OEE ranges from 60% to 85%. A conveyor designed for 100 products per minute at 75% OEE delivers approximately 75 products per minute in sustained production. Design conveyor capacity for the required actual throughput divided by the expected OEE, not the nameplate throughput.</p>
+<p>The formula assumes perfect spacing and no stops. Sustained output is lower because of jams, changeovers, and starved or blocked machines. Size conveyors for the required output divided by the line efficiency you actually measure, for example from your own OEE records, rather than for nameplate rate.</p>
 <h2 id="accumulation-heading">Accumulation Zone Sizing</h2>
-<p>Accumulation conveyors buffer product between machines that run at different speeds or experience different downtime events. Proper accumulation zone sizing prevents upstream machine starvation and downstream backup. Undersized accumulation zones reduce line efficiency; oversized zones waste floor space and capital.</p>
+<p>Accumulation conveyors buffer product between machines with different speeds or different stop events. Too little accumulation stops the upstream machine. Too much wastes floor space and capital.</p>
 <h3>Accumulation Length Formula</h3>
 <p class="formula">L<sub>acc</sub> = T<sub>buffer</sub> × R × P</p>
-<p>Where: <strong>L<sub>acc</sub></strong> = accumulation conveyor length in feet. <strong>T<sub>buffer</sub></strong> = desired buffer time in minutes. <strong>R</strong> = upstream machine rate in products per minute. <strong>P</strong> = product pitch in feet. This formula gives the conveyor length needed to hold T minutes of production.</p>
-<p>Example: upstream machine rate = 60 cases per minute, product pitch = 1.5 feet (18-inch case length, touching), desired buffer = 2 minutes. L<sub>acc</sub> = 2 × 60 × 1.5 = 180 feet. That is a long accumulation zone. Multi-lane accumulation, spiral accumulators, or bi-directional accumulation tables reduce the linear footprint. The <a href="/resources/conveyor-design-guide/">design guide hub</a> discusses layout strategies for fitting accumulation into compact floor plans.</p>
-<h3>Buffer Time Guidelines</h3>
-<p>Minimum buffer time depends on the type and frequency of downstream interruptions. Minor jams cleared in under a minute require 1-2 minutes of buffer. Changeovers that take 3-5 minutes require 3-5 minutes of buffer (or the upstream machine also stops for changeover). Unplanned downtime events are harder to predict, 2-3 minutes of buffer handles most short stoppages. For longer planned stops, it is more practical to stop the upstream machine than to build 10+ minutes of accumulation.</p>
+<p>Where: <strong>L<sub>acc</sub></strong> = accumulation length, ft. <strong>T<sub>buffer</sub></strong> = desired buffer time, minutes. <strong>R</strong> = upstream machine rate, products per minute. <strong>P</strong> = product pitch when accumulated, ft.</p>
+<p>Example: upstream rate 60 cases per minute, 18-inch cases accumulated touching (pitch 1.5 ft), buffer 2 minutes. L<sub>acc</sub> = 2 × 60 × 1.5 = 180 feet. That is long. Multi-lane accumulation, spiral accumulators, or bi-directional accumulation tables reduce the footprint. The <a href="/resources/conveyor-design-guide/">design guide hub</a> covers layout strategies.</p>
+<h3>Setting Buffer Time</h3>
+<p>Set buffer time from the downstream stops you want the upstream machine to ride through. Pull typical jam-clear and minor-stop durations from your downtime records. If a planned changeover lasts longer than any practical buffer, it is usually simpler to stop the upstream machine for the changeover than to build that much accumulation.</p>
 <h2 id="incline-heading">Incline Angle Limits</h2>
-<p><a href="/conveyor-types/incline-conveyors/">Incline conveyors</a> move products between different elevations. The maximum incline angle depends on the friction between product and belt, the product's center of gravity, and the belt surface texture. Exceeding the maximum angle causes products to slide backward or tip over.</p>
-<h3>Angle Limits by Product and Belt</h3>
-<p>Smooth belt with flat-bottom cartons or cases: 15–18 degrees maximum. The smooth contact surface provides limited friction. Rough-top belt with cartons or cases: 22–25 degrees. The textured belt surface increases friction significantly. Cleated belt (cross-cleats every 12-24 inches): 30–45 degrees. Cleats prevent backward sliding by acting as mechanical stops. Cleated belt with sidewalls (corrugated sidewall belt): up to 90 degrees (vertical). The sidewalls contain loose or small products while cleats carry them up the incline. For <a href="/conveyor-types/flat-belt-conveyors/">flat belt conveyors</a> on inclines, rough-top belting is almost always specified.</p>
+<p><a href="/conveyor-types/incline-conveyors/">Incline conveyors</a> move product between elevations. The maximum angle depends on friction between product and belt, the product's center of gravity, and the belt surface. Past that angle, product slides back or tips.</p>
+<h3>Angle Limits by Belt Surface</h3>
+<p>For plastic modular belts, Forbo's Siegling Prolink guide gives these rough guidelines and recommends testing for the actual product:</p>
+<table>
+<thead>
+<tr><th>Belt surface</th><th>Rough achievable incline (Siegling Prolink)</th></tr>
+</thead>
+<tbody>
+<tr><td>Flat top surface</td><td>3 to 5 degrees</td></tr>
+<tr><td>Friction top surface</td><td>20 to 40 degrees</td></tr>
+<tr><td>Straight profiles (cleats)</td><td>Under 60 degrees</td></tr>
+<tr><td>Bent profiles</td><td>Under 90 degrees</td></tr>
+</tbody>
+</table>
+<p>Fabric belts follow the same pattern. A smooth top allows the lowest angle, a rough or friction top allows more, and cleats hold product mechanically at steeper angles. Corrugated sidewall belts with cleats can run near vertical for loose product. For <a href="/conveyor-types/flat-belt-conveyors/">flat belt conveyors</a> on inclines, a rough-top or friction-top belt is the usual choice. Ask the belt maker for the rated incline for your product and belt surface.</p>
 <h3>Product Stability on Inclines</h3>
-<p>Tall, narrow products (bottles, jars, cans) have a high center of gravity relative to their base width. They tip at lower angles than flat, wide products. Bottles on a smooth belt tip at approximately 5-10 degrees depending on diameter-to-height ratio. Bottles must be conveyed upright with side guides on inclines, or laid on their side and conveyed in a trough. Round products (cans, cylinders) roll backward on inclines unless contained by cleats, lanes, or cradle-type belts.</p>
+<p>Tall, narrow products (bottles, jars, cans) have a high center of gravity relative to base width and tip at lower angles than flat cases. Upright bottles on an incline need side guides and a shallow angle, or the product is laid down and carried in a trough. Round products roll back unless contained by cleats, lanes, or cradle belts. Test before fixing the angle.</p>
 <h3>Transition Zones</h3>
-<p>The transition from horizontal to incline (and from incline back to horizontal) requires a smooth curve to prevent products from lifting, tipping, or jamming. Nose-over radius at the bottom of the incline should be large enough that the product maintains full belt contact throughout the transition. A sharp transition lifts the leading edge of the product, causing it to tip. Standard practice is a minimum transition radius of 2-3 times the product length.</p>
+<p>Transitions from horizontal to incline and back need a curve gentle enough that the product keeps full belt contact. A sharp transition lifts the leading edge and can tip the product. Belt makers publish minimum radii for their belts and profile types. Size the transition for the product as well as the belt, and confirm with a product trial.</p>
 <h2 id="transfer-heading">Transfer Point Design</h2>
-<p>Transfer points are where products move from one conveyor to another or between a conveyor and a machine. Every transfer point is a potential jam location and a potential source of product damage. Minimizing transfer gap, matching speeds, and aligning conveyor heights are the three fundamentals of reliable transfer design.</p>
+<p>Transfer points move product between conveyors or between a conveyor and a machine. Each one is a likely jam point and a source of product damage. The three basics are a small gap, matched speeds, and aligned heights.</p>
 <h3>Gap and Dead Plate Transfers</h3>
-<p>When two belt conveyors are placed end to end, a gap exists between the nose roller of the discharging conveyor and the tail roller of the receiving conveyor. Small, flexible, or lightweight products can catch in this gap and jam. A dead plate (a flat metal plate bridging the gap) eliminates the gap. Dead plates must be smooth, level with both belt surfaces, and narrow enough to avoid excessive friction drag on the product.</p>
-<p>Knife-edge (small diameter) nose rollers reduce the gap at the discharge end of the upstream conveyor. Center-drive conveyors allow knife-edge nose rollers at both ends, enabling near-zero gap transfers. End-drive conveyors have a larger nose radius at the drive end due to the drive pulley diameter.</p>
+<p>Two belt conveyors placed end to end leave a gap between the discharge pulley and the receiving pulley. Small, flexible, or light products can catch there. A dead plate bridges the gap. It must be smooth, level with both belts, and short enough that the product does not stall on it.</p>
+<p>Small-diameter nose bars (knife edges) reduce the gap. Center-drive conveyors allow nose bars at both ends because the drive pulley is underneath. End-drive conveyors have a larger radius at the drive end.</p>
 <h3>Speed Matching at Transfers</h3>
-<p>The receiving conveyor should run at the same speed or slightly faster than the discharging conveyor. Running faster pulls a small gap between products, preventing accumulation at the transfer point. Running slower causes products to bunch up and jam at the transfer. Typical speed ratio is 1.05:1 to 1.10:1 (receiving conveyor 5-10% faster than discharging conveyor).</p>
+<p>Run the receiving conveyor at the same speed as the discharging conveyor or slightly faster. Slightly faster pulls a small gap and keeps product from piling up at the transfer. Slower causes bunching and jams. Set the ratio during commissioning with real product.</p>
 <h3>Height Alignment</h3>
-<p>Conveyor belt surfaces at a transfer point must be level within ⅛ inch. A height mismatch causes products to catch the edge of the higher conveyor and jam. Adjustable-height legs with leveling feet allow precise height adjustment during installation. The <a href="/resources/conveyor-cost-guide/">cost guide</a> notes that installation labor for precise alignment is a significant cost factor, especially in systems with many transfer points.</p>
+<p>Belt surfaces at a transfer must be level with each other. A step catches the product's leading edge. Adjustable legs with leveling feet allow fine adjustment during installation. Ask the supplier what height tolerance their transfers need for your product. The <a href="/resources/conveyor-cost-guide/">cost guide</a> notes that installation labor for alignment grows with the number of transfer points.</p>
 <h2 id="roller-calc-heading">Roller Conveyor Calculations</h2>
-<p>Roller conveyors have additional engineering parameters beyond belt conveyors: roller diameter, roller spacing (pitch), and roller load capacity.</p>
+<p>Roller conveyors add three parameters: roller diameter, roller centers (pitch), and load per roller.</p>
 <h3>Roller Spacing</h3>
-<p>The fundamental rule for roller spacing: at least three rollers must support the product at all times. Roller pitch (center-to-center spacing) must be no greater than one-third the product length in the direction of travel. A 12-inch long case requires roller spacing no greater than 4 inches. A 24-inch long pallet requires roller spacing no greater than 8 inches. Wider roller spacing reduces conveyor cost but risks product sag, tipping, or jamming between rollers.</p>
+<p><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Ashland Conveyor's roller conveyor guide</a> states that a minimum of three rollers should be in contact with the load at all times. That makes roller pitch no greater than one-third of the shortest product length in the direction of travel. A 12-inch case needs roller centers of 4 inches or less. A 24-inch product needs 8 inches or less. Closer centers also reduce load per roller.</p>
 <h3>Roller Load Capacity</h3>
-<p>Each roller has a maximum load capacity determined by the tube wall thickness, shaft diameter, and bearing type. The load per roller equals the product weight divided by the number of rollers under the product. A 50-lb case on four rollers puts 12.5 lbs per roller. Roller manufacturers publish load ratings per roller at specified speeds, verify that the selected roller handles the calculated per-roller load with margin.</p>
+<p>Load per roller equals product weight divided by the number of rollers under it. A 50-lb case on four rollers puts 12.5 lb on each. Use the conservative case for uneven bottoms, which may sit on fewer rollers. Compare the result with the roller maker's published rating for that tube, axle, and bearing, and keep margin.</p>
 <h3>Gravity Conveyor Slope</h3>
-<p><a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> require a slight decline to move products by gravity. The required slope depends on product weight, roller bearing quality, and roller diameter. Typical slope is ¼ inch to ½ inch of drop per foot of conveyor length (1.2–2.4 degrees). Light products require steeper slopes; heavy products require less slope to prevent runaway. Speed control on gravity conveyors uses brake rollers or retarders to limit product velocity on long declines.</p>
+<p><a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> need a slight decline. The right slope depends on product weight, bottom condition, bearing quality, and roller diameter. Light products need more slope. Heavy products need less to avoid runaway. Set the final pitch by testing actual product on the actual conveyor. On long declines, brake rollers or retarders limit product speed.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.forbo.com/media/document/4ebaace0-008f-466a-b319-6313530e12d8" target="_blank" rel="noopener noreferrer">Siegling Transilon Calculation Methods: Conveyor Belts</a>, Forbo Movement Systems. Effective pull formulas for slider bed, roller bed, incline, and accumulation, friction coefficients μ<sub>T</sub>, μ<sub>R</sub>, μ<sub>ST</sub>, and motor power = drum power / efficiency.</li>
+<li><a href="https://www.forbo.com/media/document/8d828b24-c03a-498c-ab3b-713371a7a5d5" target="_blank" rel="noopener noreferrer">Siegling Prolink: Recommendations for Constructing and Calculating Conveyors</a>, Forbo Movement Systems. Modular belt friction tables and rough incline guidelines by belt surface.</li>
+<li><a href="https://www.sparksbelting.com/blog/understanding-conveyor-belt-calculations" target="_blank" rel="noopener noreferrer">Understanding Conveyor Belt Calculations</a>, Sparks Belting. HP = F × S × (P + M) / 33,000 and slider bed friction range.</li>
+<li><a href="https://www.sparksbelting.com/cd/calculator_sliderbed.html" target="_blank" rel="noopener noreferrer">HP Calculation, Slider Bed Conveyor</a>, Sparks Belting. Default 1.50 service factor.</li>
+<li><a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/wp/drives-wp008_-en-p.pdf" target="_blank" rel="noopener noreferrer">Drive Fundamentals: Load Characteristics</a>, Rockwell Automation. Conveyors as constant torque loads.</li>
+<li><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Roller Conveyor Selection Guide</a>, Ashland Conveyor. Minimum of three rollers under the load.</li>
+</ul>
 <h2 id="faq-heading">Engineering FAQ</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">How do you calculate conveyor belt pull?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>Belt pull (effective tension) for a slider bed conveyor: Te = F × L × (W<sub>b</sub> + W<sub>p</sub>) + W<sub>p</sub> × H. F is the friction factor (0.03–0.06 for UHMW slider bed), L is conveyor length in feet, W<sub>b</sub> is belt weight per linear foot, W<sub>p</sub> is product weight per linear foot, and H is elevation change in feet. Belt pull is measured in pounds and determines motor HP and belt tensile strength.</p>
+<p>For a slider bed conveyor, Forbo Siegling's method gives Te = μ<sub>T</sub> × (P + B/2) + μ<sub>R</sub> × (B/2 + R) + P × sin α. P is total product weight on the carrying side, B is the weight of the whole belt, R is the weight of return rollers and non-drive pulleys, and α is the incline angle. Siegling's guideline values are μ<sub>T</sub> = 0.33 for a fabric underside on a slider bed and μ<sub>R</sub> = 0.033 for rollers. These are example values: get the actual coefficient for your belt and bed from the belt maker.</p>
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How do you size a conveyor motor?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Motor HP = (belt pull in pounds × belt speed in FPM) / 33,000. Multiply by a service factor: 1.5 for normal duty, 2.0 for heavy duty, 2.5–3.0 for severe duty. Round up to the next standard NEMA motor size. An undersized motor overheats; an oversized motor wastes energy. For variable-speed applications, use a VFD rather than mechanical speed changes.</p>
+<p>Drive horsepower = (belt pull in lb × belt speed in FPM) / 33,000. Divide by drive train efficiency to get motor power, apply the design margin your belt or gearmotor supplier specifies, and round up to the next standard motor size. Sparks Belting's slider bed calculator uses a default service factor of 1.50. Check gear reducer service factors in the reducer maker's catalog.</p>
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the maximum incline angle for a conveyor?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Smooth belt with cartons: 15–18 degrees. Rough-top belt: 22–25 degrees. Cleated belt: 30–45 degrees. Cleated with sidewalls: up to 90 degrees (vertical). Bottles and cylinders tip at lower angles (5–10 degrees). Always test with actual product on a sample belt section before finalizing the incline angle.</p>
+<p>It depends on belt surface, product, and center of gravity. For plastic modular belts, Forbo's Siegling Prolink guide gives rough guidelines of 3 to 5 degrees for a flat top, 20 to 40 degrees for a friction top, under 60 degrees with straight profiles, and under 90 degrees with bent profiles. Bottles and other tall products tip at lower angles. Test the actual product on a sample of the actual belt before fixing the angle.</p>
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How do you calculate conveyor throughput?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Products per minute = belt speed (FPM) / product pitch (feet). Product pitch = product length + gap between products. For multi-lane conveyors, multiply single-lane throughput by the number of lanes. Apply an OEE factor (typically 60–85%) to estimate actual sustained throughput.</p>
+<p>Products per minute = belt speed (FPM) / product pitch (feet). Product pitch = product length + gap. For multi-lane conveyors, multiply single-lane throughput by the number of lanes. Sustained output is lower because of stops and jams, so size the conveyor using the line efficiency you measure on your own line.</p>
 </div>
 </div>
 <h2 id="apply-these-calculations">Apply These Calculations</h2>

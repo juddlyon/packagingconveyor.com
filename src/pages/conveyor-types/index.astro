@@ -346,7 +346,7 @@ const faqSchema = {
       "name": "What is the difference between a belt conveyor and a roller conveyor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Belt conveyors use a continuous belt surface and can carry products of any shape, size, or bottom condition. Roller conveyors use a series of cylindrical rollers and require products with a flat, rigid bottom at least 3 rollers wide. Belt conveyors handle inclines and declines better. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy loads."
+        "text": "Belt conveyors use a continuous belt surface and can carry products of any shape, size, or bottom condition. Roller conveyors use a series of cylindrical rollers and require products with a flat, rigid bottom long enough to bridge several rollers at all times. Belt conveyors handle inclines and declines better. Roller conveyors offer easier zone control, accumulation, and lower friction for heavy loads."
       }
     },
     {
@@ -354,7 +354,7 @@ const faqSchema = {
       "name": "What conveyor types support zero-pressure accumulation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Three conveyor types commonly provide zero-pressure accumulation (ZPA): MDR (Motor Driven Roller) conveyors use independent 24VDC motorized zones. Belt-driven live roller conveyors use pneumatic clutches or band brakes per zone. Accumulation conveyors with photo-eye sensors and zone controllers manage product spacing. MDR is the most widely specified ZPA technology for new installations."
+        "text": "Three conveyor types commonly provide zero-pressure accumulation (ZPA): MDR (Motor Driven Roller) conveyors use independent low-voltage DC motorized zones. Belt-driven live roller conveyors use pneumatic clutches or band brakes per zone. Accumulation conveyors with photo-eye sensors and zone controllers manage product spacing. MDR is the most widely specified ZPA technology for new installations."
       }
     }
   ]
@@ -386,13 +386,13 @@ const articleSchema = {
 <h3>1. Product Characteristics</h3>
 <p>Product weight, dimensions, shape, bottom surface condition, and fragility determine which conveyor types qualify. Flat-bottomed rigid cases suit <a href="/conveyor-types/roller-conveyors/">roller conveyors</a>. Irregular shapes or soft-bottom bags require belt conveyors. Heavy pallets need <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> or pallet chain conveyors.</p>
 <h3>2. Throughput Requirements</h3>
-<p>Calculate your required conveyor speed using this formula: Speed (FPM) = (products per minute x product length in feet) + gap allowance. Add 10-15% headroom above peak production rate. Higher throughput applications may require <a href="/conveyor-types/live-roller-conveyors/">live roller conveyors</a> or high-speed belt systems.</p>
+<p>Calculate your required conveyor speed using this formula: Speed (FPM) = products per minute x (product length + gap) in feet. Add headroom above the peak rate so the conveyor can catch up after a stop. Higher throughput applications may require <a href="/conveyor-types/live-roller-conveyors/">live roller conveyors</a> or high-speed belt systems.</p>
 <h3>3. Function Needed</h3>
 <p>Transport is the baseline function. Beyond transport, you may need <a href="/conveyor-types/accumulation-conveyors/">accumulation</a> (buffering between processes), <a href="/conveyor-types/transfer-conveyors/">transfer</a> (direction changes), sortation (routing to multiple destinations), or <a href="/conveyor-types/vertical-reciprocating/">vertical transport</a> (elevation changes).</p>
 <h3>4. Environment</h3>
-<p><a href="/industries/food-conveyors/">Food and beverage operations</a> require <a href="/industries/food-conveyors/sanitary/">sanitary, washdown-rated conveyors</a> in stainless steel. Pharmaceutical plants need cleanroom-compatible systems. Standard warehouse environments can use painted carbon steel frames.</p>
+<p><a href="/industries/food-conveyors/">Food and beverage operations</a> require <a href="/industries/food-conveyors/sanitary/">sanitary, washdown-rated conveyors</a> in stainless steel. Pharmaceutical plants need cleanroom-compatible systems sized to the room's <a href="https://www.iso.org/standard/53394.html" target="_blank" rel="noopener noreferrer">ISO 14644-1</a> class. Standard warehouse environments can use painted carbon steel frames.</p>
 <h3>5. Budget</h3>
-<p>Conveyor cost varies dramatically by type. <a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> represent the lowest cost option ($). <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> cost more upfront ($$$) but reduce energy and maintenance costs over time. See our <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for detailed cost factor breakdowns.</p>
+<p>Conveyor cost varies by type, but length, controls, materials, and installation usually move the price more than the type label. <a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller conveyors</a> are the lowest cost option because they have no drive or controls. <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> cost more upfront because every zone has a motor and controller, but zones run only when needed, which can lower energy and maintenance costs. See our <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for detailed cost factor breakdowns.</p>
 <h2 id="comparison-heading">Conveyor Type Comparison Table</h2>
 <table>
 <thead>
@@ -402,104 +402,104 @@ const articleSchema = {
 <th>Speed</th>
 <th>Load</th>
 <th>Accumulation</th>
-<th>Cost</th>
+<th>Relative Cost</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/gravity/">Gravity Roller</a></td>
 <td>Cases, cartons, totes</td>
-<td>Gravity</td>
-<td>Up to 200 lbs</td>
+<td>No drive: slope or manual push</td>
+<td>Light to medium</td>
 <td>No</td>
-<td>$</td>
+<td>Lowest</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/powered/">Powered Roller</a></td>
 <td>Continuous case flow</td>
-<td>30-200 FPM</td>
-<td>Up to 500 lbs</td>
+<td>Moderate, continuous</td>
+<td>Medium to heavy</td>
 <td>With add-ons</td>
-<td>$$</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/mdr-conveyors/">MDR</a></td>
 <td>Zone accumulation</td>
-<td>30-180 FPM</td>
-<td>Up to 250 lbs</td>
+<td>Moderate, zone by zone</td>
+<td>Light to medium</td>
 <td>Built-in ZPA</td>
-<td>$$$</td>
+<td>Higher</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/cdlr-conveyors/">CDLR</a></td>
 <td>Heavy pallets, cases</td>
-<td>20-120 FPM</td>
-<td>Up to 10,000 lbs</td>
+<td>Slow to moderate</td>
+<td>Heavy (pallets, drums)</td>
 <td>No (continuous)</td>
-<td>$$$</td>
+<td>Higher</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/live-roller-conveyors/">Live Roller (BDLR)</a></td>
 <td>Medium-duty transport</td>
-<td>30-200 FPM</td>
-<td>Up to 500 lbs</td>
+<td>Moderate</td>
+<td>Medium</td>
 <td>With zones</td>
-<td>$$</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/accumulation-conveyors/">Accumulation</a></td>
 <td>Line buffering</td>
-<td>30-180 FPM</td>
-<td>Up to 300 lbs</td>
+<td>Moderate</td>
+<td>Light to medium</td>
 <td>Primary function</td>
-<td>$$$</td>
+<td>Higher</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/transfer-conveyors/">Transfer</a></td>
 <td>Direction changes</td>
-<td>30-150 FPM</td>
-<td>Varies</td>
+<td>Set by transfer cycle time</td>
+<td>Varies by design</td>
 <td>No</td>
-<td>$$-$$$</td>
+<td>Moderate to higher</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/flat-belt-conveyors/">Belt</a></td>
 <td>Irregular shapes, inclines</td>
-<td>20-400 FPM</td>
-<td>Up to 100 lbs</td>
+<td>Wide range, set by belt and drive</td>
+<td>Light to medium</td>
 <td>Limited</td>
-<td>$$</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/spiral-conveyors/">Spiral</a></td>
 <td>Elevation changes</td>
-<td>50-200 FPM</td>
-<td>Up to 75 lbs</td>
+<td>Moderate, continuous</td>
+<td>Light (cases, packs)</td>
 <td>No</td>
-<td>$$$$</td>
+<td>Highest</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/vertical-reciprocating/">VRC</a></td>
 <td>Mezzanine transport</td>
-<td>20-40 FPM</td>
-<td>Up to 6,000 lbs</td>
+<td>Slow, intermittent lift</td>
+<td>Heavy (carts, pallets)</td>
 <td>No</td>
-<td>$$$-$$$$</td>
+<td>Higher to highest</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/tabletop-conveyors/">Tabletop Chain</a></td>
 <td>Bottles, cans, cartons</td>
-<td>20-100 FPM</td>
-<td>Up to 50 lbs</td>
+<td>Matched to filler and labeler rates</td>
+<td>Light units</td>
 <td>Limited</td>
-<td>$$</td>
+<td>Moderate</td>
 </tr>
 </tbody>
 </table>
-<p>Relative cost: $ = lowest, $$$$ = highest. Actual pricing depends on length, materials, controls, and manufacturer. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for detailed pricing factors.</p>
+<p>Source note: speed, load, and cost are relative classes for comparing types, not ratings. Rated speed and capacity depend on width, roller or chain pitch, drive size, and duty, so confirm them on the manufacturer's spec sheet for the model you quote. Cost depends mainly on length, controls, materials, and installation. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for cost factors.</p>
 <h2 id="categories-heading">Conveyor Types by Category</h2>
 <h3>Roller Conveyors</h3>
-<p><a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> represent the largest conveyor category in packaging. They use cylindrical rollers mounted in side frames to transport flat-bottomed products. The four primary sub-types are <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> (unpowered), <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> (belt-driven or line-shaft), <a href="/conveyor-types/mdr-conveyors/">MDR</a> (motor driven roller), and <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> (chain driven live roller). Manufacturers like Hytrol, Interroll, and Dematic produce roller conveyor systems for case weights from 5 lbs to over 10,000 lbs.</p>
+<p><a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> represent the largest conveyor category in packaging. They use cylindrical rollers mounted in side frames to transport flat-bottomed products. The four primary sub-types are <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> (unpowered), <a href="/conveyor-types/roller-conveyors/powered/">powered roller</a> (belt-driven or line-shaft), <a href="/conveyor-types/mdr-conveyors/">MDR</a> (motor driven roller), and <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> (chain driven live roller). Roller conveyors cover a wide load range, from light cartons on gravity sections to full pallets on CDLR.</p>
 <h3>Belt Conveyors</h3>
 <p>Belt conveyors use a continuous belt surface to transport products. They handle irregular shapes, soft-bottom bags, loose items, and incline/decline applications that roller conveyors cannot. Flat belt, cleated belt, and modular plastic belt are the three main sub-types. Dorner, mk North America, and Hytrol are major <a href="/conveyor-types/belt-conveyors/">belt conveyor manufacturers</a> for packaging applications.</p>
 <h3>Accumulation Conveyors</h3>
@@ -507,11 +507,11 @@ const articleSchema = {
 <h3>Transfer &amp; Sortation Conveyors</h3>
 <p><a href="/conveyor-types/transfer-conveyors/">Transfer conveyors</a> change product direction at right angles or multiple angles. Pop-up transfers, turntables, push diverters, and right-angle chain transfers handle different speed and load requirements. <a href="/conveyor-types/diverting-merging/sortation/">Sortation systems</a> extend this concept to high-speed multi-lane routing for distribution and fulfillment applications.</p>
 <h3>Vertical Conveyors</h3>
-<p><a href="/conveyor-types/vertical-reciprocating/">Vertical reciprocating conveyors (VRCs)</a> lift product between floor levels or mezzanines. They provide an alternative to freight elevators with simpler code requirements and lower installation cost. Spiral conveyors provide continuous vertical transport without the stop-and-go cycle of reciprocating units.</p>
+<p><a href="/conveyor-types/vertical-reciprocating/">Vertical reciprocating conveyors (VRCs)</a> lift product between floor levels or mezzanines. They are a common alternative to freight elevators for moving goods, not people. Code treatment varies by jurisdiction, so confirm with the local inspector which standard applies before you buy. Spiral conveyors provide continuous vertical transport without the stop-and-go cycle of reciprocating units.</p>
 <h3>Specialty Conveyors</h3>
 <p>Specialty conveyor types address specific packaging needs. <a href="/industries/food-conveyors/beverage/">Tabletop chain conveyors</a> handle bottles and cans on high-speed <a href="/industries/food-conveyors/">food and beverage lines</a>. Vibratory conveyors feed bulk parts and powders. <a href="/conveyor-types/magnetic-conveyors/">Magnetic conveyors</a> transport ferrous lids and cans. <a href="/conveyor-types/vacuum-conveyors/">Vacuum conveyors</a> grip thin films, labels, and pouches that standard belts cannot hold.</p>
 <h2 id="applications-heading">Conveyor Types by Industry</h2>
-<p><a href="/industries/food-conveyors/">Food and beverage packaging lines</a> typically use <a href="/industries/food-conveyors/sanitary/">sanitary stainless steel belt conveyors</a>, tabletop chain conveyors for bottles, and <a href="/conveyor-types/washdown-conveyors/">washdown-rated roller conveyors</a> for cased goods. USDA and 3-A sanitary standards drive material and design requirements.</p>
+<p><a href="/industries/food-conveyors/">Food and beverage packaging lines</a> typically use <a href="/industries/food-conveyors/sanitary/">sanitary stainless steel belt conveyors</a>, tabletop chain conveyors for bottles, and <a href="/conveyor-types/washdown-conveyors/">washdown-rated roller conveyors</a> for cased goods. <a href="https://www.ams.usda.gov/services/auditing/equipment" target="_blank" rel="noopener noreferrer">USDA equipment review</a> and <a href="https://www.3-a.org" target="_blank" rel="noopener noreferrer">3-A sanitary standards</a> drive material and design requirements.</p>
 <p><a href="/industries/packaging-line-conveyors/">General packaging lines</a> combine multiple conveyor types. A typical end-of-line system includes belt conveyors feeding a case packer, <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> transporting sealed cases, <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a> buffering before a palletizer, and <a href="/industries/packaging-line-conveyors/pallet/">pallet conveyors</a> moving loaded pallets to stretch wrap and shipping.</p>
 <p>Distribution and fulfillment centers rely on <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> for zone-controlled accumulation, sortation systems for multi-lane routing, and <a href="/conveyor-types/vertical-reciprocating/">VRCs</a> for mezzanine transport. <a href="/resources/automated-conveyor-systems/">Automated conveyor systems</a> integrate these types with warehouse management software (WMS) for hands-free product flow.</p>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
@@ -533,12 +533,12 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is the difference between a belt conveyor and a roller conveyor?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Belt conveyors use a continuous belt surface and carry products of any shape or bottom condition. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> use cylindrical rollers and require flat, rigid bottoms spanning at least 3 rollers. Belt conveyors handle inclines and declines. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>, and lower friction for heavy loads.</p>
+<p>Belt conveyors use a continuous belt surface and carry products of any shape or bottom condition. <a href="/conveyor-types/roller-conveyors/">Roller conveyors</a> use cylindrical rollers and require flat, rigid bottoms long enough to bridge several rollers at all times.<!-- VERIFY: common rule of thumb is a minimum of three rollers under the product; confirm against a manufacturer application guide before restoring the number. --> Belt conveyors handle inclines and declines. Roller conveyors offer easier zone control, <a href="/conveyor-types/accumulation-conveyors/">accumulation</a>, and lower friction for heavy loads.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What conveyor types support zero-pressure accumulation?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p>Three conveyor types commonly provide zero-pressure accumulation (ZPA). <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> use independent 24VDC motorized zones. <a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller conveyors</a> use pneumatic clutches or band brakes per zone. <a href="/conveyor-types/accumulation-conveyors/">Dedicated accumulation conveyors</a> with photo-eye sensors and zone controllers manage product spacing. MDR dominates new ZPA installations.</p>
+<p>Three conveyor types commonly provide zero-pressure accumulation (ZPA). <a href="/conveyor-types/mdr-conveyors/">MDR conveyors</a> use independent low-voltage DC motorized zones. <a href="/conveyor-types/live-roller-conveyors/">Belt-driven live roller conveyors</a> use pneumatic clutches or band brakes per zone. <a href="/conveyor-types/accumulation-conveyors/">Dedicated accumulation conveyors</a> with photo-eye sensors and zone controllers manage product spacing. MDR dominates new ZPA installations.</p>
 
 </div>
 </div>

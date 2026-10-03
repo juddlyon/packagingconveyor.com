@@ -44,7 +44,7 @@ const faqSchema = {
       "name": "How much buffer capacity do I need?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Buffer capacity depends on downstream equipment downtime frequency and duration. A common rule is 3-5 minutes of buffer between major equipment sections. Calculate length using: Buffer Length (ft) = (products per minute × product length in feet × buffer minutes) + gap allowances. Critical transitions like before palletizers often require more buffer than between labelers or checkweighers."
+        "text": "Size the buffer from your own stop data: the duration of the downstream stops you want the line to ride through, at the upstream production rate. Calculate length using: Buffer Length (ft) = products per minute × pitch per product in feet × buffer minutes, where pitch is product length plus the gap between products (for zero-pressure zones, the zone length). Critical transitions, such as before palletizers, often need more buffer than transitions between labelers or checkweighers because their stops last longer."
       }
     },
     {
@@ -109,10 +109,11 @@ const articleSchema = {
 <li>Acceptable upstream stop frequency</li>
 <li>Changeover time for downstream equipment</li>
 </ul>
-<p><strong>Rule of thumb:</strong> 3-5 minutes of buffer between major equipment sections. More critical transitions (before palletizers, after high-speed fillers) may require 5-10 minutes.</p>
+<p><strong>Size from stop data, not a rule of thumb.</strong> Pull downstream stop logs (or OEE data) and pick the stop duration you want the line to ride through without stopping upstream. Covering every stop is rarely practical. Covering the frequent short stops usually recovers the most uptime per foot of buffer. Transitions with longer stops, such as before palletizers or after high-speed fillers, usually need more buffer time than transitions between labelers or checkweighers. For scale, AmbaFlex describes one off-line spiral installation where <a href="https://www.ambaflex.com/en/news/offline-buffering-for-maximum-efficiency" target="_blank" rel="noopener noreferrer">90 meters of conveyor belt provides 8 minutes</a> of buffer time at that line's rate.</p>
 <h4>Buffer Length Formula</h4>
-<p class="formula">Buffer Length (ft) = PPM × Product Length (ft) × Buffer Minutes + Gaps</p>
-<p><strong>Example:</strong> 100 products/min × 1 ft product × 3 min buffer = 300 ft of product. Add 10-20% for gaps between products in <a href="/conveyor-types/accumulation-conveyors/zero-pressure/">ZPA systems</a>.</p>
+<p class="formula">Buffer Length (ft) = PPM × Pitch per Product (ft) × Buffer Minutes</p>
+<p>Pitch per product is product length plus the gap between products. On <a href="/conveyor-types/accumulation-conveyors/zero-pressure/">ZPA systems</a>, each product occupies one zone, so use zone length as the pitch. On mass-flow or minimum-pressure buffers, pitch is close to product length.</p>
+<p><strong>Example:</strong> 100 products/min × 1.5 ft zone × 3 min buffer = 450 ft of zoned conveyor. The same product at 1 ft pitch with no gaps needs 300 ft. The difference shows why gap control matters when space is tight.</p>
 <h3>Space Constraints</h3>
 <p>Linear buffer conveyors require significant floor space. When space is limited, consider:</p>
 <ul>
@@ -155,10 +156,57 @@ const articleSchema = {
 <p>A FIFO (first in, first out) dynamic buffer sits directly in the product path. Every product passes through it in order, so production sequence, lot order, and date codes stay intact. The buffer changes its effective path length instead of rerouting product. In one common design, a movable transfer section travels along the spiral to lengthen or shorten the loaded path between infeed and outfeed. AmbaFlex describes its <a href="https://www.ambaflex.com/en/products/accuveyor-avl-series" target="_blank" rel="noopener noreferrer">AccuVeyor AVL dynamic buffer</a> as working "just like a trombone," with a moving U-shaped segment that increases or reduces accumulation length. ITW Hartness markets its <a href="https://hartness.com/product/dynac-6400/" target="_blank" rel="noopener noreferrer">DYNAC 6400</a> as a single-file spiral with sequential FIFO, zero-pressure accumulation.</p>
 <p>In-line FIFO buffers suit dated, perishable, and lot-tracked product, and product that must not touch while accumulating. The tradeoff is integration: every product passes through the buffer, so it must handle full line speed and every package format on the line.</p>
 <h3>LIFO Dynamic Buffers (Off-Line)</h3>
-<p>A LIFO (last in, first out) dynamic buffer sits beside the main line. During normal running, product bypasses it. When downstream stops, a switch diverts product into a reversible spiral. When downstream restarts, the spiral reverses and a second switch merges product back into the line. The last product in is the first product out. AmbaFlex documents this sequence for its <a href="https://www.ambaflex.com/en/news/offline-buffering-for-maximum-efficiency" target="_blank" rel="noopener noreferrer">off-line AccuVeyor AVo buffer</a>. Ryson describes its <a href="https://ryson.com/spiral-conveyors/vertical-accumulation-buffer/" target="_blank" rel="noopener noreferrer">vertical accumulation buffer</a> as using one reversible spiral or two or more spirals.</p>
+<p>A LIFO (last in, first out) dynamic buffer sits beside the main line. During normal running, product bypasses it. When downstream stops, a switch diverts product into a reversible spiral. When downstream restarts, the spiral reverses and a second switch merges product back into the line. The last product in is the first product out. AmbaFlex documents this sequence for its off-line AccuVeyor AVo buffer. Ryson describes its <a href="https://ryson.com/spiral-conveyors/vertical-accumulation-buffer/" target="_blank" rel="noopener noreferrer">vertical accumulation buffer</a> as using one reversible spiral or two or more spirals.</p>
 <p>Off-line LIFO buffers are simpler to retrofit because product only enters the buffer during a stop. They suit non-dated product where sequence does not matter. They do not suit lines where lot order, date-code sequence, or product age must be controlled.</p>
+<h3>Published Dynamic Buffer Examples</h3>
+<p>Manufacturer figures show the scale of current dynamic spiral buffers. They are examples, not ratings for your line. Capacity at your rate depends on product pitch and line speed.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Type</th>
+<th>Published Figures</th>
+<th>Product Limits Stated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AmbaFlex AccuVeyor AVL</td>
+<td>In-line, FIFO, single belt</td>
+<td>Buffer length 55 m (180 ft), speed up to 42 m/min (138 fpm)</td>
+<td>Max load 15 kg/m (10.2 lb/ft). Small cartons, pouches, cups, jars, trays, flow packs</td>
+</tr>
+<tr>
+<td>Hartness DYNAC 6400</td>
+<td>In-line, FIFO, single file</td>
+<td>Accumulation 183 ft (extensions available), max speed 175 fpm</td>
+<td>Package height up to 7 in rigid or 2 in flexible, width up to 8 in</td>
+</tr>
+<tr>
+<td>AmbaFlex AccuVeyor AVo</td>
+<td>Off-line, LIFO, reversing spiral</td>
+<td>Example installation: 90 m of belt gives 8 minutes of buffer</td>
+<td>Not stated on the source page</td>
+</tr>
+<tr>
+<td>Ryson Vertical Accumulation Buffer</td>
+<td>One reversible spiral or two or more spirals</td>
+<td>Total weight capacity 1,600 lbs at any one time</td>
+<td>Slat widths 6, 9, 12, 16, and 20 in</td>
+</tr>
+</tbody>
+</table>
+<h3>How to Choose a Dynamic Spiral Buffer</h3>
+<ul>
+<li><strong>Sequence:</strong> If lot order or date codes must stay in order, specify an in-line FIFO design.</li>
+<li><strong>Product limits:</strong> Check the maximum load per foot, package height, and width against your largest and smallest SKU.</li>
+<li><strong>Speed:</strong> The buffer must run at full line speed (in-line) or at least at the divert rate (off-line).</li>
+<li><strong>Buffer time:</strong> Convert the supplier's buffer length to minutes at your product pitch and rate.</li>
+<li><strong>Product contact:</strong> Ask whether products touch during accumulation, and what back pressure they see.</li>
+<li><strong>Height and access:</strong> Confirm ceiling clearance, guarding, and how operators reach a jam inside the spiral.</li>
+</ul>
 <h3>Spiral vs. Horizontal vs. Bi-Flow Buffers</h3>
-<p>Choose a dynamic spiral when floor space is the binding constraint and product is stable on a curved, inclined path: cases, cartons, trays, pouches, and flow wraps. Choose a horizontal buffer, such as a <a href="/conveyor-types/serpentine-conveyors/">serpentine conveyor</a> or a FIFO accumulation table, when product is tall, unstable, or open-topped and should stay level, or when overhead space is taken. Choose a bi-directional (bi-flow) table for round containers in mass flow. Garvey's <a href="https://garvey.com/bi-flo-models/" target="_blank" rel="noopener noreferrer">Bi-Flo tables</a> use two conveyors running in opposite directions so product circulates on the table until downstream needs it. Recirculation does not hold strict sequence, and containers touch each other in the mass, so bi-flow tables are a poor fit for strict FIFO or for low back pressure requirements on fragile product.</p>
+<p>Choose a dynamic spiral when floor space is the binding constraint and product is stable on a curved, inclined path: cases, cartons, trays, pouches, and flow wraps. Choose a horizontal buffer, such as a <a href="/conveyor-types/serpentine-conveyors/">serpentine conveyor</a> or a FIFO accumulation table, when product is tall, unstable, or open-topped and should stay level, or when overhead space is taken. Choose a bi-directional (bi-flow) table for round containers in mass flow. Garvey describes its <a href="https://garvey.com/bi-flo-models/" target="_blank" rel="noopener noreferrer">Bi-Flo tables</a> as using opposing conveyor movement to create an accumulation buffer in a small footprint. Product moving in a mass across opposing conveyors does not hold strict sequence, and containers touch each other in the mass, so bi-flow tables are a poor fit for strict FIFO or for low back pressure requirements on fragile product.</p>
 <table>
 <caption>Buffer conveyor comparison: sequence, layout, footprint, product pressure, and best fit</caption>
 <thead>
@@ -242,6 +290,14 @@ const articleSchema = {
 <li>Buffer level (percentage or zone count)</li>
 <li>Product present/absent per zone</li>
 </ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.ambaflex.com/en/products/accuveyor-avl-series" target="_blank" rel="noopener noreferrer">AccuVeyor AVL-Series</a>, AmbaFlex. In-line FIFO "trombone" mechanism, buffer length, speed, load per meter, product types.</li>
+<li><a href="https://www.ambaflex.com/en/news/offline-buffering-for-maximum-efficiency" target="_blank" rel="noopener noreferrer">Offline buffering for maximum efficiency</a>, AmbaFlex. Off-line LIFO switch and reverse sequence, 90 m belt and 8 minute example.</li>
+<li><a href="https://hartness.com/product/dynac-6400/" target="_blank" rel="noopener noreferrer">DYNAC 6400</a>, ITW Hartness. Single-file spiral FIFO, zero-pressure accumulation, speed, capacity, package limits.</li>
+<li><a href="https://ryson.com/spiral-conveyors/vertical-accumulation-buffer/" target="_blank" rel="noopener noreferrer">Vertical Accumulation Buffer</a>, Ryson. One reversible spiral or multiple spirals, weight capacity, slat widths.</li>
+<li><a href="https://garvey.com/bi-flo-models/" target="_blank" rel="noopener noreferrer">Bi-Flo models</a>, Garvey. Opposing-conveyor accumulation table.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a buffer conveyor?</button></h3>
@@ -261,7 +317,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How much buffer capacity do I need?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Rule of thumb: 3-5 minutes of buffer between major equipment sections. Calculate length: Buffer Length = Products/min × Product Length × Buffer Minutes + Gaps. Critical transitions (before <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>) often require 5-10 minutes.</p>
+<p>Size it from your own stop data: the downstream stop duration you want the line to ride through. Calculate length: Buffer Length = Products/min × Pitch per Product × Buffer Minutes, where pitch is product length plus gap (zone length on ZPA). Critical transitions, such as before <a href="/industries/packaging-line-conveyors/pallet/">palletizers</a>, often need more buffer because their stops last longer.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What types of conveyors are used for buffering?</button></h3>

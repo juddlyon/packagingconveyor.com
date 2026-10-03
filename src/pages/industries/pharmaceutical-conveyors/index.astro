@@ -23,17 +23,17 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What ISO cleanroom class do pharmaceutical conveyors need?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom classification depends on the process. Aseptic filling (injectable drugs) requires ISO Class 5 (Class 100) in the fill zone with ISO Class 7 (Class 10,000) surroundings. Oral solid dosage (tablets, capsules) typically requires ISO Class 7 or 8. Secondary packaging operates in controlled-not-classified (CNC) areas. Conveyor design must match the classification, ISO 5 conveyors use enclosed, HEPA-filtered housings with minimal particle generation." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom classification depends on the process. For aseptic filling of injectable drugs, FDA guidance calls for ISO Class 5 (Class 100) in the critical fill zone and at least ISO Class 7 (Class 10,000) in the area immediately next to the line. Oral solid dosage and packaging areas have no single required class. The manufacturer sets the class from its contamination risk assessment, often ISO 8 or controlled-not-classified (CNC). Conveyor design must match the classification, ISO 5 conveyors use enclosed, HEPA-filtered housings with minimal particle generation." }
     },
     {
       "@type": "Question",
       "name": "What is GMP compliance for conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "GMP compliance for conveyors means the equipment meets cGMP requirements: validated materials of construction (316L stainless steel, FDA-approved polymers), documented design qualification (DQ), installation qualification (IQ), operational qualification (OQ), and performance qualification (PQ). All product-contact surfaces must be non-reactive, non-absorptive, and non-additive. Documentation includes material certificates, surface finish reports, and weld inspection records." }
+      "acceptedAnswer": { "@type": "Answer", "text": "GMP compliance for conveyors means the equipment meets cGMP requirements: validated materials of construction (316L stainless steel, polymers that comply with FDA food-contact regulations), documented design qualification (DQ), installation qualification (IQ), operational qualification (OQ), and performance qualification (PQ). Under 21 CFR 211.65, product-contact surfaces must not be reactive, additive, or absorptive. Documentation includes material certificates, surface finish reports, and weld inspection records." }
     },
     {
       "@type": "Question",
       "name": "What is containment conveying for potent compounds?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Containment conveying transports highly potent active pharmaceutical ingredients (HPAPIs) while preventing operator exposure. Conveyors operate inside enclosed gloveboxes, isolators, or containment housings with HEPA-filtered exhaust. Occupational exposure limits (OELs) below 10 micrograms per cubic meter require containment. Split-butterfly valves, continuous liner systems, and wash-in-place (WIP) features enable conveyor cleaning without breaking containment." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Containment conveying transports highly potent active pharmaceutical ingredients (HPAPIs) while preventing operator exposure. Conveyors operate inside enclosed gloveboxes, isolators, or containment housings with HEPA-filtered exhaust. A common industry definition treats compounds with an occupational exposure limit (OEL) at or below 10 micrograms per cubic meter as highly potent, and these typically need containment. Split-butterfly valves, continuous liner systems, and wash-in-place (WIP) features enable conveyor cleaning without breaking containment." }
     }
   ]
 };
@@ -55,7 +55,7 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Pharmaceutical &amp; Cleanroom Conveyors</h1>
-<p class="usa-intro">Pharmaceutical conveyors transport tablets, capsules, vials, syringes, and packaging components through cleanroom environments while meeting ISO 14644 classification requirements and cGMP (current Good Manufacturing Practice) regulations. These systems use 316L stainless steel frames, enclosed belt housings with HEPA filtration, low-particulate drive components, and validated material documentation. Containment conveyors add isolator integration and HEPA-filtered exhaust for handling highly potent compounds (HPAPIs). Manufacturers like Dorner, mk North America, Bosch Rexroth, FlexLink, and NCC Automated Systems supply pharmaceutical-grade conveyor platforms.</p>
+<p class="usa-intro">Pharmaceutical conveyors transport tablets, capsules, vials, syringes, and packaging components through cleanroom environments while meeting ISO 14644 classification requirements and cGMP (current Good Manufacturing Practice) regulations. These systems use stainless steel frames (often 316L for product contact), enclosed or HEPA-protected conveyors in the most critical zones, low-particulate drive components, and validated material documentation. Containment conveyors add isolator integration and HEPA-filtered exhaust for handling highly potent compounds (HPAPIs).</p>
 <h2 id="iso-heading">ISO Cleanroom Classifications</h2>
 <p><a href="https://www.iso.org/standard/53394.html" target="_blank" rel="noopener noreferrer">ISO 14644-1</a> defines cleanroom classifications by the maximum allowable particle count per cubic meter of air. Each classification imposes specific requirements on the conveyor equipment operating within that space. The conveyor itself must not generate particles that would violate the room classification, every moving part, belt surface, and lubricated joint is a potential particle source.</p>
 <table>
@@ -63,9 +63,9 @@ const articleSchema = {
 <tr>
 <th>ISO Class</th>
 <th>FED STD 209E</th>
-<th>Particles/m3 (≥0.5 μm)</th>
+<th>Max particles/m3 (≥0.5 µm)</th>
 <th>Pharma Application</th>
-<th>Conveyor Requirements</th>
+<th>Common Conveyor Practice</th>
 </tr>
 </thead>
 <tbody>
@@ -73,42 +73,42 @@ const articleSchema = {
 <td>ISO 5</td>
 <td>Class 100</td>
 <td>3,520</td>
-<td>Aseptic fill zone</td>
-<td>Enclosed, HEPA-filtered, zero external lubrication</td>
+<td>Aseptic critical fill zone</td>
+<td>Enclosed or HEPA-protected, no exposed lubrication</td>
 </tr>
 <tr>
 <td>ISO 7</td>
 <td>Class 10,000</td>
 <td>352,000</td>
-<td>Oral solid dosage, aseptic background</td>
+<td>Area next to the aseptic line, some oral solid dosage</td>
 <td>Low-particulate drives, smooth surfaces</td>
 </tr>
 <tr>
 <td>ISO 8</td>
 <td>Class 100,000</td>
 <td>3,520,000</td>
-<td>Packaging, general production</td>
+<td>Less critical support areas, isolator background, some packaging</td>
 <td>Standard cleanroom-compatible construction</td>
 </tr>
 <tr>
 <td>CNC</td>
-<td>: </td>
-<td>Controlled</td>
+<td>None</td>
+<td>Not classified</td>
 <td>Secondary packaging, warehouse</td>
 <td>Clean design, easy-to-wipe surfaces</td>
 </tr>
 </tbody>
 </table>
-<p>FED STD 209E was superseded by ISO 14644-1 but the class numbers remain in common use. CNC = Controlled Not Classified.</p>
+<p>Source note: class equivalents, particle limits, and aseptic uses from <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/sterile-drug-products-produced-aseptic-processing-current-good-manufacturing-practice" target="_blank" rel="noopener noreferrer">FDA, Sterile Drug Products Produced by Aseptic Processing (2004)</a>. FED STD 209E was superseded by ISO 14644-1, but its class names remain in common use. CNC = Controlled Not Classified. Classes for oral solid dosage and packaging are set by the manufacturer's risk assessment.<!-- VERIFY: OSD and packaging class assignments are typical practice, not regulatory requirements; confirm with a pharma facility design reference before adding specifics. --> The conveyor practice column is common industry practice, not a regulatory requirement.</p>
 <h2 id="gmp-heading">cGMP Compliance for Conveyors</h2>
-<p>Current Good Manufacturing Practice (cGMP) under FDA 21 CFR Parts 210 and 211 requires that pharmaceutical equipment be designed, constructed, and maintained to facilitate cleaning, prevent contamination, and support process validation. For conveyors, cGMP compliance means:</p>
+<p>Current Good Manufacturing Practice (cGMP) under FDA 21 CFR Parts 210 and 211 requires that pharmaceutical equipment be designed, constructed, and maintained to facilitate cleaning, prevent contamination, and support process validation. The equipment rules in <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211/subpart-D" target="_blank" rel="noopener noreferrer">21 CFR 211.63 to 211.67</a> say product-contact surfaces must not be reactive, additive, or absorptive, and lubricants or coolants must not contact the product. For conveyors, cGMP compliance means:</p>
 <ul>
-<li><strong>Materials of construction:</strong> 316L stainless steel for product-contact frames. FDA-approved polymers (UHMW-PE, Delrin, silicone) for belt surfaces and wear strips. Material certificates (mill certs) for all metal components.</li>
-<li><strong>Surface finish:</strong> Product-contact surfaces polished to 0.8 μm Ra (32 microinch) or better. Electropolishing preferred for corrosion resistance and cleanability. Similar requirements to <a href="/industries/food-conveyors/sanitary/">sanitary food conveyors</a> but with additional documentation requirements.</li>
+<li><strong>Materials of construction:</strong> 316L stainless steel for product-contact frames. Polymer grades that comply with FDA food-contact regulations in <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">21 CFR Part 177</a> (for example UHMW-PE, acetal, silicone) for belt surfaces and wear strips. Material certificates (mill certs) for all metal components.</li>
+<li><strong>Surface finish:</strong> Product-contact surfaces polished to a maximum Ra stated in the user requirement specification (URS). Electropolishing is common for corrosion resistance and cleanability. Similar requirements to <a href="/industries/food-conveyors/sanitary/">sanitary food conveyors</a> but with additional documentation requirements.</li>
 <li><strong>Documentation package:</strong> Design Qualification (DQ), Factory Acceptance Test (FAT), Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ) protocols. Component traceability, weld maps, and surface finish test reports.</li>
 <li><strong>Change control:</strong> Any modification to the conveyor after validation requires a formal change control process. Even belt replacement must follow documented procedures with material verification.</li>
 </ul>
-<p>The documentation burden for pharmaceutical conveyors adds significant cost ($$$ to $$$$) over equivalent industrial conveyors. Budget 20-40% of hardware cost for validation documentation and qualification testing. For cost factors, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
+<p>The documentation and qualification work is a major cost driver over equivalent industrial conveyors. Ask suppliers to price DQ, FAT, and IQ/OQ support as separate line items so quotes can be compared. For cost factors, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
 <h2 id="design-heading">Cleanroom Conveyor Design</h2>
 <p>Cleanroom conveyor design focuses on minimizing particle generation, enabling thorough cleaning, and preventing cross-contamination between products. Key design features:</p>
 <h3>Particle Control</h3>
@@ -127,7 +127,7 @@ const articleSchema = {
 <li><strong>WIP (Wash-in-Place):</strong> For contained conveyors handling HPAPIs, integrated spray nozzles clean internal surfaces without opening the containment barrier.</li>
 </ul>
 <h2 id="containment-heading">Containment Conveying for Potent Compounds</h2>
-<p>Highly potent active pharmaceutical ingredients (HPAPIs) with occupational exposure limits (OELs) below 10 μg/m3 require containment conveying. The conveyor operates inside an enclosed system, isolator, glovebox, or containment housing, that prevents operator exposure to airborne drug particles.</p>
+<p>Highly potent active pharmaceutical ingredients (HPAPIs) typically require containment conveying. One common industry definition, cited in <a href="https://www.pharmtech.com/view/examining-high-potency-api-manufacturing" target="_blank" rel="noopener noreferrer">Pharmaceutical Technology</a>, treats an API with an occupational exposure limit (OEL) at or below 10 µg/m3 as highly potent. The conveyor operates inside an enclosed system, isolator, glovebox, or containment housing, that prevents operator exposure to airborne drug particles.</p>
 <p>Containment conveyor features include:</p>
 <ul>
 <li><strong>Enclosed housing:</strong> The conveyor runs inside a sealed enclosure with HEPA-filtered exhaust maintaining negative pressure relative to the room.</li>
@@ -136,24 +136,35 @@ const articleSchema = {
 <li><strong>WIP/CIP systems:</strong> Integrated wash nozzles clean the conveyor and enclosure interior without breaking containment. Wash water drains to a contained waste system.</li>
 <li><strong>Continuous liner systems:</strong> Waste product and cleaning materials discharge through continuous liners that seal contaminated material without exposure.</li>
 </ul>
-<p>Containment conveyor systems cost significantly more ($$$$) than standard pharmaceutical conveyors due to the enclosure, filtration, validation, and containment testing requirements. OEL testing (operator exposure monitoring) during commissioning verifies containment performance.</p>
+<p>Containment conveyor systems cost significantly more than standard pharmaceutical conveyors. The cost drivers are the enclosure, filtration, transfer valves, wash systems, validation, and containment testing. OEL testing (operator exposure monitoring) during commissioning verifies containment performance.</p>
 <h2 id="apps-heading">Pharmaceutical Conveyor Applications</h2>
 <h3>Oral Solid Dosage (OSD)</h3>
 <p>Tablet and capsule lines use conveyors between the tablet press or capsule filler, metal detector, deduster, coating pan, and packaging. Belt conveyors with smooth polyurethane belts transport loose tablets. Enclosed <a href="/conveyor-types/bucket-elevators/">bucket elevators</a> or <a href="/conveyor-types/vacuum-conveyors/">vacuum conveyors</a> handle vertical transfers. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyors</a> position bottles under tablet counters and cappers.</p>
 <h3>Aseptic Fill-Finish</h3>
-<p>Vial, syringe, and cartridge filling lines operate in ISO Class 5 environments. Conveyors transport containers from the washer through depyrogenation tunnels to fill-finish machines. Pallet transfer (workpiece carrier) conveyors provide the precision positioning needed for robotic filling and stoppering. These conveyors run inside laminar airflow zones with HEPA-filtered ceiling panels.</p>
+<p>Vial, syringe, and cartridge filling lines operate in ISO Class 5 environments. Conveyors transport containers from the washer through depyrogenation tunnels to fill-finish machines. Pallet transfer (workpiece carrier) conveyors provide the precision positioning needed for robotic filling and stoppering. These conveyors run inside unidirectional (laminar) airflow zones with HEPA-filtered supply. <a href="https://health.ec.europa.eu/system/files/2022-08/20220825_gmp-an1_en_0.pdf" target="_blank" rel="noopener noreferrer">EU GMP Annex 1</a> (clause 5.8) says a conveyor belt should not pass through a partition between a Grade A or B area and a lower-grade area unless the belt is continually sterilised. See <a href="/industries/pharmaceutical-conveyors/cleanroom/">cleanroom conveyors</a> for design details.</p>
 <h3>Pharmaceutical Packaging</h3>
 <p>Pharmaceutical packaging lines use conveyors between blister packers, cartoners, bundlers, serialization stations, and <a href="/industries/packaging-line-conveyors/case/">case packers</a>. Serialization (track-and-trace) requirements add vision inspection stations and <a href="/conveyor-functions/reject-systems/">reject conveyors</a> at each serialization point. <a href="/conveyor-types/accumulation-conveyors/">Accumulation conveyors</a> buffer between machines to maintain line efficiency.</p>
-<h2 id="mfg-heading">Pharmaceutical Conveyor Manufacturers</h2>
-<p>Pharmaceutical conveyor manufacturers range from general-purpose conveyor companies with cleanroom options to specialized pharmaceutical equipment builders:</p>
+<h2 id="evaluate-heading">What to Ask Pharmaceutical Conveyor Suppliers</h2>
+<p>Many general-purpose conveyor builders offer cleanroom or sanitary options. Specialized pharmaceutical builders add validation support. Use these questions to separate them:</p>
 <ul>
-<li><strong>Dorner:</strong> Cleanroom-rated 2200 and 3200 series conveyors. FDA-compliant belting. ISO Class 7/8 capable.</li>
-<li><strong>mk North America:</strong> Modular aluminum and stainless steel conveyor profiles. VersaMove pallet transfer for assembly and fill-finish.</li>
-<li><strong>FlexLink:</strong> Modular chain conveyor platforms for pharmaceutical packaging. Stainless steel and aluminum options.</li>
-<li><strong>Bosch Rexroth:</strong> TS 2plus pallet transfer system for vial and syringe assembly. Precision indexing for fill-finish lines.</li>
-<li><strong>NCC Automated Systems:</strong> Custom pharmaceutical conveyor systems with full validation documentation packages.</li>
+<li><strong>Particle data:</strong> Do you have particle emission test results for this model at our speed and load, and which method was used?</li>
+<li><strong>Materials:</strong> Can you supply mill certificates for metals and food-contact compliance statements for every polymer in the product zone?</li>
+<li><strong>Surface finish:</strong> What Ra do you guarantee on product-contact and non-contact surfaces, and how is it measured?</li>
+<li><strong>Cleaning and sterilization:</strong> Which cleaning agents and VHP cycles is the belt rated for, and do you have exposure test data?</li>
+<li><strong>Documentation:</strong> Do you provide DQ, FAT, and IQ/OQ protocols, and are they priced separately?</li>
+<li><strong>Change control:</strong> How do you document belt or component substitutions after validation?</li>
+<li><strong>References:</strong> Can you show installations in the same ISO class and dosage form?</li>
 </ul>
-<p>Manufacturer data from publicly available information. See our <a href="/resources/conveyor-manufacturers/">manufacturer directory</a> for a complete list.</p>
+<p>See our <a href="/resources/conveyor-manufacturers/">manufacturer directory</a> for supplier listings.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/sterile-drug-products-produced-aseptic-processing-current-good-manufacturing-practice" target="_blank" rel="noopener noreferrer">Sterile Drug Products Produced by Aseptic Processing: Current Good Manufacturing Practice (2004)</a>, U.S. FDA. ISO and FED STD 209E class equivalents, particle limits, ISO 5 critical area, ISO 7 adjacent area, ISO 8 isolator background.</li>
+<li><a href="https://www.iso.org/standard/53394.html" target="_blank" rel="noopener noreferrer">ISO 14644-1:2015, Classification of air cleanliness by particle concentration</a>, ISO. Cleanroom class definitions.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211/subpart-D" target="_blank" rel="noopener noreferrer">21 CFR Part 211, Subpart D: Equipment</a>, eCFR. Equipment design, surface, lubricant, and cleaning requirements.</li>
+<li><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177" target="_blank" rel="noopener noreferrer">21 CFR Part 177: Indirect Food Additives: Polymers</a>, eCFR. Food-contact polymer regulations.</li>
+<li><a href="https://health.ec.europa.eu/system/files/2022-08/20220825_gmp-an1_en_0.pdf" target="_blank" rel="noopener noreferrer">EU GMP Annex 1: Manufacture of Sterile Medicinal Products (2022)</a>, European Commission. Clause 5.8 on conveyor belts crossing grade partitions.</li>
+<li><a href="https://www.pharmtech.com/view/examining-high-potency-api-manufacturing" target="_blank" rel="noopener noreferrer">Examining High-Potency API Manufacturing (2009)</a>, Pharmaceutical Technology. OEL at or below 10 µg/m3 as a common HPAPI definition.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What conveyors are used in pharmaceutical manufacturing?</button></h3>
@@ -163,17 +174,17 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What ISO class do pharma conveyors need?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Aseptic filling: ISO 5 (Class 100). Oral solid dosage: ISO 7-8. Packaging: ISO 8 or CNC. The conveyor must not generate particles that violate the room classification.</p>
+<p>Aseptic filling: ISO 5 (Class 100) in the critical zone, with at least ISO 7 next to the line, per FDA guidance. Oral solid dosage and packaging: no single required class, often ISO 8 or CNC based on the manufacturer's risk assessment. The conveyor must not generate particles that violate the room classification.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is GMP compliance for conveyors?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Validated materials (316L SS, FDA polymers), documented DQ/IQ/OQ/PQ qualification, material certificates, surface finish reports, weld records, and change control procedures. Documentation typically adds 20-40% to hardware cost.</p>
+<p>Validated materials (316L SS, FDA food-contact compliant polymers), documented DQ/IQ/OQ/PQ qualification, material certificates, surface finish reports, weld records, and change control procedures. Under 21 CFR 211.65, product-contact surfaces must not be reactive, additive, or absorptive.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is containment conveying?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Containment conveying transports HPAPIs inside enclosed, HEPA-filtered systems to prevent operator exposure. Uses isolators, gloveboxes, split-butterfly valves, and WIP cleaning. Required when OELs fall below 10 μg/m3.</p>
+<p>Containment conveying transports HPAPIs inside enclosed, HEPA-filtered systems to prevent operator exposure. Uses isolators, gloveboxes, split-butterfly valves, and WIP cleaning. A common industry definition treats compounds with an OEL at or below 10 µg/m3 as highly potent, and these typically need containment.</p>
 
 </div>
 </div>

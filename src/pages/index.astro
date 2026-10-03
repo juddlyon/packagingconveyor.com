@@ -55,7 +55,7 @@ const faqSchema = {
       "name": "What is the difference between MDR and powered roller conveyors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MDR (Motor Driven Roller) conveyors use small brushless DC motors inside individual rollers, controlled in independent zones for zero-pressure accumulation. Powered roller conveyors use a single external motor driving all rollers via belt or chain. MDR is quieter, more energy efficient (50%+ savings), and provides better product control. Powered roller has lower upfront cost and is simpler for continuous-flow applications."
+        "text": "MDR (Motor Driven Roller) conveyors use small brushless DC motors inside individual rollers, controlled in independent zones for zero-pressure accumulation. Powered roller conveyors use a single external motor driving all rollers via belt or chain. MDR zones run only when product is present, so MDR usually uses less energy and runs quieter than a continuously driven line. Actual savings depend on duty cycle. Powered roller has lower upfront cost and is simpler for continuous-flow applications."
       }
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       "name": "What conveyor speed do I need for my packaging line?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Conveyor speed depends on your throughput requirement. A typical formula: Speed (FPM) = (Products per minute × Product length in feet) + gap allowance. Common packaging line speeds: case conveyors run 50-200 FPM, bottle lines run 20-100 FPM, pallet conveyors run 20-60 FPM. Always add 10-15% speed headroom above your peak production rate to prevent the conveyor from becoming a bottleneck."
+        "text": "Conveyor speed follows from your throughput requirement: Speed (FPM) = Products per minute × (Product length + gap) in feet. There is no single correct speed for a product type. Set the rate from the fastest machine the conveyor must feed or clear, then add headroom so the conveyor can catch up after a stop. Confirm the speed against the manufacturer rating for your conveyor model and load."
       }
     },
     {
@@ -100,70 +100,70 @@ const webPageSchema = {
 <h1>The Packaging Conveyor Reference</h1>
 <p class="usa-intro">Technical guides and selection criteria for <strong>30+ conveyor types</strong> across food, pharmaceutical, automotive, and warehouse applications. Independent. No vendor bias.</p>
 <h2 id="comparison-heading">Conveyor Type Comparison</h2>
-<p>Side-by-side specs for the most common packaging conveyor types. <a href="/conveyor-types/">Compare all 30+ types</a>.</p>
+<p>Side-by-side comparison of the most common packaging conveyor types. <a href="/conveyor-types/">Compare all 30+ types</a>.</p>
 <table>
 <thead>
 <tr>
 <th>Type</th>
 <th>Best For</th>
-<th>Speed Range</th>
-<th>Relative Cost</th>
+<th>Speed</th>
 <th>Load</th>
+<th>Relative Cost</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="/conveyor-types/flat-belt-conveyors/">Belt</a></td>
 <td>Lightweight, irregular shapes</td>
-<td>20-400 FPM</td>
-<td>$$</td>
-<td>Up to 100 lbs</td>
+<td>Wide range, set by belt and drive</td>
+<td>Light to medium</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/">Gravity Roller</a></td>
 <td>Cases, cartons, totes</td>
-<td>Gravity</td>
-<td>$</td>
-<td>Up to 200 lbs</td>
+<td>No drive: slope or manual push</td>
+<td>Light to medium</td>
+<td>Lowest</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/roller-conveyors/">Powered Roller</a></td>
 <td>Continuous flow, cases</td>
-<td>30-200 FPM</td>
-<td>$$$</td>
-<td>Up to 500 lbs</td>
+<td>Moderate, continuous</td>
+<td>Medium to heavy</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/mdr-conveyors/">MDR</a></td>
 <td>Accumulation, zone control</td>
-<td>30-180 FPM</td>
-<td>$$$</td>
-<td>Up to 250 lbs</td>
+<td>Moderate, zone by zone</td>
+<td>Light to medium cartons and totes</td>
+<td>Higher</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/spiral-conveyors/">Spiral</a></td>
 <td>Elevation change, small footprint</td>
-<td>50-200 FPM</td>
-<td>$$$$</td>
-<td>Up to 75 lbs</td>
+<td>Moderate, continuous</td>
+<td>Light (cases, packs)</td>
+<td>Highest</td>
 </tr>
 <tr>
 <td><a href="/conveyor-types/tabletop-conveyors/">Tabletop Chain</a></td>
 <td>Bottles, cans, small cartons</td>
-<td>20-100 FPM</td>
-<td>$$</td>
-<td>Up to 50 lbs</td>
+<td>Matched to filler and labeler rates</td>
+<td>Light units</td>
+<td>Moderate</td>
 </tr>
 <tr>
 <td><a href="/industries/packaging-line-conveyors/pallet/">Pallet</a></td>
 <td>Heavy palletized loads</td>
-<td>20-60 FPM</td>
-<td>$$$$</td>
-<td>Up to 4,000 lbs</td>
+<td>Slow</td>
+<td>Heavy (full pallets)</td>
+<td>Higher</td>
 </tr>
 </tbody>
 </table>
-<p>$ = lowest relative cost, $$$$ = highest. Actual pricing varies by length, configuration, materials, and manufacturer. <a href="/resources/conveyor-cost-guide/">See our cost factors guide</a>.</p>
+<p>Source note: speed, load, and cost are relative classes for comparing types, not ratings. Capacity depends on width, roller or chain pitch, drive size, and duty, so confirm it on the manufacturer's spec sheet for the model you quote. Cost depends mainly on length, controls, materials, and installation. <a href="/resources/conveyor-cost-guide/">See our cost factors guide</a>.</p>
 <h2 id="types-heading">Browse by Conveyor Type</h2>
 <ul class="usa-collection">{conveyorTypes.map((type) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={type.slug.startsWith('/') ? `${type.slug}/` : `/conveyor-types/${type.slug}/`}>{type.name}</a></h3><p class="usa-collection__description">{type.desc}</p></div></li>
@@ -172,7 +172,7 @@ const webPageSchema = {
 <h2 id="about-heading">The Conveyor Guide That Should Have Existed</h2>
 <p>Manufacturer sites only show <em>their</em> products. Distributor sites are catalogs with no engineering context. Neither helps you compare conveyor types or spec a system.</p>
 <p><strong>PackagingConveyor.com is the neutral technical resource.</strong> Speed calculations, throughput formulas, selection criteria, and head-to-head comparisons across 30+ conveyor types in food &amp; beverage, pharmaceutical, automotive, and warehouse applications.</p>
-<p>Use this site to spec your system, compare options, and build an RFQ you can send to any vendor.</p>
+<p>Use this site to spec your system, compare options, and build an RFQ you can send to any vendor. Safety and guarding references point to the standards buyers and suppliers already work from, including <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> for conveyor safety and <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">OSHA 1910.212</a> for machine guarding.</p>
 <h2 id="industries-heading">Conveyors by Industry</h2>
 <ul class="usa-collection">{industries.map((ind) => (
 <li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href={`/industries/${ind.slug}/`}>{ind.name}</a></h3><p class="usa-collection__description">{ind.desc}</p>{ind.tags && <p class="tags">{ind.tags.map((tag: string) => <span class="usa-tag">{tag}</span>)}</p>}</div></li>
@@ -250,22 +250,15 @@ const webPageSchema = {
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How do I calculate conveyor speed for my line?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
 <p>The basic conveyor speed formula:</p>
-<p class="formula"><strong>Speed (FPM) = (Products/min × Product length in ft) + gap allowance</strong></p>
-<p>Common packaging line speeds by application:</p>
-<ul>
-<li><strong>Case conveyors:</strong> 50-200 FPM</li>
-<li><strong>Bottle lines:</strong> 20-100 FPM</li>
-<li><strong>Pallet conveyors:</strong> 20-60 FPM</li>
-<li><strong>High-speed sortation:</strong> 300-600 FPM</li>
-</ul>
-<p>Always add <strong>10-15% speed headroom</strong> above peak production rate so the conveyor never becomes your bottleneck. See our <a href="/resources/conveyor-design-guide/">design guide</a> for throughput sizing formulas.</p>
+<p class="formula"><strong>Speed (FPM) = Products/min × (Product length + gap) in ft</strong></p>
+<p>There is no single correct speed for cases, bottles, or pallets. Set the rate from the fastest machine the conveyor must feed or clear, then add headroom so the conveyor can catch up after a stop. Confirm the result against the manufacturer's rated speed for your model and load. See our <a href="/resources/conveyor-design-guide/">design guide</a> for throughput sizing formulas.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What is the difference between MDR and powered roller?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p><strong>MDR (Motor Driven Roller)</strong> uses small 24VDC brushless motors built inside individual rollers. Each zone (typically 2-5 rollers) operates independently with its own photo-eye and control card. This enables zero-pressure accumulation and zone-by-zone control.</p>
+<p><strong>MDR (Motor Driven Roller)</strong> uses small low-voltage DC motors (commonly 24 VDC) built inside individual rollers. Each zone, a short group of rollers sized to the product, operates independently with its own photo-eye and control card. This enables zero-pressure accumulation and zone-by-zone control.</p>
 <p><strong>Powered roller (line-shaft or belt-driven)</strong> uses one external motor driving all rollers through a common belt or chain. All rollers spin together, so there's no zone control without additional pneumatic stops or clutches.</p>
-<p><strong>MDR advantages:</strong> 50%+ energy savings (zones only run when needed), quieter (65 dB vs 80+ dB), less maintenance (no belts/chains to replace), better product protection. <strong>Powered roller advantages:</strong> lower upfront cost, simpler for continuous-flow applications with no accumulation requirement.</p>
+<p><strong>MDR advantages:</strong> lower energy use because zones run only when product is present (savings depend on duty cycle), quieter operation, less maintenance (no belts/chains to replace), better product protection. <strong>Powered roller advantages:</strong> lower upfront cost, simpler for continuous-flow applications with no accumulation requirement.</p>
 
 </div>
 </div>

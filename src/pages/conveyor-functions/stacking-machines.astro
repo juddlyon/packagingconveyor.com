@@ -18,12 +18,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a stacking machine?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A stacking machine collects individual products from a conveyor and forms them into organized stacks, vertical piles, horizontal slugs, or layer groups, for downstream wrapping, case packing, or palletizing. Stacking machines include counter stackers (count and stack individual items), layer formers (arrange products into pallet layers), and case stackers (stack cases for palletizing). They operate between production and packaging at speeds from 50 to 1,200+ pieces per minute." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A stacking machine collects individual products from a conveyor and forms them into organized stacks, vertical piles, horizontal slugs, or layer groups, for downstream wrapping, case packing, or palletizing. Stacking machines include counter stackers (count and stack individual items), layer formers (arrange products into pallet layers), and case stackers (stack cases for palletizing). They operate between production and packaging. Speed ranges widely by product and machine: Forpak rates its GSS stacker at 100 pieces per minute per lane, while Syntegon lists count feeders handling up to 3,600 cookies per minute." }
     },
     {
       "@type": "Question",
       "name": "What is a counter stacker?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A counter stacker counts individual products (cookies, crackers, napkins, sheets, labels) on a high-speed conveyor, groups them into a set count, and stacks the group vertically or horizontally. Photoeye or laser sensors count products at the infeed. A servo-driven diverter separates counted groups. A stacking mechanism forms the group into a stack for wrapping or cartoning. Speeds range from 200 to 1,200+ pieces per minute per lane." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A counter stacker counts individual products (cookies, crackers, napkins, sheets, labels) on a high-speed conveyor, groups them into a set count, and stacks the group vertically or horizontally. Photoeye or laser sensors count products at the infeed. A servo-driven diverter separates counted groups. A stacking mechanism forms the group into a stack for wrapping or cartoning. Speed depends on product and machine. As examples, Forpak rates its GSS servo stacker at 100 pieces per minute per lane, and Syntegon lists a count feeder for cookies at up to 3,600 cookies per minute." }
     },
     {
       "@type": "Question",
@@ -55,14 +55,14 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Stacking Machines &amp; Stackers</h1>
-<p class="usa-intro">A stacking machine collects individual products from a conveyor and forms them into organized stacks, slugs, or layers for downstream wrapping, cartoning, <a href="/industries/packaging-line-conveyors/case/">case packing</a>, or palletizing. Types include counter stackers (count and stack individual items at 200-1,200+ pieces per minute), layer formers (arrange cases or products into pallet-layer patterns), and case stackers (stack sealed cases for palletizer infeed). The right stacking method depends on product stability, count accuracy requirements, downstream machine cadence, and how much accumulation is needed upstream.</p>
+<p class="usa-intro">A stacking machine collects individual products from a conveyor and forms them into organized stacks, slugs, or layers for downstream wrapping, cartoning, <a href="/industries/packaging-line-conveyors/case/">case packing</a>, or palletizing. Types include counter stackers (count and stack individual items), layer formers (arrange cases or products into pallet-layer patterns), and case stackers (stack sealed cases for palletizer infeed). The right stacking method depends on product stability, count accuracy requirements, downstream machine cadence, and how much accumulation is needed upstream.</p>
 <h2 id="counter-heading">Counter Stackers</h2>
 <p>Counter stackers count individual products on a high-speed conveyor belt, separate counted groups from the continuous stream, and form each group into a stack for wrapping or cartoning. The counting, separating, and stacking operations happen in sequence at the production line's full speed, any speed mismatch causes miscounts, jams, or product damage.</p>
 <h3>Counting Methods</h3>
 <ul>
 <li><strong>Photoeye counting:</strong> Through-beam or retro-reflective photoeyes detect product edges. Each leading-edge triggers a count. Works for opaque products with consistent shape. Standard for <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie and cracker lines</a>.</li>
-<li><strong>Laser profiling:</strong> Laser sensors measure product height profile. Distinguishes overlapping products, counts products of varying size, and detects missing or broken products. Higher cost but higher accuracy for difficult products.</li>
-<li><strong>Vision counting:</strong> Camera systems count and inspect products simultaneously. Detect orientation, color, shape defects, and count in a single operation. Highest cost but most capable for complex products.</li>
+<li><strong>Laser profiling:</strong> Laser sensors measure product height profile. Distinguishes overlapping products, counts products of varying size, and detects missing or broken products. Costs more than photoeyes but handles difficult products better.</li>
+<li><strong>Vision counting:</strong> Camera systems count and inspect products simultaneously. Detect orientation, color, shape defects, and count in a single operation. Usually the most expensive option and the most capable for complex products.</li>
 </ul>
 <h3>Stacking Formats</h3>
 <ul>
@@ -70,19 +70,26 @@ const articleSchema = {
 <li><strong>On-edge (slug) stacking:</strong> Products stand on edge in a horizontal row, forming a slug. Standard for sandwich cookies, wafers, and products packaged in sleeve format. See the <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie packaging guide</a> for slug-wrap details.</li>
 <li><strong>Shingled stacking:</strong> Products overlap in a cascading pattern (like roof shingles). Used when products are too fragile to stack directly or when the packaging format requires overlapping presentation.</li>
 </ul>
+<h3>Published Speed Examples</h3>
+<p>Counter stacker speed depends on product size, fragility, stack count, and lane count, so published figures vary widely:</p>
+<ul>
+<li>Forpak rates its <a href="https://www.forpak.com/servo-stackers" target="_blank" rel="noopener noreferrer">GSS servo stacker</a> at 100 pieces per minute per lane, built with 1 to 10 lanes, for frozen meat patties and bakery products.</li>
+<li>Syntegon lists equipment for <a href="https://www.syntegon.com/solutions/food/cookies-packaging-machine/on-edge-cookies-packaging-machine/" target="_blank" rel="noopener noreferrer">on-edge cookie and cracker packaging lines</a> with a count feeder handling up to 3,600 cookies per minute and measuring loaders feeding flow wrappers at up to 400 slug packs per minute.</li>
+</ul>
+<p>Ask suppliers for a rated speed with your product, count, and stack format, and for the count accuracy they will accept at that speed.</p>
 <h2 id="layer-heading">Layer Formers</h2>
 <p>Layer formers arrange individual cases, bundles, or bags into a complete pallet layer pattern before palletizing. The layer former is the bridge between the packaging line (producing individual units in single file) and the palletizer (stacking complete layers onto the pallet).</p>
 <p>Layer forming methods:</p>
 <ul>
 <li><strong>Row-forming and sweeping:</strong> Cases accumulate into a row on a conveyor. When the row is complete, a sweep mechanism (pusher bar) pushes the entire row onto a layer-building table. Multiple rows build the complete layer pattern. The full layer then transfers to the palletizer. This is the most common method for conventional palletizing.</li>
-<li><strong>Robotic layer forming:</strong> An articulated arm or gantry robot picks individual cases and places them into the layer pattern on a staging conveyor. Handles any case orientation (flat, on-side, on-end) and complex patterns. Recipe-based changeover for different layer patterns. Higher cost but maximum flexibility.</li>
+<li><strong>Robotic layer forming:</strong> An articulated arm or gantry robot picks individual cases and places them into the layer pattern on a staging conveyor. Handles any case orientation (flat, on-side, on-end) and complex patterns. Recipe-based changeover for different layer patterns. Usually costs more than row forming but offers the most pattern flexibility.</li>
 <li><strong><a href="/conveyor-functions/product-handling/">Turn and orient</a> layer forming:</strong> Cases travel on a conveyor through turning stations that rotate selected cases 90 degrees to create interlocking patterns. Alternating row orientations create a stable, interlocked pallet load that resists shifting during transport.</li>
 </ul>
-<p>Layer former speed must match or exceed the case packer output. A 25 CPM case packer with 5 cases per row and 5 rows per layer forms one complete layer every 60 seconds. The layer former and palletizer must cycle within that time. Columbia Machine and Schneider Packaging supply integrated layer forming and palletizing systems.</p>
+<p>Layer former speed must match or exceed the case packer output. A 25 CPM case packer with 5 cases per row and 5 rows per layer forms one complete layer every 60 seconds. The layer former and palletizer must cycle within that time. Layer forming speed varies by palletizer class. Columbia lists its <a href="https://palletizing.com/floor-level-palletizers/" target="_blank" rel="noopener noreferrer">FLD6200 floor-level palletizer</a> at up to 100 cases per minute and its <a href="https://palletizing.com/solutions/inline-palletizers/" target="_blank" rel="noopener noreferrer">HL9200 inline palletizer</a> at up to 200 cases per minute, depending on pattern.</p>
 <h2 id="case-heading">Case Stackers</h2>
-<p>Case stackers receive sealed cases from a <a href="/industries/packaging-line-conveyors/case/">case sealer conveyor</a> and stack them vertically in groups of 2-5 cases for downstream handling. Stacked cases take less conveyor space and can be picked as a group by palletizer grippers, improving palletizer cycle efficiency.</p>
+<p>Case stackers receive sealed cases from a <a href="/industries/packaging-line-conveyors/case/">case sealer conveyor</a> and stack them vertically in small groups for downstream handling. Stacked cases take less conveyor space and can be picked as a group by palletizer grippers, improving palletizer cycle efficiency.</p>
 <p>Case stackers use a lift-and-place or drop mechanism. The first case stops on a platform. The next case arrives, and the mechanism lifts the first case and places the second case underneath (bottom stacking) or stacks the second case on top (top stacking). Top stacking risks crushing lower cases if case strength is marginal. Bottom stacking preserves case integrity by never placing weight on sealed product.</p>
-<p>Case weight determines stacker type. Light cases (under 25 lb) use pneumatic lift mechanisms. Heavy cases (25-60+ lb) use servo-driven lifts. Case stacker speed must match the upstream sealer output, typically 15-40 CPM. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">Pallet dispensers</a> feed empty pallets to the palletizer downstream.</p>
+<p>Case weight and rate drive the lift mechanism choice: pneumatic for lighter, simpler duty, and servo, electric, or hydraulic drives for heavier cases or tighter positioning. Case stacker speed must match upstream output. As one example, Knight Industrial lists its dairy <a href="https://www.knightindustrialinc.com/machines/case-stacker" target="_blank" rel="noopener noreferrer">case stacker</a> at 18 to 35 cases per minute depending on configuration, in electric, air, or hydraulic versions. <a href="/industries/packaging-line-conveyors/pallet/pallet-dispenser/">Pallet dispensers</a> feed empty pallets to the palletizer downstream.</p>
 <h2 id="integration-heading">Conveyor Integration</h2>
 <p>Stacking machines integrate with upstream and downstream conveyors through speed synchronization, sensor coordination, and PLC communication. Key integration points:</p>
 <ul>
@@ -100,34 +107,42 @@ const articleSchema = {
 <th>Speed</th>
 <th>Product</th>
 <th>Output</th>
-<th>Relative Cost</th>
+<th>Main Cost Drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Counter stacker</td>
-<td>200-1,200+ PPM</td>
+<td>Product-dependent (examples: 100 PPM per lane to 3,600 cookies/min feeders)</td>
 <td>Cookies, crackers, napkins, sheets</td>
 <td>Counted stacks/slugs</td>
-<td>$$$-$$$$</td>
+<td>Lane count, counting method (photoeye, laser, vision), servo axes, sanitary design</td>
 </tr>
 <tr>
 <td>Layer former</td>
-<td>15-60 CPM</td>
+<td>Set by palletizer class (examples: up to 100 and up to 200 CPM)</td>
 <td>Cases, bundles, bags</td>
 <td>Complete pallet layers</td>
-<td>$$$</td>
+<td>Forming method (row and sweep, turning, robotic), number of patterns</td>
 </tr>
 <tr>
 <td>Case stacker</td>
-<td>15-40 CPM</td>
+<td>Example: 18-35 CPM (dairy cases)</td>
 <td>Sealed cases</td>
-<td>Vertical case stacks (2-5)</td>
-<td>$$</td>
+<td>Vertical case stacks</td>
+<td>Case weight, stack height, lift drive type</td>
 </tr>
 </tbody>
 </table>
-<p>PPM = pieces per minute. CPM = cases per minute.</p>
+<p>PPM = pieces per minute. CPM = cases per minute. Speed figures are single-manufacturer examples from the sources below, not ranges for the class.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.forpak.com/servo-stackers" target="_blank" rel="noopener noreferrer">Servo Stackers</a>, Forpak. GSS rate of 100 pieces per minute per lane, 1 to 10 lanes, servo stack building.</li>
+<li><a href="https://www.syntegon.com/solutions/food/cookies-packaging-machine/on-edge-cookies-packaging-machine/" target="_blank" rel="noopener noreferrer">On-edge cookie and cracker packaging machines</a>, Syntegon. Count feeder up to 3,600 cookies per minute, measuring loader up to 400 slug packs per minute.</li>
+<li><a href="https://palletizing.com/solutions/inline-palletizers/" target="_blank" rel="noopener noreferrer">Inline Palletizers</a>, Columbia Palletizing. HL9200 up to 200 cases per minute.</li>
+<li><a href="https://palletizing.com/floor-level-palletizers/" target="_blank" rel="noopener noreferrer">Floor Level Palletizers</a>, Columbia Palletizing. FLD6200 up to 100 cases per minute.</li>
+<li><a href="https://www.knightindustrialinc.com/machines/case-stacker" target="_blank" rel="noopener noreferrer">Case Stacker</a>, Knight Industrial. 18 to 35 cases per minute, electric, air, or hydraulic.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a stacking machine?</button></h3>
@@ -137,7 +152,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is a counter stacker?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Counts individual products on a high-speed belt, groups them into a set count, and stacks them vertically or on-edge. Speeds: 200-1,200+ pieces per minute per lane. Common in <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie/cracker</a>, printing, and tissue packaging.</p>
+<p>Counts individual products on a high-speed belt, groups them into a set count, and stacks them vertically or on-edge. Speed depends on product and machine: Forpak rates its GSS at 100 pieces per minute per lane, and Syntegon lists cookie count feeders at up to 3,600 cookies per minute. Common in <a href="/industries/food-conveyors/bakery/cookie-cracker/">cookie/cracker</a>, printing, and tissue packaging.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">Stacker vs. palletizer?</button></h3>

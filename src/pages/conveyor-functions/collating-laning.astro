@@ -43,7 +43,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What throughput can a laning conveyor handle?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Throughput depends on the laning method. Chicane systems handle 200-600+ bottles per minute. Servo lane-select diverters handle 50-200+ packages per minute. Speed-differential systems handle 50-200 products per minute. Delta robots handle 80-200 picks per minute per robot. The throughput math: infeed rate divided by number of lanes equals per-lane rate." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Throughput depends on the method, the product, and the number of lanes. Chicane laning suits the highest-rate round container lines. Servo lane-select diverters and low back-pressure laning suit moderate rates. Delta robot speed ratings are catalog maximums for light products: Omron rated its Quattro at up to 300 picks per minute, and real rates with your product and pattern are lower. The basic math: infeed rate divided by number of lanes equals per-lane rate." }
     }
   ]
 };
@@ -55,11 +55,11 @@ const faqSchema = {
   schema={[breadcrumbSchema, articleSchema, faqSchema]}
 >
 <h1>Collating &amp; Laning Conveyors</h1>
-<p class="usa-intro">A laning conveyor distributes a single-file product stream across multiple parallel lanes to feed case packers, tray loaders, and cartoners. A collating conveyor arranges products from those lanes into a specific pattern, a 3×4 array, a 2×5 group, or any count pattern the downstream machine requires. Shuttleworth, Kleenline, and Benchmark Automation build laning and collating systems for food, beverage, personal care, and pharmaceutical packaging lines running 50 to 600+ products per minute.</p>
+<p class="usa-intro">A laning conveyor distributes a single-file product stream across multiple parallel lanes to feed case packers, tray loaders, and cartoners. A collating conveyor arranges products from those lanes into a specific pattern, a 3×4 array, a 2×5 group, or any count pattern the downstream machine requires. Laning and collating sections sit between the single-file packaging line and the case packer on food, beverage, personal care, and pharmaceutical lines.</p>
 <h2 id="diff-heading">Laning vs. Collating</h2>
 <p>A laning conveyor turns one single-file stream into several parallel lanes, and a collating conveyor groups the product in those lanes into the count pattern a case packer or tray loader needs. The two functions often happen in sequence on the same conveyor section. Understanding the difference prevents specification errors:</p>
 <ul>
-<li><strong>Laning</strong> divides one stream into many. Product enters on a single lane at high speed and exits on two, three, four, or more lanes at proportionally lower speed. A 600 BPM single-file line laned into four lanes produces 150 BPM per lane. Laning happens upstream of the case packer.</li>
+<li><strong>Laning</strong> divides one stream into many. Product enters on a single lane at high speed and exits on two, three, four, or more lanes at proportionally lower speed. For example, a 600 BPM single-file line laned into four lanes gives 150 BPM per lane. Laning happens upstream of the case packer.</li>
 <li><strong>Collating</strong> arranges products within lanes into groups. A collating section gathers 12 bottles into a 3×4 pattern for case loading. Collating happens after laning and immediately before the case packer or <a href="/conveyor-functions/tray-loading/">tray loader</a>.</li>
 </ul>
 <p>A typical bottle line runs: filler → capper → labeler → single-file conveyor → <strong>laning section</strong> → <strong>collating section</strong> → case packer. The laning section reduces line speed and distributes product. The collating section groups product into the pattern the case packer expects. Specifying these as one "laning conveyor" in an RFQ misses the collating requirement and often leads to unexpected project scope growth.</p>
@@ -67,25 +67,26 @@ const faqSchema = {
 <p>Product laning machinery falls into four groups: chicane guide rails, servo lane-select diverters, speed-differential conveyors, and delta robots. Product shape, infeed rate, and changeover frequency decide which one fits. The <a href="#compare-heading">comparison table</a> summarizes the tradeoffs.</p>
 <h3>Chicane (Serpentine) Laning</h3>
 <p>Chicane laning routes product through S-shaped guide rails on a wide belt or tabletop conveyor. Product enters single-file on one side of the belt. Angled guide rails direct product into the first lane. When a downstream sensor detects that lane is full (or a counter triggers), a gate diverts subsequent product past the first lane and into the second. The process repeats for each lane.</p>
-<p>Chicane systems excel with round containers, bottles, cans, jars, because the product rolls smoothly against guide rails without jamming. The conveyor belt runs wider than the combined lane width, and lane dividers create the individual lanes downstream. Chicane laning handles 200–600+ bottles per minute on high-speed beverage lines. Hartness (ITW) and Kleenline supply chicane laning systems for beverage and dairy applications.</p>
-<p>The primary limitation of chicane laning is product shape. Square or rectangular packages do not slide smoothly against angled rails, they catch corners and jam. Non-round products require servo-controlled or pusher-based laning instead. Chicane systems also struggle with lightweight products that tip at the guide rail contact points. Adding back-pressure control or Shuttleworth-style slip-torque conveyors at the guide rails reduces tipping on lightweight containers.</p>
+<p>Chicane systems excel with round containers, bottles, cans, jars, because the product rolls smoothly against guide rails without jamming. The conveyor belt runs wider than the combined lane width, and lane dividers create the individual lanes downstream. It is the usual choice on high-speed beverage and dairy lines.</p>
+<p>The primary limitation of chicane laning is product shape. Square or rectangular packages do not slide smoothly against angled rails, they catch corners and jam. Non-round products require servo-controlled or pusher-based laning instead. Chicane systems also struggle with lightweight products that tip at the guide rail contact points. Adding back-pressure control or a low back-pressure conveyor surface at the guide rails reduces tipping on lightweight containers.</p>
 <h3>Servo Lane-Select Diverter</h3>
 <p>Servo lane-select diverters use a servo-driven gate, pusher, or deflector to route each product to a specific lane. A sensor detects the incoming product, the PLC determines the target lane, and the servo actuator positions the diverter before the product arrives. This method handles round, square, rectangular, and irregular products because the diverter physically pushes or deflects each product rather than relying on guide rail contact.</p>
-<p>Servo diverters run 50–200+ packages per minute depending on product spacing, diverter travel distance, and servo response time. They require more sophisticated controls than chicane systems, each diverter needs a servo drive, controller, and sensor integration with the line PLC. Benchmark Automation and Bastian Solutions build servo lane-select systems for case-packed goods, pouches, and cartons.</p>
+<p>Servo diverter rate depends on product spacing, diverter travel distance, and servo response time. They require more sophisticated controls than chicane systems: each diverter needs a servo drive, controller, and sensor integration with the line PLC.</p>
 <p>The advantage of servo lane selection is positive control. Every product goes to a known lane. Lane assignment can follow any algorithm, sequential (1-2-3-4-1-2-3-4), fill-and-switch, priority-based, or dynamic load balancing. This flexibility matters when lane fill rates differ (e.g., one case packer runs faster than the other) or when different SKUs route to different lanes for mixed-case packing.</p>
-<h3>Speed-Differential Laning</h3>
-<p>Speed-differential laning uses multiple belts running at different speeds to separate product into lanes. Product enters on a fast belt. A slower belt alongside creates a speed difference that pulls product sideways through an opening into the adjacent lane. This method is gentle, no mechanical pushers, gates, or guide rails contact the product.</p>
-<p>Shuttleworth's slip-torque conveyors are the best-known implementation of speed-differential laning. Individual rollers slip under product that contacts a side rail or stop, allowing the conveyor to continue running without building back-pressure. Products naturally fill lanes in sequence as downstream lanes back up. This self-regulating behavior reduces controls complexity, no sensors, no PLC logic, no servo drives. The slip-torque principle makes Shuttleworth conveyors popular for fragile bakery, snack, and confectionery products that cannot tolerate contact pressure.</p>
-<p>Speed-differential laning runs best at moderate speeds (50–200 PPM) and works for products with a flat, stable bottom surface. Products with high centers of gravity or narrow bases tend to tip during the lateral transfer. Adding low-profile side guides stabilizes tall products but adds changeover parts for different product widths.</p>
+<h3>Speed-Differential and Low Back-Pressure Laning</h3>
+<p>Speed-differential laning uses a change in conveyor surface speed to open gaps between products so a diverter or lane gate can count and split them cleanly. Low back-pressure conveyor surfaces then let product accumulate in each lane without pushing hard against the product ahead.</p>
+<p>Shuttleworth's <a href="https://www.shuttleworth.com/products/conveyor-devices-options/" target="_blank" rel="noopener noreferrer">Slip-Torque</a> roller surface is the best-known example. The rollers slip beneath product that is held by a stop, so lanes accumulate with low back pressure. In one <a href="https://www.shuttleworth.com/videos/laning-and-merging-packaged-wet-wipes-for-case-packing-system-spotlight/" target="_blank" rel="noopener noreferrer">Shuttleworth wet wipes system</a> running 100 products per minute, a speed change in the conveyor surface separates packages for counting, a two-lane diverter shifts lanes once a set count is reached, and product accumulates behind blade stops until an overhead brake releases a slug of four packages to the case packer. Low back pressure makes this approach a good fit for soft packs and for fragile bakery, snack, and confectionery products.</p>
+<p>Speed-differential laning runs best at moderate speeds and works for products with a flat, stable bottom surface. Products with high centers of gravity or narrow bases tend to tip during the lateral transfer. Adding low-profile side guides stabilizes tall products but adds changeover parts for different product widths.</p>
 <h3>Robotic Laning (Delta Robot)</h3>
 <p>Delta robots mounted above the conveyor pick products from a single-file infeed and place them directly into lanes, combining laning and collating in one step. Vision systems track product on the infeed belt, and the robot picks and places each product into the correct position within the lane/collation pattern. This approach eliminates separate laning and collating conveyor sections.</p>
-<p>Robotic laning costs more than mechanical alternatives but excels in two scenarios: (1) very high SKU counts where mechanical changeover would consume too much time, and (2) random product orientation where the robot can orient product during the pick-place cycle. BluePrint Automation and ABB supply delta robot systems for combined laning/collating in bakery and snack applications.</p>
+<p>Robotic laning costs more than mechanical alternatives. The cost drivers are the robots, vision, end-of-arm tooling for each product, and guarding. It earns that cost in two scenarios: (1) very high SKU counts where mechanical changeover would consume too much time, and (2) random product orientation where the robot can orient product during the pick-place cycle.</p>
+<p>Delta robot speed ratings are catalog maximums for light products. <a href="https://www.industrialtechnology.co.uk/omron-debuts-worlds-fastest-and-first-4-arm-delta-robot" target="_blank" rel="noopener noreferrer">Omron rated its Quattro</a> at up to 300 picks per minute. Real rates with your product, grip, and pattern are lower, so ask each supplier for a tested rate on your product.</p>
 <h2 id="collating-heading">Collating Methods</h2>
 <h3>Lane-Stop Collating</h3>
 <p>The simplest collation method uses stops at the end of each lane. Product accumulates against the stop until the lane holds the correct count (e.g., 4 bottles per lane × 3 lanes = 12-count case pattern). When all lanes reach their count, the stops retract simultaneously and the collated group advances onto the case packer's infeed. This method requires <a href="/conveyor-types/accumulation-conveyors/">accumulation capability</a> in each lane to prevent back-pressure damage. <a href="/conveyor-types/mdr-conveyors/">MDR conveyor</a> zones or Shuttleworth slip-torque sections provide the zero-pressure accumulation needed for lane-stop collating.</p>
 <h3>Sweep Collating</h3>
 <p>Sweep collating uses a servo-driven pusher bar that sweeps a row of product from the lanes onto the case packer's bucket or dead plate. Product accumulates in lanes continuously. When the correct count fills each lane, the sweep bar pushes the entire row as a unit. Sweep collating is faster than lane-stop collating because product flow does not stop, the sweep bar moves with the lane conveyor during the push, maintaining continuous infeed.</p>
-<p>Sweep collating handles 60–150+ cases per minute on high-speed lines. Kleenline and Benchmark Automation build sweep collating systems for beverage, dairy, and CPG applications. The critical design parameter is sweep bar timing, the bar must arrive at the push position precisely when all lanes have the correct product count. A mistimed sweep pushes an incomplete pattern, causing a case packer fault.</p>
+<p>Sweep collating is common on high-speed beverage, dairy, and CPG lines. The critical design parameter is sweep bar timing, the bar must arrive at the push position precisely when all lanes have the correct product count. A mistimed sweep pushes an incomplete pattern, causing a case packer fault.</p>
 <h3>Metering Collating</h3>
 <p>Metering collating uses timed conveyor sections to group product. A slow metering belt feeds product into a faster spacing belt, creating gaps between groups. The gap size corresponds to the case packer's cycle time. This method avoids mechanical contact with product, no stops, no pushers, no sweep bars, making it ideal for fragile or delicate products. <a href="/conveyor-functions/indexing-conveyors/">Indexing conveyors</a> with servo control provide the precise speed changes metering collation requires.</p>
 <h2 id="compare-heading">Laning Method Comparison</h2>
@@ -93,68 +94,68 @@ const faqSchema = {
 <thead>
 <tr>
 <th>Method</th>
-<th>Speed (PPM)</th>
+<th>Relative Rate</th>
 <th>Product Shapes</th>
 <th>Controls</th>
-<th>Relative Cost</th>
+<th>Cost Drivers</th>
 <th>Best For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Chicane (Serpentine)</td>
-<td>200–600+</td>
+<td>Highest (round containers)</td>
 <td>Round only</td>
 <td>Simple (sensors + gates)</td>
-<td>$$</td>
+<td>Wide tabletop chain, guide rails, change parts per container size</td>
 <td>Bottles, cans, jars</td>
 </tr>
 <tr>
 <td>Servo Lane-Select</td>
-<td>50–200+</td>
+<td>Moderate</td>
 <td>All shapes</td>
 <td>Moderate (servo + PLC)</td>
-<td>$$$</td>
+<td>Servo drive per diverter, controls programming</td>
 <td>Cases, cartons, pouches</td>
 </tr>
 <tr>
 <td>Speed-Differential</td>
-<td>50–200</td>
+<td>Moderate</td>
 <td>Flat-bottom</td>
-<td>Minimal (self-regulating)</td>
-<td>$$–$$$</td>
+<td>Low back pressure, few actuators</td>
+<td>Specialty conveyor surface, lane guides, stops</td>
 <td>Fragile bakery, snack</td>
 </tr>
 <tr>
 <td>Delta Robot</td>
-<td>80–200/robot</td>
+<td>Per robot, product-dependent</td>
 <td>All shapes</td>
 <td>Complex (vision + robot)</td>
-<td>$$$$</td>
+<td>Robots, vision, tooling, guarding</td>
 <td>High-SKU, random infeed</td>
 </tr>
 </tbody>
 </table>
-<p>PPM = products per minute. Relative cost: $ = lowest, $$$$ = highest. <a href="/resources/conveyor-cost-guide/">See full cost guide</a>.</p>
+<p>Rates depend on product, pattern, and lane count. Get a tested rate for your product from each supplier. For cost planning, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
 <h2 id="apps-heading">Industry Applications</h2>
 <h3>Beverage Lines</h3>
-<p>Beverage lines represent the highest-speed laning application. A typical bottling line runs 400–1,200 BPM (bottles per minute) through the filler and capper. The single-file output must lane into 4–8 lanes to feed case packers running at 30–60 cases per minute. Chicane laning with <a href="/industries/food-conveyors/beverage/">tabletop chain conveyors</a> handles the round containers at speed. Back-pressure management is critical, bottles backed up in chicane lanes can topple, jam, and halt the line. Hartness, Kleenline, and Intelligrated supply high-speed chicane laning for beverage.</p>
+<p>Beverage lines are the highest-speed laning application. The single-file output of the filler, capper, and labeler must lane into several lanes to feed the case packer. Chicane laning with <a href="/industries/food-conveyors/beverage/">tabletop chain conveyors</a> handles the round containers at speed. Back-pressure management is critical, bottles backed up in chicane lanes can topple, jam, and halt the line.</p>
 <h3>Bakery &amp; Snack Foods</h3>
-<p>Bakery lines lane cookies, crackers, bars, and pastries from oven discharge into multi-lane <a href="/conveyor-functions/tray-loading/">tray loading</a> stations. Products are fragile, irregularly shaped, and arrive from the oven in random orientation. Shuttleworth slip-torque conveyors provide gentle laning without contact pressure. Delta robot cells combine laning and tray loading into a single step. Benchmark Automation integrates bakery laning with downstream case packing.</p>
+<p>Bakery lines lane cookies, crackers, bars, and pastries from oven discharge into multi-lane <a href="/conveyor-functions/tray-loading/">tray loading</a> stations. Products are fragile, irregularly shaped, and arrive from the oven in random orientation. Low back-pressure conveyor surfaces provide gentle laning. Delta robot cells combine laning and tray loading into a single step.</p>
 <h3>Case Packing</h3>
-<p>Every drop-packer, wrap-around case packer, and robotic case packer requires product collated into the correct count and pattern. The laning/collating section is the bridge between the single-file packaging line and the case packer. A 24-count case with a 4×6 pattern needs 4-lane collating. A 12-count case with a 3×4 pattern needs 3-lane collating. Changing case counts requires laning and collating changeover, the fewer mechanical adjustments required, the faster the changeover. Servo-controlled laning and electronic collation recipe changes support rapid format changes in multi-SKU operations.</p>
+<p>Every drop-packer, wrap-around case packer, and robotic case packer requires product collated into the correct count and pattern. The laning/collating section is the bridge between the single-file packaging line and the case packer. A 24-count case in a 4×6 pattern is usually built from 4 lanes of 6 or 6 lanes of 4, depending on how the packer loads. A 12-count case in a 3×4 pattern needs 3 or 4 lanes on the same logic. Changing case counts requires laning and collating changeover, the fewer mechanical adjustments required, the faster the changeover. Servo-controlled laning and electronic collation recipe changes support rapid format changes in multi-SKU operations.</p>
 <h3>Pharmaceutical &amp; Personal Care</h3>
 <p>Pharmaceutical cartons, tubes, and bottles lane into collating sections that feed case packers. <a href="/industries/food-conveyors/sanitary/">Sanitary requirements</a> may apply for topical products and oral care. Servo lane-select diverters handle the rectangular product shapes (cartons, tubes) that chicane systems cannot. Traceability requirements in pharmaceutical applications mean each product's lane assignment may need to be logged for batch records, servo diverters with PLC logging satisfy this requirement.</p>
 <h2 id="selection-heading">Selecting a Laning &amp; Collating System</h2>
 <p>Start with five questions that narrow the technology and configuration:</p>
 <ol>
 <li><strong>What is the infeed rate?</strong> Products per minute entering the laning section. Divide by the number of output lanes to calculate per-lane rate. Ensure the case packer can handle the per-lane rate.</li>
-<li><strong>What product shape?</strong> Round containers suit chicane laning. Square/rectangular products need servo diverters or speed-differential systems. Fragile products need Shuttleworth slip-torque or delta robots.</li>
-<li><strong>How many output lanes?</strong> Determined by the case pattern. A 24-count case in a 4×6 pattern needs 4 lanes. Changing case counts may require changing lane count, design for the maximum lane count and blank off unused lanes for smaller patterns.</li>
-<li><strong>How many SKUs and how often do you change over?</strong> Chicane systems with fixed guide rails require 15–30 minutes for product-width changeover. Servo diverters change over in 1–2 minutes via recipe. Delta robots change over in seconds.</li>
+<li><strong>What product shape?</strong> Round containers suit chicane laning. Square/rectangular products need servo diverters or speed-differential systems. Fragile products need low back-pressure laning or delta robots.</li>
+<li><strong>How many output lanes?</strong> Determined by the case pattern. A 24-count case in a 4×6 pattern needs 4 or 6 lanes. Changing case counts may require changing lane count, design for the maximum lane count and blank off unused lanes for smaller patterns.</li>
+<li><strong>How many SKUs and how often do you change over?</strong> Chicane systems with fixed guide rails need manual rail and change-part adjustment for each product width. Servo diverters change over by recipe. Delta robots change over by recipe plus any tooling change. Ask each supplier for a demonstrated changeover time on your SKUs.</li>
 <li><strong>What case packer type feeds downstream?</strong> Drop packers need products collated in a tightly grouped pattern from above. Wrap-around packers need products collated on a flat surface. Robotic case packers may accept product in lanes without collating. Match the laning/collating output to the case packer's infeed requirement.</li>
 </ol>
-<p>Budget the laning and collating section as 15–25% of the total packaging line cost. Lines that underinvest in this section suffer chronic jams, miscounts, and case packer faults. For cost planning, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>. For broader automation context, see the <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a> guide.</p>
+<p>Lines that underinvest in this section suffer chronic jams, miscounts, and case packer faults. For cost planning, see the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>. For broader automation context, see the <a href="/resources/automated-conveyor-systems/">automated conveyor systems</a> guide.</p>
 <h2 id="related-heading">Related Functions</h2>
 <ul class="usa-collection">
 <li class="usa-collection__item">
@@ -169,6 +170,12 @@ const faqSchema = {
 <div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/reject-systems/">Reject Systems</a></h3>
 <p class="usa-collection__description">Remove defects before laning</p></div></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.shuttleworth.com/videos/laning-and-merging-packaged-wet-wipes-for-case-packing-system-spotlight/" target="_blank" rel="noopener noreferrer">Laning and Merging Packaged Wet Wipes for Case Packing</a>, Shuttleworth. 100 products per minute, two-lane diverter, blade stops, and slug release of four packages.</li>
+<li><a href="https://www.shuttleworth.com/products/conveyor-devices-options/" target="_blank" rel="noopener noreferrer">Conveyor Devices and Options</a>, Shuttleworth. Slip-Torque low back-pressure accumulation, pushers, and 90-degree transfers.</li>
+<li><a href="https://www.industrialtechnology.co.uk/omron-debuts-worlds-fastest-and-first-4-arm-delta-robot" target="_blank" rel="noopener noreferrer">Omron debuts world's fastest and first 4-arm delta robot</a>, Industrial Technology. Quattro rating of up to 300 picks per minute.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
@@ -189,7 +196,7 @@ const faqSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What throughput can a laning conveyor handle?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Throughput depends on the laning method. Chicane systems handle 200–600+ bottles per minute. Servo lane-select diverters handle 50–200+ packages per minute. Speed-differential systems handle 50–200 products per minute. Delta robots handle 80–200 picks per minute per robot. The throughput math: infeed rate divided by number of lanes equals per-lane rate.</p>
+<p>Throughput depends on the method, the product, and the number of lanes. Chicane laning suits the highest-rate round container lines. Servo lane-select diverters and low back-pressure laning suit moderate rates. Delta robot speed ratings are catalog maximums for light products: Omron rated its Quattro at up to 300 picks per minute, and real rates with your product and pattern are lower. The basic math: infeed rate divided by number of lanes equals per-lane rate.</p>
 
 </div>
 </div>

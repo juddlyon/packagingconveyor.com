@@ -18,27 +18,27 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What does MDR stand for in conveyor systems?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR stands for Motor Driven Roller. Each motorized roller contains a small brushless DC motor (typically 24VDC) inside the roller tube itself. The motor drives the roller and 2-4 adjacent slave rollers through O-ring bands, creating an independent zone. MDR conveyors provide zero-pressure accumulation, zone-by-zone control, and energy-efficient operation." }
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR stands for Motor Driven Roller. Each motorized roller contains a small brushless DC motor inside the roller tube itself, most commonly running on 24VDC (some models also offer 48VDC). The motor drives the other rollers in its zone through O-rings or belts, creating an independent zone. MDR conveyors provide zero-pressure accumulation, zone-by-zone control, and run-on-demand operation." }
     },
     {
       "@type": "Question",
       "name": "What are the advantages of MDR over belt-driven roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR conveyors offer five key advantages over belt-driven live roller: built-in zone control without pneumatics, 50%+ energy savings (zones only run when product is present), quieter operation (55-65 dB vs 70-80 dB), less maintenance (no belts, chains, or O-rings between motor and roller to replace), and easier zone-by-zone expansion. MDR costs more per foot upfront but typically delivers lower total cost of ownership over the conveyor's 15-20 year lifespan." }
+      "acceptedAnswer": { "@type": "Answer", "text": "MDR conveyors offer five main advantages over belt-driven live roller: built-in zone control without compressed air, lower energy use because zones only run when product is present (Insight Automation, which sells PULSEROLLER motorized roller conveyors, estimates 30 to 70 percent savings versus continuously running conveyors), quieter operation (Interroll lists a maximum of 55 dB(A) installed for its EC5000 RollerDrive, application-dependent), no central drive belt or chain to maintain, and easier zone-by-zone expansion. MDR usually costs more per foot upfront because every zone needs its own motor roller and controller. Energy and maintenance savings can offset that over the life of the system." }
     },
     {
       "@type": "Question",
       "name": "What is the weight capacity of MDR conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard MDR conveyors handle 50-250 lbs per zone. Interroll's RollerDrive EC5000 series handles up to about 230 lbs per roller. Itoh Denki's PM600 series handles similar loads. For products exceeding 250-300 lbs, belt-driven live roller or CDLR (chain driven live roller) conveyors are better suited. MDR roller motor torque is the limiting factor." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on the conveyor model, not just the motor roller. Hytrol rates its 190-E24EZ 24-volt roller accumulation conveyor at a maximum of 37 lbs per foot and 75 lbs per zone. Interroll's 1.9-inch EC5000 RollerDrive datasheet lists a maximum static load of 242 lbs per RollerDrive (lengths up to 39 inches, without drive head), and 76 lbs with a drive head. For heavier loads, 24-volt chain-driven zone conveyors exist (Hytrol rates its 199-CRE24EZ at up to 600 lbs per zone), or use CDLR. Motor torque, roller construction, and drive method all limit capacity." }
     },
     {
       "@type": "Question",
       "name": "How does MDR zone control work?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Each MDR zone contains one motorized roller, 2-4 slave rollers connected by O-ring bands, a photo-eye sensor, and a zone controller card. The sensor detects product presence. The controller communicates with upstream and downstream zone controllers. When a downstream zone is occupied, it signals the upstream zone to hold. The upstream zone's motor stops, and the product stops with a gap to the next product. This creates zero-pressure accumulation." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Each MDR zone contains one motorized roller, several slave rollers connected to it by O-rings or belts, a photo-eye sensor, and a zone controller card. The sensor detects product presence. The controller communicates with upstream and downstream zone controllers. When a downstream zone is occupied, it signals the upstream zone to hold. The upstream zone's motor stops, and the product stops with a gap to the next product. This creates zero-pressure accumulation." }
     },
     {
       "@type": "Question",
       "name": "Who manufactures MDR rollers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The three leading MDR roller manufacturers are Interroll (RollerDrive series, based in Switzerland), Itoh Denki (PM series, based in Japan), and Rulmeca (RDR series, based in Italy). These companies manufacture the motorized roller components that system integrators like Hytrol, Dematic, Intelligrated (Honeywell), TGW, and Bastian Solutions (Toyota) build into complete conveyor systems." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Motorized roller makers include Interroll (RollerDrive), Itoh Denki (Power Moller), and Rulmeca. Conveyor manufacturers and integrators build those rollers, or their own 24-volt drives, into complete systems. Hytrol, for example, uses its own E24 motor with EZLogic zone controllers." }
     }
   ]
 };
@@ -54,19 +54,20 @@ const articleSchema = {
 ---
 <BaseLayout title="MDR: Motor Driven Roller Conveyors | 24VDC Zone Control Guide" description="MDR (motor driven roller) conveyors put 24VDC motors inside rollers for zone control and zero-pressure accumulation. MDR vs line-shaft vs belt-driven compared." canonical="https://packagingconveyor.com/conveyor-types/mdr-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
 <h1>MDR: Motor Driven Roller Conveyors</h1>
-<p class="usa-intro">An MDR (Motor Driven Roller) conveyor uses small 24VDC brushless DC motors built inside individual conveyor rollers to create independently controlled zones for product transport and zero-pressure accumulation. MDR technology has become the dominant powered roller platform for new conveyor installations in distribution, fulfillment, and <a href="/industries/packaging-line-conveyors/">packaging line</a> applications because it eliminates external motors, belts, chains, and compressed air while reducing energy consumption by 50% or more compared to conventional <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a>.</p>
+<p class="usa-intro">An MDR (Motor Driven Roller) conveyor uses small brushless DC motors, most commonly 24VDC, built inside individual conveyor rollers to create independently controlled zones for product transport and zero-pressure accumulation. MDR is widely used for new powered roller lines in distribution, fulfillment, and <a href="/industries/packaging-line-conveyors/">packaging line</a> applications because it removes the central gearmotor, drive belt or chain, and compressed air that conventional <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> need for accumulation. Zones run only when product is present, which cuts energy use compared to conveyors that run continuously.</p>
 <h2 id="how-heading">How MDR Technology Works</h2>
 <h3>The Motorized Roller</h3>
-<p>An MDR roller looks identical to a standard conveyor roller from the outside, a steel or aluminum tube with bearings and axles. Inside, a compact brushless DC (BLDC) motor and planetary gearbox convert 24VDC power into roller rotation. The motor stator mounts to the fixed axle. The rotor drives the outer roller tube. No external gearmotor, belt, or chain exists. The entire drive system fits inside a standard 1.9" or 2.0" diameter roller tube.</p>
-<p><a href="https://www.interroll.com/products/conveyors-sorters/roller-drives/" target="_blank" rel="noopener noreferrer">Interroll's RollerDrive</a> EC5000 series, Itoh Denki's PM600 series, and Rulmeca's RDR series are the three leading MDR roller platforms. These rollers deliver 0.3-2.5 Nm of torque at speeds from 0.1 to 1.2 m/s (approximately 20-230 FPM). Power consumption per roller is typically 10-50 watts, a fraction of the power consumed by a conventional gearmotor driving an entire conveyor section.</p>
+<p>An MDR roller looks like a standard conveyor roller from the outside: a steel or stainless tube with bearings and axles. Inside, a compact brushless DC (BLDC) motor and planetary gearbox turn the outer tube. No external gearmotor, belt, or chain exists. The drive fits inside a standard 1.9-inch class roller tube.</p>
+<p>Speed and torque depend on the gear ratio selected. <a href="https://www.interroll.com/fileadmin/products/product_data/EC-5000-IP54/EC5000_50mm_IP54_USA.pdf" target="_blank" rel="noopener noreferrer">Interroll's EC5000 RollerDrive datasheet</a> (1.9-inch, IP54) lists 24V and 48V versions at 20, 35, and 50 W, with nine gear ratios spanning maximum conveying speeds from 32 fpm (108:1) to 382 fpm (9:1). Low ratios give speed, high ratios give torque. Rated current at 24V is 1.4 A (20 W) to 3.4 A (50 W). Itoh Denki lists a 7 to 700 FPM speed range for its <a href="https://www.itohdenki.com/pm486fe" target="_blank" rel="noopener noreferrer">PM486FE Power Moller</a>, depending on model. <a href="https://www.rulmeca.com/en/products_unit/catalogue/10/rdr_rulmeca_drive_roller/18/rulmeca_drive_rollers_rdr" target="_blank" rel="noopener noreferrer">Rulmeca's RDR drive roller</a> is a third 24VDC motorized roller platform.</p>
 <h3>Zone Architecture</h3>
-<p>Each MDR zone consists of four components: one motorized roller, 2-4 slave rollers (connected to the motor roller by polyurethane O-ring bands), one photo-eye sensor, and one zone controller card. The zone controller reads the sensor, communicates with adjacent zone controllers via a simple signal wire, and controls the motor roller's speed and direction.</p>
-<p>Zone length matches the product length plus a gap. A zone for 24" cases is typically 30" long (24" case + 6" gap). A zone for 12" cartons is typically 18" long. Each zone operates independently, running, stopped, or reversing, regardless of what adjacent zones are doing. This independent zone control is the foundation of <a href="/conveyor-types/accumulation-conveyors/">zero-pressure accumulation</a>.</p>
+<p>Each MDR zone has one motorized roller, a set of slave rollers driven from it by O-rings or belts, one photo-eye sensor, and one zone controller. The zone controller reads the sensor, communicates with adjacent zone controllers, and controls the motor roller's run, stop, speed, and direction.</p>
+<p>Zone length is chosen from the supplier's standard zone lengths so that each zone holds one product. Size it to the longest product you will accumulate. Hytrol's <a href="https://cdn.hytrol.com/E24.pdf" target="_blank" rel="noopener noreferrer">E24 product literature</a> offers 18-, 24-, 30-, and 36-inch zones on its 190-E24EZ, with 1.9-inch rollers on 3-inch centers. Each zone runs, stops, or reverses independently. This independent zone control is the foundation of <a href="/conveyor-types/accumulation-conveyors/">zero-pressure accumulation</a>.</p>
 <h3>Zero-Pressure Accumulation Logic</h3>
-<p>MDR ZPA uses a cascading signal protocol between zones. Each zone has three states: empty (no product detected), occupied-and-running (product present, downstream clear), and occupied-and-stopped (product present, downstream occupied). When a zone detects "downstream occupied," it stops its motor. The product stops in that zone with a controlled gap to the product ahead. This signal cascades upstream, filling zones back-to-front with gaps between every product.</p>
-<p>When the downstream blockage clears, the leading zone starts first, creating a gap. The next zone starts, and the release cascades upstream. This provides smooth, sequential product release, sometimes called "first-in, first-out" (FIFO) accumulation.</p>
+<p>MDR ZPA uses a cascading signal between zones. Each zone has three states: empty (no product detected), occupied-and-running (product present, downstream clear), and occupied-and-stopped (product present, downstream occupied). When a zone sees "downstream occupied," it stops its motor. The product stops in that zone with a gap to the product ahead. The signal cascades upstream, filling zones back to front with gaps between products.</p>
+<p>When the blockage clears, the leading zone starts first, then the next zone, and the release cascades upstream. Products leave in the order they arrived (first in, first out).</p>
 <h3>24VDC Power Distribution</h3>
-<p>MDR systems use 24VDC power, distributed from a central power supply to each zone controller. The low voltage (24VDC is Class 2 / SELV) simplifies wiring, no conduit is required in most jurisdictions. Zone controllers draw 1-3 amps each. A single 24VDC power supply (typically 10-40 amps) serves 10-30 zones depending on load. The 24VDC architecture eliminates 480V/240V wiring to individual conveyor sections, reducing electrical installation cost significantly.</p>
+<p>MDR systems distribute 24VDC from power supplies to each zone. Supply count depends on motor wattage and zone count. Hytrol's <a href="https://cdn.hytrol.com/BZDE24EZN.pdf" target="_blank" rel="noopener noreferrer">BZDE24EZN specification sheet</a>, for example, allows up to 10 of its 48 W motors, or up to 8 of its 60 W motors, on one 40 amp supply. Low-voltage DC wiring can reduce the amount of line-voltage wiring run to individual conveyor sections. Confirm wiring methods and conduit requirements with your electrical engineer and local code.</p>
+<!-- VERIFY: NEC Class 2 treatment of 24VDC MDR circuits varies by power supply listing and jurisdiction -->
 <h2 id="comparison-heading">MDR vs Line-Shaft vs Belt-Driven</h2>
 <table>
 <thead>
@@ -87,7 +88,7 @@ const articleSchema = {
 <tr>
 <td>Zone Control</td>
 <td>Built-in per zone</td>
-<td>Add-on (pneumatic)</td>
+<td>Add-on (typically pneumatic)</td>
 <td>Add-on (clutch/brake)</td>
 </tr>
 <tr>
@@ -97,112 +98,114 @@ const articleSchema = {
 <td>With O-ring release</td>
 </tr>
 <tr>
-<td>Max Load / Zone</td>
-<td>150-250 lbs</td>
-<td>Up to 500 lbs</td>
-<td>Up to 300 lbs</td>
-</tr>
-<tr>
-<td>Speed Range</td>
-<td>20-180 FPM</td>
-<td>50-200 FPM</td>
-<td>30-180 FPM</td>
+<td>Load Rating</td>
+<td>Model-specific. Hytrol 190-E24EZ: 75 lbs per zone</td>
+<td>Model-specific, generally higher than roller MDR</td>
+<td>Model-specific, light loads</td>
 </tr>
 <tr>
 <td>Energy Use</td>
-<td>50%+ less (on-demand)</td>
-<td>Motor runs continuously</td>
-<td>Motor runs continuously</td>
+<td>Zones run only when product is present</td>
+<td>Central motor runs continuously</td>
+<td>Central motor runs continuously</td>
 </tr>
 <tr>
 <td>Noise</td>
-<td>55-65 dB</td>
-<td>70-80 dB</td>
-<td>75-85 dB</td>
+<td>Low. Interroll EC5000: 55 dB(A) max installed, application-dependent</td>
+<td>Central drive and belt noise</td>
+<td>Central drive and shaft noise</td>
 </tr>
 <tr>
 <td>Compressed Air</td>
 <td>Not required</td>
-<td>Required for zones</td>
-<td>Required for zones</td>
+<td>Required for pneumatic zones</td>
+<td>Depends on zone method</td>
 </tr>
 <tr>
 <td>Key Maintenance</td>
-<td>Replace motor roller</td>
-<td>Belt, gearmotor</td>
+<td>Replace motor roller or zone card</td>
+<td>Belt, gearmotor, air components</td>
 <td>O-rings, gearmotor</td>
 </tr>
 <tr>
-<td>Upfront Cost</td>
-<td>$$$</td>
-<td>$$</td>
-<td>$$</td>
+<td>Main Cost Drivers</td>
+<td>One motor roller and controller per zone, power supplies</td>
+<td>Central drive, drive belt, pneumatic zone hardware and air supply</td>
+<td>Central drive, line shaft, O-rings, zone hardware</td>
 </tr>
 </tbody>
 </table>
-<p>MDR costs more per foot upfront but typically delivers lower total cost of ownership over 15-20 years due to energy and maintenance savings. See <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
+<p>MDR usually costs more per foot upfront because every zone carries its own motor and controller. Lower energy use and fewer central drive components can offset that over the system's life. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a>.</p>
+<p><strong>Energy savings depend on duty cycle.</strong> Insight Automation, which sells PULSEROLLER motorized roller conveyors, <a href="https://www.pulseroller.com/resources/pulsenews/motorized_roller_conveyors_a_better_option_for_small_and_medium_sized_businesses" target="_blank" rel="noopener noreferrer">estimates</a> that rollers in a typical section run 10 to 50 percent of operating time, which it equates to 30 to 70 percent energy savings versus conveyors that run continuously. Treat this as a vendor estimate. Your savings depend on how often product is actually present on each zone.</p>
 <h2 id="apps-heading">MDR Conveyor Applications</h2>
-<p><strong>Distribution and fulfillment:</strong> MDR dominates new distribution center conveyor installations. Totes, shipping cartons, and polybag mailers route through pick modules, merge onto trunk lines, and <a href="/conveyor-types/accumulation-conveyors/">accumulate</a> before shipping sorters. Dematic, Intelligrated, TGW, and Bastian Solutions build large-scale fulfillment systems around MDR platforms. The quiet operation (55-65 dB) improves the working environment in facilities where hundreds of feet of conveyor run simultaneously.</p>
-<p><strong>E-commerce order processing:</strong> E-commerce facilities process high volumes of small, lightweight items. MDR conveyors handle the variable product mix (poly bags, padded envelopes, small boxes) at 60-150 FPM with ZPA that prevents damage during accumulation. <a href="/resources/automated-conveyor-systems/">Automated conveyor systems</a> integrate MDR zones with barcode scanners, print-and-apply labelers, and <a href="/conveyor-types/diverting-merging/sortation/">sortation systems</a>.</p>
-<p><strong>Packaging line accumulation:</strong> MDR provides the cleanest ZPA for <a href="/industries/packaging-line-conveyors/">packaging lines</a>. Cases, cartons, and shrink-wrapped packs queue between fillers, labelers, case packers, and palletizers without backpressure damage. The 24VDC architecture eliminates the pneumatic infrastructure that belt-driven accumulation systems require.</p>
-<p><strong><a href="/industries/food-conveyors/">Food and beverage:</a></strong> MDR rollers are available in stainless steel with IP54/IP65 rated motors for wet environments. <a href="/industries/food-conveyors/sanitary/">Sanitary MDR systems</a> feature open-frame construction and sealed motors. The absence of exposed belts and chains simplifies cleaning and reduces contamination risk.</p>
-<p><strong>Before <a href="/conveyor-types/transfer-conveyors/">transfers</a> and merges:</strong> MDR zones upstream of pop-up transfers, merges, and sortation diverters provide precise product positioning. The zone controller holds each product at a known position and releases it on command, ensuring reliable transfer timing. This eliminates the product spacing variability that causes transfer jams on continuous-run conveyors.</p>
-<p><strong><a href="/conveyor-functions/indexing-conveyors/">Indexing applications:</a></strong> MDR zones provide stop-and-go indexing for robotic pick-and-place, vision inspection, labeling, and printing stations. Each zone acts as a precision positioning station. The motor controller stops the product at the sensor position with repeatable accuracy.</p>
+<p><strong>Distribution and fulfillment:</strong> Totes, shipping cartons, and polybag mailers route through pick modules, merge onto trunk lines, and <a href="/conveyor-types/accumulation-conveyors/">accumulate</a> before shipping sorters. Low noise matters in facilities where long runs of conveyor operate near workers.</p>
+<p><strong>E-commerce order processing:</strong> MDR handles a mixed product stream (poly bags, padded envelopes, small boxes) with ZPA that prevents damage during accumulation. Very small or soft items may need belted zones instead of bare rollers. <a href="/resources/automated-conveyor-systems/">Automated conveyor systems</a> integrate MDR zones with barcode scanners, print-and-apply labelers, and <a href="/conveyor-types/diverting-merging/sortation/">sortation systems</a>.</p>
+<p><strong>Packaging line accumulation:</strong> MDR provides clean ZPA for <a href="/industries/packaging-line-conveyors/">packaging lines</a>. Cases, cartons, and shrink-wrapped packs queue between fillers, labelers, case packers, and palletizers without back-pressure damage, and without the pneumatic infrastructure that belt-driven accumulation requires.</p>
+<p><strong><a href="/industries/food-conveyors/">Food and beverage:</a></strong> Washdown-rated motor rollers exist. Itoh Denki offers IP65 waterproof and IP55 drip-proof options on the PM486FE, and Interroll publishes an <a href="https://www.interroll.com/fileadmin/user_upload/Downloads__PDF_/Drives___Controls/DC_Platform/EC5000_Catalog_PDF/US/EC5000_IP66.pdf" target="_blank" rel="noopener noreferrer">IP66 EC5000 version</a> for areas cleaned with water jets. <a href="/industries/food-conveyors/sanitary/">Sanitary MDR systems</a> pair sealed motors with open frames. The absence of exposed central drive belts and chains simplifies cleaning.</p>
+<p><strong>Before <a href="/conveyor-types/transfer-conveyors/">transfers</a> and merges:</strong> MDR zones upstream of pop-up transfers, merges, and sortation diverters hold each product at a known position and release it on command. This removes the spacing variability that causes transfer jams on continuous-run conveyors.</p>
+<p><strong><a href="/conveyor-functions/indexing-conveyors/">Indexing applications:</a></strong> MDR zones provide stop-and-go indexing for robotic pick-and-place, vision inspection, labeling, and printing stations. Braking features help positioning: Interroll lists an electronic holding brake on the EC5000, and Itoh Denki lists a dynamic brake on the PM486FE.</p>
 <h2 id="selection-heading">When to Choose MDR</h2>
 <p><strong>Choose MDR when:</strong></p>
 <ul>
 <li>You need zero-pressure accumulation without pneumatic infrastructure</li>
-<li>Product weight is under 250 lbs per zone</li>
-<li>Energy efficiency is a priority (50%+ savings over continuous-run systems)</li>
-<li>Low noise is important (55-65 dB vs 70-85 dB for belt/chain systems)</li>
-<li>You want minimal maintenance (no belts, chains, or O-rings between motor and driven shaft)</li>
-<li>You need easy future expansion (add zones without new motors or pneumatics)</li>
-<li>24VDC Class 2 wiring simplifies your electrical installation</li>
+<li>Product weight fits the conveyor's per-zone and per-foot rating (check the specific model's sheet)</li>
+<li>Energy use matters and the line has frequent idle periods</li>
+<li>Low noise is important</li>
+<li>You want no central drive belt, chain, or line shaft to maintain</li>
+<li>You need easy future expansion (add zones without new central motors or air)</li>
+<li>Low-voltage DC distribution fits your electrical plan</li>
 </ul>
-<p><strong>Choose <a href="/conveyor-types/roller-conveyors/powered/">belt-driven live roller</a> instead when:</strong> product weight exceeds 300 lbs, you need speeds above 200 FPM, or upfront cost is the primary constraint and you do not need accumulation.</p>
-<p><strong>Choose <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> instead when:</strong> product weight exceeds 500 lbs (pallets, drums), you need positive chain drive with zero slip, or <a href="/industries/packaging-line-conveyors/pallet/">pallet handling</a> is the primary application.</p>
+<p><strong>Choose <a href="/conveyor-types/roller-conveyors/powered/">belt-driven live roller</a> instead when:</strong> product weight exceeds the MDR model's zone rating, you need speeds the MDR gearing cannot reach at the required torque, or upfront cost is the main constraint and you do not need accumulation.</p>
+<p><strong>Choose <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> instead when:</strong> you handle pallets, drums, or other heavy loads, need positive chain drive with no slip, or <a href="/industries/packaging-line-conveyors/pallet/">pallet handling</a> is the primary application. 24-volt chain-driven zone conveyors also exist: Hytrol rates its 199-CRE24EZ at up to 600 lbs per zone.</p>
 <p><strong>Choose <a href="/conveyor-types/roller-conveyors/gravity/">gravity roller</a> instead when:</strong> no powered transport is needed, a slight decline is available, and budget is the top constraint.</p>
-<h2 id="mfg-heading">MDR Roller Manufacturers</h2>
-<p>The MDR supply chain has two tiers: component manufacturers (who make the motorized rollers) and system integrators (who build complete conveyor systems).</p>
-<h3>MDR Roller Manufacturers</h3>
+<h2 id="mfg-heading">How to Evaluate MDR Options</h2>
+<p>The MDR supply chain has two tiers: component makers (who build the motorized rollers) and conveyor manufacturers or integrators (who build complete systems). Motorized roller makers include Interroll (RollerDrive), Itoh Denki (Power Moller), and Rulmeca (RDR). Some conveyor manufacturers use their own 24-volt drives, such as Hytrol's E24 motor with EZLogic controls.</p>
+<p>Ask each supplier for:</p>
 <ul>
-<li><strong>Interroll</strong>, RollerDrive EC5000 series. Swiss-based global leader. Supplies motorized rollers to most major conveyor integrators.</li>
-<li><strong>Itoh Denki</strong>, PM600/PM500 series. Japanese manufacturer with strong presence in Asia and North America.</li>
-<li><strong>Rulmeca</strong>, RDR (RollerDrive) series. Italian manufacturer with global distribution.</li>
+<li>Motor roller make, model, wattage, and gear ratio, with the datasheet</li>
+<li>Rated load per zone and per foot for the exact conveyor model</li>
+<li>Available zone lengths versus your longest and shortest product</li>
+<li>Zone controller type and accumulation modes (singulation, slug release, workstation stop)</li>
+<li>Network interface to your PLC (discrete I/O or industrial Ethernet)</li>
+<li>Power supply sizing: motors per supply and supply location</li>
+<li>IP rating and temperature range for your environment</li>
+<li>Spare parts list and motor roller replacement procedure</li>
 </ul>
-<h3>System Integrators Using MDR</h3>
-<ul>
-<li><strong>Hytrol</strong>, EZLogic MDR platform with proprietary zone control logic.</li>
-<li><strong>Dematic</strong>, Integrated MDR conveyor systems for distribution and fulfillment.</li>
-<li><strong>Intelligrated (Honeywell)</strong>, MDR accumulation and transport in IntelliSort systems.</li>
-<li><strong>TGW</strong>, KingDrive MDR platform for e-commerce and retail distribution.</li>
-<li><strong>Bastian Solutions (Toyota)</strong>, MDR conveyor design and integration for fulfillment centers.</li>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.interroll.com/fileadmin/products/product_data/EC-5000-IP54/EC5000_50mm_IP54_USA.pdf" target="_blank" rel="noopener noreferrer">RollerDrive Series EC5000, 1.9", IP54 datasheet</a>, Interroll. Voltages, wattages, rated current, speed by gear ratio, 55 dB(A) noise, static load per roller, holding brake.</li>
+<li><a href="https://www.interroll.com/fileadmin/user_upload/Downloads__PDF_/Drives___Controls/DC_Platform/EC5000_Catalog_PDF/US/EC5000_IP66.pdf" target="_blank" rel="noopener noreferrer">RollerDrive Series EC5000, IP66 datasheet</a>, Interroll. Washdown-rated version.</li>
+<li><a href="https://www.itohdenki.com/pm486fe" target="_blank" rel="noopener noreferrer">PM486FE Power Moller</a>, Itoh Denki. 7 to 700 FPM range, IP65/IP55 options, dynamic brake.</li>
+<li><a href="https://www.rulmeca.com/en/products_unit/catalogue/10/rdr_rulmeca_drive_roller/18/rulmeca_drive_rollers_rdr" target="_blank" rel="noopener noreferrer">Rulmeca Drive Roller (RDR)</a>, Rulmeca. 24VDC motorized roller platform.</li>
+<li><a href="https://cdn.hytrol.com/E24.pdf" target="_blank" rel="noopener noreferrer">E24 24-Volt Conveying System</a>, Hytrol. Zone lengths, roller centers, 37 lbs/ft and 75 lbs/zone rating, 199-CRE24EZ 600 lbs/zone.</li>
+<li><a href="https://cdn.hytrol.com/BZDE24EZN.pdf" target="_blank" rel="noopener noreferrer">BZDE24EZN specification sheet</a>, Hytrol. Motors per 40 amp power supply.</li>
+<li><a href="https://www.pulseroller.com/resources/pulsenews/motorized_roller_conveyors_a_better_option_for_small_and_medium_sized_businesses" target="_blank" rel="noopener noreferrer">Motorized Roller Conveyors: A Better Option for Small- and Medium-Sized Businesses</a>, Insight Automation (PULSEROLLER). Run-time and energy savings estimate.</li>
 </ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What does MDR stand for?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>MDR stands for Motor Driven Roller. A 24VDC brushless DC motor sits inside the roller tube, creating an independent drive zone. See our <a href="/conveyor-types/roller-conveyors/">roller conveyor hub</a> for all roller types.</p>
+<p>MDR stands for Motor Driven Roller. A brushless DC motor, most commonly 24VDC, sits inside the roller tube, creating an independent drive zone. See our <a href="/conveyor-types/roller-conveyors/">roller conveyor hub</a> for all roller types.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What are the advantages over belt-driven roller?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Built-in ZPA without pneumatics, 50%+ energy savings, quieter (55-65 dB), less maintenance, easier expansion. Higher upfront cost but lower total cost of ownership. See the <a href="/conveyor-types/live-roller-conveyors/">live roller comparison</a>.</p>
+<p>Built-in ZPA without compressed air, lower energy use because zones run only when product is present (Insight Automation estimates 30 to 70 percent savings versus continuously running conveyors), quieter operation (Interroll lists 55 dB(A) maximum installed for its EC5000, application-dependent), no central drive belt or chain to maintain, and easier expansion. Upfront cost is usually higher because each zone has its own motor and controller. See the <a href="/conveyor-types/live-roller-conveyors/">live roller comparison</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What weight can MDR handle?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Standard MDR: 50-250 lbs per zone. For heavier loads, use <a href="/conveyor-types/roller-conveyors/powered/">belt-driven live roller</a> (up to 500 lbs) or <a href="/conveyor-types/cdlr-conveyors/">CDLR</a> (up to 10,000 lbs).</p>
+<p>It depends on the conveyor model. Hytrol rates its 190-E24EZ at 37 lbs per foot and 75 lbs per zone. Interroll's 1.9-inch EC5000 roller carries up to 242 lbs static (up to 39 inches long, without drive head). For heavier loads, use 24-volt chain-driven zones (Hytrol 199-CRE24EZ: up to 600 lbs per zone) or <a href="/conveyor-types/cdlr-conveyors/">CDLR</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">How does MDR zone control work?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Each zone has one motorized roller, 2-4 slave rollers, a photo-eye sensor, and a zone controller card. The controller reads the sensor and communicates with adjacent zones. When downstream is occupied, the upstream zone holds its product with a gap, creating <a href="/conveyor-types/accumulation-conveyors/">zero-pressure accumulation</a>.</p>
+<p>Each zone has one motorized roller, several slave rollers, a photo-eye sensor, and a zone controller card. The controller reads the sensor and communicates with adjacent zones. When downstream is occupied, the upstream zone holds its product with a gap, creating <a href="/conveyor-types/accumulation-conveyors/">zero-pressure accumulation</a>.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">Who manufactures MDR rollers?</button></h3>
 <div id="faq-5" class="usa-accordion__content usa-prose">
-<p>Interroll (RollerDrive EC5000), Itoh Denki (PM series), and Rulmeca (RDR series) manufacture the rollers. Hytrol, Dematic, Intelligrated, TGW, and Bastian Solutions integrate them into complete systems.</p>
+<p>Interroll (RollerDrive), Itoh Denki (Power Moller), and Rulmeca (RDR) make motorized rollers. Conveyor manufacturers and integrators build them, or their own 24-volt drives such as Hytrol's E24, into complete systems.</p>
 
 </div>
 </div>

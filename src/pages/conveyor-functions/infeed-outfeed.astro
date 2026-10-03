@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecChecklist from '../../components/SpecChecklist.astro';
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -23,7 +24,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a timing screw?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A timing screw (feed screw, worm drive) is a helical screw that rotates alongside a conveyor to capture products and space them at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on the conveyor belt while the screw controls separation. Timing screws are dominant for round containers (bottles, cans, jars) before labeling, filling, and capping. Servo-driven screws adjust pitch through recipe changes." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A timing screw (feed screw, worm drive) is a helical screw that rotates alongside a conveyor to capture products and space them at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on the conveyor belt while the screw controls separation. Timing screws are the usual infeed for round containers (bottles, cans, jars) before labeling, filling, and capping. Servo-driven screws adjust timing through recipe changes, but a different container diameter can still need a different screw." }
     },
     {
       "@type": "Question",
@@ -33,7 +34,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What is a servo infeed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A servo infeed uses servo-driven belts or flights to precisely control product spacing on the conveyor feeding a downstream machine. The servo motor accelerates and decelerates individual products or groups to match the machine's cycle. Servo infeeds provide recipe-based pitch adjustment for multiple product sizes without mechanical changeover. They replace fixed-pitch timing screws on multi-SKU lines." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A servo infeed uses servo-driven belts or flights to precisely control product spacing on the conveyor feeding a downstream machine. The servo motor accelerates and decelerates individual products or groups to match the machine's cycle. Servo infeeds provide recipe-based pitch adjustment for multiple product sizes without mechanical changeover. They often replace fixed-pitch timing screws on multi-SKU lines with non-round products." }
     }
   ]
 };
@@ -64,28 +65,28 @@ const articleSchema = {
 <li><strong>Physical transfer:</strong> Bridges the gap between conveyor and machine with dead plates, transfer plates, or starwheels on rotary machines.</li>
 <li><strong>Hold-back:</strong> Stops or buffers product when the machine stops, so upstream product accumulates instead of jamming the machine entry.</li>
 </ul>
-<p>Specify the transition as part of the machine interface, not as a generic conveyor. Give suppliers the machine pitch, infeed speed range, product dimensions, and every SKU the line will run. The sections below compare the technologies that perform each job.</p>
+<p>Specify the transition as part of the machine interface, not as a generic conveyor. Give suppliers the machine pitch, infeed speed range, product dimensions, and every SKU the line will run. Agree on the signals between machine and conveyor (running, starved, blocked, stopped) early. Many packaging OEMs follow the <a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">PackML</a> machine state model from OMAC, adopted by ISA as TR88.00.02, which gives those states common names across machines. The sections below compare the technologies that perform each job.</p>
 <h2 id="screw-heading">Timing Screws &amp; Feed Screws</h2>
 <p>Timing screws (feed screws, scrolls, worm drives) use a helical screw rotating alongside or above a conveyor belt to capture products and establish precise pitch. Products ride on the belt; the screw's helix profile controls spacing. As product enters the screw's infeed section, the helix captures it and gradually accelerates or decelerates it to the target pitch.</p>
 <p>The screw's helix geometry determines the output pitch. A constant-pitch screw maintains existing spacing. A variable-pitch screw (progressive helix) changes spacing, for example, receiving bottles at 2-inch spacing and delivering them at 4-inch spacing for labeler clearance. The screw length, pitch profile, and rotation speed must all be engineered for the specific container diameter and target pitch.</p>
 <h3>Fixed vs. Servo Timing Screws</h3>
 <ul>
-<li><strong>Fixed-pitch screws ($$):</strong> Machined for one container diameter and one output pitch. Changing container size requires a physical screw swap, 15-45 minutes changeover. Cost-effective for dedicated lines running one container size. Hartness and Morrison supply fixed-pitch timing screws.</li>
-<li><strong>Servo-driven screws ($$$-$$$$):</strong> A servo motor controls screw rotation speed relative to belt speed. Adjusting the speed ratio changes the effective output pitch. Recipe-based changeover for different container diameters, 1-2 minutes. Justifies the cost on multi-SKU lines. The screw still needs physical swapping for major diameter changes, but pitch adjustment is electronic.</li>
+<li><strong>Fixed-drive screws:</strong> Machined for one container and one output pitch and geared to the machine. Changing container size means a physical screw swap. Changeover time depends on the mounting: <a href="https://www.septimatech.com/blog/timing-screws-and-feed-screws/" target="_blank" rel="noopener noreferrer">Septimatech</a> says tool-less feed screw mounts reduce setup "from hours to just minutes," and Krones lists 1.5 minutes for the quick-change infeed worm on its Modulfill Bloc FS-C can filler. Cost is driven by the number of container sizes, since each needs its own screw.</li>
+<li><strong>Servo-driven screws:</strong> A servo motor controls screw speed relative to belt and machine speed, so timing and spacing change by recipe instead of by gears. Cost is driven by the servo axis, controls integration, and engineering. The screw still needs physical swapping for larger diameter changes. These usually pay off on lines with many SKUs and frequent changeovers.</li>
 </ul>
-<p>Timing screws are the dominant infeed technology for round containers, bottles, cans, jars, and vials, before <a href="/conveyor-functions/indexing-conveyors/">indexing</a> into fillers, labelers, and cappers. Non-round containers (rectangular cartons, pouches) use different infeed methods because screw contact surfaces cannot accommodate flat sides.</p>
+<p>Timing screws are the usual infeed technology for round containers, bottles, cans, jars, and vials, before <a href="/conveyor-functions/indexing-conveyors/">indexing</a> into fillers, labelers, and cappers. Non-round products (rectangular cartons, pouches) usually use other infeed methods, though shaped screws exist for some non-round containers.</p>
 <h2 id="star-heading">Starwheel Transfers</h2>
 <p>Starwheels (star wheels, transfer stars) are rotating discs with evenly spaced pockets machined to match the container diameter. Each pocket captures one container from the infeed conveyor and delivers it at precise timing to a rotary machine, filler, labeler, capper, or inspection station. The starwheel's pocket count and rotation speed synchronize with the machine's station count and cycle rate.</p>
-<p>A typical bottle filling line uses three starwheels in sequence: an infeed starwheel that captures bottles from the timing screw conveyor, a machine starwheel that carries bottles through the filling process, and an outfeed starwheel that returns filled bottles to the outfeed conveyor. All starwheels are mechanically geared or servo-synchronized to maintain precise timing throughout the transfer sequence.</p>
-<p>Starwheel changeover for different container diameters requires swapping the starwheel disc, as the pocket shape must match the container profile. Quick-change starwheel systems reduce changeover time from 30+ minutes to 5-10 minutes using tool-free mounting. See our <a href="/conveyor-functions/infeed-outfeed/star-wheel/">starwheel transfer guide</a> for detailed pocket geometry, synchronization, and changeover specifications.</p>
+<p>A rotary filler commonly uses three starwheels in sequence: an infeed starwheel that captures bottles from the timing screw conveyor, a machine starwheel that carries bottles through the filling process, and an outfeed starwheel that returns filled bottles to the outfeed conveyor. All starwheels are mechanically geared or servo-synchronized to maintain precise timing throughout the transfer sequence.</p>
+<p>Starwheel changeover for different container diameters requires swapping the starwheel disc, as the pocket shape must match the container profile. Mounting design sets changeover time. <a href="https://www.nerconconveyors.com/Nercon-Blog/Star-Wheel-Innovation-Results-in-Faster-Product-Changeover" target="_blank" rel="noopener noreferrer">Nercon</a> describes a bolted fixture swap taking "30 minutes to an hour," and the <a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Krones Modulfill Bloc FS-C brochure</a> lists 3.1 minutes for its quick-change infeed starwheel with one operator. See our <a href="/conveyor-functions/infeed-outfeed/star-wheel/">starwheel transfer guide</a> for detailed pocket geometry, synchronization, and changeover specifications.</p>
 <h2 id="servo-heading">Servo Infeed Conveyors</h2>
 <p>Servo infeed conveyors use servo-driven belts or flights to precisely control product spacing before a downstream machine. Unlike timing screws (which suit round containers), servo infeeds handle any product shape, cartons, pouches, <a href="/conveyor-functions/bag-loading/">bags</a>, trays, and irregularly shaped items. The servo controller accelerates or decelerates products individually to achieve target spacing.</p>
 <h3>Speed-Differential Phasing</h3>
-<p>Two or more belt sections run at different speeds. Products transfer from a slow belt to a fast belt, stretching the gap between them. Multiple speed zones can establish precise pitch from random-spaced product. This is the simplest servo infeed approach and suits moderate accuracy (±2-5mm pitch).</p>
+<p>Two or more belt sections run at different speeds. Products transfer from a slow belt to a fast belt, stretching the gap between them. Multiple speed zones can establish precise pitch from random-spaced product. This is the simplest servo infeed approach. Pitch accuracy is lower than positive-control methods because products are not held, so it suits wrappers and packers that tolerate some variation.</p>
 <h3>Flight (Lug) Conveyors</h3>
-<p>Servo-driven flights (lugs or pusher bars) attached to a timing belt engage each product from behind and push it at the correct pitch. Flight spacing equals the machine pitch. The flight belt runs at machine speed, and each flight delivers one product at the exact timing the machine requires. Flights provide ±0.5-1.0mm pitch accuracy, the most precise servo infeed method. Used for <a href="/industries/food-conveyors/bakery/cookie-cracker/">wrapper infeed</a> on flow-wrap lines.</p>
+<p>Servo-driven flights (lugs or pusher bars) attached to a timing belt engage each product from behind and push it at the correct pitch. Flight spacing equals the machine pitch. The flight belt runs at machine speed, and each flight delivers one product at the exact timing the machine requires. Because each product is pushed by a flight, pitch is tightly controlled, which is why flights are standard on wrapper infeeds. Used for <a href="/industries/food-conveyors/bakery/cookie-cracker/">wrapper infeed</a> on flow-wrap lines.</p>
 <h3>Independent Cart Systems</h3>
-<p>Linear motor transport systems (Beckhoff XTS, B&amp;R SuperTrak, Rockwell iTRAK) use independent magnetic movers on a track. Each mover carries one product and moves independently, accelerating, decelerating, and spacing without mechanical linkage. Any pitch, any speed, any product. The most flexible and expensive infeed technology ($$$-$$$$). Justified for high-speed, high-mix packaging lines.</p>
+<p>Linear motor transport systems (Beckhoff XTS, B&amp;R SuperTrak, Rockwell iTRAK) use independent magnetic movers on a track. Each mover carries one product and moves independently, accelerating, decelerating, and spacing without mechanical linkage. Rockwell describes its <a href="https://www.rockwellautomation.com/en-us/products/hardware/independent-cart-technology/itrak-intelligent-track-systems.html" target="_blank" rel="noopener noreferrer">iTRAK system</a> as allowing "independent control of movers on straight or curvilinear paths" with changeover "at the push of a button." Pitch changes in software. Cost is driven by track length, mover count, and controls engineering, so these systems are usually reserved for high-mix lines where changeover time costs the most.</p>
 <h2 id="outfeed-heading">Outfeed Conveyors</h2>
 <p>Outfeed conveyors receive product from a machine and transition it back to transport speed and spacing. The outfeed must match the machine's discharge rate without creating back-pressure that jams the machine output. Key outfeed functions:</p>
 <ul>
@@ -99,58 +100,80 @@ const articleSchema = {
 <thead>
 <tr>
 <th>Technology</th>
-<th>Pitch Accuracy</th>
+<th>Positive Control</th>
 <th>Product Types</th>
 <th>Changeover</th>
-<th>Relative Cost</th>
+<th>Main Cost Drivers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Timing screw (fixed)</td>
-<td>±0.25 mm</td>
-<td>Round containers only</td>
-<td>Screw swap (15-45 min)</td>
-<td>$$</td>
+<td>Yes, screw engages each container</td>
+<td>Round containers (shaped screws for some others)</td>
+<td>Screw swap, tool-less mounts shorten it</td>
+<td>Screw per container size</td>
 </tr>
 <tr>
 <td>Timing screw (servo)</td>
-<td>±0.25 mm</td>
-<td>Round containers only</td>
-<td>Recipe (1-2 min) + screw</td>
-<td>$$$</td>
+<td>Yes, screw engages each container</td>
+<td>Round containers (shaped screws for some others)</td>
+<td>Recipe, plus screw swap for larger size changes</td>
+<td>Servo axis, controls, screws</td>
 </tr>
 <tr>
 <td>Starwheel</td>
-<td>±0.1 mm</td>
+<td>Yes, pocket holds each container</td>
 <td>Round containers</td>
-<td>Disc swap (5-30 min)</td>
-<td>$$</td>
+<td>Starwheel and guide swap</td>
+<td>Starwheel and guide set per size</td>
 </tr>
 <tr>
 <td>Speed-differential belt</td>
-<td>±2-5 mm</td>
+<td>No, friction only</td>
 <td>Any shape</td>
-<td>Recipe (1 min)</td>
-<td>$$</td>
+<td>Recipe</td>
+<td>Number of belt zones and drives</td>
 </tr>
 <tr>
 <td>Flight (lug) conveyor</td>
-<td>±0.5-1.0 mm</td>
+<td>Yes, flight pushes each product</td>
 <td>Any shape</td>
-<td>Recipe + flight change</td>
-<td>$$$</td>
+<td>Recipe, plus flight change for some sizes</td>
+<td>Flight sets, servo drive</td>
 </tr>
 <tr>
 <td>Independent cart (LMT)</td>
-<td>±0.01 mm</td>
+<td>Yes, mover carries each product</td>
 <td>Any shape</td>
-<td>Recipe (instant)</td>
-<td>$$$$</td>
+<td>Recipe</td>
+<td>Track length, mover count, engineering</td>
 </tr>
 </tbody>
 </table>
-<p>LMT = Linear Motor Transport. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for detailed pricing factors.</p>
+<p>LMT = Linear Motor Transport. Positive control means the product is mechanically held or pushed at a fixed pitch rather than spaced by belt friction. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for cost factors.</p>
+<SpecChecklist id="spec-checklist" title="Infeed transition specification checklist" items={[
+  ["Products", "Dimensions, weight, shape, material, and stability (tall or tippy, empty or filled) for every SKU."],
+  ["Machine interface", "Machine make and model, pitch, pocket or lug spacing, infeed height, and handoff point."],
+  ["Rates", "Machine speed range in products per minute, current and planned peak."],
+  ["Incoming flow", "How product arrives: random, back-pressured, single file, or multi-lane, and the line conveyor speed."],
+  ["Infeed method", "Timing screw, starwheel, servo belts, flights, or independent carts, and why."],
+  ["Changeover", "Number of SKUs, changeovers per shift, target changeover time, and which parts change per SKU."],
+  ["Hold-back and buffering", "What happens when the machine stops: gates, accumulation length, and restart behavior."],
+  ["Controls and signals", "PLC platform, machine-to-conveyor signals (running, starved, blocked), and state model such as PackML."],
+  ["Outfeed", "Discharge speed, product stability after the machine, and downstream accumulation."],
+  ["Sanitation and materials", "Washdown or dry, food or drug contact requirements, and contact part materials."],
+  ["Safety", "Guarding of nip points, screws, and starwheels, and access for changeover."],
+  ["Acceptance test", "Run test with each SKU at rated speed, allowed jam and reject rate, and measured changeover time."]
+]} />
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.omac.org/packml" target="_blank" rel="noopener noreferrer">PackML</a>, OMAC. Machine state standard adopted by ISA as TR88.00.02.</li>
+<li><a href="https://www.septimatech.com/blog/timing-screws-and-feed-screws/" target="_blank" rel="noopener noreferrer">Timing Screws and Feed Screws: Frequently Asked Questions</a>, Septimatech. Tool-less feed screw changeover.</li>
+<li><a href="https://www.nerconconveyors.com/Nercon-Blog/Star-Wheel-Innovation-Results-in-Faster-Product-Changeover" target="_blank" rel="noopener noreferrer">Star Wheel Innovation Results in Faster Product Changeover</a>, Nercon. Conventional starwheel fixture changeover time.</li>
+<li><a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Modulfill Bloc FS-C brochure (PDF)</a>, Krones. Quick-change times for infeed worm and starwheel.</li>
+<li><a href="https://www.rockwellautomation.com/en-us/products/hardware/independent-cart-technology/itrak-intelligent-track-systems.html" target="_blank" rel="noopener noreferrer">iTRAK Intelligent Track Systems</a>, Rockwell Automation. Independent mover control and recipe changeover.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is an infeed conveyor?</button></h3>
@@ -160,7 +183,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is a timing screw?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>A helical screw rotating alongside a conveyor that captures round containers and spaces them at precise pitch. Dominant for bottles, cans, and jars before filling, labeling, and capping. Fixed screws need physical swapping; servo screws adjust electronically.</p>
+<p>A helical screw rotating alongside a conveyor that captures round containers and spaces them at precise pitch. Standard for bottles, cans, and jars before filling, labeling, and capping. Fixed screws need physical swapping; servo screws adjust electronically.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is a starwheel?</button></h3>
@@ -170,7 +193,7 @@ const articleSchema = {
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What is a servo infeed?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>Servo-driven belts or flights that control product spacing for any product shape (not just round containers). Recipe-based pitch adjustment. Replaces fixed-pitch timing screws on multi-SKU lines. Flight conveyors achieve ±0.5-1.0mm accuracy.</p>
+<p>Servo-driven belts or flights that control product spacing for any product shape (not just round containers). Recipe-based pitch adjustment. Often replaces fixed-pitch timing screws on multi-SKU lines with non-round products.</p>
 
 </div>
 </div>

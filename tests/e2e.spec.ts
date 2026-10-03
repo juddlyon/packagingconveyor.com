@@ -43,7 +43,7 @@ test.describe('Homepage', () => {
     await expect(page.locator(`#${await second.getAttribute('aria-controls')}`)).toBeVisible();
   });
 
-  test('should have comparison table with pricing data', async ({ page }) => {
+  test('should have comparison table with relative cost data', async ({ page }) => {
     await page.goto('/');
     const table = page.locator('table');
     await expect(table).toBeVisible();
@@ -52,8 +52,9 @@ test.describe('Homepage', () => {
     const count = await rows.count();
     expect(count).toBeGreaterThanOrEqual(5);
 
-    const priceCells = page.locator('table td:has-text("$")');
-    expect(await priceCells.count()).toBeGreaterThanOrEqual(5);
+    // Relative cost classes in words. The site never publishes dollar amounts.
+    const costCells = page.locator('table td').filter({ hasText: /^(Lowest|Moderate|Higher|Highest)/ });
+    expect(await costCells.count()).toBeGreaterThanOrEqual(5);
   });
 
   test('should have working navigation', async ({ page }) => {

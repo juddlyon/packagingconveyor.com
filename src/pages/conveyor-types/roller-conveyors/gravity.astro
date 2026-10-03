@@ -19,22 +19,22 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "What angle do you need for a gravity roller conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most gravity roller conveyors require a decline of 3 to 5 degrees (approximately 3/8 inch to 5/8 inch drop per foot of conveyor length) to move standard cases and cartons. Heavier products need less decline. Lighter products need more. The exact pitch depends on product weight, roller bearing quality, and roller diameter. Test with your actual product before finalizing the installation pitch." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Pitch depends on product weight, bottom quality, roller type, and bearing lubrication. Hytrol's Basic Training Manual gives a starting chart in inches of drop per 10 feet: for example, 8-3/4 in. for 3-6 lb cartons, 6-1/4 in. for 12-25 lb cartons, and 5 in. for 25-30 lb cartons, about 1/2 inch to 7/8 inch per foot. Heavier items need less pitch. Hytrol notes the chart is a guideline and recommends testing with your actual product." }
     },
     {
       "@type": "Question",
       "name": "What is the weight limit for a gravity roller conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard light-duty gravity roller conveyors handle up to 50-75 lbs per product. Medium-duty gravity rollers handle 75-200 lbs. Heavy-duty gravity roller sections with 2.5 to 3.5 inch diameter rollers and structural frames can handle up to 500+ lbs. The capacity depends on roller diameter, wall thickness, bearing grade, axle size, and frame gauge." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Capacity is rated per roller and per frame, not per product. Omni Metalcraft, for example, lists maximum loads per roller of 94 lbs for 1.4-inch rollers, 269 lbs for 1.9-inch rollers, and 645 lbs for 2.5-inch rollers. A product's weight is shared by the rollers under it, so check both the per-roller rating and the frame rating at your support spacing. Capacity also depends on wall thickness, bearing grade, axle size, and frame gauge." }
     },
     {
       "@type": "Question",
       "name": "How much does gravity roller conveyor cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Gravity roller conveyor is the lowest cost conveyor type available ($). Key cost factors include frame material (aluminum vs steel vs stainless), roller diameter, bearing type (precision vs standard), overall width, and length. Stainless steel construction for food-grade applications increases cost significantly over standard galvanized or painted carbon steel." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Gravity roller conveyor is usually the lowest cost conveyor type because it has no motor, drive, or controls. Key cost factors include frame material (aluminum vs steel vs stainless), roller diameter, bearing type (precision vs standard), overall width, and length. Stainless steel construction for food-grade applications increases cost significantly over standard galvanized or painted carbon steel." }
     },
     {
       "@type": "Question",
       "name": "What roller spacing should I use for gravity conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The rule is: at least 3 rollers must contact the product bottom at all times. Divide the smallest product length by 3, then round down to the nearest standard pitch. Common gravity roller pitches are 1.5 inches, 3 inches, 4.5 inches, and 6 inches center-to-center. A 12-inch case needs 4-inch or closer spacing. A 6-inch box needs 2-inch or closer spacing." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Hytrol and Ashland both state that at least three rollers should be under the product at all times. Divide the smallest product length by 3, then round down to the nearest available roller center. Available centers vary by roller size: Omni Metalcraft lists 1.5, 3, 4, 4.5, 6, 8, 9, and 12 inches for 1.4-inch rollers. A 12-inch case needs 4-inch or closer spacing. A 6-inch box needs 2-inch or closer spacing." }
     }
   ]
 };
@@ -55,30 +55,77 @@ const articleSchema = {
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
 <h1>Gravity Roller Conveyors</h1>
-<p class="usa-intro">A gravity roller conveyor moves products using gravity on a slight decline or by manual push on a level surface, with no motors, belts, or external power source. Gravity roller conveyors are the lowest-cost, lowest-maintenance conveyor type available and handle flat-bottomed cases, cartons, and totes from 1 lb to over 500 lbs depending on roller construction. They serve as the default conveyor for loading docks, manual packing stations, shipping areas, and anywhere products need simple point-to-point transport without speed control or accumulation.</p>
+<p class="usa-intro">A gravity roller conveyor moves products using gravity on a slight decline or by manual push on a level surface, with no motors, belts, or external power source. Gravity roller conveyors are the lowest-cost, lowest-maintenance conveyor type available and handle flat-bottomed cases, cartons, and totes across a wide weight range depending on roller and frame construction. They serve as the default conveyor for loading docks, manual packing stations, shipping areas, and anywhere products need simple point-to-point transport without speed control or accumulation.</p>
 <h2 id="how-heading">How Gravity Roller Conveyors Work</h2>
 <p>Gravity roller conveyors operate on the simplest mechanical principle in material handling. Free-spinning rollers mounted on precision bearings rotate under the weight of the product. A slight downward angle converts gravitational potential energy into kinetic energy, moving the product forward without any power input. The rollers themselves provide minimal rolling resistance, allowing even lightweight products to travel significant distances on a modest decline.</p>
 <h3>Decline Angle and Pitch</h3>
-<p>The decline angle (also called pitch or slope) determines product travel speed. Most gravity roller installations use a decline of 3 to 5 degrees, which translates to approximately 3/8" to 5/8" of drop per linear foot of conveyor. Hytrol recommends starting at 3/8" per foot for standard corrugated cases weighing 20-50 lbs on 1.9" diameter rollers with precision bearings.</p>
-<p>Heavier products require less decline. A 100 lb case may need only 1/4" per foot. Lighter products require more. A 5 lb carton may need 3/4" per foot or more. The only reliable method to determine the correct pitch is testing with actual product on the specific roller conveyor being installed. Manufacturers typically ship gravity conveyors with adjustable-height legs so the installer can fine-tune the decline angle on site.</p>
+<p>The decline (also called pitch or slope) determines whether product rolls and how fast. Hytrol's <a href="https://www.cisco-eagle.com/uploads/Hytrol-Literature/Basic-Conveyor-Training.pdf" target="_blank" rel="noopener noreferrer">Basic Training Manual</a> lists four factors: roller or skatewheel type, bearing lubrication (grease-packed bearings roll slower), package weight, and the firmness of the package bottom. Its starting chart, in inches of drop per 10 feet, includes:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Approx. Weight</th>
+<th>Slope per 10 ft</th>
+<th>About per Foot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cartons</td>
+<td>3-6 lbs</td>
+<td>8-3/4 in.</td>
+<td>7/8 in.</td>
+</tr>
+<tr>
+<td>Cartons</td>
+<td>6-12 lbs</td>
+<td>7-1/2 in.</td>
+<td>3/4 in.</td>
+</tr>
+<tr>
+<td>Cartons</td>
+<td>12-25 lbs</td>
+<td>6-1/4 in.</td>
+<td>5/8 in.</td>
+</tr>
+<tr>
+<td>Cartons</td>
+<td>25-30 lbs</td>
+<td>5 in.</td>
+<td>1/2 in.</td>
+</tr>
+<tr>
+<td>Tote pans</td>
+<td>Not stated</td>
+<td>2-1/2 to 5 in.</td>
+<td>1/4 to 1/2 in.</td>
+</tr>
+<tr>
+<td>Drums</td>
+<td>150-300 lbs</td>
+<td>2-1/2 to 3-3/4 in.</td>
+<td>1/4 to 3/8 in.</td>
+</tr>
+</tbody>
+</table>
+<p>Heavier products require less decline. Lighter products require more. Hytrol calls the chart a guideline and says to test the product, and to contact the factory before using free-running gravity for boxes over 200 lbs. The only reliable method to determine the correct pitch is testing with actual product on the specific roller conveyor being installed. Manufacturers typically ship gravity conveyors with adjustable-height legs so the installer can fine-tune the decline angle on site.</p>
 <h3>Roller Diameter Selection</h3>
-<p>Roller diameter affects both load capacity and rolling resistance. Common gravity roller diameters include:</p>
+<p>Roller diameter, wall thickness, and axle size set the load per roller. Omni Metalcraft's <a href="https://omni.com/wp-content/uploads/2016/05/Gravity_Conveyor_SPC-1.pdf" target="_blank" rel="noopener noreferrer">gravity conveyor catalog section</a> gives one manufacturer's ratings:</p>
 <ul>
-<li><strong>1.375" (1-3/8") diameter</strong>, Ultra-light-duty. Small parts, envelopes, and poly bags under 10 lbs. Used on gravity chutes and inspection tables.</li>
-<li><strong>1.9" diameter</strong>, The standard for most gravity roller applications. Cases, cartons, and totes from 5 to 75 lbs. Available in 16-gauge to 11-gauge wall thickness.</li>
-<li><strong>2.5" diameter</strong>, Medium-duty. Heavier cases, totes, and bins from 50 to 200 lbs. Thicker wall and larger bearings increase load capacity.</li>
-<li><strong>3.5" diameter</strong>, Heavy-duty. Drums, heavy totes, and pallets from 100 to 500+ lbs. Structural frame required.</li>
+<li><strong>1.4" diameter</strong>, 18-gauge tube, 1/4" round axle: 94 lbs maximum per roller. Light cartons, small parts, and poly bags.</li>
+<li><strong>1.9" diameter</strong>, 16, 13, or 9-gauge tube, 7/16" hex axle: 269 lbs maximum per roller. The most common size for cases, cartons, and totes.</li>
+<li><strong>2.5" diameter</strong>, 11-gauge tube (7-gauge on its 2.6" roller), 11/16" hex axle: 645 lbs maximum per roller. Heavy totes, bins, and drums.</li>
 </ul>
-<p>Interroll, Rulmeca, and Hytrol publish detailed roller load rating tables that specify maximum load per roller based on diameter, wall thickness, bearing type, and shaft size.</p>
+<p>Product weight is shared by the rollers under it, so a product resting on several rollers can weigh more than one roller's rating. Uneven bottoms, drop loading, and impact reduce that margin. Ask for the per-roller rating and the frame rating for your exact configuration.</p>
 <h3>Roller Spacing Rules</h3>
-<p>Roller pitch (center-to-center spacing) must ensure at least 3 rollers contact the product bottom at all times. This rule prevents the product from rocking, tipping, or jamming between rollers. The formula is simple:</p>
+<p>Roller pitch (center-to-center spacing) must keep at least three rollers under the product at all times. Hytrol's training manual and Ashland's <a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">roller conveyor selection guide</a> both state this rule. With fewer rollers, boxes rock, tumble, or jam between rollers. The formula is simple:</p>
 <p class="formula"><strong>Maximum roller pitch = smallest product length / 3</strong></p>
-<p>Standard roller pitches include 1.5", 2", 3", 4.5", and 6" center-to-center. A 12" case requires 4" pitch or smaller. A 24" carton allows 6" pitch or smaller. Closer pitch provides smoother transport and lower per-roller loading but increases cost per foot because more rollers are needed.</p>
+<p>Available centers vary by roller size. Omni Metalcraft lists 1.5, 3, 4, 4.5, 6, 8, 9, and 12 inches for 1.4" rollers, and 2, 3, 4, 4.5, 6, 8, 9, and 12 inches for 1.9" rollers. A 12" case requires 4" pitch or smaller. A 24" carton allows 8" pitch or smaller. Closer pitch provides smoother transport and lower per-roller loading but increases cost per foot because more rollers are needed.</p>
 <h3>Frame Construction</h3>
-<p>Gravity roller conveyor frames use channel or angle side rails. Light-duty frames use 12-gauge formed channel. Medium-duty uses 10-gauge. Heavy-duty uses 7-gauge structural channel. Standard frame widths range from 12" to 36" between rails (BF dimension). Overall width adds 3-6" for the frame rails themselves.</p>
-<p>Support leg options include fixed-height, adjustable tripod, and floor-mount H-stands. Adjustable legs allow on-site fine-tuning of the decline angle. Standard support spacing is 5 to 10 feet depending on total conveyor load.</p>
+<p>Gravity roller conveyor frames use channel or angle side rails. Frame gauge rises with roller size. In Omni Metalcraft's catalog, 1.4" roller frames use 12-gauge galvanized steel or 1/8" aluminum, 1.9" roller frames use 10-gauge steel, and 2.5" roller frames use 7-gauge steel. Width is specified between frame rails (BF). Overall width adds the rail thickness and any guard rails.</p>
+<p>Support leg options include fixed-height, adjustable tripod, and floor-mount H-stands. Adjustable legs allow on-site fine-tuning of the decline. Support spacing sets frame capacity: Omni Metalcraft rates its 1.9" steel frame at 3,300 lbs uniformly distributed on 5-foot support centers and 1,200 lbs on 10-foot centers.</p>
 <h3>Curve Sections</h3>
-<p>Gravity roller curves use tapered (conical) rollers to maintain product tracking through 30, 45, and 90-degree turns. The taper creates a speed differential that keeps the product centered in the curve. Curve widths must match the straight sections they connect. Standard curve inside radii range from 24" to 48". Larger radii provide smoother product flow and reduce the risk of jams on curves.</p>
+<p>Gravity roller curves come in straight-roller, tapered-roller, skatewheel, and split-roller designs. Hytrol's training manual notes that boxes on tapered-roller curves keep better orientation, and that skatewheel and split-roller curves also keep boxes oriented. Curves often need to be wider than the straight sections so long package corners clear the guard rail. Larger radii give smoother flow and reduce jams.</p>
 <h2 id="specs-heading">Gravity Roller Specification Ranges</h2>
 <table>
 <thead>
@@ -92,52 +139,52 @@ const articleSchema = {
 <tbody>
 <tr>
 <td>Roller Diameter</td>
-<td>1.375" - 1.9"</td>
-<td>1.9" - 2.5"</td>
-<td>2.5" - 3.5"</td>
+<td>1.4"</td>
+<td>1.9"</td>
+<td>2.5" - 2.6"</td>
 </tr>
 <tr>
-<td>Wall Thickness</td>
-<td>16 - 14 ga</td>
-<td>14 - 11 ga</td>
-<td>11 - 7 ga</td>
+<td>Tube Wall</td>
+<td>18 ga</td>
+<td>16, 13, or 9 ga</td>
+<td>11 or 7 ga</td>
 </tr>
 <tr>
-<td>Max Load / Product</td>
-<td>Up to 50 lbs</td>
-<td>50 - 200 lbs</td>
-<td>200 - 500+ lbs</td>
+<td>Axle</td>
+<td>1/4" round</td>
+<td>7/16" hex</td>
+<td>11/16" hex</td>
 </tr>
 <tr>
-<td>Frame Width (BF)</td>
-<td>12" - 18"</td>
-<td>18" - 30"</td>
-<td>24" - 48"</td>
+<td>Max Load per Roller</td>
+<td>94 lbs</td>
+<td>269 lbs</td>
+<td>645 lbs</td>
 </tr>
 <tr>
-<td>Roller Pitch</td>
-<td>1.5" - 3"</td>
-<td>3" - 4.5"</td>
-<td>4.5" - 6"</td>
+<td>Roller Centers Offered</td>
+<td>1.5" - 12"</td>
+<td>2" - 12"</td>
+<td>3" - 12"</td>
 </tr>
 <tr>
-<td>Decline Angle</td>
-<td>1/2" - 3/4" per ft</td>
-<td>3/8" - 5/8" per ft</td>
-<td>1/4" - 3/8" per ft</td>
+<td>Frame</td>
+<td>12 ga steel or 1/8" aluminum</td>
+<td>10 ga steel</td>
+<td>7 ga steel</td>
 </tr>
 <tr>
-<td>Relative Cost</td>
-<td>$</td>
-<td>$</td>
-<td>$$</td>
+<td>Main Cost Drivers</td>
+<td>Frame material, width, roller centers</td>
+<td>Roller gauge, bearing grade, centers, width</td>
+<td>Heavy rollers, structural frame, supports</td>
 </tr>
 </tbody>
 </table>
-<p>Specifications represent typical ranges across Hytrol, Interroll, and Dematic product lines. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for pricing factor details.</p>
+<p>Figures are from Omni Metalcraft's gravity conveyor catalog section. Other manufacturers rate differently, so compare model sheets. See the <a href="/resources/conveyor-cost-guide/">cost guide</a> for pricing factor details.</p>
 <h2 id="applications-heading">Gravity Roller Conveyor Applications</h2>
 <h3>Loading Docks and Truck Loading</h3>
-<p>Gravity roller conveyors are the standard equipment at loading docks worldwide. Workers slide cases down a slight decline from the dock into the trailer. Flexible/expandable gravity roller sections telescope from 8 to 24 feet to reach deep into trailers without workers climbing inside. Skate wheel alternatives exist for very lightweight packages, but gravity rollers handle a wider weight range.</p>
+<p>Gravity roller conveyors are the standard equipment at loading docks worldwide. Workers slide cases down a slight decline from the dock into the trailer. Flexible/expandable gravity roller sections extend and retract to reach into trailers without workers climbing inside. Skate wheel alternatives exist for very lightweight packages, but gravity rollers handle a wider weight range.</p>
 <h3>Manual Packing and Shipping Stations</h3>
 <p>Pack stations use gravity roller conveyors to queue empty cartons, move packed cartons to taping stations, and transport sealed cartons to shipping. These level (zero-decline) sections rely on manual push to move products. Workers appreciate the low friction and quiet operation. Gravity roller sections between workstations cost a fraction of <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> and require zero energy.</p>
 <h3>End-of-Line Packaging</h3>
@@ -157,26 +204,32 @@ const articleSchema = {
 <li><strong>You need direction changes.</strong> Gravity conveyors can navigate gentle curves but cannot execute 90-degree <a href="/conveyor-types/transfer-conveyors/">transfers</a> or multi-directional routing without powered assist.</li>
 </ul>
 <p>Gravity roller conveyors remain the right choice for simple point-to-point transport with consistent product weight, available decline, no accumulation requirement, and budget priority. They also serve as the standard gravity take-away section downstream of powered systems.</p>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.cisco-eagle.com/uploads/Hytrol-Literature/Basic-Conveyor-Training.pdf" target="_blank" rel="noopener noreferrer">Basic Training Manual</a>, Hytrol (hosted by Cisco-Eagle). Pitch chart in inches per 10 ft, pitch factors, three-roller rule, curve orientation guidance.</li>
+<li><a href="https://omni.com/wp-content/uploads/2016/05/Gravity_Conveyor_SPC-1.pdf" target="_blank" rel="noopener noreferrer">Gravity Conveyor catalog section</a>, Omni Metalcraft. Maximum load per roller, tube gauge, axle size, roller centers, frame gauge, frame capacity by support spacing.</li>
+<li><a href="https://www.ashlandconveyor.com/pages/roller-conveyor" target="_blank" rel="noopener noreferrer">Roller Conveyor Selection Guide</a>, Ashland Conveyor. Minimum of three rollers in contact with the load.</li>
+</ul>
 <h2 id="faq-heading">Frequently Asked Questions</h2>
 <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What angle do you need for a gravity roller conveyor?</button></h3>
 <div id="faq-1" class="usa-accordion__content usa-prose">
-<p>Most gravity roller conveyors require a decline of 3 to 5 degrees (approximately 3/8" to 5/8" drop per foot). Heavier products need less decline. Lighter products need more. The correct pitch depends on product weight, roller bearing quality, and roller diameter. Test with your actual product before committing to a fixed installation angle.</p>
+<p>Hytrol's starting chart for cartons runs from 8-3/4 in. per 10 ft (3-6 lb cartons) down to 5 in. per 10 ft (25-30 lb cartons), about 7/8" to 1/2" per foot. Heavier products need less decline. Lighter products need more. Pitch also depends on bearing lubrication and package bottom. Test with your actual product before committing to a fixed installation angle.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What is the weight limit for a gravity roller conveyor?</button></h3>
 <div id="faq-2" class="usa-accordion__content usa-prose">
-<p>Light-duty gravity rollers handle up to 50-75 lbs. Medium-duty handles 75-200 lbs. Heavy-duty gravity roller sections with 3.5" diameter rollers and structural frames handle 500+ lbs. For loads above 500 lbs, consider <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> for positive chain drive.</p>
+<p>Capacity is rated per roller and per frame. Omni Metalcraft lists 94 lbs per roller for 1.4" rollers, 269 lbs for 1.9", and 645 lbs for 2.5". Product weight is shared by the rollers under it. Check the frame rating at your support spacing too. For heavy loads that need controlled movement, consider <a href="/conveyor-types/cdlr-conveyors/">CDLR conveyors</a> for positive chain drive.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">How much does gravity roller conveyor cost?</button></h3>
 <div id="faq-3" class="usa-accordion__content usa-prose">
-<p>Gravity roller conveyor is the lowest cost type ($). Cost factors include frame material (aluminum, galvanized steel, or stainless steel), roller diameter and gauge, bearing type, overall width, and length. Stainless steel construction for <a href="/industries/food-conveyors/">food-grade applications</a> costs significantly more. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for a full breakdown.</p>
+<p>Gravity roller conveyor is usually the lowest cost type because it has no motor, drive, or controls. Cost factors include frame material (aluminum, galvanized steel, or stainless steel), roller diameter and gauge, bearing type, overall width, and length. Stainless steel construction for <a href="/industries/food-conveyors/">food-grade applications</a> costs significantly more. See the <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> for a full breakdown.</p>
 
 </div>
 <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What roller spacing should I use?</button></h3>
 <div id="faq-4" class="usa-accordion__content usa-prose">
-<p>At least 3 rollers must always contact the product bottom. Divide your smallest product length by 3, round down to the nearest standard pitch (1.5", 2", 3", 4.5", or 6"). A 12-inch case needs 4-inch or closer spacing. See our <a href="/conveyor-types/roller-conveyors/">roller conveyor hub page</a> for more details on pitch selection.</p>
+<p>At least three rollers should always be under the product. Divide your smallest product length by 3 and round down to the nearest roller center the manufacturer offers. A 12-inch case needs 4-inch or closer spacing. See our <a href="/conveyor-types/roller-conveyors/">roller conveyor hub page</a> for more details on pitch selection.</p>
 
 </div>
 </div>
