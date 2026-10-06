@@ -1,0 +1,30 @@
+---
+// Manufacturer shortlist cards (bookmark pattern from austin-furniture). The company link covers the whole card as one tap target.
+// Preview images are cached locally by scripts/refresh-bookmarks.mjs. Cards without one fall back to a monogram.
+import previews from '../data/bookmarks.json';
+interface Maker { name: string; best: string; url: string; type: string; hq: string; owner?: string; builds: string; fit: string }
+interface Props { items: Maker[] }
+const { items } = Astro.props;
+const preview = (url: string) => (previews as Record<string, { image: string }>)[url]?.image;
+const domain = (url: string) => new URL(url).hostname.replace(/^www\./, '');
+const monogram = (name: string) => name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+---
+<ul class="maker-list">
+  {items.map(m => (
+    <li class="maker-card">
+      {preview(m.url)
+        ? <div class="maker-card__preview" aria-hidden="true"><img src={preview(m.url)} alt="" width="600" height="400" loading="lazy" decoding="async" /></div>
+        : <div class="maker-card__mark" aria-hidden="true">{monogram(m.name)}</div>}
+      <div class="maker-card__head">
+        <h3 class="maker-card__name"><a href={m.url} target="_blank" rel="noopener noreferrer">{m.name}</a></h3>
+        <p class="maker-card__meta"><span class="usa-tag">{m.type}</span> {m.hq}{m.owner && <Fragment>. {m.owner}</Fragment>}</p>
+        <p class="maker-card__best"><strong>Best for:</strong> {m.best}</p>
+        <p class="maker-card__url">{domain(m.url)}</p>
+      </div>
+      <div class="maker-card__text">
+        <p class="maker-card__line"><strong>Builds:</strong> <Fragment set:html={m.builds} /></p>
+        <p class="maker-card__line"><strong>Shortlist when:</strong> <Fragment set:html={m.fit} /></p>
+      </div>
+    </li>
+  ))}
+</ul>

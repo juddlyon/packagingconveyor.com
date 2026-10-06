@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MakerList from '../../../components/MakerList.astro';
+import SpecChecklist from '../../../components/SpecChecklist.astro';
+
+// Alphabetical. Every fact below comes from the company's own pages (or its owner's), checked October 5, 2026. See Sources.
+const makers = [
+  { name: 'Coperion', best: 'Integrated process lines', url: 'https://coperion.com/en/products-services/plants-systems/pneumatic-conveying-systems', type: 'Manufacturer', hq: 'Stuttgart, Germany (US: Sewell, NJ, Salina, KS, and Kansas City, MO)', owner: 'Subsidiary of Hillenbrand',
+    builds: 'Dilute phase and dense phase systems, built as pressure or vacuum systems. Dense phase options include pressure vessel and high pressure rotary valve configurations. Coperion states that it offers full-scale material testing and certified solutions for very high sanitary requirements. The former Schenck Process Food and Performance Materials business now operates under the Coperion name.',
+    fit: 'conveying is one part of a larger process line with feeders, valves, or extruders, in plastics, chemicals, minerals, food, pet food, or pharmaceuticals.' },
+  { name: 'Cyclonaire', best: 'Cement, minerals, and rail', url: 'https://www.cyclonaire.com/convey-methods/', type: 'Manufacturer', hq: 'York, NE',
+    builds: 'Dense, semi-dense, and dilute phase systems. Its test facility runs full scale tests in vacuum, pressure, and combined vacuum-pressure modes. Cyclonaire names battery, rubber, rail, mineral, and cement production as its markets.',
+    fit: 'the material is a heavy industrial mineral or cement product, or the project includes railcar transfer.' },
+  { name: 'Flexicon', best: 'Dilute phase with bulk bag equipment', url: 'https://flexicon.com/bulk-handling-equipment-and-systems/pneumatic-conveyors/', type: 'Manufacturer', hq: 'Bethlehem, PA',
+    builds: 'PNEUMATI-CON dilute phase systems in two forms: vacuum systems for multiple pickup points, and pressure systems for higher capacities and longer distances. Flexicon states the systems are built to meet USDA, FDA, 3-A, ATEX, and IECEx standards, and that its test labs hold full-size models of its equipment. It does not list dense phase.',
+    fit: 'a dilute phase system suits the material and you also need bulk bag dischargers, fillers, or mechanical conveyors from the same supplier.' },
+  { name: 'Hapman', best: 'Short dilute phase vacuum transfers', url: 'https://hapman.com/equipment-and-systems/conveyors/vacuum-conveyors/', type: 'Manufacturer', hq: 'Kalamazoo, MI', owner: 'Part of KMC Global',
+    builds: 'Dilute phase vacuum conveyors driven by regenerative blowers, in 304 or 316 stainless steel or carbon steel. The filter receiver is rated for pressures up to 14.5 psi so it can be used with explosion venting or suppression systems. Hapman names food processing, pharmaceuticals, and chemicals as its markets.',
+    fit: 'the job is a short dilute phase vacuum transfer and the plant has no spare compressed air.' },
+  { name: 'Kice Industries', best: 'Conveying designed with dust control', url: 'https://www.kice.com/capabilities/air-systems/pneumatic-conveying/', type: 'Manufacturer', hq: 'Park City, KS', owner: 'Family-owned since 1946',
+    builds: 'Custom pneumatic conveying that combines vacuum and positive pressure systems, sold alongside dust control and aspiration equipment. Kice runs a lab that simulates air systems with the customer\'s product. It does not state dilute or dense phase on its conveying page.',
+    fit: 'conveying and dust control are being designed together. Ask which conveying phase the design uses.' },
+  { name: 'Macawber Engineering', best: 'Abrasive and fragile materials in dense phase', url: 'https://www.macawber.com/pneumatic-conveying/dense-phase-systems/', type: 'Manufacturer', hq: 'Maryville, TN',
+    builds: 'Dense phase systems that convey at high positive pressure and low velocity. Macawber names fragile, abrasive, damp, lumpy, and hot materials as its focus. It states that it holds ASME Section VIII Division 1 certification for pressure vessels and runs a 12,000 square foot material testing facility.',
+    fit: 'the material is abrasive or fragile and dilute phase would wear the line or break the product.' },
+  { name: 'Magnum Systems', best: 'Conveying, packaging, and controls in one contract', url: 'https://magnumsystems.com/solution/pneumatic-conveying-systems/', type: 'Manufacturer and integrator', hq: 'Lenexa, KS', owner: 'Owned by 3 Rivers Capital since 2023',
+    builds: 'Dense and dilute phase conveying, plus railcar and truck unloading systems. Magnum also builds bag filling equipment and plant automation, and describes itself as a systems integrator with in-house manufacturing. Its test lab checks flow characteristics, convey design parameters, and degradation.',
+    fit: 'you want one contract for conveying, packaging, and controls.' },
+  { name: 'Nol-Tec Systems', best: 'Testing every phase before you choose', url: 'https://www.nol-tec.com/dense-pneumatic-conveying/', type: 'Manufacturer', hq: 'Lino Lakes, MN', owner: 'Subsidiary of KC Green',
+    builds: 'Dense phase and dilute phase systems, each offered in pressure or vacuum. Its test lab lists dense phase pressure, slow-flow dense phase pressure, dense phase vacuum, dilute phase pressure, and dilute phase vacuum tests. Nol-Tec states it has tested over 800 materials on full-size equipment.',
+    fit: 'you do not yet know which phase or air source fits, and want one supplier to test all of them.' },
+  { name: 'VAC-U-MAX', best: 'Vacuum conveying, packaged or custom', url: 'https://vac-u-max.com/bulk-material-handling/pneumatic-conveying/', type: 'Manufacturer', hq: 'Belleville, NJ',
+    builds: 'Vacuum conveying in dilute phase and dense phase. The Signature Series is a preconfigured package with a vacuum receiver, controls, vacuum producer, hose, and wand. VAC-U-MAX also builds custom systems and states its test lab has over 6,000 square feet of floor space and tubing runs up to 400 feet. It does not list positive pressure systems.',
+    fit: 'the transfer suits vacuum, from a small packaged unit up to a custom system, in chemical, food, or pharmaceutical plants.' },
+  { name: 'Volkmann', best: 'ATEX-certified vacuum conveyors', url: 'https://www.volkmannusa.com/pneumatic-vacuum-conveyors/', type: 'Manufacturer', hq: 'Soest, Germany (US: Bristol, PA)', owner: 'Family business',
+    builds: 'Vacuum conveyors that transfer material in lean phase or dense phase plug flow. Volkmann states that its VS and PPC series conveyors are ATEX-certified. The US subsidiary runs a 750 square foot test laboratory in Bristol, PA. It does not list positive pressure systems.',
+    fit: 'the material is a food, pharmaceutical, or chemical powder moved in batches, and explosion-zone certification of the conveyor matters.' },
+];
+
+const url = 'https://packagingconveyor.com/resources/conveyor-manufacturers/pneumatic/';
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Manufacturers", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/" },
+    { "@type": "ListItem", "position": 4, "name": "Pneumatic Conveying System Manufacturers", "item": url }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best Pneumatic Conveying System Manufacturers: Top 10 Compared",
+  "description": "Ten pneumatic conveying system manufacturers compared by conveying phase, air source, material testing, and stated industry focus.",
+  "url": url,
+  "datePublished": "2026-10-05",
+  "author": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" },
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best pneumatic conveying system manufacturers by application",
+  "description": "Top pneumatic conveying system manufacturers with the application each one fits best, listed alphabetically.",
+  "numberOfItems": makers.length,
+  "itemListElement": makers.map((m, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": { "@type": "Organization", "name": m.name, "url": m.url, "address": { "@type": "PostalAddress", "addressLocality": m.hq } }
+  }))
+};
+
+const faqs = [
+  ['Who are the best pneumatic conveying system manufacturers?', 'The best pneumatic conveying manufacturer depends on the material and the conveying phase. Macawber, Nol-Tec, Coperion, and Cyclonaire build dense phase systems for abrasive or fragile materials. Volkmann, VAC-U-MAX, and Hapman build vacuum conveyors for batch transfer of food, pharmaceutical, and chemical powders. Flexicon builds dilute phase systems alongside bulk bag equipment. Magnum Systems combines conveying with packaging and controls. These picks are based on each company\'s published scope, not on testing.'],
+  ['Who makes pneumatic conveying systems?', 'Companies that publish pneumatic conveying system product lines include Coperion, Cyclonaire, Flexicon, Hapman, Kice Industries, Macawber Engineering, Magnum Systems, Nol-Tec Systems, VAC-U-MAX, and Volkmann. They do not all build the same thing. Some offer only vacuum systems or only dilute phase, so check the phase and air source before requesting a quote.'],
+  ['Which pneumatic conveying manufacturers offer dense phase systems?', 'Coperion, Cyclonaire, Macawber Engineering, Magnum Systems, and Nol-Tec Systems state that they build dense phase systems. VAC-U-MAX and Volkmann offer dense phase under vacuum. Flexicon and Hapman list dilute phase only.'],
+  ['Which manufacturers build only vacuum conveying systems?', 'VAC-U-MAX, Volkmann, and Hapman list vacuum conveying and do not list positive pressure systems. Vacuum suits multiple pickup points and shorter distances. Higher rates and longer distances usually call for a pressure system from a supplier that builds both.'],
+  ['Do pneumatic conveying manufacturers test my material before quoting?', 'Most of the companies listed state that they run a test lab. Published details vary, from a 750 square foot lab at Volkmann to a 12,000 square foot facility at Macawber, and Nol-Tec lists separate tests for each phase and air source. Ask whether the test uses your own material, at full scale, over a distance and bend count close to your layout.'],
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+};
+---
+<BaseLayout
+  title="Best Pneumatic Conveying System Manufacturers: Top 10 (2026)"
+  description="The top 10 pneumatic conveying system manufacturers and what each is best for: dense phase, dilute phase, vacuum, testing. Compared on published scope."
+  canonical={url}
+  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+>
+<h1>Best Pneumatic Conveying System Manufacturers by Application</h1>
+<p class="usa-intro">The best pneumatic conveying system manufacturer depends on your material and the conveying phase it needs. Macawber and Nol-Tec are the dense phase picks. Volkmann and VAC-U-MAX specialize in vacuum. Coperion and Magnum Systems cover whole process lines. This page compares the top 10 pneumatic conveying manufacturers in North America using each company's published scope.</p>
+
+<div class="usa-summary-box" role="region" aria-labelledby="criteria-heading">
+<div class="usa-summary-box__body">
+<h2 class="usa-summary-box__heading" id="criteria-heading">How this list was built</h2>
+<div class="usa-summary-box__text">
+<ul>
+<li>A company is listed if it publishes a product page for pneumatic conveying systems for powders, granules, or pellets, and has a US location.</li>
+<li>The list is alphabetical. We do not rank companies 1 to 10, because the best choice changes with the material.</li>
+<li>"Best for" labels reflect each company's published scope.</li>
+<li>"Not stated" means the company's conveying pages did not mention it on October 5, 2026. It does not mean the company cannot do it.</li>
+<li>No company paid to be listed. For how the technology works, see the <a href="/conveyor-types/pneumatic-conveyors/">pneumatic conveying guide</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="best-heading">Best Pneumatic Conveying Manufacturer by Need</h2>
+<table>
+<thead>
+<tr><th>If you need</th><th>Shortlist</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>Dense phase for abrasive or fragile material</td><td>Macawber, Nol-Tec, Coperion, Cyclonaire</td><td>All four state dense phase systems. Macawber centers its range on dense phase.</td></tr>
+<tr><td>Vacuum transfer of food, pharmaceutical, or chemical powders</td><td>Volkmann, VAC-U-MAX, Hapman</td><td>All three list vacuum conveying as their product.</td></tr>
+<tr><td>Dilute phase with bulk bag unloading or filling</td><td>Flexicon</td><td>Builds dilute phase systems and bulk bag equipment.</td></tr>
+<tr><td>Help choosing the phase</td><td>Nol-Tec, Cyclonaire, Coperion</td><td>Each states testing across phases at full scale.</td></tr>
+<tr><td>Conveying, packaging, and controls from one supplier</td><td>Magnum Systems, Coperion</td><td>Both describe integrated systems beyond conveying.</td></tr>
+<tr><td>Conveying designed with dust control</td><td>Kice Industries</td><td>Sells conveying alongside dust control and aspiration.</td></tr>
+</tbody>
+</table>
+
+<h2 id="compare-heading">Top Pneumatic Conveying Manufacturers Compared</h2>
+<table>
+<thead>
+<tr><th>Company</th><th>Phase stated</th><th>Air source stated</th><th>Material testing stated</th><th>Stated focus</th></tr>
+</thead>
+<tbody>
+<tr><td>Coperion</td><td>Dilute and dense</td><td>Pressure or vacuum</td><td>Full-scale material testing</td><td>Plastics, chemical, mineral, food, pet food, pharmaceutical</td></tr>
+<tr><td>Cyclonaire</td><td>Dilute, semi-dense, and dense</td><td>Vacuum, pressure, and combined</td><td>Full scale test facility</td><td>Battery, rubber, rail, mineral, cement</td></tr>
+<tr><td>Flexicon</td><td>Dilute</td><td>Vacuum and pressure</td><td>Test labs with full-size equipment</td><td>Powders, granules, pellets, flakes</td></tr>
+<tr><td>Hapman</td><td>Dilute</td><td>Vacuum</td><td>Not stated</td><td>Food processing, pharmaceuticals, chemicals</td></tr>
+<tr><td>Kice Industries</td><td>Not stated</td><td>Vacuum and pressure</td><td>Air system simulation lab</td><td>Conveying with dust control</td></tr>
+<tr><td>Macawber Engineering</td><td>Dense</td><td>Pressure</td><td>12,000 sq ft test facility</td><td>Fragile, abrasive, damp, lumpy, or hot materials</td></tr>
+<tr><td>Magnum Systems</td><td>Dilute and dense</td><td>Not stated</td><td>Test lab</td><td>Food, chemical, minerals, pharmaceuticals, plastics</td></tr>
+<tr><td>Nol-Tec Systems</td><td>Dilute and dense</td><td>Pressure and vacuum</td><td>Test lab, each phase and air source</td><td>Battery, building materials, chemical, food and beverage, glass, tire and rubber</td></tr>
+<tr><td>VAC-U-MAX</td><td>Dilute and dense</td><td>Vacuum</td><td>6,000 sq ft test lab, runs up to 400 ft</td><td>Chemical, food, agriculture, pharmaceutical, nutraceutical</td></tr>
+<tr><td>Volkmann</td><td>Lean (dilute) and dense</td><td>Vacuum</td><td>750 sq ft test lab in Bristol, PA</td><td>Food, pharmaceutical, chemical</td></tr>
+</tbody>
+</table>
+<p class="source-note">Entries are each company's own published statements, not a test of capability. Confirm scope with the supplier before you rule one out.</p>
+
+<h2 id="list-heading">Top 10 Pneumatic Conveying Manufacturers (A to Z)</h2>
+<p>Each card links to the manufacturer's pneumatic conveying page. "Shortlist when" is our reading of the published scope, not an endorsement.</p>
+<MakerList items={makers} />
+
+<h2 id="differences-heading">Five Differences to Compare</h2>
+<h3>Phase offered</h3>
+<p>A supplier that builds only dilute phase will quote dilute phase. If your material is abrasive or breaks easily, include at least one supplier that builds dense phase so you see both designs priced. The guide explains <a href="/conveyor-types/pneumatic-conveyors/#phase-heading">dilute phase vs. dense phase</a> in detail.</p>
+<h3>Air source</h3>
+<p>VAC-U-MAX, Volkmann, and Hapman list vacuum only. Vacuum fits several pickup points feeding one destination and keeps leaks inward. Pressure fits one pickup feeding several destinations and reaches longer distances. Nol-Tec, Cyclonaire, Coperion, Flexicon, and Kice state both. See <a href="/conveyor-types/vacuum-conveyors/">vacuum conveyors</a> for where vacuum fits.</p>
+<h3>Semi-dense phase</h3>
+<p>Cyclonaire names semi-dense phase as a third category between dilute and dense. Other suppliers fold it into one of the two. When two quotes use different phase names, compare the conveying velocity and the air pressure, not the label.</p>
+<h3>Material testing</h3>
+<p>Pneumatic systems are sized from how a specific material behaves in a pipe. Most listed companies state that they run a test lab, but the published scale varies widely. The useful questions are whether the test uses your material, at full scale, and over a route close to yours.</p>
+<h3>Combustible dust</h3>
+<p>Suppliers describe explosion protection in different terms. Volkmann and Flexicon cite ATEX, which is a European Union scheme. Hapman cites a pressure-rated receiver for use with venting or suppression. Others say nothing on their conveying pages. In the United States the governing standard is <a href="https://www.nfpa.org/codes-and-standards/nfpa-660-standard-development/660" target="_blank" rel="noopener noreferrer">NFPA 660</a>, which combines the former NFPA 61, 484, 652, 654, 655, and 664. ATEX certification of a conveyor does not by itself show that an installation meets NFPA 660. <a href="https://www.osha.gov/combustible-dust" target="_blank" rel="noopener noreferrer">OSHA</a> publishes its own combustible dust guidance.</p>
+
+<SpecChecklist id="rfq-heading" title="Pneumatic Conveying RFQ Checklist" items={[
+  ['Material', 'Name, bulk density, particle size range, moisture content, and whether it is abrasive, fragile, sticky, or hygroscopic.'],
+  ['Rate', 'Pounds or kilograms per hour, and whether transfer is continuous or in batches.'],
+  ['Route', 'Horizontal distance, vertical lift, and number of bends.'],
+  ['Pickups and destinations', 'How many of each, and what equipment feeds and receives the material.'],
+  ['Product damage', 'How much breakage or segregation the process can tolerate.'],
+  ['Combustibility', 'Dust test data if available, and the status of your dust hazard analysis.'],
+  ['Sanitary requirements', 'Cleaning method, changeover frequency, and any FDA, USDA, or 3-A requirement.'],
+  ['Utilities', 'Compressed air capacity and pressure, available power, and space for a blower or vacuum pump.'],
+  ['Testing', 'Whether the supplier will test your material, at what scale, and whether the result backs a performance guarantee.'],
+  ['Scope', 'Who supplies controls, installation, and commissioning.'],
+]} />
+
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://coperion.com/en/products-services/plants-systems/pneumatic-conveying-systems" target="_blank" rel="noopener noreferrer">Pneumatic conveying systems</a>, <a href="https://coperion.com/en/about-us/our-business" target="_blank" rel="noopener noreferrer">Our business</a>, and <a href="https://coperion.com/en/news-media/newsroom/2024/schenck-process-fpm-is-coperion" target="_blank" rel="noopener noreferrer">Schenck Process FPM is Coperion</a>, Coperion. Phases, air source, industries, Hillenbrand ownership, name change.</li>
+<li><a href="https://www.cyclonaire.com/convey-methods/" target="_blank" rel="noopener noreferrer">Convey methods</a> and <a href="https://www.cyclonaire.com/services/" target="_blank" rel="noopener noreferrer">services</a>, Cyclonaire. Phases, test modes, markets, York, NE headquarters.</li>
+<li><a href="https://flexicon.com/bulk-handling-equipment-and-systems/pneumatic-conveyors/" target="_blank" rel="noopener noreferrer">Pneumatic conveyors</a> and <a href="https://flexicon.com/test-lab/" target="_blank" rel="noopener noreferrer">test lab</a>, Flexicon. Dilute phase vacuum and pressure systems, standards, test labs.</li>
+<li><a href="https://hapman.com/equipment-and-systems/conveyors/vacuum-conveyors/" target="_blank" rel="noopener noreferrer">Vacuum conveyors</a>, Hapman, and <a href="https://kmcglobal.com/group-of-companies/" target="_blank" rel="noopener noreferrer">group of companies</a>, KMC Global. Dilute phase vacuum, receiver pressure rating, materials of construction, ownership.</li>
+<li><a href="https://www.kice.com/capabilities/air-systems/pneumatic-conveying/" target="_blank" rel="noopener noreferrer">Pneumatic conveying</a> and <a href="https://www.kice.com/about/people/" target="_blank" rel="noopener noreferrer">people</a>, Kice Industries. Vacuum and pressure systems, lab, family ownership.</li>
+<li><a href="https://www.macawber.com/pneumatic-conveying/dense-phase-systems/" target="_blank" rel="noopener noreferrer">Dense phase systems</a> and <a href="https://www.macawber.com/services/material-testing/" target="_blank" rel="noopener noreferrer">material testing</a>, Macawber Engineering. Dense phase pressure conveying, test facility.</li>
+<li><a href="https://magnumsystems.com/solution/pneumatic-conveying-systems/" target="_blank" rel="noopener noreferrer">Pneumatic conveying systems</a> and <a href="https://magnumsystems.com/2023/02/3-rivers-capital-acquires-magnum-systems/" target="_blank" rel="noopener noreferrer">3 Rivers Capital acquires Magnum Systems</a>, Magnum Systems. Phases, integrator scope, test lab, ownership.</li>
+<li><a href="https://www.nol-tec.com/dense-pneumatic-conveying/" target="_blank" rel="noopener noreferrer">Dense phase</a>, <a href="https://www.nol-tec.com/dilute-pneumatic-conveying/" target="_blank" rel="noopener noreferrer">dilute phase</a>, and <a href="https://www.nol-tec.com/test-lab/" target="_blank" rel="noopener noreferrer">test lab</a>, Nol-Tec Systems. Pressure and vacuum in both phases, lab test list.</li>
+<li><a href="https://vac-u-max.com/bulk-material-handling/pneumatic-conveying/" target="_blank" rel="noopener noreferrer">Pneumatic conveying</a> and <a href="https://vac-u-max.com/news/maximizing-processes-get-to-know-the-vac-u-max-test-lab/" target="_blank" rel="noopener noreferrer">test lab</a>, VAC-U-MAX. Dilute and dense phase vacuum, Signature Series, lab size.</li>
+<li><a href="https://www.volkmannusa.com/pneumatic-vacuum-conveyors/" target="_blank" rel="noopener noreferrer">Pneumatic vacuum conveyors</a>, <a href="https://www.volkmannusa.com/explosion-risk-prevention-atex/" target="_blank" rel="noopener noreferrer">ATEX</a>, and <a href="https://www.volkmannusa.com/test-lab/" target="_blank" rel="noopener noreferrer">test lab</a>, Volkmann USA. Lean and dense phase vacuum, ATEX certification, lab.</li>
+<li><a href="https://www.nfpa.org/codes-and-standards/nfpa-660-standard-development/660" target="_blank" rel="noopener noreferrer">NFPA 660, Standard for Combustible Dusts and Particulate Solids</a>, National Fire Protection Association. Consolidation of NFPA 61, 484, 652, 654, 655, and 664.</li>
+<li><a href="https://www.osha.gov/combustible-dust" target="_blank" rel="noopener noreferrer">Combustible Dust</a>, Occupational Safety and Health Administration.</li>
+</ul>
+
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+{faqs.map(([q, a], i) => (
+  <Fragment>
+    <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-${i + 1}`}>{q}</button></h3>
+    <div id={`faq-${i + 1}`} class="usa-accordion__content usa-prose"><p>{a}</p></div>
+  </Fragment>
+))}
+</div>
+
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/pneumatic-conveyors/">Pneumatic Conveying Guide</a></h3>
+<p class="usa-collection__description">Dilute vs. dense phase, pressure vs. vacuum, components, and design considerations.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/vacuum-conveyors/">Vacuum Conveyors</a></h3>
+<p class="usa-collection__description">Where vacuum transfer fits and how it is specified.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/screw-conveyors/">Screw Conveyors</a></h3>
+<p class="usa-collection__description">The mechanical alternative for short bulk transfers.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/">Conveyor Manufacturer Directory</a></h3>
+<p class="usa-collection__description">All listed manufacturers and integrators, filterable by conveyor type.</p></div></li>
+</ul>
+</BaseLayout>

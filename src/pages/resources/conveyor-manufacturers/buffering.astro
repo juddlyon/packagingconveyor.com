@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MakerList from '../../../components/MakerList.astro';
+import SpecChecklist from '../../../components/SpecChecklist.astro';
+
+// Alphabetical. Every fact below comes from the company's own pages (or its owner's), checked October 5, 2026. See Sources.
+const makers = [
+  { name: 'AmbaFlex', best: 'First-in, first-out with no product contact', url: 'https://www.ambaflex.com/en/products/accuveyor-avh-series', type: 'Manufacturer', hq: 'Zwaag, Netherlands (US: Canton, OH)',
+    builds: 'AccuVeyor spiral and horizontal buffers. The AVh keeps each product on the same section of belt between infeed and outfeed, and AmbaFlex describes it as first-in, first-out with no pressure and no product contact, with accumulation length up to 115 m (377 ft). It handles cartons, bars, pouches, bottles, and cans. The AVL is a horizontal buffer whose U-shaped segment moves to lengthen or shorten the path. The AVs is a single-file spiral for time delay.',
+    fit: 'primary packs must stay in order and must not touch or transfer between belts.' },
+  { name: 'Descon', best: 'Turnkey beverage lines', url: 'https://pacteon.com/descon-conveyor-systems', type: 'Manufacturer and integrator', hq: 'Newmarket, ON, Canada', owner: 'Subsidiary of Pacteon Group since 2024',
+    builds: 'In-line, zero-pressure first-in, first-out, and bi-directional accumulation for empty and full cans, bottles, and PET containers, using low-back-pressure belting and zone control. Descon designs and integrates conveyor systems for food and beverage lines.',
+    fit: 'the buffer is being bought as part of a complete beverage conveyor system.' },
+  { name: 'Garvey', best: 'Unstable containers', url: 'https://garvey.com/products/accumulators/', type: 'Manufacturer', hq: 'Hartland, WI', owner: 'Part of Columbus McKinnon since 2021',
+    builds: 'Bi-Flo and Infinity loop tables that use opposing conveyor movement to hold product, which Garvey states handle product with no back pressure. The same tables single-file and lane product. Garvey lists the G5 Series with a 40 to 60 square foot accumulation area and single filing of unstable bottles at up to 300 per minute. The Spiral Infinity conveys bottles, cans, and jars up and down in single file or mass flow.',
+    fit: 'containers are unstable or easily damaged and you want accumulation and single filing in one machine.' },
+  { name: 'Hytrol', best: 'Cartons, totes, and parcels', url: 'https://hytrol.com/products/accumulation/zero-pressure-conveyor/', type: 'Manufacturer', hq: 'Jonesboro, AR', owner: 'Privately owned',
+    builds: 'Zero-pressure roller accumulation, where products are spaced apart and do not touch. EZLogic controls each zone with photoelectric sensing and needs no PLC. Minimum-pressure models can be adjusted to bring back pressure to 2 percent of the live load. Hytrol sells only through its integration partner network.',
+    fit: 'the product is a carton, tote, or parcel and you are buying through an integrator.' },
+  { name: 'ITW Hartness', best: 'High-speed bottle and can lines', url: 'https://hartness.com/equipment/accumulators/', type: 'Manufacturer', hq: 'Greenville, SC', owner: 'Part of Illinois Tool Works since 2009',
+    builds: 'DYNAC accumulators in two families. The 6000 series models are single-file spiral buffers that Hartness describes as first-in, first-out and pressure-less, with speeds up to 200 fpm and over 600 ft of accumulation. The 7100 series is a floor-level mass flow buffer in counter flow, dual flow, and flow through configurations for plastic, aluminum, and glass containers, with a minimum footprint of 8.75 by 73.75 ft.',
+    fit: 'the line runs bottles or cans at high speed and product order matters.' },
+  { name: 'Multi-Conveyor', best: 'Custom lines and large containers', url: 'https://www.multi-conveyor.com/packaging-solutions/bi-directional-accumulation-tables', type: 'Manufacturer', hq: 'Winneconne, WI', owner: 'Family-owned',
+    builds: 'Bi-directional accumulation tables, which it states return product on a last in, first out basis. Also in-line accumulation tables, alpine and serpentine conveyors, and row-by-row tables where pneumatic sweep arms move product on and off in rows, a design it recommends for larger containers.',
+    fit: 'the buffer is part of a custom line, or the containers are large enough to need row-by-row handling.' },
+  { name: 'Nercon', best: 'Widest choice of buffering methods', url: 'https://www.nerconconveyors.com/Conveyor/Conveyor-Equipment/Accumulators', type: 'Manufacturer', hq: 'Neenah, WI',
+    builds: 'A wide range, with product order stated for each. Bi-directional tables are first-in, last-out. Alpine conveyor systems are in-line first-in, first-out. The multi-lane zero-pressure table offers first-in, first-out control. The Rolco vertical accumulator stores product row by row as first-in, last-out. Nercon invites product samples for testing and runs factory acceptance tests at its Oconto, WI plant.',
+    fit: 'you want to compare several buffering methods from one supplier.' },
+  { name: 'Ryson International', best: 'Limited floor space', url: 'https://ryson.com/product/spiral-conveyor/vertical-accumulation-buffer/', type: 'Manufacturer', hq: 'Yorktown, VA', owner: 'Owned by Royal Apollo Group',
+    builds: 'Vertical Accumulation Buffers built from one reversible spiral or from two or more spirals. Ryson lists bottles, cans, pails, bags, bundles, totes, and containers as products, slat widths from 6 to 20 inches, and a total capacity of 1,600 lbs on the spiral at one time. The spiral can stop and start fully loaded. Ryson does not state product order on its buffer page.',
+    fit: 'floor space is short and overhead space is free. Ask which configuration gives first-in, first-out.' },
+  { name: 'Shuttleworth', best: 'Scuff-sensitive products and laned accumulation', url: 'https://www.shuttleworth.com/products/accumulation-buffering-conveyor-systems/', type: 'Manufacturer', hq: 'Huntington, IN', owner: 'ProMach brand',
+    builds: 'Slip-Torque roller conveyors, which Shuttleworth states create very low back pressure. Laned accumulation puts several independent lanes on one bed with one drive. DASH is a first-in, first-out dynamic accumulator with a servo-controlled guide. RallyTrak tables are built for glass bottles, plastic bottles, and cans. Shuttleworth formed a dedicated accumulation division in 2025.',
+    fit: 'products scuff, shingle, or jam under pressure, or the line needs laned accumulation.' },
+];
+
+const url = 'https://packagingconveyor.com/resources/conveyor-manufacturers/buffering/';
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Manufacturers", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/" },
+    { "@type": "ListItem", "position": 4, "name": "Buffering System Manufacturers", "item": url }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best Conveyor Buffering System Manufacturers: Top 9 Compared",
+  "description": "Nine manufacturers of conveyor buffering and accumulation systems compared by buffering method, product order, and products handled.",
+  "url": url,
+  "datePublished": "2026-10-05",
+  "author": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" },
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best conveyor buffering and accumulation system manufacturers by application",
+  "description": "Top buffering and accumulation system manufacturers with the application each one fits best, listed alphabetically.",
+  "numberOfItems": makers.length,
+  "itemListElement": makers.map((m, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": { "@type": "Organization", "name": m.name, "url": m.url, "address": { "@type": "PostalAddress", "addressLocality": m.hq } }
+  }))
+};
+
+const faqs = [
+  ['What are the best conveyor buffering systems for high-speed packaging lines?', 'There is no single best system. For bottles and cans at high speed, first-in, first-out spiral buffers and floor-level mass flow buffers are the common choices, built by ITW Hartness (DYNAC) and AmbaFlex (AccuVeyor). Loop tables from Garvey and Shuttleworth suit unstable containers. Bi-directional tables from Nercon and Multi-Conveyor are simpler but return product last-in, first-out. For cartons and cases, zero-pressure roller accumulation from Hytrol or low-back-pressure rollers from Shuttleworth are typical.'],
+  ['Who are the top conveyor buffering system manufacturers?', 'Nine manufacturers publish buffering and accumulation equipment for North American packaging lines: AmbaFlex, Descon, Garvey, Hytrol, ITW Hartness, Multi-Conveyor, Nercon, Ryson, and Shuttleworth. ITW Hartness and AmbaFlex publish first-in, first-out buffers for high-speed lines. Garvey and Shuttleworth build loop tables and low-pressure accumulation. Hytrol builds zero-pressure roller accumulation for cartons and totes.'],
+  ['Which buffering systems are first-in, first-out?', 'Manufacturers state first-in, first-out for the AmbaFlex AccuVeyor AVh, the ITW Hartness DYNAC 6400 and 6900, Nercon Alpine conveyor systems, the Shuttleworth DASH, and Descon zero-pressure accumulation. Bi-directional tables are last-in, first-out, as Nercon and Multi-Conveyor both state. Loop tables recirculate product, so order is not guaranteed.'],
+  ['Which companies build vertical accumulation buffers?', 'Ryson builds the Vertical Accumulation Buffer from one reversible spiral or a pair of spirals. AmbaFlex builds the AccuVeyor AVh and AVs spiral buffers. ITW Hartness builds the DYNAC 6400, 6600, 6900, and 6930 single-file spiral accumulators. Garvey offers the Spiral Infinity, and Nercon offers the Rolco vertical accumulator, which stores product row by row.'],
+  ['What is a low back pressure buffering system?', 'It is an accumulation conveyor that limits how hard queued products push on each other. Zero-pressure systems, such as Hytrol EZLogic conveyors, keep a gap so products do not touch. Low-pressure systems let products touch lightly. Shuttleworth Slip-Torque rollers stop turning under accumulated product, and Hytrol states its minimum-pressure conveyors can be set to 2 percent of the live load.'],
+  ['Who installs conveyor buffering systems?', 'It depends on the supplier. Hytrol sells only through its integration partner network, so an integrator installs the system. Descon and Multi-Conveyor describe installation as part of their projects. For the others, ask whether installation and commissioning are in the quote or left to your integrator.'],
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+};
+---
+<BaseLayout
+  title="Best Conveyor Buffering Systems: Top 9 Manufacturers (2026)"
+  description="The best conveyor buffering systems for packaging lines and the top 9 manufacturers that build them, compared by method, FIFO or LIFO, and products handled."
+  canonical={url}
+  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+>
+<h1>Best Conveyor Buffering Systems and Who Builds Them</h1>
+<p class="usa-intro">For a high-speed bottle or can line, the best conveyor buffering system is usually a first-in, first-out spiral or mass flow buffer, such as those built by ITW Hartness and AmbaFlex. Loop tables from Garvey and Shuttleworth suit unstable containers. Zero-pressure rollers from Hytrol suit cartons. This page compares the top 9 buffering system manufacturers and matches each buffering method to the companies that build it.</p>
+
+<div class="usa-summary-box" role="region" aria-labelledby="criteria-heading">
+<div class="usa-summary-box__body">
+<h2 class="usa-summary-box__heading" id="criteria-heading">How this list was built</h2>
+<div class="usa-summary-box__text">
+<ul>
+<li>A company is listed if it publishes a product page for buffering or accumulation equipment used on packaging lines and sells in North America.</li>
+<li>The list is alphabetical. We do not rank companies 1 to 9, because the best choice changes with the product and the line.</li>
+<li>"Best for" labels reflect each company's published product range.</li>
+<li>Product order (first-in, first-out or last-in, first-out) is shown only where the manufacturer states it. Checked October 5, 2026.</li>
+<li>No company paid to be listed. For buffer sizing, see the <a href="/conveyor-types/buffer-conveyors/#sizing-heading">buffer conveyor guide</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="methods-heading">Best Buffering Method by Need, and Who Builds It</h2>
+<table>
+<thead>
+<tr><th>Method</th><th>Product order</th><th>Space used</th><th>Products named by makers</th><th>Companies</th></tr>
+</thead>
+<tbody>
+<tr><td>Spiral buffer</td><td>First-in, first-out stated by AmbaFlex and ITW Hartness</td><td>Vertical space above a small footprint</td><td>Bottles, cans, cartons, pouches, bundles, totes</td><td>AmbaFlex, Garvey, ITW Hartness, Ryson</td></tr>
+<tr><td>Mass flow, serpentine, or alpine buffer</td><td>First-in, first-out stated by Nercon and Shuttleworth</td><td>Floor level or elevated lanes</td><td>Plastic, aluminum, and glass containers, small cartons, trays</td><td>AmbaFlex, ITW Hartness, Multi-Conveyor, Nercon, Shuttleworth</td></tr>
+<tr><td>Bi-directional table</td><td>Last-in, first-out stated by Nercon and Multi-Conveyor</td><td>A table beside the line</td><td>Cans, bottles, PET containers</td><td>Descon, Multi-Conveyor, Nercon</td></tr>
+<tr><td>Recirculating loop table</td><td>Not stated</td><td>A table in or beside the line</td><td>Glass and plastic bottles, cans, jars</td><td>Garvey, Shuttleworth</td></tr>
+<tr><td>Laned or row-by-row accumulation</td><td>Either, depending on the design</td><td>Parallel lanes or stacked rows</td><td>Round, square, rectangular, and tapered products</td><td>Garvey, Multi-Conveyor, Nercon, Shuttleworth</td></tr>
+<tr><td>Zero-pressure or low-pressure rollers</td><td>Not stated, in-line</td><td>Conveyor length in the line</td><td>Cartons, parcels, boxes, totes</td><td>Hytrol, Shuttleworth</td></tr>
+</tbody>
+</table>
+<p class="source-note">Product order and products are taken from manufacturer pages. Where no manufacturer states the order, the table says so.</p>
+
+<h2 id="list-heading">Top 9 Buffering System Manufacturers (A to Z)</h2>
+<p>Each card links to the manufacturer's accumulation product page. "Shortlist when" is our reading of the published scope, not an endorsement.</p>
+<MakerList items={makers} />
+
+<h2 id="differences-heading">Four Questions That Narrow the Shortlist</h2>
+<h3>Does product order matter?</h3>
+<p>If the line carries dated, coded, or temperature-sensitive product, you need first-in, first-out. That rules out a bi-directional table, which Nercon and Multi-Conveyor both describe as last-in, first-out, unless the table empties completely after every stop. Loop tables recirculate product, so ask the supplier how long a single container can stay on the table.</p>
+<h3>Can the products touch?</h3>
+<p>Label scuffing, crushed cartons, and shingled pouches come from back pressure. AmbaFlex and ITW Hartness describe pressure-free spiral buffers. Garvey states no back pressure on its loop tables. Hytrol zero-pressure conveyors keep products apart, and Shuttleworth describes very low back pressure on Slip-Torque rollers. See <a href="/conveyor-types/accumulation-conveyors/zero-pressure/">zero-pressure accumulation</a> and <a href="/conveyor-types/accumulation-conveyors/minimum-pressure/">minimum-pressure accumulation</a> for how each works.</p>
+<h3>Floor space or overhead space?</h3>
+<p>Spiral buffers store product upward. A floor-level mass flow buffer needs a long rectangle: ITW Hartness lists a minimum footprint of 8.75 by 73.75 ft for the DYNAC 7100. Tables sit beside the line. Measure both the floor and the clear height before requesting quotes.</p>
+<h3>Single file or mass flow?</h3>
+<p>Single-file buffers hold each product in a known position, which suits unstable shapes and gives first-in, first-out. Mass flow buffers hold more containers per square foot but need round, stable products. The <a href="/conveyor-types/buffer-conveyors/">buffer conveyor guide</a> covers the types in more depth.</p>
+
+<SpecChecklist id="rfq-heading" title="Buffering System RFQ Checklist" items={[
+  ['Product', 'Container or pack type, dimensions, weight, and how stable it is when pushed.'],
+  ['Line speed', 'Units per minute at the buffer location, and the range across formats.'],
+  ['Buffer time', 'Minutes of accumulation needed, and which machine stops it is meant to cover.'],
+  ['Product order', 'Whether first-in, first-out is required.'],
+  ['Contact', 'Whether products can touch, and how much pressure labels and packs tolerate.'],
+  ['Flow', 'Single file, laned, or mass flow at the infeed and at the discharge.'],
+  ['Space', 'Floor area and clear height available, with a layout drawing.'],
+  ['Changeover', 'Number of formats and how guides or lanes are adjusted between them.'],
+  ['Environment', 'Dry, wet, or washdown, and any glass breakage or spill handling.'],
+  ['Controls', 'Signals to and from the upstream and downstream machines, and the PLC platform.'],
+  ['Scope', 'Who installs, who commissions, and whether a factory test with your product is included.'],
+]} />
+
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.ambaflex.com/en/products/accuveyor-avh-series" target="_blank" rel="noopener noreferrer">AccuVeyor AVh</a>, <a href="https://www.ambaflex.com/en/products/accuveyor-avl-series" target="_blank" rel="noopener noreferrer">AVL</a>, and <a href="https://www.ambaflex.com/en/products/accuveyor-avs-series" target="_blank" rel="noopener noreferrer">AVs</a>, AmbaFlex. Product order, accumulation length, products handled.</li>
+<li><a href="https://pacteon.com/descon-conveyor-systems" target="_blank" rel="noopener noreferrer">Descon conveyor systems</a> and <a href="https://pacteon.com/news/pacteon-news/pacteon-acquires-descon" target="_blank" rel="noopener noreferrer">Pacteon acquires Descon</a>, Pacteon Group, June 21, 2024. Accumulation types, containers, ownership.</li>
+<li><a href="https://garvey.com/products/accumulators/" target="_blank" rel="noopener noreferrer">Accumulators</a>, <a href="https://garvey.com/infinity-models/" target="_blank" rel="noopener noreferrer">Infinity models</a>, <a href="https://garvey.com/products/laning/" target="_blank" rel="noopener noreferrer">laning</a>, and <a href="https://garvey.com/contact-us/" target="_blank" rel="noopener noreferrer">contact page</a>, Garvey. Loop tables, G5 Series figures, Hartland, WI address.</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1005229/000100522921000322/exhibit991garveyclosingnov.htm" target="_blank" rel="noopener noreferrer">Columbus McKinnon completes acquisition of Garvey Corporation</a>, SEC filing exhibit, December 1, 2021.</li>
+<li><a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Zero-pressure conveyor</a>, <a href="https://hytrol.com/products/accumulation/minimum-pressure-conveyor/" target="_blank" rel="noopener noreferrer">minimum-pressure conveyor</a>, and <a href="https://hytrol.com/company/about/" target="_blank" rel="noopener noreferrer">about page</a>, Hytrol. EZLogic, back pressure figure, integration partner sales, private ownership.</li>
+<li><a href="https://hartness.com/equipment/accumulators/" target="_blank" rel="noopener noreferrer">Accumulators</a>, <a href="https://hartness.com/product/dynac-7100/" target="_blank" rel="noopener noreferrer">DYNAC 7100</a>, <a href="https://hartness.com/product/dynac-6400/" target="_blank" rel="noopener noreferrer">DYNAC 6400</a>, and <a href="https://hartness.com/about-us/" target="_blank" rel="noopener noreferrer">about page</a>, ITW Hartness. Product order, speeds, footprint, ITW ownership.</li>
+<li><a href="https://www.multi-conveyor.com/packaging-solutions/bi-directional-accumulation-tables" target="_blank" rel="noopener noreferrer">Bi-directional accumulation tables</a> and <a href="https://www.multi-conveyor.com/conveyors/accumulation-alpine-conveyors" target="_blank" rel="noopener noreferrer">alpine conveyors</a>, Multi-Conveyor. Last in, first out statement, row-by-row sweep tables.</li>
+<li><a href="https://www.nerconconveyors.com/Conveyor/Conveyor-Equipment/Accumulators" target="_blank" rel="noopener noreferrer">Accumulators</a>, Nercon. Product order for bi-directional, Alpine, zero-pressure, and Rolco accumulators.</li>
+<li><a href="https://ryson.com/product/spiral-conveyor/vertical-accumulation-buffer/" target="_blank" rel="noopener noreferrer">Vertical Accumulation Buffer</a> and <a href="https://ryson.com/about-ryson/" target="_blank" rel="noopener noreferrer">about page</a>, Ryson International. Configurations, slat widths, capacity, ownership.</li>
+<li><a href="https://www.shuttleworth.com/products/accumulation-buffering-conveyor-systems/" target="_blank" rel="noopener noreferrer">Accumulation and buffering</a>, <a href="https://www.shuttleworth.com/products/laned-accumulation/" target="_blank" rel="noopener noreferrer">laned accumulation</a>, <a href="https://www.shuttleworth.com/products/dynamic-accumulation-conveyor/" target="_blank" rel="noopener noreferrer">DASH</a>, and <a href="https://www.shuttleworth.com/news/shuttleworth-introduces-dedicated-accumulation-division-to-strengthen-core-capabilities/" target="_blank" rel="noopener noreferrer">accumulation division announcement</a>, Shuttleworth. Slip-Torque, laned design, product order, ProMach brand.</li>
+</ul>
+
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+{faqs.map(([q, a], i) => (
+  <Fragment>
+    <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-${i + 1}`}>{q}</button></h3>
+    <div id={`faq-${i + 1}`} class="usa-accordion__content usa-prose"><p>{a}</p></div>
+  </Fragment>
+))}
+</div>
+
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/buffer-conveyors/">Buffer Conveyor Guide</a></h3>
+<p class="usa-collection__description">Why buffering matters, how to size a buffer, and where to place it.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/accumulation-conveyors/">Accumulation Conveyors</a></h3>
+<p class="usa-collection__description">Zero-pressure and minimum-pressure accumulation explained.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/spiral/">Spiral Conveyor Manufacturers</a></h3>
+<p class="usa-collection__description">Eight spiral builders compared by drive design and size range.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/">Conveyor Manufacturer Directory</a></h3>
+<p class="usa-collection__description">All listed manufacturers and integrators, filterable by conveyor type.</p></div></li>
+</ul>
+</BaseLayout>

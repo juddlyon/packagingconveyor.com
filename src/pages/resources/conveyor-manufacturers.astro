@@ -129,14 +129,26 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout title="Conveyor Manufacturers &#x26; Supplier Directory | PackagingConveyor.com" description="Conveyor manufacturers organized by type, industry, and capability: belt, roller, modular plastic, sanitary, and specialty conveyor builders." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema, directorySchema]}>
+<BaseLayout title="Conveyor Manufacturers & Supplier Directory | PackagingConveyor.com" description="Conveyor manufacturers organized by type, industry, and capability: belt, roller, modular plastic, sanitary, and specialty conveyor builders." canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema, directorySchema]}>
 
 <h1>Conveyor Manufacturer Directory</h1>
 <p class="usa-intro">{manufacturers.length} manufacturers and integrators organized by conveyor type. Independent listings, no commissions. <a href="/resources/conveyor-companies/">Find companies near you</a>.</p>
+<div class="usa-summary-box" role="region" aria-labelledby="shortlists-heading">
+<div class="usa-summary-box__body">
+<h2 class="usa-summary-box__heading" id="shortlists-heading">Shortlists by conveyor type</h2>
+<div class="usa-summary-box__text">
+<ul>
+<li><a href="/resources/conveyor-manufacturers/spiral/">Best spiral conveyor manufacturers</a>: 8 companies compared</li>
+<li><a href="/resources/conveyor-manufacturers/buffering/">Best conveyor buffering systems</a>: 9 manufacturers by method</li>
+<li><a href="/resources/conveyor-manufacturers/pneumatic/">Best pneumatic conveying system manufacturers</a>: 10 companies compared</li>
+</ul>
+</div>
+</div>
+</div>
 <form class="dir-filters" role="search" aria-label="Filter manufacturers" onsubmit="return false">
   <div class="usa-form-group">
     <label class="usa-label" for="dir-search">Search by name, specialty, or location</label>
-    <input class="usa-input" id="dir-search" name="dir-search" type="search" autocomplete="off" />
+    <input class="usa-input" id="dir-search" name="dir-search" type="text" autocomplete="off" />
   </div>
   <div class="usa-form-group">
     <label class="usa-label" for="dir-category">Category</label>
@@ -155,7 +167,9 @@ const faqSchema = {
 </form>
 <div class="dir-toolbar">
   <p id="dir-count" aria-live="polite">{manufacturers.length} companies</p>
-  <ul class="usa-button-group usa-button-group--segmented" aria-label="Sort by">
+  <button type="button" class="usa-button usa-button--unstyled dir-reset">Clear filters</button>
+  <span class="dir-sort-label" id="dir-sort-label">Sort by</span>
+  <ul class="usa-button-group usa-button-group--segmented" aria-labelledby="dir-sort-label">
     <li class="usa-button-group__item"><button type="button" class="usa-button dir-sort" data-sort="name" aria-pressed="true">Name</button></li>
     <li class="usa-button-group__item"><button type="button" class="usa-button usa-button--outline dir-sort" data-sort="hq" aria-pressed="false">Location</button></li>
     <li class="usa-button-group__item"><button type="button" class="usa-button usa-button--outline dir-sort" data-sort="type" aria-pressed="false">Type</button></li>
@@ -169,10 +183,10 @@ const faqSchema = {
     <tbody id="dir-tbody">
       {manufacturers.sort((a, b) => a.name.localeCompare(b.name)).map(m => (
         <tr class="dir-row" data-name={m.name.toLowerCase()} data-categories={JSON.stringify(m.categories)} data-type={m.type} data-hq={m.hq.toLowerCase()} data-known={m.knownFor.toLowerCase()} data-industries={m.industries.join(' ').toLowerCase()}>
-          <td data-label="Company">
-            {m.website ? <a href={m.website} target="_blank" rel="noopener noreferrer"><strong>{m.name}</strong></a> : <strong>{m.name}</strong>}
+          <th scope="row" data-label="Company">
+            {m.website ? <a href={m.website} target="_blank" rel="noopener noreferrer">{m.name}</a> : m.name}
             <br /><span class="usa-tag">{m.type}</span>
-          </td>
+          </th>
           <td data-label="Known for">{m.knownFor}</td>
           <td data-label="Category">{m.categories.join(', ')}</td>
           <td data-label="Headquarters">{m.hq}</td>
@@ -182,7 +196,7 @@ const faqSchema = {
   </table>
 </div>
 <div id="dir-empty" class="usa-alert usa-alert--info usa-alert--slim" hidden>
-  <div class="usa-alert__body"><p class="usa-alert__text">No manufacturers match your filters. <button type="button" id="dir-reset" class="usa-button usa-button--unstyled">Clear all filters</button></p></div>
+  <div class="usa-alert__body"><p class="usa-alert__text">No manufacturers match your filters. <button type="button" class="usa-button usa-button--unstyled dir-reset">Clear all filters</button></p></div>
 </div>
 <h2 id="choosing-heading">How to Choose a Conveyor Manufacturer</h2>
 <h3>Start With Your Application, Not the Manufacturer</h3>
@@ -245,6 +259,18 @@ const faqSchema = {
 <ul class="usa-collection">
 <li class="usa-collection__item">
 <div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/spiral/">Spiral Conveyor Manufacturers</a></h3>
+<p class="usa-collection__description">Eight spiral builders compared by drive design, products carried, and published size and load limits.</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/buffering/">Buffering System Manufacturers</a></h3>
+<p class="usa-collection__description">Nine builders of spiral buffers, accumulation tables, and zero-pressure accumulation, matched to each buffering method.</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/pneumatic/">Pneumatic Conveying System Manufacturers</a></h3>
+<p class="usa-collection__description">Ten suppliers compared by conveying phase, air source, and material testing.</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
 <h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/custom/">Custom Conveyor Design</a></h3>
 <p class="usa-collection__description">When to go custom vs. catalog: process, costs, and lead times for custom-engineered conveyor systems.</p></div></li>
 <li class="usa-collection__item">
@@ -262,7 +288,8 @@ const faqSchema = {
   const typeFilter = document.getElementById('dir-type') as HTMLSelectElement | null;
   const countEl = document.getElementById('dir-count');
   const emptyEl = document.getElementById('dir-empty');
-  const resetBtn = document.getElementById('dir-reset');
+  const resetBtns = document.querySelectorAll('.dir-reset');
+  let sortLabel = 'name';
   const tbody = document.getElementById('dir-tbody');
   const rows = Array.from(document.querySelectorAll<HTMLElement>('.dir-row'));
   const sortBtns = document.querySelectorAll<HTMLButtonElement>('.dir-sort');
@@ -280,7 +307,7 @@ const faqSchema = {
       row.hidden = !show;
       if (show) visible++;
     });
-    if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}`;
+    if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}, sorted by ${sortLabel}`;
     if (emptyEl) emptyEl.hidden = visible !== 0;
   }
 
@@ -297,12 +324,14 @@ const faqSchema = {
     btn.classList.remove('usa-button--outline');
     btn.setAttribute('aria-pressed', 'true');
     applySorting(btn.dataset.sort || 'name');
+    sortLabel = (btn.textContent || 'name').toLowerCase();
+    applyFilters();
   }));
-  resetBtn?.addEventListener('click', () => {
+  resetBtns.forEach(btn => btn.addEventListener('click', () => {
     if (search) search.value = '';
     if (catFilter) catFilter.value = '';
     if (typeFilter) typeFilter.value = '';
     applyFilters();
-  });
+  }));
 </script>
 </BaseLayout>

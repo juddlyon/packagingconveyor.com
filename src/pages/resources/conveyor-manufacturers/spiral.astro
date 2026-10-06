@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MakerList from '../../../components/MakerList.astro';
+import SpecChecklist from '../../../components/SpecChecklist.astro';
+
+// Alphabetical. Every fact below comes from the company's own pages, checked October 5, 2026. See Sources.
+const makers = [
+  { name: 'Alliance Industrial Corporation', best: 'Custom geometry with installation', url: 'https://allianceindustrial.com/spiral-conveyors.html', type: 'Manufacturer', hq: 'Lynchburg, VA',
+    builds: 'Case spirals built to incline or decline, with custom chain pitches, custom radii, and multiple infeed and discharge levels. Also single-file and narrow-track spirals, a 44-inch mini-spiral, and a sanitary side-drive spiral that runs Intralox chain for direct food contact. The company states that it designs, manufactures, and installs its spirals.',
+    fit: 'the layout needs non-standard geometry, or you want one supplier to build and install.' },
+  { name: 'AmbaFlex', best: 'Tall lifts and mixed pack sizes', url: 'https://www.ambaflex.com/en/products/spiralveyor-sv-series', type: 'Manufacturer', hq: 'Zwaag, Netherlands (US: Canton, OH)',
+    builds: 'Separate spiral platforms by product size. SpiralVeyor SV carries cartons, containers, trays, bottle packs, bags, crates, and totes. SVm carries a mass flow of individual bottles and cans. SVs is a narrow-belt spiral for small primary packs, with up to 6 independent parallel belts. AccuVeyor AVh is a spiral-based accumulator. AmbaFlex lists SV elevation as commonly 15 m (50 ft) per drive system.',
+    fit: 'one line needs spirals for both primary packs and cases, or the elevation change is tall.' },
+  { name: 'Dorner', best: 'Light products and short lifts', url: 'https://www.dornerconveyors.com/products/flexmove/flexmove-helix', type: 'Manufacturer', hq: 'Hartland, WI', owner: 'Part of Columbus McKinnon since 2021',
+    builds: 'FlexMove Helix flexible-chain spirals in 85, 180, and 260 mm widths. Published limits are 4 tiers, a 1,400 mm diameter at centerline, and a 3,450 mm maximum outfeed height. Incline is up to 7 degrees with flat top chain and up to 10 degrees with friction top chain.',
+    fit: 'products are light, the elevation change is short, or the spiral is there to add buffering or cooling time between machines.' },
+  { name: 'FlexLink', best: 'Smallest published footprint', url: 'https://www.flexlink.com/en/portfolio/conveyor-systems/spiral-conveyors', type: 'Manufacturer', hq: 'Gothenburg, Sweden', owner: 'Part of Coesia since 2012',
+    builds: 'Spiral elevators with a plastic top chain on a steel chain base. The Compact Spiral elevator uses 85 mm chain, measures 585 mm in diameter, and raises or lowers products up to 2,900 mm. FlexLink lists parcels, totes, shrink-wrapped bottle packs, and cartons as spiral elevator applications.',
+    fit: 'floor space is the main constraint and the products are small, or the line already runs FlexLink chain conveyors.' },
+  { name: 'Multi-Conveyor', best: 'Custom accumulation spirals', url: 'https://www.multi-conveyor.com/packaging-solutions/spiral-drum-conveyors', type: 'Manufacturer', hq: 'Winneconne, WI', owner: 'Family-owned',
+    builds: 'Designed-to-order drum spirals with a center drum drive. The unit runs one continuous belt with no intermediate dead plates, loads from the top or bottom, and can be placed in series with other spirals. Multi-Conveyor states that its engineers decide whether its own design or a partner OEM system fits the project.',
+    fit: 'the goal is accumulation time in a small footprint as part of a custom packaging line. Ask which spirals are built in-house.' },
+  { name: 'Nercon', best: 'Consumer packaged goods, dry or washdown', url: 'https://www.nerconconveyors.com/Conveyor/Conveyor-Equipment/Spiral-Conveyors', type: 'Manufacturer', hq: 'Neenah, WI',
+    builds: 'Two designs. The table-top chain spiral runs up to 150 feet per minute, with belt widths from 3-1/4 to 15 inches and a 48 or 60 inch centerline footprint. Nercon lists pies, trays, small packages, boxes, and plastic containers as typical products. The washdown spiral is edge-driven and rated for washdown pressure up to 1,500 psi.',
+    fit: 'the line carries consumer packaged goods and may need both a dry spiral and a washdown spiral.' },
+  { name: 'Ryson International', best: 'Heavy cases, mass flow, and dual track', url: 'https://ryson.com/product/spiral-conveyor/', type: 'Manufacturer', hq: 'Yorktown, VA', owner: 'Owned by Royal Apollo Group',
+    builds: 'Slat spirals pulled by a steel roller chain, which Ryson states need only a single drive. Models include Unit Load (case), Mass Flow, High Capacity, Narrow Trak, Dual Track, Multiple Infeed, and Wide Trak. Case spirals come in 12 to 26 inch slat widths and carry up to 1,800 lbs at one time. High Capacity spirals carry up to 3,600 lbs at speeds up to 200 FPM. Built and tested in Yorktown.',
+    fit: 'you need a published load rating for cases or totes, a mass flow of bottles or cans, or two independent tracks in one structure.' },
+  { name: 'Span Tech', best: 'Direct food contact and washdown', url: 'https://spantechconveyors.com/conveyors/incline-conveyors-conveyor-systems/spiral-conveyor/', type: 'Manufacturer', hq: 'Glasgow, KY',
+    builds: 'Stainless steel spirals with washdown-capable modular plastic chain. The OutRunner design has no drum. A vertical drive shaft with a sprocket on each tier drives the chain along its outside edge. Spiral 2.0 is a simpler design for lighter-duty applications. Span Tech does not publish speed or load limits.',
+    fit: 'the product touches the chain directly, the spiral gets washed down, or you want a drumless design.' },
+];
+
+const url = 'https://packagingconveyor.com/resources/conveyor-manufacturers/spiral/';
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Manufacturers", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/" },
+    { "@type": "ListItem", "position": 4, "name": "Spiral Conveyor Manufacturers", "item": url }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best Spiral Conveyor Manufacturers: Top 8 Compared by Application",
+  "description": "Eight spiral conveyor manufacturers compared by drive design, conveying surface, products carried, and published size and load limits.",
+  "url": url,
+  "datePublished": "2026-10-05",
+  "author": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" },
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best spiral conveyor manufacturers by application",
+  "description": "Top spiral conveyor manufacturers with the application each one fits best, listed alphabetically.",
+  "numberOfItems": makers.length,
+  "itemListElement": makers.map((m, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": { "@type": "Organization", "name": m.name, "url": m.url, "address": { "@type": "PostalAddress", "addressLocality": m.hq } }
+  }))
+};
+
+const faqs = [
+  ['Who are the best spiral conveyor manufacturers?', 'The best spiral conveyor manufacturer depends on the load. Ryson and AmbaFlex are the specialists and cover cases, totes, and mass flow of bottles and cans. FlexLink and Dorner fit light products in a small footprint. Span Tech, Nercon, and Alliance Industrial build washdown or direct food contact spirals. Multi-Conveyor builds custom drum spirals for accumulation. These picks are based on each company\'s published specifications, not on testing.'],
+  ['Who makes spiral conveyors?', 'Companies that publish a spiral conveyor product line include Alliance Industrial, AmbaFlex, Dorner, FlexLink, Multi-Conveyor, Nercon, Ryson International, and Span Tech. Ryson and AmbaFlex specialize in spirals. The others build spirals as one part of a wider conveyor range.'],
+  ['Which spiral conveyor manufacturers handle a mass flow of bottles and cans?', 'Ryson publishes Mass Flow Spiral models for bulk bottles, cans, and jars, and AmbaFlex publishes the SpiralVeyor SVm for a mass flow of individual bottles and cans. Alliance Industrial also states that its spirals can move mass and bulk product. Most other spirals are built for single-file products, packs, or cases.'],
+  ['How do spiral conveyor designs differ between manufacturers?', 'The main differences are where the drive sits and what the product rides on. Some spirals pull a slat chain from a single drive at one end. Others drive the chain from a sprocket on every tier, from a center drum, or from the belt edge. The conveying surface can be slats on a roller chain, plastic top chain, table-top chain, or modular plastic belt. These choices set the load rating, the washdown suitability, and the maintenance access.'],
+  ['Which spiral conveyors are suitable for washdown?', 'Span Tech builds stainless steel spirals with washdown-capable modular plastic chain. Nercon publishes a washdown spiral rated for washdown pressure up to 1,500 psi. Alliance Industrial offers a sanitary side-drive spiral for direct food contact, and Ryson offers stainless steel versions of its case spirals. Confirm the cleaning method and chemicals with each supplier.'],
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+};
+---
+<BaseLayout
+  title="Best Spiral Conveyor Manufacturers: Top 8 Compared (2026)"
+  description="The top 8 spiral conveyor manufacturers and what each is best for: cases, mass flow, small footprints, washdown. Compared on published specs, no paid placement."
+  canonical={url}
+  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+>
+<h1>Best Spiral Conveyor Manufacturers by Application</h1>
+<p class="usa-intro">The best spiral conveyor manufacturer depends on the load. Ryson and AmbaFlex specialize in spirals and cover cases, totes, and mass flow. FlexLink and Dorner fit light products in tight spaces. Span Tech and Nercon build for washdown. This page compares the top 8 spiral conveyor manufacturers using each company's published specifications.</p>
+
+<div class="usa-summary-box" role="region" aria-labelledby="criteria-heading">
+<div class="usa-summary-box__body">
+<h2 class="usa-summary-box__heading" id="criteria-heading">How this list was built</h2>
+<div class="usa-summary-box__text">
+<ul>
+<li>A company is listed if it publishes a product page for a spiral conveyor that moves packaged goods, containers, or cases between elevations.</li>
+<li>The list is alphabetical. We do not rank companies 1 to 8, because the best choice changes with the application.</li>
+<li>"Best for" labels reflect each company's published specifications and product range.</li>
+<li>Specifications are the manufacturer's own published figures, checked October 5, 2026. We have not tested any equipment.</li>
+<li>No company paid to be listed. For how spirals work, see the <a href="/conveyor-types/spiral-conveyors/">spiral conveyor guide</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="best-heading">Best Spiral Conveyor Manufacturer by Need</h2>
+<table>
+<thead>
+<tr><th>If you need</th><th>Shortlist</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>Cases and totes with a published load rating</td><td>Ryson, AmbaFlex</td><td>Ryson rates case spirals to 1,800 lbs and High Capacity spirals to 3,600 lbs. AmbaFlex lists the SV for cartons, crates, and totes.</td></tr>
+<tr><td>Mass flow of bottles and cans</td><td>Ryson, AmbaFlex</td><td>Both publish dedicated mass flow spirals.</td></tr>
+<tr><td>The smallest footprint for light products</td><td>FlexLink, Dorner</td><td>FlexLink lists a 585 mm diameter. Dorner lists a 1,400 mm, four-tier helix.</td></tr>
+<tr><td>Washdown or direct food contact</td><td>Span Tech, Nercon, Alliance Industrial</td><td>Stainless and washdown-rated designs, including a 1,500 psi rating from Nercon.</td></tr>
+<tr><td>Accumulation time, not only elevation</td><td>Multi-Conveyor, AmbaFlex, Dorner</td><td>Each describes spirals used for buffering.</td></tr>
+<tr><td>Non-standard geometry</td><td>Alliance Industrial, Multi-Conveyor</td><td>Both build spirals to order.</td></tr>
+</tbody>
+</table>
+
+<h2 id="compare-heading">Top Spiral Conveyor Manufacturers Compared</h2>
+<table>
+<thead>
+<tr><th>Company</th><th>Drive and conveying surface</th><th>Products named by the maker</th><th>Published size or load</th></tr>
+</thead>
+<tbody>
+<tr><td>Alliance Industrial</td><td>Chain spirals, plus a side-drive sanitary spiral</td><td>Cases, single-file products, mass and bulk product</td><td>44 inch mini-spiral</td></tr>
+<tr><td>AmbaFlex</td><td>Belt spirals in wide, mass-flow, and narrow multi-belt versions</td><td>Cartons, trays, bottle packs, bags, totes, loose bottles and cans</td><td>Commonly 15 m (50 ft) per drive on SV, 6 m (20 ft) on SVm</td></tr>
+<tr><td>Dorner</td><td>Flexible plastic chain helix</td><td>No product list. Names accumulation, buffering, and cooling uses</td><td>4 tiers, 1,400 mm diameter, 3,450 mm outfeed height</td></tr>
+<tr><td>FlexLink</td><td>Plastic top chain on a steel chain base</td><td>Parcels, totes, bottle packs, cartons</td><td>585 mm diameter, 2,900 mm lift (Compact Spiral)</td></tr>
+<tr><td>Multi-Conveyor</td><td>Center drum drive, one continuous belt</td><td>Packaged products needing accumulation time</td><td>Designed to order, no published limits</td></tr>
+<tr><td>Nercon</td><td>Table-top chain spiral, plus an edge-driven washdown spiral</td><td>Pies, trays, small packages, boxes, plastic containers</td><td>150 FPM, 3-1/4 to 15 inch belt, 48 or 60 inch centerline</td></tr>
+<tr><td>Ryson</td><td>Slats on a steel roller chain, single drive</td><td>Cases, totes, small cartons, bottles, cans, jars</td><td>1,800 lbs (case), 3,600 lbs and 200 FPM (High Capacity)</td></tr>
+<tr><td>Span Tech</td><td>Modular plastic chain, sprocket on every tier, no drum</td><td>Direct food contact and washdown applications</td><td>Not published</td></tr>
+</tbody>
+</table>
+<p class="source-note">Figures are each manufacturer's published limits for the named model, not a like-for-like test. A blank or "not published" entry means the company quotes limits per project.</p>
+
+<h2 id="list-heading">Top 8 Spiral Conveyor Manufacturers (A to Z)</h2>
+<p>Each card links to the manufacturer's spiral product page. "Shortlist when" is our reading of the published specifications, not an endorsement.</p>
+<MakerList items={makers} />
+
+<h2 id="process-heading">Process Spirals Are a Separate Category</h2>
+<p>Spirals that freeze, cool, or proof food on a long dwell-time belt are a different purchase from a spiral that lifts cases between floors. <a href="https://www.intralox.com/products/spirals" target="_blank" rel="noopener noreferrer">Intralox</a>, a Laitram division based in New Orleans, supplies the belting and drive technology for many of these. Its DirectDrive System engages the belt edge directly with the drum, and the company names proofers, coolers, freezers, and hydrochillers as applications. If your project is a process spiral, start with the belt and drive supplier and the spiral cage builder, not with the companies listed above.</p>
+
+<h2 id="differences-heading">Four Design Differences to Compare</h2>
+<h3>Where the drive sits</h3>
+<p>Ryson pulls a slat chain from a single drive. Span Tech puts a sprocket on every tier and ties the shafts together mechanically. Multi-Conveyor uses a center drum. Nercon's washdown spiral and Intralox side-drive spirals drive the belt at its edge. Drive location sets how belt tension builds up through the tiers, how many motors the controls must handle, and where a technician has to reach for service.</p>
+<h3>What the product rides on</h3>
+<p>The surface can be slats, plastic top chain, table-top chain, or modular plastic belt. Slats and wide belts carry cases and totes. Narrow chains carry single-file containers and small packs. The surface also decides whether products can side-transfer on and off, and whether the spiral can be washed down.</p>
+<h3>Size range</h3>
+<p>Published sizes span a wide range: a 585 mm diameter compact spiral from FlexLink, a 1,400 mm four-tier helix from Dorner, 48 and 60 inch centerline spirals from Nercon, and Ryson spirals rated for 3,600 lbs on the spiral at one time. A supplier that fits a light primary-pack line may have nothing for full cases, and the reverse.</p>
+<h3>Elevation or accumulation</h3>
+<p>Some spirals are sold to change elevation in a small footprint. Others are sold to hold product for a set time, which makes them a buffer. Multi-Conveyor, AmbaFlex (AccuVeyor), and Dorner all describe accumulation uses. If you need buffer time, compare spirals against the other methods in the <a href="/resources/conveyor-manufacturers/buffering/">buffering system manufacturers</a> list.</p>
+
+<SpecChecklist id="rfq-heading" title="Spiral Conveyor RFQ Checklist" items={[
+  ['Product', 'Dimensions, weight, and packaging type for the smallest, largest, and typical item.'],
+  ['Flow', 'Single file, side by side, or mass flow, and the rate in units per minute.'],
+  ['Elevation', 'Infeed height, discharge height, and direction (up, down, or reversible).'],
+  ['Footprint', 'Floor space available, ceiling height, and the infeed and discharge orientation.'],
+  ['Entries and exits', 'Number of levels where product enters or leaves the spiral.'],
+  ['Purpose', 'Elevation change only, or a stated buffer time in minutes.'],
+  ['Loaded starts', 'Whether the spiral must stop and restart with product on every tier.'],
+  ['Environment', 'Ambient, freezer, wet, or washdown, with the cleaning method and chemicals.'],
+  ['Controls', 'Speed control, upstream and downstream handshakes, and the PLC platform.'],
+  ['Service', 'Who installs, who commissions, and where spare chain and wear parts ship from.'],
+]} />
+
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://allianceindustrial.com/spiral-conveyors.html" target="_blank" rel="noopener noreferrer">Spiral Conveyors</a>, Alliance Industrial Corporation. Case, narrow-track, mini, and side-drive spirals. Lynchburg, VA address.</li>
+<li><a href="https://www.ambaflex.com/en/products/spiralveyor-sv-series" target="_blank" rel="noopener noreferrer">SpiralVeyor SV</a>, <a href="https://www.ambaflex.com/en/products/spiralveyor-svm-series" target="_blank" rel="noopener noreferrer">SVm</a>, <a href="https://www.ambaflex.com/en/products/spiralveyor-svs-series" target="_blank" rel="noopener noreferrer">SVs</a>, and <a href="https://www.ambaflex.com/en/contact" target="_blank" rel="noopener noreferrer">contact page</a>, AmbaFlex. Products carried, elevation per drive, multi-belt option, Zwaag and Canton locations.</li>
+<li><a href="https://www.dornerconveyors.com/products/flexmove/flexmove-helix" target="_blank" rel="noopener noreferrer">FlexMove Helix Conveyors</a>, Dorner. Widths, tier limit, diameter, outfeed height, incline angles.</li>
+<li><a href="https://www.cmco.com/en-us/resources/cmco-articles/dorner-acquisition-completed/" target="_blank" rel="noopener noreferrer">Dorner acquisition completed</a>, Columbus McKinnon, April 7, 2021.</li>
+<li><a href="https://www.flexlink.com/en/portfolio/conveyor-systems/spiral-conveyors" target="_blank" rel="noopener noreferrer">Spiral conveyors</a> and <a href="https://www.flexlink.com/en/about-us/history" target="_blank" rel="noopener noreferrer">company history</a>, FlexLink. Chain construction, Compact Spiral dimensions, Coesia ownership since 2012.</li>
+<li><a href="https://www.multi-conveyor.com/packaging-solutions/spiral-drum-conveyors" target="_blank" rel="noopener noreferrer">Spiral drum conveyors</a> and <a href="https://www.multi-conveyor.com/about-us" target="_blank" rel="noopener noreferrer">about page</a>, Multi-Conveyor. Center drum drive, continuous belt, partner OEM statement, family ownership.</li>
+<li><a href="https://www.nerconconveyors.com/Conveyor/Conveyor-Equipment/Conveyor-Elevators/Spiral-Conveyor" target="_blank" rel="noopener noreferrer">Spiral Conveyor</a> and <a href="https://www.nerconconveyors.com/Conveyor/Conveyor-Equipment/Conveyor-Elevators/Washdown-Spiral" target="_blank" rel="noopener noreferrer">Washdown Spiral</a>, Nercon. Speed, belt widths, footprint, washdown pressure rating.</li>
+<li><a href="https://ryson.com/product/spiral-conveyor/" target="_blank" rel="noopener noreferrer">Spiral Conveyors</a>, <a href="https://ryson.com/case-spiral/" target="_blank" rel="noopener noreferrer">Case Spirals</a>, <a href="https://ryson.com/high-capacity/" target="_blank" rel="noopener noreferrer">High Capacity Spirals</a>, and <a href="https://ryson.com/about-ryson/" target="_blank" rel="noopener noreferrer">about page</a>, Ryson International. Single drive, slat widths, load and speed ratings, Royal Apollo Group ownership.</li>
+<li><a href="https://spantechconveyors.com/conveyors/incline-conveyors-conveyor-systems/spiral-conveyor/" target="_blank" rel="noopener noreferrer">Spiral Conveyor</a> and <a href="https://spantechconveyors.com/outrunner-spirals/" target="_blank" rel="noopener noreferrer">OutRunner Spirals</a>, Span Tech. Stainless construction, washdown-capable chain, per-tier sprocket drive.</li>
+<li><a href="https://www.intralox.com/products/spirals/directdrive-system" target="_blank" rel="noopener noreferrer">DirectDrive System</a>, Intralox, and <a href="https://www.laitram.com/" target="_blank" rel="noopener noreferrer">Laitram divisions</a>. Drum engagement and process spiral applications.</li>
+</ul>
+
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+{faqs.map(([q, a], i) => (
+  <Fragment>
+    <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-${i + 1}`}>{q}</button></h3>
+    <div id={`faq-${i + 1}`} class="usa-accordion__content usa-prose"><p>{a}</p></div>
+  </Fragment>
+))}
+</div>
+
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/spiral-conveyors/">Spiral Conveyor Guide</a></h3>
+<p class="usa-collection__description">How spirals work, spiral vs. VRC vs. incline, and how to specify one.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/buffering/">Buffering System Manufacturers</a></h3>
+<p class="usa-collection__description">Companies that build spiral buffers, accumulation tables, and other line buffers.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/">Conveyor Manufacturer Directory</a></h3>
+<p class="usa-collection__description">All listed manufacturers and integrators, filterable by conveyor type.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/vertical-reciprocating/">Vertical Reciprocating Conveyors</a></h3>
+<p class="usa-collection__description">The alternative to a spiral when loads are heavy or throughput is low.</p></div></li>
+</ul>
+</BaseLayout>

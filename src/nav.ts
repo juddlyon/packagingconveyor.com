@@ -127,7 +127,10 @@ export const sections: NavLink[] = [
       ] },
       { label: "Conveyor Maintenance", href: '/resources/conveyor-maintenance/' },
       { label: "Conveyor Manufacturers", href: '/resources/conveyor-manufacturers/', children: [
+        { label: "Buffering System Manufacturers", href: '/resources/conveyor-manufacturers/buffering/' },
         { label: "Custom Conveyor Design", href: '/resources/conveyor-manufacturers/custom/' },
+        { label: "Pneumatic Conveying System Manufacturers", href: '/resources/conveyor-manufacturers/pneumatic/' },
+        { label: "Spiral Conveyor Manufacturers", href: '/resources/conveyor-manufacturers/spiral/' },
       ] },
       { label: "Conveyor Parts & Replacement", href: '/resources/conveyor-parts/' },
       { label: "Conveyor Safety", href: '/resources/conveyor-safety/' },
