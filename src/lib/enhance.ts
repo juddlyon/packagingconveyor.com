@@ -32,4 +32,7 @@ function photos(html: string) {
     .replace(/(?<!<\/source>|\/>)<img [^>]*src="\/img\/photos\/[^"]+\.webp"[^>]*>/g, img => picture(img, '(min-width: 64em) 720px, 100vw'));
 }
 
-export const enhance = (html: string) => photos(tables(html));
+// Links that open a new tab say so to screen readers.
+const newTabs = (html: string) => html.replace(/(<a\b[^>]*target="_blank"[^>]*>)([\s\S]*?)<\/a>/g, '$1$2<span class="usa-sr-only"> (opens in new tab)</span></a>');
+
+export const enhance = (html: string) => newTabs(photos(tables(html)));

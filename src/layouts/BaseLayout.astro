@@ -114,8 +114,8 @@ const actions = isHome ? [{ label: 'Compare conveyor types', href: '/conveyor-ty
   <div class="usa-overlay"></div>
   <header class="usa-header usa-header--basic">
     <div class="usa-nav-container">
-      <div class="usa-navbar"><div class="usa-logo"><em class="usa-logo__text"><a href="/" title="PackagingConveyor.com home">Packaging<span class="logo-accent">Conveyor</span></a></em></div><button type="button" class="usa-menu-btn">Menu</button></div>
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <div class="usa-navbar"><div class="usa-logo"><em class="usa-logo__text"><a href="/" title="PackagingConveyor.com home">Packaging<span class="logo-accent">Conveyor</span></a></em></div><button type="button" class="usa-menu-btn" aria-controls="primary-nav" aria-expanded="false">Menu</button></div>
+      <nav aria-label="Primary navigation" class="usa-nav" id="primary-nav">
         <button type="button" class="usa-nav__close"><img src="/img/usa-icons/close.svg" alt="Close navigation" width="24" height="24" /></button>
         <ul class="usa-nav__primary usa-accordion">{sections.map(section => <li class="usa-nav__primary-item"><a href={section.href} class:list={['usa-nav__link', { 'usa-current': section === active }]} aria-current={currentPath === section.href ? 'page' : undefined}><span>{section.label}</span></a></li>)}</ul>
       </nav>
@@ -126,31 +126,31 @@ const actions = isHome ? [{ label: 'Compare conveyor types', href: '/conveyor-ty
       <div class="grid-container">
         <div class="page-header__text">
           {current && (
-            <nav class="usa-breadcrumb" aria-label="Breadcrumb"><ol class="usa-breadcrumb__list">
+            <nav class="usa-breadcrumb" aria-label="Breadcrumbs"><ol class="usa-breadcrumb__list">
               {crumbs.map(c => <li class="usa-breadcrumb__list-item"><a href={c.href} class="usa-breadcrumb__link"><span>{c.name}</span></a></li>)}
               <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>{current.name}</span></li>
             </ol></nav>
           )}
           <h1 class="page-header__title" set:html={pageTitle} />
           {intro && <p class="usa-intro" set:html={intro} />}
-          {updatedLabel && <p class="article-meta">Updated <time datetime={updated}>{updatedLabel}</time> by the PackagingConveyor.com editorial team. <a href="/about/#editorial-heading">How we research</a>.</p>}
+          {updatedLabel && <p class="article-meta">Updated <time datetime={updated}>{updatedLabel}</time>. <a href="/about/#editorial-heading">How we research</a>.</p>}
           {actions.length > 0 && (
-            <ul class="usa-button-group page-header__actions">{actions.map((a, i) => <li class="usa-button-group__item"><a class:list={['usa-button', { 'usa-button--outline usa-button--inverse': i > 0 }]} href={a.href}>{a.label}</a></li>)}</ul>
+            <ul class="usa-button-group page-header__actions">{actions.map((a, i) => <li class="usa-button-group__item"><a class:list={['usa-button usa-button--big', { 'usa-button--outline usa-button--inverse': i > 0 }]} href={a.href}>{a.label}</a></li>)}</ul>
           )}
         </div>
       </div>
     </header>
     <div class="grid-container docs-layout">
-      <SideNav />
       <div class="usa-in-page-nav-container docs-body">
         {showToc && <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="p" data-heading-elements="h2" data-main-content-selector="#article" data-minimum-heading-count="3"></aside>}
         <div class="usa-prose docs-content" id="article">
           {showToc && (
-            <nav class="page-toc" aria-label="Table of contents"><p class="page-toc__title">On this page</p><ul>{toc.map(h => <li><a href={`#${h.slug}`} set:html={h.text} /></li>)}</ul></nav>
+            <nav class="page-toc" aria-label="Table of contents"><details><summary class="page-toc__title">On this page</summary><ul>{toc.map(h => <li><a href={`#${h.slug}`} set:html={h.text} /></li>)}</ul></details></nav>
           )}
           <Fragment set:html={content} />
         </div>
       </div>
+      <SideNav />
     </div>
   </main>
   <footer class="usa-footer usa-footer--slim site-footer">
