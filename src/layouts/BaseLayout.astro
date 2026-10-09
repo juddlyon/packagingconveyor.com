@@ -17,9 +17,10 @@ interface Props {
 
 const { title, description = "The packaging industry's most comprehensive conveyor resource. Technical guides, selection criteria, and encyclopedic coverage of 30+ conveyor types.", canonical, schema = [], robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", ogImage } = Astro.props;
 const siteUrl = 'https://packagingconveyor.com';
+// Used when a page has no photo of its own (legal and utility pages).
+const defaultPhoto = { name: 'buffer-hartness-dynac-6400', alt: '' };
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const pageUrl = canonical || `${siteUrl}${currentPath}`;
-const pageOgImage = ogImage || `${siteUrl}/og-image.svg`;
 
 // Default org + website schema on every page
 const defaultSchema = [
@@ -43,9 +44,6 @@ const defaultSchema = [
 const utility = ['/', '/about/', '/privacy/', '/terms/', '/thank-you/'].includes(currentPath);
 const updated = utility ? undefined : lastModified(currentPath);
 const updatedLabel = updated && new Date(`${updated}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
-// Article schema gets the same real edit date the page shows.
-const pageSchema = schema.map((s: any) => s['@type'] === 'Article' && updated ? { ...s, dateModified: updated } : s);
-const allSchema = [...defaultSchema, ...pageSchema];
 const active = sectionFor(currentPath);
 
 // Breadcrumb trail comes from the page's BreadcrumbList schema.
@@ -54,12 +52,22 @@ const crumbs: { name: string; href: string }[] = (crumbSchema?.itemListElement ?
 const current = crumbs.pop();
 
 const body = enhance(await Astro.slots.render('default'));
+// Social and search image: the page's first photo, not a text banner. Video thumbnails are the second choice, the site photo is the last.
+// The og-images integration in astro.config.mjs writes /img/og/<name>.jpg (1200 x 630) from the photo at build.
+const photoTags = [...body.matchAll(/<img [^>]*src="\/img\/photos\/([\w-]+)\.webp"[^>]*>/g)].map(m => ({ name: m[1], alt: m[0].match(/alt="([^"]*)"/)?.[1] ?? '' }));
+const lead = photoTags.find(p => !p.name.startsWith('yt-')) ?? photoTags[0] ?? defaultPhoto;
+const pageOgImage = ogImage || `${siteUrl}/img/og/${lead.name}.jpg`;
+const pageOgAlt = ogImage ? '' : lead.alt;
+// Article and WebPage schema get the same image, and Article gets the real edit date the page shows.
+const pageSchema = schema.map((s: any) => ['Article', 'WebPage'].includes(s['@type']) ? { ...s, image: s.image ?? [pageOgImage, ...(ogImage ? [] : [`${siteUrl}/img/photos/${lead.name}.webp`])], ...(s['@type'] === 'Article' && updated ? { dateModified: updated } : {}) } : s);
+const allSchema = [...defaultSchema, ...pageSchema];
 const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(m => ({ slug: m[1], text: m[2].replace(/<[^>]+>/g, '').trim() }));
 // Page header band (lbarsealer pattern): the page's H1 and intro move out of the content column into a full-width band.
 const h1Match = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>\s*(?:<p class="usa-intro">([\s\S]*?)<\/p>)?/);
 const pageTitle = h1Match ? h1Match[1].trim() : title;
 const intro = h1Match?.[2]?.trim();
-const content = h1Match ? body.replace(h1Match[0], '') : body;
+// The first photo sits near the top of the page, so it loads eagerly. The rest stay lazy.
+const content = (h1Match ? body.replace(h1Match[0], '') : body).replace(/(<img [^>]*src="\/img\/photos\/[^>]*?) loading="lazy"/, '$1 fetchpriority="high"');
 const isHome = currentPath === '/';
 const showToc = !isHome && toc.length >= 3;
 // Homepage call-to-action buttons in the dark band.
@@ -95,12 +103,14 @@ const actions = isHome ? [{ label: 'Compare conveyor types', href: '/conveyor-ty
   <meta property="og:image" content={pageOgImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  {pageOgAlt && <meta property="og:image:alt" content={pageOgAlt} />}
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={pageOgImage} />
+  {pageOgAlt && <meta name="twitter:image:alt" content={pageOgAlt} />}
 
   <script is:inline set:html={`(()=>{var n,e="usa-js-loading";function t(){document.documentElement.classList.remove(e)}document.documentElement.classList.add(e),n=setTimeout(t,8e3),window.addEventListener("load",function e(){window.uswdsPresent&&(clearTimeout(n),t(),window.removeEventListener("load",e,!0))},!0)})();`} />
 

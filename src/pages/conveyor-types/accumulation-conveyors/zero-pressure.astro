@@ -85,6 +85,7 @@ const articleSchema = {
 <li><strong>When downstream zone clears:</strong> Release and advance one zone</li>
 </ul>
 <p>This creates a cascading release pattern. When a downstream machine restarts, the first queued product releases. The second product advances one zone. Each product moves forward one zone at a time, maintaining gaps throughout the queue. Products never touch each other. Hytrol's manuals note that products placed closer than one zone length apart separate during the first few feet of travel, until about one zone length exists between them.</p>
+<figure class="photo"><img src="/img/photos/zpa-hytrol-spaced-cartons.webp" width="1000" height="667" alt="White cartons stand in a line on a roller conveyor with guide rails, each separated from the next by a short gap." loading="lazy" decoding="async" /><figcaption>Cartons held with a gap between each one on a Hytrol zero-pressure accumulation conveyor. No carton pushes on the one ahead. <span class="photo-credit">Photo: <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Hytrol</a></span></figcaption></figure>
 <h3>Zone Components</h3>
 <p>Each ZPA zone contains:</p>
 <ul>
@@ -93,6 +94,7 @@ const articleSchema = {
 <li><strong>Zone controller:</strong> Logic card, PLC I/O, or distributed controller</li>
 <li><strong>Slave rollers:</strong> Idler or O-ring driven rollers connected to the drive roller</li>
 </ul>
+<figure class="photo"><img src="/img/photos/zpa-hytrol-zone-sensor.webp" width="1000" height="667" alt="Side view of a roller conveyor carrying a produce case, with a sensor module and cabling mounted along the green side frame below the rollers." loading="lazy" decoding="async" /><figcaption>Zone hardware on the side frame of a Hytrol zero-pressure accumulation conveyor: a sensor module and its cabling sit below the rollers that carry the case. <span class="photo-credit">Photo: <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">Hytrol</a></span></figcaption></figure>
 <h3>Zone Sizing</h3>
 <p>Zone length must exceed the longest product dimension in the direction of travel, with enough clearance that the sensor sees the product fully within the zone. Zone lengths are set by each manufacturer: Hytrol's 190-NSPEZ manual lists 12, 18, 24, 30, and 36-inch zones, and its ABEZ manual lists bed sections for 12 to 36-inch zones. For mixed product sizes, size zones for the longest product. Advanced controllers can adapt zone logic to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
 <h4>Zone Length Formula</h4>
