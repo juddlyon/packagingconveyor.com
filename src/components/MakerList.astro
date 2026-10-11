@@ -3,8 +3,8 @@
 // Preview images are cached locally by scripts/refresh-bookmarks.mjs. Cards without one fall back to a monogram.
 import previews from '../data/bookmarks.json';
 interface Maker { name: string; best: string; url: string; type: string; hq: string; owner?: string; builds: string; fit: string }
-interface Props { items: Maker[] }
-const { items } = Astro.props;
+interface Props { items: Maker[]; buildsLabel?: string }
+const { items, buildsLabel = 'Builds' } = Astro.props;
 const preview = (url: string) => (previews as Record<string, { image: string }>)[url]?.image;
 const domain = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 const monogram = (name: string) => name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
@@ -22,7 +22,7 @@ const monogram = (name: string) => name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\
         <p class="maker-card__url">{domain(m.url)}</p>
       </div>
       <div class="maker-card__text">
-        <p class="maker-card__line"><strong>Builds:</strong> <Fragment set:html={m.builds} /></p>
+        <p class="maker-card__line"><strong>{buildsLabel}:</strong> <Fragment set:html={m.builds} /></p>
         <p class="maker-card__line"><strong>Shortlist when:</strong> <Fragment set:html={m.fit} /></p>
       </div>
     </li>

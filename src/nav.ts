@@ -115,6 +115,16 @@ export const sections: NavLink[] = [
     ],
   },
   {
+    label: 'Manufacturers', href: '/resources/conveyor-manufacturers/',
+    children: [
+      { label: "Buffering System Manufacturers", href: '/resources/conveyor-manufacturers/buffering/' },
+      { label: "Pneumatic Conveying System Manufacturers", href: '/resources/conveyor-manufacturers/pneumatic/' },
+      { label: "Spiral Conveyor Manufacturers", href: '/resources/conveyor-manufacturers/spiral/' },
+      { label: "Used Conveyor Dealers", href: '/resources/conveyor-manufacturers/used/' },
+      { label: "Custom Conveyor Design", href: '/resources/conveyor-manufacturers/custom/' },
+    ],
+  },
+  {
     label: 'Resources', href: '/resources/',
     children: [
       { label: "Automated Conveyor Systems", href: '/resources/automated-conveyor-systems/' },
@@ -126,12 +136,6 @@ export const sections: NavLink[] = [
         { label: "Frame, Drive & Pulley Design", href: '/resources/conveyor-design-guide/components/' },
       ] },
       { label: "Conveyor Maintenance", href: '/resources/conveyor-maintenance/' },
-      { label: "Conveyor Manufacturers", href: '/resources/conveyor-manufacturers/', children: [
-        { label: "Buffering System Manufacturers", href: '/resources/conveyor-manufacturers/buffering/' },
-        { label: "Custom Conveyor Design", href: '/resources/conveyor-manufacturers/custom/' },
-        { label: "Pneumatic Conveying System Manufacturers", href: '/resources/conveyor-manufacturers/pneumatic/' },
-        { label: "Spiral Conveyor Manufacturers", href: '/resources/conveyor-manufacturers/spiral/' },
-      ] },
       { label: "Conveyor Parts & Replacement", href: '/resources/conveyor-parts/' },
       { label: "Conveyor Safety", href: '/resources/conveyor-safety/' },
       { label: "Conveyor Suppliers", href: '/resources/conveyor-suppliers/' },

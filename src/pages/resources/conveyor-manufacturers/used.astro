@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MakerList from '../../../components/MakerList.astro';
+import SpecChecklist from '../../../components/SpecChecklist.astro';
+
+// Alphabetical. Every fact below comes from the company's own pages, checked October 11, 2026. See Sources.
+const makers = [
+  { name: 'Aaron Equipment', url: 'https://www.aaronequipment.com/equipment/conveyors', best: 'Bulk and process conveyors', type: 'Process and packaging dealer', hq: 'Wood Dale, IL',
+    builds: 'Used belt and screw conveyors. Its conveyor page also names roller, pneumatic, drag chain, and vibratory conveyors and bucket elevators. Aaron describes itself as buying, selling, and rebuilding processing and packaging machinery, gives 1935 as its founding year, and states that equipment can be reconditioned by its own mechanics. It buys surplus conveyors and runs plant liquidations.',
+    fit: 'the conveyor moves powder, granules, or other bulk material in a process plant.' },
+  { name: 'American Surplus', url: 'https://www.americansurplus.com/product-category/used-equipment/used-conveyor/', best: 'Tested carton and tote conveyor', type: 'Warehouse equipment dealer', hq: 'Rumford, RI',
+    builds: 'Used gravity conveyor in skate wheel, roller, and flexible styles, and used power conveyor including belt, belt over roller, lineshaft, and sortation. American Surplus states that its conveyors are fully tested, cleaned, and inspected before resale, and it lists a 30-day parts guarantee. It offers CAD layouts, installation, and nationwide shipping, and it buys used conveyor from facilities that are moving or liquidating. Its about page describes a 530,000 square foot indoor facility.',
+    fit: 'you want carton or tote conveyor that was tested before shipping and comes with a stated parts guarantee.' },
+  { name: 'East Coast Storage Equipment', url: 'https://ecseco.com/used-equipment/conveyor/', best: 'Layout and installation help', type: 'Warehouse equipment dealer', hq: 'Brick, NJ',
+    builds: 'Used flexible, gravity, and power conveyors. Listings include gravity roller, skatewheel, belt-over-roller, and live roller. The company offers facility design and layout, assists with installation, and ships nationwide. It buys used conveyors and runs warehouse equipment liquidations. Its conveyor page does not describe testing or a warranty.',
+    fit: 'you want the dealer to lay out the system and help install it.' },
+  { name: 'Machinery & Equipment Co.', url: 'https://www.machineryandequipment.com/conveyors', best: 'West Coast process and packaging plants', type: 'Process and packaging dealer', hq: 'Brisbane, CA',
+    builds: 'Used process and packaging machinery, with a conveyors category. The company states it has bought and sold used equipment since 1938 and lists sites in Brisbane, San Dimas, and Chowchilla, California. Its listed services are asset recovery, logistics, valuations, and auctions. Its site does not describe testing or a warranty.',
+    fit: 'your plant is on the West Coast and freight distance matters.' },
+  { name: 'Phoenix Equipment', url: 'https://www.phxequip.com/category/15/conveyors', best: 'Table top chain conveyors and whole lines', type: 'Process and packaging dealer', hq: 'Red Bank, NJ',
+    builds: 'Used and reconditioned conveyors. Its conveyor page lists belt, bucket, roller, screw, spiral case, table top chain, vibratory, and mining conveyors. Phoenix states it buys used conveyors and complete conveyor lines, and it offers dismantlement and relocation, liquidations, and auctions.',
+    fit: 'you need table top chain or spiral case conveyors, or you are buying or selling a complete line.' },
+  { name: 'Revelation Machinery', url: 'https://revelationmachinery.com/product-category/packaging-equipment/conveyors/', best: 'Packaging line conveyor types', type: 'Process and packaging dealer', hq: 'Fairfield, IL',
+    builds: 'Used conveyors listed under packaging equipment. Its page names belt, roller, chain, slat, screw, modular belt, vibratory, pneumatic, overhead, and spiral conveyors. Revelation buys used equipment, offers financing, and runs auction and asset liquidation services. Its conveyor page does not describe testing or a warranty.',
+    fit: 'you are looking for packaging line types such as modular belt, slat, or spiral conveyors.' },
+  { name: 'SIGMA Equipment', url: 'https://www.sigmaequipment.com/equipment/material-handling/conveyor/', best: 'Short packaging and food plant conveyors', type: 'Process and packaging dealer', hq: 'Evansville, IN',
+    builds: 'Used packaging and processing equipment, with a conveyor category. Its listings have included incline, cleated, mat-top, roller, spiral, and vibratory conveyors. Owners can sell for cash, consign to auction, or list equipment on the site. SIGMA offers to coordinate shipping. Its listing terms state no warranties unless specified in writing, and that all sales are final.',
+    fit: 'you need a single packaging conveyor, such as an incline or mat-top unit, and accept as-is terms.' },
+  { name: 'SJF Material Handling', url: 'https://www.sjf.com/used-conveyor.html', best: 'Widest range of warehouse conveyor types', type: 'Warehouse equipment dealer', hq: 'Winsted, MN',
+    builds: 'New, used, and refurbished conveyor: gravity roller, skatewheel, powered roller, belt, lineshaft, flexible, telescoping, pallet, and sortation conveyors, plus stands, motors, gearboxes, and parts. SJF states it has been in business since 1979 and holds over 3 miles of new and second-hand conveyor, stored indoors. It lists installation and removal services and a parts warranty option on some conveyor types. It also buys used equipment.',
+    fit: 'you need powered, pallet, or sortation conveyor, or stands and parts from the same source.' },
+  { name: 'Surplus Record', url: 'https://surplusrecord.com/machinery-equipment/conveyors/', best: 'Searching many dealers at once', type: 'Listing marketplace', hq: 'Chicago, IL',
+    builds: 'Listings from equipment dealers and individual sellers. Surplus Record began in 1924 as a printed catalog of machinery for sale. On October 11, 2026 it showed 1,812 conveyor listings, including 595 belt, 301 screw, 149 table top, 134 vibratory, and 106 roller conveyors. Each listing names its seller, and that seller sets the terms.',
+    fit: 'you know the conveyor type you need and want to compare stock from many sellers.' },
+];
+
+const url = 'https://packagingconveyor.com/resources/conveyor-manufacturers/used/';
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://packagingconveyor.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Manufacturers", "item": "https://packagingconveyor.com/resources/conveyor-manufacturers/" },
+    { "@type": "ListItem", "position": 4, "name": "Used Conveyor Dealers", "item": url }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Used Conveyors: Where to Buy and What to Inspect",
+  "description": "Nine places to buy used conveyors, compared by conveyor type, testing, and sale terms, with an inspection checklist.",
+  "url": url,
+  "datePublished": "2026-10-11",
+  "author": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" },
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best places to buy used conveyors by conveyor type",
+  "description": "Used conveyor dealers and marketplaces with the conveyor types each one lists, in alphabetical order.",
+  "numberOfItems": makers.length,
+  "itemListElement": makers.map((m, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": { "@type": "Organization", "name": m.name, "url": m.url, "address": { "@type": "PostalAddress", "addressLocality": m.hq } }
+  }))
+};
+
+const faqs = [
+  ['Where is the best place to buy used conveyors?', 'It depends on the conveyor type. For gravity roller, skatewheel, and powered carton conveyor, warehouse equipment dealers such as American Surplus, East Coast Storage Equipment, and SJF Material Handling hold stock. For table top chain, incline, spiral, screw, and other packaging and process conveyors, look at process and packaging dealers such as Aaron Equipment, Machinery & Equipment Co., Phoenix Equipment, Revelation Machinery, and SIGMA Equipment. Surplus Record lists stock from many dealers in one search.'],
+  ['Is it worth buying a used conveyor?', 'Often yes for standard gravity roller, skatewheel, and belt conveyor sections, which are simple, modular, and easy to inspect. It is harder to justify for food-contact conveyors, engineered systems with integrated controls, and high-speed packaging lines built around one product. Add freight, installation, replacement belts or rollers, guarding, and controls work to the purchase price before comparing with a new quote.'],
+  ['Who buys used conveyors?', 'Most used conveyor dealers also buy. American Surplus, East Coast Storage Equipment, SJF Material Handling, Aaron Equipment, Phoenix Equipment, Revelation Machinery, and Machinery & Equipment Co. all state that they buy used conveyors or surplus equipment. SIGMA Equipment offers three routes: sell for cash, consign to auction, or list on its site. Several also run full plant or warehouse liquidations.'],
+  ['Do used conveyors come with a warranty?', 'It varies by dealer, so get the terms in writing. American Surplus lists a 30-day parts guarantee and states that conveyors are tested before shipping. SJF Material Handling lists a parts warranty option on some conveyor types. SIGMA Equipment listing terms state no warranties unless specified in writing and that all sales are final. Several dealers do not state terms on their conveyor pages.'],
+  ['What should I check before buying a used conveyor?', 'Check the frame for bends and twists, spin every roller, inspect the belt or chain for wear, and confirm the motor voltage and phase match your plant. Ask to see powered conveyor running. Confirm that guards are present, that controls and sensors are included, and that replacement parts are still available for that make and model.'],
+  ['Can I buy used conveyors for a food plant?', 'Yes, but inspect more carefully. Look at weld quality, cracks or cuts in the belt, and places where product residue can collect. A used conveyor rarely comes with the material certificates or sanitary design documents that a new one does, so confirm what your food safety plan requires before buying.'],
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+};
+---
+<BaseLayout
+  title="Used Conveyors: 9 Best Places to Buy and What to Inspect (2026)"
+  description="Where to buy used conveyors: 9 dealers and marketplaces compared by conveyor type, testing, and sale terms, plus an inspection checklist to use before you pay."
+  canonical={url}
+  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+>
+<h1>Used Conveyors: Where to Buy and What to Inspect</h1>
+<p class="usa-intro">The best place to buy a used conveyor depends on the type. Warehouse equipment dealers such as American Surplus, East Coast Storage Equipment, and SJF Material Handling stock gravity roller, skatewheel, and powered carton conveyor. Process and packaging dealers such as Aaron Equipment, Phoenix Equipment, and SIGMA Equipment list table top chain, incline, spiral, and screw conveyors. This page compares 9 sellers and gives an inspection checklist to use before you pay.</p>
+
+<div class="usa-summary-box" role="region" aria-labelledby="criteria-heading">
+<div class="usa-summary-box__body">
+<h2 class="usa-summary-box__heading" id="criteria-heading">How this list was built</h2>
+<div class="usa-summary-box__text">
+<ul>
+<li>A seller is listed if it publishes a used conveyor category with current stock and sells in North America.</li>
+<li>The list is alphabetical. We do not rank sellers 1 to 9, because stock changes weekly and the right seller depends on the conveyor type.</li>
+<li>Testing, guarantee, and sale terms are shown only where the seller states them. Checked October 11, 2026.</li>
+<li>We do not sell equipment or hold inventory. No company paid to be listed.</li>
+<li>For new equipment, see the <a href="/resources/conveyor-manufacturers/">conveyor manufacturer directory</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="types-heading">Where to Look, by Conveyor Type</h2>
+<table>
+<thead>
+<tr><th>Conveyor type</th><th>Seller type</th><th>Sellers that list it</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/conveyor-types/roller-conveyors/gravity/">Gravity roller</a>, skatewheel, and <a href="/conveyor-types/flexible-conveyors/">flexible</a></td><td>Warehouse equipment dealer</td><td>American Surplus, East Coast Storage Equipment, SJF Material Handling</td></tr>
+<tr><td>Powered belt, belt-over-roller, <a href="/conveyor-types/live-roller-conveyors/">live roller</a>, and lineshaft</td><td>Warehouse equipment dealer</td><td>American Surplus, East Coast Storage Equipment, SJF Material Handling</td></tr>
+<tr><td><a href="/conveyor-types/diverting-merging/sortation/">Sortation</a>, <a href="/conveyor-types/pallet-conveyors/">pallet</a>, and <a href="/conveyor-types/telescopic-conveyors/">telescoping</a></td><td>Warehouse equipment dealer</td><td>SJF Material Handling (all three), American Surplus (sortation)</td></tr>
+<tr><td><a href="/conveyor-types/tabletop-conveyors/">Table top chain</a>, <a href="/conveyor-types/modular-conveyors/">modular belt</a>, and <a href="/conveyor-types/slat-conveyors/">slat</a></td><td>Process and packaging dealer</td><td>Phoenix Equipment, Revelation Machinery, Surplus Record</td></tr>
+<tr><td><a href="/conveyor-types/incline-conveyors/">Incline</a> and <a href="/conveyor-types/spiral-conveyors/">spiral</a></td><td>Process and packaging dealer</td><td>Phoenix Equipment, Revelation Machinery, SIGMA Equipment</td></tr>
+<tr><td><a href="/conveyor-types/screw-conveyors/">Screw</a>, <a href="/conveyor-types/bucket-elevators/">bucket elevator</a>, <a href="/conveyor-types/vibratory-conveyors/">vibratory</a>, and <a href="/conveyor-types/pneumatic-conveyors/">pneumatic</a></td><td>Process and packaging dealer</td><td>Aaron Equipment, Phoenix Equipment, Revelation Machinery, Surplus Record</td></tr>
+</tbody>
+</table>
+<p class="source-note">Types are taken from each seller's conveyor category page. Stock changes often, so a listed type may be out of stock on a given day.</p>
+
+<h2 id="list-heading">9 Best Places to Buy Used Conveyors (A to Z)</h2>
+<p>Each card links to the seller's used conveyor page. "Shortlist when" is our reading of the published scope, not an endorsement.</p>
+<MakerList items={makers} buildsLabel="Sells" />
+
+<h2 id="new-or-used-heading">When Used Makes Sense, and When to Buy New</h2>
+<table>
+<thead>
+<tr><th>Situation</th><th>Used</th><th>New</th></tr>
+</thead>
+<tbody>
+<tr><td>Standard gravity roller, skatewheel, or belt sections</td><td>Good fit. Sections are modular and easy to inspect.</td><td>Needed only for unusual widths or roller centers.</td></tr>
+<tr><td>Short lead time</td><td>Good fit when the dealer has stock on the floor.</td><td>Depends on the manufacturer's build schedule.</td></tr>
+<tr><td>Extending an existing line</td><td>Good fit if you can match the make, frame, and roller size.</td><td>Better if the original model is still built and you need an exact match.</td></tr>
+<tr><td>Food-contact or washdown duty</td><td>Higher risk. Sanitary condition and documents are hard to verify.</td><td>Usually the safer choice. See <a href="/industries/food-conveyors/sanitary/">sanitary conveyors</a>.</td></tr>
+<tr><td>Engineered system with zone controls or sortation</td><td>Possible, but budget for controls rework and commissioning.</td><td>Better when you need one party responsible for performance.</td></tr>
+<tr><td>High-speed line built around one product</td><td>Poor fit unless the product and speed match the original use.</td><td>Usually required. Guides, transfers, and speeds are product-specific.</td></tr>
+</tbody>
+</table>
+<p>The purchase price is only part of the cost of a used conveyor. Add freight, rigging, installation, replacement belts or rollers, guarding, and electrical work before you compare it with a new quote. The <a href="/resources/conveyor-cost-guide/">conveyor cost guide</a> explains what drives the price of new equipment.</p>
+
+<h2 id="inspect-heading">What to Inspect Before You Buy</h2>
+<p>Inspect in person when you can. If you cannot, ask the seller for a video of the conveyor running and photos of each item below.</p>
+<table>
+<thead>
+<tr><th>Part</th><th>What to check</th><th>Why it matters</th></tr>
+</thead>
+<tbody>
+<tr><td>Frame</td><td>Bends, twists, cracked welds, and damaged splice plates.</td><td>A bent frame causes belt tracking problems and product jams that are hard to correct.</td></tr>
+<tr><td>Rollers</td><td>Spin each one by hand. Listen for rough bearings and look for dents and flat spots.</td><td>Roller replacement can erase the saving on a low-priced section.</td></tr>
+<tr><td>Belt or chain</td><td>Cracks, frayed edges, worn lacing, stretched chain, and hooked sprocket teeth.</td><td>These are wear parts. See <a href="/resources/conveyor-belting/">conveyor belting</a> for replacement options.</td></tr>
+<tr><td>Motor and gearbox</td><td>Nameplate voltage, phase, and horsepower. Oil leaks and noise under load.</td><td>A motor that does not match your plant power must be replaced. See <a href="/resources/conveyor-motors-drives/">motors and drives</a>.</td></tr>
+<tr><td>Controls</td><td>Which sensors, zone controllers, drives, and panels are included, and whether drawings come with them.</td><td>Missing controls are often the largest hidden cost on powered and accumulation conveyor.</td></tr>
+<tr><td>Guarding</td><td>Guards over chains, belts, sprockets, and nip points.</td><td>The equipment must meet <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer">OSHA 1910.219</a> and should follow <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> once installed, whatever its age. See <a href="/resources/conveyor-safety/">conveyor safety</a>.</td></tr>
+<tr><td>Supports and accessories</td><td>Whether stands, side guides, end stops, and connecting hardware are included.</td><td>Buying these separately adds cost and delay.</td></tr>
+<tr><td>Parts support</td><td>Make, model, and serial number, and whether the manufacturer still supplies parts.</td><td>See <a href="/resources/conveyor-parts/">conveyor parts and replacement</a>.</td></tr>
+</tbody>
+</table>
+
+<SpecChecklist id="rfq-heading" title="What to Send a Used Conveyor Dealer" items={[
+  ['Product', 'What the conveyor will carry, with dimensions, weight, and the condition of the bottom surface.'],
+  ['Type', 'Gravity or powered, and roller, skatewheel, belt, or chain.'],
+  ['Size', 'Effective width, total length, and the number of curves, inclines, and merges.'],
+  ['Roller details', 'Roller diameter and center spacing, if you are matching an existing line.'],
+  ['Speed and rate', 'Feet per minute or units per minute, and whether product must accumulate.'],
+  ['Power', 'Plant voltage and phase, and whether compressed air is available.'],
+  ['Environment', 'Dry, wet, washdown, cold, or dusty.'],
+  ['Make preference', 'Brands already in your plant, so parts and frames match.'],
+  ['Condition', 'Whether you want as-is, tested, or reconditioned equipment.'],
+  ['Scope', 'Whether you need layout drawings, stands, controls, delivery, and installation.'],
+  ['Terms', 'Ask for the guarantee, return, and inspection terms in writing.'],
+]} />
+
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.aaronequipment.com/equipment/conveyors" target="_blank" rel="noopener noreferrer">Used conveyors</a> and <a href="https://www.aaronequipment.com/about-us" target="_blank" rel="noopener noreferrer">about page</a>, Aaron Equipment. Conveyor types, founding year, reconditioning, Wood Dale office.</li>
+<li><a href="https://www.americansurplus.com/product-category/used-equipment/used-conveyor/" target="_blank" rel="noopener noreferrer">Used conveyors</a> and <a href="https://www.americansurplus.com/about-asi/" target="_blank" rel="noopener noreferrer">about page</a>, American Surplus. Conveyor types, testing statement, 30-day parts guarantee, facility size.</li>
+<li><a href="https://ecseco.com/used-equipment/conveyor/" target="_blank" rel="noopener noreferrer">Used conveyors</a>, East Coast Storage Equipment. Conveyor types, layout, installation, and liquidation services.</li>
+<li><a href="https://www.machineryandequipment.com/" target="_blank" rel="noopener noreferrer">Home page</a>, Machinery & Equipment Co. Year, California sites, services.</li>
+<li><a href="https://www.phxequip.com/category/15/conveyors" target="_blank" rel="noopener noreferrer">Buy and sell used conveyors</a>, Phoenix Equipment. Conveyor types, purchasing statement, dismantlement services.</li>
+<li><a href="https://revelationmachinery.com/product-category/packaging-equipment/conveyors/" target="_blank" rel="noopener noreferrer">Used conveyors</a> and <a href="https://revelationmachinery.com/about-us/" target="_blank" rel="noopener noreferrer">about page</a>, Revelation Machinery. Conveyor types, address, auction services.</li>
+<li><a href="https://www.sigmaequipment.com/" target="_blank" rel="noopener noreferrer">Home page</a> and <a href="https://www.sigmaequipment.com/equipment/material-handling/conveyor/" target="_blank" rel="noopener noreferrer">conveyor category</a>, SIGMA Equipment. Selling options, shipping, and listing terms.</li>
+<li><a href="https://www.sjf.com/used-conveyor.html" target="_blank" rel="noopener noreferrer">Conveyor systems</a>, SJF Material Handling. Conveyor types, year, stock statement, services.</li>
+<li><a href="https://surplusrecord.com/machinery-equipment/conveyors/" target="_blank" rel="noopener noreferrer">Conveyors</a> and <a href="https://surplusrecord.com/about/" target="_blank" rel="noopener noreferrer">about page</a>, Surplus Record. Listing counts, history, sellers.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.219" target="_blank" rel="noopener noreferrer">29 CFR 1910.219, Mechanical power-transmission apparatus</a>, OSHA.</li>
+</ul>
+
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+{faqs.map(([q, a], i) => (
+  <Fragment>
+    <h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-${i + 1}`}>{q}</button></h3>
+    <div id={`faq-${i + 1}`} class="usa-accordion__content usa-prose"><p>{a}</p></div>
+  </Fragment>
+))}
+</div>
+
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-manufacturers/">Conveyor Manufacturer Directory</a></h3>
+<p class="usa-collection__description">Manufacturers and integrators of new conveyors, filterable by conveyor type.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-types/roller-conveyors/gravity/">Gravity Roller Conveyors</a></h3>
+<p class="usa-collection__description">Roller sizes, spacing, and pitch for the most common used conveyor type.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-maintenance/">Conveyor Maintenance</a></h3>
+<p class="usa-collection__description">What wears out, and how to keep a used conveyor running after installation.</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-cost-guide/">Conveyor Cost Guide</a></h3>
+<p class="usa-collection__description">The factors that set the price of a new conveyor system.</p></div></li>
+</ul>
+</BaseLayout>

@@ -93,6 +93,7 @@ export const allPages = [
   '/resources/conveyor-manufacturers/spiral/',
   '/resources/conveyor-manufacturers/pneumatic/',
   '/resources/conveyor-manufacturers/buffering/',
+  '/resources/conveyor-manufacturers/used/',
   '/resources/conveyor-companies/',
   '/resources/conveyor-parts/',
   '/resources/conveyor-belting/',
