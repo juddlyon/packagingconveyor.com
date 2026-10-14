@@ -52,7 +52,7 @@ html{scroll-padding-top:1.5rem}body{margin:0;overflow-x:visible;background:#fffc
 .page-header--home{background:#1c1917;padding-block:4rem}.page-header--home .page-header__title{color:#fff;font-size:3rem}.page-header--home .usa-intro{color:#f5f0eb}
 .page-header__actions{margin-top:2rem}
 /* Lead photo beside the H1 and intro on heroPhoto pages. Stacks under the intro below desktop width. */
-.page-header__grid{display:grid;gap:1.5rem}.page-header__photo{margin:0;max-width:28rem}.page-header__photo img{aspect-ratio:4/3;object-fit:cover}
+.page-header__grid{display:grid;gap:1.5rem}.page-header__photo{margin:0;max-width:28rem}.page-header__photo img{aspect-ratio:4/3;object-fit:cover;border-radius:.5rem}
 @media(min-width:64em){.page-header__grid{grid-template-columns:minmax(0,1fr) 22rem;gap:2.5rem;align-items:center}}
 .docs-layout{padding-top:2.5rem}
 @media(max-width:63.99em){.page-header{padding-block:1.75rem}.page-header__title{font-size:2rem}.page-header--home{padding-block:2.5rem}.page-header--home .page-header__title{font-size:2.25rem}}
@@ -77,7 +77,7 @@ html{scroll-padding-top:1.5rem}body{margin:0;overflow-x:visible;background:#fffc
 @media print{.usa-prose>ul.maker-list>li.maker-card{box-shadow:none;break-inside:avoid;grid-template-columns:1fr}.maker-card__mark,.maker-card__preview{display:none}}
 /* Page header copy lines up with the content column below (sidebar width plus gap). Text is flush left on every page, per USWDS typography guidance. */
 .page-header__text{max-width:50rem}
-@media(min-width:64em){.page-header__text{margin-left:calc(260px + 4rem)}}
+@media(min-width:64em){.page-header__text{margin-left:calc(260px + 4rem)}.page-header__grid .page-header__text{margin-left:0}}
 /* Focus ring on the dark homepage band, and 44px minimum tap targets for navigation, buttons, and list links. */
 .usa-section--dark :focus{outline-color:#fef3c7}
 .usa-button{min-height:2.75rem}a.usa-button{display:inline-flex;align-items:center;justify-content:center}
