@@ -51,6 +51,9 @@ html{scroll-padding-top:1.5rem}body{margin:0;overflow-x:visible;background:#fffc
 .usa-section--light{background:#f5f0eb;border-bottom:1px solid #d6cfc7}.usa-section--light .page-header__title{color:#1c1917}
 .page-header--home{background:#1c1917;padding-block:4rem}.page-header--home .page-header__title{color:#fff;font-size:3rem}.page-header--home .usa-intro{color:#f5f0eb}
 .page-header__actions{margin-top:2rem}
+/* Lead photo beside the H1 and intro on heroPhoto pages. Stacks under the intro below desktop width. */
+.page-header__grid{display:grid;gap:1.5rem}.page-header__photo{margin:0;max-width:28rem}.page-header__photo img{aspect-ratio:4/3;object-fit:cover}
+@media(min-width:64em){.page-header__grid{grid-template-columns:minmax(0,1fr) 22rem;gap:2.5rem;align-items:center}}
 .docs-layout{padding-top:2.5rem}
 @media(max-width:63.99em){.page-header{padding-block:1.75rem}.page-header__title{font-size:2rem}.page-header--home{padding-block:2.5rem}.page-header--home .page-header__title{font-size:2.25rem}}
 .page-header a:not(.usa-button),.page-header a:not(.usa-button):visited{color:#92400e}.page-header--home a:not(.usa-button){color:#fef3c7}
