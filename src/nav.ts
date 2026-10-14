@@ -99,6 +99,7 @@ export const sections: NavLink[] = [
       { label: "Indexing Conveyors", href: '/conveyor-functions/indexing-conveyors/' },
       { label: "Infeed & Outfeed Systems", href: '/conveyor-functions/infeed-outfeed/', children: [
         { label: "Star Wheel", href: '/conveyor-functions/infeed-outfeed/star-wheel/' },
+        { label: "Timing Screw", href: '/conveyor-functions/infeed-outfeed/timing-screw/' },
       ] },
       { label: "Inspection & Detection", href: '/conveyor-functions/inspection-detection/' },
       { label: "Metering", href: '/conveyor-functions/metering/' },
@@ -145,7 +146,9 @@ export const sections: NavLink[] = [
   {
     label: 'Components', href: '/components/',
     children: [
+      { label: "Change Parts", href: '/components/change-parts/' },
       { label: "Cleaning Systems", href: '/components/cleaning-systems/' },
+      { label: "Conveyor Frames", href: '/components/conveyor-frames/' },
       { label: "Guide Rails", href: '/components/guide-rails/' },
     ],
   },

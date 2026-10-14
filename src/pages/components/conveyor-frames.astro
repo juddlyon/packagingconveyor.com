@@ -1,0 +1,350 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecChecklist from '../../components/SpecChecklist.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Components", "item": "https://packagingconveyor.com/components/" },
+    { "@type": "ListItem", "position": 3, "name": "Conveyor Frames", "item": "https://packagingconveyor.com/components/conveyor-frames/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a conveyor frame?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor frame is the structure that carries the belt or rollers, the pulleys and drive, the product load, and accessories such as guide rails, sensors, and guards, and holds them in alignment. Frames are built from formed steel channel, structural tube, or aluminum T-slot extrusion, in painted carbon steel, stainless steel, or aluminum. Legs, stands, casters, or hangers carry the frame to the floor or ceiling." }
+    },
+    {
+      "@type": "Question",
+      "name": "What material is best for a conveyor frame?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Painted or powder-coated carbon steel is the usual choice for dry, non-food environments and heavy loads. Type 304 stainless steel is the common choice for food plants and washdown. Type 316 stainless steel adds molybdenum for better resistance to chlorides, salt, and aggressive sanitizers. Aluminum extrusion suits light to moderate loads, cleanrooms, and conveyors that will be reconfigured. Choose the material for the cleaning method and chemicals first, then confirm the load rating." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a slider bed and a roller bed conveyor frame?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A slider bed frame carries the belt on a flat metal pan, which gives small and unstable products continuous support. A roller bed frame carries the belt on closely spaced rollers, which lowers belt friction so the conveyor can carry heavier loads over longer runs with less drive power. The frame side channels are similar. The bed between them is what changes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes a conveyor frame sanitary?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A sanitary frame leaves no place for residue or bacteria to collect and can be inspected and cleaned. The American Meat Institute sanitary design principles call for eliminating or permanently sealing hollow areas such as frames and rollers, avoiding horizontal surfaces, using continuous welds ground smooth, and avoiding screw threads, rivets, and bolts in product zones. In practice that means open frames, sloped or round members, standoffs that space bearings and supports off the frame, and frame cut-outs or belt lifters for cleaning access." }
+    },
+    {
+      "@type": "Question",
+      "name": "How far apart should conveyor frame supports be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Support spacing depends on the frame section, the load per foot, the drive and take-up weight, and the deflection the belt and transfers can tolerate. There is no single correct spacing. Ask the builder for the rated load at your support spacing, and plan supports at drive units, transfers, and any point where accessories or product load concentrate." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Frames: Construction, Materials & Sanitary Design",
+  "description": "Conveyor frame design: formed steel channel, tube, aluminum T-slot, and open sanitary frames compared, plus materials, supports, load, and a spec checklist.",
+  "url": "https://packagingconveyor.com/components/conveyor-frames/",
+  "datePublished": "2026-10-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+<BaseLayout
+  title="Conveyor Frames: Construction, Materials & Sanitary Design"
+  description="Conveyor frame design: formed steel channel, tube, aluminum T-slot, and open sanitary frames compared, plus materials, supports, load, and a spec checklist."
+  canonical="https://packagingconveyor.com/components/conveyor-frames/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+<h1>Conveyor Frames</h1>
+<p class="usa-intro">A conveyor frame is the structure that carries the belt or rollers, the pulleys and drive, the product load, and accessories such as guide rails and sensors, and holds them in alignment. Frames are built from formed steel channel, structural tube, or aluminum T-slot extrusion, in painted carbon steel, stainless steel, or aluminum. Load, environment, and the cleaning method decide which one fits. The frame is one of the structural categories in the <a href="/components/">conveyor components</a> map.</p>
+<figure class="photo"><img src="/img/photos/sanitary-kleenline-washdown-conveyors.webp" width="960" height="720" alt="Two stainless steel conveyors on casters with white belts: a level belt conveyor on a tube frame and an inclined conveyor with trough sides." loading="lazy" decoding="async" /><figcaption>Two stainless steel washdown conveyors on open tube frames and casters. The round members and open structure leave few flat surfaces where water and residue can sit. <span class="photo-credit">Photo: <a href="https://www.kleenline.com/products/rugged-ultra-sanitary-troughing-conveyors/" target="_blank" rel="noopener noreferrer">KleenLine</a></span></figcaption></figure>
+<h2 id="jobs-heading">What a Conveyor Frame Does</h2>
+<ul>
+<li><strong>Holds the pulleys square.</strong> The head and tail pulleys must stay parallel and square to the frame for the belt to track. A frame that twists or sags pulls the belt to one side. See <a href="/conveyor-types/flat-belt-conveyors/">flat belt conveyors</a> for belt tracking.</li>
+<li><strong>Carries the bed.</strong> The frame side channels carry the slider bed pan or the carrying rollers, plus the return rollers under the frame.</li>
+<li><strong>Carries the load to the supports.</strong> Product weight, the drive, and the take-up all pass through the frame to the legs, stands, or hangers.</li>
+<li><strong>Mounts accessories.</strong> <a href="/components/guide-rails/">Guide rails</a>, sensors, guards, and transfer plates bolt or clamp to the frame. Aluminum extrusion frames carry T-slots along their length for this.</li>
+<li><strong>Sets the height and transfers.</strong> The frame and its supports set the conveyor's elevation and the gap at each end transfer.</li>
+</ul>
+<h2 id="construction-heading">Frame Construction Types</h2>
+<p>Four constructions cover most packaging conveyors. The profile and joint method set stiffness, cleanability, and how easily the conveyor can be changed later.</p>
+<table>
+<thead>
+<tr>
+<th>Construction</th>
+<th>How it is built</th>
+<th>Typical use</th>
+<th>Strengths</th>
+<th>Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formed steel channel</td>
+<td>Sheet steel bent into a C-shaped side channel, bolted to cross members</td>
+<td>General packaging and distribution belt and roller conveyors</td>
+<td>Stiff, economical, heavy loads, easy to drill for accessories</td>
+<td>Painted finish must be maintained. Inside of the channel is hard to clean</td>
+</tr>
+<tr>
+<td>Structural tube</td>
+<td>Square, rectangular, or round tube welded or bolted into a frame</td>
+<td>Heavy-duty runs, stands, and sanitary frames</td>
+<td>High stiffness for its weight, round tube sheds water</td>
+<td>Hollow tubes must be fully sealed in food zones</td>
+</tr>
+<tr>
+<td>Aluminum T-slot extrusion</td>
+<td>Extruded aluminum side profiles with T-slots, bolted to cross-ties</td>
+<td>Light to moderate packaging, assembly, and cleanroom conveyors</td>
+<td>Light, corrosion resistant, reconfigurable, accessories mount anywhere along the slots</td>
+<td>Lower load rating than steel of similar size. Slots trap residue in wet areas</td>
+</tr>
+<tr>
+<td>Open sanitary frame</td>
+<td>Stainless members spaced apart, with welded or bolted joints and standoffs</td>
+<td>Exposed food, daily washdown</td>
+<td>Every surface visible and reachable for cleaning</td>
+<td>Highest fabrication cost. Needs a defined cleaning procedure to deliver its benefit</td>
+</tr>
+</tbody>
+</table>
+<p>Published specs show how builders describe these frames. Automated Conveyors lists the frame of its <a href="https://www.automatedconveyors.com/catalog/products/138sr.html" target="_blank" rel="noopener noreferrer">Model 138SR light duty gravity roller bed</a> as "2-1/2" deep x 1" flange x 12 gauge powder painted formed steel." QC Conveyors describes its AS80 as an aluminum frame whose "reinforced frame ... features dual T-slots" for accessories, with steel cross-ties for rigidity.</p>
+<figure class="photo"><img src="/img/photos/components-qc-as80-frame-drive.webp" width="800" height="497" alt="The end of a conveyor with its belt removed, showing a ribbed aluminum bed and a polished drive pulley held between black end plates." loading="lazy" decoding="async" /><figcaption>An aluminum extrusion frame with the belt removed. The extrusion forms the bed the belt slides on, and the end plates hold the drive pulley square to the frame. <span class="photo-credit">Photo: <a href="https://qcconveyors.com/conveyors/automation-series/as80/" target="_blank" rel="noopener noreferrer">QC Conveyors</a></span></figcaption></figure>
+<h2 id="materials-heading">Frame Materials</h2>
+<p>Choose the material for the environment and the cleaning chemicals first, then confirm the load rating in that material.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Fits</th>
+<th>Strengths</th>
+<th>Watch for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Painted or powder-coated carbon steel</td>
+<td>Dry plants, packaged product, distribution</td>
+<td>Lowest cost, heavy loads, easy to modify in the field</td>
+<td>Chips and scratches expose bare steel to rust. Not for exposed food or washdown</td>
+</tr>
+<tr>
+<td>304 stainless steel</td>
+<td>Food and beverage, routine washdown</td>
+<td>Corrosion resistant, standard sanitary material</td>
+<td>Pitting in chloride-rich or salty environments</td>
+</tr>
+<tr>
+<td>316 stainless steel</td>
+<td>Brines, salt, acids, chlorinated sanitizers</td>
+<td>Molybdenum content improves resistance to chloride pitting</td>
+<td>Costs more than 304. Specify only where the chemistry needs it</td>
+</tr>
+<tr>
+<td>Aluminum extrusion</td>
+<td>Light-duty packaging, assembly, cleanrooms</td>
+<td>Light, no paint needed, reconfigurable</td>
+<td>Lower stiffness than steel. Some caustic cleaners attack aluminum, so check the chemicals</td>
+</tr>
+</tbody>
+</table>
+<p>Match fasteners, bearings, and brackets to the frame. A stainless frame with plated carbon steel bolts or painted bearing housings still rusts at those points. For stainless conveyors as a type, see <a href="/conveyor-types/stainless-steel-conveyors/">stainless steel conveyors</a>.</p>
+<h2 id="bed-heading">Slider Bed vs. Roller Bed Frames</h2>
+<p>The side channels of a belt conveyor are similar either way. What changes is the bed between them. A slider bed frame carries the belt on a flat metal pan, which supports small and unstable products and allows tight end transfers. A roller bed frame carries the belt on closely spaced rollers, which lowers belt friction for heavier loads and longer runs. Load ratings, drive power, and the full comparison are on the <a href="/conveyor-types/flat-belt-conveyors/#bed-heading">slider bed vs. roller bed</a> section of the flat belt conveyor guide.</p>
+<h2 id="supports-heading">Supports, Legs, and Mounting</h2>
+<table>
+<thead>
+<tr>
+<th>Support</th>
+<th>Use</th>
+<th>Specify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed or adjustable floor legs</td>
+<td>Most permanent floor conveyors</td>
+<td>Height range, leveling feet, floor anchoring, spacing</td>
+</tr>
+<tr>
+<td>Sanitary stands</td>
+<td>Washdown and exposed food areas</td>
+<td>No horizontal surfaces, sanitary leveling pads, floor clearance for cleaning</td>
+</tr>
+<tr>
+<td>Casters</td>
+<td>Portable conveyors and lines that move for cleaning</td>
+<td>Locking casters, floor condition, caster material for washdown</td>
+</tr>
+<tr>
+<td>Ceiling hangers or overhead supports</td>
+<td>Conveyors over aisles and equipment</td>
+<td>Building structure capacity, sway bracing, guarding underneath</td>
+</tr>
+</tbody>
+</table>
+<p>mk North America describes the support stands on its top sanitary tier as having "no horizontal surfaces and 3-A leveling pads," which is the kind of detail to ask for on any washdown conveyor. Where a conveyor runs over walkways or work areas, plan guarding against falling product. OSHA's conveyor rule for construction, <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.555" target="_blank" rel="noopener noreferrer">29 CFR 1926.555</a>, requires guards where conveyors pass over work areas, aisles, or thoroughfares, and <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a> is the conveyor safety standard to check the design against.</p>
+<h2 id="load-heading">Load, Stiffness, and Support Spacing</h2>
+<p>A frame's rated load depends on its section, the span between supports, and how much deflection the conveyor can tolerate. Builders publish ratings for the whole conveyor at a stated support layout. For example, QC Conveyors lists loads up to 600 lb for the AS80. Those figures do not carry over to a different support spacing or a different builder.</p>
+<ul>
+<li><strong>Ask for the load chart</strong> at your support spacing and conveyor length, not a single headline number.</li>
+<li><strong>Add the drive and take-up</strong> to the product load. A gearmotor hung on the end of a light frame is a concentrated load.</li>
+<li><strong>Check deflection at transfers.</strong> A frame that sags at a transfer changes the gap and height at the handoff and can tip small products.</li>
+<li><strong>Plan for accumulation.</strong> Product backed up on the conveyor loads the frame more than product moving with gaps.</li>
+</ul>
+<h2 id="sanitary-heading">Sanitary Frame Design</h2>
+<p>In food plants the frame is part of the food safety design. The American Meat Institute's 10 sanitary equipment design principles, summarized by <a href="https://www.manitoba.ca/agriculture/food-safety/education-resources/sanitary-design-of-equipment.html" target="_blank" rel="noopener noreferrer">Manitoba Agriculture</a>, apply directly to frames:</p>
+<ul>
+<li><strong>Hollow areas:</strong> "Hollow areas of equipment such as frames and rollers must be eliminated, wherever possible, or permanently sealed." The same source lists equipment framework and hollow conveyor rollers among common places <em>Listeria monocytogenes</em> is found.</li>
+<li><strong>Horizontal surfaces:</strong> "Horizontal surfaces must be avoided." Surfaces should slope so water and residue drain.</li>
+<li><strong>Welds:</strong> "Welds should be smooth, continuous and ground smooth to prevent niches," with no tack or spot welds.</li>
+<li><strong>Fasteners:</strong> Avoid screw threads, rivets, and bolts. Brackets and mounting plates should be continuously welded, not attached through drilled and tapped holes.</li>
+</ul>
+<p>Sanitary conveyor lines are often sold in tiers that show how these principles change the frame. mk North America's <a href="https://www.mknorthamerica.com/Products/stainless-steel-conveyors/" target="_blank" rel="noopener noreferrer">CleanMove stainless conveyors</a> are one example:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Frame construction</th>
+<th>Cleaning described</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CleanMove Standard</td>
+<td>All bolted stainless steel, #4 finish</td>
+<td>Wipe down with mild detergents</td>
+</tr>
+<tr>
+<td>CleanMove Plus</td>
+<td>Welded and bolted, supports and bearings spaced off the frame, frame access areas</td>
+<td>Frequent light washdown with mild detergents</td>
+</tr>
+<tr>
+<td>CleanMove Ultra</td>
+<td>Support stands with no horizontal surfaces and 3-A leveling pads</td>
+<td>The highest sanitation tier in the line</td>
+</tr>
+</tbody>
+</table>
+<p>Open frames take the idea further. Regal Rexnord describes its Arrowhead NeXtgen II wash down conveyor as having "an open frame design, 100% visibility to all product contact zones, and tool-free disassembly," built from "a combination of TIG-welded and bolted-together stainless steel assemblies." For the full hygienic design checklist, see <a href="/industries/food-conveyors/sanitary/">sanitary conveyors</a>. For component washdown ratings, see <a href="/conveyor-types/washdown-conveyors/">washdown conveyors</a>.</p>
+<h2 id="modular-heading">Modular vs. Fabricated Frames</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Modular catalog frames</th>
+<th>Custom fabricated frames</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it is</td>
+<td>Standard widths and section lengths from a builder's product line, bolted together</td>
+<td>Frames designed and welded for one layout or machine</td>
+</tr>
+<tr>
+<td>Fits</td>
+<td>Standard widths, light to moderate loads, lines that will change</td>
+<td>Odd widths, heavy loads, tight machine interfaces, sanitary welded designs</td>
+</tr>
+<tr>
+<td>Lead time</td>
+<td>Usually shorter, parts are standard</td>
+<td>Longer, includes design and fabrication</td>
+</tr>
+<tr>
+<td>Later changes</td>
+<td>Add, shorten, or reroute sections with stock parts</td>
+<td>Changes mean new fabrication</td>
+</tr>
+<tr>
+<td>Replacement parts</td>
+<td>Catalog parts from the builder</td>
+<td>Drawings must be kept. Parts are made to order</td>
+</tr>
+</tbody>
+</table>
+<p>QC Conveyors, for example, offers the AS80 in fixed widths from 6 to 36 inches and lengths up to 40 feet. Layouts outside a builder's standard range go to <a href="/resources/conveyor-manufacturers/custom/">custom conveyor builders</a>.</p>
+<h2 id="mistakes-heading">Common Frame Specification Mistakes</h2>
+<ol>
+<li><strong>Choosing by headline load.</strong> A load rating means little without the support spacing and length it applies to.</li>
+<li><strong>Specifying a stainless frame with carbon steel hardware.</strong> Bolts, bearing housings, and brackets rust first and contaminate the frame.</li>
+<li><strong>Using T-slot aluminum in wet product zones.</strong> The slots that make aluminum frames easy to change also hold water and residue.</li>
+<li><strong>Ignoring the cleaning method.</strong> A frame rated for wipe down will not survive daily high-pressure caustic washdown.</li>
+<li><strong>Leaving out the floor and the building.</strong> Uneven floors need leveling range. Ceiling-hung conveyors need the building structure checked.</li>
+<li><strong>Forgetting future changes.</strong> If the line will be extended or rerouted, a modular frame saves fabrication later.</li>
+</ol>
+<SpecChecklist id="spec-checklist" title="Conveyor frame specification checklist" items={[
+  ["Product and load", "Product size and weight, load per foot when moving and when accumulated, and any impact loading at transfers."],
+  ["Layout", "Length, width between frames, elevation, inclines, curves, and transfer heights at each end."],
+  ["Construction", "Formed channel, tube, aluminum extrusion, or open sanitary frame, and welded or bolted joints."],
+  ["Material", "Painted carbon steel, 304 or 316 stainless, or aluminum, chosen against the cleaning chemicals."],
+  ["Bed", "Slider bed or roller bed, and the return roller arrangement."],
+  ["Supports", "Floor legs, sanitary stands, casters, or ceiling hangers, height range, and support spacing."],
+  ["Load rating", "Builder's load chart at your support spacing and length, including drive and take-up weight."],
+  ["Sanitation", "Cleaning method, pressure, and chemicals, hollow member sealing, standoffs, and cleaning access."],
+  ["Hardware", "Fastener, bracket, and bearing housing materials matched to the frame."],
+  ["Accessories", "Guide rail, sensor, and guard mounting points, and whether they need T-slots or welded brackets."],
+  ["Safety", "Guarding over aisles and work areas and at nip points, checked against ASME B20.1."],
+  ["Future changes", "Planned extensions or reroutes, and drawings or part numbers for replacement sections."]
+]} />
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.manitoba.ca/agriculture/food-safety/education-resources/sanitary-design-of-equipment.html" target="_blank" rel="noopener noreferrer">Sanitary Design of Equipment</a>, Manitoba Agriculture. Summary of the American Meat Institute's 10 sanitary equipment design principles, including hollow areas, horizontal surfaces, welds, and fasteners.</li>
+<li><a href="https://www.mknorthamerica.com/Products/stainless-steel-conveyors/" target="_blank" rel="noopener noreferrer">Stainless Steel Conveyors</a>, mk North America. CleanMove Standard, Plus, and Ultra frame construction and cleaning tiers.</li>
+<li><a href="https://foodindustryexecutive.com/2025/09/reduce-operating-costs-and-sanitize-faster-with-arrowhead-nextgen-ii-wash-down-conveyor/" target="_blank" rel="noopener noreferrer">Arrowhead NeXtgen II Wash Down Conveyor announcement</a>, Regal Rexnord via Food Industry Executive, September 2025. Open frame design and welded and bolted stainless construction.</li>
+<li><a href="https://qcconveyors.com/conveyors/automation-series/as80/" target="_blank" rel="noopener noreferrer">AS80 Conveyor</a>, QC Conveyors. Aluminum frame with dual T-slots and steel cross-ties, widths, lengths, and load rating.</li>
+<li><a href="https://www.automatedconveyors.com/catalog/products/138sr.html" target="_blank" rel="noopener noreferrer">Model 138SR Light Duty Gravity Roller Bed</a>, Automated Conveyors. Example formed steel channel frame specification.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.555" target="_blank" rel="noopener noreferrer">29 CFR 1926.555 Conveyors</a>, OSHA. Guarding where conveyors pass over work areas, aisles, or thoroughfares.</li>
+<li><a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1 Safety Standard for Conveyors and Related Equipment</a>, ASME.</li>
+</ul>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a conveyor frame?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>A conveyor frame is the structure that carries the belt or rollers, the pulleys and drive, the product load, and accessories such as guide rails, sensors, and guards, and holds them in alignment. Frames are built from formed steel channel, structural tube, or aluminum T-slot extrusion, in painted carbon steel, stainless steel, or aluminum. Legs, stands, casters, or hangers carry the frame to the floor or ceiling.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">What material is best for a conveyor frame?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>Painted or powder-coated carbon steel is the usual choice for dry, non-food environments and heavy loads. Type 304 stainless steel is the common choice for food plants and washdown. Type 316 stainless steel adds molybdenum for better resistance to chlorides, salt, and aggressive sanitizers. Aluminum extrusion suits light to moderate loads, cleanrooms, and conveyors that will be reconfigured. Choose the material for the cleaning method and chemicals first, then confirm the load rating.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is the difference between a slider bed and a roller bed conveyor frame?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>A slider bed frame carries the belt on a flat metal pan, which gives small and unstable products continuous support. A roller bed frame carries the belt on closely spaced rollers, which lowers belt friction so the conveyor can carry heavier loads over longer runs with less drive power. The frame side channels are similar. The bed between them is what changes. See <a href="/conveyor-types/flat-belt-conveyors/#bed-heading">slider bed vs. roller bed</a> for load ratings.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">What makes a conveyor frame sanitary?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>A sanitary frame leaves no place for residue or bacteria to collect and can be inspected and cleaned. The American Meat Institute sanitary design principles call for eliminating or permanently sealing hollow areas such as frames and rollers, avoiding horizontal surfaces, using continuous welds ground smooth, and avoiding screw threads, rivets, and bolts in product zones. In practice that means open frames, sloped or round members, standoffs that space bearings and supports off the frame, and frame cut-outs or belt lifters for cleaning access.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">How far apart should conveyor frame supports be?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>Support spacing depends on the frame section, the load per foot, the drive and take-up weight, and the deflection the belt and transfers can tolerate. There is no single correct spacing. Ask the builder for the rated load at your support spacing, and plan supports at drive units, transfers, and any point where accessories or product load concentrate.</p>
+</div>
+</div>
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/components/">All Components</a></h3>
+<p class="usa-collection__description">Browse component categories</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-design-guide/components/">Frame, Drive &amp; Pulley Design</a></h3>
+<p class="usa-collection__description">How frame, belt, and drive choices interact</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/industries/food-conveyors/sanitary/">Sanitary Conveyors</a></h3>
+<p class="usa-collection__description">Hygienic design for food plants</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-cost-guide/">Conveyor Cost Guide</a></h3>
+<p class="usa-collection__description">How frame material drives cost</p></div></li>
+</ul>
+</BaseLayout>

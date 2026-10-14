@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SpecChecklist from '../../../components/SpecChecklist.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Conveyor Functions", "item": "https://packagingconveyor.com/conveyor-functions/" },
+    { "@type": "ListItem", "position": 3, "name": "Infeed & Outfeed", "item": "https://packagingconveyor.com/conveyor-functions/infeed-outfeed/" },
+    { "@type": "ListItem", "position": 4, "name": "Timing Screws", "item": "https://packagingconveyor.com/conveyor-functions/infeed-outfeed/timing-screw/" }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Timing Screws, Feed Screws & Scrolls",
+  "description": "How timing screws (feed screws, scrolls, infeed worms) space, time, turn, combine, and divide containers on packaging lines, with pitch design, materials, drives, troubleshooting, and a spec checklist.",
+  "url": "https://packagingconveyor.com/conveyor-functions/infeed-outfeed/timing-screw/",
+  "datePublished": "2026-10-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a timing screw?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A timing screw is a rotating helical screw mounted beside a packaging conveyor that captures containers in the pockets between its threads and releases them at a set spacing and time. It is also called a feed screw, infeed screw, scroll, worm, or helix. The most common job is metering round containers into the star wheel of a rotary filler, capper, or labeler, but screws also transfer, group, combine, divide, turn, and invert containers." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is timing screw pitch matched to a star wheel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The discharge pitch of the screw must equal the pocket spacing of the star wheel it feeds, and the screw must release one container each time a pocket reaches the handoff point. In the Frain Industries timing screw white paper example, a screw feeding an 8-pocket star wheel turns once for every one-eighth turn of the star wheel, and a 6-inch pocket spacing needs a 6-inch discharge pitch." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are timing screws made of?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most timing screws are machined from engineering plastics: UHMW polyethylene, acetal (Delrin is a common brand), nylon, or HDPE. Metal screws in stainless steel, steel, brass, or aluminum are used where metal cans, glass, or high speed would wear plastic quickly. Plastics come in many colors, so screws can be color coded with their matching change parts. For food or drug contact, ask which FDA regulation the exact grade complies with." }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you need a dual timing screw?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use a pair of screws when one screw cannot control the container. A counter-rotating pair, one screw on each side, holds oval or non-round containers in a fixed orientation for labeling. A pair mounted one above the other supports tall, unstable containers that tip in a single screw. Pairs are also used to combine two lanes into one, divide one lane into two, or turn oblong containers 90 degrees." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do containers tip or jam in a timing screw?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The usual causes are a poor infeed, a short backlog, the wrong conveyor speed, or a screw out of phase with the star wheel. Containers need a backlog at the screw infeed so they enter aligned with the first thread. The conveyor should push each container against the leading edge of its pocket, so it normally runs slightly faster than the screw's linear speed. Square containers with sharp corners leave no gap for the first thread and may need an inverse taper or cone infeed." }
+    }
+  ]
+};
+---
+<BaseLayout title="Timing Screws: Feed Screws, Scrolls & Infeed Screws Explained" description="How timing screws (feed screws, scrolls, infeed worms) space and time containers into fillers, cappers, and labelers. Pitch design, single vs dual, materials, drives, and troubleshooting." canonical="https://packagingconveyor.com/conveyor-functions/infeed-outfeed/timing-screw/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<h1>Timing Screws, Feed Screws &amp; Scrolls</h1>
+<p class="usa-intro">A timing screw is a rotating helical screw beside a packaging conveyor that captures each container in a pocket between its threads and releases it at a set spacing and time. Its most common job is metering round containers into the star wheel of a filler, capper, or labeler. Cut differently, the same device groups, combines, divides, turns, and inverts containers.</p>
+<h2 id="what-heading">What Is a Timing Screw?</h2>
+<p>A timing screw is a threaded rod that turns alongside the conveyor while containers ride on the belt. Each thread pocket holds one container (or a group), and each turn of the screw moves every container forward by one pocket. Unlike a fastening screw, its thread pitch is usually not uniform, so the screw can open gaps between touching containers as they travel along it.</p>
+<figure class="photo"><img src="/img/photos/starwheel-septimatech-infeed-screw.webp" width="1000" height="666" alt="A single dark green helical timing screw running alongside a row of large filled water bottles, with each bottle sitting in a flight of the screw." loading="lazy" decoding="async" /><figcaption>A single infeed screw for soft-wall containers, with water bottles seated in the screw pockets. <span class="photo-credit">Photo: <a href="https://www.septimatech.com/products-and-services/machine-changeovers/feed-screws-systems/" target="_blank" rel="noopener noreferrer">Septimatech</a></span></figcaption></figure>
+<p>The device goes by many names. <a href="https://morrison-chs.com/timing-screws/" target="_blank" rel="noopener noreferrer">Morrison Container Handling Solutions</a>, a timing screw manufacturer, lists "worms, feed screws, augers, scrolls, infeed screws, gusanos, and tornillos sin fin." Krones calls it the infeed worm. They all describe the same part. A timing screw is not a <a href="/conveyor-types/screw-conveyors/">screw conveyor</a>, which moves bulk material inside a trough.</p>
+<h2 id="anatomy-heading">Timing Screw Anatomy</h2>
+<p>The <a href="https://www.fraingroup.com/wp-content/uploads/Timing-Screws.pdf" target="_blank" rel="noopener noreferrer">Frain Industries timing screw white paper</a>, written by packaging machinery author John Henry, defines the dimensions a buyer or replacement-parts supplier needs.</p>
+<figure class="diagram">
+<div class="diagram__scroll" tabindex="0" role="region" aria-label="Timing screw anatomy diagram">
+<svg viewBox="0 0 720 260" role="img" aria-labelledby="ts-title ts-desc">
+<title id="ts-title">Variable-pitch timing screw, side view</title>
+<desc id="ts-desc">Side view of a timing screw running left to right beside a row of containers. At the infeed end on the left, containers touch and the thread pitch is close to one container diameter. Toward the discharge end on the right, the pitch widens and the containers leave spaced apart at the discharge pitch, which matches the star wheel pocket spacing. Labels mark the root diameter, outside diameter, pocket, infeed pitch, and discharge pitch.</desc>
+<defs><marker id="ts-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker></defs>
+<rect x="40" y="132" width="620" height="36" fill="#f5f0eb" stroke="#1c1917"/>
+<rect x="40" y="100" width="620" height="100" fill="none" stroke="#1c1917"/>
+<path d="M60 100L84 200M108 100L132 200M156 100L184 200M212 100L246 200M282 100L326 200M372 100L432 200M492 100L572 200" stroke="#1c1917" stroke-width="2"/>
+<rect x="44" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="68" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="92" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="134" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="186" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="256" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="348" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="470" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<rect x="610" y="52" width="22" height="44" fill="#fef3c7" stroke="#1c1917"/>
+<path d="M300 30h120" stroke="#b45309" stroke-width="3" marker-end="url(#ts-arrow)"/>
+<text x="300" y="22" font-size="14" fill="#1c1917">Container travel</text>
+<path d="M60 222h48" stroke="#1c1917" marker-start="url(#ts-arrow)" marker-end="url(#ts-arrow)"/>
+<text x="44" y="246" font-size="14" fill="#1c1917">Infeed pitch</text>
+<path d="M492 222h80" stroke="#1c1917" marker-start="url(#ts-arrow)" marker-end="url(#ts-arrow)"/>
+<text x="460" y="246" font-size="14" fill="#1c1917">Discharge pitch = pocket spacing</text>
+<path d="M680 132v36" stroke="#1c1917" marker-start="url(#ts-arrow)" marker-end="url(#ts-arrow)"/>
+<text x="668" y="126" font-size="13" fill="#1c1917" text-anchor="end">Root</text>
+<path d="M700 100v100" stroke="#1c1917" marker-start="url(#ts-arrow)" marker-end="url(#ts-arrow)"/>
+<text x="712" y="92" font-size="13" fill="#1c1917" text-anchor="end">Outside</text>
+<text x="400" y="122" font-size="13" fill="#1c1917">Pocket</text>
+</svg>
+</div>
+<figcaption>Side view of a variable-pitch timing screw. Containers enter touching at the narrow infeed pitch, and the widening pitch spaces them out to the discharge pitch. Schematic only, not to scale.</figcaption>
+</figure>
+<table>
+<thead><tr><th>Term</th><th>What it means</th><th>Why it matters to the buyer</th></tr></thead>
+<tbody>
+<tr><td>Outside diameter</td><td>Maximum diameter of the screw. Usually constant, though some designs taper it at the infeed.</td><td>Sets clearance to the guide rail and belt.</td></tr>
+<tr><td>Root diameter</td><td>Diameter at the bottom of the pockets, also called the barrel or inner diameter.</td><td>Together with the outside diameter, sets pocket depth and how much of the container the screw holds.</td></tr>
+<tr><td>Pocket</td><td>The space between threads, cut to the shape of the container.</td><td>Pocket shape is why a screw is container-specific.</td></tr>
+<tr><td>Pitch</td><td>Distance from the leading edge of one pocket to the leading edge of the next.</td><td>Usually critical at one point only, such as the discharge. Define it there.</td></tr>
+<tr><td>Number of pockets</td><td>Count of pockets between infeed and discharge.</td><td>More pockets over the same length mean gentler acceleration and less tipping. On transfer screws the count can be critical to timing.</td></tr>
+<tr><td>Length</td><td>Threaded length, plus any unthreaded ends or drive hubs.</td><td>Ambiguous on orders. Send a sketch showing thread length, overall length, and hub details.</td></tr>
+<tr><td>Rotation</td><td>Clockwise or counterclockwise.</td><td>Orient the screw so the thread turns down onto the container, not up and under it.</td></tr>
+</tbody>
+</table>
+<h2 id="pitch-heading">How the Pitch Profile Works</h2>
+<p>Containers enter the screw touching each other at a pitch close to their diameter. The pitch then grows along the screw, so each container is pulled ahead of the one behind it. At the discharge end the pitch equals the spacing the next machine needs.</p>
+<ol>
+<li><strong>Infeed:</strong> round containers leave a "V" between neighbors, so the first thread slips in easily. The Frain paper recommends a backlog of at least 3 to 6 bottles at the infeed so the line pushes each container into the screw aligned with the first thread.</li>
+<li><strong>Acceleration zone:</strong> the change from infeed pitch to discharge pitch sets how hard each container is accelerated. A longer screw or more pockets spreads the change out and reduces tipping.</li>
+<li><strong>Discharge:</strong> the pitch matches the star wheel pocket spacing. In the Frain example the screw turns at a 1:8 ratio to an 8-pocket star wheel, releasing one bottle into each pocket, and a 6-inch pocket spacing needs a 6-inch discharge pitch.</li>
+</ol>
+<div class="usa-summary-box" role="region" aria-labelledby="push-heading"><div class="usa-summary-box__body"><p class="usa-summary-box__heading" id="push-heading">Common mistake: letting the screw push</p><div class="usa-summary-box__text"><p>The trailing edge of the pocket should not push the container down the line. That can tip containers in the pocket. The conveyor should push each container against the leading edge of its pocket. The Frain paper gives a rule of thumb: at the screw discharge, run the conveyor about 10% faster than the screw's linear speed.</p></div></div></div>
+<p>A transfer screw between two machines with the same star wheel pitch can keep one constant pitch along its whole length. The screw holds the container the entire way, which follows the principle of never giving up control of a container once it has been acquired.</p>
+<h2 id="functions-heading">What Timing Screws Do Besides Spacing</h2>
+<p>Morrison lists feed, meter, turn, group, collate, index, dwell, invert, combine, divide, dead plate transfer, orient, and denest as timing screw functions. The Frain paper describes how the main ones are cut.</p>
+<table>
+<thead><tr><th>Function</th><th>How the screw does it</th><th>Typical use</th></tr></thead>
+<tbody>
+<tr><td>Metering and timing</td><td>Variable pitch opens gaps and the discharge pitch matches the machine.</td><td>Infeed to rotary fillers, cappers, and labelers. See <a href="/conveyor-functions/metering/">metering</a>.</td></tr>
+<tr><td>Transfer</td><td>Constant pitch carries containers from one machine's discharge star wheel to the next machine's infeed.</td><td>Keeps positive control between machines on high-speed lines.</td></tr>
+<tr><td>Collating</td><td>Pockets cut for 2 or more containers. Group spacing depends on pitch and conveyor speed.</td><td>Groups for <a href="/conveyor-functions/collating-laning/">collating</a>, multipacks, and case packers.</td></tr>
+<tr><td>Combining</td><td>Two lanes meet at a pair of screws running 180 degrees out of phase, so their discharges merge into a single file.</td><td>Merging two lanes ahead of a single-lane machine.</td></tr>
+<tr><td>Dividing</td><td>A synchronized pair. Each screw's outside diameter pushes alternate containers into the other screw, and guide rails split the discharge into two lanes.</td><td>Feeding two lanes from one.</td></tr>
+<tr><td>Turning</td><td>A pair of screws cut to rotate oblong or oval containers 90 degrees on the conveyor.</td><td>Presenting a container face to a labeler or case packer.</td></tr>
+<tr><td>Inverting</td><td>A screw with rails turns the container over, for example over an air jet for cleaning, then discharges it inverted or upright.</td><td>Air rinsing and cleaning before filling.</td></tr>
+<tr><td>Dwell</td><td>A pocket cut with zero pitch for part of a turn, so the container pauses while the screw keeps turning at constant speed.</td><td>Short stationary operations such as waxing a cork.</td></tr>
+</tbody>
+</table>
+<h2 id="single-dual-heading">Single, Dual &amp; Stacked Screws</h2>
+<table>
+<thead><tr><th>Configuration</th><th>Layout</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td>Single screw</td><td>One screw on one side, a guide rail on the other.</td><td>Stable round containers such as cans, jars, and most bottles. Simplest and most common.</td></tr>
+<tr><td>Counter-rotating pair</td><td>One screw on each side of the conveyor.</td><td>Oval or non-round containers that must hold an exact orientation for labeling. Frain notes a single screw "will probably allow some rotation."</td></tr>
+<tr><td>Stacked pair</td><td>One screw mounted above the other on the same side.</td><td>Tall, unstable containers that tip in a single screw.</td></tr>
+<tr><td>Multi-screw systems</td><td>Two or more screws cut and timed as a set.</td><td>Combining, dividing, turning, grouping, and stacking.</td></tr>
+</tbody>
+</table>
+<p><a href="https://www.septimatech.com/blog/timing-screws-and-feed-screws/" target="_blank" rel="noopener noreferrer">Septimatech</a>, a feed screw manufacturer, says dual screws "provide enhanced control and synchronization" and suit products that differ in shape or size or must be grouped for multipacking or labeling. Because both sides of the container are held, dual screws also improve <a href="/conveyor-functions/singulation/">singulation</a>.</p>
+<figure class="photo"><img src="/img/photos/starwheel-septimatech-dual-screw.webp" width="1000" height="662" alt="Two red helical timing screws mounted on opposite sides of a tabletop chain conveyor, with the pitch of both screws widening along their length." loading="lazy" decoding="async" /><figcaption>Retrofitted dual feed screws, one on each side of the conveyor chain, with pitch widening along both screws. <span class="photo-credit">Photo: <a href="https://www.septimatech.com/products-and-services/machine-changeovers/feed-screws-systems/" target="_blank" rel="noopener noreferrer">Septimatech</a></span></figcaption></figure>
+<h2 id="materials-heading">Timing Screw Materials</h2>
+<p>Morrison builds screws in "UHMW, Nylon, Delrin, HDPE, and Stainless Steel." The Frain paper adds brass, steel, and aluminum for cases where metal cans, glass, or high speed would wear a plastic screw too quickly. Whatever the material, it must not scuff the container.</p>
+<table>
+<thead><tr><th>Material</th><th>Where it fits</th><th>FDA food-contact reference</th></tr></thead>
+<tbody>
+<tr><td>UHMW polyethylene</td><td>A common screw plastic. Low friction and gentle on containers. Morrison used a UHMW screw to limit pressure on plastic bottles in a published metering application.</td><td>Olefin polymers, <a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a></td></tr>
+<tr><td>Acetal (Delrin is a common brand)</td><td>Stiffer and more dimensionally stable than UHMW. Holds fine pocket detail.</td><td><a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470</a> (copolymer), 177.2480 (homopolymer)</td></tr>
+<tr><td>Nylon</td><td>Tough and wear resistant. PAR Group, a UK plastics machinist, lists cast nylon for scrolls.</td><td><a href="https://www.law.cornell.edu/cfr/text/21/177.1500" target="_blank" rel="noopener noreferrer">21 CFR 177.1500</a></td></tr>
+<tr><td>HDPE</td><td>Offered by some makers, including Morrison.</td><td>Olefin polymers, 21 CFR 177.1520</td></tr>
+<tr><td>Stainless steel, steel, brass, aluminum</td><td>Abrasive or heavy containers and high speed, where plastic would wear fast.</td><td>Check the finish and the container's scuff tolerance.</td></tr>
+</tbody>
+</table>
+<p>Ask the supplier which regulation the exact resin grade complies with, not just the material family. Plastics come in many colors, so screws can be color coded to match their star wheels and guides. Morrison also offers a urethane driver that "visually shows wear to make replacement easier."</p>
+<h2 id="drive-heading">Timing Screw Drive &amp; Synchronization</h2>
+<p>A screw feeding a star wheel must release one container each time a pocket reaches the handoff point. Two things must match: the discharge pitch must equal the star wheel pocket pitch, and the screw's rotation must stay locked in phase with the star wheel and the machine. At 1,200 containers per minute, one container arrives every 50 milliseconds, so small timing errors cause jams.</p>
+<table>
+<thead><tr><th>Drive type</th><th>How it works</th><th>Strengths</th><th>Limits</th></tr></thead>
+<tbody>
+<tr><td>Mechanical linkage</td><td>Gear train or timing belt from the machine's main drive turns the screw at a fixed ratio.</td><td>Cannot drift while the linkage is intact.</td><td>Ratio changes need gear changes. Everything starts and stops together.</td></tr>
+<tr><td>Servo</td><td>A dedicated servo motor follows the machine's master encoder through an electronic cam in the motion controller.</td><td>Speed changes on the fly, soft starts, phase offsets, and recipe-based changeover. Frain notes the trend toward small dedicated servos simplifies machine construction and adjustment.</td><td>Needs controls integration and a reliable homing routine after faults.</td></tr>
+<tr><td>Speed-controlled motor</td><td>A DC or variable-speed motor set by the operator, with no machine timing.</td><td>Simple. Discharge spacing is set by screw speed relative to conveyor speed.</td><td>Only for orienting or separating where precise timing is not required, such as some inline labeler infeeds.</td></tr>
+<tr><td>Intermittent (indexing)</td><td>A single-revolution clutch or servo turns the screw a fixed number of turns on a signal.</td><td>Places a group of containers under inline filler nozzles, then advances the next group. See <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>.</td><td>Cycle rate is limited by start and stop.</td></tr>
+</tbody>
+</table>
+<h3>Phase and Mounting</h3>
+<p>Phase is the angular position of the screw relative to the star wheel. Correct speed with the wrong phase still fails, because every container arrives at the same wrong point of the pocket. The Frain paper warns against screws that can be rotated on the drive shaft and must be re-timed at every mounting. Timing screws "should always use keyed or pinned shafts" so they mount only in the timed position. Morrison uses a square drive for the same reason: "the screw can only go on one way." Make any timing adjustment on the screw itself and lock it, so the next changeover needs no adjustment.</p>
+<p>Servo systems store the phase offset in the motion controller and re-home to the machine encoder on start. After any screw swap, jog the machine slowly with containers before running at speed, and confirm the controller loaded the right recipe.</p>
+<figure class="video"><a class="video__link" href="https://www.youtube.com/watch?v=LGRy5HFRXSs" data-youtube="LGRy5HFRXSs"><img src="/img/photos/yt-lgry5hfrxss.webp" width="1000" height="563" alt="" loading="lazy" decoding="async" /><span class="video__play">Play video: Feed Screw Drives / Timing Screw Drive Units - Increase Performance, Efficiency, &amp; Flexibility</span></a><figcaption>Feed screw drive units moving containers through single and dual timing screws. <span class="photo-credit">Video: <a href="https://www.youtube.com/@SeptimatechGroupInc" target="_blank" rel="noopener noreferrer">Septimatech Group Inc.</a> on YouTube</span></figcaption></figure>
+<h2 id="troubleshooting-heading">Timing Screw Troubleshooting</h2>
+<table>
+<thead><tr><th>Symptom</th><th>Likely cause</th><th>What to check</th></tr></thead>
+<tbody>
+<tr><td>Thread hits the container at the infeed, jams, or damaged containers</td><td>Infeed design, or too little backlog to push containers into the first thread.</td><td>Keep a backlog at the infeed. Frain recommends a photoeye upstream of the screw that stops the machine when the backlog drops below a minimum.</td></tr>
+<tr><td>Square or sharp-cornered containers will not enter</td><td>Flat sides leave no gap for the first thread.</td><td>An inverse taper or cone infeed, where rails guide containers in at an angle to open a gap for the thread.</td></tr>
+<tr><td>Containers tip inside the pockets</td><td>The pocket's trailing edge is pushing the container, or acceleration is too sharp.</td><td>Conveyor speed relative to the screw (about 10% faster at the discharge per Frain), pocket count, and guide rail height.</td></tr>
+<tr><td>Container hits the star wheel pocket tip</td><td>Screw out of phase with the star wheel.</td><td>Keyed or pinned mounting, the coupling or timing belt, and the servo home position.</td></tr>
+<tr><td>Empty star wheel pockets or double feeds</td><td>Phase error, or a discharge pitch that does not match the pocket pitch.</td><td>Discharge pitch against the star wheel drawing, and the correct screw for the container.</td></tr>
+<tr><td>Scuffing and noise at the handoff</td><td>Small phase error, a worn screw, or a material that is too harsh for the container.</td><td>Nicks on the thread edges from dropped or loosely stored screws, and the screw material.</td></tr>
+<tr><td>Hang-ups between screw and rail</td><td>Clearance between screw, belt, and guide rail is wrong for the container.</td><td>Screw height and position relative to the belt and <a href="/components/guide-rails/">guide rails</a>.</td></tr>
+</tbody>
+</table>
+<h2 id="alternatives-heading">When a Timing Screw Is the Wrong Choice</h2>
+<p>Timing screws suit round and many shaped rigid containers. Other infeeds fit better in these cases:</p>
+<ul>
+<li><strong>Many container sizes with frequent changeovers:</strong> every size needs its own screw. Servo-driven infeed belts or flights change pitch by recipe instead. Compare options on the <a href="/conveyor-functions/infeed-outfeed/">infeed and outfeed</a> page.</li>
+<li><strong>Soft or irregular products:</strong> pouches, bags, and flexible packs cannot be held in a rigid pocket. Use servo belts, <a href="/conveyor-functions/metering/">metering belts</a>, or flighted conveyors.</li>
+<li><strong>Cartons and cases:</strong> flat-sided products are usually spaced by belts, gates, or lugs. See <a href="/conveyor-functions/slug-loading/">slug loading</a> and <a href="/conveyor-functions/indexing-conveyors/">indexing</a>.</li>
+</ul>
+<h2 id="changeover-heading">Changeover</h2>
+<p>A timing screw is a container-specific change part. Each container size needs its own screw, matched to its star wheels, center guide, and rails. Changeover time depends on the mounting: Septimatech says tool-less feed screw mounts reduce setup "from hours to just minutes," and the <a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Krones Modulfill Bloc FS-C brochure</a> lists 1.5 minutes for the quick-change infeed worm on that filler with one operator. Servo drives cover nearby sizes by changing speed, but the physical pocket still limits the range one screw can handle. See <a href="/components/change-parts/">change parts and changeover</a> for mounting, storage, and quick-change retrofits.</p>
+<SpecChecklist id="spec-checklist" title="Timing screw specification checklist" items={[
+  ["Containers", "Drawings or samples of every container: diameter or footprint, height, shoulder and base profile, material, empty and filled weight."],
+  ["Function", "What the screw must do: meter, transfer, collate, combine, divide, turn, invert, or dwell."],
+  ["Downstream machine", "Machine make and model, star wheel pocket count and pitch, direction of rotation, and handoff point."],
+  ["Rates", "Containers per minute at current and planned peak speed, and the minimum stable speed."],
+  ["Infeed condition", "How containers arrive (touching, back-pressured, random), required backlog, and backlog sensing."],
+  ["Configuration", "Single, counter-rotating pair, stacked pair, or multi-screw system, and number of starts."],
+  ["Screw dimensions", "Outside and root diameter limits, threaded and overall length, hub details, and rotation direction. For replacements, send the old screw or a sketch."],
+  ["Drive", "Mechanical linkage, servo, speed-controlled motor, or intermittent, and the controls platform for cam profiles and recipes."],
+  ["Mounting", "Keyed, pinned, or square drive, tool-less or tooled, and target changeover time."],
+  ["Material", "Screw material and color code, food or drug contact regulation, and wear indicators."],
+  ["Safety", "Guarding of the rotating screw and nip points. OSHA 29 CFR 1910.212 covers rotating parts."],
+  ["Acceptance test", "Run test with your containers at rated speed, allowed tip and jam rate, and measured changeover time."]
+]} />
+<h2 id="related-heading">Related Functions &amp; Components</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/infeed-outfeed/star-wheel/">Star Wheels</a></h3>
+<p class="usa-collection__description">Pocketed wheels that take spaced containers into rotary machines</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/infeed-outfeed/">Infeed &amp; Outfeed</a></h3>
+<p class="usa-collection__description">Timing screws compared with servo belts, flights, and carts</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/components/change-parts/">Change Parts</a></h3>
+<p class="usa-collection__description">Format parts and quick-change mounting</p></div></li>
+<li class="usa-collection__item">
+<div class="usa-collection__body">
+<h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/metering/">Metering</a></h3>
+<p class="usa-collection__description">Rate and spacing control</p></div></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.fraingroup.com/wp-content/uploads/Timing-Screws.pdf" target="_blank" rel="noopener noreferrer">Timing Screws: The Packaging Line Workhorse (PDF)</a>, John Henry for Frain Industries. Screw dimensions, the 1:8 star wheel example, single and paired screws, materials, functions, drives, mounting, and troubleshooting.</li>
+<li><a href="https://morrison-chs.com/timing-screws/" target="_blank" rel="noopener noreferrer">Timing Screws</a>, Morrison Container Handling Solutions. Alternative names, functions, materials, square drive, and wear-indicating driver.</li>
+<li><a href="https://www.septimatech.com/blog/timing-screws-and-feed-screws/" target="_blank" rel="noopener noreferrer">Timing Screws and Feed Screws: Frequently Asked Questions</a>, Septimatech. Dual screws and tool-less changeover.</li>
+<li><a href="https://www.par-group.co.uk/engineering-plastics/nylon-casting/timing-screws-and-scrolls/" target="_blank" rel="noopener noreferrer">Timing Screws and Scrolls</a>, PAR Group. Plastic scroll materials.</li>
+<li><a href="https://www.packworld.com/coding-printing-labeling/coding-marking/article/22941399/metering-system-solves-date-coding-woes-for-olly-containers" target="_blank" rel="noopener noreferrer">Metering System Solves Date Coding Woes for Olly Containers</a>, Packaging World. UHMW timing screw used to limit pressure on bottles.</li>
+<li><a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Modulfill Bloc FS-C brochure (PDF)</a>, Krones. Quick-change time for the infeed worm.</li>
+<li>FDA food-contact regulations: <a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a> (olefin polymers), <a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">177.2470</a> (acetal copolymer), <a href="https://www.law.cornell.edu/cfr/text/21/177.1500" target="_blank" rel="noopener noreferrer">177.1500</a> (nylon).</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General requirements for all machines</a>, OSHA. Guarding of rotating parts and nip points.</li>
+</ul>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What is a timing screw?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>A rotating helical screw beside a packaging conveyor that captures containers in the pockets between its threads and releases them at a set spacing and time. Also called a feed screw, infeed screw, scroll, worm, or helix. Its most common job is metering round containers into the star wheel of a rotary filler, capper, or labeler, but screws also transfer, group, combine, divide, turn, and invert containers.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How is timing screw pitch matched to a star wheel?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>The discharge pitch must equal the star wheel pocket spacing, and the screw must release one container each time a pocket reaches the handoff. In the Frain Industries example, a screw feeding an 8-pocket star wheel turns once per one-eighth turn of the star wheel, and a 6-inch pocket spacing needs a 6-inch discharge pitch.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What are timing screws made of?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>Mostly engineering plastics: UHMW polyethylene, acetal (Delrin is a common brand), nylon, or HDPE. Metal screws in stainless steel, steel, brass, or aluminum are used where cans, glass, or high speed would wear plastic quickly. Plastics can be color coded with their matching change parts. For food or drug contact, ask which FDA regulation the exact grade complies with.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">When do you need a dual timing screw?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>When one screw cannot control the container. A counter-rotating pair holds oval or non-round containers in a fixed orientation for labeling. A stacked pair supports tall, unstable containers. Pairs also combine two lanes into one, divide one lane into two, or turn oblong containers 90 degrees.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">Why do containers tip or jam in a timing screw?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>Usually a poor infeed, a short backlog, the wrong conveyor speed, or a screw out of phase with the star wheel. Keep a backlog at the infeed, run the conveyor slightly faster than the screw so it pushes each container against the leading edge of its pocket, and use keyed or pinned mounting so the screw always goes back in time. Sharp-cornered square containers may need an inverse taper or cone infeed.</p>
+</div>
+</div>
+</BaseLayout>

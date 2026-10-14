@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecChecklist from '../../components/SpecChecklist.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://packagingconveyor.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Components", "item": "https://packagingconveyor.com/components/" },
+    { "@type": "ListItem", "position": 3, "name": "Change Parts", "item": "https://packagingconveyor.com/components/change-parts/" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are change parts on a packaging line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Change parts (also called format parts) are the container-specific or package-specific components that must be swapped when a packaging line switches to a different container or package size. On a bottle line they include timing screws, infeed and outfeed star wheels, center guides, guide rails, and dead plates. Fillers, cappers, labelers, case packers, and cartoners have their own sets, such as capper chucks, filler bottle grippers, and case packer grids. Each container size needs its own matched set." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a change part changeover take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on how the parts are mounted. Nercon describes a conventional bolted star wheel fixture swap that can take a maintenance person 30 minutes to an hour. Krones lists quick-change times with one operator of 1.5 minutes for the infeed worm and 3.1 minutes for the infeed starwheel on its Modulfill Bloc FS-C can filler, and 2.0 minutes for quick-change guidance parts against 18 minutes for standard guidance parts. Treat these as single-machine examples, not benchmarks." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a quick-change star wheel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A quick-change star wheel mounts to a hub that stays on the machine, and locks in place with a hand knob, cam lock, or locating pin instead of bolts. The part drops into a fixed, repeatable position, so no adjustment or timing is needed after the swap and one operator can change it without tools." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can quick-change parts be added to existing conveyor equipment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Often, yes. Retrofits replace bolted star wheel, screw, and guide mounts with tool-less hubs, locating pins, or sliding carriages. Before ordering, confirm the existing shaft and hub design, the machine's pitch circle and pocket count, guard access, and whether the guide rails and center guide also get quick-change mounts. Ask the supplier for a measured changeover time on a comparable retrofit." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is SMED and how does it apply to change parts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SMED (single-minute exchange of die) is Shigeo Shingo's changeover reduction method. The Lean Enterprise Institute defines its target as changeover times in a single digit, under 10 minutes. The core step is separating internal setup, which needs the machine stopped, from external setup, which can be done while it runs. For change parts, that means staging the next set on a cart before the stop, and replacing bolted, adjusted mounts with fixed, repeatable ones." }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conveyor Change Parts & Quick-Change Systems",
+  "description": "Change parts for packaging lines: star wheels, timing screws, center guides, and guide rails by machine, quick-change mounting methods, SMED, retrofits, and an RFQ checklist.",
+  "url": "https://packagingconveyor.com/components/change-parts/",
+  "datePublished": "2026-10-14",
+  "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
+};
+---
+<BaseLayout
+  title="Conveyor Change Parts: Quick-Change Star Wheels, Guides & Screws"
+  description="Change parts for packaging lines: star wheels, timing screws, center guides, and guide rails by machine, quick-change mounts, SMED, retrofits, and an RFQ checklist."
+  canonical="https://packagingconveyor.com/components/change-parts/"
+  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+>
+<h1>Conveyor Change Parts &amp; Quick-Change Systems</h1>
+<p class="usa-intro">Change parts are the container-specific components swapped when a packaging line switches to a different container or package size: timing screws, star wheels, center guides, guide rails, and machine format parts. Each size needs its own matched set. How those parts mount, bolted or quick-change, decides whether a changeover takes an hour of maintenance time or a few minutes from one operator.</p>
+<figure class="photo"><img src="/img/photos/changeparts-cpi-parts-cart.webp" width="1000" height="750" alt="A blue change parts storage cart with labeled slots for star wheels and a center guide, holding two red and white star wheels and a curved center guide." loading="lazy" decoding="async" /><figcaption>A Change Parts, Inc. storage cart holding star wheels and a center guide, with slots labeled by part. <span class="photo-credit">Photo: <a href="https://www.changeparts.com/gp-parts-cart/" target="_blank" rel="noopener noreferrer">Change Parts, Inc.</a></span></figcaption></figure>
+<h2 id="what-heading">What Are Change Parts?</h2>
+<p>A change part (or format part) is any part whose shape is set by the container or package. When the package changes, the part changes. Parts that only depend on the machine, such as drives, frames, and shafts, stay in place. On a bottle line, the parts in contact with the container between the conveyor and the machine are the usual change parts. Secondary packaging machines have their own sets, sized to the case or carton.</p>
+<h3>Change Parts by Machine</h3>
+<table>
+<thead>
+<tr><th>Machine or area</th><th>Typical change parts</th><th>What sets the part</th></tr>
+</thead>
+<tbody>
+<tr><td>Infeed conveyor</td><td><a href="/components/guide-rails/">Guide rails</a> and lane dividers, sometimes dead plates</td><td>Container width and height</td></tr>
+<tr><td>Container spacing</td><td><a href="/conveyor-functions/infeed-outfeed/timing-screw/">Timing screw</a> (feed screw or worm)</td><td>Container diameter and profile, machine pitch</td></tr>
+<tr><td>Rotary transfer</td><td>Infeed and outfeed <a href="/conveyor-functions/infeed-outfeed/star-wheel/">star wheels</a>, center guide, dead plate</td><td>Container diameter, machine pitch circle and pocket count</td></tr>
+<tr><td>Filler</td><td>Star wheels, container grippers or neck support parts, filling valve parts where container size requires</td><td>Container neck, height, and fill volume</td></tr>
+<tr><td>Capper</td><td>Capping chucks or heads, cap chute and cap handling parts, star wheels</td><td>Cap size and style, container height</td></tr>
+<tr><td>Labeler</td><td>Star wheels, center guide, container plates or centering parts</td><td>Container diameter and label position</td></tr>
+<tr><td>Case packer</td><td>Grids or lane guides, pickup heads or grippers, case guides</td><td>Container pattern and case size</td></tr>
+<tr><td>Cartoner</td><td>Carton magazine guides, bucket or flight inserts, folding and closing guides</td><td>Carton dimensions and product size</td></tr>
+</tbody>
+</table>
+<p>Machine builders use different names for the same parts. Krones calls the timing screw the infeed worm, and many suppliers call it a feed screw. Ask each supplier for a parts list by container so the quotes compare the same scope.</p>
+<h2 id="mounting-heading">Bolted vs. Quick-Change Mounting</h2>
+<p>A part that bolts on must be loosened, removed, replaced, and then adjusted and timed before the line restarts. A quick-change part locks into a fixed position, so the adjustment step goes away. The mounting method, not the part, sets most of the changeover time.</p>
+<table>
+<thead>
+<tr><th>Mounting method</th><th>How it works</th><th>Tools</th><th>Repeatability</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Bolted fixture</td><td>Part bolts to a hub or bracket, then is adjusted and timed</td><td>Wrenches, often a technician</td><td>Depends on setup skill</td><td>Single-product lines, older machines</td></tr>
+<tr><td>Hand knob</td><td>Star or T knob clamps the part to a fixed hub or bracket</td><td>None</td><td>Good when combined with pins or keys</td><td>Star wheels, center guides, guide rail brackets</td></tr>
+<tr><td>Cam lock or lever clamp</td><td>A lever locks or releases the part in one motion</td><td>None</td><td>Good</td><td>Guide rails, guide brackets, small parts</td></tr>
+<tr><td>Locating pins or keyed hub</td><td>Pins or a key place the part at one angle and position on the hub</td><td>None</td><td>High, no timing adjustment</td><td>Star wheels, timing screw couplings</td></tr>
+<tr><td>Sliding carriage</td><td>The next part is pre-mounted on a carriage and slides in, then pins in place</td><td>None</td><td>High</td><td>Star wheels where the next part can be staged in position</td></tr>
+<tr><td>Indexed or multi-position rails</td><td>Rails move to marked or detented positions per container size</td><td>None</td><td>High within the preset sizes</td><td>Guide rails on multi-SKU lines</td></tr>
+<tr><td>Motorized or servo adjustment</td><td>Actuators move rails or parts to positions stored in a recipe</td><td>None, controls driven</td><td>High</td><td>Guide rails and adjustable machine formats on high-mix lines</td></tr>
+</tbody>
+</table>
+<p>Color coding and labels are not a mounting method, but they work with one. Marking each set by container size, and each part by position, keeps operators from installing a part from the wrong set. The cart in the photo above labels its slots by part type.</p>
+<h2 id="changeover-heading">How Much Time Quick-Change Saves</h2>
+<p>Published figures from machine and conveyor builders show the gap between bolted and quick-change parts:</p>
+<table>
+<thead>
+<tr><th>Source</th><th>Part</th><th>Bolted or standard</th><th>Quick-change</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://www.nerconconveyors.com/Nercon-Blog/Star-Wheel-Innovation-Results-in-Faster-Product-Changeover" target="_blank" rel="noopener noreferrer">Nercon</a></td><td>Star wheel fixture</td><td>"30 minutes to an hour" for a maintenance person</td><td>Star wheels on a sliding carriage with a pin lock slide into place "within seconds"</td></tr>
+<tr><td><a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Krones Modulfill Bloc FS-C</a></td><td>Infeed worm</td><td>Not stated</td><td>1.5 minutes, one operator</td></tr>
+<tr><td>Krones Modulfill Bloc FS-C</td><td>Infeed starwheel</td><td>Not stated</td><td>3.1 minutes, one operator</td></tr>
+<tr><td>Krones Modulfill Bloc FS-C</td><td>Guidance parts</td><td>18 minutes</td><td>2.0 minutes</td></tr>
+</tbody>
+</table>
+<p>These are single-machine examples from the builders, not general benchmarks. Your time depends on how many parts change, how many operators work the change, and whether the next set is ready at the machine.</p>
+<h3>SMED: Separate What Needs the Line Stopped</h3>
+<p>Changeover reduction on packaging lines usually follows SMED (single-minute exchange of die), the method Shigeo Shingo developed. The <a href="https://www.lean.org/lexicon-terms/single-minute-exchange-of-die/" target="_blank" rel="noopener noreferrer">Lean Enterprise Institute</a> describes the target as changeover times in a single digit, under 10 minutes. The key step is separating internal setup, which can only be done with the machine stopped, from external setup, which can be done while it runs, and then moving as much work as possible to external.</p>
+<ol>
+<li><strong>Record the current changeover.</strong> List every step and time it, including searching for parts and tools and the trial run after restart.</li>
+<li><strong>Move work outside the stop.</strong> Stage the next set on a cart at the machine, check it is complete and undamaged, and pre-assemble anything that can be. Nercon's sliding carriage lets the next star wheel be moved into place while the line is still running.</li>
+<li><strong>Remove adjustment.</strong> Replace bolted, adjusted mounts with pins, keyed hubs, or indexed positions so each part goes in at its final position.</li>
+<li><strong>Remove tools.</strong> Use knobs, cam locks, and levers, and standardize any remaining fastener to one size.</li>
+<li><strong>Write the procedure.</strong> One sequence, one set of photos, one sign-off, so every shift changes over the same way.</li>
+</ol>
+<h2 id="retrofit-heading">Adding Quick-Change Parts to Existing Equipment</h2>
+<p>Quick-change star wheels, screws, and guides can often be retrofitted to existing conveyors and machines. Before ordering, confirm:</p>
+<ul>
+<li><strong>Mounting:</strong> the existing shaft, hub, and drive interface, and whether the new hub keeps the original timing position.</li>
+<li><strong>Machine geometry:</strong> pitch circle diameter, pocket count, and the handoff point to the machine. The new parts must match the machine, not just the container.</li>
+<li><strong>Full set:</strong> whether the timing screw, center guide, and guide rails also get quick-change mounts. A tool-less star wheel saves little if the guides still need wrenches.</li>
+<li><strong>Repeatability:</strong> how the mount locates the part (pins, keyed hubs, color coding) so no fine adjustment is needed after the swap.</li>
+<li><strong>Guarding:</strong> whether operators can reach the mounts without defeating guards. OSHA's <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212</a> requires guarding of rotating parts and nip points.</li>
+<li><strong>Proof:</strong> a measured changeover time on a comparable retrofit, and who supplies future parts for new containers.</li>
+</ul>
+<p>Servo-driven timing screws and motorized guide rails reduce, but do not remove, change parts. A servo profile can adjust spacing for nearby container sizes, but a screw's helix and a star wheel's pockets still fit a limited range of diameters. Ask the supplier which of your containers one part can cover.</p>
+<h2 id="suppliers-heading">OEM vs. Third-Party Change Parts</h2>
+<p>Change parts come from the machine builder (OEM) or from specialist change part makers that design parts for many machine brands. Both are common. The choice is about fit, lead time, and who owns the design.</p>
+<table>
+<thead>
+<tr><th>Factor</th><th>Machine builder (OEM)</th><th>Third-party change part maker</th></tr>
+</thead>
+<tbody>
+<tr><td>Fit to the machine</td><td>Designed from the machine's own drawings</td><td>Designed from the machine model, measurements, or the existing parts</td></tr>
+<tr><td>Quick-change upgrades</td><td>Usually the OEM's own mounting design</td><td>Often offered as a retrofit across brands</td></tr>
+<tr><td>Older or discontinued machines</td><td>Support may be limited</td><td>Often the main option</td></tr>
+<tr><td>Warranty and responsibility</td><td>One supplier for machine and parts</td><td>Ask how fit problems are resolved between the two suppliers</td></tr>
+<tr><td>Design ownership</td><td>Drawings usually stay with the OEM</td><td>Ask whether you receive drawings or only the parts</td></tr>
+</tbody>
+</table>
+<p>Third-party makers usually start from the container and the machine. <a href="https://www.changeparts.com/container-handling-solutions/" target="_blank" rel="noopener noreferrer">Change Parts, Inc.</a>, for example, asks for a photo, part number, or description of the bottle and cap, and offers on-site 3D measurement before quoting. Whoever you buy from, send physical container samples (empty and filled), not just drawings, because wall flex, seams, and base shape all affect pocket and screw fit.</p>
+<h2 id="materials-heading">Change Part Materials</h2>
+<table>
+<thead>
+<tr><th>Material</th><th>Typical parts</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>UHMW polyethylene</td><td>Star wheels, guides, wear strips, screws for light containers</td><td>Low friction, gentle on containers. Food-contact grades comply with <a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a>. Ask for a compliance letter for the exact grade.</td></tr>
+<tr><td>Acetal (POM)</td><td>Timing screws, precision star wheels, small parts</td><td>Stiffer and more dimensionally stable than UHMW. Food-contact grades fall under <a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">21 CFR 177.2470</a> (copolymer) or 177.2480 (homopolymer).</td></tr>
+<tr><td>Stainless steel</td><td>Guide rails, hubs, hardware, center guide frames</td><td>Washdown and caustic resistance. 316 for harsher chemistry.</td></tr>
+<tr><td>Laminated or two-color plastic sheet</td><td>Star wheels, center guides</td><td>Contrasting core and face colors make parts easy to identify by set</td></tr>
+</tbody>
+</table>
+<p>Change Parts, Inc. lists Colorcore, PVC, UHMWPE, polypropylene, Delrin (an acetal), and stainless steel for its container handling parts, with 316 stainless hardware for harsher conditions. For cans and thin-wall containers, plastic contact parts are the norm because metal parts dent or scuff the container.</p>
+<h2 id="storage-heading">Storage, Labeling &amp; Damage</h2>
+<p>Change parts spend most of their life off the machine, and most damage happens there. A nicked screw flight or chipped star wheel pocket causes scuffing, jams, and uneven spacing that look like a timing problem.</p>
+<ul>
+<li><strong>Store each set on its own cart or wall board.</strong> Carts with a slot for each part show at a glance whether a set is complete, and bring the whole set to the machine in one trip.</li>
+<li><strong>Label by container and position.</strong> Mark the container size or SKU and the position (infeed star, outfeed star, center guide) on every part.</li>
+<li><strong>Keep parts from touching.</strong> Do not stack screws or star wheels loose against each other or against metal.</li>
+<li><strong>Inspect when the set comes off.</strong> Check pockets, flights, and wear surfaces before the set goes into storage, so a damaged part is found before the next changeover, not during it.</li>
+<li><strong>Clean before storage</strong> in <a href="/industries/food-conveyors/beverage/">beverage</a>, food, and <a href="/industries/pharmaceutical-conveyors/">pharmaceutical</a> plants, and store sets where they stay clean.</li>
+</ul>
+<SpecChecklist id="spec-checklist" title="Change parts specification checklist" items={[
+  ["Containers", "Samples (empty and filled) and drawings of every container: diameter, height, shoulder, neck and base profile, material, and weight."],
+  ["Machines", "Make, model, and serial number of every machine in scope, with pitch circle diameter, pocket or station count, and direction of rotation."],
+  ["Parts in scope", "Which parts change per container on each machine: screws, star wheels, center guides, guide rails, dead plates, chucks, grids, or format parts."],
+  ["Mounting", "Keep the existing mounts, or retrofit to quick-change hubs, pins, knobs, or carriages."],
+  ["Changeover target", "Target time, number of operators, tool-less or tooled, and which steps must happen with the line stopped."],
+  ["Rates", "Containers per minute at current and planned speed."],
+  ["Materials", "Contact materials, food or drug contact requirements, compliance letters, and washdown chemistry."],
+  ["Identification", "Color coding, engraving, or labels by container and position."],
+  ["Storage", "Carts or wall boards, how many sets per cart, and spares."],
+  ["Safety", "Access to mounts without defeating guards on rotating parts and nip points."],
+  ["Documentation", "Drawings supplied or retained, changeover procedure, and who designs parts for future containers."],
+  ["Acceptance test", "Run test with your containers at rated speed and a measured changeover time."]
+]} />
+<h2 id="sources">Sources</h2>
+<ul class="sources">
+<li><a href="https://www.nerconconveyors.com/Nercon-Blog/Star-Wheel-Innovation-Results-in-Faster-Product-Changeover" target="_blank" rel="noopener noreferrer">Star Wheel Innovation Results in Faster Product Changeover</a>, Nercon. Conventional fixture changeover time and sliding-carriage quick change.</li>
+<li><a href="https://making.com/wp-content/uploads/2024/09/Krones_6102_brochure.pdf" target="_blank" rel="noopener noreferrer">Modulfill Bloc FS-C brochure (PDF)</a>, Krones. Quick-change times for infeed worm, starwheel, and guidance parts.</li>
+<li><a href="https://www.lean.org/lexicon-terms/single-minute-exchange-of-die/" target="_blank" rel="noopener noreferrer">Single Minute Exchange of Die</a>, Lean Enterprise Institute. SMED definition, internal and external setup, and the under-10-minute target.</li>
+<li><a href="https://www.changeparts.com/container-handling-solutions/" target="_blank" rel="noopener noreferrer">Container Handling Solutions</a> and <a href="https://www.changeparts.com/quick-change-container-handling-parts" target="_blank" rel="noopener noreferrer">Quick Change Container Handling Parts</a>, Change Parts, Inc. Quoting inputs, materials, and hubs that stay on the machine.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/21/177.1520" target="_blank" rel="noopener noreferrer">21 CFR 177.1520</a>, <a href="https://www.law.cornell.edu/cfr/text/21/177.2470" target="_blank" rel="noopener noreferrer">177.2470</a>, and <a href="https://www.law.cornell.edu/cfr/text/21/177.2480" target="_blank" rel="noopener noreferrer">177.2480</a>, FDA. Food-contact olefin polymers and acetal resins.</li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212" target="_blank" rel="noopener noreferrer">29 CFR 1910.212, General requirements for all machines</a>, OSHA. Guarding of rotating parts and nip points.</li>
+</ul>
+<h2 id="faq-heading">Frequently Asked Questions</h2>
+<div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable" data-allow-multiple="">
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="faq-1">What are change parts on a packaging line?</button></h3>
+<div id="faq-1" class="usa-accordion__content usa-prose">
+<p>Change parts (format parts) are the components swapped when a line switches container or package size. On a bottle line they include timing screws, star wheels, center guides, guide rails, and dead plates. Fillers, cappers, labelers, case packers, and cartoners have their own sets, such as capper chucks and case packer grids. Each size needs its own matched set.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-2">How long does a change part changeover take?</button></h3>
+<div id="faq-2" class="usa-accordion__content usa-prose">
+<p>It depends on the mounting. Nercon describes a bolted star wheel fixture swap taking a maintenance person 30 minutes to an hour. Krones lists 1.5 minutes for the infeed worm, 3.1 minutes for the infeed starwheel, and 2.0 minutes for quick-change guidance parts (against 18 minutes for standard ones) on its Modulfill Bloc FS-C, with one operator. These are single-machine examples.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-3">What is a quick-change star wheel?</button></h3>
+<div id="faq-3" class="usa-accordion__content usa-prose">
+<p>A quick-change star wheel mounts to a hub that stays on the machine and locks with a hand knob, cam lock, or locating pin instead of bolts. It drops into a fixed, repeatable position, so no adjustment or timing is needed and one operator can change it without tools.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-4">Can quick-change parts be added to existing conveyor equipment?</button></h3>
+<div id="faq-4" class="usa-accordion__content usa-prose">
+<p>Often, yes. Retrofits replace bolted star wheel, screw, and guide mounts with tool-less hubs, locating pins, or sliding carriages. Confirm the shaft and hub design, the machine's pitch circle and pocket count, guard access, and whether the guides also get quick-change mounts. Ask for a measured changeover time on a comparable retrofit.</p>
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What is SMED and how does it apply to change parts?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>SMED (single-minute exchange of die) is Shigeo Shingo's changeover reduction method, with a target under 10 minutes. It separates internal setup (machine stopped) from external setup (machine running). For change parts, that means staging the next set on a cart before the stop and replacing bolted, adjusted mounts with fixed, repeatable ones.</p>
+</div>
+</div>
+<h2 id="related-heading">Continue Researching</h2>
+<ul class="usa-collection">
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/infeed-outfeed/star-wheel/">Star Wheel Conveyors</a></h3><p class="usa-collection__description">Pocket geometry and rotary machine transfer</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href="/conveyor-functions/infeed-outfeed/timing-screw/">Timing Screws</a></h3><p class="usa-collection__description">Pitch, spacing, and synchronization</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href="/components/guide-rails/">Guide Rails</a></h3><p class="usa-collection__description">Adjustment methods and brackets for multi-SKU lines</p></div></li>
+<li class="usa-collection__item"><div class="usa-collection__body"><h3 class="usa-collection__heading"><a class="usa-link" href="/resources/conveyor-parts/">Conveyor Parts</a></h3><p class="usa-collection__description">Wear parts, spares, and OEM vs. aftermarket</p></div></li>
+</ul>
+</BaseLayout>
