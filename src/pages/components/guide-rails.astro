@@ -61,8 +61,8 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Conveyor Guide Rails & Side Rails: Types, Materials, Setup",
-  "description": "Conveyor guide rails and side rails: side guides, lane dividers, and hold-downs. UHMW vs stainless vs acetal, adjustment methods, and gap settings by use.",
+  "headline": "Conveyor Guide Rails: Side Rails, Bottle & Adjustable Rails",
+  "description": "Conveyor guide rails and side rails: types, UHMW vs stainless vs acetal, adjustable and automated rail systems, bottle changeover rails, and gap settings by use.",
   "url": "https://packagingconveyor.com/components/guide-rails/",
   "datePublished": "2026-03-14",
   "dateModified": "2026-09-18",
@@ -74,8 +74,8 @@ const articleSchema = {
 };
 ---
 <BaseLayout heroPhoto
-  title="Conveyor Guide Rails & Side Rails: Types, Materials, Setup"
-  description="Conveyor guide rails and side rails: side guides, lane dividers, and hold-downs. UHMW vs stainless vs acetal, adjustment methods, and gap settings by use."
+  title="Conveyor Guide Rails: Side Rails, Bottle & Adjustable Rails"
+  description="Conveyor guide rails and side rails: types, UHMW vs stainless vs acetal, adjustable and automated rail systems, bottle changeover rails, and gap settings by use."
   canonical="https://packagingconveyor.com/components/guide-rails/"
   schema={[breadcrumbSchema, faqSchema, articleSchema]}
 >
@@ -282,6 +282,29 @@ const articleSchema = {
 <li>Check for jamming under accumulation back-pressure</li>
 <li>Document the gap setting for each SKU for repeatable changeover</li>
 </ul>
+<h2 id="bottle-heading">Guide Rails for Bottle Conveyors</h2>
+<p>Bottle lines are the hardest guide rail application. Containers are tall, round, and often light, they run fast on <a href="/conveyor-types/tabletop-conveyors/">tabletop chain</a>, and a line may run several bottle sizes a shift. Rails must hold each bottle upright through transfers and turns without scuffing labels or slowing changeover.</p>
+<table>
+<thead>
+<tr><th>Bottle condition</th><th>Rail setup</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>Tall or narrow bottles</td><td>Two rail levels: one low near the base, one high near the shoulder</td><td>A single low rail lets a top-heavy bottle pivot over it and tip</td></tr>
+<tr><td>Empty PET bottles</td><td>Close running clearance, smooth plastic wear strips, guarded from air currents</td><td>Light bottles tip from vibration and drafts and float on wet chain</td></tr>
+<tr><td>Glass bottles</td><td>Plastic wear strips on stainless rails, no sharp edges at rail joints</td><td>Glass tolerates contact pressure but chips from impact</td></tr>
+<tr><td>Labeled or printed bottles</td><td>UHMW or acetal contact surfaces, smooth joints</td><td>Metal contact and rail seams scuff labels and decoration</td></tr>
+<tr><td>Side transfers and dead plates</td><td>A back rail on the far side of the transfer, curved to match the chain path</td><td>The back rail pushes bottles across the transfer instead of letting them stall at the edge</td></tr>
+<tr><td>Accumulation tables</td><td>Wider clearance than transport, rails angled to funnel bottles back to single file</td><td>Back-pressure wedges bottles in tight rails</td></tr>
+</tbody>
+</table>
+<h3>Bottle Changeover Rails</h3>
+<p>On bottle lines, guide rails change with the <a href="/conveyor-functions/infeed-outfeed/star-wheel/">star wheels</a>, <a href="/conveyor-functions/infeed-outfeed/timing-screw/">timing screw</a>, and center guide whenever the bottle diameter changes. Three approaches cover most lines:</p>
+<ul>
+<li><strong>Fixed rail sets per bottle.</strong> Each bottle size gets its own rails, swapped at changeover. Simple and repeatable, but every size needs a stored set.</li>
+<li><strong>Manual quick-adjust rails.</strong> Hand-wheel adjusters with position counters, or quick-release pins at preset positions, move the rails to a recorded setting for each bottle. One rail set covers a range of sizes.</li>
+<li><strong>Automated adjustable rails.</strong> Motorized or servo adjusters move the rails to recipe positions from the HMI when the line changes product. They remove manual setting errors and suit lines with frequent changeovers, at the highest cost.</li>
+</ul>
+<p>Whichever method you choose, record the rail position for every bottle size and verify it at the first bottles after changeover. For the full set of container-specific parts and how to shorten changeover, see <a href="/components/change-parts/">conveyor change parts</a>.</p>
 <h2 id="applications-heading">Guide Rail Applications</h2>
 <h3>Packaging Line Integration</h3>
 <p>Guide rails are essential throughout <a href="/industries/packaging-line-conveyors/">packaging lines</a>. On <a href="/conveyor-functions/infeed-outfeed/">infeed conveyors</a>, guides funnel products into single-file for filling or wrapping machines. Between operations, guides maintain product orientation established by upstream equipment. Before <a href="/industries/packaging-line-conveyors/case/">case packers</a>, lane dividers create the product patterns required for case loading.</p>

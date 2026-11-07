@@ -2,6 +2,9 @@
 
 ## Open
 
+- SEO Gets topic clusters show 0 clicks for packagingconveyor.com while content groups show clicks. Remap clusters before using cluster reports (2026-11-07).
+- `internal-linker links` false-positives every link into `/components/*`. Tool skips `src/pages/components/` (2026-11-07).
+- CTR rewrites on star-wheel, singulation, metering, guide-rails, conveyor-manufacturers shipped 2026-11-07. Re-measure ~2026-12-05 (baselines in `feedback/claude-to-codex-2026-11-07-ctr-rewrites.md`).
 - Some repo messaging still mixes editorial-resource positioning with future leadgen language. Review before turning on stronger commercial CTAs.
 
 ## Resolved (2026-03-16)
