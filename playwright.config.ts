@@ -12,7 +12,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npx astro preview --port 4322',
+    command: 'npx astro preview --port 4322 --ignore-lock',
     url: 'http://localhost:4322',
     reuseExistingServer: false,
     timeout: 30000,
