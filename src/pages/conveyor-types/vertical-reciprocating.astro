@@ -11,37 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a vertical reciprocating conveyor (VRC)?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vertical reciprocating conveyor (VRC) is a hydraulic or mechanical lift that moves materials between two or more levels on a guided carriage. VRCs are classified as conveyors under ASME B20.1, Safety Standard for Conveyors and Related Equipment, not as elevators. ASME A17.1, the elevator code, excludes B20 conveyors from its scope. VRCs are for material only. No one may ride the carriage." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a VRC and a freight elevator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VRCs move material only and are built to ASME B20.1. Freight elevators can carry people and are built to ASME A17.1. According to MHI's VRC application guidelines, VRCs normally run below 100 feet per minute, ride on rollers in guide columns, never have controls on the carriage, and are typically regulated by OSHA. Elevators run on T-rails in a hoistway, use A17-approved door interlocks, and are typically regulated and inspected by a state or municipal authority. Some jurisdictions still require permits or testing for a VRC, so confirm with the local authority having jurisdiction." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the weight capacity of a VRC?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on drive type, mast configuration, and carriage size. Autoquip rates its mechanical VRCs up to 20,000 lbs and its hydraulic VRCs up to 6,000 lbs. PFlow rates its two-post M Series up to 10,000 lbs and its four-post F Series up to 50,000 lbs standard, customizable to 200,000 lbs. Four-post designs carry the highest loads. Cantilever designs are limited by the overturning moment on a single guide structure." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a VRC cost compared to a freight elevator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A VRC is generally the lower-cost option because it is built to the conveyor standard instead of the elevator code. Cost drivers for a VRC are capacity, travel height, number of levels, carriage size, mechanical versus hydraulic drive, gates and enclosures at each level, and any permitting or testing the local authority requires. A freight elevator adds a hoistway, elevator-grade rails and door interlocks, and state or municipal elevator inspection. A VRC cannot carry people, so it only replaces an elevator in material-only applications." }
-    },
-    {
-      "@type": "Question",
-      "name": "What safety standards apply to VRCs?",
-      "acceptedAnswer": { "@type": "Answer", "text": "ASME B20.1 governs VRCs. Since 2015 it has included a mandatory appendix covering VRC design, installation, commissioning, and periodic inspection. MHI's VRC application guidelines summarize key requirements: enclosures at each level (96 inches high per B20.1, with handrails allowed as part of the guarding at the top landing in some cases), gates interlocked so the VRC cannot run with a gate open, travel limit switches, and slack chain or cable sensors on mechanical units. OSHA lockout/tagout rules apply during maintenance. The International Building Code, Chapter 30, recognizes VRCs under B20.1, and local officials may require permits or testing." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -56,7 +25,7 @@ const articleSchema = {
   title="Vertical Reciprocating Conveyors (VRCs): Types, Capacities & Safety Codes"
   description="Vertical reciprocating conveyors (VRCs): types, load capacities, ASME B20.1 safety requirements, and VRC vs freight elevator comparison."
   canonical="https://packagingconveyor.com/conveyor-types/vertical-reciprocating/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Vertical Reciprocating Conveyors (VRCs)</h1>
 <p class="usa-intro">A vertical reciprocating conveyor (VRC) lifts materials between two or more levels on a guided carriage. VRCs are classified as conveyors under <a href="https://www.asme.org/codes-standards/find-codes-standards/b20-1-safety-standard-conveyors-related-equipment" target="_blank" rel="noopener noreferrer">ASME B20.1</a>, not elevators, so they are not built to the elevator code. Published capacities run from light package lifts to heavy four-post units rated in the tens of thousands of pounds. VRCs are the standard way to move pallets, carts, and totes between a floor and a mezzanine in packaging, distribution, and manufacturing plants. No one may ride a VRC.</p>

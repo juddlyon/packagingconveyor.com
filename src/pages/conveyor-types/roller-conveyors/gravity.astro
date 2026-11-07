@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What angle do you need for a gravity roller conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pitch depends on product weight, bottom quality, roller type, and bearing lubrication. Hytrol's Basic Training Manual gives a starting chart in inches of drop per 10 feet: for example, 8-3/4 in. for 3-6 lb cartons, 6-1/4 in. for 12-25 lb cartons, and 5 in. for 25-30 lb cartons, about 1/2 inch to 7/8 inch per foot. Heavier items need less pitch. Hytrol notes the chart is a guideline and recommends testing with your actual product." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the weight limit for a gravity roller conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Capacity is rated per roller and per frame, not per product. Omni Metalcraft, for example, lists maximum loads per roller of 94 lbs for 1.4-inch rollers, 269 lbs for 1.9-inch rollers, and 645 lbs for 2.5-inch rollers. A product's weight is shared by the rollers under it, so check both the per-roller rating and the frame rating at your support spacing. Capacity also depends on wall thickness, bearing grade, axle size, and frame gauge." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does gravity roller conveyor cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Gravity roller conveyor is usually the lowest cost conveyor type because it has no motor, drive, or controls. Key cost factors include frame material (aluminum vs steel vs stainless), roller diameter, bearing type (precision vs standard), overall width, and length. Stainless steel construction for food-grade applications increases cost significantly over standard galvanized or painted carbon steel." }
-    },
-    {
-      "@type": "Question",
-      "name": "What roller spacing should I use for gravity conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Hytrol and Ashland both state that at least three rollers should be under the product at all times. Divide the smallest product length by 3, then round down to the nearest available roller center. Available centers vary by roller size: Omni Metalcraft lists 1.5, 3, 4, 4.5, 6, 8, 9, and 12 inches for 1.4-inch rollers. A 12-inch case needs 4-inch or closer spacing. A 6-inch box needs 2-inch or closer spacing." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Gravity Roller Conveyors: Angles, Spacing & Selection Guide"
   description="Gravity roller conveyors. Decline angles, roller spacing rules, weight capacities, and selection criteria. Lowest cost conveyor option for cases and cartons."
   canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/gravity/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Gravity Roller Conveyors</h1>
 <p class="usa-intro">A gravity roller conveyor moves products using gravity on a slight decline or by manual push on a level surface, with no motors, belts, or external power source. Gravity roller conveyors are the lowest-cost, lowest-maintenance conveyor type available and handle flat-bottomed cases, cartons, and totes across a wide weight range depending on roller and frame construction. They serve as the default conveyor for loading docks, manual packing stations, shipping areas, and anywhere products need simple point-to-point transport without speed control or accumulation.</p>

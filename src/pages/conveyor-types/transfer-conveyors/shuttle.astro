@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a shuttle conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A shuttle conveyor is a powered conveyor section mounted on a linear travel mechanism that moves back and forth (reciprocates) to deliver products to multiple discharge points from a single infeed. Shuttle cars carry entire conveyor sections laterally, while reciprocating pushers and pop-up transfers use linear actuators to redirect product flow at fixed positions." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a shuttle car and a reciprocating conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A shuttle car physically moves the entire conveyor section and its load along a track to align with different lane positions. A reciprocating conveyor uses a pusher mechanism or pop-up transfer that cycles back and forth at a fixed location. Shuttle cars serve more lanes but cycle slower. Reciprocating pushers are faster but typically serve only two discharge points." }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast can a shuttle conveyor operate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Shuttle car cycle time is load time plus travel to the lane, unload time, and return travel, so it grows with the number of lanes and the distance between them. Reciprocating pushers cycle faster but serve only one or two lanes. Pop-up transfer arrays avoid travel time by placing one mechanism at each lane. Get rated cycle times from the supplier for your loads and layout." }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I use a shuttle conveyor instead of a diverter?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use a shuttle conveyor when you need to serve many parallel lanes from a single infeed and throughput requirements are moderate. Use a diverter (push diverter, pop-up chain, or sortation system) when serving fewer lanes at higher speed. Shuttle cars excel in palletizer feed applications, lane distribution for case packing, and warehouse pallet put-away systems." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Shuttle & Reciprocating Conveyors: Cars, Pushers & Pop-Up Transfers"
   description="Shuttle and reciprocating conveyors: shuttle cars, reciprocating pushers, pop-up transfer shuttles. Multi-lane distribution, throughput calculations, and selection criteria."
   canonical="https://packagingconveyor.com/conveyor-types/transfer-conveyors/shuttle/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Shuttle &amp; Reciprocating Conveyors</h1>
 <p class="usa-intro">A shuttle conveyor is a powered conveyor section mounted on a linear travel mechanism that moves back and forth to deliver products to multiple discharge points from a single infeed. Shuttle systems include shuttle cars (entire conveyor sections riding on tracks), reciprocating pushers (linear actuators that sweep products onto parallel lanes), and pop-up transfer shuttles (chain or roller mechanisms that rise and index between positions). These systems distribute products across palletizer lanes, case packing stations, and warehouse storage lanes in <a href="/industries/packaging-line-conveyors/">packaging and distribution operations</a>.</p>

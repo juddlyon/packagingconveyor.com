@@ -23,34 +23,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do you calculate conveyor belt pull?",
-      "acceptedAnswer": { "@type": "Answer", "text": "For a slider bed belt conveyor, Forbo Siegling's calculation method gives belt pull (effective tension) as Te = μT × (P + B/2) + μR × (B/2 + R) + P × sin α, where P is the total product weight on the carrying side, B is the weight of the whole belt, R is the weight of the return rollers and non-drive pulleys, μT is the belt-to-bed friction coefficient, μR is the roller friction coefficient, and α is the incline angle. Siegling's guideline values are μT = 0.33 for a fabric belt underside on a slider bed and μR = 0.033 for rollers. These are example values: get the actual coefficient for your belt and bed from the belt maker. The belt pull calculator on this page applies the same formula and also estimates motor horsepower." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you size a conveyor motor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Horsepower at the drive pulley is HP = (Te × V) / 33,000, where Te is belt pull in pounds and V is belt speed in feet per minute. Divide by the drive train efficiency to get the motor power, apply the design margin your belt or gearmotor supplier specifies, and round up to the next standard motor size. Sparks Belting's slider bed calculator uses a default service factor of 1.50. Confirm gear reducer service factors in the reducer maker's catalog." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the maximum incline angle for a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the belt surface, the product, and its center of gravity. As a rough guide for plastic modular belts, Forbo's Siegling Prolink guide lists 3 to 5 degrees for a flat top surface, 20 to 40 degrees for a friction top surface, under 60 degrees with straight profiles (cleats), and under 90 degrees with bent profiles. Tall, narrow products such as bottles tip at lower angles. Test the actual product on a sample of the actual belt before fixing the angle." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you calculate conveyor throughput?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Throughput in products per minute equals belt speed in feet per minute divided by product pitch in feet. Product pitch is product length plus the gap between products. Example: 80 FPM with a 12-inch (1-foot) pitch gives 80 products per minute. For multi-lane conveyors, multiply single-lane throughput by the number of lanes. Real output is lower because of stops and jams, so size the conveyor using the line efficiency you measure on your own line." }
-    }
-  ]
-};
 ---
-<BaseLayout title="Conveyor Engineering Calculations, Belt Pull, Motor Sizing, Speed & Throughput | PackagingConveyor.com" description="Conveyor engineering formulas: belt pull, motor HP sizing, speed and throughput, accumulation zone sizing, incline limits, and transfer points." canonical="https://packagingconveyor.com/resources/conveyor-design-guide/conveyor-engineering/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Conveyor Engineering Calculations, Belt Pull, Motor Sizing, Speed & Throughput | PackagingConveyor.com" description="Conveyor engineering formulas: belt pull, motor HP sizing, speed and throughput, accumulation zone sizing, incline limits, and transfer points." canonical="https://packagingconveyor.com/resources/conveyor-design-guide/conveyor-engineering/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Conveyor Engineering Calculations</h1>
 <p class="usa-intro">Conveyor engineering calculations turn product data and layout dimensions into belt pull, motor size, belt speed, and throughput. The core formulas are belt pull (effective tension), drive horsepower HP = (Te × V) / 33,000, throughput = belt speed / product pitch, and accumulation length = buffer time × rate × pitch. Use them to check supplier proposals and to catch undersized drives early. Final sizing should use the friction coefficients and efficiencies published by the belt and gearmotor makers for your exact components. These formulas apply to belt conveyors, roller conveyors, and most other <a href="/conveyor-types/">conveyor types</a> used in packaging lines.</p>
 <h2 id="beltpull-heading">Belt Pull Calculations</h2>

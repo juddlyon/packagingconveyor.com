@@ -11,37 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a pneumatic conveying system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A pneumatic conveying system uses air pressure or vacuum to move dry bulk materials through a sealed pipeline. Powders, granules, pellets, and flakes either travel suspended in a fast airstream (dilute phase) or move as slow plugs or a dense bed (dense phase). The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between dilute phase and dense phase pneumatic conveying?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Dilute phase (also called lean phase) keeps gas velocity above the saltation velocity, so particles stay suspended in the airstream. Dense phase runs below the saltation velocity, so material moves as plugs or as a moving bed. Eric Maynard of Jenike & Johanson, writing in AIChE's Chemical Engineering Progress, gives typical figures: dilute phase carries less than 15 lb of solids per lb of gas at under 15 psig, and dense phase carries more than 15 lb per lb of gas at over 30 psig. Dilute phase usually uses a blower and costs less to install. Dense phase usually uses compressed air and a pressure vessel, and its low velocity reduces particle breakage and pipe wear." }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a pneumatic conveying system need an air compressor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Not always. Dilute phase pressure systems normally use a positive displacement blower, and vacuum systems use a vacuum pump or exhauster. Dense phase pressure systems need compressed air, from either a dedicated compressor or the plant air network. Air for hygroscopic, food, or pharmaceutical materials usually needs drying and oil-free supply or filtration. Size the air supply from conveying rate, route, and material test results, and confirm plant air can meet peak demand without starving other equipment." }
-    },
-    {
-      "@type": "Question",
-      "name": "What materials can be pneumatically conveyed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors handle most dry bulk solids: powders (flour, cement, starch, pigments), granules (sugar, salt, coffee), pellets (plastic resin, pet food, animal feed), flakes (cereal, dried herbs), and fibers (wood dust, textile waste). Materials that are very wet, sticky, or strongly hygroscopic may not convey pneumatically without special design, and some are better suited to mechanical conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "Pneumatic conveyor vs. mechanical conveyor: which is better?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pneumatic conveyors excel at enclosed, dust-free transport, complex routing through walls and floors, multiple pickup or delivery points, and contamination-sensitive or hazardous materials. Pneumatic conveying has the highest specific energy use of the common conveying methods because it moves large volumes of air. Mechanical conveyors (belt, screw, drag chain) use less energy per ton and usually suit high tonnage rates and long distances better. Choose pneumatic when containment or routing matters more than energy cost." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -56,7 +25,7 @@ const articleSchema = {
   title="Pneumatic Conveying Systems: Dilute vs Dense Phase Guide"
   description="How pneumatic conveying systems work: dilute vs dense phase, vacuum vs pressure, blower vs compressor air supply, key components, and a supplier spec checklist."
   canonical="https://packagingconveyor.com/conveyor-types/pneumatic-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Pneumatic Conveying Systems</h1>
 <p class="usa-intro">A pneumatic conveying system moves dry bulk material (powders, granules, pellets, and flakes) through a sealed pipeline using air. A blower, compressor, or vacuum pump either pushes material from a pressurized feed point or pulls it toward a vacuum receiver. The enclosed line contains dust, protects product from contamination, and routes around walls, floors, and equipment, carrying material from silos, bulk bags, and hoppers to mixers, process equipment, and <a href="/industries/packaging-line-conveyors/">packaging lines</a>.</p>

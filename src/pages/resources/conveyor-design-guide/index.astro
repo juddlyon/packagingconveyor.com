@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are the first steps in designing a conveyor system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Start by defining product characteristics (dimensions, weight, shape, fragility, surface friction), throughput requirements (products per minute or cases per hour), and environmental conditions (temperature, moisture, washdown, cleanroom). These three parameters determine conveyor type, belt material, frame construction, and motor sizing. Document these requirements in a User Requirements Specification (URS) before contacting conveyor manufacturers." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you select the right conveyor type for a packaging line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor type selection depends on product type, handling requirements, and line function. Flat belt conveyors suit lightweight cartons and packages. Roller conveyors handle cases and totes. MDR conveyors provide zero-pressure accumulation. Tabletop chain conveyors handle bottles and containers. Incline conveyors move products between elevations. Match conveyor type to function: transport, accumulation, indexing, merging, diverting, or elevation change." }
-    },
-    {
-      "@type": "Question",
-      "name": "What information do conveyor manufacturers need to provide a quote?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Manufacturers need: product dimensions and weight range, throughput rate, conveyor length and width, elevation changes, environment (dry, washdown, cleanroom, hazardous area), frame material preference, controls scope (standalone, integrated with PLC), power supply available, and floor plan or CAD layout. A detailed specification reduces quote turnaround time and ensures accurate pricing. Include photos of the product and installation area when possible." }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to design and install a conveyor system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Timeline depends on system complexity and supplier backlog. A standard catalog conveyor is the fastest case. Multi-conveyor integrated systems add design engineering, approval drawings, fabrication, factory acceptance testing, installation, and commissioning, and each phase adds time. Custom systems with complex controls, vision inspection, or robotic integration take longest. Ask each bidder for a dated schedule broken out by phase, and confirm lead times for long-lead items such as motors, gearmotors, and controls hardware." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Conveyor System Design Guide | PackagingConveyor.com"
   description="Designing conveyor systems for packaging: requirements gathering, layout planning, conveyor type selection, controls architecture, and integration with packaging machines."
   canonical="https://packagingconveyor.com/resources/conveyor-design-guide/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Conveyor System Design Guide</h1>
 <p class="usa-intro">Conveyor system design is the engineering process of selecting, sizing, and laying out conveyors to move products through a packaging line at a target throughput rate. The process starts with defining product characteristics, throughput requirements, and environmental conditions, then proceeds through conveyor type selection, layout planning, controls architecture, and integration with upstream and downstream packaging machines. This guide covers every phase of conveyor system design and links to detailed sub-guides on <a href="/resources/conveyor-design-guide/components/">conveyor frames, drives, and pulleys</a> and <a href="/resources/conveyor-design-guide/conveyor-engineering/">conveyor engineering calculations</a>.</p>

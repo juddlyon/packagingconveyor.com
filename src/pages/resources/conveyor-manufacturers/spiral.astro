@@ -74,17 +74,12 @@ const faqs = [
   ['How do spiral conveyor designs differ between manufacturers?', 'The main differences are where the drive sits and what the product rides on. Some spirals pull a slat chain from a single drive at one end. Others drive the chain from a sprocket on every tier, from a center drum, or from the belt edge. The conveying surface can be slats on a roller chain, plastic top chain, table-top chain, or modular plastic belt. These choices set the load rating, the washdown suitability, and the maintenance access.'],
   ['Which spiral conveyors are suitable for washdown?', 'Span Tech builds stainless steel spirals with washdown-capable modular plastic chain. Nercon publishes a washdown spiral rated for washdown pressure up to 1,500 psi. Alliance Industrial offers a sanitary side-drive spiral for direct food contact, and Ryson offers stainless steel versions of its case spirals. Confirm the cleaning method and chemicals with each supplier.'],
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
-};
 ---
 <BaseLayout
   title="Best Spiral Conveyor Manufacturers: Top 8 Compared (2026)"
   description="The top 8 spiral conveyor manufacturers and what each is best for: cases, mass flow, small footprints, washdown. Compared on published specs, no paid placement."
   canonical={url}
-  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema, listSchema]}
 >
 <h1>Best Spiral Conveyor Manufacturers by Application</h1>
 <p class="usa-intro">The best spiral conveyor manufacturer depends on the load. Ryson and AmbaFlex specialize in spirals and cover cases, totes, and mass flow. FlexLink and Dorner fit light products in tight spaces. Span Tech and Nercon build for washdown. This page compares the top 8 spiral conveyor manufacturers using each company's published specifications.</p>

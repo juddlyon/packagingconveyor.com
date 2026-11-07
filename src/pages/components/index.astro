@@ -61,52 +61,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are the main components of a conveyor system?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A conveyor system is built from the frame and support structure, the conveying surface (belt, rollers, or chain), the drive (motor, gearbox, and drive pulley or sprocket), tensioning parts (tail pulley, take-up, and bearings), product handling accessories (guide rails, lane dividers, transfers), controls and sensors, and guarding. Each category is specified for the product, load, speed, and environment, and choices in one category constrain the others."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are conveyor guide rails used for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Conveyor guide rails, also called side rails or side guides, keep products centered on the conveyor, prevent products from falling off the edges, create lanes for multi-product flow, and orient products for downstream operations like labeling or case packing. They are typically made from UHMW polyethylene, stainless steel, or aluminum with UHMW contact surfaces. Adjustable guide rails allow quick changeover between product sizes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the components of an overhead conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Overhead conveyors use a different component set from floor conveyors. The main parts are the track (I-beam or enclosed track), the chain, trolleys that ride in or on the track, carriers or hangers that hold the product, a drive unit, and a take-up that keeps chain tension. Power-and-free systems add a separate free track plus stops and switches so individual carriers can accumulate or change paths."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I choose the right conveyor belt cleaner?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Belt cleaner selection depends on the belt type, product residue characteristics, and sanitation requirements. Primary cleaners mount at the head pulley to scrape bulk material. Secondary cleaners mount behind the primary for finer cleaning. For food applications, FDA-compliant blade materials and washdown-rated designs are required. For heavy carryback, consider urethane or tungsten carbide blades. For light dust, brush cleaners may suffice."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor components need regular replacement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The components replaced most often are the ones in sliding or rolling contact: belts, rollers and bearings, wear strips and UHMW guide rail surfaces, O-rings on line-shaft conveyors, and sensors damaged in service. Motors and gearboxes usually last longer. Actual intervals depend on load, speed, duty cycle, cleaning chemistry, and maintenance, so use the manufacturer's recommendations and your own failure history to set replacement schedules."
-      }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -126,7 +80,7 @@ const articleSchema = {
   title="Conveyor Components: System Parts, Wear Parts & Accessories"
   description="Map of conveyor components by category: frame, conveying surface, drives, take-ups, guide rails, sensors, guards, and wear parts, with what drives each spec."
   canonical="https://packagingconveyor.com/components/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Conveyor Components: Parts of a Conveyor System</h1>
 <p class="usa-intro">Conveyor components are the parts that make up a conveyor system: the frame, the conveying surface (belt, rollers, or chain), the drive, the pulleys and take-up that hold tension, the bearings, the product handling accessories such as guide rails, the sensors and controls, and the guarding. This page maps each category, what drives its specification, and where to go for detail. For how frame, drive, and pulley choices are sized together during a new design, see <a href="/resources/conveyor-design-guide/components/">how to specify frames, drives, and pulleys in conveyor design</a>.</p>

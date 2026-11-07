@@ -13,32 +13,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is robotic case packing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Robotic case packing uses industrial robots, delta (spider), articulated arm, or gantry, to pick products from a conveyor and place them into corrugated cases. The robot uses vision systems to locate product, vacuum or mechanical grippers to pick, and programmed motion paths to place product into the case pattern. Robotic case packers handle the widest range of product types and case patterns with recipe-based changeover." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between delta and articulated arm robots for case packing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Delta (spider) robots excel at high-speed picking of light products from a moving conveyor. ABB's IRB 360 delta robot, for example, comes in 1, 3, 6, and 8 kg payload versions. Articulated arm robots handle heavier products with greater reach and 6-axis flexibility but cycle slower. Delta robots suit light food and consumer packages. Articulated arms suit heavier products, mixed-case packing, and palletizing." }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast can robotic case packers run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Rate depends on robot type, gripper, products per pick, and case pattern. Delta robots cycle fastest. ABB publishes cycle times of a fraction of a second on a standard test path for its IRB 360, and real packing rates are lower. Articulated arms cycle slower. Multi-pick grippers and cells with several robots on the same conveyor raise throughput. Ask suppliers for a rated rate on your products and case pattern." }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyors are needed for robotic case packing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Robotic case packing requires a product infeed conveyor (belt conveyor feeding product to the robot pick zone), a case conveyor (indexing or continuous conveyor positioning empty cases under the robot), and a case discharge conveyor (transporting loaded cases to sealing). Vision-guided systems also need a vision conveyor section with proper lighting and encoder feedback." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -54,7 +28,7 @@ const articleSchema = {
   title="Robotic Case Packing: Delta, Articulated & Gantry Robots | PackagingConveyor.com"
   description="Robotic case packing: delta robots, articulated arms, gantry systems, vision, gripper design, and conveyor requirements for automated case packing."
   canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/case/robotic-case-packing/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Robotic Case Packing</h1>
 <p class="usa-intro">Robotic case packing uses delta (spider), articulated arm, or gantry robots to pick products from a conveyor and place them into corrugated cases. Vision systems locate products on the infeed belt, vacuum or mechanical grippers pick single or multiple items, and programmed motion paths place product into precise case patterns. Recipe-based changeover lets one cell run multiple product sizes and case configurations.</p>

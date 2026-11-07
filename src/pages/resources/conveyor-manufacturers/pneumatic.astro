@@ -80,17 +80,12 @@ const faqs = [
   ['Which manufacturers build only vacuum conveying systems?', 'VAC-U-MAX, Volkmann, and Hapman list vacuum conveying and do not list positive pressure systems. Vacuum suits multiple pickup points and shorter distances. Higher rates and longer distances usually call for a pressure system from a supplier that builds both.'],
   ['Do pneumatic conveying manufacturers test my material before quoting?', 'Most of the companies listed state that they run a test lab. Published details vary, from a 750 square foot lab at Volkmann to a 12,000 square foot facility at Macawber, and Nol-Tec lists separate tests for each phase and air source. Ask whether the test uses your own material, at full scale, over a distance and bend count close to your layout.'],
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
-};
 ---
 <BaseLayout
   title="Best Pneumatic Conveying System Manufacturers: Top 10 (2026)"
   description="The top 10 pneumatic conveying system manufacturers and what each is best for: dense phase, dilute phase, vacuum, testing. Compared on published scope."
   canonical={url}
-  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema, listSchema]}
 >
 <h1>Best Pneumatic Conveying System Manufacturers by Application</h1>
 <p class="usa-intro">The best pneumatic conveying system manufacturer depends on your material and the conveying phase it needs. Macawber and Nol-Tec are the dense phase picks. Volkmann and VAC-U-MAX specialize in vacuum. Coperion and Magnum Systems cover whole process lines. This page compares the top 10 pneumatic conveying manufacturers in North America using each company's published scope.</p>

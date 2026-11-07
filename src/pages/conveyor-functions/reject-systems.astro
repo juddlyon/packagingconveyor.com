@@ -22,39 +22,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a conveyor reject system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor reject system removes non-conforming product from the production line after an inspection device (metal detector, checkweigher, vision system, or X-ray) detects a defect. The reject mechanism activates within milliseconds of the detection signal, diverting the defective product into a locked reject bin while good product continues downstream. Common reject types include air blast, pusher arm, diverter gate, and drop-out belt." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do rejection systems remove contaminated products from the line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A rejection system removes contaminated product in five steps. An inspection device (metal detector, X-ray, checkweigher, or vision system) flags the pack. The controller tracks that pack by belt encoder or timer to the reject point. A reject mechanism (air blast, pusher, diverter arm, or retracting belt) removes it into a reject bin. A confirm sensor verifies the pack left the line. The bin is locked so rejected product cannot be returned, and any failed step stops the line or raises an alarm." }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of conveyor reject mechanisms exist?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The main reject mechanisms are: (1) Air blast, a compressed air nozzle blows light packs off the belt. It is the fastest type, and Loma lists a maximum pack weight of 0.8 kg for its air blast. (2) Pusher, a pneumatic or servo blade pushes the pack off the side into a bin. Loma rates its standard pusher to 10 kg. (3) Reject diverter, a pivoting arm or gate swings across the belt and steers the pack off the side or into a reject lane. (4) Reject belt, a retracting or dropping belt section opens a gap so the pack falls into a bin below with no side force. Loma rates its retracting band to 5 kg. Stop on detect, which stops the belt for manual removal, is used for very large packs. The right choice depends on pack weight, line speed, and whether the pack tolerates side contact." }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast must a conveyor reject system respond?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The controller must fire the reject when the flagged pack reaches the reject point, and the mechanism must finish its stroke and reset before the next good pack arrives. For example, at 200 FPM (40 inches per second), a pack travels 12 inches in 0.3 seconds. Air blast is the fastest mechanism, pushers and diverters are slower, and reject belts are slowest because the belt must open and close. Get the cycle time for each mechanism from the supplier and check it against your belt speed and pack gap." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a reject confirm sensor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "For food and pharmaceutical lines and for contamination defects such as metal, a confirm sensor is standard good practice. It verifies that the flagged pack left the conveyor and entered the reject bin. If it does not confirm within the expected window, the system alarms and stops the line. BRCGS guidance describes failsafe systems that alarm when a reject function fails, such as loss of compressed air, and expects sites to check them. Many retailer codes of practice add specific fail-safe requirements, so check your customers' codes." }
-    }
-  ]
-};
 ---
-<BaseLayout heroPhoto title="Conveyor Reject Systems: Reject Belt, Diverter, Pusher" description="Reject belt, reject diverter, pneumatic pusher, or air blast? How each removes flagged packs after a metal detector or checkweigher, with weight limits." canonical="https://packagingconveyor.com/conveyor-functions/reject-systems/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout heroPhoto title="Conveyor Reject Systems: Reject Belt, Diverter, Pusher" description="Reject belt, reject diverter, pneumatic pusher, or air blast? How each removes flagged packs after a metal detector or checkweigher, with weight limits." canonical="https://packagingconveyor.com/conveyor-functions/reject-systems/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Conveyor Reject Systems</h1>
 <p class="usa-intro">A conveyor reject system automatically removes contaminated or out-of-spec product from the line after a metal detector, checkweigher, vision system, or X-ray scanner flags it. The controller tracks the flagged pack to the reject point, a mechanism (air blast, pusher, diverter arm, or retracting belt) moves it into a locked reject bin, and a sensor confirms it left the line. Good product continues downstream without stopping.</p>
 <h2 id="how-heading">How a Reject System Works</h2>

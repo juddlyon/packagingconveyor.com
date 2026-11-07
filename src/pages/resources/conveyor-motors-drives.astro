@@ -21,34 +21,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What type of motor is used on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most packaging conveyors use AC induction motors with gear reducers (gear motors). Gear motors provide the low output speed and high torque that conveyors require. For variable speed, a VFD (variable frequency drive) controls the AC motor speed electronically. Servo motors are used on indexing conveyors requiring precise position control. Motorized drive rollers (MDR) use small 24V DC motors embedded inside conveyor rollers for zone-based accumulation systems. Drum motors integrate the motor and gearbox inside the drive pulley for compact, washdown-friendly belt conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a VFD and why is it used on conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A VFD (variable frequency drive), also called an adjustable frequency drive or inverter, controls AC motor speed by varying the frequency and voltage of the electrical power supplied to the motor. VFDs allow conveyor speed adjustment from near-zero to above rated speed without mechanical changes. Benefits include soft starting (reduces mechanical stress), speed matching between conveyors and machines, and controlled braking. Conveyors are constant torque loads, so power falls roughly in proportion to speed, not with the cube of speed. Select a VFD that supports the required communication protocol (Ethernet/IP, PROFINET, or EtherCAT) and matches the motor's full-load amperage." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is an MDR motor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An MDR (motorized drive roller) motor is a small brushless DC motor embedded inside a conveyor roller. The motor, gearbox, and roller form a single integrated unit. MDR motors commonly run on 24V DC (some models also offer 48V DC) and are controlled by zone controller cards. Each zone has one MDR that drives the adjacent idle rollers through O-ring or poly-V belts. MDR systems provide zero-pressure accumulation, low noise, and energy efficiency because only zones with product are powered. MDR rollers are available from several global suppliers specializing in motorized roller technology." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you size a motor for a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Motor sizing uses the formula HP = (belt pull × belt speed in FPM) / 33,000. Belt pull is calculated from conveyor length, product weight, belt weight, friction factor, and elevation change. Divide by drive train efficiency, apply the design margin your belt or gearmotor supplier specifies to cover starting and load variation, then round up to the next standard motor size. Undersizing causes overheating and premature failure. Large oversizing runs the motor at light load, where efficiency is lower." }
-    }
-  ]
-};
 ---
-<BaseLayout title="Conveyor Motors & Drive Systems Guide | PackagingConveyor.com" description="Guide to conveyor motors and drives: AC induction, gear motors, servo motors, VFDs, MDR motors, drum motors, motor sizing methodology, and IE3/IE4 energy efficiency standards." canonical="https://packagingconveyor.com/resources/conveyor-motors-drives/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Conveyor Motors & Drive Systems Guide | PackagingConveyor.com" description="Guide to conveyor motors and drives: AC induction, gear motors, servo motors, VFDs, MDR motors, drum motors, motor sizing methodology, and IE3/IE4 energy efficiency standards." canonical="https://packagingconveyor.com/resources/conveyor-motors-drives/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Conveyor Motors &amp; Drives</h1>
 <p class="usa-intro">Conveyor motors convert electrical power into the mechanical torque and speed that drive belts, rollers, and chains. The most common conveyor motor is the AC induction motor paired with a gear reducer (gear motor), controlled by a VFD (variable frequency drive) for adjustable speed. Servo motors provide precise position control for indexing conveyors. Motorized drive rollers (MDR) embed a brushless DC motor inside a conveyor roller for zone-based accumulation. This guide covers the motor and drive types used in packaging conveyor systems, motor sizing, and the efficiency classes (IE3, IE4) that federal standards reference.</p>
 <h2 id="ac-heading">AC Induction Motors</h2>

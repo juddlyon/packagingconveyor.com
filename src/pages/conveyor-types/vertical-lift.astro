@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a vertical lift conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vertical lift conveyor moves products straight up or down between different elevations in a packaging or distribution facility. Unlike incline conveyors that use a sloped belt, vertical lifts carry products on carriers, platforms, or carriages in a vertical path. This minimizes the floor space required for elevation changes. Common types include continuous vertical conveyors (CVCs) in C-flow or Z-flow configurations, vertical reciprocating conveyors (VRCs), and spirals. Steep Z-frame cleated belt conveyors are a related option." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a continuous vertical lift and a VRC?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A continuous vertical conveyor (CVC or CVL) circulates multiple carriers in a loop, so a new carrier reaches the load point without waiting for a return trip. A vertical reciprocating conveyor (VRC) uses a single carriage that stops at each level to load and unload, so throughput is set by full cycle time. For example, Qimarox rates its Prorunner mk5 CVC at up to 2,000 products per hour, while PFlow rates its 21 Series hydraulic VRC at 10 cycles per hour standard. VRCs carry much heavier loads, including full pallets." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much floor space does a vertical lift conveyor require?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vertical lift footprint is set by product size and carrier or carriage design, and it grows little as the rise increases. An incline conveyor needs a horizontal run equal to the rise divided by the tangent of the incline angle. A 10-foot rise at 20 degrees needs about 27 feet of run, and at 30 degrees about 17 feet. A spiral needs room for its helix diameter, which Ryson lists from about 4 to 13 feet depending on model." }
-    },
-    {
-      "@type": "Question",
-      "name": "What products can vertical lift conveyors handle?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Vertical lift conveyors handle cases, cartons, totes, trays, bundles, and pallets depending on lift type. CVCs have a per-carrier weight limit and size window, for example 110 lbs per carrier on the Qimarox Prorunner mk5. VRCs handle pallets and carts, with Autoquip rating its hydraulic VRCs up to 6,000 lbs and its mechanical VRCs up to 20,000 lbs. Products should have a stable flat bottom. Loose, granular, or bulk products need flighted or scoop conveyors or bucket elevators instead." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Vertical Lift Conveyors & Box Elevators | PackagingConveyor.com"
   description="Vertical lift conveyors: continuous vertical lifts, C-frame, Z-frame, and box elevators for packaging line elevation changes. Floor space savings, throughput, and selection."
   canonical="https://packagingconveyor.com/conveyor-types/vertical-lift/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Vertical Lift &amp; Box Elevators</h1>
 <p class="usa-intro">A vertical lift conveyor moves cases, cartons, totes, and other discrete products straight up or down between floor levels or equipment elevations, using far less floor space than an incline conveyor. Continuous vertical conveyors (CVCs) circulate multiple carriers in a loop for steady case flow. Vertical reciprocating conveyors (VRCs) shuttle a single carriage between levels for heavy or low-volume loads. Spirals and steep Z-frame belt conveyors cover the same elevation job with different trade-offs.</p>

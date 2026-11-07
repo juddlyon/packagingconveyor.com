@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a magnetic conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A magnetic conveyor uses permanent magnets or electromagnets mounted beneath or beside the conveying surface to hold and transport ferrous metal products, steel cans, tin-plated lids, bottle caps, and sheet metal parts. The magnetic field passes through a non-magnetic slider bed (stainless steel, UHMW plastic, or aluminum) to grip ferrous items securely, allowing transport along flat, inclined, vertical, and even inverted paths without mechanical clamps or fixtures." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can magnetic conveyors handle aluminum cans?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard permanent-magnet conveyors cannot hold aluminum because aluminum is non-ferrous and not attracted by permanent magnets. Aluminum cans require eddy-current or electrodynamic magnetic systems that use alternating magnetic fields to induce currents in the aluminum, creating a repulsive or attractive force. These systems are more complex and more expensive than permanent-magnet conveyors. Most beverage can lines use air conveyors or mass-flow conveyors for aluminum cans instead of magnetic conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "How strong do the magnets need to be for a magnetic conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Magnet strength depends on the product weight, conveyor orientation, and speed. Under-belt magnets for light tin cans and lids typically use ceramic ferrite magnets. Heavier steel parts or high-speed applications use rare-earth neodymium magnets, which store far more magnetic energy per unit volume and give much stronger holding force at the same air gap. Overhead and inverted magnetic conveyors always require stronger magnets because they must overcome gravity entirely. The slider bed thickness also matters, thicker beds reduce the magnetic force reaching the product surface." }
-    },
-    {
-      "@type": "Question",
-      "name": "What maintenance do magnetic conveyors require?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Permanent-magnet conveyors require minimal maintenance because the magnets have no moving parts and do not degrade under normal operating conditions. Maintenance focuses on the conveyor belt or chain, drive components, and slider bed wear. The slider bed wears faster on magnetic conveyors than on standard belt conveyors because ferrous products press harder against the surface due to magnetic attraction. Replace worn slider beds before the reduced thickness allows products to contact the magnets directly. Electromagnet systems require additional maintenance of power supplies, wiring, and cooling systems." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Magnetic Conveyors: Under-Belt, Overhead & Side-Grip Systems for Ferrous Products"
   description="Magnetic conveyors: under-belt magnets, overhead magnetic conveyors, side-grip systems, tin can conveying, cap elevators, and selection for packaging and manufacturing lines."
   canonical="https://packagingconveyor.com/conveyor-types/magnetic-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Magnetic Conveyors</h1>
 <p class="usa-intro">A magnetic conveyor uses permanent magnets or electromagnets beneath the conveying surface to hold and transport ferrous metal products, steel cans, tin-plated lids, bottle caps, and sheet metal stampings. The magnetic field passes through a non-magnetic slider bed to grip ferrous items securely, allowing transport along flat, inclined, vertical, and even inverted paths without mechanical clamps or fixtures. Magnetic conveyors are standard equipment on <a href="/industries/food-conveyors/beverage/">beverage canning lines</a>, cap feeding systems, and metal stamping operations where ferrous parts must move reliably at high speeds or through orientation changes.</p>

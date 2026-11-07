@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a laning conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A laning conveyor distributes a single-file stream of product across multiple parallel lanes. The product enters on one lane and exits on two, three, four, or more lanes. Laning conveyors feed case packers, tray loaders, and cartoners that require product arranged in rows. Common laning methods include serpentine (chicane) diverters, lane-select pushers, and angled belt transfers." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between collating and laning?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Laning divides a single product stream into multiple parallel lanes. Collating arranges products from those lanes into a specific pattern, a 3x4 array for a case pack, a 2x3 pattern for a tray load, etc. Laning happens first (one lane becomes many); collating happens second (many lanes form a pattern). Both functions often occur on the same conveyor section." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is chicaning on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Chicaning (also called serpentine routing) is a laning method where product follows an S-shaped path through angled guide rails. Product enters single-file, contacts the first angled rail, diverts to lane one. When lane one is full, a gate sends the next products past to lane two, and so on. Chicaning is common for round containers (bottles, cans, jars) because the product rolls naturally against the guide rails." }
-    },
-    {
-      "@type": "Question",
-      "name": "What throughput can a laning conveyor handle?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Throughput depends on the method, the product, and the number of lanes. Chicane laning suits the highest-rate round container lines. Servo lane-select diverters and low back-pressure laning suit moderate rates. Delta robot speed ratings are catalog maximums for light products: Omron rated its Quattro at up to 300 picks per minute, and real rates with your product and pattern are lower. The basic math: infeed rate divided by number of lanes equals per-lane rate." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Laning & Collating Conveyors: Product Laning Methods"
   description="How a laning conveyor splits one product stream into lanes and a collating conveyor groups it for case packing. Compare chicane, servo, and robotic laning."
   canonical="https://packagingconveyor.com/conveyor-functions/collating-laning/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Collating &amp; Laning Conveyors</h1>
 <p class="usa-intro">A laning conveyor distributes a single-file product stream across multiple parallel lanes to feed case packers, tray loaders, and cartoners. A collating conveyor arranges products from those lanes into a specific pattern, a 3×4 array, a 2×5 group, or any count pattern the downstream machine requires. Laning and collating sections sit between the single-file packaging line and the case packer on food, beverage, personal care, and pharmaceutical lines.</p>

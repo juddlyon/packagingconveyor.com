@@ -78,17 +78,12 @@ const faqs = [
   ['What is a low back pressure buffering system?', 'It is an accumulation conveyor that limits how hard queued products push on each other. Zero-pressure systems, such as Hytrol EZLogic conveyors, keep a gap so products do not touch. Low-pressure systems let products touch lightly. Shuttleworth Slip-Torque rollers stop turning under accumulated product, and Hytrol states its minimum-pressure conveyors can be set to 2 percent of the live load.'],
   ['Who installs conveyor buffering systems?', 'It depends on the supplier. Hytrol sells only through its integration partner network, so an integrator installs the system. Descon and Multi-Conveyor describe installation as part of their projects. For the others, ask whether installation and commissioning are in the quote or left to your integrator.'],
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
-};
 ---
 <BaseLayout
   title="Best Conveyor Buffering Systems: Top 9 Manufacturers (2026)"
   description="The best conveyor buffering systems for packaging lines and the top 9 manufacturers that build them, compared by method, FIFO or LIFO, and products handled."
   canonical={url}
-  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema, listSchema]}
 >
 <h1>Best Conveyor Buffering Systems and Who Builds Them</h1>
 <p class="usa-intro">For a high-speed bottle or can line, the best conveyor buffering system is usually a first-in, first-out spiral or mass flow buffer, such as those built by ITW Hartness and AmbaFlex. Loop tables from Garvey and Shuttleworth suit unstable containers. Zero-pressure rollers from Hytrol suit cartons. This page compares the top 9 buffering system manufacturers and matches each buffering method to the companies that build it.</p>

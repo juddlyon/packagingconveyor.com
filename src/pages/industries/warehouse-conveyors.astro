@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What conveyors are used in warehouses and distribution centers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Warehouses use belt conveyors for parcel transport, roller conveyors for case and tote handling, sortation conveyors (shoe, crossbelt, tilt-tray, pop-up wheel) for order routing, accumulation conveyors for staging, merge conveyors for combining flows, and spiral conveyors or vertical reciprocating conveyors for elevation changes. MDR (motor-driven roller) conveyors are increasingly standard for zone-controlled accumulation and energy efficiency." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a sortation conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A sortation conveyor automatically diverts products from a main conveyor line to designated lanes, chutes, or destinations based on barcode, RFID, or vision identification. Common sortation types include sliding shoe (high-speed, gentle handling), crossbelt (individual carrier cells with built-in belts), pop-up wheel (right-angle divert), and tilt-tray (tilting carrier platforms). Rated speeds vary by technology and model. Hytrol, for example, rates its ProSort 1400 sliding shoe sorters at up to 650 feet per minute with a 22-degree divert, and Interroll rates its MX-H horizontal crossbelt sorter at up to 2.7 m/s (about 530 feet per minute)." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is an AS/RS and how do conveyors integrate with it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An AS/RS (Automated Storage and Retrieval System) uses cranes, shuttles, or robotic systems to store and retrieve loads in racking. Conveyors connect the AS/RS to inbound receiving, picking stations, and outbound shipping. The conveyor system includes infeed conveyors (delivering loads to the AS/RS), outfeed conveyors (receiving retrieved loads), and accumulation zones (buffering loads between the AS/RS cycle and downstream operations)." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do merge conveyors work in distribution?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Merge conveyors combine multiple product streams into a single line. In distribution centers, merge conveyors combine flows from multiple picking zones, packing stations, or AS/RS aisles onto a common outbound conveyor. Merge technologies include speed-up merges (accelerating the merging stream to gap into the main stream), slug merges (releasing groups from side lanes), and servo-controlled merges that precisely time individual package insertion." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -48,7 +22,7 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-<BaseLayout title="Warehouse & Distribution Conveyors: Sortation, AS/RS & Accumulation | PackagingConveyor.com" description="Warehouse and distribution center conveyors: sortation, accumulation, merges, AS/RS integration, and material handling for e-commerce fulfillment." canonical="https://packagingconveyor.com/industries/warehouse-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="Warehouse & Distribution Conveyors: Sortation, AS/RS & Accumulation | PackagingConveyor.com" description="Warehouse and distribution center conveyors: sortation, accumulation, merges, AS/RS integration, and material handling for e-commerce fulfillment." canonical="https://packagingconveyor.com/industries/warehouse-conveyors/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Warehouse &amp; Distribution Conveyors</h1>
 <p class="usa-intro">Warehouse and distribution center conveyors move cases, totes, parcels, and pallets through receiving, storage, picking, packing, sortation, and shipping operations. Core conveyor functions include high-speed sortation (routing items to the correct shipping lane), <a href="/conveyor-types/accumulation-conveyors/zero-pressure/">zero-pressure accumulation</a> (staging items without contact pressure), merge (combining multiple flows into one line), and AS/RS integration (connecting automated storage with order fulfillment).</p>
 <h2 id="sort-heading">Sortation Conveyors</h2>

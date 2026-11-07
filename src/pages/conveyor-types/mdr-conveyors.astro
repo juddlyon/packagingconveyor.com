@@ -11,37 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does MDR stand for in conveyor systems?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR stands for Motor Driven Roller. Each motorized roller contains a small brushless DC motor inside the roller tube itself, most commonly running on 24VDC (some models also offer 48VDC). The motor drives the other rollers in its zone through O-rings or belts, creating an independent zone. MDR conveyors provide zero-pressure accumulation, zone-by-zone control, and run-on-demand operation." }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the advantages of MDR over belt-driven roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR conveyors offer five main advantages over belt-driven live roller: built-in zone control without compressed air, lower energy use because zones only run when product is present (Insight Automation, which sells PULSEROLLER motorized roller conveyors, estimates 30 to 70 percent savings versus continuously running conveyors), quieter operation (Interroll lists a maximum of 55 dB(A) installed for its EC5000 RollerDrive, application-dependent), no central drive belt or chain to maintain, and easier zone-by-zone expansion. MDR usually costs more per foot upfront because every zone needs its own motor roller and controller. Energy and maintenance savings can offset that over the life of the system." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the weight capacity of MDR conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on the conveyor model, not just the motor roller. Hytrol rates its 190-E24EZ 24-volt roller accumulation conveyor at a maximum of 37 lbs per foot and 75 lbs per zone. Interroll's 1.9-inch EC5000 RollerDrive datasheet lists a maximum static load of 242 lbs per RollerDrive (lengths up to 39 inches, without drive head), and 76 lbs with a drive head. For heavier loads, 24-volt chain-driven zone conveyors exist (Hytrol rates its 199-CRE24EZ at up to 600 lbs per zone), or use CDLR. Motor torque, roller construction, and drive method all limit capacity." }
-    },
-    {
-      "@type": "Question",
-      "name": "How does MDR zone control work?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Each MDR zone contains one motorized roller, several slave rollers connected to it by O-rings or belts, a photo-eye sensor, and a zone controller card. The sensor detects product presence. The controller communicates with upstream and downstream zone controllers. When a downstream zone is occupied, it signals the upstream zone to hold. The upstream zone's motor stops, and the product stops with a gap to the next product. This creates zero-pressure accumulation." }
-    },
-    {
-      "@type": "Question",
-      "name": "Who manufactures MDR rollers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Motorized roller makers include Interroll (RollerDrive), Itoh Denki (Power Moller), and Rulmeca. Conveyor manufacturers and integrators build those rollers, or their own 24-volt drives, into complete systems. Hytrol, for example, uses its own E24 motor with EZLogic zone controllers." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +21,7 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-<BaseLayout title="MDR: Motor Driven Roller Conveyors | 24VDC Zone Control Guide" description="MDR (motor driven roller) conveyors put 24VDC motors inside rollers for zone control and zero-pressure accumulation. MDR vs line-shaft vs belt-driven compared." canonical="https://packagingconveyor.com/conveyor-types/mdr-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="MDR: Motor Driven Roller Conveyors | 24VDC Zone Control Guide" description="MDR (motor driven roller) conveyors put 24VDC motors inside rollers for zone control and zero-pressure accumulation. MDR vs line-shaft vs belt-driven compared." canonical="https://packagingconveyor.com/conveyor-types/mdr-conveyors/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>MDR: Motor Driven Roller Conveyors</h1>
 <p class="usa-intro">An MDR (Motor Driven Roller) conveyor uses small brushless DC motors, most commonly 24VDC, built inside individual conveyor rollers to create independently controlled zones for product transport and zero-pressure accumulation. MDR is widely used for new powered roller lines in distribution, fulfillment, and <a href="/industries/packaging-line-conveyors/">packaging line</a> applications because it removes the central gearmotor, drive belt or chain, and compressed air that conventional <a href="/conveyor-types/roller-conveyors/powered/">powered roller conveyors</a> need for accumulation. Zones run only when product is present, which cuts energy use compared to conveyors that run continuously.</p>
 <h2 id="how-heading">How MDR Technology Works</h2>

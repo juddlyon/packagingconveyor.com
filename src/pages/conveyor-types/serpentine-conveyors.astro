@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a serpentine conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A serpentine conveyor (often called an accumulation table) uses multiple parallel conveyor lanes with 180-degree turns at each end to create a continuous back-and-forth path. Products enter one end and travel through the reversing lanes until they exit the other end. This serpentine path accumulates large volumes of products in a compact rectangular footprint. Serpentine conveyors buffer products between upstream and downstream process equipment that runs at different speeds." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much product can a serpentine conveyor hold?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on lane count, lane length, product size, and whether products run single file or several abreast. Worked example: a 10-lane table with 20-foot lanes has 200 feet (2,400 inches) of path. With cans about 2.6 inches across running single file, that holds roughly 920 cans. Running cans several abreast multiplies capacity by the number of cans across the lane. Buffer time equals capacity divided by the gap between upstream and downstream rates. At 1,000 cans per minute with the downstream machine stopped, 920 cans covers less than one minute." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a serpentine conveyor and an accumulation table?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The terms overlap significantly. A serpentine conveyor specifically describes the back-and-forth lane pattern with 180-degree reversals. An accumulation table is a broader term that includes serpentine layouts but also includes single-lane accumulation conveyors, bi-directional tables, and mass flow tables without a defined serpentine path. In beverage and food packaging, 'accumulation table' and 'serpentine conveyor' often refer to the same equipment, a multi-lane, reversing-path accumulation system." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do serpentine conveyors maintain FIFO product flow?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, serpentine conveyors maintain FIFO (first in, first out) product flow. The first product entering the serpentine path is the first product to reach the exit because every product follows the same sequential path through all lanes. This contrasts with mass flow accumulation tables where products spread across a wide surface and the first product in may not be the first out. FIFO flow is important for date-coded products, perishable goods, and any product requiring lot traceability through the accumulation zone." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Serpentine Conveyors: Mass Flow Tables & Accumulation Buffers for Packaging Lines"
   description="Serpentine conveyors: mass flow accumulation tables, lane reversal design, FIFO flow, capacity calculations, and beverage line buffer selection."
   canonical="https://packagingconveyor.com/conveyor-types/serpentine-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Serpentine Conveyors</h1>
 <p class="usa-intro">A serpentine conveyor uses multiple parallel conveyor lanes connected by 180-degree turns to create a continuous back-and-forth path that accumulates large volumes of products in a compact rectangular footprint. Products enter one end, travel through the reversing lanes in sequence, and exit the other end in FIFO (first in, first out) order. Serpentine conveyors, often called <a href="/conveyor-types/accumulation-conveyors/">accumulation tables</a>, buffer products between upstream and downstream equipment that runs at different speeds, absorbing short stoppages and speed mismatches on high-speed <a href="/industries/food-conveyors/beverage/">beverage</a> and food packaging lines.</p>

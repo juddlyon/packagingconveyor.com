@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an infeed conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An infeed conveyor delivers products to a downstream machine (filler, labeler, wrapper, case packer) at the precise speed, spacing, and orientation the machine requires. Infeed systems use timing screws, starwheels, servo-driven phasing belts, or flight conveyors to establish consistent product pitch before machine entry. The infeed conveyor is the critical link between random-spaced product flow and the machine's timed cycle." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a timing screw?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A timing screw (feed screw, worm drive) is a helical screw that rotates alongside a conveyor to capture products and space them at a precise pitch. The screw's helix geometry determines the output spacing. Products ride on the conveyor belt while the screw controls separation. Timing screws are the usual infeed for round containers (bottles, cans, jars) before labeling, filling, and capping. Servo-driven screws adjust timing through recipe changes, but a different container diameter can still need a different screw." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a starwheel?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A starwheel is a rotating disc with evenly spaced pockets that captures containers from an infeed conveyor and delivers them at precise timing to a rotary machine (rotary filler, rotary labeler, rotary capper). Each pocket holds one container. The starwheel's rotation speed and pocket count match the machine's station count and cycle rate. Starwheels are standard on rotary bottle filling and capping lines." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a servo infeed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A servo infeed uses servo-driven belts or flights to precisely control product spacing on the conveyor feeding a downstream machine. The servo motor accelerates and decelerates individual products or groups to match the machine's cycle. Servo infeeds provide recipe-based pitch adjustment for multiple product sizes without mechanical changeover. They often replace fixed-pitch timing screws on multi-SKU lines with non-round products." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -53,7 +27,7 @@ const articleSchema = {
   title="Infeed Transition Systems: Timing Screws & Starwheels"
   description="What an infeed transition system does between line conveyor and machine: timing screws, starwheels, servo phasing belts, and flight conveyors compared."
   canonical="https://packagingconveyor.com/conveyor-functions/infeed-outfeed/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Infeed &amp; Outfeed Systems</h1>
 <p class="usa-intro">Infeed and outfeed conveyor systems control the speed, spacing, and timing of products entering and exiting packaging machines. Infeed systems use timing screws, starwheels, servo-driven phasing belts, and flight conveyors to convert random product flow into precisely timed machine-ready spacing. Outfeed systems receive product from machines and transition back to transport speed. The core engineering problem is preserving container control and pitch through the machine interface without tipping, scuffing, or losing timing accuracy.</p>

@@ -30,52 +30,6 @@ const functions = [
   { name: 'Turn & Orient', slug: 'product-handling', desc: 'Rotate, flip or invert product on the conveyor' },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a packaging conveyor system cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Packaging conveyor system pricing depends on type, length, load capacity, controls, and environment (e.g. food-grade or cleanroom). Gravity roller sections are the lowest cost, while fully integrated packaging lines with PLC controls and sortation are the highest. Key cost factors include conveyor length, belt/roller material, motor type, accumulation features, and installation complexity. Contact manufacturers directly for project-specific quotes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What type of conveyor is best for packaging lines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The best conveyor type depends on your product, speed, and application. Belt conveyors work for lightweight and irregular shapes. Roller conveyors (gravity or powered) suit cases and cartons. MDR conveyors provide zone-based accumulation with low maintenance. Tabletop chain conveyors handle bottles and cans. Spiral conveyors save floor space for elevation changes. Most packaging lines use multiple conveyor types together."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between MDR and powered roller conveyors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "MDR (Motor Driven Roller) conveyors use small brushless DC motors inside individual rollers, controlled in independent zones for zero-pressure accumulation. Powered roller conveyors use a single external motor driving all rollers via belt or chain. MDR zones run only when product is present, so MDR usually uses less energy and runs quieter than a continuously driven line. Actual savings depend on duty cycle. Powered roller has lower upfront cost and is simpler for continuous-flow applications."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor speed do I need for my packaging line?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Conveyor speed follows from your throughput requirement: Speed (FPM) = Products per minute × (Product length + gap) in feet. There is no single correct speed for a product type. Set the rate from the fastest machine the conveyor must feed or clear, then add headroom so the conveyor can catch up after a stop. Confirm the speed against the manufacturer rating for your conveyor model and load."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is zero-pressure accumulation on a conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zero-pressure accumulation (ZPA) means products stop and queue on a conveyor without touching each other or building up backpressure. Each zone has its own sensor and drive control. When a downstream zone is occupied, the upstream zone stops its product with a gap between them. This prevents product damage, label scuffing, and carton crushing. ZPA is critical for fragile products and is most commonly implemented using MDR (Motor Driven Roller) conveyors."
-      }
-    }
-  ]
-};
 
 const webPageSchema = {
   "@context": "https://schema.org",
@@ -95,7 +49,7 @@ const webPageSchema = {
   title="Packaging Conveyor Systems | 30+ Types Compared with Specs"
   description="Technical guides and selection criteria for 30+ packaging conveyor types. Specs, comparisons, and engineering data for plant engineers and packaging managers."
   canonical="https://packagingconveyor.com/"
-  schema={[faqSchema, webPageSchema]}
+  schema={[webPageSchema]}
 >
 <h1>The Packaging Conveyor Reference</h1>
 <p class="usa-intro">Technical guides and selection criteria for <strong>30+ conveyor types</strong> across food, pharmaceutical, automotive, and warehouse applications. Independent. No vendor bias.</p>

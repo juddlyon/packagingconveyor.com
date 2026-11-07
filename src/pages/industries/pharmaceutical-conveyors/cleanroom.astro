@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a cleanroom conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A cleanroom conveyor is a material handling system designed to operate within ISO 14644-1 classified environments (ISO Class 5 through Class 8) without generating particles that would compromise the cleanroom classification. Cleanroom conveyors use smooth, non-shedding surfaces (electropolished stainless steel, anodized aluminum), sealed bearings, enclosed drives, and materials that do not outgas volatile organic compounds. They serve pharmaceutical, medical device, semiconductor, and optics manufacturing." }
-    },
-    {
-      "@type": "Question",
-      "name": "What ISO cleanroom classes require specialized conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No standard assigns conveyor features to ISO classes, but common practice is: ISO Class 7 and Class 8 environments can use standard stainless steel conveyors with sealed bearings and smooth finishes. ISO Class 6 calls for enclosed drives, particle-tested belts, and certified low-particle generation. ISO Class 5 (equivalent to the old Federal Standard 209E Class 100) calls for fully enclosed conveyor systems, HEPA-filtered enclosures, and rigorous material qualification. EU GMP Annex 1 also says a conveyor belt should not pass through a partition between a Grade A or B area and a lower-grade area unless the belt is continually sterilised." }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor belt materials are cleanroom compatible?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom-compatible belt materials include silicone-free polyurethane, PTFE-coated fiberglass, and monofilament polyester mesh. These materials generate minimal particles during operation, do not outgas volatile compounds, and resist the cleaning chemicals used in cleanroom environments (IPA, hydrogen peroxide, quaternary ammonium). Standard PVC and rubber belts are generally not cleanroom-compatible due to plasticizer outgassing and particle shedding." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you validate a cleanroom conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cleanroom conveyor validation includes particle generation testing (running the conveyor and measuring airborne particles at the belt surface), outgassing testing (measuring VOC emissions from belt and component materials), surface finish verification (Ra values on metal surfaces), and operational qualification under production conditions. Validation follows the facility's cleanroom qualification protocol and must demonstrate the conveyor does not cause the room to exceed its ISO classification during operation." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -53,7 +27,7 @@ const articleSchema = {
   title="Cleanroom Conveyors: ISO Class 5-8 Pharmaceutical & Semiconductor Systems | PackagingConveyor.com"
   description="Cleanroom conveyors for pharma, medical device, and semiconductor plants: ISO classes, particle generation, GMP compliance, and HEPA-compatible design."
   canonical="https://packagingconveyor.com/industries/pharmaceutical-conveyors/cleanroom/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Cleanroom Conveyors</h1>
 <p class="usa-intro">Cleanroom conveyors operate within ISO 14644-1 classified environments, from ISO Class 5 (3,520 particles per cubic meter at 0.5 microns and larger, the former Class 100) through ISO Class 8 (3,520,000 particles per cubic meter), for pharmaceutical, medical device, and semiconductor manufacturing. These conveyors use electropolished stainless steel or anodized aluminum frames, non-shedding belt materials, sealed bearings, and enclosed drives to minimize particle generation that would compromise the cleanroom classification. A qualified supplier can document particle emission test results and materials of construction for the specific model.</p>

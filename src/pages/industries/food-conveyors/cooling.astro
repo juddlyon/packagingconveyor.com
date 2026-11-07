@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a cooling conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A cooling conveyor transports hot or warm products through a cooling zone, ambient air, forced air, or refrigerated, to reduce product temperature before packaging, further processing, or storage. Cooling conveyors use mesh belts, modular plastic belts, or spiral belt systems that allow air circulation around the product. Common in bakery, confectionery, meat, and industrial applications." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a spiral cooler and a straight-line cooler?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A spiral cooler stacks belt tiers vertically in a helical tower, providing long cooling time in a small footprint. A straight-line cooler runs product on a long horizontal belt. For the same cooling time, a spiral uses far less floor space than a straight-line system but costs more. Straight-line coolers are simpler, cheaper, and easier to clean." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you calculate cooling conveyor length?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cooling conveyor length = belt speed (FPM) × required cooling time (minutes). Required cooling time depends on product mass, initial temperature, target temperature, and cooling method (ambient, forced-air, or refrigerated). Forced-air cooling shortens required time compared with ambient cooling. Confirm cooling time with product trials or a heat transfer engineer for precise calculations based on your product's thermal properties." }
-    },
-    {
-      "@type": "Question",
-      "name": "What belt types are used for cooling conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cooling conveyors primarily use wire mesh belts (stainless or carbon steel) for maximum airflow, modular plastic belts (perforated for air passage), and flat wire compound belts for heavy products. Mesh aperture size affects both airflow and product support: smaller products need finer mesh. Food-contact belts must use FDA-compliant materials." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -53,7 +27,7 @@ const articleSchema = {
   title="Cooling Conveyors: Ambient, Forced-Air & Spiral Cooling | PackagingConveyor.com"
   description="Technical guide to cooling conveyors: ambient, forced-air, and spiral cooling systems with mesh belts for bakery, confectionery, meat, and industrial product cooling before packaging."
   canonical="https://packagingconveyor.com/industries/food-conveyors/cooling/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Cooling Conveyors</h1>
 <p class="usa-intro">A cooling conveyor transports hot or warm products through a cooling zone to reduce temperature before packaging, coating, or further processing. Cooling methods include ambient (natural convection), forced-air (fan-driven airflow across the belt), refrigerated tunnel (mechanically chilled air), and cryogenic (liquid nitrogen or CO2). Spiral cooling conveyors stack a long belt path into a vertical tower, giving long cooling time in a small footprint.</p>

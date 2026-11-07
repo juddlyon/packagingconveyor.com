@@ -12,37 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are change parts on a packaging line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Change parts (also called format parts) are the container-specific or package-specific components that must be swapped when a packaging line switches to a different container or package size. On a bottle line they include timing screws, infeed and outfeed star wheels, center guides, guide rails, and dead plates. Fillers, cappers, labelers, case packers, and cartoners have their own sets, such as capper chucks, filler bottle grippers, and case packer grids. Each container size needs its own matched set." }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a change part changeover take?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on how the parts are mounted. Nercon describes a conventional bolted star wheel fixture swap that can take a maintenance person 30 minutes to an hour. Krones lists quick-change times with one operator of 1.5 minutes for the infeed worm and 3.1 minutes for the infeed starwheel on its Modulfill Bloc FS-C can filler, and 2.0 minutes for quick-change guidance parts against 18 minutes for standard guidance parts. Treat these as single-machine examples, not benchmarks." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a quick-change star wheel?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A quick-change star wheel mounts to a hub that stays on the machine, and locks in place with a hand knob, cam lock, or locating pin instead of bolts. The part drops into a fixed, repeatable position, so no adjustment or timing is needed after the swap and one operator can change it without tools." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can quick-change parts be added to existing conveyor equipment?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Often, yes. Retrofits replace bolted star wheel, screw, and guide mounts with tool-less hubs, locating pins, or sliding carriages. Before ordering, confirm the existing shaft and hub design, the machine's pitch circle and pocket count, guard access, and whether the guide rails and center guide also get quick-change mounts. Ask the supplier for a measured changeover time on a comparable retrofit." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is SMED and how does it apply to change parts?",
-      "acceptedAnswer": { "@type": "Answer", "text": "SMED (single-minute exchange of die) is Shigeo Shingo's changeover reduction method. The Lean Enterprise Institute defines its target as changeover times in a single digit, under 10 minutes. The core step is separating internal setup, which needs the machine stopped, from external setup, which can be done while it runs. For change parts, that means staging the next set on a cart before the stop, and replacing bolted, adjusted mounts with fixed, repeatable ones." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -58,7 +27,7 @@ const articleSchema = {
   title="Conveyor Change Parts: Quick-Change Star Wheels, Guides & Screws"
   description="Change parts for packaging lines: star wheels, timing screws, center guides, and guide rails by machine, quick-change mounts, SMED, retrofits, and an RFQ checklist."
   canonical="https://packagingconveyor.com/components/change-parts/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Conveyor Change Parts &amp; Quick-Change Systems</h1>
 <p class="usa-intro">Change parts are the container-specific components swapped when a packaging line switches to a different container or package size: timing screws, star wheels, center guides, guide rails, and machine format parts. Each size needs its own matched set. How those parts mount, bolted or quick-change, decides whether a changeover takes an hour of maintenance time or a few minutes from one operator.</p>

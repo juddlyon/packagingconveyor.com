@@ -78,17 +78,12 @@ const faqs = [
   ['What should I check before buying a used conveyor?', 'Check the frame for bends and twists, spin every roller, inspect the belt or chain for wear, and confirm the motor voltage and phase match your plant. Ask to see powered conveyor running. Confirm that guards are present, that controls and sensors are included, and that replacement parts are still available for that make and model.'],
   ['Can I buy used conveyors for a food plant?', 'Yes, but inspect more carefully. Look at weld quality, cracks or cuts in the belt, and places where product residue can collect. A used conveyor rarely comes with the material certificates or sanitary design documents that a new one does, so confirm what your food safety plan requires before buying.'],
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
-};
 ---
 <BaseLayout
   title="Used Conveyors: 9 Best Places to Buy and What to Inspect (2026)"
   description="Where to buy used conveyors: 9 dealers and marketplaces compared by conveyor type, testing, and sale terms, plus an inspection checklist to use before you pay."
   canonical={url}
-  schema={[breadcrumbSchema, articleSchema, listSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema, listSchema]}
 >
 <h1>Used Conveyors: Where to Buy and What to Inspect</h1>
 <p class="usa-intro">The best place to buy a used conveyor depends on the type. Warehouse equipment dealers such as American Surplus, East Coast Storage Equipment, and SJF Material Handling stock gravity roller, skatewheel, and powered carton conveyor. Process and packaging dealers such as Aaron Equipment, Phoenix Equipment, and SIGMA Equipment list table top chain, incline, spiral, and screw conveyors. This page compares 9 sellers and gives an inspection checklist to use before you pay.</p>

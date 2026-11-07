@@ -21,34 +21,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an automated conveyor system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An automated conveyor system uses PLCs, sensors, variable frequency drives (VFDs), and networked controls to transport, sort, accumulate, and process product without manual intervention. Automation ranges from simple start/stop motor control to fully integrated Industry 4.0 systems with real-time data collection, predictive maintenance, and adaptive throughput optimization." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between warehouse conveyor automation and packaging line automation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Warehouse conveyor automation focuses on case and tote transport, sortation, and order fulfillment at high throughput, measured in cartons or orders per hour. Packaging line automation focuses on product-level handling, filling, labeling, inspecting, accumulating, and case packing, with tight integration between conveyors and processing machines. Warehouse systems prioritize throughput and routing logic. Packaging systems prioritize machine synchronization, product protection, and changeover flexibility." }
-    },
-    {
-      "@type": "Question",
-      "name": "What PLC brands are commonly used for conveyor automation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Allen-Bradley (Rockwell Automation) ControlLogix and CompactLogix PLCs are widely used in North American conveyor automation. Siemens (S7-1500, S7-1200) is common in European installations and on European-built machines. Other common platforms include Beckhoff (TwinCAT), B&R Automation, Mitsubishi, and Omron. The PLC choice typically follows the plant's existing standard to simplify maintenance, spare parts, and training." }
-    },
-    {
-      "@type": "Question",
-      "name": "What sensors do automated conveyor systems use?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Automated conveyors use photoelectric sensors (through-beam, retro-reflective, diffuse) for product detection, proximity sensors (inductive, capacitive) for position sensing, encoders for speed measurement, ultrasonic sensors for level detection, laser scanners for dimensioning, barcode readers and RFID for identification, and vision cameras for inspection. Sensor selection depends on the product material, size, speed, and environmental conditions." }
-    }
-  ]
-};
 ---
-<BaseLayout title="Automated Conveyor Systems for Manufacturing | PackagingConveyor.com" description="Automated conveyor systems: PLC integration, sensors, VFDs, Industry 4.0/IIoT, and the difference between warehouse and packaging line automation." canonical="https://packagingconveyor.com/resources/automated-conveyor-systems/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Automated Conveyor Systems for Manufacturing | PackagingConveyor.com" description="Automated conveyor systems: PLC integration, sensors, VFDs, Industry 4.0/IIoT, and the difference between warehouse and packaging line automation." canonical="https://packagingconveyor.com/resources/automated-conveyor-systems/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Automated Conveyor Systems for Manufacturing</h1>
 <p class="usa-intro">An automated conveyor system uses PLCs, sensors, variable frequency drives (VFDs), and networked controls to transport, sort, accumulate, and process product without manual intervention. Automation ranges from simple start/stop motor control to fully integrated Industry 4.0 systems with real-time data collection, predictive maintenance, and adaptive throughput optimization.</p>
 <h2 id="levels-heading">Levels of Conveyor Automation</h2>

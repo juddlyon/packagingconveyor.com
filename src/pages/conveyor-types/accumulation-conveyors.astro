@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is zero-pressure accumulation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) stops and queues products on a conveyor with controlled gaps between each item, no product-to-product contact and no backpressure. Each zone has its own sensor and independent drive control. When a downstream zone is occupied, the upstream zone holds its product with a gap between them. ZPA prevents product damage, label scuffing, and carton crushing." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between zero-pressure and minimum-pressure accumulation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact, with drive pressure set low enough that rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can be adjusted to bring backpressure to 2% of the live load. ZPA costs more because it needs a sensor and drive control in every zone. Minimum-pressure suits durable products like corrugated cases. ZPA is required for fragile products, printed labels, and shrink-wrapped goods." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much accumulation buffer do I need on my packaging line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Accumulation buffer length depends on how often the downstream machine stops and how long each stop lasts. Measure or estimate the stops you want the buffer to absorb, then calculate buffer length using: Length (ft) = (products per minute x product length in feet x buffer minutes) + gap allowances. Transitions before machines with frequent or long stops, such as palletizers and case packers, usually need more buffer than transitions between labelers or checkweighers." }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor type is best for accumulation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "MDR (Motor Driven Roller) conveyors are a common choice for zero-pressure accumulation in new installations because they need no compressed air. Belt-driven live roller with pneumatic zones and line-shaft with zone brakes are established alternatives, and chain-driven live roller with a gearmotor per zone handles pallets. Belt conveyors with servo-driven zone controls handle irregular product shapes. The best type depends on product characteristics, throughput, budget, and whether compressed air is available." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -47,7 +21,7 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-<BaseLayout title="Accumulation Conveyors: Zero-Pressure & Minimum-Pressure Buffer Systems" description="Accumulation conveyors: zero-pressure (ZPA), minimum-pressure, and slug-mode. Buffer sizing formulas, zone control technology, and packaging line integration." canonical="https://packagingconveyor.com/conveyor-types/accumulation-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="Accumulation Conveyors: Zero-Pressure & Minimum-Pressure Buffer Systems" description="Accumulation conveyors: zero-pressure (ZPA), minimum-pressure, and slug-mode. Buffer sizing formulas, zone control technology, and packaging line integration." canonical="https://packagingconveyor.com/conveyor-types/accumulation-conveyors/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Accumulation Conveyors: Zero-Pressure &amp; Minimum-Pressure</h1>
 <p class="usa-intro">An accumulation conveyor buffers products between upstream and downstream processes, absorbing speed differences, equipment stoppages, and operator breaks without shutting down the entire packaging line. Accumulation conveyors operate in three modes: zero-pressure (ZPA), minimum-pressure, and slug-mode. They use zone-controlled roller or belt drive systems to stop, hold, and release products on demand, preventing the product damage and line inefficiency caused by uncontrolled backpressure.</p>
 <h2 id="why-heading">Why Accumulation Matters</h2>

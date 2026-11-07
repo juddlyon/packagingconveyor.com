@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What OSHA standards apply to conveyor systems?",
-      "acceptedAnswer": { "@type": "Answer", "text": "OSHA 29 CFR 1910.212 requires machine guarding against hazards such as ingoing nip points and rotating parts. OSHA 29 CFR 1910.219 covers power transmission parts: shafting, pulleys, belts, chains, sprockets, gears, and couplings, including guarding of shafts and pulleys 7 feet or less from the floor or working platform. OSHA 29 CFR 1910.147 requires documented lockout/tagout procedures for servicing and maintenance. For construction work, 29 CFR 1926.555 covers conveyors and references ANSI B20.1-1957. ASME B20.1 is the conveyor-specific consensus safety standard." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a conveyor nip point and why is it dangerous?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A nip point is where a belt or chain runs onto a pulley, roller, or sprocket, or where a moving part meets a fixed part. OSHA's amputation guide lists conveyor take-up and discharge ends, belt wrap around pulleys, snub rollers, adjoining conveyors, and transfers as hazard locations. Nip points can draw in clothing, hair, or fingers. OSHA 29 CFR 1910.212 requires guarding against ingoing nip points." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is lockout/tagout for conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Lockout/tagout (LOTO) isolates every energy source on a conveyor (electrical, pneumatic, hydraulic, gravity, stored mechanical energy) before servicing. OSHA 29 CFR 1910.147 requires documented energy control procedures, periodic inspection at least annually, and training. Each worker applies their own lock, and each lock is removed by the employee who applied it, with a documented exception when that employee is unavailable. Group lockout must give each worker protection equivalent to a personal lock." }
-    },
-    {
-      "@type": "Question",
-      "name": "How far apart should conveyor emergency stops be placed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The ASME B20.1 text we reviewed (2018 edition) does not set a fixed spacing. It requires emergency stop devices in drive areas, loading areas, transfer points, and other hazardous locations not guarded by location, position, or guards on remotely or automatically controlled conveyors, and stop or emergency stop pushbuttons at each operator control station. OSHA's amputation guide recommends pull cords along the full length of continuously accessible belts. NFPA 79 calls for red actuators on a yellow background, and e-stops must require a manual reset." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Conveyor Safety Standards, Guarding & Lockout/Tagout | PackagingConveyor.com"
   description="Conveyor safety: OSHA 1910.212, 1910.219, 1910.147, 1926.555, ASME B20.1, shaft and nip point guarding, e-stops, pull cords, interlocks, and lockout/tagout."
   canonical="https://packagingconveyor.com/resources/conveyor-safety/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Conveyor Safety Guide</h1>
 <p class="usa-intro">Conveyor safety in the U.S. rests on a few OSHA rules and one consensus standard. OSHA 29 CFR 1910.212 requires machine guarding against hazards such as ingoing nip points and rotating parts. 1910.219 covers shafts, pulleys, belts, chains, and gears. 1910.147 covers lockout/tagout. ASME B20.1 is the conveyor-specific safety standard for design, construction, installation, maintenance, inspection, and operation. This guide covers what each requires, how to guard shafts and nip points, where e-stops and pull cords go, and how to lock out a conveyor.</p>

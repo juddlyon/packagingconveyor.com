@@ -12,52 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a zero-pressure accumulation conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A zero-pressure accumulation (ZPA) conveyor stops and queues products with controlled gaps between each item, eliminating product-to-product contact and backpressure. Each zone has independent drive control and a sensor to detect product presence. When a downstream zone is occupied, upstream zones hold their products with gaps between them. ZPA prevents product damage, label scuffing, carton crushing, and shifting of contents inside cases."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does a ZPA conveyor work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A ZPA (zero-pressure accumulation) conveyor divides the line into zones, each with its own drive and one photo-eye sensor. A zone stops only when it is occupied and the downstream zone is also occupied. Otherwise it runs. The discharge zone stops on an external signal from the downstream machine, and the queue builds back one zone at a time with a gap between products. Products can release one zone at a time (singulation) or all together (slug or train release). MDR (Motor Driven Roller) conveyors use a low-voltage DC motorized roller per zone. Belt-driven live roller systems use a pneumatically actuated pressure frame and brake per zone, line-shaft systems use pneumatic zone brakes, and chain-driven systems use a gearmotor per zone."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What products require zero-pressure accumulation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zero-pressure accumulation is required for fragile products (glass, electronics), pressure-sensitive labels, shrink-wrapped items, open or unsealed containers, products with loose contents that shift under pressure, and premium packaging where scuffing is unacceptable. Products with smooth or glossy surfaces that show contact marks also require ZPA. Standard corrugated cases on stable surfaces can often use minimum-pressure accumulation instead."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between ZPA and minimum-pressure accumulation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zero-pressure accumulation (ZPA) maintains gaps between every product with no contact. Minimum-pressure accumulation allows light product-to-product contact, with drive pressure set low enough that rollers slip under stopped product. Hytrol states its minimum-pressure conveyors can be adjusted to bring backpressure to 2% of the live load. ZPA needs a sensor and drive control in every zone, so it costs more than minimum-pressure. ZPA is required for fragile or pressure-sensitive products. Minimum-pressure is acceptable for durable products like corrugated cases."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long should ZPA zones be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ZPA zone length must be longer than the longest product in the direction of travel, plus the clearance the supplier's sensor placement needs. Zone lengths are set by the manufacturer: Hytrol's 190-NSPEZ manual, for example, lists 12, 18, 24, 30, and 36-inch zones. Zones much longer than the product waste accumulation density. Zones shorter than the product let one product span two zones, which breaks zone logic. For mixed product lengths, size zones for the longest product or ask about controllers that adapt to product length."
-      }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -73,7 +27,7 @@ const articleSchema = {
   title="Zero-Pressure Accumulation Conveyors (ZPA): Technology & Applications"
   description="Guide to zero-pressure accumulation (ZPA) conveyors: how ZPA works, zone sizing, MDR vs belt-driven systems, and when to specify ZPA over minimum-pressure accumulation."
   canonical="https://packagingconveyor.com/conveyor-types/accumulation-conveyors/zero-pressure/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Zero-Pressure Accumulation Conveyors</h1>
 <p class="usa-intro">ZPA (zero-pressure accumulation) is a conveyor control method that divides the line into zones, each with its own sensor and drive, so products queue with a gap between each item and never push on each other. A ZPA conveyor and a zero-pressure accumulation conveyor are the same thing. Hytrol defines <a href="https://hytrol.com/products/accumulation/zero-pressure-conveyor/" target="_blank" rel="noopener noreferrer">zero-pressure conveyors</a> as accumulating conveyors that create space between products and do not allow them to touch. ZPA is the standard accumulation technology for fragile products, pressure-sensitive labels, and premium packaging where any contact damage is unacceptable. <a href="/conveyor-types/mdr-conveyors/">MDR (Motor Driven Roller)</a> conveyors are a common ZPA technology in new installations, and belt-driven, line-shaft, and chain-driven live roller conveyors are also built in zero-pressure versions.</p>
@@ -253,6 +207,10 @@ const articleSchema = {
 <div id="faq-4" class="usa-accordion__content usa-prose">
 <p>Zone length must exceed the longest product in the direction of travel, plus the clearance the supplier's sensor placement needs. Zone lengths are set by the manufacturer: Hytrol's 190-NSPEZ manual lists 12, 18, 24, 30, and 36-inch zones. Size zones for the longest product in your mix. Advanced controllers can adapt to detected product length, allowing multiple short products per zone while maintaining ZPA behavior.</p>
 
+</div>
+<h3 class="usa-accordion__heading"><button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="faq-5">What products require zero-pressure accumulation?</button></h3>
+<div id="faq-5" class="usa-accordion__content usa-prose">
+<p>Zero-pressure accumulation is required for fragile products (glass, electronics), pressure-sensitive labels, shrink-wrapped items, open or unsealed containers, products with loose contents that shift under pressure, and premium packaging where scuffing is unacceptable. Products with smooth or glossy surfaces that show contact marks also require ZPA. Standard corrugated cases on stable surfaces can often use minimum-pressure accumulation instead.</p>
 </div>
 </div>
 <h2 id="related-heading">Continue Researching</h2>

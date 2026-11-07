@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a stacking machine?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A stacking machine collects individual products from a conveyor and forms them into organized stacks, vertical piles, horizontal slugs, or layer groups, for downstream wrapping, case packing, or palletizing. Stacking machines include counter stackers (count and stack individual items), layer formers (arrange products into pallet layers), and case stackers (stack cases for palletizing). They operate between production and packaging. Speed ranges widely by product and machine: Forpak rates its GSS stacker at 100 pieces per minute per lane, while Syntegon lists count feeders handling up to 3,600 cookies per minute." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a counter stacker?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A counter stacker counts individual products (cookies, crackers, napkins, sheets, labels) on a high-speed conveyor, groups them into a set count, and stacks the group vertically or horizontally. Photoeye or laser sensors count products at the infeed. A servo-driven diverter separates counted groups. A stacking mechanism forms the group into a stack for wrapping or cartoning. Speed depends on product and machine. As examples, Forpak rates its GSS servo stacker at 100 pieces per minute per lane, and Syntegon lists a count feeder for cookies at up to 3,600 cookies per minute." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a stacker and a palletizer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A stacker forms product groups, stacking individual items into counted groups or forming products into layers. A palletizer places those groups or layers onto a pallet in a specific stacking pattern. The stacker operates upstream of the palletizer. A layer former (a type of stacker) creates complete pallet layers from individual cases, and the palletizer stacks those layers onto the pallet." }
-    },
-    {
-      "@type": "Question",
-      "name": "What industries use stacking machines?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Bakery (cookie and cracker stacking for wrapping), printing (sheet and label stacking), tissue and napkin (folded product stacking), corrugated (blank stacking), pharmaceutical (blister pack stacking for cartoning), and end-of-line packaging (case stacking for palletizing). Any operation that needs counted, organized groups from a continuous product stream uses stacking machines." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Stacking Machines & Stackers: Counter Stackers & Layer Formers | PackagingConveyor.com"
   description="Technical guide to stacking machines: counter stackers, layer formers, case stackers, and conveyor integration for bakery, printing, tissue, and end-of-line packaging."
   canonical="https://packagingconveyor.com/conveyor-functions/stacking-machines/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Stacking Machines &amp; Stackers</h1>
 <p class="usa-intro">A stacking machine collects individual products from a conveyor and forms them into organized stacks, slugs, or layers for downstream wrapping, cartoning, <a href="/industries/packaging-line-conveyors/case/">case packing</a>, or palletizing. Types include counter stackers (count and stack individual items), layer formers (arrange cases or products into pallet-layer patterns), and case stackers (stack sealed cases for palletizer infeed). The right stacking method depends on product stability, count accuracy requirements, downstream machine cadence, and how much accumulation is needed upstream.</p>

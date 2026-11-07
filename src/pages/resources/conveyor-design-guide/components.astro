@@ -23,38 +23,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "In what order should conveyor components be specified?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Start with the product and the environment, then work outward. Define product size, weight, surface, and throughput, plus washdown, temperature, and food-contact requirements. Choose the conveying surface next, because belt or roller type sets minimum pulley diameter, drive method, and take-up style. Then set drive position and size the drive from belt pull and speed. Select the frame material and profile for the load and environment, and match bearings and fasteners to it. Finish with sensors, controls, guide rails, and guarding at each transfer and access point." }
-    },
-    {
-      "@type": "Question",
-      "name": "What frame material should I use for a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Carbon steel (painted or powder-coated) is the standard choice for dry, non-food environments and is usually the lowest-cost option. Stainless steel 304 is the common choice for food-grade washdown environments. Stainless steel 316 is specified where chlorides, acids, or aggressive sanitizers are present. Aluminum extrusion frames offer lightweight, corrosion-resistant, reconfigurable construction for cleanroom, pharmaceutical, and light-duty applications. Stainless frames cost noticeably more than equivalent carbon steel frames because of material and sanitary welding and finishing." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between an end drive and a center drive conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An end drive places the motor and drive pulley at the discharge end of the conveyor. This is the most common configuration, and the carrying strand of the belt is pulled toward the drive. A center drive places the drive module underneath the conveyor, typically near the midpoint, and wraps the belt around the drive pulley on the return side. Because neither end carries the drive pulley, both ends can use small-diameter nose rollers for tight product transfers, and many center-drive designs can run in either direction." }
-    },
-    {
-      "@type": "Question",
-      "name": "What sensors are used on packaging conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Common conveyor sensors include: photoelectric sensors (photoeyes) for product detection and jam sensing; retroreflective photoeyes for product presence; through-beam sensors for precise position detection; proximity sensors for metal detection and roller rotation verification; rotary encoders for speed measurement and position tracking; ultrasonic sensors for product height or stack counting. Sensors connect to the PLC or zone controller to trigger conveyor start/stop, accumulation, diverting, and alarm functions." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Conveyor Frame, Drive & Pulley Design Guide"
   description="How to specify conveyor frames, belts, rollers, drive position, pulleys, take-ups, bearings, and sensors in system design, and how each choice affects the rest."
   canonical="https://packagingconveyor.com/resources/conveyor-design-guide/components/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Conveyor Frame, Drive &amp; Pulley Design</h1>
 <p class="usa-intro">Specifying a conveyor means choosing the frame, conveying surface, drive, pulleys, take-up, bearings, and sensors so they work as one system. These choices are linked: the belt sets the minimum pulley diameter and the take-up style, the drive position sets where tension is highest and how tight the end transfers can be, and the frame material sets what bearings and fasteners can be used. This design guide covers how to specify each part and how the choices interact. For a map of all <a href="/components/">conveyor components</a>, including guide rails, cleaning systems, and wear parts, see the components hub.</p>

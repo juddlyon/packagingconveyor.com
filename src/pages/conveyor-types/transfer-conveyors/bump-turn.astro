@@ -12,27 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a bump turn conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A bump turn is a right-angle transfer. The product runs into an end stop at the corner and a cross conveyor carries it away at 90 degrees. The product does not rotate, so a different face leads after the turn." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a passive and powered bump turn?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Passive (gravity) bump turns have no motors. Product rolls into the stop and out the side on declined rollers. Powered bump turns use a driven belt or rollers to pull the product off at 90 degrees, which gives more consistent exit timing on automated lines. Passive turns cost less and suit manual, low-rate areas." }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a bump turn change product orientation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, relative to the line. The product does not rotate in space, so the face that was a side becomes the leading face. A pop-up transfer behaves the same way. If the same face must keep leading, use a curve or a turntable." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -47,7 +26,7 @@ const articleSchema = {
   title="Bump Turn Conveyors: Passive & Powered Case Turning Systems"
   description="Bump turn conveyors: passive vs powered bump turns, case orientation effects, speed requirements, and packaging line direction change solutions."
   canonical="https://packagingconveyor.com/conveyor-types/transfer-conveyors/bump-turn/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Bump Turn Conveyors</h1>
 <p class="usa-intro">A bump turn is a right-angle transfer where the product runs off the end of the infeed conveyor into a stop (the "bumper") and is carried away at 90 degrees by a cross conveyor. The product does not rotate in space. It moves sideways, so the face that was a side becomes the leading face. Bump turn modules are a compact, low-cost way to change direction at a conveyor corner in <a href="/industries/packaging-line-conveyors/">packaging and distribution systems</a>, as long as that change in leading face is acceptable downstream.</p>

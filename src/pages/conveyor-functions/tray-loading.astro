@@ -22,43 +22,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an automatic tray loader?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An automatic tray loader is a packaging machine that places product into trays without manual labor. It typically includes a tray denester, a product infeed conveyor, a placement mechanism (pick-and-place, servo, or robot), and an outfeed conveyor. Speed depends on the placement mechanism, product, and tray pattern." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is an automatic tray unloader?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An automatic tray unloader removes product from trays, or separates stacked trays, without manual handling. The four common methods are tray inversion (tipping the tray to dump product), pick-off by robot or gantry, push-off or sweep for flat trays, and tray destacking, which separates a stack of full or empty trays into single trays on a conveyor. The right method depends on whether the product can tolerate a drop and whether the trays return to the line for reuse." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between pick-and-place and robotic tray loading?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pick-and-place tray loaders use fixed-motion mechanisms (servo gantries or cam-driven arms) that follow a repeatable path at high speed. Robotic tray loaders use articulated or delta robots with programmable motion paths, offering more flexibility for product changeovers but typically at higher cost. Pick-and-place suits high-speed, low-SKU operations; robotic suits high-SKU, frequent-changeover environments." }
-    },
-    {
-      "@type": "Question",
-      "name": "What industries use automatic tray loading systems?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Automatic tray loading systems serve bakery (cookies, pastries, bread), snack foods (crackers, bars, chips), fresh produce (berries, tomatoes, salads), ready meals and prepared foods, meat and poultry, confectionery, and pharmaceutical blister packing. Any operation that places discrete products into thermoformed or pre-formed trays benefits from automation." }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast can an automatic tray loader run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the loading mechanism, product, and tray pattern. Cam-driven pick-and-place is the fastest option for a single small, uniform product. Servo gantry trades some speed for recipe-based changeover. Single delta robots are rated by their manufacturers at roughly 120 to 300 picks per minute for light products under ideal conditions: ABB rates its IRB 365 at 120 picks per minute with a 1 kg product, and Omron rated its Quattro at 300 picks per minute. Multi-robot cells add capacity by placing several robots over one belt. Real tray loading rates are lower once vision, product weight, and tray pattern are included, so confirm rated speed for your product with each supplier." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Automatic Tray Loaders & Unloaders: Types and Selection"
   description="Automatic tray loaders and unloaders compared: pick-and-place, servo gantry, and delta robot loading, tray unloading and destacking methods, and a checklist."
   canonical="https://packagingconveyor.com/conveyor-functions/tray-loading/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Automatic Tray Loading &amp; Unloading Systems</h1>
 <p class="usa-intro">An automatic tray loader places product into trays without hand-packing, and an automatic tray unloader does the reverse: it removes product from trays or separates stacked trays for reuse. A loading cell combines a tray denester, product infeed conveyor, placement mechanism (cam-driven pick-and-place, servo gantry, or delta robot), and outfeed conveyor. Placement method is set by throughput, SKU count, and product fragility, all compared below.</p>

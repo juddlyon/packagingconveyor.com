@@ -12,32 +12,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between belt-driven and line-shaft roller conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller (BDLR) conveyors use a belt running beneath the rollers. Pressure rollers hold the belt against the carrying rollers, which turn by friction. Line-shaft conveyors use a rotating shaft along the length of the conveyor, with drive spools on the shaft and an O-ring band from each spool to a roller. BDLR drive force can be set by adjusting pressure-roller contact. Line-shaft O-rings slip when a product is held, and the design works well with pop-up transfers because individual rollers are driven separately." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can powered roller conveyors accumulate product?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard continuous-run powered roller conveyors do not accumulate without backpressure, but all three drive types are offered in accumulating versions. Hytrol's zero-pressure belt-driven model uses a pressure frame to apply and remove drive plus a pneumatic brake in each zone. Its line-shaft zero-pressure model uses air bags and brake pads per zone. Its chain-driven zero-pressure models use a gearmotor per zone. Belt-driven minimum-pressure conveyors limit drive pressure so products stop with light contact. MDR (motor driven roller) conveyors provide zero-pressure accumulation without compressed air." }
-    },
-    {
-      "@type": "Question",
-      "name": "What speed range do powered roller conveyors support?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Speed depends on the model, drive gearing, and roller diameter, so there is no single range for each drive type. Constant-speed conveyors are geared to one speed. A variable frequency drive (VFD) on the gearmotor allows adjustment. Specify the speed your upstream and downstream equipment needs, and confirm the quoted model's rated speed at your load on the supplier data sheet." }
-    },
-    {
-      "@type": "Question",
-      "name": "What maintenance do powered roller conveyors require?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt-driven live roller conveyors need periodic belt tension, tracking, and pressure adjustment, and belt replacement when worn. Line-shaft conveyors need O-ring replacement as bands stretch or break, and the shaft must stay free of oil, which Hytrol lists as a cause of rollers not turning under load. Chain-driven conveyors need chain lubrication: Hytrol's manuals call for lubricating every 2,080 hours of operation or every 6 months, whichever comes first, in normal environments, and more often in damp, dusty, hot, or high-speed service. All types need motor and reducer service per the manufacturer schedule." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Powered & Live Roller Conveyors: Belt-Driven, Line-Shaft & Chain-Driven Guide"
   description="Powered roller conveyors: belt-driven live roller, line-shaft, and chain-driven. Zone control, accumulation options, and how to read speed and load ratings."
   canonical="https://packagingconveyor.com/conveyor-types/roller-conveyors/powered/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Powered &amp; Live Roller Conveyors</h1>
 <p class="usa-intro">A powered roller conveyor uses an external motor to drive cylindrical rollers, transporting flat-bottomed products at a controlled speed. The three conventional drive methods are belt-driven live roller (BDLR), line-shaft, and <a href="/conveyor-types/pallet-conveyors/">chain-driven live roller (CDLR)</a>. Powered roller conveyors move cases, cartons, totes, and pallets through automated <a href="/industries/packaging-line-conveyors/">packaging lines</a> and distribution systems.</p>

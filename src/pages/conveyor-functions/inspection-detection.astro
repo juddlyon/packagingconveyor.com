@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What inspection systems are used on packaging conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Four primary inspection systems operate on packaging conveyors: (1) Metal detectors scan for ferrous, non-ferrous, and stainless steel contamination. (2) X-ray inspection detects metal, glass, stone, bone, and dense plastic contaminants plus performs fill level and component counting. (3) Checkweighers weigh every product in motion, rejecting underweight and overweight units. (4) Vision inspection systems check label presence/accuracy, seal integrity, fill level, cap presence, and cosmetic defects. Most packaging lines deploy two or more of these systems at different points." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a metal detector and X-ray inspection?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Metal detectors use electromagnetic fields to detect metallic contamination only, ferrous metals, non-ferrous metals (aluminum, copper), and stainless steel. X-ray systems use radiation to detect any material denser than the product, including metal, glass, stone, bone, ceramic, and dense plastics. X-ray also performs mass estimation, component counting, and fill level checking. Metal detectors cost less, often find smaller metal fragments in dry unpackaged product, and need no radiation safety program. X-ray systems cost more because of the X-ray source, detector, shielding, and image software, but they detect a wider range of contaminants and can inspect product in metallized film or foil." }
-    },
-    {
-      "@type": "Question",
-      "name": "Where should inspection systems be placed on a packaging line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Optimal placement depends on the contaminant type and detection sensitivity. Metal detectors perform best on individual products before case packing, smaller apertures detect smaller metal fragments. X-ray can inspect through cases. Checkweighers go after filling and before case packing. Vision inspection goes after labeling and sealing. Best practice is to place the final metal detector or X-ray as the last inspection point before palletizing, ensuring no downstream contamination enters the finished case." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do conveyor inspection systems require integrated reject mechanisms?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inspection system that identifies defects must have an integrated or immediately downstream reject mechanism to remove defective product from the line. A metal detector that finds contamination but cannot reject the product provides no safety benefit. Most inspection system manufacturers supply the conveyor, inspection head, and reject as one integrated unit. Reject confirmation sensors verify that rejected product actually left the conveyor." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Metal Detectors & Inspection Systems for Conveyors | PackagingConveyor.com"
   description="Conveyor inspection systems: metal detectors, X-ray, checkweighers, and vision for packaging line quality assurance. Placement, integration, and reject system requirements."
   canonical="https://packagingconveyor.com/conveyor-functions/inspection-detection/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Metal Detectors &amp; Inspection Systems</h1>
 <p class="usa-intro">Conveyor-mounted inspection systems scan every product on the packaging line for contaminants, weight deviations, label defects, and package integrity failures, then trigger <a href="/conveyor-functions/reject-systems/">reject mechanisms</a> to remove non-conforming product before it reaches the consumer. The four primary inspection technologies are metal detectors, X-ray systems, checkweighers, and vision inspection. For food, FDA treats hard or sharp foreign objects 7 mm to 25 mm long in ready-to-eat food as an adulteration hazard (see <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-555425-foods-adulteration-involving-hard-or-sharp-foreign-objects" target="_blank" rel="noopener noreferrer">FDA CPG Sec. 555.425</a>), which is why contaminant detection is a common critical control point.</p>

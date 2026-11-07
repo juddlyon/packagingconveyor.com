@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an assembly line conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An assembly line conveyor transports workpieces between sequential assembly stations where operators or robots add components, fasten, inspect, or test. Assembly conveyors run at slow, controlled speeds set by the work content at each manual station, or index between stations for automated operations. Common types include belt conveyors, pallet transfer (workpiece carrier) systems, and chain-on-edge conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a pallet transfer system for assembly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A pallet transfer system carries workpieces on machined pallets (workpiece carriers) that circulate in a loop through assembly stations. Each pallet has precision fixtures, locating pins, nests, or clamps, that hold the workpiece in a known position. The conveyor indexes pallets to each station where assembly, fastening, inspection, or testing occurs. Positioning units at each station register the pallet with sub-millimeter repeatability, which supports robotic assembly and vision inspection." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between continuous and indexing assembly conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Continuous assembly conveyors run at constant speed, operators walk alongside or work on the product as it moves. Used for large products (vehicles, appliances) where operators have enough time at each station. Indexing assembly conveyors advance product a fixed distance and stop, stations operate during the dwell time. Used for small-to-medium products requiring precise positioning for automated operations." }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor speed is used for manual assembly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Set speed from the work content: belt speed equals station length divided by the work time needed at each station. Slower speeds give operators more time per station. Variable-speed drives allow speed adjustment for different products or staffing levels. Set working height from the operator's elbow height and the task. CCOHS recommends a work surface about 5 cm above elbow height for precision work, about 5 to 10 cm below elbow height for light assembly, and 20 to 40 cm below elbow height for heavy work." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Assembly Line Conveyors: Workstation, Pallet Transfer & Indexing | PackagingConveyor.com"
   description="Technical guide to assembly line conveyors: workstation conveyors, pallet transfer systems, indexing, and ergonomic design for manual and automated assembly operations."
   canonical="https://packagingconveyor.com/industries/assembly-line-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Assembly Line Conveyors</h1>
 <p class="usa-intro">Assembly line conveyors transport workpieces through sequential stations where operators or robots perform assembly, fastening, inspection, and testing operations. These systems range from simple flat belt conveyors for manual assembly to precision pallet transfer systems with sub-millimeter positioning for robotic stations. Conveyor types include workstation belt conveyors, pallet transfer (workpiece carrier) systems, chain-on-edge conveyors, and <a href="/conveyor-functions/indexing-conveyors/">indexing conveyors</a>. The key design question is how much precision, reconfiguration flexibility, and workstation access the assembly process requires.</p>

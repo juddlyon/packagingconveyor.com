@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is product handling on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Product handling refers to turning, flipping, orienting, inverting, rotating, or repositioning products on a conveyor to achieve the correct position and orientation for downstream operations. Examples include rotating bottles label-forward for inspection, flipping cartons upside-down for bottom labeling, turning cases 90 degrees for side-loading into case packers, and inverting trays for drainage. Product handling devices operate inline on the conveyor without stopping product flow." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a product turner on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A product turner rotates products around a vertical axis (yaw rotation) as they travel on a conveyor. Common turner types include: angled belt transfers that use speed differentials to spin product, servo-driven turntable sections, guide rail deflectors that redirect product orientation, and right-angle transfer modules. Turners rotate products 90 or 180 degrees for label positioning, case pattern formation, or scanner access." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is product inversion on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Product inversion flips product 180 degrees around a horizontal axis, turning it upside-down or right-side-up. Inversion conveyors use twist sections (belt gradually twists 180 degrees), clamping rollers that grip and flip product, or overhead flipper mechanisms. Applications include bottle inversion for air-rinse cleaning, carton inversion for bottom coding, tray inversion for depanning, and container inversion for drainage." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you orient products on a conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Product orientation ensures products face a specific direction, label forward, cap up, barcode accessible. Orientation methods include vision-guided robotic reorientation, mechanical cam-follower rotators, servo-driven twist belts, and passive guide rails that redirect asymmetric products. Vision systems identify product orientation and trigger correction mechanisms for products that arrive misoriented." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Product Handling: Turn, Flip, Orient & Invert on Conveyors | PackagingConveyor.com"
   description="Product handling conveyors: turning, flipping, orienting, and inverting products inline for labeling, inspection, and case packing."
   canonical="https://packagingconveyor.com/conveyor-functions/product-handling/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Product Handling: Turn, Flip, Orient, Invert</h1>
 <p class="usa-intro">Product handling on conveyors encompasses turning, flipping, orienting, inverting, and repositioning products inline, without stopping production flow, to achieve the correct position for downstream operations like labeling, inspection, wrapping, <a href="/industries/packaging-line-conveyors/case/">case packing</a>, and palletizing. Handling devices include angled belt turners, twist-belt inverters, servo-driven rotators, guide rail deflectors, and robotic reorientation systems.</p>

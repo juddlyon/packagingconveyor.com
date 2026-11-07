@@ -11,27 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a divert and merge conveyor system?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A divert and merge conveyor system routes products from one conveyor line to another, splitting a single line into multiple destination lanes (diverting) or combining multiple infeed lanes into a single outbound line (merging). Divert mechanisms include push diverters, pop-up transfers, pop-up wheel sorters, shoe sorters, and sliding shoe diverters. Merge mechanisms include powered merge conveyors, gap-creating merge zones, and zipper merges." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between diverting and sortation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Diverting typically refers to a single decision point that routes a product to one of a few destinations. Sortation refers to a system that routes products to many destinations at high speed. Sortation systems use specialized technologies like shoe sorters, crossbelt sorters, tilt tray sorters, and bomb bay sorters. A diverter is a component; a sortation system is an integrated solution with scanning, controls, and multiple divert points." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do merge conveyors prevent product collisions?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Merge conveyors use sensors, zone controls, and gap creation to prevent collisions. Sensors detect products on both the main line and the merging spur. The merge controller creates gaps in the main line traffic by slowing or stopping upstream zones. Products from the spur conveyor merge into the created gaps. MDR zone conveyors and servo-controlled belt sections provide the precise speed control needed for collision-free merging." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -46,7 +25,7 @@ const articleSchema = {
   title="Diverting & Merging Conveyors: Divert, Merge & Sortation Systems"
   description="Diverting and merging conveyors: push diverters, pop-up transfers, merge zones, sortation methods. Selection criteria for packaging and distribution."
   canonical="https://packagingconveyor.com/conveyor-types/diverting-merging/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Diverting &amp; Merging Conveyors</h1>
 <p class="usa-intro">Diverting and merging conveyor systems route products between conveyor lines, splitting a single line into multiple destination lanes (diverting) or combining multiple infeed lanes into a single outbound line (merging). These systems are the traffic management layer of every <a href="/industries/packaging-line-conveyors/">packaging line</a> and distribution center, controlling product flow between processes, sort lanes, shipping destinations, and storage areas. Divert methods range from simple pneumatic pushers to high-speed <a href="/conveyor-types/diverting-merging/sortation/">sortation systems</a>.</p>

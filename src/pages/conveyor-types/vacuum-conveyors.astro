@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a vacuum conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum conveyor uses suction (negative air pressure) to hold, lift, or transport materials. Two distinct types exist: vacuum belt conveyors that use suction through a perforated belt to hold flat, thin, or lightweight items against the belt surface during transport; and vacuum tube conveyors (pneumatic vacuum systems) that draw bulk powders and granules through enclosed tubes from source to destination. Both types use vacuum as the holding or motive force." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a vacuum belt conveyor and a vacuum tube conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum belt conveyor has a perforated belt over a vacuum plenum. Suction pulls through the belt perforations to hold flat products (sheets, labels, film, pouches) against the belt surface during transport, especially on inclines and declines where gravity would cause slipping. A vacuum tube conveyor is a pneumatic system that draws bulk materials (powders, granules, pellets) through sealed tubes using a vacuum pump at the destination. They serve completely different applications." }
-    },
-    {
-      "@type": "Question",
-      "name": "What products suit vacuum belt conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Vacuum belt conveyors handle flat, thin, flexible, and lightweight products that standard conveyors cannot grip reliably. Common products include paper sheets, cardboard blanks, plastic film, labels, foil, fabric, veneer, printed sheets, pouches, sachets, and thin gaskets. They also handle products that must remain flat during transport, anything that would curl, flutter, or fly off a standard belt at speed." }
-    },
-    {
-      "@type": "Question",
-      "name": "How does a vacuum tube conveyor work?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A vacuum pump creates negative pressure at the destination (filter receiver). This pressure differential draws material from the pickup point through sealed tubing to the receiver. Material separates from the airstream in the receiver, falling into the hopper below while air passes through filters and returns to the vacuum pump. Batch-style vacuum conveyors use a timed cycle: vacuum-on draws material, vacuum-off drops material from the receiver into the process equipment below." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -51,7 +25,7 @@ const articleSchema = {
   title="Vacuum Conveyors: Vacuum Belt & Vacuum Tube Systems"
   description="Vacuum conveyors: vacuum belt for flat/thin products (sheets, labels, film) and vacuum tube for bulk powders and granules. Applications, sizing, and system design."
   canonical="https://packagingconveyor.com/conveyor-types/vacuum-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Vacuum Conveyors</h1>
 <p class="usa-intro">A vacuum conveyor uses negative air pressure to hold flat products against a perforated belt surface or to draw bulk materials through enclosed tubing. Vacuum belt conveyors grip sheets, labels, film, and pouches that standard conveyors cannot handle reliably. Vacuum tube conveyors transport powders, granules, and pellets through sealed pipelines to <a href="/industries/packaging-line-conveyors/">packaging equipment</a>, mixers, and process hoppers. Both types use suction, as either a holding force or a motive force, to solve handling problems no other conveyor technology can.</p>

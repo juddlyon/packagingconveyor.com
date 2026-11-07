@@ -11,32 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What conveyors are used in automotive manufacturing?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Automotive manufacturing uses overhead conveyors (power-and-free, monorail) for body-in-white and paint shop transport, floor conveyors (slat, chain, roller) for final assembly, skid conveyors for body transport through paint systems, pallet transfer conveyors for component assembly, and automated guided vehicles (AGVs) for flexible routing. Each shop, stamping, body, paint, and assembly, uses different conveyor types optimized for its specific requirements." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a power-and-free conveyor in automotive?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A power-and-free conveyor uses two tracks, a power track with a continuously moving chain and a free track with independent trolleys. Trolleys engage the power chain for transport and disengage at stations for accumulation or variable dwell times. This allows individual vehicle bodies to stop at stations while others continue moving, enabling different model variants to have different process times on the same line." }
-    },
-    {
-      "@type": "Question",
-      "name": "How are conveyors used in EV battery assembly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "EV battery assembly uses pallet transfer conveyors for cell module assembly, AGVs for heavy battery pack transport, and specialized conveyors with ESD protection, thermal monitoring, and fire suppression integration. Battery assembly lines may require controlled environments, precise indexing for robotic cell insertion, and conveyor designs rated for the weight of large-format battery packs." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a skid conveyor in a paint shop?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A skid conveyor carries vehicle bodies on metal skids (frames) through paint shop processes, pretreatment, electrocoat (e-coat), primer, basecoat, clearcoat, and oven curing. Skid conveyors use chain-driven or friction-driven roller beds. The skid provides a universal interface between the body and the conveyor, allowing different body styles to use the same conveyor system. Skids must withstand repeated paint oven cure cycles without warping." }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,7 +26,7 @@ const articleSchema = {
   title="Automotive Conveyors: Paint Lines, Body Shop, Assembly & EV Battery | PackagingConveyor.com"
   description="Technical guide to automotive conveyors: paint shop skid conveyors, body shop overhead systems, final assembly floor conveyors, AGVs, and EV battery assembly conveyors."
   canonical="https://packagingconveyor.com/industries/automotive-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Automotive Conveyors</h1>
 <p class="usa-intro">Automotive conveyors transport vehicle bodies, components, and assemblies through stamping, body shop welding, paint systems, and final assembly. Conveyor types include overhead power-and-free systems for body-in-white transport, skid conveyors for paint shop processing, slat and chain floor conveyors for final assembly, and pallet transfer systems for component sub-assembly. The shift to electric vehicles adds specialized conveyor requirements for battery module and pack assembly.</p>

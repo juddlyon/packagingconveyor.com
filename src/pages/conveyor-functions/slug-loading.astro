@@ -21,34 +21,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is slug loading?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Slug loading is the process of grouping a counted number of products into a tight, linear batch (a slug) and feeding that slug as a unit into a case packer, tray loader, or other packaging machine. The slug forms on a conveyor using stops, timing gates, and sensors that count products and release them as a group. Slug loading ensures the correct count enters each case or tray, eliminates miscounts, and synchronizes product flow with the packaging machine's cycle." }
-    },
-    {
-      "@type": "Question",
-      "name": "How does a slug conveyor form slugs?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A slug conveyor forms slugs in three steps: (1) Counting, a sensor (typically a photoeye or encoder) counts products as they arrive in single file. (2) Accumulating, products collect against a downstream stop gate or slow-speed zone until the count is reached. (3) Releasing, the stop gate opens or the slug zone accelerates, releasing the counted group as a tight unit. The cycle repeats immediately for the next slug. Timing between the release of one slug and the start of the next count is critical to maintain the case packer's cycle rate." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between slug loading and collating?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Slug loading groups products in a single line (one row of counted products end-to-end). Collating arranges products into a multi-row, multi-column pattern (e.g., a 3x4 grid). Slug loading feeds case packers that load cases with a single row of products. Collating feeds case packers and tray loaders that load multi-row patterns. Many case packing operations combine both, slug loading forms individual rows, and collating arranges multiple slugs side-by-side into the final case pattern." }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor types are used for slug loading?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Slug loading uses belt conveyors with pneumatic or servo-driven stop gates, MDR (motor driven roller) conveyors with zone control, and timing screw conveyors for round products. Belt conveyors with servo-controlled gates provide the most precise slug forming. MDR conveyors use zone-by-zone speed control to accumulate and release slugs without mechanical gates. Timing screws, often paired with starwheels, handle round containers (bottles, cans) by mechanically spacing and grouping them." }
-    }
-  ]
-};
 ---
-<BaseLayout heroPhoto title="Slug Conveyors & Slug Loading for Case Packers" description="What a slug conveyor does: counts products, forms tight slugs, and releases them into case packers on cycle. Covers stop gates, MDR slug release, and screws." canonical="https://packagingconveyor.com/conveyor-functions/slug-loading/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout heroPhoto title="Slug Conveyors & Slug Loading for Case Packers" description="What a slug conveyor does: counts products, forms tight slugs, and releases them into case packers on cycle. Covers stop gates, MDR slug release, and screws." canonical="https://packagingconveyor.com/conveyor-functions/slug-loading/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Slug Loading &amp; Slug Conveyors</h1>
 <p class="usa-intro">Slug loading groups a counted number of products into a tight linear batch, a slug, and feeds that slug as a single unit into a case packer, tray loader, or shrink wrapper. The slug conveyor counts products using photoeyes or encoders, accumulates them against a stop gate, and releases the completed group on the packaging machine's command signal.</p>
 <h2 id="why-heading">What Is a Slug Conveyor?</h2>

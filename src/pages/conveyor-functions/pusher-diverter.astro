@@ -21,34 +21,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a conveyor pusher?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor pusher is a mechanism that pushes product off the side of a conveyor onto a spur line, into a lane, or into a reject bin. Pushers use pneumatic cylinders, servo linear actuators, or electric cylinders to extend a push plate or blade across the conveyor width. The pusher fires when a sensor detects a product in position and a PLC signal triggers the push. Pushers handle individual products or groups and are used for lane diverting, reject systems, and product routing in packaging lines." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a blade diverter?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A blade diverter uses a pivoting arm or blade that swings into the product path on a conveyor, deflecting product off the main line onto a spur conveyor at an angle. The blade remains in the diverted position to guide product onto the spur, then returns to the inline position. Blade diverters handle medium to heavy products such as cases, totes, and cartons. They are gentler than pushers because they redirect product momentum rather than applying a sharp lateral force." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a pusher and a diverter?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A pusher applies a lateral force perpendicular to the conveyor direction, pushing product off the side. A diverter redirects product at an angle, using the product's existing forward momentum to guide it onto a spur line. Pushers are compact and quick to cycle and suit lighter products. Diverters handle heavier products more gently but take more conveyor length. Use pushers for lightweight individual items and reject applications. Use diverters for cases, totes, and routing to multiple spur lines." }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast can a conveyor pusher or diverter operate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cycle time depends on stroke, product weight, air pressure or servo sizing, and blade length, so get the rated cycle time from the supplier for your product. Activated roller belt (ARB) and sliding shoe sorters divert while the conveyor keeps moving. The mechanism must complete its cycle before the next product arrives. Calculate the window from belt speed and product pitch: at 200 FPM (40 inches per second) with 12-inch product pitch, a product arrives every 300 ms." }
-    }
-  ]
-};
 ---
-<BaseLayout title="Pusher & Diverter Mechanisms for Conveyors | PackagingConveyor.com" description="Conveyor pushers and diverters: pneumatic pushers, servo pushers, blade diverters, pop-up transfers, and ARB diverters for packaging line product routing." canonical="https://packagingconveyor.com/conveyor-functions/pusher-diverter/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Pusher & Diverter Mechanisms for Conveyors | PackagingConveyor.com" description="Conveyor pushers and diverters: pneumatic pushers, servo pushers, blade diverters, pop-up transfers, and ARB diverters for packaging line product routing." canonical="https://packagingconveyor.com/conveyor-functions/pusher-diverter/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Pusher &amp; Diverter Mechanisms</h1>
 <p class="usa-intro">Conveyor pushers and diverters route products off a main conveyor line onto spur conveyors, into lanes, or into reject bins. Pushers apply a lateral force perpendicular to the conveyor direction using pneumatic cylinders or servo actuators. Diverters redirect product at an angle using pivoting blades, pop-up wheels, or activated roller belts. The right choice depends on product weight and fragility, the time window between products, and how many destinations the line needs.</p>
 <h2 id="diff-heading">Pushers vs. Diverters</h2>

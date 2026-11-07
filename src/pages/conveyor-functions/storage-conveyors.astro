@@ -21,34 +21,8 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a storage conveyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A storage conveyor holds product in a controlled queue between upstream and downstream processes, providing extended buffer capacity beyond what standard accumulation conveyors offer. Storage conveyors are sized to ride through long stops such as changeovers and shift breaks, while standard accumulation zones are sized for short micro-stops between adjacent machines. They use vertical spirals, multi-tier horizontal loops, or high-density serpentine configurations to store large quantities of product in a compact footprint." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between FIFO and LIFO storage conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "FIFO (first in, first out) storage conveyors release products in the same order they entered. The first product stored is the first product released. LIFO (last in, first out) releases the most recently stored product first. FIFO is the default for food, pharmaceutical, and any product with expiration dates or lot tracking requirements. LIFO is acceptable for non-perishable, non-dated products where sequence does not matter. In-line spirals and serpentine loops run FIFO. Off-line spirals that reverse to return product to the line run LIFO." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much buffer capacity does a packaging line need?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Buffer capacity depends on downstream equipment downtime duration and frequency. Standard accumulation zones cover short micro-stops. Storage conveyors are sized to cover longer stops. Lines with frequent, long equipment stops (palletizer changeovers, case packer refills, manual station breaks) benefit from larger storage buffers. Calculate buffer capacity as: Products per minute x buffer time (minutes) x product pitch (spacing). For example, a 30 per minute line needing 10 minutes of buffer at 18-inch (1.5 ft) pitch requires 30 x 10 x 1.5 = 450 feet of conveyor path, which is why multi-tier or spiral storage is used to fit it in a compact footprint." }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the main types of storage conveyors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The four main types are: (1) Vertical accumulation spirals, helical conveyor paths that store product in a vertical column. (2) Horizontal loop buffers, multi-lane or serpentine conveyor paths on a single level. (3) Multi-tier storage tables, stacked horizontal conveyor tiers connected by incline/decline transfers. (4) Mass-flow accumulation tables, wide conveyor surfaces that store product in a mass flow pattern. Each type trades off footprint, capacity, product handling, and cost differently." }
-    }
-  ]
-};
 ---
-<BaseLayout title="Storage Conveyors and Vertical Accumulation Systems" description="Storage conveyors and vertical accumulation systems hold production between line sections: spiral, serpentine, and multi-tier storage, FIFO rules, and sizing." canonical="https://packagingconveyor.com/conveyor-functions/storage-conveyors/" schema={[breadcrumbSchema, articleSchema, faqSchema]}>
+<BaseLayout title="Storage Conveyors and Vertical Accumulation Systems" description="Storage conveyors and vertical accumulation systems hold production between line sections: spiral, serpentine, and multi-tier storage, FIFO rules, and sizing." canonical="https://packagingconveyor.com/conveyor-functions/storage-conveyors/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Storage Conveyors &amp; Vertical Accumulation</h1>
 <p class="usa-intro">A storage conveyor holds product in a controlled queue between major line sections, sized to ride through long stops such as changeovers, pallet changes, and shift breaks. Standard <a href="/conveyor-types/accumulation-conveyors/">accumulation conveyors</a> cover short micro-stops between adjacent machines. Storage conveyors use vertical accumulation spirals, multi-tier tables, or high-density serpentine paths to hold hundreds or thousands of products in a compact footprint. This page covers the storage function: where it sits in the line, how much capacity to size, and how to keep sequence. To compare specific buffer equipment such as dynamic spiral buffers, see <a href="/conveyor-types/buffer-conveyors/">buffer conveyor selection</a>.</p>
 <h2 id="diff-heading">Storage vs. Accumulation</h2>

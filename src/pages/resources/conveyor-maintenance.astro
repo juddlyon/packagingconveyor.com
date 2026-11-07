@@ -21,38 +21,12 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How often should conveyor preventive maintenance be performed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Conveyor PM frequency depends on operating hours and environment. General guidelines: Daily, visual inspection, belt tracking check, debris removal. Weekly, belt tension check, roller spin test, sensor function test. Monthly, bearing lubrication (if applicable), motor temperature check, chain/belt wear measurement, guard condition inspection. Quarterly, drive component inspection (gearbox oil, belt/chain tension, sprocket wear), electrical connection tightening. Annually, full system inspection, belt replacement assessment, motor insulation test, control system backup. High-speed and food-grade lines need more frequent PM than low-speed distribution conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I track a conveyor belt?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt tracking centers the belt by adjusting the tracking device the conveyor maker specifies: a snub roller, the tail pulley take-up, or a tracking cam. Step 1: Run the belt empty, slowly or with frequent stops at first. Step 2: Make one small adjustment at one pulley or roller, in the direction the conveyor manual gives. On Hytrol belt conveyors, for example, you loosen the snub roller bolts nearest the tail pulley and tap the bolt on the side toward which the belt needs to move. Step 3: Let the belt make several revolutions before the next change. Hytrol says the belt should begin moving toward center within seven revolutions. Step 4: Repeat until centered, then load product and confirm tracking holds. If tracking does not respond, check for material buildup on pulleys, belt damage, splice failure, or a frame or pulley out of square." }
-    },
-    {
-      "@type": "Question",
-      "name": "What causes a conveyor belt to slip?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Belt slip occurs when the drive pulley cannot transmit enough friction force to move the belt. Five common causes: (1) Insufficient belt tension, the belt does not press firmly against the drive pulley. Increase tension. (2) Wet or contaminated drive pulley, moisture, oil, or product residue on the pulley surface reduces friction. Clean the pulley. (3) Worn drive pulley lagging, the rubber coating on the drive pulley is worn smooth. Replace the lagging. (4) Overloaded belt, the product load exceeds the motor and drive capacity. Reduce load or increase motor size. (5) Seized or dragging roller, a failed roller underneath the belt creates drag that exceeds drive force. Replace the roller." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know when to replace a conveyor belt?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Replace a conveyor belt when you observe: (1) Edge fraying that keeps growing after tracking is corrected. (2) Surface cracks or delamination where the cover separates from the carcass. (3) Visible carcass (fabric) through worn cover material. (4) Belt stretch exceeding the tensioner's adjustment range, the take-up is maxed out and the belt still slips. (5) Splice failure, the belt splice opens or delaminates. (6) Hardening or brittleness, the belt surface is no longer flexible. For food-grade belts, also replace when the belt surface cannot be cleaned to sanitary standards or when the belt color has degraded to the point where contamination visibility is compromised." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Conveyor Maintenance & Troubleshooting Guide | PackagingConveyor.com"
   description="Conveyor maintenance reference: PM schedules, belt tracking, tensioning, roller inspection, lubrication, and troubleshooting for packaging conveyor systems."
   canonical="https://packagingconveyor.com/resources/conveyor-maintenance/"
-  schema={[breadcrumbSchema, articleSchema, faqSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Maintenance &amp; Troubleshooting</h1>
 <p class="usa-intro">Conveyor preventive maintenance (PM) extends equipment life, prevents unplanned downtime, and maintains product quality on packaging lines. A structured PM program covers belt tracking, belt tensioning, roller and bearing inspection, lubrication, motor and drive checks, sensor verification, and safety device testing. Neglecting conveyor maintenance causes belt failures, motor burnouts, product contamination, and line stops that cost far more than the PM labor and parts they prevent.</p>

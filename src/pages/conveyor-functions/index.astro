@@ -31,33 +31,12 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a conveyor function?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor function describes the specific task a conveyor performs in a packaging line, accumulating, indexing, rejecting, laning, tray loading, or sorting. Choosing by function rather than equipment type helps engineers match the right conveyor to the actual production need." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I choose the right conveyor function for my line?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Start by identifying the bottleneck or gap in your process. If product queues up and causes jams, you need accumulation. If a downstream machine requires precise positioning, you need indexing. If you must remove failed QC product, you need a reject system. Define the function first, then select the conveyor type and manufacturer." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can one conveyor perform multiple functions?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many conveyors combine functions, for example, an MDR accumulation conveyor can also perform zero-pressure buffering and metered release (indexing). A laning conveyor often includes accumulation zones upstream. However, trying to combine too many functions into one section usually leads to compromised performance. Dedicated function-specific conveyors generally outperform multi-function compromises." }
-    }
-  ]
-};
 ---
 <BaseLayout
   title="Conveyor Functions: What Do You Need Your Conveyor to Do? | PackagingConveyor.com"
   description="Browse packaging conveyor systems by function: accumulate, index, reject, lane, load trays, sort, merge, and more. Task-based conveyor selection for packaging engineers."
   canonical="https://packagingconveyor.com/conveyor-functions/"
-  schema={[breadcrumbSchema, faqSchema]}
+  schema={[breadcrumbSchema]}
 >
 <h1>What Do You Need Your Conveyor to Do?</h1>
 <p class="usa-intro">Stop shopping by equipment name. Start with the job your line needs done. Every function below links to the conveyor types and configurations that solve that specific problem.</p>

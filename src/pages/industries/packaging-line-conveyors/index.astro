@@ -11,52 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What conveyors are used in a packaging line?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A packaging conveyor system combines several types: belt and tabletop chain conveyors between filling, capping, and labeling; accumulation conveyors between machines that run at different speeds; roller and MDR conveyors for cases; transfer conveyors for turns and lane changes; and pallet conveyors for finished loads. Most lines also include reject conveyors for quality diversions, laning conveyors to split single-file product into lanes, and indexing conveyors for precise positioning at labelers or robotic pick points."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between primary, secondary, and tertiary packaging conveyors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Primary packaging conveyors handle individual products during filling, sealing, and labeling and need gentle handling and precise positioning. Secondary packaging conveyors carry cases, cartons, bundles, and trays through case packing, sealing, and shrink wrapping. Tertiary packaging conveyors move palletized loads to stretch wrappers, staging, and shipping docks and carry the heaviest loads at the slowest speeds."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much accumulation do I need between packaging machines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Size each buffer from the line's own stop data. The buffer should hold enough product to ride through the frequent short stops of the machine it protects, such as jam clears and roll or label changes, without stopping neighboring machines. Accumulation length equals buffer time in minutes times products per minute times product pitch in feet. Longer stops such as changeovers and breakdowns are usually handled by stopping the line rather than by buffer."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the best conveyor buffering systems for high-speed packaging lines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No single type is best. Inline zero-pressure accumulation suits cases and fragile or printed cartons. Bi-directional and mass accumulation tables hold large volumes of round containers. Dynamic spiral buffers store product vertically in a small footprint and can keep product in first-in, first-out order. Serpentine and storage conveyors provide long buffer length in limited floor space. The right choice depends on product shape and stability, whether product order must be kept, available floor and vertical space, and how long the stops are that the buffer must absorb."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What conveyor speed do I need for my packaging line?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Conveyor speed in feet per minute equals products per minute times product pitch in inches, divided by 12. Product pitch is product length plus the gap between products. Add speed headroom above peak throughput so the conveyor never limits the machines, and run conveyors feeding a machine at or slightly above that machine's rate."
-      }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -67,7 +21,7 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "PackagingConveyor.com", "url": "https://packagingconveyor.com" }
 };
 ---
-<BaseLayout title="Packaging Conveyor Systems: Line Layout & Selection Guide" description="Packaging conveyor systems: conveyor types by line stage, layout and integration points, buffering for high-speed lines, speed matching, and cost drivers." canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/" schema={[breadcrumbSchema, faqSchema, articleSchema]}>
+<BaseLayout title="Packaging Conveyor Systems: Line Layout & Selection Guide" description="Packaging conveyor systems: conveyor types by line stage, layout and integration points, buffering for high-speed lines, speed matching, and cost drivers." canonical="https://packagingconveyor.com/industries/packaging-line-conveyors/" schema={[breadcrumbSchema, articleSchema]}>
 <h1>Packaging Conveyor Systems</h1>
 <p class="usa-intro">A packaging conveyor system connects every machine on a packaging line, from fillers and sealers through case packers and palletizers to stretch wrappers and shipping docks. It moves product between machines, buffers product when one machine stops, changes lanes for multipacks, and handles elevation changes between floor and mezzanine equipment.</p>
 <p>The system's job is to keep a single machine stoppage from shutting down the whole line. The table below shows which conveyor types do that work at each stage.</p>

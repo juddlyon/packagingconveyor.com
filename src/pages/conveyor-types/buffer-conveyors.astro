@@ -11,60 +11,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a buffer conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A buffer conveyor temporarily stores products between upstream and downstream processes to absorb speed differences, equipment stoppages, and line imbalances. Buffer conveyors use accumulation technology (zero-pressure or minimum-pressure) to queue products without damage. They improve line efficiency by allowing upstream equipment to keep producing while downstream equipment recovers from a stop."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a dynamic buffer spiral conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A dynamic buffer spiral conveyor is a spiral accumulator whose usable storage length changes with line conditions. When downstream slows or stops, the spiral absorbs product. When downstream recovers, the spiral releases it back to the line. In-line designs keep product in sequence (FIFO) by varying the length of a single conveying path. Off-line designs divert product into a reversible spiral and send it back out the same way (LIFO). Both store product vertically, so they use far less floor space than a horizontal buffer of the same length."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a FIFO and a LIFO dynamic buffer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A FIFO (first in, first out) dynamic buffer sits in-line, and every product passes through it in order. The buffer lengthens or shortens its path to absorb or release product, so production sequence and lot order are preserved. A LIFO (last in, first out) dynamic buffer sits off-line. A switch diverts product into the buffer during a downstream stop, and the buffer reverses to return product to the line, so the last product in is the first out. Choose FIFO for dated, perishable, or lot-tracked product. LIFO is simpler to integrate and suits product where sequence does not matter."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much buffer capacity do I need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Size the buffer from your own stop data: the duration of the downstream stops you want the line to ride through, at the upstream production rate. Calculate length using: Buffer Length (ft) = products per minute × pitch per product in feet × buffer minutes, where pitch is product length plus the gap between products (for zero-pressure zones, the zone length). Critical transitions, such as before palletizers, often need more buffer than transitions between labelers or checkweighers because their stops last longer."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of conveyors are used for buffering?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common buffer conveyor types include: MDR (Motor Driven Roller) conveyors with zone control for zero-pressure accumulation, belt-driven live roller (BDLR) with pneumatic zones, serpentine conveyors for high-density buffering in limited space, spiral accumulation conveyors for vertical buffering, and FIFO accumulation tables for mass buffering. The choice depends on product type, space, and budget."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a buffer conveyor and an accumulation conveyor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The terms are often used interchangeably. Technically, accumulation refers to the controlled queuing behavior (zero-pressure, minimum-pressure, etc.), while buffering refers to the function of temporarily storing products to absorb line variations. A buffer conveyor is an accumulation conveyor used specifically for the buffering function between processes."
-      }
-    }
-  ]
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -80,7 +26,7 @@ const articleSchema = {
   title="Buffer Conveyors: Dynamic Spiral Buffers, FIFO vs LIFO"
   description="Dynamic buffer spiral conveyors explained: FIFO vs LIFO operation, in-line vs off-line layouts, and when a horizontal or bi-flow buffer conveyor fits better."
   canonical="https://packagingconveyor.com/conveyor-types/buffer-conveyors/"
-  schema={[breadcrumbSchema, faqSchema, articleSchema]}
+  schema={[breadcrumbSchema, articleSchema]}
 >
 <h1>Buffer Conveyors &amp; Dynamic Spiral Buffers</h1>
 <p class="usa-intro">A buffer conveyor temporarily stores products between upstream and downstream processes, absorbing speed differences, micro-stops, and changeovers. By decoupling machines, a buffer keeps upstream production running while downstream recovers, which raises line efficiency (OEE). Buffers use <a href="/conveyor-types/accumulation-conveyors/">accumulation technology</a> to queue products without damage. This page compares the main buffer designs, including <a href="#dynamic-spiral-buffers">dynamic spiral buffers</a>, and shows when each one fits.</p>

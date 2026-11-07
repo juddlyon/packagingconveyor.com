@@ -96,40 +96,9 @@ const directorySchema = {
     }))
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who are the largest conveyor manufacturers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Widely known conveyor manufacturers and integrators include Hytrol, Dorner, Interroll, mk North America, Toyota Automated Logistics (formerly Bastian Solutions), Dematic, and Intelligrated. In food and packaging, Key Technology, Heat and Control, Intralox (a Laitram company), Wire Belt Company, and Nercon are well known. This directory does not rank companies by size. The leaders vary by conveyor type and industry: a company that leads in warehouse sortation may not build sanitary food conveyors." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I choose a conveyor manufacturer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Start by defining your application requirements: product type, weight, speed, environment (washdown, cleanroom, outdoor), and any regulatory standards (FDA, USDA, ATEX). Then evaluate manufacturers based on relevant experience in your industry, geographic proximity for service and installation, lead time, warranty terms, parts availability, and controls integration capability. Request references from similar installations and ask for a factory visit or demo if possible." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a conveyor manufacturer and an integrator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A conveyor manufacturer designs and builds conveyor equipment, they fabricate frames, assemble drives, and ship the physical hardware. An integrator designs the overall material handling system, selects equipment from one or more manufacturers, handles controls and software, manages installation, and commissions the complete system. Some companies do both; others specialize in one role. For simple single-conveyor purchases, buying direct from a manufacturer is common. For complex multi-zone systems, an integrator adds value through system design and project management." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do conveyor manufacturers sell direct or through distributors?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It varies by company. Dorner lists distributors on its website, and mk North America uses a sales rep network. Hytrol sells through a network of integration partners, which it lists with an online partner locator. Large warehouse automation integrators such as Dematic and Intelligrated usually contract directly with the end user for complete systems. For packaging-specific conveyors, many manufacturers sell direct because the applications require custom engineering. Check the manufacturer's website for its sales channel in your region." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I buy conveyor parts from any manufacturer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Many conveyor components, rollers, bearings, motors, VFDs, belting, and chain, are available from third-party suppliers and are not proprietary to the conveyor manufacturer. However, some manufacturers use proprietary frame profiles, belt lacing systems, or controller software that requires OEM parts. Before purchasing a conveyor, ask the manufacturer what percentage of wear parts are standard catalog items versus proprietary components. This affects long-term maintenance costs and parts availability." }
-    }
-  ]
-};
 ---
 
-<BaseLayout title={`Conveyor Manufacturers & Companies: ${manufacturers.length} Compared`} description={`Independent directory of ${manufacturers.length} conveyor manufacturers and integrators: belt, roller, modular plastic, and sanitary builders, with headquarters and what each is known for.`} canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, faqSchema, directorySchema]}>
+<BaseLayout title={`Conveyor Manufacturers & Companies: ${manufacturers.length} Compared`} description={`Independent directory of ${manufacturers.length} conveyor manufacturers and integrators: belt, roller, modular plastic, and sanitary builders, with headquarters and what each is known for.`} canonical="https://packagingconveyor.com/resources/conveyor-manufacturers/" schema={[breadcrumbSchema, articleSchema, directorySchema]}>
 
 <h1>Conveyor Manufacturer Directory</h1>
 <p class="usa-intro">{manufacturers.length} manufacturers and integrators organized by conveyor type. Independent listings, no commissions. <a href="/resources/conveyor-companies/">Find companies near you</a>.</p>

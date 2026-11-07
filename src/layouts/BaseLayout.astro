@@ -59,13 +59,19 @@ const photoTags = [...body.matchAll(/<img [^>]*src="\/img\/photos\/([\w-]+)\.web
 const lead = photoTags.find(p => !p.name.startsWith('yt-')) ?? photoTags[0] ?? defaultPhoto;
 const pageOgImage = ogImage || `${siteUrl}/img/og/${lead.name}.jpg`;
 const pageOgAlt = ogImage ? '' : lead.alt;
-// Article and WebPage schema get the same image, and Article gets the real edit date the page shows.
-const pageSchema = schema.map((s: any) => ['Article', 'WebPage'].includes(s['@type']) ? { ...s, image: s.image ?? [pageOgImage, ...(ogImage ? [] : [`${siteUrl}/img/photos/${lead.name}.webp`])], ...(s['@type'] === 'Article' && updated ? { dateModified: updated } : {}) } : s);
-const allSchema = [...defaultSchema, ...pageSchema];
-const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(m => ({ slug: m[1], text: m[2].replace(/<[^>]+>/g, '').trim() }));
 // Page header band (lbarsealer pattern): the page's H1 and intro move out of the content column into a full-width band.
 const h1Match = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>\s*(?:<p class="usa-intro">([\s\S]*?)<\/p>)?/);
 const pageTitle = h1Match ? h1Match[1].trim() : title;
+const plainText = (h: string) => h.replace(/<[^>]+>/g, '').replace(/&(amp|lt|gt|quot|#39|#x27);/g, (_, e) => ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", '#x27': "'" })[e]).replace(/\s+/g, ' ').trim();
+// FAQ schema is built from the visible FAQ accordion, so the marked-up answers always match the page.
+const faqStart = body.indexOf('id="faq-heading"');
+const faqHtml = faqStart < 0 ? '' : body.slice(faqStart);
+const faqs = [...faqHtml.matchAll(/<button[^>]*aria-controls="([^"]+)"[^>]*>([\s\S]*?)<\/button>/g)].map(([, id, q]) => ({ q: plainText(q), a: plainText(faqHtml.match(new RegExp(`<div id="${id}"[^>]*>([\\s\\S]*?)</div>`))?.[1] ?? '') })).filter(f => f.q && f.a);
+const faqSchema = faqs.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }] : [];
+// Article and WebPage schema get the same image. Article also gets the H1 as its headline and the real edit date the page shows.
+const pageSchema = schema.map((s: any) => ['Article', 'WebPage'].includes(s['@type']) ? { ...s, image: s.image ?? [pageOgImage, ...(ogImage ? [] : [`${siteUrl}/img/photos/${lead.name}.webp`])], ...(s['@type'] === 'Article' ? { headline: plainText(pageTitle), ...(updated ? { dateModified: updated } : {}) } : {}) } : s);
+const allSchema = [...defaultSchema, ...pageSchema, ...faqSchema];
+const toc = [...body.matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(m => ({ slug: m[1], text: m[2].replace(/<[^>]+>/g, '').trim() }));
 const intro = h1Match?.[2]?.trim();
 // The first photo sits near the top of the page, so it loads eagerly. The rest stay lazy.
 const eager = (html: string) => html.replace(/(<img [^>]*src="\/img\/photos\/[^>]*?) loading="lazy"/, '$1 fetchpriority="high"');
